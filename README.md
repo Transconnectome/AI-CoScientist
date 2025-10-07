@@ -45,31 +45,48 @@ Model Contributions:
 
 AI-CoScientist provides **four ways** to use the paper enhancement system:
 
-### 1. Interactive Chatbot (Recommended for Beginners) 🆕
+### 1. Enhanced Interactive Chatbot (Recommended) 🆕✨
 
 ```bash
-# Start conversational review session
-python scripts/chat_reviewer.py
+# Start enhanced chatbot with Rich UI and LLM evaluation
+python scripts/chat_reviewer_enhanced.py
 ```
+
+**What's New in Enhanced Version:**
+- 🎨 **Rich Terminal UI**: Beautiful colored tables, panels, and progress bars
+- 🤖 **Real AI Evaluation**: Claude AI-powered analysis with detailed feedback
+- 💾 **Session History**: Save and resume conversations
+- 📊 **Detailed Insights**: Strengths, weaknesses, and score justifications
 
 **Natural language interface**:
 ```
 💬 You: "Review my paper: paper.docx"
-🤖 Bot: "Score: 7.96/10. Methodology is strong but novelty needs work.
-        What would you like to improve?"
+
+[Rich progress indicator: "Analyzing paper with LLM-based analysis..."]
+
+📊 Overall Score: 7.96/10 (Good)  [Color-coded panel]
+   Confidence: 0.92
+
+[Colored dimensional scores table]
+
+💪 Strengths:
+✓ Strong experimental validation
+✓ Clear methodology description
+
+⚠️ Areas for Improvement:
+• Limited discussion of computational complexity
+• Could expand real-world applications
 
 💬 You: "Get me to 8.5+"
-🤖 Bot: "Here are 3 suggestions to reach 8.5:
-        1. Transform title (30 min, +0.3 points)
-        2. Add theoretical justification (2 hours, +0.3 points)
-        3. Quantify impact (1 hour, +0.2 points)
-        Which one first?"
 
-💬 You: "Do number 2"
-🤖 Bot: "Adding theoretical section... Done! New score: 8.34/10"
+[Rich table of suggestions]
+
+💬 You: "save conversation"
+✅ Session saved! ID: 20241007_143022
 ```
 
-📖 **Chatbot Guide**: See [CHATBOT_GUIDE.md](CHATBOT_GUIDE.md) for detailed usage
+📖 **Enhanced Guide**: See [ENHANCED_CHATBOT_GUIDE.md](ENHANCED_CHATBOT_GUIDE.md) for complete features
+📖 **Basic Guide**: See [CHATBOT_GUIDE.md](CHATBOT_GUIDE.md) for original version
 
 ### 2. Command-Line Scripts (Fastest)
 
