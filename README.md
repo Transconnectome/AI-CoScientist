@@ -43,9 +43,35 @@ Model Contributions:
 
 ## 🏗️ System Architecture
 
-AI-CoScientist provides **three ways** to use the paper enhancement system:
+AI-CoScientist provides **four ways** to use the paper enhancement system:
 
-### 1. Command-Line Scripts (Fastest)
+### 1. Interactive Chatbot (Recommended for Beginners) 🆕
+
+```bash
+# Start conversational review session
+python scripts/chat_reviewer.py
+```
+
+**Natural language interface**:
+```
+💬 You: "Review my paper: paper.docx"
+🤖 Bot: "Score: 7.96/10. Methodology is strong but novelty needs work.
+        What would you like to improve?"
+
+💬 You: "Get me to 8.5+"
+🤖 Bot: "Here are 3 suggestions to reach 8.5:
+        1. Transform title (30 min, +0.3 points)
+        2. Add theoretical justification (2 hours, +0.3 points)
+        3. Quantify impact (1 hour, +0.2 points)
+        Which one first?"
+
+💬 You: "Do number 2"
+🤖 Bot: "Adding theoretical section... Done! New score: 8.34/10"
+```
+
+📖 **Chatbot Guide**: See [CHATBOT_GUIDE.md](CHATBOT_GUIDE.md) for detailed usage
+
+### 2. Command-Line Scripts (Fastest)
 
 ```bash
 # Evaluate paper
@@ -61,7 +87,7 @@ python scripts/add_comparison_table.py
 python scripts/evaluate_docx.py paper-revised.txt
 ```
 
-### 2. Service Layer (Programmatic)
+### 3. Service Layer (Programmatic)
 
 ```python
 from src.services.paper import PaperAnalyzer, PaperImprover
@@ -80,7 +106,7 @@ suggestions = await analyzer.get_improvement_suggestions(paper_id)
 improved = await improver.improve_section(paper_id, "introduction", suggestions)
 ```
 
-### 3. REST API (Production)
+### 4. REST API (Production)
 
 ```bash
 # Start API server
@@ -94,6 +120,15 @@ poetry run uvicorn src.main:app --reload
 - `POST /api/v1/papers/improve` - Generate improvements
 - `GET /api/v1/papers/{id}/scores` - Retrieve scores
 - Full API documentation: [docs/API_REFERENCE.md](docs/API_REFERENCE.md)
+
+## 🚀 Quick Comparison: Which Method to Use?
+
+| Method | Best For | Speed | Ease of Use | Flexibility |
+|--------|----------|-------|-------------|-------------|
+| **Chatbot** | Beginners, exploratory review | Medium | ⭐⭐⭐⭐⭐ Easiest | High |
+| **Scripts** | Quick evaluations, automation | ⚡ Fastest | ⭐⭐⭐⭐ Easy | Medium |
+| **Services** | Custom workflows, integration | Fast | ⭐⭐⭐ Moderate | Very High |
+| **API** | Production, web apps, teams | Fast | ⭐⭐ Advanced | Highest |
 
 ## 📦 Installation
 
