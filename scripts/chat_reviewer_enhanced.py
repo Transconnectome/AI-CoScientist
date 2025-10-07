@@ -32,6 +32,11 @@ from rich.progress import Progress, SpinnerColumn, TextColumn
 from rich.prompt import Prompt
 from rich import box
 
+# Import section-specific modules
+from section_parser import SectionType, PaperSectionParser
+from section_evaluator import SectionEvaluator, EvaluationContext, format_section_evaluation
+from consistency_checker import ConsistencyChecker, format_consistency_report
+
 # Load environment variables
 load_dotenv()
 
@@ -144,6 +149,14 @@ class PaperReviewChatbot:
         self.enhanced_versions: List[str] = []
         self.history_manager = ConversationHistory()
         self.current_session_id: Optional[str] = None
+
+        # Section-specific evaluation components
+        self.section_parser = PaperSectionParser()
+        self.section_evaluator = SectionEvaluator()
+        self.consistency_checker = ConsistencyChecker()
+        self.current_paper_sections = {}  # Parsed sections from current paper
+        self.section_scores = {}  # Section-specific evaluation results
+        self.consistency_issues = {}  # Cross-section consistency issues
 
         # System prompt
         self.system_prompt = """You are an expert scientific paper reviewer and writing coach.
@@ -467,6 +480,31 @@ Be conversational, encouraging, and specific. Always ask clarifying questions wh
         elif any(word in msg_lower for word in ['next', 'what now', 'then']):
             return 'next_steps', {}
 
+        # Section-specific review commands
+        elif 'review abstract' in msg_lower or 'evaluate abstract' in msg_lower:
+            return 'review_section', {'section': SectionType.ABSTRACT}
+
+        elif 'review introduction' in msg_lower or 'evaluate introduction' in msg_lower:
+            return 'review_section', {'section': SectionType.INTRODUCTION}
+
+        elif 'review methods' in msg_lower or 'review methodology' in msg_lower or 'evaluate methods' in msg_lower:
+            return 'review_section', {'section': SectionType.METHODS}
+
+        elif 'review results' in msg_lower or 'evaluate results' in msg_lower:
+            return 'review_section', {'section': SectionType.RESULTS}
+
+        elif 'review discussion' in msg_lower or 'evaluate discussion' in msg_lower:
+            return 'review_section', {'section': SectionType.DISCUSSION}
+
+        elif 'list sections' in msg_lower or 'show sections' in msg_lower or 'what sections' in msg_lower:
+            return 'list_sections', {}
+
+        elif 'review all sections' in msg_lower or 'evaluate all sections' in msg_lower:
+            return 'review_all_sections', {}
+
+        elif 'check consistency' in msg_lower or 'consistency check' in msg_lower:
+            return 'check_consistency', {}
+
         else:
             return 'general', {}
 
@@ -630,6 +668,189 @@ Top improvement suggestions:
 
 Present these suggestions in a friendly way and ask which one they'd like to start with."""
 
+        elif intent == 'review_section':
+            section_type = params['section']
+            if not self.current_paper_path:
+                return "❌ No paper has been evaluated yet. Please review a paper first using: 'Review my paper: /path/to/paper.docx'"
+
+            # Parse paper if not already done
+            if not self.current_paper_sections:
+                console.print("[cyan]📄 Parsing paper sections...[/cyan]")
+                from docx import Document
+                doc = Document(self.current_paper_path)
+                paper_text = '\n'.join([p.text for p in doc.paragraphs])
+                self.current_paper_sections = self.section_parser.parse(paper_text)
+
+            # Check if section exists
+            if section_type not in self.current_paper_sections:
+                available = ", ".join([s.value for s in self.current_paper_sections.keys()])
+                return f"❌ Section '{section_type.value}' not found in paper.\n\nAvailable sections: {available}"
+
+            # Evaluate section
+            console.print(f"\n[cyan]🔍 Evaluating {section_type.value} section...[/cyan]\n")
+            section = self.current_paper_sections[section_type]
+
+            # Get full paper for context
+            from docx import Document
+            doc = Document(self.current_paper_path)
+            paper_text = '\n'.join([p.text for p in doc.paragraphs])
+
+            evaluation = self.section_evaluator.evaluate_section(
+                section_type,
+                section.content,
+                EvaluationContext.INTEGRATED,
+                full_paper_text=paper_text
+            )
+
+            # Store section score
+            self.section_scores[section_type] = evaluation
+
+            # Display with Rich
+            formatted = format_section_evaluation(evaluation)
+            console.print(Panel(formatted, title=f"📊 {section_type.value.upper()} Evaluation", border_style="cyan"))
+
+            context = f"""The user asked for a section-specific review of the {section_type.value} section.
+
+Evaluation results for {section_type.value}:
+- Overall Score: {evaluation.get('overall', {}).get('score', 0)}/10
+- Word Count: {evaluation.get('word_count', 0)} words
+
+Key dimensions scores: {', '.join([f"{k}: {v.get('score', 0):.2f}" for k, v in evaluation.items() if isinstance(v, dict) and 'score' in v and k != 'overall'])}
+
+Strengths: {', '.join(evaluation.get('strengths', []))}
+Weaknesses: {', '.join(evaluation.get('weaknesses', []))}
+
+Provide encouraging feedback and actionable suggestions for improving this specific section."""
+
+        elif intent == 'list_sections':
+            if not self.current_paper_path:
+                return "❌ No paper has been evaluated yet. Please review a paper first."
+
+            # Parse paper if not already done
+            if not self.current_paper_sections:
+                console.print("[cyan]📄 Parsing paper sections...[/cyan]")
+                from docx import Document
+                doc = Document(self.current_paper_path)
+                paper_text = '\n'.join([p.text for p in doc.paragraphs])
+                self.current_paper_sections = self.section_parser.parse(paper_text)
+
+            # Display sections table
+            table = Table(title="📑 Detected Paper Sections", box=box.ROUNDED)
+            table.add_column("Section", style="cyan")
+            table.add_column("Title", style="yellow")
+            table.add_column("Word Count", style="magenta")
+            table.add_column("Status", style="green")
+
+            for section_type, section in self.current_paper_sections.items():
+                evaluated = "✅ Evaluated" if section_type in self.section_scores else "⏳ Not reviewed"
+                table.add_row(
+                    section_type.value.title(),
+                    section.title,
+                    str(section.word_count),
+                    evaluated
+                )
+
+            console.print(table)
+
+            # Get completion status
+            completion = self.section_parser.get_completion_status()
+            console.print(f"\n[cyan]Paper Completeness: {completion['completion_percentage']:.0f}% ({completion['completed_sections']}/{completion['total_sections']} core sections)[/cyan]")
+
+            return f"Found {len(self.current_paper_sections)} sections. Use 'review abstract', 'review methods', etc. to evaluate specific sections."
+
+        elif intent == 'review_all_sections':
+            if not self.current_paper_path:
+                return "❌ No paper has been evaluated yet. Please review a paper first."
+
+            # Parse paper if not already done
+            if not self.current_paper_sections:
+                console.print("[cyan]📄 Parsing paper sections...[/cyan]")
+                from docx import Document
+                doc = Document(self.current_paper_path)
+                paper_text = '\n'.join([p.text for p in doc.paragraphs])
+                self.current_paper_sections = self.section_parser.parse(paper_text)
+
+            # Evaluate all sections
+            console.print("\n[cyan]🔍 Evaluating all sections...[/cyan]\n")
+
+            from docx import Document
+            doc = Document(self.current_paper_path)
+            paper_text = '\n'.join([p.text for p in doc.paragraphs])
+
+            for section_type, section in self.current_paper_sections.items():
+                console.print(f"[dim]Evaluating {section_type.value}...[/dim]")
+                evaluation = self.section_evaluator.evaluate_section(
+                    section_type,
+                    section.content,
+                    EvaluationContext.INTEGRATED,
+                    full_paper_text=paper_text
+                )
+                self.section_scores[section_type] = evaluation
+
+            # Display summary table
+            table = Table(title="📊 All Sections Evaluation Summary", box=box.ROUNDED)
+            table.add_column("Section", style="cyan")
+            table.add_column("Overall Score", style="magenta")
+            table.add_column("Strengths", style="green")
+            table.add_column("Weaknesses", style="yellow")
+
+            for section_type, evaluation in self.section_scores.items():
+                overall_score = evaluation.get('overall', {}).get('score', 0)
+                strengths_count = len(evaluation.get('strengths', []))
+                weaknesses_count = len(evaluation.get('weaknesses', []))
+                table.add_row(
+                    section_type.value.title(),
+                    f"{overall_score:.2f}/10",
+                    f"✅ {strengths_count}",
+                    f"⚠️ {weaknesses_count}"
+                )
+
+            console.print(table)
+
+            avg_score = sum([e.get('overall', {}).get('score', 0) for e in self.section_scores.values()]) / len(self.section_scores)
+            console.print(f"\n[cyan]Average Section Score: {avg_score:.2f}/10[/cyan]\n")
+
+            return f"All {len(self.section_scores)} sections evaluated! You can ask for detailed feedback on any specific section."
+
+        elif intent == 'check_consistency':
+            if not self.current_paper_path:
+                return "❌ No paper has been evaluated yet. Please review a paper first."
+
+            # Parse paper if not already done
+            if not self.current_paper_sections:
+                console.print("[cyan]📄 Parsing paper sections...[/cyan]")
+                from docx import Document
+                doc = Document(self.current_paper_path)
+                paper_text = '\n'.join([p.text for p in doc.paragraphs])
+                self.current_paper_sections = self.section_parser.parse(paper_text)
+
+            # Check consistency
+            console.print("\n[cyan]🔍 Checking cross-section consistency...[/cyan]\n")
+            self.consistency_issues = self.consistency_checker.comprehensive_consistency_check(
+                self.current_paper_sections
+            )
+
+            # Format and display report
+            report = format_consistency_report(self.consistency_issues)
+            console.print(Panel(report, title="📋 Consistency Check Report", border_style="yellow"))
+
+            # Count issues by severity
+            total_issues = sum(len(issues) for issues in self.consistency_issues.values())
+            if total_issues == 0:
+                return "✅ Excellent! No consistency issues detected across sections. Your paper maintains good coherence."
+            else:
+                critical = sum(1 for issues in self.consistency_issues.values() for i in issues if i.severity.value == "critical")
+                major = sum(1 for issues in self.consistency_issues.values() for i in issues if i.severity.value == "major")
+
+                context = f"""The consistency check found {total_issues} issues:
+- Critical: {critical}
+- Major: {major}
+
+Key issue types: {', '.join(self.consistency_issues.keys())}
+
+Provide encouraging feedback and prioritize which issues to address first."""
+                return context
+
         else:
             # General conversation
             if self.current_scores:
@@ -679,11 +900,16 @@ Present these suggestions in a friendly way and ask which one they'd like to sta
         """Start the interactive chat session with Rich UI."""
         # Welcome banner
         welcome = Panel(
-            "[bold cyan]Paper Review Chatbot[/bold cyan]\n\n"
-            "I can help you evaluate and improve your scientific papers.\n\n"
-            "[yellow]Commands:[/yellow]\n"
-            "  • Review a paper: 'Review my paper: /path/to/paper.docx'\n"
-            "  • Improve scores: 'Help me get to 8.5+'\n"
+            "[bold cyan]Paper Review Chatbot[/bold cyan] [dim](with Section-Level Analysis)[/dim]\n\n"
+            "I can help you evaluate and improve your scientific papers - both full papers and individual sections!\n\n"
+            "[yellow]Paper Review Commands:[/yellow]\n"
+            "  • Review full paper: 'Review my paper: /path/to/paper.docx'\n"
+            "  • List sections: 'list sections' or 'show sections'\n"
+            "  • Review specific section: 'review abstract', 'review methods', 'review results'\n"
+            "  • Review all sections: 'review all sections'\n"
+            "  • Check consistency: 'check consistency' (cross-section analysis)\n"
+            "  • Improve scores: 'Help me get to 8.5+'\n\n"
+            "[yellow]Session Management:[/yellow]\n"
             "  • Save session: 'save conversation'\n"
             "  • Load session: 'load conversation'\n"
             "  • Show history: 'show history'\n"

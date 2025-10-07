@@ -57,6 +57,8 @@ python scripts/chat_reviewer_enhanced.py
 - 🤖 **Real AI Evaluation**: Claude AI-powered analysis with detailed feedback
 - 💾 **Session History**: Save and resume conversations
 - 📊 **Detailed Insights**: Strengths, weaknesses, and score justifications
+- 📑 **Section-Level Analysis**: Review individual sections (Abstract, Methods, Results, etc.)
+- 🔍 **Consistency Checking**: Cross-section coherence analysis
 
 **Natural language interface**:
 ```
@@ -83,9 +85,19 @@ python scripts/chat_reviewer_enhanced.py
 
 💬 You: "save conversation"
 ✅ Session saved! ID: 20241007_143022
+
+💬 You: "list sections"
+[Table showing detected sections: Abstract, Introduction, Methods, Results, Discussion]
+
+💬 You: "review abstract"
+[Detailed section-specific evaluation with dimensional scores]
+
+💬 You: "check consistency"
+[Cross-section consistency report: Methods-Results alignment, Claims support, etc.]
 ```
 
 📖 **Enhanced Guide**: See [ENHANCED_CHATBOT_GUIDE.md](ENHANCED_CHATBOT_GUIDE.md) for complete features
+📖 **Section Analysis**: Section-by-section review with specialized criteria for each section type
 📖 **Basic Guide**: See [CHATBOT_GUIDE.md](CHATBOT_GUIDE.md) for original version
 
 ### 2. Command-Line Scripts (Fastest)
