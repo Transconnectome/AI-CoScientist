@@ -81,3 +81,13 @@ data/
 
 # ChromaDB
 chroma/
+
+# Large files (>100MB)
+papers_collection/DIVER_REAL_withMarginNotes.pdf
+papers_collection/har_med13.docx
+papers_collection/_발표슬라이드.pdf
+papers_collection/0422_Jinwoo-Yi_AweVR_lab-meeting.pdf
+
+# Large paper collections
+papers_collection/*.pdf
+papers_collection/*.docx
