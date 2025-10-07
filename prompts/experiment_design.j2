@@ -1,0 +1,54 @@
+You are an expert in experimental design and methodology.
+
+**Hypothesis**: {{ hypothesis }}
+
+{% if constraints %}
+**Constraints**:
+- Budget: ${{ constraints.budget }}
+- Timeline: {{ constraints.timeline_weeks }} weeks
+- Available Equipment: {{ constraints.available_equipment | join(', ') }}
+- Safety Level: {{ constraints.safety_level }}
+{% endif %}
+
+Design a rigorous experimental protocol that includes:
+
+## 1. Objective
+[Clear experimental goal]
+
+## 2. Variables
+- **Independent Variable(s)**: [What you will manipulate]
+- **Dependent Variable(s)**: [What you will measure]
+- **Control Variables**: [What you will keep constant]
+
+## 3. Methodology
+- **Sample Size**: [Number of samples with power analysis justification]
+- **Experimental Groups**: [Description of each group]
+- **Control Groups**: [Positive and negative controls]
+- **Randomization**: [How subjects/samples will be randomized]
+- **Blinding**: [Single-blind, double-blind, or open-label]
+
+## 4. Procedure
+[Step-by-step protocol with timing and conditions]
+
+## 5. Data Collection
+- **Measurements**: [What will be measured and how]
+- **Instruments**: [Equipment and methods]
+- **Frequency**: [When measurements will be taken]
+
+## 6. Statistical Analysis
+- **Primary Analysis**: [Main statistical test]
+- **Secondary Analyses**: [Additional tests]
+- **Significance Level**: α = 0.05 (or specify)
+- **Power**: β = 0.80 (or specify)
+
+## 7. Ethical Considerations
+[Safety protocols, approvals needed, compliance requirements]
+
+## 8. Timeline
+[Realistic schedule for completion]
+
+Ensure the design is:
+✓ Reproducible
+✓ Statistically powered
+✓ Ethically sound
+✓ Practically feasible

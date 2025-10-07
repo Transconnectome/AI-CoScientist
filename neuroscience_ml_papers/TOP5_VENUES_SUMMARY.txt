@@ -1,0 +1,51 @@
+STRICT TOP-5 VENUES ONLY
+Nature | Science | NeurIPS | ICLR | AAAI
+================================================================================
+
+Total Downloaded: 4
+Download Date: 2025-10-06 00:25:21
+
+Papers by Venue:
+  International Research Journal of Modernization in Engineering Technology and Science: 1
+  Nature Communications: 1
+  Science Translational Medicine: 1
+  Academic Journal of Science and Technology: 1
+
+================================================================================
+
+1. BRAIN TUMOR DETECTION AND CLASSIFICATION USING MACHINE LEARNING: A COMPREHENSIVE SURVEY
+   Venue: International Research Journal of Modernization in Engineering Technology and Science (2023)
+   Authors: Ashish Pimpalkar, Pranay Tembhurne, Amol Ingle, Vaibhav Gosawi, Pooja Patle
+   Citations: 25
+   DOI: 10.56726/irjmets41528
+   File: BRAIN TUMOR DETECTION AND CLASSIFICATION USING MACHINE LEARNING A COMP_2023.pdf
+
+--------------------------------------------------------------------------------
+
+2. Predicting optimal deep brain stimulation parameters for Parkinson’s disease using functional MRI and machine learning
+   Venue: Nature Communications (2021)
+   Authors: A. Boutet, R. Madhavan, G. Elias, S. Joel, R. Gramer, M. Ranjan, Vijayashankar Paramanandam, David S Xu, Jurgen Germann, A. Loh, Suneil K. Kalia, M. Hodaie, Bryan M. Li, Sreeram Prasad, Ailish C. Cobl...
+   Citations: 215
+   DOI: 10.1038/s41467-021-23311-9
+   File: Predicting optimal deep brain stimulation parameters for Parkinsons di_2021.pdf
+
+--------------------------------------------------------------------------------
+
+3. Delineating epileptogenic networks using brain imaging data and personalized modeling in drug-resistant epilepsy
+   Venue: Science Translational Medicine (2023)
+   Authors: Huifang E. Wang, M. Woodman, P. Triebkorn, Jean-Didier Lemaréchal, J. Jha, B. Dollomaja, A. Vattikonda, Viktor Sip, S. Medina Villalon, M. Hashemi, M. Guye, J. Makhalova, F. Bartolomei, V. Jirsa
+   Citations: 64
+   DOI: 10.1126/scitranslmed.abp8982
+   File: Delineating epileptogenic networks using brain imaging data and person_2023.pdf
+
+--------------------------------------------------------------------------------
+
+4. A Comprehensive Study on Early Alzheimer’s Disease Detection through Advanced Machine Learning Techniques on MRI Data
+   Venue: Academic Journal of Science and Technology (2023)
+   Authors: Qunwei Lin, Change Che, Hao Hu, Xinyu Zhao, Shulin Li
+   Citations: 35
+   DOI: 10.54097/ajst.v8i1.14334
+   File: A Comprehensive Study on Early Alzheimers Disease Detection through Ad_2023.pdf
+
+--------------------------------------------------------------------------------
+

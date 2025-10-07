@@ -1,0 +1,504 @@
+Top-Tier Papers Downloaded: 50
+Target Venues: Nature, Science, Nature Neuroscience, Nature Methods, NeurIPS, ICLR, AAAI, ICML, Nature Communications
+================================================================================
+
+1. Machine learning models for diagnosis and prognosis of Parkinson's disease using brain imaging: general overview, main challenges, and future directions
+   Authors: Beatriz Garcia Santa Cruz, A. Husch, F. Hertel
+   Year: 2023
+   Venue: Frontiers in Aging Neuroscience
+   Citations: 31
+   DOI: 10.3389/fnagi.2023.1216163
+   File: Machine learning models for diagnosis and prognosis of Parkinsons disease using _2023.pdf
+
+--------------------------------------------------------------------------------
+
+2. Clinical Application of Machine Learning Models for Brain Imaging in Epilepsy: A Review
+   Authors: Daichi Sone, Iman Beheshti
+   Year: 2021
+   Venue: Frontiers in Neuroscience
+   Citations: 31
+   DOI: 10.3389/fnins.2021.684825
+   File: Clinical Application of Machine Learning Models for Brain Imaging in Epilepsy A _2021.pdf
+
+--------------------------------------------------------------------------------
+
+3. BRAIN TUMOR DETECTION AND CLASSIFICATION USING MACHINE LEARNING: A COMPREHENSIVE SURVEY
+   Authors: Ashish Pimpalkar, Pranay Tembhurne, Amol Ingle, Vaibhav Gosawi, Pooja Patle
+   Year: 2023
+   Venue: International Research Journal of Modernization in Engineering Technology and Science
+   Citations: 25
+   DOI: 10.56726/irjmets41528
+   File: BRAIN TUMOR DETECTION AND CLASSIFICATION USING MACHINE LEARNING A COMPREHENSIVE _2023.pdf
+
+--------------------------------------------------------------------------------
+
+4. Predicting optimal deep brain stimulation parameters for Parkinson’s disease using functional MRI and machine learning
+   Authors: A. Boutet, R. Madhavan, G. Elias, S. Joel, R. Gramer, M. Ranjan, Vijayashankar Paramanandam, David S Xu, Jurgen Germann, A. Loh, Suneil K. Kalia, M. Hodaie, Bryan M. Li, Sreeram Prasad, Ailish C. Coblentz, R. Munhoz, Jeffrey M. Ashe, W. Kucharczyk, A. Fasano, A. Lozano
+   Year: 2021
+   Venue: Nature Communications
+   Citations: 215
+   DOI: 10.1038/s41467-021-23311-9
+   File: Predicting optimal deep brain stimulation parameters for Parkinsons disease usin_2021.pdf
+
+--------------------------------------------------------------------------------
+
+5. Delineating epileptogenic networks using brain imaging data and personalized modeling in drug-resistant epilepsy
+   Authors: Huifang E. Wang, M. Woodman, P. Triebkorn, Jean-Didier Lemaréchal, J. Jha, B. Dollomaja, A. Vattikonda, Viktor Sip, S. Medina Villalon, M. Hashemi, M. Guye, J. Makhalova, F. Bartolomei, V. Jirsa
+   Year: 2023
+   Venue: Science Translational Medicine
+   Citations: 64
+   DOI: 10.1126/scitranslmed.abp8982
+   File: Delineating epileptogenic networks using brain imaging data and personalized mod_2023.pdf
+
+--------------------------------------------------------------------------------
+
+6. A Comprehensive Study on Early Alzheimer’s Disease Detection through Advanced Machine Learning Techniques on MRI Data
+   Authors: Qunwei Lin, Change Che, Hao Hu, Xinyu Zhao, Shulin Li
+   Year: 2023
+   Venue: Academic Journal of Science and Technology
+   Citations: 35
+   DOI: 10.54097/ajst.v8i1.14334
+   File: A Comprehensive Study on Early Alzheimers Disease Detection through Advanced Mac_2023.pdf
+
+--------------------------------------------------------------------------------
+
+7. BrainLang DL: A Deep Learning Approach to FMRI for Unveiling Neural Correlates of Language across Cultures
+   Authors: A. Greeni, Y. El-Ebiary, G. Krishna, G. Vikram, Kuchipudi Prasanth Kumar, Ravikiran K, B. K. Bala
+   Year: 2024
+   Venue: International Journal of Advanced Computer Science and Applications
+   Citations: 0
+   DOI: 10.14569/ijacsa.2024.01506114
+   File: BrainLang DL A Deep Learning Approach to FMRI for Unveiling Neural Correlates of_2024.pdf
+
+--------------------------------------------------------------------------------
+
+8. A deep learning framework for identifying Alzheimer's disease using fMRI-based brain network
+   Authors: Ruofan Wang, Qiguang He, Chunxiao Han, Haodong Wang, Lianshuan Shi, Y. Che
+   Year: 2023
+   Venue: Frontiers in Neuroscience
+   Citations: 15
+   DOI: 10.3389/fnins.2023.1177424
+   File: A deep learning framework for identifying Alzheimers disease using fMRI-based br_2023.pdf
+
+--------------------------------------------------------------------------------
+
+9. A deep learning approach to estimating initial conditions of Brain Network Models in reference to measured fMRI data
+   Authors: A. Kashyap, S. Plis, M. Schirner, P. Ritter, S. Keilholz
+   Year: 2023
+   Venue: Frontiers in Neuroscience
+   Citations: 3
+   DOI: 10.3389/fnins.2023.1159914
+   File: A deep learning approach to estimating initial conditions of Brain Network Model_2023.pdf
+
+--------------------------------------------------------------------------------
+
+10. Natural Image Reconstruction From fMRI Using Deep Learning: A Survey
+   Authors: Zarina Rakhimberdina, Quentin Jodelet, Xin Liu, T. Murata
+   Year: 2021
+   Venue: Frontiers in Neuroscience
+   Citations: 31
+   DOI: 10.3389/fnins.2021.795488
+   File: Natural Image Reconstruction From fMRI Using Deep Learning A Survey_2021.pdf
+
+--------------------------------------------------------------------------------
+
+11. DeepFMRI: End-to-end deep learning for functional connectivity and classification of ADHD using fMRI
+   Authors: A. Riaz, Muhammad Asad, Eduardo Alonso, G. Slabaugh
+   Year: 2020
+   Venue: Journal of Neuroscience Methods
+   Citations: 131
+   DOI: 10.1016/j.jneumeth.2019.108506
+   File: DeepFMRI End-to-end deep learning for functional connectivity and classification_2020.pdf
+
+--------------------------------------------------------------------------------
+
+12. Deep Learning Methods for Autism Spectrum Disorder Diagnosis Based on fMRI Images
+   Authors: Muhammed Bayram, İ̇̇lyas Özer, Feyzullah Temurtaş
+   Year: 2021
+   Venue: Sakarya University Journal of Computer and Information Sciences
+   Citations: 20
+   DOI: 10.35377/SAUCIS.04.01.879735
+   File: Deep Learning Methods for Autism Spectrum Disorder Diagnosis Based on fMRI Image_2021.pdf
+
+--------------------------------------------------------------------------------
+
+13. Using Deep Learning and Resting-State fMRI to Classify Chronic Pain Conditions
+   Authors: A. Santana, I. Cifre, Charles Novaes de Santana, P. Montoya
+   Year: 2019
+   Venue: Frontiers in Neuroscience
+   Citations: 40
+   DOI: 10.3389/fnins.2019.01313
+   File: Using Deep Learning and Resting-State fMRI to Classify Chronic Pain Conditions_2019.pdf
+
+--------------------------------------------------------------------------------
+
+14. Evaluation of Functional Decline in Alzheimer’s Dementia Using 3D Deep Learning and Group ICA for rs-fMRI Measurements
+   Authors: Muhammad Naveed Iqbal Qureshi, Seungjun Ryu, Joonyoung Song, K. Lee, Boreom Lee
+   Year: 2019
+   Venue: Frontiers in Aging Neuroscience
+   Citations: 41
+   DOI: 10.3389/fnagi.2019.00008
+   File: Evaluation of Functional Decline in Alzheimers Dementia Using 3D Deep Learning a_2019.pdf
+
+--------------------------------------------------------------------------------
+
+15. Deep Learning Algorithm for Classification of Cerebral Palsy from Functional Magnetic Resonance Imaging (fMRI)
+   Authors: Pradeepa Palraj, Gopinath Siddan
+   Year: 2021
+   Venue: International Journal of Advanced Computer Science and Applications
+   Citations: 4
+   DOI: 10.14569/IJACSA.2021.0120383
+   File: Deep Learning Algorithm for Classification of Cerebral Palsy from Functional Mag_2021.pdf
+
+--------------------------------------------------------------------------------
+
+16. Deep Learning in Alzheimer's Disease: Diagnostic Classification and Prognostic Prediction Using Neuroimaging Data
+   Authors: T. Jo, K. Nho, A. Saykin
+   Year: 2019
+   Venue: Frontiers in Aging Neuroscience
+   Citations: 536
+   DOI: 10.3389/fnagi.2019.00220
+   File: Deep Learning in Alzheimers Disease Diagnostic Classification and Prognostic Pre_2019.pdf
+
+--------------------------------------------------------------------------------
+
+17. Dysfunction of the prefrontal cortex in addiction: neuroimaging findings and clinical implications
+   Authors: Rita Z. Goldstein, N. Volkow
+   Year: 2011
+   Venue: Nature Reviews Neuroscience
+   Citations: 2397
+   DOI: 10.1038/nrn3119
+   File: Dysfunction of the prefrontal cortex in addiction neuroimaging findings and clin_2011.pdf
+
+--------------------------------------------------------------------------------
+
+18. Ten simple rules for neuroimaging meta-analysis
+   Authors: V. Müller, E. Cieslik, A. Laird, P. Fox, J. Raduà, D. Mataix-Cols, C. Tench, T. Yarkoni, Thomas E. Nichols, P. Turkeltaub, T. Wager, S. Eickhoff
+   Year: 2018
+   Venue: Neuroscience and Biobehavioral Reviews
+   Citations: 668
+   DOI: 10.1016/j.neubiorev.2017.11.012
+   File: Ten simple rules for neuroimaging meta-analysis_2018.pdf
+
+--------------------------------------------------------------------------------
+
+19. Variability in the analysis of a single neuroimaging dataset by many teams
+   Authors: Rotem Botvinik-Nezer, Felix Holzmeister, Colin Camerer, Anna Dreber, J. Huber, M. Johannesson, Michael Kirchler, Roni Iwanir, J. Mumford, Alison Adcock, P. Avesani, Blazej M. Baczkowski, Aahana Bajracharya, Leah Bakst, Sheryl Ball, Marco Barilari, N. Bault, D. Beaton, J. Beitner, R. Benoit, R. Berkers, J. Bhanji, B. Biswal, Sebastian Bobadilla-Suarez, T. Bortolini, Katherine L. Bottenhorn, Alexander Bowring, S. Braem, Hayley R. Brooks, Emily G. Brudner, C. Calderon, J. Camilleri, Jaime J. Castrellon, L. Cecchetti, E. Cieslik, Z. Cole, O. Collignon, R. Cox, William A. Cunningham, Stefan Czoschke, Kamalaker Dadi, Charles P. Davis, A. de Luca, M. Delgado, L. Demetriou, Jeffrey B. Dennison, X. Di, E. Dickie, Ekaterina Dobryakova, Claire Donnat, J. Dukart, Niall W. Duncan, Joke Durnez, A. Eed, S. Eickhoff, Andrew Erhart, Laura Fontanesi, G. M. Fricke, A. Galván, Remi Gau, S. Genon, T. Glatard, E. Glerean, J. Goeman, S. Golowin, Carlos González-García, Krzysztof J. Gorgolewski, Cheryl Grady, Mikella A. Green, João F. Guassi Moreira, Olivia Guest, S. Hakimi, J. P. Hamilton, R. Hancock, G. Handjaras, Bronson B. Harry, Colin Hawco, P. Herholz, Gabrielle Herman, Stephan Heunis, F. Hoffstaedter, J. Hogeveen, S. Holmes, Chuan-Peng Hu, S. Huettel, M. Hughes, V. Iacovella, Alexandru D. Iordan, P. Isager, A. I. Isik, Andrew Jahn, Matthew R. Johnson, T. Johnstone, Michael J. E. Joseph, A. Juliano, J. Kable, Michalis Kassinopoulos, Cemal Koba, Xiang-zhen Kong, T. Koscik, N. Kucukboyaci, Brice A. Kuhl, Sebastian Kupek, A. Laird, C. Lamm, R. Langner, Nina Lauharatanahirun, Hongmi Lee, Sangil Lee, A. Leemans, Andrea Leo, E. Lesage, Flora Li, Monica Li, P. C. Lim, Evan N. Lintz, Schuyler W. Liphardt, A. L. Losecaat Vermeer, Bradley C. Love, Michael L. Mack, Norberto Malpica, Theo F. Marins, Camille Maumet, Kelsey R. McDonald, Joseph T. McGuire, Helena Melero, Adriana S Méndez Leal, B. Meyer, Kristin N. Meyer, P. Mihai, G. Mitsis, J. Moll, D. Nielson, G. Nilsonne, Michael P. Notter, E. Olivetti, Adrian I. Onicas, P. Papale, K. Patil, J. Peelle, A. Pérez, D. Pischedda, J. Poline, Yanina Prystauka, Shruti Ray, P. Reuter-Lorenz, R. Reynolds, E. Ricciardi, J. Rieck, Anais Rodriguez-Thompson, Anthony Romyn, T. Salo, G. Samanez-Larkin, Emilio Sanz-Morales, M. Schlichting, D. Schultz, Qiang Shen, M. Sheridan, Fu Shiguang, J. Silvers, Kenny Skagerlund, Alec Smith, D. Smith, Peter Sokol-Hessner, Simon Richard Steinkamp, Sarah M. Tashjian, B. Thirion, J. Thorp, G. Tinghög, Loreen Tisdall, S. Tompson, Claudio Toro-Serey, J. Torre, L. Tozzi, V. Truong, L. Turella, Anna E. van’t Veer, Tom Verguts, J. Vettel, Sagana Vijayarajah, Khoi Vo, M. Wall, W. Weeda, S. Weis, David J. White, David Wisniewski, Alba Xifra-Porxas, Emily Yearling, Sangsuk Yoon, R. Yuan, K. Yuen, Lei Zhang, Xu Zhang, Joshua Zosky, Thomas E. Nichols, R. Poldrack, T. Schonberg
+   Year: 2019
+   Venue: Nature
+   Citations: 779
+   DOI: 10.1038/s41586-020-2314-9
+   File: Variability in the analysis of a single neuroimaging dataset by many teams_2019.pdf
+
+--------------------------------------------------------------------------------
+
+20. The Human Connectome Project's neuroimaging approach
+   Authors: M. Glasser, Stephen M. Smith, D. Marcus, J. Andersson, E. Auerbach, T. Behrens, Timothy S. Coalson, M. Harms, M. Jenkinson, S. Moeller, E. Robinson, S. Sotiropoulos, Junqian Xu, E. Yacoub, K. Uğurbil, D. V. Van Essen
+   Year: 2016
+   Venue: Nature Neuroscience
+   Citations: 934
+   DOI: 10.1038/nn.4361
+   File: The Human Connectome Projects neuroimaging approach_2016.pdf
+
+--------------------------------------------------------------------------------
+
+21. Predicting Age Using Neuroimaging: Innovative Brain Ageing Biomarkers
+   Authors: J. Cole, K. Franke
+   Year: 2017
+   Venue: Trends in Neurosciences
+   Citations: 721
+   DOI: 10.1016/j.tins.2017.10.001
+   File: Predicting Age Using Neuroimaging Innovative Brain Ageing Biomarkers_2017.pdf
+
+--------------------------------------------------------------------------------
+
+22. Decoding Dynamic Brain Patterns from Evoked Responses: A Tutorial on Multivariate Pattern Analysis Applied to Time Series Neuroimaging Data
+   Authors: Tijl Grootswagers, S. Wardle, T. Carlson
+   Year: 2016
+   Venue: Journal of Cognitive Neuroscience
+   Citations: 535
+   DOI: 10.1162/jocn_a_01068
+   File: Decoding Dynamic Brain Patterns from Evoked Responses A Tutorial on Multivariate_2016.pdf
+
+--------------------------------------------------------------------------------
+
+23. Random Forest Algorithm for the Classification of Neuroimaging Data in Alzheimer's Disease: A Systematic Review
+   Authors: Alessia Sarica, A. Cerasa, A. Quattrone
+   Year: 2017
+   Venue: Frontiers in Aging Neuroscience
+   Citations: 505
+   DOI: 10.3389/fnagi.2017.00329
+   File: Random Forest Algorithm for the Classification of Neuroimaging Data in Alzheimer_2017.pdf
+
+--------------------------------------------------------------------------------
+
+24. The first step for neuroimaging data analysis: DICOM to NIfTI conversion
+   Authors: Xiangrui Li, P. Morgan, J. Ashburner, Jolinda C. Smith, C. Rorden
+   Year: 2016
+   Venue: Journal of Neuroscience Methods
+   Citations: 849
+   DOI: 10.1016/j.jneumeth.2016.03.001
+   File: The first step for neuroimaging data analysis DICOM to NIfTI conversion_2016.pdf
+
+--------------------------------------------------------------------------------
+
+25. A Survey on Deep Learning for Neuroimaging-Based Brain Disorder Analysis
+   Authors: Li Zhang, Mingliang Wang, Mingxia Liu, Daoqiang Zhang
+   Year: 2020
+   Venue: Frontiers in Neuroscience
+   Citations: 173
+   DOI: 10.3389/fnins.2020.00779
+   File: A Survey on Deep Learning for Neuroimaging-Based Brain Disorder Analysis_2020.pdf
+
+--------------------------------------------------------------------------------
+
+26. Are the Neural Correlates of Consciousness in the Front or in the Back of the Cerebral Cortex? Clinical and Neuroimaging Evidence
+   Authors: M. Boly, M. Massimini, Naotsugu Tsuchiya, B. Postle, C. Koch, G. Tononi
+   Year: 2017
+   Venue: Journal of Neuroscience
+   Citations: 406
+   DOI: 10.1523/JNEUROSCI.3218-16.2017
+   File: Are the Neural Correlates of Consciousness in the Front or in the Back of the Ce_2017.pdf
+
+--------------------------------------------------------------------------------
+
+27. Granger Causality Analysis in Neuroscience and Neuroimaging
+   Authors: A. Seth, A. Barrett, L. Barnett
+   Year: 2015
+   Venue: Journal of Neuroscience
+   Citations: 729
+   DOI: 10.1523/JNEUROSCI.4399-14.2015
+   File: Granger Causality Analysis in Neuroscience and Neuroimaging_2015.pdf
+
+--------------------------------------------------------------------------------
+
+28. Functional neuroanatomy of meditation: A review and meta-analysis of 78 functional neuroimaging investigations
+   Authors: K. Fox, Matthew L. Dixon, Savannah Nijeboer, M. Girn, James L Floman, M. Lifshitz, Melissa Ellamil, P. Sedlmeier, K. Christoff
+   Year: 2016
+   Venue: Neuroscience and Biobehavioral Reviews
+   Citations: 511
+   DOI: 10.1016/j.neubiorev.2016.03.021
+   File: Functional neuroanatomy of meditation A review and meta-analysis of 78 functiona_2016.pdf
+
+--------------------------------------------------------------------------------
+
+29. The entropic brain: a theory of conscious states informed by neuroimaging research with psychedelic drugs
+   Authors: Robin L. Carhart-Harris, R. Leech, Peter J Hellyer, M. Shanahan, A. Feilding, E. Tagliazucchi, D. Chialvo, D. Nutt
+   Year: 2014
+   Venue: Frontiers in Human Neuroscience
+   Citations: 924
+   DOI: 10.3389/fnhum.2014.00020
+   File: The entropic brain a theory of conscious states informed by neuroimaging researc_2014.pdf
+
+--------------------------------------------------------------------------------
+
+30. Best practices in data analysis and sharing in neuroimaging using MRI
+   Authors: Thomas E. Nichols, Samir Das, S. Eickhoff, Alan C. Evans, Tristan Glatard, Michael Hanke, N. Kriegeskorte, M. Milham, R. Poldrack, J. Poline, Erika Proal, Bertrand Thirion, D. C. V. Essen, Tonya White, B. T. T. Yeo, Nathaniel Daw, Barbara Engelhardt, Uri Hasson, K. Norman, J. Pillow, Peter J. Ramadge, N. Turk-Browne, B. Fischl
+   Year: 2017
+   Venue: Nature Neuroscience
+   Citations: 238
+   DOI: 10.1038/nn.4500
+   File: Best practices in data analysis and sharing in neuroimaging using MRI_2017.pdf
+
+--------------------------------------------------------------------------------
+
+31. Movies in the magnet: Naturalistic paradigms in developmental functional neuroimaging
+   Authors: T. Vanderwal, J. Eilbott, F. Castellanos
+   Year: 2018
+   Venue: Developmental Cognitive Neuroscience
+   Citations: 185
+   DOI: 10.1016/j.dcn.2018.10.004
+   File: Movies in the magnet Naturalistic paradigms in developmental functional neuroima_2018.pdf
+
+--------------------------------------------------------------------------------
+
+32. Real-Life Self-Control is Predicted by Parietal Activity During Preference Decision Making: A Brain Decoding Analysis
+   Authors: K. Krönke, Holger Mohr, Max Wolff, A. Kräplin, M. Smolka, G. Bühringer, Hannes Ruge, T. Goschke
+   Year: 2021
+   Venue: Cognitive, Affective, & Behavioral Neuroscience
+   Citations: 9
+   DOI: 10.3758/s13415-021-00913-w
+   File: Real-Life Self-Control is Predicted by Parietal Activity During Preference Decis_2021.pdf
+
+--------------------------------------------------------------------------------
+
+33. Hand-Selective Visual Regions Represent How to Grasp 3D Tools: Brain Decoding during Real Actions
+   Authors: E. Knights, Courtney Mansfield, D. Tonin, J. Saada, Fraser W. Smith, Stéphanie Rossit
+   Year: 2021
+   Venue: Journal of Neuroscience
+   Citations: 23
+   DOI: 10.1523/JNEUROSCI.0083-21.2021
+   File: Hand-Selective Visual Regions Represent How to Grasp 3D Tools Brain Decoding dur_2021.pdf
+
+--------------------------------------------------------------------------------
+
+34. A literature review of brain decoding research
+   Authors: R. M. Awangga, T. Mengko, N P Utama
+   Year: 2020
+   Venue: IOP Conference Series: Materials Science and Engineering
+   Citations: 8
+   DOI: 10.1088/1757-899X/830/3/032049
+   File: A literature review of brain decoding research_2020.pdf
+
+--------------------------------------------------------------------------------
+
+35. Decoding semantic representations in mind and brain
+   Authors: Saskia L. Frisby, A. Halai, Christopher R. Cox, M. L. Lambon Ralph, T. Rogers
+   Year: 2023
+   Venue: Trends in Cognitive Sciences
+   Citations: 37
+   DOI: 10.1016/j.tics.2022.12.006
+   File: Decoding semantic representations in mind and brain_2023.pdf
+
+--------------------------------------------------------------------------------
+
+36. Hierarchical Neural Representation of Dreamed Objects Revealed by Brain Decoding with Deep Neural Network Features
+   Authors: T. Horikawa, Y. Kamitani
+   Year: 2016
+   Venue: Frontiers in Computational Neuroscience
+   Citations: 63
+   DOI: 10.3389/fncom.2017.00004
+   File: Hierarchical Neural Representation of Dreamed Objects Revealed by Brain Decoding_2016.pdf
+
+--------------------------------------------------------------------------------
+
+37. Sparsity Is Better with Stability: Combining Accuracy and Stability for Model Selection in Brain Decoding
+   Authors: Luca Baldassarre, M. Pontil, J. Mourão-Miranda
+   Year: 2017
+   Venue: Frontiers in Neuroscience
+   Citations: 37
+   DOI: 10.3389/fnins.2017.00062
+   File: Sparsity Is Better with Stability Combining Accuracy and Stability for Model Sel_2017.pdf
+
+--------------------------------------------------------------------------------
+
+38. Decoding speech perception from non-invasive brain recordings
+   Authors: Alexandre D'efossez, C. Caucheteux, J. Rapin, Ori Kabeli, J. King
+   Year: 2022
+   Venue: Nature Machine Intelligence
+   Citations: 155
+   DOI: 10.1038/s42256-023-00714-5
+   File: Decoding speech perception from non-invasive brain recordings_2022.pdf
+
+--------------------------------------------------------------------------------
+
+39. Interpretability of Multivariate Brain Maps in Linear Brain Decoding: Definition, and Heuristic Quantification in Multivariate Analysis of MEG Time-Locked Effects
+   Authors: S. M. Kia, Sandro Vega Pons, N. Weisz, A. Passerini
+   Year: 2017
+   Venue: Frontiers in Neuroscience
+   Citations: 19
+   DOI: 10.3389/fnins.2016.00619
+   File: Interpretability of Multivariate Brain Maps in Linear Brain Decoding Definition _2017.pdf
+
+--------------------------------------------------------------------------------
+
+40. Brain Decoding-Classification of Hand Written Digits from fMRI Data Employing Bayesian Networks
+   Authors: Elahe’ Yargholi, G. Hossein-Zadeh
+   Year: 2016
+   Venue: Frontiers in Human Neuroscience
+   Citations: 24
+   DOI: 10.3389/fnhum.2016.00351
+   File: Brain Decoding-Classification of Hand Written Digits from fMRI Data Employing Ba_2016.pdf
+
+--------------------------------------------------------------------------------
+
+41. Transcriptomic and cellular decoding of regional brain vulnerability to neurogenetic disorders
+   Authors: J. Seidlitz, Ajay Nadig, Siyuan Liu, R. Bethlehem, P. Vértes, S. Morgan, F. Váša, R. Romero-García, F. Lalonde, L. Clasen, J. Blumenthal, C. Paquola, B. Bernhardt, K. Wagstyl, D. Polioudakis, Luis de la Torre-Ubieta, D. Geschwind, Joan C. Han, N. Lee, D. Murphy, E. Bullmore, A. Raznahan
+   Year: 2020
+   Venue: Nature Communications
+   Citations: 208
+   DOI: 10.1038/s41467-020-17051-5
+   File: Transcriptomic and cellular decoding of regional brain vulnerability to neurogen_2020.pdf
+
+--------------------------------------------------------------------------------
+
+42. Deep Learning Based Inter-subject Continuous Decoding of Motor Imagery for Practical Brain-Computer Interfaces
+   Authors: Sujit Roy, Anirban Chowdhury, K. McCreadie, G. Prasad
+   Year: 2020
+   Venue: Frontiers in Neuroscience
+   Citations: 42
+   DOI: 10.3389/fnins.2020.00918
+   File: Deep Learning Based Inter-subject Continuous Decoding of Motor Imagery for Pract_2020.pdf
+
+--------------------------------------------------------------------------------
+
+43. Brain Recording, Mind-Reading, and Neurotechnology: Ethical Issues from Consumer Devices to Brain-Based Speech Decoding
+   Authors: Stephen Rainey, Stéphanie Martin, Andy Christen, P. Mégevand, É. Fourneret
+   Year: 2020
+   Venue: Science and Engineering Ethics
+   Citations: 46
+   DOI: 10.1007/s11948-020-00218-0
+   File: Brain Recording Mind-Reading and Neurotechnology Ethical Issues from Consumer De_2020.pdf
+
+--------------------------------------------------------------------------------
+
+44. Combinatorial brain decoding of people's whereabouts during visuospatial navigation
+   Authors: H. P. Op de Beeck, Ben Vermaercke, D. Woolley, N. Wenderoth
+   Year: 2013
+   Venue: Frontiers in Neuroscience
+   Citations: 26
+   DOI: 10.3389/fnins.2013.00078
+   File: Combinatorial brain decoding of peoples whereabouts during visuospatial navigati_2013.pdf
+
+--------------------------------------------------------------------------------
+
+45. Brain decoding: Reading minds
+   Authors: Kerri M. Smith
+   Year: 2013
+   Venue: Nature
+   Citations: 39
+   DOI: 10.1038/502428a
+   File: Brain decoding Reading minds_2013.pdf
+
+--------------------------------------------------------------------------------
+
+46. Meta-control: From psychology to computational neuroscience
+   Authors: Ben Eppinger, T. Goschke, Sebastian Musslick
+   Year: 2021
+   Venue: Cognitive, Affective, & Behavioral Neuroscience
+   Citations: 31
+   DOI: 10.3758/s13415-021-00919-4
+   File: Meta-control From psychology to computational neuroscience_2021.pdf
+
+--------------------------------------------------------------------------------
+
+47. Mind Causality: A Computational Neuroscience Approach
+   Authors: E. Rolls
+   Year: 2021
+   Venue: Frontiers in Computational Neuroscience
+   Citations: 15
+   DOI: 10.3389/fncom.2021.706505
+   File: Mind Causality A Computational Neuroscience Approach_2021.pdf
+
+--------------------------------------------------------------------------------
+
+48. Replicability or reproducibility? On the replication crisis in computational neuroscience and sharing only relevant detail
+   Authors: M. Miłkowski, Witold M. Hensel, Mateusz Hohol
+   Year: 2018
+   Venue: Journal of Computational Neuroscience
+   Citations: 94
+   DOI: 10.1007/s10827-018-0702-z
+   File: Replicability or reproducibility On the replication crisis in computational neur_2018.pdf
+
+--------------------------------------------------------------------------------
+
+49. Neuromatch Academy: Teaching Computational Neuroscience with Global Accessibility
+   Authors: Tara van Viegen, A. Akrami, Kathryn Bonnen, Eric E. J. DeWitt, Alexandre Hyafil, Helena Ledmyr, Grace W. Lindsay, Patrick J. Mineault, J. Murray, Xaq Pitkow, Aina Puce, Madineh Sedigh-Sarvestani, C. Stringer, Titipat Achakulvisut, Elnaz Alikarami, Melvin Selim Atay, E. Batty, Jeffrey C. Erlich, Byron V. Galbraith, Yueqi Guo, A. Juavinett, Matthew R. Krause, Songting Li, Marius Pachitariu, Elizabeth Straley, D. Valeriani, Emma Vaughan, M. Vaziri-Pashkam, Michael L. Waskom, Gunnar Blohm, Konrad Paul Kording, P. Schrater, Brad Wyble, Sean Escola, Megan A. K. Peters
+   Year: 2020
+   Venue: Trends in Cognitive Sciences
+   Citations: 31
+   DOI: 10.1016/j.tics.2021.03.018
+   File: Neuromatch Academy Teaching Computational Neuroscience with Global Accessibility_2020.pdf
+
+--------------------------------------------------------------------------------
+
+50. A Neuron–Glial Perspective for Computational Neuroscience
+   Authors: M. Pittà, Hugues Berry
+   Year: 2019
+   Venue: Springer Series in Computational Neuroscience
+   Citations: 11
+   DOI: 10.1007/978-3-030-00817-8_1
+   File: A NeuronGlial Perspective forComputational Neuroscience_2019.pdf
+
+--------------------------------------------------------------------------------
+

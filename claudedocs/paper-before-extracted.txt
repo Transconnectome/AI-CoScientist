@@ -1,0 +1,409 @@
+A more comprehensive and reliable analysis of individual differences with generalized random forest for high-dimensional data: validation and guidelines
+
+Jinwoo Lee1,2*, Junghoon Justin Park3*, Maria Pak1*, Seung Yun Choi4*, Jiook Cha1,3,4,5†
+
+*equally contributed; †corresponding author
+
+Affiliations
+
+1 Department of Psychology, Seoul National University, South Korea
+
+2 Department of Psychology, University of California, San Diego, United States
+
+3 Interdisciplinary Program in Artificial Intelligence, Seoul National University, South Korea
+
+4 Department of Brain and Cognitive Sciences, Seoul National University, South Korea
+
+5 Institute of Psychological Sciences, Seoul National University, South Korea
+
+This file includes:
+
+Abstract
+
+Main text
+
+Acknowledgement
+
+Author contributions
+
+References
+
+Boxes 1-3
+
+Table 1
+
+Figures 1-3
+
+Author Note:
+
+We have no conflicts of interest to disclose. Correspondence concerning this article should be addressed to Jiook Cha, PhD, Building 16, Office M512, Gwanak-ro 1, Gwanak-gu, Seoul, South Korea. Email: Jiook Cha, PhD (connectome@snu.ac.kr)
+
+Abstract
+
+Analyzing individual differences in treatment or exposure effects is a central challenge in psychology and neuroscience. Conventional statistical models have faced limitations in detecting key moderators in high-dimensional input or capturing their nonlinear interactions. Generalized Random Forest (GRF) enables researchers to predict individualized treatment effects and uncover nonlinear combinations of key moderators that best explain the variance of effects, yet current implementations yield unstable predictions and unreliable moderator identification when applied to high-dimensional inputs spanning whole-brain phenotypes and psychosocial variables. Here, we introduce two methodological advances: a seed ensemble strategy that stabilizes prediction of individualized effects across random initializations, and a backward-elimination model-selection procedure that systematically isolates salient moderators from massive variables. Systematic validations with both simulations and a large-scale dataset (N = 8,778) demonstrate improved reliability of individualized predictions, greater accuracy in moderator detection, and practical interpretability. To facilitate adoption, we provide a step-by-step guideline with reusable codes, so researchers can readily apply this framework to their own datasets. These enhancements position GRF as a more reliable and comprehensive approach for modeling heterogeneous treatment effects. Beyond data-driven discovery of interacting moderators and guiding hypothesis generation, our framework also supports early identification of vulnerable subgroups and the optimization of targeted clinical and policy interventions.Introduction
+
+Why are some children more vulnerable to stress after going through an early-life traumatic event? (1-4) Why do some older adults show robust cognitive reserve even if they’re genetically at risk for Alzheimer’s disease? (5-7) Why do certain antidepressants work better for some people than others? (8-10) As these questions illustrate, identifying how and for whom a given treatment or exposure exerts effects along with the key moderators of such effects is a central topic across psychology and neuroscience. Understanding individual differences in treatment effects is not only crucial for refining hypothetical models of mental system but also has direct translational value. Specifically, it enables the identification of subpopulations who are most likely to benefit from a given intervention, thus contributing to the advancement of personalized and precision medicine (11, 12). 
+
+Conventional statistical approaches, particularly those based on linear regression, have long attempted to model such individual variability. However, despite notable contributions, they face fundamental challenges. For instance, univariate moderation analyses, which examine the statistical significance of interaction effects between an outcome variable and a single moderator, may overlook more potent sources of individual differences that are not explicitly modeled (13). Even when higher-order interaction terms are included, regression models require the researchers to pre-specify all hypothetical interactions, which is susceptible to low statistical power and biased interpretations (14, 15). Furthermore, their reliance on linear models limits their ability to capture complex interplay among moderators, especially in the high-dimensional settings of modern neuroscience where countless variables could plausibly influence a treatment effect (16-18). For example, a conventional linear regression analysis aiming to account for all interactions among 45 covariates would require examining over 35 trillion interactive terms (19). Attempting to test all possible interactions in a multivariate setting is computationally infeasible and statistically fraught, creating an impasse for comprehensive and data-driven discovery.  
+
+Generalized Random Forest (GRF) offers a powerful alternative for studying individual differences by applying a non-parametric and data-driven approach (20). Not only does GRF estimate the average treatment effect (ATE), but it is also capable of predicting individualized treatment effects (ITE), while simultaneously identifying nonlinear combinations of key moderators that account for such heterogeneity. This enables researchers to uncover and interpret treatment effect moderators without requiring the pre-specification of interaction terms or targeted hypothesis testing for each candidate variable. This flexibility makes GRF particularly valuable for informing personalized decision-making and generating novel hypotheses centered around empirically identified moderators. 
+
+Despite this potential, we identify two critical limitations in current applications of the GRF framework in behavioral sciences. First, GRF models exhibit substantial variability in ITE prediction performance depending on the random seed used during training, which raises concerns about the reliability of both the model and its outputs. Second, while GRF can accommodate a larger number of potential moderators than traditional regression approaches, its predictive power substantially declines when modeling ITEs involving the extensive set of moderators typically reported in contemporary psychology and neuroscience — e.g., the involvement of a whole-brain distributed circuit in the resilient regulation of negative affect (21-23). This suggests a need for a more reliable and comprehensive analytical framework that can identify robust moderators across a high-dimensional feature space and remain robust to stochastic factors like random initialization. 
+
+In this paper, we first provide a brief overview of how GRF works and how it has been applied in psychology and neuroscience. We then present two simulation-based methodological proposals designed to enhance the reliability and comprehensiveness of GRF-based analyses. Finally, we demonstrate a full tutorial of our proposed framework on a real-world dataset, covering model fitting, model selection, ATE and ITE evaluation, and the interpretation of key moderators. 
+
+Brief Overview of GRF
+
+GRF is a causal machine learning technique that computes ATE and ITEs based on the potential outcome framework. By stratifying samples based on their predicted ITEs, each sample can be characterized as belonging to high- or low-response group and key moderators can be identified (see Fig 1). Since all individual difference analyses are based on the ITEs, it is essential to understand the internal mechanism by which GRF computes these quantities. In this section, we first review how ITEs are typically defined and calculated in conventional causal inference frameworks and then outline how GRF improves upon these methods. We then summarize how GRF has been applied to generate novel insights in psychology and neuroscience. 
+
+ITE calculation as a matching problem
+
+ It is helpful to start with the potential outcome framework (24), a theoretical background of GRF in causal inference. In this framework, the individual treatment effect for sample , , is defined as follows:
+
+where  and  represent the observed outcome and treatment values, respectively. Also,  is the covariate set for sample . However, we cannot observe both potential outcomes (W = 1 and W = 0) for the same individual. Only one is realized, a limitation known as the “fundamental problem of causal inference” (25). Here, two causal assumptions, unconfoundedness and overlap, can address this issue. Unconfoundedness assumes that treatment assignment is based only on observed variables (26), and overlap ensures that every unit has a positive chance of receiving each treatment (27). When these assumptions are met, equation (1) can be mathematically rewritten in the following form that is identifiable in observational studies (27):
+
+Hence, to calculate an ITE of sample , samples that display the most similar covariate profile to  need to be chosen from the treated and not treated samples ( and , respectively). For example, one of the causal machine learning techniques, k-nearest neighborhood (kNN) matching, selects  and based on Euclidean distance in the covariate space (28). However, since this approach results in inaccurate matching in high-dimensional feature spaces (29-31), a more efficient algorithm is required to accurately estimate  in settings with many moderator candidates. 
+
+GRF as an adaptive matcher for calculating ITE
+
+To improve the identification of  and  in high-dimensional settings, GRF acts like an adaptive matching machine that clusters individuals based on their covariate profiles related to variability of treatment effects regardless of how complex the rules might be. 
+
+Technically, GRF employs a greedy split algorithm of classical random forest. It builds trees by selecting random subsamples and splitting leaves to maximize the squared differences in leaf-level ATEs, effectively separating subsamples based on feature profiles related to treatment effects. By assembling all trees, GRF assigns a similarity-based weight to each sample on how frequently it falls into the same leaf node as sample  to calculate . These weights are then used to compute  as a weighted average of the outcome values of the other samples. Unlike kNN matching, which relies on simple distance metrics in high-dimensional space, GRF adaptively learns complex matching rules through recursive splits, allowing it to identify locally relevant covariates and avoid the curse of dimensionality. Compared to the kNN matching, GRF recovered simulated ITEs with five times less mean-squared error (20, 32). 
+
+Applying decision tree methods that partition samples into leaves based on specific variables, GRF can automatically model nonlinear interactions among moderators that drive variability in ITEs. Additionally, by tracking how frequently each candidate moderator is used to split the trees, the algorithm provides a measure of variable importance, offering a data-driven opportunity to identify key moderators that engage in treatment effect heterogeneity. 
+
+Also, GRF provides ITEs for every sample without explicit train/test data splitting, while preventing data leakage problem during model fitting and prediction of ITEs (20, 32). For a detailed explanation of how GRF internally predicts each sample’s ITE in a robust manner, see Box 1. 
+
+Application of GRF in psychology and neuroscience
+
+Given the complex and heterogeneous nature of human behavior, brain function, and their relationship, GRF is emerging as a valuable tool in psychology and neuroscience. It allows for flexible, non-parametric computation of treatment effects that can account for a wide range of covariates, providing more personalized insights than traditional methods can offer.
+
+GRF has been increasingly utilized in psychological studies, demonstrating its value in understanding diverse mental health outcomes. Notable research includes studies on suicide risk (33-35), trauma (36-39), dementia (40), and well-being (18, 41). In particular, a recent study provides a compelling example of GRF’s utility in psychological research, specifically addressing a critical research gap concerning the heterogeneous effects of retirement on older adults' mental health (18), a particularly salient inquiry given global demographic shift. 
+
+Previous studies on the mental health consequences of retirement have produced inconsistent findings, often attributable to methodological heterogeneity or the failure to appropriately model individual differences in treatment effects. A major limitation of prior work lies in the widespread assumption of homogeneous treatment effects. Even when heterogeneity was acknowledged, researchers typically selected moderator variables based on theoretical intuition or prior literature, without empirically verifying the presence of heterogeneity or the suitability of those moderators. However, identifying such individual differences and key moderators is often challenging, particularly in high-dimensional settings where numerous covariates are present. Moreover, the choice of instrument can substantially influence the results, with different instruments potentially yielding divergent conclusions, thereby limiting the robustness and interpretability of the findings. 
+
+By leveraging GRF's high functional flexibility and its ability to identify relevant covariates in high-dimensional data, the ref (18) effectively bypassed these limitations and provided crucial scientific insights: retirement generally improved mental health by reducing depression and increasing well-being, but notably, its depression-reducing effects were more pronounced for specific subgroups, such as overweight males, males aged 57-67, and males with internet habits. These findings highlight the value of GRF’s data-driven approach in uncovering subgroup-specific effects and identifying the covariates that contribute most to treatment heterogeneity. This allows for more targeted and personalized policy interventions, aimed at optimizing retirement-related mental health benefits and improving the well-being of older adults.
+
+As summarized in Table 1, these studies showcase GRF's capacity to handle large sample sizes (ranging from 1,150 to 196,610) and numerous covariates (from 7 to 128). The covariates in these studies predominantly include sociodemographic variables, psychosocial factors, and health-related factors. GRF’s ability to model non-linear and multivariate relationships makes it ideal for capturing the intricate interplay of genetic, neural, and environmental factors that contribute to psychological outcomes.
+
+Current Limitations and Proposed Suggestions
+
+Despite the methodological strengths of GRF in accurately and robustly predicting ITEs even in high-dimensional feature spaces by directly identifying key moderators from the given covariates and its numerous applications in the behavioral sciences, this section highlights two major challenges of the current GRF framework that hinder reliable and comprehensive analysis. We then propose two simple yet effective solutions to address these issues and demonstrate through simulation studies that our proposals can meaningfully mitigate these limitations.
+
+Toward more reliable framework
+
+Limited reliability in ITE prediction
+
+In practice, GRF models often exhibit considerable instability in the prediction of ITEs, depending heavily on the random seed used during training. Even when models are trained on the same data with identical hyperparameters, the predicted ITEs can vary substantially across seeds. In some cases, the model may yield predictions that align well with observed treatment–outcome structure under one seed, while performing poorly under another.
+
+More technically, this variability is observed in the ‘differential forest prediction’ coefficient (hereafter, ) produced by the calibration test — a diagnostic tool for evaluating model fit in GRF. In the calibration test for the trained GRF model, two metrics,  and , evaluate how well the predicted ATE and ITE align with the observed treatment-outcome relationships for each sample. When each metric is statistically significant at P < .05 and its estimate is close to 1, it indicates that the model closely explains the variance observed in the actual data (see Box 2 for details of calibration test). However, across different seeds,  estimates and their P-values can fluctuate substantially, often failing to reach statistical significance. This instability may undermine confidence in the model’s results and their interpretability. 
+
+In a simulation experiment using a dataset of 1,000 samples with 150 covariates, treatment, and outcome (see Appendix Methods), the estimates and statistical significance of  varied widely depending on the choice of single random seed used for model training (see Fig 2a). While  estimates remained stable across all seeds, ITE predictions significantly explained the variance in observed outcomes well for only half of the seeds, while failing to do so for the other half. This makes it difficult to determine whether the 150 covariates used in the analysis truly capture key moderators of individual-level treatment effects, and may lead to misleading conclusions if results from only a favorable seed are reported (see Fig 2a).
+
+Such instability may arise from the inherent randomness in building random forest models (e.g., subsampling and random feature selection during tree growth) as well as from the substantial statistical uncertainty involved in ITE prediction itself (20).
+
+Seed ensemble to improve reliability
+
+As a practical solution to the instability of  estimates across random seeds, we propose the use of a seed ensemble. This approach involves training multiple GRF models using the same variables and hyperparameter configuration but with different random seeds and then aggregating them into a single ‘big model’. If each model contains n trees and k such models are combined, the resulting ensemble contains a total of k × n trees. The GRF package provides a built-in function, merge_forests, that facilitates this process (42).
+
+Importantly, we emphasize that constructing a model with k × n trees using a single seed is not equivalent to combining k models with n trees each using k different seeds. Although the total number of trees is the same, the ensemble trained across diverse seeds introduces greater structural variation and reduces individual sources of randomness. In our simulations, we evaluated the variability of calibration metrics under a seed-ensembled condition, where instead of training a GRF model with 2,000 trees using a single seed, we aggregated models trained with 400 trees each across five different seeds — totaling 2,000 trees. We tested four different combinations of five seeds. Unlike the single-seed condition in which calibration metrics varied greatly depending on the chosen seed (see Fig 2a), all seed combinations under the seed-ensembled condition yielded  estimates that were statistically significant and similar in value (see Fig 2b). These results suggest that, even with the same total number of trees, aggregating models trained under diverse seeds allows for a more reliable evaluation of calibration estimates given a fixed set of variables and hyperparameters.
+
+In addition, we extended the simulation to examine how the variability of calibration estimates changes across different combinations of tree and seed counts. Specifically, we tested 16 conditions combining tree counts of 1,000, 2,000, 5,000, and 10,000 with seed counts of 1, 2, 5, and 10. For each condition, we fitted 50 GRF models using different random seeds, and analyzed how the coefficient of variation for  and  changed as a function of tree and seed count (see Appendix Methods). We observed that coefficients of variation of the log-transformed P-values for  was lower in the seed ensembled condition compared to the single-seed condition (see Fig 2c). Interestingly, coefficients of variations of log-transformed P-values for  remained consistently low across all conditions, regardless of whether the seed ensemble was used (see Fig 2c). The stabilizing effect of the seed ensemble on  was robust across both linear and nonlinear treatment functions, as well as under varying degrees of treatment effect heterogeneity (see Appendix A and Appendix Methods).
+
+However, it is important to note that using a seed ensemble required more computation time, even when the total number of trees was the same. For example, training a model with 10,000 trees under a single seed took approximately 100 seconds, whereas building a big model by aggregating GRF models with 1,000 trees each across 10 different seeds took about 360 seconds with eight CPU threads of MacBook Air M2-chip (run at up to 3.94 GHz per thread; see Fig 2c). Thus, while seed ensembling offers greater stability, it comes at a computational cost, highlighting the need to explore the most efficient combination by balancing stability and runtime.
+
+Taken together, these findings suggest that the seed ensemble offers a more stable and reliable strategy for ITE prediction under GRF models, beyond the benefits obtained by simply increasing the number of trees under a fixed seed.
+
+Toward more comprehensive framework 
+
+Lack of comprehensive model selection framework
+
+One of the key strengths of GRF over traditional linear models lies in its ability to model complex, nonlinear interactions among massive covariates without requiring explicit specification of interaction terms. This makes GRF particularly effective for identifying treatment effect heterogeneity in a data-driven manner. 
+
+Nevertheless, a critical limitation remains: the choice of which variables to include as covariates must still be manually specified by the researcher. For instance, consider a study aiming to understand how bullying experiences in childhood shape individual differences in children’s mental health problems, potentially moderated by neurobiological features. Given that including too many covariates can underpower the GRF’s ability to estimate treatment effects (43, 44), there is a practical limit to the number of covariates that can be included in the model relative to sample size. As a result, researchers often rely on prior literature to hand-select a subset of variables known to modulate responses to trauma — such as amygdala volume (45), blood-oxygenation-level–dependent (BOLD) activities of the amygdala during specific tasks (46), or functional connectivity within the salience network (47).
+
+However, recent findings in neuroscience consistently suggest that the encoding of stressful events and the subsequent affect regulation is implemented in a distributed manner across the whole brain (21-23). This raises the possibility that a small set of hand-picked variables may be suboptimal for capturing the full complexity of individual differences. In such cases, a more comprehensive modeling strategy would involve incorporating a much broader set of whole-brain features as covariates, allowing the GRF algorithm to identify the most relevant heterogeneity-factors in a data-driven fashion.
+
+Backward elimination for comprehensive model selection
+
+As a solution to the challenge of identifying the optimal subset of covariates from a large feature space in a data-driven manner, we propose a backward elimination — based model selection framework, which is designed to maximize the calibration of both ATE and ITE prediction. This procedure consists of five steps: First, a full GRF model is trained using all J available covariates. A seed ensemble approach is used; whereby multiple models trained under different random seeds are merged to form a single ‘big model’. This model may display poor calibration performances due to its innate high-dimensionality. Second, the covariate with the lowest variable importance is removed. Third, this process is iterated until only one covariate remains, yielding a total of J big models. Fourth, we retain only those models that satisfy the following two criteria:
+
+1) Calibration test: Both and  must be statistically significant at PFDR < .05.
+
+2) Overlap assumption: All estimated propensity scores, , must lie within the range 0.05 ≤ ê < 0.95.
+
+The calibration test ensures that the model satisfies a minimum standard for accurately predicting both the population-level ATE and individual-level ITEs (43), while the overlap assumption is a fundamental assumption for causal identification of treatment effects (see Box 3 for conceptual details).
+
+Finally, among the subset of models that meet both criteria, we select the ‘best model’ based on the following fit index:
+
+This metric summarizes how closely the model’s calibration coefficients align with their golden standard (i.e., 1), with lower values indicating that the predicted ATE and ITEs can generate the observed treatment-outcome relationship. 
+
+In simulation experiments, we confirmed that this backward elimination framework identified the true effect-modifying covariates from the full feature set accurately. In particular, in settings where the treatment effect was either linear or nonlinear, the procedure achieved identification accuracies of 96.6%  and 95.3%, respectively, out of 150 full covariates. In contrast, a commonly used heuristic, which selects the top n% of variables based on a full GRF model — e.g., the refs (36, 43, 48), achieved relatively low accuracy in moderator identification, 91.9% accuracy in both cases when n = 10. These results demonstrate that our seed ensemble–combined backward elimination strategy effectively isolates the most informative variables for explaining treatment effect heterogeneity, even in high-dimensional settings such as whole-brain feature modeling.
+
+Tutorial with Real-world Dataset
+
+In this section, we demonstrate an automated analysis framework that incorporates seed ensemble and backward elimination–based model selection, using a real-world dataset. As an illustrative example, we assess the effects of childhood bullying exposure (the treatment) on depressive symptoms and examine individual differences in these effects (i.e., average treatment effect [ATE] and individual treatment effects [ITE]). Additionally, we investigate which demographic, environmental, and neuroanatomical features are most strongly associated with these individual differences.
+
+Our analytic workflow proceeds as follows: 1) We iteratively fit a series of GRF models using a seed ensemble approach (‘Model fitting’), 2) select the ‘best model’ using fit index (‘Model selection’), 3) evaluate whether ATE is statistically significant and predicted ITEs display an individual variability (‘Heterogeneity assessment’), and 4) identify which covariates are most strongly linked to these variations in treatment effects (‘Moderator identification’). 
+
+We applied this framework to baseline data from 8,778 children in the Adolescent Brain and Cognitive Development (ABCD) study (see Appendix Methods). The treatment variable was a binary variable ‘kbi_p_c_bully’, which was derived from the Kiddie Schedule for Affective Disorder and Schizophrenia (K-SADS) interview (49), reflecting whether the child had experienced peer bullying. The outcome variable was a continuous variable ‘cbcl_dsm_depression_t’ representing the child’s t-score of depressive symptoms from the Child Behavior Checklist (CBCL)(50).
+
+A total of 138 covariates were assessed. These spanned demographics (i.e., age, biological sex, race/ethnicity, and caregivers’ age, identity, marital status, income, and education), the rate of mental illness among family members (‘family disease ratio’)(19, 51, 52), body mass index (‘BMI’)(53-55), and 84 gray matter volume measures across bilateral whole-brain regions. Among the sample, 7,544 children had no reported history of bullying, while 1,234 had experienced bullying (see Appendix B for full covariate information). See Fig 3a for the causal model tested in this tutorial.
+
+Model fitting
+
+We briefly highlight three key considerations when fitting a GRF model in the context of observational behavioral studies: seed ensemble, expected outcome and propensity scores, and clustering variable.A script for model fitting is provided in Appendix Code 1.
+
+Seed ensemble
+
+In this tutorial, we build a ‘big model’ consisting of 10,000 trees at each iteration by ensembling five independently trained GRF models, each built using 2,000 trees with a different random seed. Specifically, models from each seed are stored as a list, and once all five are completed, they are merged using the merge_forests function. From this ‘big model’, variable importance scores of all covariates are computed using the variable_importance function, and the covariate with the lowest importance is excluded from the next iteration. To support model selection, each iteration's big model is also used to record two key indicators: (1) the minimum and maximum estimated propensity scores (to evaluate the overlap assumption), and (2) the calibration test estimates —  and .
+
+Expected outcomes and propensity scores
+
+When defining a GRF model, the Y.hat and W.hat arguments are used to provide each sample’s expected outcome and propensity score based on covariate profiles — formally,  and , respectively. These quantities are crucial for predicting ITEs, as they guide how much weight each comparison sample receives based on similarity in covariate profile. In randomized controlled trials (RCTs), where treatment assignment is fully random and independent of covariates, W.hat is typically set to 0.5. In contrast, in observational studies that include most psychological and neuroscientific research, both Y.hat and W.hat should be left as NULL. In that case, GRF automatically predicts these quantities internally based on the honesty tree principle (see Box 1). For details on how these estimates are computed, see the ref (20).
+
+Clustering variable
+
+In the model fitting process, it is important to consider the use of a clustering variable especially in observational studies. GRF assumes that all samples are independently and identically distributed in the covariate space (i.e., i.i.d. assumption). However, this assumption is often violated in psychological and neuroscientific research. For instance, children from the same geographic region may share similar covariate and treatment profiles, leading to correlated outcomes.
+
+To account for such cluster-level confounding, researchers can use clustering variables such as residential site information — e.g., the ref (56). Technically, this involves modifying the unit of subsampling: instead of randomly selecting individual samples to build each tree, entire clusters (e.g., sites) are sampled. This prevents data leakage and enforces the honesty property of the forest. That is, the model uses samples from one cluster for training and different clusters for inference, thereby ensuring that training data does not leak into prediction. This design improves the generalizability of model predictions to unseen clusters, such as new data collection sites, not included in training (43).
+
+Then, how should one decide whether to include a clustering variable, and which one to use? One practical strategy is to run a one-way ANOVA to test whether the outcome variable varies significantly across candidate clustering factors. In our dataset, the outcome variable — CBCL t-scores of depressive symptoms significantly differed by data collection site (F(21, 8756) = 7.328, P < 2×10-16). Therefore, we use this site variable as the clustering factor in model fitting throughout the tutorial.
+
+Model selection
+
+Through the iterative process described above, we fit a total 138 ‘big models’ across iterations. Based on the two criteria (i.e., the overlap assumption and calibration test) and fit index, we identified the model with eight covariates as the ‘best model’ (see Fig 3b). The best model chose BMI, family disease ratio, and six left gray matter volume features (see Fig 3c). This suggests that individual differences in the impact of bullying experience on one’s depressive symptoms might be strongly explained by nonlinear combination of familial and neurobiological profiles. The code used for model selection is provided in Appendix Code 2. In practice, it is possible that no models satisfy both criteria. When this occurs, it may indicate that the current analytic setup is based on an insufficient dataset and/or a misspecified causal model. Box 3 outlines the possible reasons for such problems — depending on which assumption is violated — and provides specific recommendations for improving the analytic design.
+
+Heterogeneity assessment
+
+Beyond estimating the ATE at the population level, several methods exist to assess whether the predicted ITEs exhibit meaningful heterogeneity. Two representative approaches include the Group Average Treatment Effect (GATE)(57, 58) and the Rank-weighted Average Treatment Effect (RATE)(59) tests. In this section, we first estimate the ATE and then focus on the more conventional GATE framework to assess ITE heterogeneity. The full analysis script is provided in Appendix Code 3.
+
+Statistical testing for ATE
+
+The GRF package provides the average_treatment_effect function to estimate the ATE along with its standard error. In our example, childhood bullying experience significantly elevated total depressive symptom scores, indicating a strong treatment effect (ATE = .561, 95% CI = [.462, .661], P < 2×10-16).
+
+Heterogeneity assessment with predicted ITEs
+
+The GATE test proceeds by first generating out-of-bag predictions of ITEs for each individual using the trained GRF model (see Box 1). Based on these predicted values, the sample is divided into subgroups, and the group-level ATEs (i.e., GATE) is estimated within each group. In our tutorial, individuals are split into three groups based on the predicted ITEs of bullying on their depressive symptom scores: those with the lowest predicted ITEs (Q1) are labeled the ‘resilient’ group, those in the middle (Q2) as ‘moderate,’ and those with the highest ITEs (Q3) as the ‘vulnerable’ group (see Fig 3d). Afterward, group-level comparisons are then conducted using post hoc t-tests to determine whether the GATEs differ significantly across groups. If no significant differences are found, this may suggest that treatment effects might be relatively homogeneous across individuals. 
+
+In our example (see Fig 3e), all three groups exhibited significantly positive GATEs, implying the significant effect of bullying experiences on depressive symptoms across all groups (Q1: GATE = .443, 95% CI = [.323, .562], PFDR = 4×10-13; Q2: GATE = .565, 95% CI = [.441, .689], PFDR < 2×10-16; Q3: GATE = .677, 95% CI = [.527, .827], PFDR < 2×10-16). Among these, Q3 had a significantly higher GATE than Q1, suggesting the meaningful heterogeneity in treatment effects (mean difference = .234, 95% CI = [.043, .426], PFDR = .048). However, the differences between Q2 and Q1, as well as Q3 and Q2, did not reach statistical significance (Q2-Q1: mean difference = .122, 95% CI = [-.050, .294], PFDR = .242; Q3-Q2: mean difference = .112, 95% CI = [-.082, .307], PFDR = .252). 
+
+One may question whether differences in GATE across ITE-based subgroups are merely tautological (i.e., whether such group differences are inevitable simply because individuals were grouped based on predicted ITEs). However, this is not the case. To understand why, it is crucial to recognize that the group-level mean of predicted ITEs is not the same as the corresponding GATE estimate. Predicted ITEs are noisy, difficult-to-estimate quantities, generated using an out-of-bag prediction approach that excludes each sample from the trees used to predict its own treatment effect. In contrast, GATE is calculated as a population-level summary and can be more reliably estimated. Because the two quantities are computed in fundamentally different ways, discrepancies in their relative magnitudes across subgroups are common. For instance, it is entirely possible for the middle group (Q2) to have a higher GATE than the high-ITE group (Q3). Such inconsistencies may arise for a variety of reasons, including poor calibration of the GRF model's ITE predictions, insufficient sample size within each group for reliable GATE estimation. In such cases, researchers should consider examining the model’s calibration test results or reducing the number of groups to increase statistical power.
+
+Moderator Identification
+
+Through the analyses above, we observed that the impact of childhood bullying on children's depressive symptom scores shows substantial individual variability, and that this heterogeneity is closely linked to familial and neurobiological profiles. But which specific variables are associated with increases or decreases in ITEs? In this section, we introduce three complementary approaches to explore this question. The relevant scripts for each method are provided in Appendix Code 4.
+
+Group comparison
+
+The simplest approach to investigate the relationship between covariates and ITEs is to test whether the groups identified through the GATE test differ significantly on each covariate. We performed one-way ANOVAs to test whether the volume of each region differed across three subgroups. As a result, all eight key moderators showed significant group differences at PFDR < .05 (see Appendix C for detailed statistics). Among these, four variables showed increasing trends from Q1 to Q3, suggesting their role as ‘vulnerability’ factors, while the other four features showed decreasing ones, suggesting potential ‘resilience’ factors (see Fig 3f).
+
+Best linear projection
+
+While the group comparison method investigates univariate associations between each covariate and ITEs, the best linear projection approach takes a multivariate perspective. Using the best_linear_projection function in the grf package, we fit a multiple linear regression model in which all eight key moderators were included as regressors to explain variance in predicted ITEs. This method estimates the beta coefficients of each moderator. In our analysis, only family disease ratio showed a statistically significant positive association with ITEs at P < .05. The remaining seven moderators did not exhibit significant predictive effects (see Appendix C for details).
+
+Partial dependence simulation
+
+Although the eight key moderators were selected by the best model as the strongest predictors of ITE heterogeneity, the limited explanatory power observed in the best linear projection suggests a need to account for nonlinear relationship between moderators and ITEs while controlling interactions among them. To address this, we used partial dependence simulation, which offers a model-agnostic framework for examining the marginal effects of individual moderators after controlling for all others.
+
+To probe the role of individual moderators, we simulated “hypothetical participants” in which one target variable was systematically varied while all other variables were held constant. In practice, we fixed the remaining seven covariates at their median values and divided the observed range of the target moderator into 100 percentiles.
+
+For each percentile, we generated a simulated sample and entered it into the trained best model to predict ITEs. Repeating this procedure for each of the eight moderators produced curves showing how predicted effects changed as the moderator increased or decreased, while interactions with other covariates were controlled.
+
+These simulations revealed clear nonlinear patterns for most moderators (see Fig 3g). For example, BMI initially appeared to act as a resilience factor in the group-comparison analysis, but the simulation uncovered a U-shaped relationship: both low and high BMI predicted stronger treatment effects. This pattern is consistent with prior evidence linking BMI and stress resilience (60–63).
+
+Summary 
+
+In this section, we demonstrate how GRF can be applied to real-world data analysis. Using a backward-elimination model selection procedure, we fit a GRF model that effectively explained the relationship between observed bullying exposure and depressive symptoms. The model not only revealed a strong ATE of bullying exposure but also uncovered substantial individual differences in the ITEs. Among a range of demographic, environmental, and neuroanatomical covariates, familial psychopathologic history, BMI, and gray matter volumes of six regions in the left hemisphere emerged as key moderators most strongly associated with the variance in ITEs. These regions spanned the amygdala, central gyrus, entorhinal, interior temporal and inferior frontal cortices. Importantly, partial dependence simulation revealed that the relationship between these moderators and predicted ITEs was not merely linear, but instead reflected complex, nonlinear associations. This finding opens avenues for generating and testing and replicating new hypotheses about the role of relatively underreported brain regions (e.g., precentral gyrus) in modulating children's resilience to early-life adversity. Furthermore, it holds potential for early identification of at-risk individuals and the development of targeted preventive interventions based on neurobiological markers.
+
+Discussion
+
+In this paper, we introduced a computational framework based on GRF to systematically dissect individual differences in treatment/exposure effects. Our work makes two methodological contributions that significantly enhance the reliability and scope of heterogeneity analysis in psychology and neuroscience: the seed ensemble method and a backward elimination approach for model selection.
+
+Our first key contribution, the seed ensemble method, confronts a critical vulnerability in applying machine learning to causal inference: the sensitivity of results to algorithmic stochasticity. As we demonstrated, models trained on different random seeds can yield conflicting conclusions about the very existence of heterogeneity, a profound threat to scientific reproducibility. In fields like psychiatry, where such analyses could inform diagnosis and treatment, this instability is unacceptable. By aggregating models across multiple seeds, our ensemble approach produces stable and reliable prediction of ITE. Importantly, our simulations show this method is more effective at achieving stability than simply increasing the number of trees within a single-seed model, providing a necessary and efficient safeguard for the inferential integrity of GRF-based analyses.
+
+Our second key contribution provides a principled solution to the challenge of model selection in high-dimensional space. A growing body of research suggests that many neurocognitive behaviors and psychopathologies arise from complex, distributed mechanisms, necessitating a move toward more comprehensive, data-driven frameworks like whole-brain modeling (16, 64-67). Our data-driven backward elimination framework is designed to meet this need, overcoming the limitations of testing only a few pre-selected variables, as is common in conventional hypothesis-driven analysis. Our framework is best conceptualized not as providing a definitive final model, but as a powerful engine for hypothesis generation by systematically identifying a parsimonious set of covariates that best moderates treatment effect heterogeneity. The power of this approach was evident in our real-world application, where it objectively distilled 138 potential moderators down to a core set of eight features. This resulting model, which includes several variables less emphasized in prior literature, is not merely a summary of the data; it constitutes a concrete, data-driven hypothesis for future replication.
+
+The application of our framework to the ABCD dataset therefore did more than illustrate a method; it yielded a substantive neuropsychological hypothesis. The analysis revealed that while childhood bullying, on average, increased depressive symptoms, the magnitude of this effect varied substantially across individuals. Our method identified ‘vulnerable’ and ‘resilient’ subgroups and demonstrated that these differences were most strongly associated with familial environments and neurobiological variations in distributed regions of six specific left hemisphere regions. This finding provides a clear direction for future research: to test whether these key eight moderators of resilience can be validated in independent datasets. If the key moderators identified by GRF are replicated in an independent dataset as reliable predictors of ITEs, these moderators could serve as a meaningful marker for identifying vulnerable populations and informing preventive interventions at the level of policy and clinical decision-making.
+
+It is worth noting that our data-driven approach reduces, but does not eliminate, the reliance on domain knowledge. The validity of our causal claims rests on the untestable assumption of unconfoundedness — that all common causes of the treatment and outcome have been measured. Indiscriminately including all available variables in a model risks introducing collider bias, which can create spurious associations (15, 74). Thus, a thoughtful, theory-guided selection of candidate covariates, perhaps informed by causal graph theory, must precede the application of our data-driven framework. 
+
+Additionally, our implementation focuses on the canonical Causal Forest algorithm in GRF package with a binary treatment. The GRF ecosystem is far richer, offering tools like Instrumental Forests to handle unobserved confounding, Quantile Forests to study effects on different parts of the outcome distribution, and methods for continuous treatments (42), all of which represent promising directions for future investigation. The principles of our framework, however, are broadly applicable and can be extended to various data modalities (e.g., functional connectivity, genetics) and research questions across the behavioral and brain sciences.
+
+Limitations 
+
+Despite its strengths, our framework has several limitations that suggest avenues for future research. First, the variable importance metrics that guide backward elimination-based model selection approach can be biased when covariates are highly correlated each other, potentially overstating the importance of certain variables while underrepresenting others (68, 69). Incorporating conditional importance metrics (68) or permutation-based alternatives (68, 70) may help mitigate these biases. Second, the variable importance calculation in random forest systematically underestimates the importance of categorical variables (71, 72). Bias-corrected split criteria (73) and importance metrics (72) could offer more balanced variable importance estimates. Last, the iterative nature of the backward elimination process is computationally intensive, particularly for datasets with thousands of features. Future work could focus on developing more computationally efficient feature selection algorithms.  
+
+Conclusion
+
+Beyond methodological advances, this work underscores how GRF can be adapted to address enduring challenges in psychology and the social sciences: capturing individual differences in treatment or exposure effects, identifying key moderators encompassing environmental, neurobiological, and psychological factors, and moving from population averages to person-centered insights. By demonstrating that our extended GRF pipeline can reliably uncover salient factors of heterogeneity in large-scale, high-dimensional data, our framework offers behavioral researchers a practical tool to deepen theories of individual differences and to inform interventions that are sensitive to social and neurobiological diversity. In doing so, it contributes to a broader shift in human behavior science toward data-driven hypothesis generation, evidence-based personalization and the systematic study of heterogeneity as a central feature of psychological inquiry.
+
+Acknowledgement
+
+This work was supported by the National Research Foundation of Korea (NRF) grant funded by the Korea government (MSIT)(No. 2021R1C1C1006503, RS-2023-00266787, RS-2023-00265406, RS-2024-00421268, RS-2024-00342301, RS-2024-00435727, NRF-2021M3E5D2A01022515), by Creative-Pioneering Researchers Program through Seoul National University (No. 200-20240057, 200-20240135), by Semi-Supervised Learning Research Grant by SAMSUNG (No.A0342-20220009), by Identify the network of brain preparation steps for concentration Research Grant by LooxidLabs (No.339-20230001), by Institute of Information & communications Technology Planning & Evaluation (IITP) grant funded by the Korea government (MSIT) [NO.RS-2021-II211343, 2021-0-01343, Artificial Intelligence Graduate School Program (Seoul National University)] by the MSIT (Ministry of Science, ICT), Korea, under the Global Research Support Program in the Digital Field program (RS-2024-00421268) supervised by the IITP (Institute for Information & Communications Technology Planning & Evaluation), by the National Supercomputing Center with supercomputing resources including technical support (KSC-2023-CRE-0568), by the Ministry of Education of the Republic of Korea and the National Research Foundation of Korea (NRF-2021S1A3A2A02090597), by the Korea Health Industry Development Institute (KHIDI), and by the Ministry of Health and Welfare, Republic of Korea (HR22C1605), by Artificial intelligence industrial convergence cluster development project funded by the Ministry of Science and ICT (MSIT, Korea) & Gwangju Metropolitan City and by KBRI basic research program through Korea Brain Research Institute funded by Ministry of Science and ICT (25-BR-05-01). 
+
+Author Contributions
+
+J.L., J.J.P, M.P., S.Y.C., and J.C. conceptualized the project. J.L., J.J.P., M.P., and S.Y.C. undertook the simulation and real-world dataset analyses. J.L. and M.P. visualized the figures. J.L., J.J.P., M.P., S.Y.C., and J.C. wrote the original draft and edited the final version of the article. All authors reviewed and approved the manuscript. 
+
+References 
+
+1.	Caspi, A., K. Sugden, T.E. Moffitt, A. Taylor, I.W. Craig, H. Harrington, J. McClay, J. Mill, J. Martin, and A. Braithwaite, Influence of life stress on depression: moderation by a polymorphism in the 5-HTT gene, Science, 2003. 301(5631): p. 386-389.
+
+2.	Binder, E.B., R.G. Bradley, W. Liu, M.P. Epstein, T.C. Deveau, K.B. Mercer, Y. Tang, C.F. Gillespie, C.M. Heim, and C.B. Nemeroff, Association of FKBP5 polymorphisms and childhood abuse with risk of posttraumatic stress disorder symptoms in adults, Jama, 2008. 299(11): p. 1291-1305.
+
+3.	Belsky, J. and M. Pluess, Beyond diathesis stress: differential susceptibility to environmental influences, Psychological bulletin, 2009. 135(6): p. 885.
+
+4.	Shonkoff, J.P., A.S. Garner, C.o.P.A.o. Child, C.o.E.C. Family Health, Adoption,, Dependent Care, S.o. Developmental, B. Pediatrics, B.S. Siegel, M.I. Dobbins, M.F. Earls, A.S. Garner, L. McGuinn, J. Pascoe, and D.L. Wood, The lifelong effects of early childhood adversity and toxic stress, Pediatrics, 2012. 129(1): p. e232-e246.
+
+5.	Stern, Y., Cognitive reserve in ageing and Alzheimer's disease, The Lancet Neurology, 2012. 11(11): p. 1006-1012.
+
+6.	Ngandu, T., J. Lehtisalo, A. Solomon, E. Levälahti, S. Ahtiluoto, R. Antikainen, L. Bäckman, T. Hänninen, A. Jula, and T. Laatikainen, A 2 year multidomain intervention of diet, exercise, cognitive training, and vascular risk monitoring versus control to prevent cognitive decline in at-risk elderly people (FINGER): a randomised controlled trial, The Lancet, 2015. 385(9984): p. 2255-2263.
+
+7.	Solomon, A., H. Turunen, T. Ngandu, M. Peltonen, E. Levälahti, S. Helisalmi, R. Antikainen, L. Bäckman, T. Hänninen, and A. Jula, Effect of the apolipoprotein E genotype on cognitive change during a multidomain lifestyle intervention: a subgroup analysis of a randomized clinical trial, JAMA neurology, 2018. 75(4): p. 462-470.
+
+8.	Rush, A.J., M.H. Trivedi, S.R. Wisniewski, A.A. Nierenberg, J.W. Stewart, D. Warden, G. Niederehe, M.E. Thase, P.W. Lavori, and B.D. Lebowitz, Acute and longer-term outcomes in depressed outpatients requiring one or several treatment steps: a STAR* D report, American Journal of Psychiatry, 2006. 163(11): p. 1905-1917.
+
+9.	Bousman, C.A., M. Forbes, M. Jayaram, H. Eyre, C.F. Reynolds, M. Berk, M. Hopwood, and C. Ng, Antidepressant prescribing in the precision medicine era: a prescriber’s primer on pharmacogenetic tools, BMC psychiatry, 2017. 17(1): p. 60.
+
+10.	Greden, J.F., S.V. Parikh, A.J. Rothschild, M.E. Thase, B.W. Dunlop, C. DeBattista, C.R. Conway, B.P. Forester, F.M. Mondimore, and R.C. Shelton, Impact of pharmacogenomics on clinical outcomes in major depressive disorder in the GUIDED trial: a large, patient-and rater-blinded, randomized, controlled study, Journal of psychiatric research, 2019. 111: p. 59-67.
+
+11.	Bryan, C.J., E. Tipton, and D.S. Yeager, Behavioural science is unlikely to change the world without a heterogeneity revolution, Nature human behaviour, 2021. 5(8): p. 980-989.
+
+12.	Feuerriegel, S., D. Frauen, V. Melnychuk, J. Schweisthal, K. Hess, A. Curth, S. Bauer, N. Kilbertus, I.S. Kohane, and M. van der Schaar, Causal machine learning for predicting treatment outcomes, Nature Medicine, 2024. 30(4): p. 958-968.
+
+13.	Memon, M.A., J.-H. Cheah, T. Ramayah, H. Ting, F. Chuah, and T.H. Cham, Moderation analysis: issues and guidelines, Journal of Applied Structural Equation Modeling, 2019. 3(1): p. 1-11.
+
+14.	Kent, D.M., E. Steyerberg, and D. Van Klaveren, Personalized evidence based medicine: predictive approaches to heterogeneous treatment effects, Bmj, 2018. 363.
+
+15.	Akimova, E.T., R. Breen, D.M. Brazel, and M.C. Mills, Gene-environment dependencies lead to collider bias in models with polygenic scores, Scientific Reports, 2021. 11(1): p. 9457.
+
+16.	Figlio, D.N., J. Freese, K. Karbownik, and J. Roth, Socioeconomic status and genetic influences on cognitive development, Proceedings of the National Academy of Sciences, 2017. 114(51): p. 13441-13446.
+
+17.	Warrier, V., A.S. Kwong, M. Luo, S. Dalvie, J. Croft, H.M. Sallis, J. Baldwin, M.R. Munafò, C.M. Nievergelt, and A.J. Grant, Gene–environment correlations and causal effects of childhood maltreatment on physical and mental health: a genetically informed approach, The Lancet Psychiatry, 2021. 8(5): p. 373-386.
+
+18.	Fu, L., Z. Zhang, Z. Zhu, and Z. Yu, Evaluating the heterogeneous treatment effects of retirement on the mental health of older adults, Current Psychology, 2024. 43(16): p. 14183-14200.
+
+19.	Cha, J., J. Park, M. Cho, E. Lee, B.-G. Kim, G. Kim, and Y. Joo, Individual Differences in the Effects of Neighborhood Socioeconomic Deprivation on Intertemporal Decision-Making and Psychotic-Like Experiences in Children, 2024.
+
+20.	Athey, S., J. Tibshirani, and S. Wager, Generalized random forests, 2019.
+
+21.	Sinha, R., C.M. Lacadie, R.T. Constable, and D. Seo, Dynamic neural activity during stress signals resilient coping, Proceedings of the National Academy of Sciences, 2016. 113(31): p. 8837-8842.
+
+22.	Wang, R., S. Zhen, C. Zhou, and R. Yu, Acute stress promotes brain network integration and reduces state transition variability, Proceedings of the National Academy of Sciences, 2022. 119(24): p. e2204144119.
+
+23.	Bo, K., T.E. Kraynak, M. Kwon, M. Sun, P.J. Gianaros, and T.D. Wager, A systems identification approach using Bayes factors to deconstruct the brain bases of emotion regulation, Nature Neuroscience, 2024. 27(5): p. 975-987.
+
+24.	Rubin, D.B., Causal inference using potential outcomes: Design, modeling, decisions, Journal of the American statistical Association, 2005. 100(469): p. 322-331.
+
+25.	Holland, P.W., Statistics and causal inference, Journal of the American statistical Association, 1986. 81(396): p. 945-960.
+
+26.	Rubin, D.B., Bayesian inference for causal effects: The role of randomization, The Annals of statistics, 1978: p. 34-58.
+
+27.	Rosenbaum, P.R. and D.B. Rubin, The central role of the propensity score in observational studies for causal effects, Biometrika, 1983. 70(1): p. 41-55.
+
+28.	Abadie, A. and G.W. Imbens, Large sample properties of matching estimators for average treatment effects, econometrica, 2006. 74(1): p. 235-267.
+
+29.	Beyer, K., J. Goldstein, R. Ramakrishnan, and U. Shaft. When is “nearest neighbor” meaningful? in International conference on database theory. 1999. Springer.
+
+30.	Radovanovic, M., A. Nanopoulos, and M. Ivanovic, Hubs in space: Popular nearest neighbors in high-dimensional data, Journal of Machine Learning Research, 2010. 11(sept): p. 2487-2531.
+
+31.	Zimek, A., E. Schubert, and H.P. Kriegel, A survey on unsupervised outlier detection in high‐dimensional numerical data, Statistical Analysis and Data Mining: The ASA Data Science Journal, 2012. 5(5): p. 363-387.
+
+32.	Wager, S. and S. Athey, Estimation and inference of heterogeneous treatment effects using random forests, Journal of the American Statistical Association, 2018. 113(523): p. 1228-1242.
+
+33.	Goldman-Mellor, S.J., H.S. Bhat, M.H. Allen, and M. Schoenbaum, Suicide risk among hospitalized versus discharged deliberate self-harm patients: generalized random forest analysis using a large claims data set, American journal of preventive medicine, 2022. 62(4): p. 558-566.
+
+34.	Solomonov, N., J. Green, A. Quintana, J. Lin, K. Ognyanova, M. Santillana, J.N. Druckman, M.A. Baum, D. Lazer, and F.M. Gunning, A 50-state survey study of thoughts of suicide and social isolation among older adults in the United States, Journal of affective disorders, 2023. 334: p. 43-49.
+
+35.	Ross, E.L., R.M. Bossarte, S.K. Dobscha, S.M. Gildea, I. Hwang, C.J. Kennedy, H. Liu, A. Luedtke, B.P. Marx, and M.K. Nock, Estimated average treatment effect of psychiatric hospitalization in patients with suicidal behaviors: A precision treatment analysis, JAMA psychiatry, 2024. 81(2): p. 135-143.
+
+36.	Shiba, K., A. Daoud, H. Hikichi, A. Yazawa, J. Aida, K. Kondo, and I. Kawachi, Heterogeneity in cognitive disability after a major disaster: A natural experiment study, Science advances, 2021. 7(40): p. eabj2610.
+
+37.	Shiba, K., A. Daoud, S. Kino, D. Nishi, K. Kondo, and I. Kawachi, Uncovering heterogeneous associations of disaster‐related traumatic experiences with subsequent mental health problems: A machine learning approach, Psychiatry and clinical neurosciences, 2022. 76(4): p. 97-105.
+
+38.	Shiba, K., A. Daoud, H. Hikichi, A. Yazawa, J. Aida, K. Kondo, and I. Kawachi, Uncovering heterogeneous associations between disaster-related trauma and subsequent functional limitations: a machine-learning approach, American journal of epidemiology, 2023. 192(2): p. 217-229.
+
+39.	Garrison-Desany, H.M., J.L. Meyers, S.D. Linnstaedt, S.L. House, F.L. Beaudoin, X. An, D. Zeng, T.C. Neylan, G.D. Clifford, and T. Jovanovic, Post-traumatic stress and future substance use outcomes: leveraging antecedent factors to stratify risk, Frontiers in Psychiatry, 2024. 15: p. 1249382.
+
+40.	Nakagomi, A., K. Kondo, and K. Shiba, Heterogeneity in the association between internet use and dementia among older adults: A machine-learning analysis, Archives of Gerontology and Geriatrics, 2025: p. 105912.
+
+41.	Komura, T., R.G. Cowden, R. Chen, R.M. Andrews, and K. Shiba, Estimating the heterogeneous effect of life satisfaction on cognitive functioning among older adults: evidence of US and UK national surveys, SSM-Mental Health, 2023. 4: p. 100260.
+
+42.	Tibshirani, J., S. Athey, R. Friedberg, V. Hadad, D. Hirshberg, L. Miner, E. Sverdrup, S. Wager, M. Wright, and M.J. Tibshirani, Package ‘grf’, Comprehensive R Archive Network, 2018.
+
+43.	Athey, S. and S. Wager, Estimating treatment effects with causal forests: An application, Observational studies, 2019. 5(2): p. 37-51.
+
+44.	Sverdrup, E., M. Petukhova, and S. Wager, Estimating treatment effect heterogeneity in Psychiatry: A review and tutorial with causal forests, International Journal of Methods in Psychiatric Research, 2025. 34(2): p. e70015.
+
+45.	Ben-Zion, Z., N. Korem, T.R. Spiller, O. Duek, J.N. Keynan, R. Admon, I. Harpaz-Rotem, I. Liberzon, A.Y. Shalev, and T. Hendler, Longitudinal volumetric evaluation of hippocampus and amygdala subregions in recent trauma survivors, Molecular psychiatry, 2023. 28(2): p. 657-667.
+
+46.	Dick, A.S., K. Silva, R. Gonzalez, M.T. Sutherland, A.R. Laird, W.K. Thompson, S.F. Tapert, L.M. Squeglia, K.M. Gray, and S.J. Nixon, Neural vulnerability and hurricane-related media are associated with post-traumatic stress in youth, Nature human behaviour, 2021. 5(11): p. 1578-1589.
+
+47.	Zhang, W., R. Kaldewaij, M.M. Hashemi, S.B. Koch, A. Smit, V.A. van Ast, C.F. Beckmann, F. Klumpers, and K. Roelofs, Acute-stress-induced change in salience network coupling prospectively predicts post-trauma symptom development, Translational psychiatry, 2022. 12(1): p. 63.
+
+48.	Gudmundsdottir, K.K., C. Bonander, T. Hygrell, E. Svennberg, V. Frykman, U. Strömberg, and J. Engdahl, Factors predicting participation and potential yield of screening-detected disease among non-participants in a Swedish population-based atrial fibrillation screening study, Preventive medicine, 2022. 164: p. 107284.
+
+49.	Kaufman, J., L.D. Townsend, and K. Kobak. The computerized kiddie schedule for affective disorders and schizophrenia (KSADS): development and administration guidelines. in 64th annual meeting. 2017. AACAP.
+
+50.	Achenbach, T.M., Child behavior checklist, in Encyclopedia of clinical neuropsychology. 2011, Springer. p. 546-552.
+
+51.	Rice, J.P., T. Reich, K.K. Bucholz, R.J. Neuman, R. Fishman, N. Rochberg, V.M. Hesselbrock, J.I. Nurnberger, M.A. Schuckit Jr, and H. Begleiter, Comparison of direct interview and family history diagnoses of alcohol dependence, Alcoholism: Clinical and Experimental Research, 1995. 19(4): p. 1018-1023.
+
+52.	Karcher, N.R., J. Schiffman, and D.M. Barch, Environmental risk factors and psychotic-like experiences in children aged 9–10, Journal of the American Academy of Child & Adolescent Psychiatry, 2021. 60(4): p. 490-500.
+
+53.	Nishimi, K.M., K.C. Koenen, B.A. Coull, and L.D. Kubzansky, Association of psychological resilience with healthy lifestyle and body weight in young adulthood, Journal of Adolescent Health, 2022. 70(2): p. 258-266.
+
+54.	Zhang, Y., Y. Li, T. Jiang, and Q. Zhang, Role of body mass index in the relationship between adverse childhood experiences, resilience, and mental health: a multivariate analysis, BMC psychiatry, 2023. 23(1): p. 460.
+
+55.	Zheng, N., M. Zhuang, Y. Zhu, Y. Wang, M. Ye, Y. Zhang, and Y. Zhan, Association between psychological resilience and body mass index in a community‐based population: A cross‐sectional study, Obesity Science & Practice, 2024. 10(3): p. e761.
+
+56.	Spechler, P.A., R.M. Gutierrez, S.F. Tapert, W.K. Thompson, and M.P. Paulus, The beneficial effect of sleep on behavioral health problems in youth is disrupted by prenatal cannabis exposure: A causal random forest analysis of Adolescent Brain Cognitive Development data, Child Development, 2023. 94(4): p. 826-835.
+
+57.	Chernozhukov, V., I. Fernández‐Val, and Y. Luo, The sorted effects method: Discovering heterogeneous effects beyond their averages, Econometrica, 2018. 86(6): p. 1911-1938.
+
+58.	Jacob, D., Group average treatment effects for observational studies, arXiv preprint arXiv:1911.02688, 2019.
+
+59.	Yadlowsky, S., S. Fleming, N. Shah, E. Brunskill, and S. Wager, Evaluating treatment prioritization rules via rank-weighted average treatment effects, Journal of the American Statistical Association, 2025. 120(549): p. 38-51.
+
+60.	Viner, R., M. Haines, S. Taylor, J. Head, R. Booy, and S. Stansfeld, Body mass, weight control behaviours, weight perception and emotional well being in a multiethnic sample of early adolescents, International journal of obesity, 2006. 30(10): p. 1514-1521.
+
+61.	Kim, T., J.J. Kim, M.Y. Kim, S.K. Kim, S. Roh, and J.S. Seo, A U-shaped association between body mass index and psychological distress on the multiphasic personality inventory: retrospective cross-sectional analysis of 19-year-old men in Korea, Journal of Korean medical science, 2015. 30(6): p. 793.
+
+62.	He, K., T. Pang, and H. Huang, The relationship between depressive symptoms and BMI: 2005–2018 NHANES data, Journal of Affective Disorders, 2022. 313: p. 151-157.
+
+63.	Chen, S., H. Zhang, M. Gao, D.B. Machado, H. Jin, N. Scherer, W. Sun, F. Sha, T. Smythe, and T.J. Ford, Dose-dependent association between body mass index and mental health and changes over time, JAMA psychiatry, 2024. 81(8): p. 797-806.
+
+64.	Krakauer, J.W., A.A. Ghazanfar, A. Gomez-Marin, M.A. MacIver, and D. Poeppel, Neuroscience needs behavior: correcting a reductionist bias, Neuron, 2017. 93(3): p. 480-490.
+
+65.	Borsboom, D., A.O. Cramer, and A. Kalis, Brain disorders? Not really: Why network structures block reductionism in psychopathology research, Behavioral and Brain Sciences, 2019. 42: p. e2.
+
+66.	Menon, V., L. Palaniyappan, and K. Supekar, Integrative brain network and salience models of psychopathology and cognitive dysfunction in schizophrenia, Biological psychiatry, 2023. 94(2): p. 108-120.
+
+67.	Olthof, M., F. Hasselman, F. Oude Maatman, A.M. Bosman, and A. Lichtwarck-Aschoff, Complexity theory of psychopathology, Journal of psychopathology and clinical science, 2023. 132(3): p. 314.
+
+68.	Strobl, C., A.-L. Boulesteix, T. Kneib, T. Augustin, and A. Zeileis, Conditional variable importance for random forests, BMC bioinformatics, 2008. 9(1): p. 307.
+
+69.	Toloşi, L. and T. Lengauer, Classification with correlated features: unreliability of feature ranking and solutions, Bioinformatics, 2011. 27(14): p. 1986-1994.
+
+70.	Gong, X., M. Hu, M. Basu, and L. Zhao, Heterogeneous treatment effect analysis based on machine‐learning methodology, CPT: Pharmacometrics & Systems Pharmacology, 2021. 10(11): p. 1433-1443.
+
+71.	Strobl, C., A.-L. Boulesteix, A. Zeileis, and T. Hothorn, Bias in random forest variable importance measures: Illustrations, sources and a solution, BMC bioinformatics, 2007. 8(1): p. 25.
+
+72.	Hines, O., K. Diaz-Ordaz, and S. Vansteelandt, Variable importance measures for heterogeneous causal effects, arXiv preprint arXiv:2204.06030, 2022.
+
+73.	Hothorn, T., K. Hornik, and A. Zeileis, Unbiased recursive partitioning: A conditional inference framework, Journal of Computational and Graphical statistics, 2006. 15(3): p. 651-674.
+
+74.	Elwert, F. and C. Winship, Endogenous selection bias: The problem of conditioning on a collider variable, Annual review of sociology, 2014. 40(1): p. 31-53.
+
+75.	Athey, S. and G. Imbens, Recursive partitioning for heterogeneous causal effects, Proceedings of the National Academy of Sciences, 2016. 113(27): p. 7353-7360.
+
+76.	Xia, M., J. Wang, and Y. He, BrainNet Viewer: a network visualization tool for human brain connectomics, PloS one, 2013. 8(7): p. e68910.
+
+Table 1. Recent applications of GRF in psychology and neuroscience
+
+Fig 1. Conceptual scheme of GRF-based individual differences analyses. GRF acts as an ‘adaptive matcher’ to predict an ITE (individualized treatment effects for a given sample i by identifying similar samples with different treatment values based on covariate profiles. It assigns weights to these neighboring samples according to their similarity in covariates and uses the weighted outcomes to calculate the sample i's counterfactual outcome value. Applying this procedure across all samples allows for out-of-bag prediction of ITEs regardless of treatment assignment (see Box 1). Based on the predicted ITEs, samples are stratified by treatment group to identify covariates closely associated with individual variability in ITEs.
+
+Fig 2. Reliability gains from seed-ensemble. a, Calibration estimates under single-seed conditions. A GRF model with 2,000 trees was fitted without ensembling for each seed condition, and calibration performance was evaluated. b, Calibration estimates under seed-ensembled conditions. For each seed condition, a “big model” was created by ensembling GRFs trained on five different random seeds, each with 400 trees (totaling 2,000 trees, as in panel a). c, Variability of  and  estimates across seed and tree configurations. Coefficient of variation, defined as the standard deviation normalized by the mean, was computed for estimated coefficients and their P-values across 50 repeated trials per condition. Darker blue indicates lower variability across trials. This panel was visualized based on the simulation experiment with a nonlinear and weak heterogeneity condition. See Appendix A for results from other conditions (i.e., nonlinear-strong, linear-weak, linear-strong conditions). *P < .05; **P < .01; ***P < .001.  
+
+Fig 3. Results of real-world dataset analysis. a, Causal model used in real-world analysis. b, Calibration model fits across iterations. The vertical dashed line marks the best-calibrated model among 138 models. The horizontal dashed line indicates the calibration test’s gold standard value of 1 (see Box 2). c, Eight key moderators selected in the best model, visualized through BrainNetViewer (76). ‘L’ denotes the left hemisphere. d, Distribution of predicted ITEs (individualized treatment effects). e, GATE (Group-level Average Treatment Effect) results. GATE estimates and pairwise comparisons using two-sided post-hoc t-tests. f, Group comparisons of eight key moderators. Blue variables indicate resilience factors (significantly lower in higher ITE groups), and red variables indicate vulnerability factors (significantly higher). Statistical differences were examined by one-way ANOVA. g, Partial dependence simulations for the eight key moderators. *PFDR < .05; **PFDR < .01; ***PFDR < .001.

@@ -1,0 +1,209 @@
+Open Access Papers Downloaded: 17
+Download Date: 2025-10-06 10:05:28
+Target Journals: Scientific Reports, PLOS ONE, MDPI
+================================================================================
+
+1. Potential Reporting Bias in Neuroimaging Studies of Sex Differences
+   Authors: S. David, F. Naudet, Jennifer R. Laude
+   Year: 2018
+   Venue: Scientific Reports
+   Citations: 117
+   Publication Date: 2018-04-17
+   DOI: 10.1038/s41598-018-23976-1
+   Keyword: neuroimaging
+   File: Scientific_Reports_2018_Potential Reporting Bias in Neuroimaging Studies of Sex Differences.pdf
+
+--------------------------------------------------------------------------------
+
+2. Voxel-wise comparisons of cellular microstructure and diffusion-MRI in mouse hippocampus using 3D Bridging of Optically-clear histology with Neuroimaging Data (3D-BOND)
+   Authors: Helen B. Stolp, G. Ball, Po-Wah So
+   Year: 2018
+   Venue: Scientific Reports
+   Citations: 55
+   Publication Date: 2018-03-05
+   DOI: 10.1038/s41598-018-22295-9
+   Keyword: neuroimaging
+   File: Scientific_Reports_2018_Voxel-wise comparisons of cellular microstructure and diffusion-MRI in.pdf
+
+--------------------------------------------------------------------------------
+
+3. Decoding Musical Training from Dynamic Processing of Musical Features in the Brain
+   Authors: Pasi Saari, I. Burunat, E. Brattico
+   Year: 2018
+   Venue: Scientific Reports
+   Citations: 36
+   Publication Date: 2018-01-15
+   DOI: 10.1038/s41598-018-19177-5
+   Keyword: brain decoding
+   File: Scientific_Reports_2018_Decoding Musical Training from Dynamic Processing of Musical Features .pdf
+
+--------------------------------------------------------------------------------
+
+4. Decoding microglia responses to psychosocial stress reveals blood-brain barrier breakdown that may drive stress susceptibility
+   Authors: Michael L. Lehmann, Thaddeus K. Weigel, Hannah A. Cooper
+   Year: 2018
+   Venue: Scientific Reports
+   Citations: 78
+   Publication Date: 2018-07-26
+   DOI: 10.1038/s41598-018-28737-8
+   Keyword: brain decoding
+   File: Scientific_Reports_2018_Decoding microglia responses to psychosocial stress reveals blood-brai.pdf
+
+--------------------------------------------------------------------------------
+
+5. Decoding the dynamic representation of musical pitch from human brain activity
+   Authors: Narayan Sankaran, W. Thompson, S. Carlile
+   Year: 2018
+   Venue: Scientific Reports
+   Citations: 21
+   Publication Date: 2018-01-16
+   DOI: 10.1038/s41598-018-19222-3
+   Keyword: brain decoding
+   File: Scientific_Reports_2018_Decoding the dynamic representation of musical pitch from human brain .pdf
+
+--------------------------------------------------------------------------------
+
+6. Decoding unconstrained arm movements in primates using high-density electrocorticography signals for brain-machine interface use
+   Authors: Kejia Hu, Mohsen Jamali, Ziev B. Moses
+   Year: 2018
+   Venue: Scientific Reports
+   Citations: 17
+   Publication Date: 2018-07-12
+   DOI: 10.1038/s41598-018-28940-7
+   Keyword: brain decoding
+   File: Scientific_Reports_2018_Decoding unconstrained arm movements in primates using high-density el.pdf
+
+--------------------------------------------------------------------------------
+
+7. Validating Deep Neural Networks for Online Decoding of Motor Imagery Movements from EEG Signals
+   Authors: Zied Tayeb, Juri Fedjaev, N. Ghaboosi
+   Year: 2018
+   Venue: Italian National Conference on Sensors
+   Citations: 174
+   Publication Date: 2018-09-25
+   DOI: 10.3390/s19010210
+   Keyword: brain decoding
+   File: Italian_National_Con_2018_Validating Deep Neural Networks for Online Decoding of Motor Imagery M.pdf
+
+--------------------------------------------------------------------------------
+
+8. Comparison of Two-Talker Attention Decoding from EEG with Nonlinear Neural Networks and Linear Methods
+   Authors: G. Ciccarelli, Michael Nolan, Joseph Perricone
+   Year: 2018
+   Venue: Scientific Reports
+   Citations: 128
+   Publication Date: 2018-12-21
+   DOI: 10.1038/s41598-019-47795-0
+   Keyword: brain decoding
+   File: Scientific_Reports_2018_Comparison of Two-Talker Attention Decoding from EEG with Nonlinear Ne.pdf
+
+--------------------------------------------------------------------------------
+
+9. BrainNet: A Multi-Person Brain-to-Brain Interface for Direct Collaboration Between Brains
+   Authors: Linxing Jiang, Andrea Stocco, Darby M. Losey
+   Year: 2018
+   Venue: Scientific Reports
+   Citations: 142
+   Publication Date: 2018-09-23
+   DOI: 10.1038/s41598-019-41895-7
+   Keyword: brain decoding
+   File: Scientific_Reports_2018_BrainNet A Multi-Person Brain-to-Brain Interface for Direct Collaborat.pdf
+
+--------------------------------------------------------------------------------
+
+10. Across-subject offline decoding of motor imagery from MEG and EEG
+   Authors: Hanna-Leena Halme, L. Parkkonen
+   Year: 2018
+   Venue: Scientific Reports
+   Citations: 47
+   Publication Date: 2018-06-18
+   DOI: 10.1038/s41598-018-28295-z
+   Keyword: brain decoding
+   File: Scientific_Reports_2018_Across-subject offline decoding of motor imagery from MEG and EEG.pdf
+
+--------------------------------------------------------------------------------
+
+11. Modelling Peri-Perceptual Brain Processes in a Deep Learning Spiking Neural Network Architecture
+   Authors: Zohreh Gholami Doborjeh, N. Kasabov, Maryam Gholami Doborjeh
+   Year: 2018
+   Venue: Scientific Reports
+   Citations: 44
+   Publication Date: 2018-06-11
+   DOI: 10.1038/s41598-018-27169-8
+   Keyword: computational neuroscience deep learning
+   File: Scientific_Reports_2018_Modelling Peri-Perceptual Brain Processes in a Deep Learning Spiking N.pdf
+
+--------------------------------------------------------------------------------
+
+12. Hand Gesture Recognition in Automotive Human–Machine Interaction Using Depth Cameras
+   Authors: Nico Zengeler, Thomas Kopinski, U. Handmann
+   Year: 2018
+   Venue: Italian National Conference on Sensors
+   Citations: 77
+   Publication Date: 2018-12-24
+   DOI: 10.3390/s19010059
+   Keyword: computational neuroscience deep learning
+   File: Italian_National_Con_2018_Hand Gesture Recognition in Automotive HumanMachine Interaction Using .pdf
+
+--------------------------------------------------------------------------------
+
+13. Computational Protein Design with Deep Learning Neural Networks
+   Authors: Jingxue Wang, Huali Cao, J. H. Zhang
+   Year: 2018
+   Venue: Scientific Reports
+   Citations: 166
+   Publication Date: 2018-01-22
+   DOI: 10.1038/s41598-018-24760-x
+   Keyword: computational neuroscience deep learning
+   File: Scientific_Reports_2018_Computational Protein Design with Deep Learning Neural Networks.pdf
+
+--------------------------------------------------------------------------------
+
+14. Deep-learned 3D black-blood imaging using automatic labelling technique and 3D convolutional neural networks for detecting metastatic brain tumors
+   Authors: Yohan Jun, Taejoon Eo, Taeseong Kim
+   Year: 2018
+   Venue: Scientific Reports
+   Citations: 39
+   Publication Date: 2018-06-21
+   DOI: 10.1038/s41598-018-27742-1
+   Keyword: neural networks brain
+   File: Scientific_Reports_2018_Deep-learned 3D black-blood imaging using automatic labelling techniqu.pdf
+
+--------------------------------------------------------------------------------
+
+15. EEG may serve as a biomarker in Huntington’s disease using machine learning automatic classification
+   Authors: O. Odish, K. Johnsen, Paul J van Someren
+   Year: 2018
+   Venue: Scientific Reports
+   Citations: 37
+   Publication Date: 2018-10-31
+   DOI: 10.1038/s41598-018-34269-y
+   Keyword: EEG machine learning
+   File: Scientific_Reports_2018_EEG may serve as a biomarker in Huntingtons disease using machine lear.pdf
+
+--------------------------------------------------------------------------------
+
+16. Depression Detection Using Relative EEG Power Induced by Emotionally Positive Images and a Conformal Kernel Support Vector Machine
+   Authors: Chien-Te Wu, D. Dillon, Hao-chun Hsu
+   Year: 2018
+   Venue: Applied Sciences
+   Citations: 66
+   Publication Date: 2018-07-27
+   DOI: 10.3390/APP8081244
+   Keyword: EEG machine learning
+   File: Applied_Sciences_2018_Depression Detection Using Relative EEG Power Induced by Emotionally P.pdf
+
+--------------------------------------------------------------------------------
+
+17. Identification of Auditory Object-Specific Attention from Single-Trial Electroencephalogram Signals via Entropy Measures and Machine Learning
+   Authors: Yun Lu, Mingjiang Wang, Qiquan Zhang
+   Year: 2018
+   Venue: Entropy
+   Citations: 17
+   Publication Date: 2018-05-01
+   DOI: 10.3390/e20050386
+   Keyword: EEG machine learning
+   File: Entropy_2018_Identification of Auditory Object-Specific Attention from Single-Trial.pdf
+
+--------------------------------------------------------------------------------
+

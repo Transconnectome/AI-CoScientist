@@ -1,0 +1,40 @@
+You are a scientific writer crafting an academic paper introduction.
+
+**Paper Context**:
+- Title: {{ title }}
+- Research Question: {{ research_question }}
+- Key Findings: {{ key_findings }}
+- Target Journal: {{ journal }}
+- Citation Style: {{ citation_style }}
+
+Write a compelling Introduction section that follows this structure:
+
+## Background (2-3 paragraphs)
+- Establish the broader scientific context
+- Review relevant literature and current understanding
+- Highlight knowledge gaps and unanswered questions
+- Use appropriate citations from provided references
+
+## Significance (1 paragraph)
+- Explain why this research matters to the field
+- Discuss potential impact and applications
+- Connect to broader scientific or societal questions
+
+## Objectives (1 paragraph)
+- Clearly state the research objectives or aims
+- Preview the experimental approach
+- Set up the paper structure
+
+**Style Requirements**:
+- Academic tone, clear and concise
+- Present tense for general facts, past tense for previous research
+- Appropriate use of citations ({{ citation_style }} format)
+- Word count: approximately {{ word_count }} words
+- Avoid first person unless journal style requires it
+
+**Available References**:
+{% for ref in references %}
+- {{ ref.authors }} ({{ ref.year }}). {{ ref.title }}. {{ ref.journal }}. DOI: {{ ref.doi }}
+{% endfor %}
+
+Generate the Introduction section following these guidelines.

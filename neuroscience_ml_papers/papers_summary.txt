@@ -1,0 +1,454 @@
+Papers Downloaded: 50
+Download Date: 2025-10-06 00:19:49
+================================================================================
+
+1. Brain Tumor Classification From MRI Images Using Machine Learning
+   Authors: Vidhyapriya Ranganathan, Celshiya Udaiyar, Jaisree Jayanth, Meghaa P V, Srija B, Uthra S
+   Published: 2024-07-15
+   Categories: eess.IV, cs.CV, cs.LG
+   URL: http://arxiv.org/abs/2407.10630v1
+   File: Brain Tumor Classification From MRI Images Using Machine Learning_2407.10630v1.pdf
+
+--------------------------------------------------------------------------------
+
+2. The Wisdom of a Crowd of Brains: A Universal Brain Encoder
+   Authors: Roman Beliy, Navve Wasserman, Amit Zalcher, Michal Irani
+   Published: 2024-06-18
+   Categories: cs.CV
+   URL: http://arxiv.org/abs/2406.12179v2
+   File: The Wisdom of a Crowd of Brains A Universal Brain Encoder_2406.12179v2.pdf
+
+--------------------------------------------------------------------------------
+
+3. Detection of brain tumors using machine learning algorithms
+   Authors: Horacio Corral, Javier Melchor, Balam Sotelo, Jorge Vera
+   Published: 2022-01-12
+   Categories: eess.IV, cs.LG
+   URL: http://arxiv.org/abs/2201.04703v1
+   File: Detection of brain tumors using machine learning algorithms_2201.04703v1.pdf
+
+--------------------------------------------------------------------------------
+
+4. Biomarkers of brain diseases
+   Authors: Pascal Helson, Arvind Kumar
+   Published: 2025-09-08
+   Categories: q-bio.NC, cs.AI, cs.LG
+   URL: http://arxiv.org/abs/2509.10547v1
+   File: Biomarkers of brain diseases_2509.10547v1.pdf
+
+--------------------------------------------------------------------------------
+
+5. Segmentation of 2D Brain MR Images
+   Authors: Angad Ripudaman Singh Bajwa
+   Published: 2021-11-05
+   Categories: eess.IV, cs.CV, cs.LG
+   URL: http://arxiv.org/abs/2111.03370v1
+   File: Segmentation of 2D Brain MR Images_2111.03370v1.pdf
+
+--------------------------------------------------------------------------------
+
+6. Developing Brain Atlas through Deep Learning
+   Authors: Asim Iqbal, Romesa Khan, Theofanis Karayannis
+   Published: 2018-07-10
+   Categories: cs.CV, cs.LG, eess.IV
+   URL: http://arxiv.org/abs/1807.03440v2
+   File: Developing Brain Atlas through Deep Learning_1807.03440v2.pdf
+
+--------------------------------------------------------------------------------
+
+7. Autism Classification Using Brain Functional Connectivity Dynamics and Machine Learning
+   Authors: Ravi Tejwani, Adam Liska, Hongyuan You, Jenna Reinen, Payel Das
+   Published: 2017-12-21
+   Categories: q-bio.NC, stat.ML
+   URL: http://arxiv.org/abs/1712.08041v1
+   File: Autism Classification Using Brain Functional Connectivity Dynamics and Machine Learning_1712.08041v1.pdf
+
+--------------------------------------------------------------------------------
+
+8. TiBGL: Template-induced Brain Graph Learning for Functional Neuroimaging Analysis
+   Authors: Xiangzhu Meng, Wei Wei, Qiang Liu, Shu Wu, Liang Wang
+   Published: 2023-09-14
+   Categories: cs.AI, cs.LG
+   URL: http://arxiv.org/abs/2309.07947v1
+   File: TiBGL Template-induced Brain Graph Learning for Functional Neuroimaging Analysis_2309.07947v1.pdf
+
+--------------------------------------------------------------------------------
+
+9. Brain Diffuser: An End-to-End Brain Image to Brain Network Pipeline
+   Authors: Xuhang Chen, Baiying Lei, Chi-Man Pun, Shuqiang Wang
+   Published: 2023-03-11
+   Categories: cs.AI, cs.LG, eess.IV
+   URL: http://arxiv.org/abs/2303.06410v1
+   File: Brain Diffuser An End-to-End Brain Image to Brain Network Pipeline_2303.06410v1.pdf
+
+--------------------------------------------------------------------------------
+
+10. NeuReg: Domain-invariant 3D Image Registration on Human and Mouse Brains
+   Authors: Taha Razzaq, Asim Iqbal
+   Published: 2024-11-09
+   Categories: cs.CV, cs.AI, cs.LG, cs.NE, q-bio.QM
+   URL: http://arxiv.org/abs/2411.06315v1
+   File: NeuReg Domain-invariant 3D Image Registration on Human and Mouse Brains_2411.06315v1.pdf
+
+--------------------------------------------------------------------------------
+
+11. Fetal-BET: Brain Extraction Tool for Fetal MRI
+   Authors: Razieh Faghihpirayesh, Davood Karimi, Deniz Erdoğmuş, Ali Gholipour
+   Published: 2023-10-02
+   Categories: eess.IV, cs.CV
+   URL: http://arxiv.org/abs/2310.01523v2
+   File: Fetal-BET Brain Extraction Tool for Fetal MRI_2310.01523v2.pdf
+
+--------------------------------------------------------------------------------
+
+12. Identifying partial mouse brain microscopy images from Allen reference atlas using a contrastively learned semantic space
+   Authors: Justinas Antanavicius, Roberto Leiras, Raghavendra Selvan
+   Published: 2021-09-14
+   Categories: cs.CV, cs.LG, stat.ML
+   URL: http://arxiv.org/abs/2109.06662v3
+   File: Identifying partial mouse brain microscopy images from Allen reference atlas using a contrastively l_2109.06662v3.pdf
+
+--------------------------------------------------------------------------------
+
+13. Fully Automatic Brain Tumor Segmentation using a Normalized Gaussian Bayesian Classifier and 3D Fluid Vector Flow
+   Authors: Tao Wang, Irene Cheng, Anup Basu
+   Published: 2019-05-01
+   Categories: eess.IV, cs.CV, cs.LG, cs.MM, stat.ML
+   URL: http://arxiv.org/abs/1905.00469v1
+   File: Fully Automatic Brain Tumor Segmentation using a Normalized Gaussian Bayesian Classifier and 3D Flui_1905.00469v1.pdf
+
+--------------------------------------------------------------------------------
+
+14. Machine learning approach to brain tumor detection and classification
+   Authors: Alice Oh, Inyoung Noh, Jian Choo, Jihoo Lee, Justin Park, Kate Hwang, Sanghyeon Kim, Soo Min Oh
+   Published: 2024-10-16
+   Categories: cs.CV, cs.LG
+   URL: http://arxiv.org/abs/2410.12692v2
+   File: Machine learning approach to brain tumor detection and classification_2410.12692v2.pdf
+
+--------------------------------------------------------------------------------
+
+15. SAM vs BET: A Comparative Study for Brain Extraction and Segmentation of Magnetic Resonance Images using Deep Learning
+   Authors: Sovesh Mohapatra, Advait Gosai, Gottfried Schlaug
+   Published: 2023-04-10
+   Categories: eess.IV, cs.CV, cs.LG
+   URL: http://arxiv.org/abs/2304.04738v3
+   File: SAM vs BET A Comparative Study for Brain Extraction and Segmentation of Magnetic Resonance Images us_2304.04738v3.pdf
+
+--------------------------------------------------------------------------------
+
+16. Hierarchical Characterization of Brain Dynamics via State Space-based Vector Quantization
+   Authors: Yanwu Yang, Thomas Wolfers
+   Published: 2025-06-28
+   Categories: eess.IV, cs.CV, q-bio.NC
+   URL: http://arxiv.org/abs/2506.22952v1
+   File: Hierarchical Characterization of Brain Dynamics via State Space-based Vector Quantization_2506.22952v1.pdf
+
+--------------------------------------------------------------------------------
+
+17. Subject-Specific Lesion Generation and Pseudo-Healthy Synthesis for Multiple Sclerosis Brain Images
+   Authors: Berke Doga Basaran, Mengyun Qiao, Paul M. Matthews, Wenjia Bai
+   Published: 2022-08-03
+   Categories: eess.IV, cs.CV, cs.LG
+   URL: http://arxiv.org/abs/2208.02135v1
+   File: Subject-Specific Lesion Generation and Pseudo-Healthy Synthesis for Multiple Sclerosis Brain Images_2208.02135v1.pdf
+
+--------------------------------------------------------------------------------
+
+18. Visual Explanation for Identification of the Brain Bases for Dyslexia on fMRI Data
+   Authors: Laura Tomaz Da Silva, Nathalia Bianchini Esper, Duncan D. Ruiz, Felipe Meneguzzi, Augusto Buchweitz
+   Published: 2020-07-17
+   Categories: eess.IV, cs.LG, q-bio.NC
+   URL: http://arxiv.org/abs/2007.09260v1
+   File: Visual Explanation for Identification of the Brain Bases for Dyslexia on fMRI Data_2007.09260v1.pdf
+
+--------------------------------------------------------------------------------
+
+19. A Domain Guided CNN Architecture for Predicting Age from Structural Brain Images
+   Authors: Pascal Sturmfels, Saige Rutherford, Mike Angstadt, Mark Peterson, Chandra Sripada, Jenna Wiens
+   Published: 2018-08-11
+   Categories: cs.CV, cs.LG, stat.ML
+   URL: http://arxiv.org/abs/1808.04362v1
+   File: A Domain Guided CNN Architecture for Predicting Age from Structural Brain Images_1808.04362v1.pdf
+
+--------------------------------------------------------------------------------
+
+20. Combining imaging and shape features for prediction tasks of Alzheimer's disease classification and brain age regression
+   Authors: Nairouz Shehata, Carolina Piçarra, Ben Glocker
+   Published: 2025-01-14
+   Categories: cs.CV, cs.LG, eess.IV
+   URL: http://arxiv.org/abs/2501.07994v1
+   File: Combining imaging and shape features for prediction tasks of Alzheimers disease classification and b_2501.07994v1.pdf
+
+--------------------------------------------------------------------------------
+
+21. ACTION: Augmentation and Computation Toolbox for Brain Network Analysis with Functional MRI
+   Authors: Yuqi Fang, Junhao Zhang, Linmin Wang, Qianqian Wang, Mingxia Liu
+   Published: 2024-05-10
+   Categories: eess.IV, cs.LG, q-bio.NC
+   URL: http://arxiv.org/abs/2405.06178v1
+   File: ACTION Augmentation and Computation Toolbox for Brain Network Analysis with Functional MRI_2405.06178v1.pdf
+
+--------------------------------------------------------------------------------
+
+22. Leveraging sinusoidal representation networks to predict fMRI signals from EEG
+   Authors: Yamin Li, Ange Lou, Ziyuan Xu, Shiyu Wang, Catie Chang
+   Published: 2023-11-06
+   Categories: eess.SP, cs.CV, cs.LG
+   URL: http://arxiv.org/abs/2311.04234v2
+   File: Leveraging sinusoidal representation networks to predict fMRI signals from EEG_2311.04234v2.pdf
+
+--------------------------------------------------------------------------------
+
+23. BrainCodec: Neural fMRI codec for the decoding of cognitive brain states
+   Authors: Yuto Nishimura, Masataka Sawayama, Ayumu Yamashita, Hideki Nakayama, Kaoru Amano
+   Published: 2024-10-06
+   Categories: q-bio.NC, cs.CL
+   URL: http://arxiv.org/abs/2410.04383v1
+   File: BrainCodec Neural fMRI codec for the decoding of cognitive brain states_2410.04383v1.pdf
+
+--------------------------------------------------------------------------------
+
+24. Deep driven fMRI decoding of visual categories
+   Authors: Michele Svanera, Sergio Benini, Gal Raz, Talma Hendler, Rainer Goebel, Giancarlo Valente
+   Published: 2017-01-09
+   Categories: stat.ML, cs.LG, q-bio.NC
+   URL: http://arxiv.org/abs/1701.02133v1
+   File: Deep driven fMRI decoding of visual categories_1701.02133v1.pdf
+
+--------------------------------------------------------------------------------
+
+25. Automatic artifact removal of resting-state fMRI with Deep Neural Networks
+   Authors: Christos Theodoropoulos, Christos Chatzichristos, Sabine Van Huffel
+   Published: 2020-11-15
+   Categories: eess.IV
+   URL: http://arxiv.org/abs/2011.12113v2
+   File: Automatic artifact removal of resting-state fMRI with Deep Neural Networks_2011.12113v2.pdf
+
+--------------------------------------------------------------------------------
+
+26. Reconstructing Retinal Visual Images from 3T fMRI Data Enhanced by Unsupervised Learning
+   Authors: Yujian Xiong, Wenhui Zhu, Zhong-Lin Lu, Yalin Wang
+   Published: 2024-04-07
+   Categories: cs.CV
+   URL: http://arxiv.org/abs/2404.05107v1
+   File: Reconstructing Retinal Visual Images from 3T fMRI Data Enhanced by Unsupervised Learning_2404.05107v1.pdf
+
+--------------------------------------------------------------------------------
+
+27. DreaMR: Diffusion-driven Counterfactual Explanation for Functional MRI
+   Authors: Hasan Atakan Bedel, Tolga Çukur
+   Published: 2023-07-18
+   Categories: eess.SP, cs.LG, eess.IV
+   URL: http://arxiv.org/abs/2307.09547v1
+   File: DreaMR Diffusion-driven Counterfactual Explanation for Functional MRI_2307.09547v1.pdf
+
+--------------------------------------------------------------------------------
+
+28. Spatial-Temporal DAG Convolutional Networks for End-to-End Joint Effective Connectivity Learning and Resting-State fMRI Classification
+   Authors: Rui Yang, Wenrui Dai, Huajun She, Yiping P. Du, Dapeng Wu, Hongkai Xiong
+   Published: 2023-12-16
+   Categories: cs.LG, cs.AI, q-bio.NC
+   URL: http://arxiv.org/abs/2312.10317v1
+   File: Spatial-Temporal DAG Convolutional Networks for End-to-End Joint Effective Connectivity Learning and_2312.10317v1.pdf
+
+--------------------------------------------------------------------------------
+
+29. Teaching CORnet Human fMRI Representations for Enhanced Model-Brain Alignment
+   Authors: Zitong Lu, Yile Wang
+   Published: 2024-07-15
+   Categories: eess.IV, cs.CV, cs.LG, q-bio.NC
+   URL: http://arxiv.org/abs/2407.10414v1
+   File: Teaching CORnet Human fMRI Representations for Enhanced Model-Brain Alignment_2407.10414v1.pdf
+
+--------------------------------------------------------------------------------
+
+30. Leveraging Brain Modularity Prior for Interpretable Representation Learning of fMRI
+   Authors: Qianqian Wang, Wei Wang, Yuqi Fang, P. -T. Yap, Hongtu Zhu, Hong-Jun Li, Lishan Qiao, Mingxia Liu
+   Published: 2023-06-24
+   Categories: q-bio.QM, cs.LG, q-bio.NC
+   URL: http://arxiv.org/abs/2306.14080v1
+   File: Leveraging Brain Modularity Prior for Interpretable Representation Learning of fMRI_2306.14080v1.pdf
+
+--------------------------------------------------------------------------------
+
+31. Brainformer: Mimic Human Visual Brain Functions to Machine Vision Models via fMRI
+   Authors: Xuan-Bac Nguyen, Xin Li, Pawan Sinha, Samee U. Khan, Khoa Luu
+   Published: 2023-11-30
+   Categories: cs.CV
+   URL: http://arxiv.org/abs/2312.00236v4
+   File: Brainformer Mimic Human Visual Brain Functions to Machine Vision Models via fMRI_2312.00236v4.pdf
+
+--------------------------------------------------------------------------------
+
+32. Emotional Brain State Classification on fMRI Data Using Deep Residual and Convolutional Networks
+   Authors: Maxime Tchibozo, Donggeun Kim, Zijing Wang, Xiaofu He
+   Published: 2022-10-31
+   Categories: eess.IV, cs.CV, cs.LG
+   URL: http://arxiv.org/abs/2210.17015v1
+   File: Emotional Brain State Classification on fMRI Data Using Deep Residual and Convolutional Networks_2210.17015v1.pdf
+
+--------------------------------------------------------------------------------
+
+33. Deep Labeling of fMRI Brain Networks Using Cloud Based Processing
+   Authors: Sejal Ghate, Alberto Santamaria-Pang, Ivan Tarapov, Haris I Sair, Craig K Jones
+   Published: 2022-09-16
+   Categories: cs.LG
+   URL: http://arxiv.org/abs/2209.08200v2
+   File: Deep Labeling of fMRI Brain Networks Using Cloud Based Processing_2209.08200v2.pdf
+
+--------------------------------------------------------------------------------
+
+34. Interpreting Age Effects of Human Fetal Brain from Spontaneous fMRI using Deep 3D Convolutional Neural Networks
+   Authors: Xiangrui Li, Jasmine Hect, Moriah Thomason, Dongxiao Zhu
+   Published: 2019-06-09
+   Categories: eess.IV, cs.LG, stat.ML
+   URL: http://arxiv.org/abs/1906.03691v1
+   File: Interpreting Age Effects of Human Fetal Brain from Spontaneous fMRI using Deep 3D Convolutional Neur_1906.03691v1.pdf
+
+--------------------------------------------------------------------------------
+
+35. EEG to fMRI Synthesis: Is Deep Learning a candidate?
+   Authors: David Calhas, Rui Henriques
+   Published: 2020-09-29
+   Categories: cs.LG, stat.ML
+   URL: http://arxiv.org/abs/2009.14133v1
+   File: EEG to fMRI Synthesis Is Deep Learning a candidate_2009.14133v1.pdf
+
+--------------------------------------------------------------------------------
+
+36. FBNETGEN: Task-aware GNN-based fMRI Analysis via Functional Brain Network Generation
+   Authors: Xuan Kan, Hejie Cui, Joshua Lukemire, Ying Guo, Carl Yang
+   Published: 2022-05-25
+   Categories: cs.LG, cs.NE, eess.IV, q-bio.NC, 68T07, 68T45, 68T20, I.2.6; I.2.10; J.3
+   URL: http://arxiv.org/abs/2205.12465v2
+   File: FBNETGEN Task-aware GNN-based fMRI Analysis via Functional Brain Network Generation_2205.12465v2.pdf
+
+--------------------------------------------------------------------------------
+
+37. NeuroBOLT: Resting-state EEG-to-fMRI Synthesis with Multi-dimensional Feature Mapping
+   Authors: Yamin Li, Ange Lou, Ziyuan Xu, Shengchao Zhang, Shiyu Wang, Dario J. Englot, Soheil Kolouri, Daniel Moyer, Roza G. Bayrak, Catie Chang
+   Published: 2024-10-07
+   Categories: eess.IV, cs.AI, cs.LG
+   URL: http://arxiv.org/abs/2410.05341v3
+   File: NeuroBOLT Resting-state EEG-to-fMRI Synthesis with Multi-dimensional Feature Mapping_2410.05341v3.pdf
+
+--------------------------------------------------------------------------------
+
+38. VarCoNet: A variability-aware self-supervised framework for functional connectome extraction from resting-state fMRI
+   Authors: Charalampos Lamprou, Aamna Alshehhi, Leontios J. Hadjileontiadis, Mohamed L. Seghier
+   Published: 2025-10-02
+   Categories: cs.NE, cs.AI, cs.LG, q-bio.NC
+   URL: http://arxiv.org/abs/2510.02120v1
+   File: VarCoNet A variability-aware self-supervised framework for functional connectome extraction from res_2510.02120v1.pdf
+
+--------------------------------------------------------------------------------
+
+39. More Than Meets the Eye: Self-Supervised Depth Reconstruction From Brain Activity
+   Authors: Guy Gaziv, Michal Irani
+   Published: 2021-06-09
+   Categories: cs.CV, cs.LG, q-bio.NC
+   URL: http://arxiv.org/abs/2106.05113v3
+   File: More Than Meets the Eye Self-Supervised Depth Reconstruction From Brain Activity_2106.05113v3.pdf
+
+--------------------------------------------------------------------------------
+
+40. Automatic diagnosis of schizophrenia and attention deficit hyperactivity disorder in rs-fMRI modality using convolutional autoencoder model and interval type-2 fuzzy regression
+   Authors: Afshin Shoeibi, Navid Ghassemi, Marjane Khodatars, Parisa Moridian, Abbas Khosravi, Assef Zare, Juan M. Gorriz, Amir Hossein Chale-Chale, Ali Khadem, U. Rajendra Acharya
+   Published: 2022-05-31
+   Categories: cs.LG
+   URL: http://arxiv.org/abs/2205.15858v2
+   File: Automatic diagnosis of schizophrenia and attention deficit hyperactivity disorder in rs-fMRI modalit_2205.15858v2.pdf
+
+--------------------------------------------------------------------------------
+
+41. Playing With Neuroscience: Past, Present and Future of Neuroimaging and Games
+   Authors: Paolo Burelli, Laurits Dixen
+   Published: 2024-03-06
+   Categories: q-bio.NC, cs.AI
+   URL: http://arxiv.org/abs/2403.15413v1
+   File: Playing With Neuroscience Past Present and Future of Neuroimaging and Games_2403.15413v1.pdf
+
+--------------------------------------------------------------------------------
+
+42. Connecting levels of analysis in the computational era
+   Authors: Richard Naud, André Longtin
+   Published: 2023-05-10
+   Categories: q-bio.NC
+   URL: http://arxiv.org/abs/2305.06037v2
+   File: Connecting levels of analysis in the computational era_2305.06037v2.pdf
+
+--------------------------------------------------------------------------------
+
+43. Cortex simulation system proposal using distributed computer network environments
+   Authors: Boris Tomas
+   Published: 2014-03-22
+   Categories: cs.AI
+   URL: http://arxiv.org/abs/1403.5701v1
+   File: Cortex simulation system proposal using distributed computer network environments_1403.5701v1.pdf
+
+--------------------------------------------------------------------------------
+
+44. Entity-Augmented Neuroscience Knowledge Retrieval Using Ontology and Semantic Understanding Capability of LLM
+   Authors: Pralaypati Ta, Sriram Venkatesaperumal, Keerthi Ram, Mohanasankar Sivaprakasam
+   Published: 2025-06-03
+   Categories: cs.CL, cs.AI
+   URL: http://arxiv.org/abs/2506.03145v1
+   File: Entity-Augmented Neuroscience Knowledge Retrieval Using Ontology and Semantic Understanding Capabili_2506.03145v1.pdf
+
+--------------------------------------------------------------------------------
+
+45. Report on Candidate Computational Indicators for Conscious Valenced Experience
+   Authors: Andres Campero
+   Published: 2024-04-25
+   Categories: q-bio.NC, cs.AI
+   URL: http://arxiv.org/abs/2404.16696v1
+   File: Report on Candidate Computational Indicators for Conscious Valenced Experience_2404.16696v1.pdf
+
+--------------------------------------------------------------------------------
+
+46. A learning gap between neuroscience and reinforcement learning
+   Authors: Samuel T. Wauthier, Pietro Mazzaglia, Ozan Çatal, Cedric De Boom, Tim Verbelen, Bart Dhoedt
+   Published: 2021-04-22
+   Categories: cs.LG, cs.AI
+   URL: http://arxiv.org/abs/2104.10995v3
+   File: A learning gap between neuroscience and reinforcement learning_2104.10995v3.pdf
+
+--------------------------------------------------------------------------------
+
+47. Meta-learning in natural and artificial intelligence
+   Authors: Jane X. Wang
+   Published: 2020-11-26
+   Categories: cs.AI
+   URL: http://arxiv.org/abs/2011.13464v1
+   File: Meta-learning in natural and artificial intelligence_2011.13464v1.pdf
+
+--------------------------------------------------------------------------------
+
+48. Epistemic integration and social segregation of AI in neuroscience
+   Authors: Sylvain Fontaine, Floriana Gargiulo, Michel Dubois, Paola Tubaro
+   Published: 2023-10-02
+   Categories: physics.soc-ph, cs.SI
+   URL: http://arxiv.org/abs/2310.01046v2
+   File: Epistemic integration and social segregation of AI in neuroscience_2310.01046v2.pdf
+
+--------------------------------------------------------------------------------
+
+49. Matching domain experts by training from scratch on domain knowledge
+   Authors: Xiaoliang Luo, Guangzhi Sun, Bradley C. Love
+   Published: 2024-05-15
+   Categories: q-bio.NC, cs.AI, cs.CL
+   URL: http://arxiv.org/abs/2405.09395v2
+   File: Matching domain experts by training from scratch on domain knowledge_2405.09395v2.pdf
+
+--------------------------------------------------------------------------------
+
+50. A Dynamical Cartography of the Epistemic Diffusion of Artificial Intelligence in Neuroscience
+   Authors: Sylvain Fontaine
+   Published: 2025-07-02
+   Categories: cs.DL, physics.soc-ph, q-bio.NC
+   URL: http://arxiv.org/abs/2507.01651v1
+   File: A Dynamical Cartography of the Epistemic Diffusion of Artificial Intelligence in Neuroscience_2507.01651v1.pdf
+
+--------------------------------------------------------------------------------
+

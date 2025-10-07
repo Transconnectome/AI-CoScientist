@@ -1,0 +1,189 @@
+[
+  {
+    "title": "Potential Reporting Bias in Neuroimaging Studies of Sex Differences",
+    "authors": "S. David, F. Naudet, Jennifer R. Laude",
+    "year": 2018,
+    "venue": "Scientific Reports",
+    "citations": 117,
+    "doi": "10.1038/s41598-018-23976-1",
+    "pubDate": "2018-04-17",
+    "filename": "Scientific_Reports_2018_Potential Reporting Bias in Neuroimaging Studies of Sex Differences.pdf",
+    "keyword": "neuroimaging"
+  },
+  {
+    "title": "Voxel-wise comparisons of cellular microstructure and diffusion-MRI in mouse hippocampus using 3D Bridging of Optically-clear histology with Neuroimaging Data (3D-BOND)",
+    "authors": "Helen B. Stolp, G. Ball, Po-Wah So",
+    "year": 2018,
+    "venue": "Scientific Reports",
+    "citations": 55,
+    "doi": "10.1038/s41598-018-22295-9",
+    "pubDate": "2018-03-05",
+    "filename": "Scientific_Reports_2018_Voxel-wise comparisons of cellular microstructure and diffusion-MRI in.pdf",
+    "keyword": "neuroimaging"
+  },
+  {
+    "title": "Decoding Musical Training from Dynamic Processing of Musical Features in the Brain",
+    "authors": "Pasi Saari, I. Burunat, E. Brattico",
+    "year": 2018,
+    "venue": "Scientific Reports",
+    "citations": 36,
+    "doi": "10.1038/s41598-018-19177-5",
+    "pubDate": "2018-01-15",
+    "filename": "Scientific_Reports_2018_Decoding Musical Training from Dynamic Processing of Musical Features .pdf",
+    "keyword": "brain decoding"
+  },
+  {
+    "title": "Decoding microglia responses to psychosocial stress reveals blood-brain barrier breakdown that may drive stress susceptibility",
+    "authors": "Michael L. Lehmann, Thaddeus K. Weigel, Hannah A. Cooper",
+    "year": 2018,
+    "venue": "Scientific Reports",
+    "citations": 78,
+    "doi": "10.1038/s41598-018-28737-8",
+    "pubDate": "2018-07-26",
+    "filename": "Scientific_Reports_2018_Decoding microglia responses to psychosocial stress reveals blood-brai.pdf",
+    "keyword": "brain decoding"
+  },
+  {
+    "title": "Decoding the dynamic representation of musical pitch from human brain activity",
+    "authors": "Narayan Sankaran, W. Thompson, S. Carlile",
+    "year": 2018,
+    "venue": "Scientific Reports",
+    "citations": 21,
+    "doi": "10.1038/s41598-018-19222-3",
+    "pubDate": "2018-01-16",
+    "filename": "Scientific_Reports_2018_Decoding the dynamic representation of musical pitch from human brain .pdf",
+    "keyword": "brain decoding"
+  },
+  {
+    "title": "Decoding unconstrained arm movements in primates using high-density electrocorticography signals for brain-machine interface use",
+    "authors": "Kejia Hu, Mohsen Jamali, Ziev B. Moses",
+    "year": 2018,
+    "venue": "Scientific Reports",
+    "citations": 17,
+    "doi": "10.1038/s41598-018-28940-7",
+    "pubDate": "2018-07-12",
+    "filename": "Scientific_Reports_2018_Decoding unconstrained arm movements in primates using high-density el.pdf",
+    "keyword": "brain decoding"
+  },
+  {
+    "title": "Validating Deep Neural Networks for Online Decoding of Motor Imagery Movements from EEG Signals",
+    "authors": "Zied Tayeb, Juri Fedjaev, N. Ghaboosi",
+    "year": 2018,
+    "venue": "Italian National Conference on Sensors",
+    "citations": 174,
+    "doi": "10.3390/s19010210",
+    "pubDate": "2018-09-25",
+    "filename": "Italian_National_Con_2018_Validating Deep Neural Networks for Online Decoding of Motor Imagery M.pdf",
+    "keyword": "brain decoding"
+  },
+  {
+    "title": "Comparison of Two-Talker Attention Decoding from EEG with Nonlinear Neural Networks and Linear Methods",
+    "authors": "G. Ciccarelli, Michael Nolan, Joseph Perricone",
+    "year": 2018,
+    "venue": "Scientific Reports",
+    "citations": 128,
+    "doi": "10.1038/s41598-019-47795-0",
+    "pubDate": "2018-12-21",
+    "filename": "Scientific_Reports_2018_Comparison of Two-Talker Attention Decoding from EEG with Nonlinear Ne.pdf",
+    "keyword": "brain decoding"
+  },
+  {
+    "title": "BrainNet: A Multi-Person Brain-to-Brain Interface for Direct Collaboration Between Brains",
+    "authors": "Linxing Jiang, Andrea Stocco, Darby M. Losey",
+    "year": 2018,
+    "venue": "Scientific Reports",
+    "citations": 142,
+    "doi": "10.1038/s41598-019-41895-7",
+    "pubDate": "2018-09-23",
+    "filename": "Scientific_Reports_2018_BrainNet A Multi-Person Brain-to-Brain Interface for Direct Collaborat.pdf",
+    "keyword": "brain decoding"
+  },
+  {
+    "title": "Across-subject offline decoding of motor imagery from MEG and EEG",
+    "authors": "Hanna-Leena Halme, L. Parkkonen",
+    "year": 2018,
+    "venue": "Scientific Reports",
+    "citations": 47,
+    "doi": "10.1038/s41598-018-28295-z",
+    "pubDate": "2018-06-18",
+    "filename": "Scientific_Reports_2018_Across-subject offline decoding of motor imagery from MEG and EEG.pdf",
+    "keyword": "brain decoding"
+  },
+  {
+    "title": "Modelling Peri-Perceptual Brain Processes in a Deep Learning Spiking Neural Network Architecture",
+    "authors": "Zohreh Gholami Doborjeh, N. Kasabov, Maryam Gholami Doborjeh",
+    "year": 2018,
+    "venue": "Scientific Reports",
+    "citations": 44,
+    "doi": "10.1038/s41598-018-27169-8",
+    "pubDate": "2018-06-11",
+    "filename": "Scientific_Reports_2018_Modelling Peri-Perceptual Brain Processes in a Deep Learning Spiking N.pdf",
+    "keyword": "computational neuroscience deep learning"
+  },
+  {
+    "title": "Hand Gesture Recognition in Automotive Human–Machine Interaction Using Depth Cameras",
+    "authors": "Nico Zengeler, Thomas Kopinski, U. Handmann",
+    "year": 2018,
+    "venue": "Italian National Conference on Sensors",
+    "citations": 77,
+    "doi": "10.3390/s19010059",
+    "pubDate": "2018-12-24",
+    "filename": "Italian_National_Con_2018_Hand Gesture Recognition in Automotive HumanMachine Interaction Using .pdf",
+    "keyword": "computational neuroscience deep learning"
+  },
+  {
+    "title": "Computational Protein Design with Deep Learning Neural Networks",
+    "authors": "Jingxue Wang, Huali Cao, J. H. Zhang",
+    "year": 2018,
+    "venue": "Scientific Reports",
+    "citations": 166,
+    "doi": "10.1038/s41598-018-24760-x",
+    "pubDate": "2018-01-22",
+    "filename": "Scientific_Reports_2018_Computational Protein Design with Deep Learning Neural Networks.pdf",
+    "keyword": "computational neuroscience deep learning"
+  },
+  {
+    "title": "Deep-learned 3D black-blood imaging using automatic labelling technique and 3D convolutional neural networks for detecting metastatic brain tumors",
+    "authors": "Yohan Jun, Taejoon Eo, Taeseong Kim",
+    "year": 2018,
+    "venue": "Scientific Reports",
+    "citations": 39,
+    "doi": "10.1038/s41598-018-27742-1",
+    "pubDate": "2018-06-21",
+    "filename": "Scientific_Reports_2018_Deep-learned 3D black-blood imaging using automatic labelling techniqu.pdf",
+    "keyword": "neural networks brain"
+  },
+  {
+    "title": "EEG may serve as a biomarker in Huntington’s disease using machine learning automatic classification",
+    "authors": "O. Odish, K. Johnsen, Paul J van Someren",
+    "year": 2018,
+    "venue": "Scientific Reports",
+    "citations": 37,
+    "doi": "10.1038/s41598-018-34269-y",
+    "pubDate": "2018-10-31",
+    "filename": "Scientific_Reports_2018_EEG may serve as a biomarker in Huntingtons disease using machine lear.pdf",
+    "keyword": "EEG machine learning"
+  },
+  {
+    "title": "Depression Detection Using Relative EEG Power Induced by Emotionally Positive Images and a Conformal Kernel Support Vector Machine",
+    "authors": "Chien-Te Wu, D. Dillon, Hao-chun Hsu",
+    "year": 2018,
+    "venue": "Applied Sciences",
+    "citations": 66,
+    "doi": "10.3390/APP8081244",
+    "pubDate": "2018-07-27",
+    "filename": "Applied_Sciences_2018_Depression Detection Using Relative EEG Power Induced by Emotionally P.pdf",
+    "keyword": "EEG machine learning"
+  },
+  {
+    "title": "Identification of Auditory Object-Specific Attention from Single-Trial Electroencephalogram Signals via Entropy Measures and Machine Learning",
+    "authors": "Yun Lu, Mingjiang Wang, Qiquan Zhang",
+    "year": 2018,
+    "venue": "Entropy",
+    "citations": 17,
+    "doi": "10.3390/e20050386",
+    "pubDate": "2018-05-01",
+    "filename": "Entropy_2018_Identification of Auditory Object-Specific Attention from Single-Trial.pdf",
+    "keyword": "EEG machine learning"
+  }
+]
