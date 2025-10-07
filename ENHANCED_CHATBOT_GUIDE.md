@@ -341,7 +341,7 @@ self.use_llm_by_default = True  # Change to False for heuristic default
 history_dir = Path.home() / ".ai-coscientist" / "chat_history"
 
 # Claude model
-model="claude-3-5-sonnet-20241022"
+model="claude-sonnet-4-5-20250929"  # Latest Sonnet 4.5
 temperature=0.3  # Lower = more consistent
 max_tokens=2048
 ```
@@ -355,7 +355,7 @@ Edit `scripts/paper_evaluator_llm.py`:
 max_chars = 50000  # Increase for longer papers
 
 # Model settings
-model="claude-3-5-sonnet-20241022"
+model="claude-sonnet-4-5-20250929"  # Latest Sonnet 4.5
 temperature=0.3  # Adjust for more/less variability
 max_tokens=2048
 

@@ -657,7 +657,7 @@ Present these suggestions in a friendly way and ask which one they'd like to sta
             task = progress.add_task("Thinking...", total=None)
 
             response = self.client.messages.create(
-                model="claude-3-5-sonnet-20250219",
+                model="claude-sonnet-4-5-20250929",
                 max_tokens=1024,
                 system=self.system_prompt,
                 messages=messages

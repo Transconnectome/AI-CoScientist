@@ -120,7 +120,7 @@ Be honest and constructive. Provide specific feedback."""
         try:
             # Call Claude API
             response = self.client.messages.create(
-                model="claude-3-5-sonnet-20250219",
+                model="claude-sonnet-4-5-20250929",
                 max_tokens=2048,
                 temperature=0.3,  # Lower for more consistent scoring
                 messages=[
