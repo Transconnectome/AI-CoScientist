@@ -337,6 +337,218 @@ class ImprovementService:
             "total_versions": len(version_list),
         }
 
+    async def generate_smart_suggestions(
+        self, paper_id: UUID, section_name: Optional[str] = None
+    ) -> Dict:
+        """Generate RAG-powered suggestions using historical patterns.
+
+        Uses ChromaDB to find similar successful improvements and generates
+        context-aware suggestions enhanced with exemplar papers.
+
+        Args:
+            paper_id: Paper UUID
+            section_name: Optional specific section (None = all sections)
+
+        Returns:
+            Dict with smart suggestions and RAG metadata
+        """
+        # Determine sections to process
+        if section_name:
+            sections = [await self._get_section(paper_id, section_name)]
+        else:
+            sections = await self._get_all_sections(paper_id)
+
+        suggestions = []
+
+        for section in sections:
+            # Find similar successful improvements from ChromaDB
+            similar_patterns = await self.learning_store.find_similar_improvements(
+                query_text=section.content, n_results=5, min_score=7.0
+            )
+
+            # Find exemplar papers for context
+            exemplars = await self.learning_store.find_exemplar_papers(
+                query_text=section.content, min_quality=8.0, n_results=2
+            )
+
+            # Build RAG context from ChromaDB results
+            rag_context = self._build_rag_context(similar_patterns, exemplars)
+
+            # Generate improvement with RAG context
+            improvement = await self.improver.improve_section(
+                paper_id=paper_id, section_name=section.name, feedback=rag_context
+            )
+
+            suggestions.append(
+                {
+                    "section_name": section.name,
+                    "improved_content": improvement["improved_content"],
+                    "metadata": {
+                        "type": improvement.get("type", "general"),
+                        "changes": improvement.get("changes", []),
+                        "summary": improvement["changes_summary"],
+                        "similar_patterns_used": len(similar_patterns),
+                        "exemplars_referenced": len(exemplars),
+                    },
+                    "expected_improvement": improvement["improvement_score"],
+                }
+            )
+
+        return {
+            "suggestions": suggestions,
+            "total_suggestions": len(suggestions),
+            "rag_enhanced": True,
+        }
+
+    async def run_iterative_improvement(
+        self,
+        paper_id: UUID,
+        target_score: float,
+        max_iterations: int = 5,
+        focus_areas: Optional[List[str]] = None,
+    ) -> Dict:
+        """Run iterative improvement loop until target reached.
+
+        Executes multiple rounds of:
+        1. Analyze current quality
+        2. Generate smart suggestions (RAG-enhanced)
+        3. Apply top improvements
+        4. Re-assess quality
+        5. Continue until target or max iterations
+
+        Args:
+            paper_id: Paper UUID
+            target_score: Target quality score (0-10)
+            max_iterations: Maximum improvement rounds
+            focus_areas: Optional focus areas (clarity, methodology, etc.)
+
+        Returns:
+            Dict with iteration results and final metrics
+        """
+        paper = await self._get_paper(paper_id)
+
+        # Get initial quality score
+        initial_score = await self._get_overall_quality(paper_id)
+
+        # Create iteration session
+        session = IterationSession(
+            paper_id=paper_id,
+            target_score=target_score,
+            max_iterations=max_iterations,
+            focus_areas=focus_areas or ["clarity", "coherence", "methodology"],
+            current_score=initial_score,
+            current_iteration=0,
+            is_complete=False,
+            improvements_applied=0,
+            score_improvement=0.0,
+        )
+        self.db.add(session)
+        await self.db.flush()
+
+        # Store start version
+        start_version = await self._create_version_snapshot(
+            paper=paper,
+            version_type=VersionType.MINOR,
+            change_summary=f"Start iterative improvement session (target: {target_score})",
+        )
+        session.start_version_id = start_version.id
+
+        iterations_completed = 0
+        improvements_applied = 0
+        current_score = initial_score
+
+        while iterations_completed < max_iterations and current_score < target_score:
+            iterations_completed += 1
+
+            # 1. Analyze current state
+            analysis = await self.analyzer.analyze_quality(paper_id)
+
+            # 2. Generate smart suggestions using RAG
+            suggestions_result = await self.generate_smart_suggestions(paper_id=paper_id)
+            suggestions = suggestions_result["suggestions"]
+
+            # 3. Apply top 3 improvements per iteration
+            for suggestion in suggestions[:3]:
+                try:
+                    await self.apply_improvement(
+                        paper_id=paper_id,
+                        section_name=suggestion["section_name"],
+                        improved_content=suggestion["improved_content"],
+                        improvement_metadata=suggestion["metadata"],
+                    )
+                    improvements_applied += 1
+                except Exception as e:
+                    # Log but continue with other improvements
+                    print(f"Failed to apply improvement: {e}")
+                    continue
+
+            # 4. Re-assess quality
+            current_score = await self._get_overall_quality(paper_id)
+
+            # 5. Update session progress
+            session.current_iteration = iterations_completed
+            session.current_score = current_score
+            session.improvements_applied = improvements_applied
+            session.score_improvement = current_score - initial_score
+
+            # Store current version
+            current_version = await self._create_version_snapshot(
+                paper=paper,
+                version_type=VersionType.MINOR,
+                change_summary=f"Iteration {iterations_completed}: score={current_score:.2f}",
+            )
+            session.current_version_id = current_version.id
+
+            await self.db.commit()
+
+            # Early exit if target reached
+            if current_score >= target_score:
+                break
+
+        # Mark session complete
+        session.is_complete = True
+        await self.db.commit()
+
+        return {
+            "session_id": str(session.id),
+            "iterations_completed": iterations_completed,
+            "improvements_applied": improvements_applied,
+            "initial_score": initial_score,
+            "final_score": current_score,
+            "score_improvement": current_score - initial_score,
+            "target_reached": current_score >= target_score,
+            "start_version": start_version.version_string,
+            "final_version": paper.current_version,
+        }
+
+    def _build_rag_context(
+        self, similar_patterns: List[Dict], exemplars: List[Dict]
+    ) -> str:
+        """Build RAG context from ChromaDB results.
+
+        Args:
+            similar_patterns: Similar improvement patterns from ChromaDB
+            exemplars: High-quality exemplar papers
+
+        Returns:
+            Formatted RAG context string for LLM
+        """
+        context = "Reference successful improvements:\n\n"
+
+        for i, pattern in enumerate(similar_patterns[:3], 1):
+            metadata = pattern.get("metadata", {})
+            changes = metadata.get("changes", ["Improved quality"])
+            context += f"{i}. {', '.join(changes)}\n"
+
+        if exemplars:
+            context += "\n\nHigh-quality examples for reference:\n"
+            for i, exemplar in enumerate(exemplars[:2], 1):
+                metadata = exemplar.get("metadata", {})
+                score = metadata.get("overall_score", 0.0)
+                context += f"{i}. Quality score: {score:.1f}/10\n"
+
+        return context
+
     # ========== Helper Methods ==========
 
     async def _get_paper(self, paper_id: UUID) -> Paper:

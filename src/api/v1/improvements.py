@@ -11,6 +11,9 @@ from src.schemas.improvement import (
     VersionRollbackRequest,
     VersionComparisonResponse,
     VersionHistoryResponse,
+    SmartSuggestionResponse,
+    IterativeImprovementRequest,
+    IterativeImprovementResponse,
 )
 from src.services.paper.improvement_service import ImprovementService
 
@@ -169,3 +172,80 @@ async def get_version_history(
         raise HTTPException(status_code=404, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Failed to get history: {str(e)}")
+
+
+@router.get("/{paper_id}/suggestions/smart", response_model=SmartSuggestionResponse)
+async def get_smart_suggestions(
+    paper_id: UUID,
+    section_name: str = None,
+    db: AsyncSession = Depends(get_db),
+):
+    """Get RAG-powered smart suggestions using historical patterns.
+
+    Uses ChromaDB to find similar successful improvements
+    and generate contextual suggestions.
+
+    Args:
+        paper_id: Paper UUID
+        section_name: Optional specific section to improve
+        db: Database session
+
+    Returns:
+        Smart suggestions with RAG metadata
+
+    Raises:
+        HTTPException: 404 if paper not found
+    """
+    service = ImprovementService(db)
+
+    try:
+        suggestions = await service.generate_smart_suggestions(
+            paper_id=paper_id, section_name=section_name
+        )
+        return SmartSuggestionResponse(**suggestions)
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+    except Exception as e:
+        raise HTTPException(
+            status_code=400, detail=f"Failed to generate suggestions: {str(e)}"
+        )
+
+
+@router.post("/{paper_id}/iterate", response_model=IterativeImprovementResponse)
+async def start_iterative_improvement(
+    paper_id: UUID,
+    request: IterativeImprovementRequest,
+    db: AsyncSession = Depends(get_db),
+):
+    """Start iterative improvement session with target quality score.
+
+    Runs multiple rounds of analysis → improvement → application
+    until target score reached or max iterations hit.
+
+    Args:
+        paper_id: Paper UUID
+        request: Iteration configuration (target_score, max_iterations, focus_areas)
+        db: Database session
+
+    Returns:
+        Iteration results with final metrics
+
+    Raises:
+        HTTPException: 404 if paper not found, 400 on error
+    """
+    service = ImprovementService(db)
+
+    try:
+        result = await service.run_iterative_improvement(
+            paper_id=paper_id,
+            target_score=request.target_score,
+            max_iterations=request.max_iterations,
+            focus_areas=request.focus_areas,
+        )
+        return IterativeImprovementResponse(**result)
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+    except Exception as e:
+        raise HTTPException(
+            status_code=400, detail=f"Iterative improvement failed: {str(e)}"
+        )
