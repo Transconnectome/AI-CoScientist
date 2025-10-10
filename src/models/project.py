@@ -137,7 +137,7 @@ class Experiment(BaseModel):
 
 
 class Paper(BaseModel):
-    """Scientific paper model."""
+    """Scientific paper model with semantic versioning."""
 
     __tablename__ = "papers"
 
@@ -148,7 +148,15 @@ class Paper(BaseModel):
     title: Mapped[str] = mapped_column(String(500), nullable=False)
     abstract: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     content: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    
+    # Legacy version field (kept for backward compatibility)
     version: Mapped[int] = mapped_column(Integer, default=1, nullable=False)
+    
+    # Semantic versioning fields
+    version_major: Mapped[int] = mapped_column(Integer, default=1, nullable=False)
+    version_minor: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
+    version_patch: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
+    
     status: Mapped[str] = mapped_column(
         String(50),
         default=PaperStatus.DRAFT.value,
@@ -163,6 +171,32 @@ class Paper(BaseModel):
         cascade="all, delete-orphan",
         order_by="PaperSection.order"
     )
+    
+    # Phase 4: Version tracking relationships
+    versions: Mapped[List["PaperVersion"]] = relationship(
+        "PaperVersion",
+        back_populates="paper",
+        cascade="all, delete-orphan",
+        order_by="desc(PaperVersion.created_at)",
+        foreign_keys="[PaperVersion.paper_id]"
+    )
+    improvement_history: Mapped[List["ImprovementHistory"]] = relationship(
+        "ImprovementHistory",
+        back_populates="paper",
+        cascade="all, delete-orphan",
+        foreign_keys="[ImprovementHistory.paper_id]"
+    )
+    iteration_sessions: Mapped[List["IterationSession"]] = relationship(
+        "IterationSession",
+        back_populates="paper",
+        cascade="all, delete-orphan",
+        foreign_keys="[IterationSession.paper_id]"
+    )
+
+    @property
+    def current_version(self) -> str:
+        """Get current semantic version string (e.g., '1.2.3')."""
+        return f"{self.version_major}.{self.version_minor}.{self.version_patch}"
 
 
 class PaperSection(BaseModel):
