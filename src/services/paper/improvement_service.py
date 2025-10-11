@@ -23,6 +23,8 @@ from src.services.paper import PaperAnalyzer, PaperImprover
 from src.services.knowledge_base.learning_store import LearningStore
 from src.services.llm.service import LLMService
 from src.core.config import settings
+from src.services.paper.analytics_methods import AnalyticsMethods
+from src.schemas.improvement import AnalyticsDashboardResponse
 
 # Configure logger
 logger = logging.getLogger(__name__)
@@ -804,3 +806,118 @@ class ImprovementService:
         except Exception:
             # Fallback if analyzer fails
             return 5.0
+
+    # ========== Analytics Methods ==========
+
+    async def get_analytics(self, paper_id: UUID) -> Dict:
+        """Generate comprehensive analytics dashboard for a paper.
+
+        Aggregates quality progression, section improvements, type effectiveness,
+        iteration efficiency, and intelligent recommendations.
+
+        Args:
+            paper_id: Paper UUID
+
+        Returns:
+            Dict with complete analytics data matching AnalyticsDashboardResponse schema
+        """
+        logger.info(f"Generating analytics dashboard for paper {paper_id}")
+
+        try:
+            paper = await self._get_paper(paper_id)
+
+            # Query all versions for quality progression
+            versions_query = (
+                select(PaperVersion)
+                .where(PaperVersion.paper_id == paper_id)
+                .order_by(PaperVersion.created_at)
+            )
+            versions_result = await self.db.execute(versions_query)
+            versions = list(versions_result.scalars().all())
+
+            # Query all improvements for section and type analysis
+            improvements_query = select(ImprovementHistory).where(
+                ImprovementHistory.paper_id == paper_id,
+                ImprovementHistory.status == ImprovementStatus.APPLIED.value,
+            )
+            improvements_result = await self.db.execute(improvements_query)
+            improvements = list(improvements_result.scalars().all())
+
+            # Query all iteration sessions for efficiency metrics
+            sessions_query = select(IterationSession).where(
+                IterationSession.paper_id == paper_id
+            )
+            sessions_result = await self.db.execute(sessions_query)
+            sessions = list(sessions_result.scalars().all())
+
+            # Calculate quality progression
+            quality_progression = AnalyticsMethods._calculate_quality_progression(versions)
+
+            # Aggregate section improvements
+            section_improvements_dict = AnalyticsMethods._aggregate_section_improvements(improvements)
+            section_improvements = [
+                {
+                    "section_name": name,
+                    "improvement_count": stats["count"],
+                    "total_impact": stats["total_impact"],
+                    "average_impact": stats["total_impact"] / stats["count"] if stats["count"] > 0 else 0.0,
+                }
+                for name, stats in section_improvements_dict.items()
+            ]
+
+            # Calculate type effectiveness
+            type_effectiveness_dict = AnalyticsMethods._calculate_type_effectiveness(improvements)
+            improvement_type_effectiveness = [
+                {
+                    "improvement_type": imp_type,
+                    "count": stats["count"],
+                    "average_impact": stats["average_impact"],
+                    "success_rate": stats["success_rate"],
+                }
+                for imp_type, stats in type_effectiveness_dict.items()
+            ]
+
+            # Calculate iteration efficiency
+            iteration_efficiency = AnalyticsMethods._calculate_iteration_efficiency(sessions)
+
+            # Build version timeline
+            version_timeline = [
+                {
+                    "version": v.version_string,
+                    "quality_score": v.quality_score or 0.0,
+                    "timestamp": v.created_at.isoformat(),
+                    "change_type": v.version_type,
+                }
+                for v in versions
+            ]
+
+            # Collect learning stats
+            learning_stats = AnalyticsMethods._collect_learning_stats(self.learning_store)
+
+            # Prepare analytics data for recommendations
+            analytics_data = {
+                "improvement_type_effectiveness": type_effectiveness_dict,
+                "iteration_efficiency": iteration_efficiency,
+                "section_improvements": section_improvements_dict,
+            }
+
+            # Generate intelligent recommendations
+            recommendations = AnalyticsMethods._generate_recommendations(analytics_data)
+
+            logger.info(f"Analytics generated: {len(versions)} versions, {len(improvements)} improvements, {len(sessions)} sessions")
+
+            return {
+                "paper_id": str(paper_id),
+                "current_version": paper.current_version,
+                "quality_progression": quality_progression,
+                "section_improvements": section_improvements,
+                "improvement_type_effectiveness": improvement_type_effectiveness,
+                "iteration_efficiency": iteration_efficiency,
+                "version_timeline": version_timeline,
+                "learning_stats": learning_stats,
+                "recommendations": recommendations,
+            }
+
+        except Exception as e:
+            logger.error(f"Failed to generate analytics: {e}", exc_info=True)
+            raise ValueError(f"Failed to generate analytics: {str(e)}")

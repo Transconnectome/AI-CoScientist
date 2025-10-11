@@ -177,6 +177,21 @@ class Phase4Client:
         response.raise_for_status()
         return response.json()
 
+    async def get_analytics(self, paper_id: str) -> Dict:
+        """Get analytics dashboard for a paper.
+
+        Args:
+            paper_id: Paper UUID
+
+        Returns:
+            Analytics dashboard data
+        """
+        url = f"{self.base_url}/improvements/{paper_id}/analytics"
+
+        response = await self.client.get(url)
+        response.raise_for_status()
+        return response.json()
+
     async def close(self):
         """Close the HTTP client."""
         await self.client.aclose()
@@ -685,6 +700,9 @@ Be conversational, encouraging, and specific. Always ask clarifying questions wh
         elif msg_lower.startswith('/versions') or msg_lower.startswith('/history'):
             return 'phase4_versions', {}
 
+        elif msg_lower.startswith('/analytics') or msg_lower.startswith('/stats') or msg_lower.startswith('/dashboard'):
+            return 'phase4_analytics', {}
+
         else:
             return 'general', {}
 
@@ -963,6 +981,102 @@ Be conversational, encouraging, and specific. Always ask clarifying questions wh
             return f"❌ API Error: {e.response.status_code} - {e.response.text}"
         except Exception as e:
             return f"❌ Error getting version history: {str(e)}"
+
+    async def handle_phase4_analytics(self) -> str:
+        """Handle /analytics command - Show analytics dashboard."""
+        if not self.current_paper_id:
+            return "❌ No paper has been registered with Phase 4 yet."
+
+        try:
+            console.print(f"\n[cyan]📊 Generating analytics dashboard...[/cyan]\n")
+
+            result = await self.phase4_client.get_analytics(self.current_paper_id)
+
+            # Display quality progression
+            prog = result.get('quality_progression', {})
+            prog_table = Table(title="📈 Quality Progression", box=box.ROUNDED)
+            prog_table.add_column("Metric", style="cyan")
+            prog_table.add_column("Value", style="magenta")
+
+            prog_table.add_row("Starting Score", f"{prog.get('starting_score', 0):.2f}/10")
+            prog_table.add_row("Current Score", f"{prog.get('current_score', 0):.2f}/10")
+            prog_table.add_row("Total Improvement", f"+{prog.get('total_improvement', 0):.2f}")
+            prog_table.add_row("Improvement %", f"{prog.get('improvement_percentage', 0):.1f}%")
+            prog_table.add_row("Iterations", str(prog.get('iterations_count', 0)))
+
+            console.print(prog_table)
+
+            # Display section improvements
+            sections = result.get('section_improvements', [])
+            if sections:
+                console.print()
+                section_table = Table(title="📝 Section Improvements", box=box.ROUNDED)
+                section_table.add_column("Section", style="cyan")
+                section_table.add_column("Count", style="yellow")
+                section_table.add_column("Avg Impact", style="magenta")
+
+                for section in sections:
+                    section_table.add_row(
+                        section['section_name'],
+                        str(section['improvement_count']),
+                        f"+{section['average_impact']:.2f}"
+                    )
+
+                console.print(section_table)
+
+            # Display improvement type effectiveness
+            types = result.get('improvement_type_effectiveness', [])
+            if types:
+                console.print()
+                type_table = Table(title="🎯 Improvement Type Effectiveness", box=box.ROUNDED)
+                type_table.add_column("Type", style="cyan")
+                type_table.add_column("Count", style="yellow")
+                type_table.add_column("Avg Impact", style="magenta")
+                type_table.add_column("Success Rate", style="green")
+
+                for itype in types:
+                    type_table.add_row(
+                        itype['improvement_type'],
+                        str(itype['count']),
+                        f"+{itype['average_impact']:.2f}",
+                        f"{itype['success_rate']:.0f}%"
+                    )
+
+                console.print(type_table)
+
+            # Display iteration efficiency
+            efficiency = result.get('iteration_efficiency', {})
+            if efficiency:
+                console.print()
+                eff_panel = Panel(
+                    f"Total Iterations: {efficiency.get('total_iterations', 0)}\n"
+                    f"Avg Improvements/Iteration: {efficiency.get('average_improvements_per_iteration', 0):.2f}\n"
+                    f"Avg Score Gain: +{efficiency.get('average_score_gain', 0):.2f}\n"
+                    f"Diminishing Returns: {'⚠️ Detected' if efficiency.get('diminishing_returns_detected') else '✅ No'}",
+                    title="⚡ Iteration Efficiency",
+                    border_style="yellow"
+                )
+                console.print(eff_panel)
+
+            # Display recommendations
+            recommendations = result.get('recommendations', [])
+            if recommendations:
+                console.print()
+                rec_text = "\n".join([f"• {rec}" for rec in recommendations])
+                rec_panel = Panel(
+                    rec_text,
+                    title="💡 Recommendations",
+                    border_style="green"
+                )
+                console.print(rec_panel)
+
+            total_impr = sum(s['improvement_count'] for s in sections)
+            return f"Generated analytics dashboard with {prog.get('iterations_count', 0)} iterations, {total_impr} improvements, and {len(recommendations)} recommendations."
+
+        except httpx.HTTPStatusError as e:
+            return f"❌ API Error: {e.response.status_code} - {e.response.text}"
+        except Exception as e:
+            return f"❌ Error getting analytics: {str(e)}"
 
     def generate_response(self, user_message: str) -> str:
         """Generate chatbot response using Claude."""
@@ -1262,6 +1376,9 @@ Provide encouraging feedback and prioritize which issues to address first."""
         elif intent == 'phase4_versions':
             return asyncio.run(self.handle_phase4_versions())
 
+        elif intent == 'phase4_analytics':
+            return asyncio.run(self.handle_phase4_analytics())
+
         elif intent == 'phase4_apply':
             # TODO: Implement apply handler
             return "⚠️ /apply command coming soon! For now, use the backend API directly."
@@ -1329,7 +1446,8 @@ Provide encouraging feedback and prioritize which issues to address first."""
             "  • /iterate [score] [rounds] - Auto-improve until target score (e.g., /iterate 8.5)\n"
             "  • /compare [v1] [v2] - Compare versions (e.g., /compare 1.0.0 1.2.0)\n"
             "  • /rollback [version] - Rollback to previous version (e.g., /rollback 1.1.0)\n"
-            "  • /versions - Show complete version history\n\n"
+            "  • /versions - Show complete version history\n"
+            "  • /analytics - Show comprehensive analytics dashboard\n\n"
             "[yellow]Session Management:[/yellow]\n"
             "  • Save session: 'save conversation'\n"
             "  • Load session: 'load conversation'\n"

@@ -154,18 +154,80 @@ class ImprovementStatistics(BaseModel):
     )
 
 
+class QualityProgression(BaseModel):
+    """Quality progression metrics."""
+
+    starting_score: float = Field(..., description="Initial quality score")
+    current_score: float = Field(..., description="Current quality score")
+    total_improvement: float = Field(..., description="Total improvement")
+    improvement_percentage: float = Field(..., description="Improvement percentage")
+    iterations_count: int = Field(..., description="Number of iterations")
+
+
+class SectionImprovementStat(BaseModel):
+    """Section improvement statistics."""
+
+    section_name: str = Field(..., description="Section name")
+    improvement_count: int = Field(..., description="Number of improvements")
+    total_impact: float = Field(..., description="Total quality impact")
+    average_impact: float = Field(..., description="Average quality impact")
+
+
+class ImprovementTypeEffectiveness(BaseModel):
+    """Improvement type effectiveness metrics."""
+
+    improvement_type: str = Field(..., description="Type of improvement")
+    count: int = Field(..., description="Number of times used")
+    average_impact: float = Field(..., description="Average quality impact")
+    success_rate: float = Field(..., description="Success rate percentage")
+
+
+class IterationEfficiency(BaseModel):
+    """Iteration efficiency metrics."""
+
+    total_iterations: int = Field(..., description="Total iterations run")
+    average_improvements_per_iteration: float = Field(
+        ..., description="Average improvements per iteration"
+    )
+    average_score_gain: float = Field(..., description="Average score gain per iteration")
+    diminishing_returns_detected: bool = Field(
+        ..., description="Whether diminishing returns detected"
+    )
+
+
+class VersionTimelineEntry(BaseModel):
+    """Version timeline entry."""
+
+    version: str = Field(..., description="Version string")
+    quality_score: float = Field(..., description="Quality score")
+    timestamp: str = Field(..., description="Creation timestamp")
+    change_type: str = Field(..., description="Type of change")
+
+
+class LearningStats(BaseModel):
+    """Learning system statistics."""
+
+    improvement_patterns_count: int = Field(..., description="Stored improvement patterns")
+    successful_papers_count: int = Field(..., description="Exemplar papers count")
+    user_interactions_count: int = Field(..., description="User interactions logged")
+    rag_usage_count: int = Field(..., description="RAG queries made")
+    average_relevance_score: float = Field(..., description="Average RAG relevance")
+    exemplars_referenced_count: int = Field(..., description="Exemplars referenced")
+
+
 class AnalyticsDashboardResponse(BaseModel):
     """Response schema for analytics dashboard."""
 
     paper_id: str = Field(..., description="Paper UUID")
     current_version: str = Field(..., description="Current version")
-    current_quality_score: float = Field(..., description="Current quality score")
-    initial_quality_score: float = Field(..., description="Initial quality score")
-    total_score_improvement: float = Field(..., description="Total score improvement")
-    version_history: List[VersionInfo] = Field(..., description="Version progression")
-    improvement_stats: ImprovementStatistics = Field(
-        ..., description="Improvement statistics"
+    quality_progression: QualityProgression = Field(..., description="Quality progression")
+    section_improvements: List[SectionImprovementStat] = Field(
+        ..., description="Section improvement statistics"
     )
-    iteration_sessions: List[Dict[str, Any]] = Field(
-        default_factory=list, description="Iteration session summaries"
+    improvement_type_effectiveness: List[ImprovementTypeEffectiveness] = Field(
+        ..., description="Improvement type effectiveness"
     )
+    iteration_efficiency: IterationEfficiency = Field(..., description="Iteration efficiency")
+    version_timeline: List[VersionTimelineEntry] = Field(..., description="Version timeline")
+    learning_stats: LearningStats = Field(..., description="Learning system stats")
+    recommendations: List[str] = Field(..., description="Intelligent recommendations")

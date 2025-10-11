@@ -14,6 +14,7 @@ from src.schemas.improvement import (
     SmartSuggestionResponse,
     IterativeImprovementRequest,
     IterativeImprovementResponse,
+    AnalyticsDashboardResponse,
 )
 from src.services.paper.improvement_service import ImprovementService
 
@@ -249,3 +250,40 @@ async def start_iterative_improvement(
         raise HTTPException(
             status_code=400, detail=f"Iterative improvement failed: {str(e)}"
         )
+
+
+@router.get("/{paper_id}/analytics", response_model=AnalyticsDashboardResponse)
+async def get_analytics_dashboard(
+    paper_id: UUID,
+    db: AsyncSession = Depends(get_db),
+):
+    """Get comprehensive analytics dashboard for a paper.
+
+    Returns:
+    - Quality progression metrics
+    - Section improvement statistics
+    - Improvement type effectiveness
+    - Iteration efficiency metrics
+    - Version timeline
+    - Learning system statistics
+    - Intelligent recommendations
+
+    Args:
+        paper_id: Paper UUID
+        db: Database session
+
+    Returns:
+        Complete analytics dashboard data
+
+    Raises:
+        HTTPException: 404 if paper not found, 400 on error
+    """
+    service = ImprovementService(db)
+
+    try:
+        analytics = await service.get_analytics(paper_id)
+        return AnalyticsDashboardResponse(**analytics)
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Failed to generate analytics: {str(e)}")
