@@ -1,6 +1,9 @@
 from dataclasses import dataclass, field
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, TYPE_CHECKING
 from enum import Enum
+
+if TYPE_CHECKING:
+    from src.agents.base import ResearchAgent
 
 class ComplexityLevel(str, Enum):
     SIMPLE = "simple"
@@ -54,3 +57,13 @@ class TaskProfile:
                 quality_gates=[],
                 context_dependencies=[]
             )
+
+
+@dataclass
+class AgentConfig:
+    """Configuration for selected agent"""
+    agent_id: str
+    agent: 'ResearchAgent'  # Type hint
+    match_score: float
+    assigned_tasks: List[str] = field(default_factory=list)
+    priority: int = 1
