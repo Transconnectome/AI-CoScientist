@@ -1,4 +1,5 @@
 from src.router.types import ResearchTask, TaskProfile, ComplexityLevel
+from src.services.llm.types import LLMRequest, LLMConfig, TaskType as LLMTaskType, ModelProvider
 
 class TaskAnalyzer:
     """Analyzes research tasks to extract structured information"""
@@ -40,7 +41,18 @@ class TaskAnalyzer:
         """
 
         if self.llm:
-            response = await self.llm.complete(prompt, temperature=0.3)
+            # Create proper LLMRequest
+            llm_request = LLMRequest(
+                prompt=prompt,
+                task_type=LLMTaskType.HYPOTHESIS_GENERATION,  # Use closest match
+                config=LLMConfig(
+                    provider=ModelProvider.OPENAI,
+                    model="gpt-5",
+                    temperature=0.3,
+                    max_tokens=1000
+                )
+            )
+            response = await self.llm.complete(llm_request)
             return TaskProfile.from_llm_response(response.content)
         else:
             # Mock response for testing without LLM
