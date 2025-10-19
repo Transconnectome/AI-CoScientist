@@ -1,8 +1,9 @@
-"""Hypothesis generation service using LLM."""
+"""Hypothesis generation service using LLM with GPT Researcher integration."""
 
 from typing import Any, Dict, List, Optional
 from uuid import UUID
 import json
+import logging
 
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -11,21 +12,44 @@ from src.models.project import Hypothesis, Project
 from src.services.llm import LLMService
 from src.services.llm.types import LLMRequest, TaskType
 from src.services.knowledge_base.search import KnowledgeBaseSearch
+from src.services.external.gpt_researcher_service import GPTResearcherService
+
+
+logger = logging.getLogger(__name__)
 
 
 class HypothesisGenerator:
-    """Generate scientific hypotheses using LLM."""
+    """Generate scientific hypotheses using LLM with systematic literature review."""
 
     def __init__(
         self,
         llm_service: LLMService,
         knowledge_base: KnowledgeBaseSearch,
-        db: AsyncSession
+        db: AsyncSession,
+        gpt_researcher: Optional[GPTResearcherService] = None
     ):
-        """Initialize hypothesis generator."""
+        """
+        Initialize hypothesis generator.
+
+        Args:
+            llm_service: LLM service for generation
+            knowledge_base: Local knowledge base search
+            db: Database session
+            gpt_researcher: GPT Researcher service (optional, created if not provided)
+        """
         self.llm_service = llm_service
         self.knowledge_base = knowledge_base
         self.db = db
+
+        # Initialize GPT Researcher
+        try:
+            self.gpt_researcher = gpt_researcher or GPTResearcherService()
+            self.use_gpt_researcher = True
+            logger.info("GPT Researcher enabled for systematic literature review")
+        except Exception as e:
+            logger.warning(f"GPT Researcher not available: {e}")
+            self.gpt_researcher = None
+            self.use_gpt_researcher = False
 
     async def generate_hypotheses(
         self,
@@ -33,9 +57,23 @@ class HypothesisGenerator:
         research_question: str,
         num_hypotheses: int = 5,
         creativity_level: float = 0.7,
-        literature_context: Optional[List[str]] = None
+        literature_context: Optional[List[str]] = None,
+        use_systematic_review: bool = True
     ) -> List[Hypothesis]:
-        """Generate hypotheses for a research question."""
+        """
+        Generate hypotheses for a research question with systematic literature review.
+
+        Args:
+            project_id: Project identifier
+            research_question: Research question
+            num_hypotheses: Number of hypotheses to generate
+            creativity_level: Creativity level (0-1)
+            literature_context: Optional literature context
+            use_systematic_review: Use GPT Researcher for systematic review
+
+        Returns:
+            List of generated hypotheses
+        """
         # Get project
         project_query = select(Project).where(Project.id == project_id)
         project_result = await self.db.execute(project_query)
@@ -49,20 +87,46 @@ class HypothesisGenerator:
         existing_result = await self.db.execute(existing_query)
         existing_hypotheses = existing_result.scalars().all()
 
-        # Search for relevant literature
-        literature_summary = await self._get_literature_summary(
-            research_question,
-            project.domain,
-            literature_context
-        )
+        # Perform systematic literature review with GPT Researcher
+        literature_summary = ""
+        gpt_research_data = None
 
-        # Prepare context for prompt
+        if use_systematic_review and self.use_gpt_researcher:
+            logger.info("Performing systematic literature review with GPT Researcher")
+            try:
+                gpt_research_data = await self.gpt_researcher.systematic_literature_review(
+                    research_question=research_question,
+                    domain=project.domain,
+                    depth="medium"
+                )
+
+                if gpt_research_data["success"]:
+                    literature_summary = gpt_research_data["report"]
+                    logger.info(f"GPT Researcher found {gpt_research_data['num_sources']} sources")
+                else:
+                    logger.warning("GPT Researcher failed, falling back to basic search")
+
+            except Exception as e:
+                logger.error(f"GPT Researcher error: {e}", exc_info=True)
+
+        # Fallback to basic literature search if GPT Researcher not available
+        if not literature_summary:
+            logger.info("Using basic knowledge base search")
+            literature_summary = await self._get_literature_summary(
+                research_question,
+                project.domain,
+                literature_context
+            )
+
+        # Prepare enhanced context for prompt
         context = {
             "domain": project.domain,
             "research_question": research_question,
             "literature_summary": literature_summary,
             "num_hypotheses": num_hypotheses,
-            "existing_hypotheses": [h.content for h in existing_hypotheses]
+            "existing_hypotheses": [h.content for h in existing_hypotheses],
+            "systematic_review_used": gpt_research_data is not None,
+            "num_sources_reviewed": gpt_research_data.get("num_sources", 0) if gpt_research_data else 0
         }
 
         # Generate hypotheses using LLM
@@ -72,7 +136,8 @@ class HypothesisGenerator:
             task_type=TaskType.HYPOTHESIS_GENERATION,
             system_message=(
                 "You are a scientific research assistant specialized in "
-                "generating novel, testable hypotheses based on literature analysis."
+                "generating novel, testable hypotheses based on comprehensive literature analysis. "
+                f"{'A systematic literature review with ' + str(context['num_sources_reviewed']) + ' sources has been conducted.' if context['systematic_review_used'] else 'Basic literature search performed.'}"
             )
         )
 
@@ -98,6 +163,7 @@ class HypothesisGenerator:
         for hyp in saved_hypotheses:
             await self.db.refresh(hyp)
 
+        logger.info(f"Generated {len(saved_hypotheses)} hypotheses with {'systematic' if gpt_research_data else 'basic'} literature review")
         return saved_hypotheses
 
     async def validate_hypothesis(
