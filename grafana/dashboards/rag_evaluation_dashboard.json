@@ -1,0 +1,210 @@
+{
+  "dashboard": {
+    "id": null,
+    "uid": "rag-eval-dashboard",
+    "title": "RAG Evaluation Metrics",
+    "tags": ["rag", "evaluation", "ai-coscientist"],
+    "timezone": "browser",
+    "schemaVersion": 38,
+    "version": 1,
+    "refresh": "30s",
+    "panels": [
+      {
+        "id": 1,
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0},
+        "type": "timeseries",
+        "title": "Faithfulness Score",
+        "targets": [
+          {
+            "expr": "rag_faithfulness{env=\"production\"}",
+            "legendFormat": "Faithfulness",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "smooth",
+              "fillOpacity": 10
+            },
+            "unit": "percentunit",
+            "min": 0,
+            "max": 1
+          }
+        }
+      },
+      {
+        "id": 2,
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0},
+        "type": "timeseries",
+        "title": "Answer Relevancy Score",
+        "targets": [
+          {
+            "expr": "rag_answer_relevancy{env=\"production\"}",
+            "legendFormat": "Answer Relevancy",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "smooth",
+              "fillOpacity": 10
+            },
+            "unit": "percentunit",
+            "min": 0,
+            "max": 1
+          }
+        }
+      },
+      {
+        "id": 3,
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 8},
+        "type": "timeseries",
+        "title": "Context Precision Score",
+        "targets": [
+          {
+            "expr": "rag_context_precision{env=\"production\"}",
+            "legendFormat": "Context Precision",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "smooth",
+              "fillOpacity": 10
+            },
+            "unit": "percentunit",
+            "min": 0,
+            "max": 1
+          }
+        }
+      },
+      {
+        "id": 4,
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 8},
+        "type": "timeseries",
+        "title": "Context Recall Score",
+        "targets": [
+          {
+            "expr": "rag_context_recall{env=\"production\"}",
+            "legendFormat": "Context Recall",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "smooth",
+              "fillOpacity": 10
+            },
+            "unit": "percentunit",
+            "min": 0,
+            "max": 1
+          }
+        }
+      },
+      {
+        "id": 5,
+        "gridPos": {"h": 8, "w": 24, "x": 0, "y": 16},
+        "type": "graph",
+        "title": "All RAG Metrics Combined",
+        "targets": [
+          {
+            "expr": "rag_faithfulness{env=\"production\"}",
+            "legendFormat": "Faithfulness",
+            "refId": "A"
+          },
+          {
+            "expr": "rag_answer_relevancy{env=\"production\"}",
+            "legendFormat": "Answer Relevancy",
+            "refId": "B"
+          },
+          {
+            "expr": "rag_context_precision{env=\"production\"}",
+            "legendFormat": "Context Precision",
+            "refId": "C"
+          },
+          {
+            "expr": "rag_context_recall{env=\"production\"}",
+            "legendFormat": "Context Recall",
+            "refId": "D"
+          }
+        ],
+        "yaxes": [
+          {"format": "percentunit", "min": 0, "max": 1},
+          {"format": "short"}
+        ]
+      },
+      {
+        "id": 6,
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 24},
+        "type": "stat",
+        "title": "Total Evaluations",
+        "targets": [
+          {
+            "expr": "rag_evaluations_total{env=\"production\"}",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "color": {"mode": "thresholds"},
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"value": 0, "color": "green"}
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 7,
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 24},
+        "type": "heatmap",
+        "title": "Faithfulness Score Distribution",
+        "targets": [
+          {
+            "expr": "rate(rag_faithfulness_histogram_bucket{env=\"production\"}[5m])",
+            "legendFormat": "{{le}}",
+            "refId": "A"
+          }
+        ]
+      }
+    ],
+    "templating": {
+      "list": [
+        {
+          "name": "env",
+          "type": "query",
+          "query": "label_values(rag_faithfulness, env)",
+          "current": {"value": "production", "text": "production"},
+          "multi": false
+        },
+        {
+          "name": "model",
+          "type": "query",
+          "query": "label_values(rag_faithfulness{env=\"$env\"}, model)",
+          "current": {"value": "default", "text": "default"},
+          "multi": false
+        }
+      ]
+    },
+    "annotations": {
+      "list": [
+        {
+          "name": "Deployments",
+          "enable": true,
+          "iconColor": "green"
+        }
+      ]
+    }
+  },
+  "overwrite": true
+}

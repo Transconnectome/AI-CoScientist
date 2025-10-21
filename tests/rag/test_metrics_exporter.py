@@ -8,12 +8,25 @@ Following TDD methodology (RED → GREEN → REFACTOR):
 """
 
 import pytest
+from prometheus_client import REGISTRY
 
 from src.services.rag.metrics_exporter import PrometheusMetricsExporter
 
 
 class TestPrometheusMetricsExporter:
     """Prometheus 메트릭 익스포터 테스트"""
+
+    @pytest.fixture(autouse=True)
+    def cleanup_registry(self):
+        """각 테스트 후 레지스트리 정리"""
+        yield
+        # Clear all collectors after each test
+        collectors = list(REGISTRY._collector_to_names.keys())
+        for collector in collectors:
+            try:
+                REGISTRY.unregister(collector)
+            except Exception:
+                pass
 
     @pytest.fixture
     def exporter(self):
@@ -134,7 +147,7 @@ class TestPrometheusMetricsExporter:
 
     def test_counter_metrics(self, exporter):
         """카운터 메트릭 검증"""
-        for i in range(3):
+        for _ in range(3):
             results = {
                 'metrics': {'mean': {'faithfulness': 0.85}},
                 'total_cases': 10
