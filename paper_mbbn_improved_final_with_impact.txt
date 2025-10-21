@@ -1,0 +1,36 @@
+# Abstract
+
+Understanding how the brain's complex nonlinear dynamics give rise to cognitive function remains a central challenge in neuroscience, yet conventional neuroimaging analytics assume linearity and stationarity, failing to capture the frequency-specific neural computations underlying scale-free and multifractal brain dynamics. While recent deep learning approaches have improved prediction of clinical outcomes from fMRI, no existing framework explicitly models frequency-dependent spatiotemporal interactions despite extensive evidence that distinct frequency bands encode different neural computations and that psychiatric disorders exhibit frequency-specific disruptions. We introduce Multi-Band Brain Net (MBBN), a transformer-based framework that integrates biologically-grounded frequency decomposition with multi-band self-attention mechanisms to discover frequency-dependent network interactions from fMRI data. Trained on 49,673 individuals across three large-scale cohorts (UK Biobank, ABCD, ABIDE), MBBN achieves state-of-the-art performance with up to 41.36% higher AUROC in psychiatric classification (depression, ADHD, ASD) and superior prediction of cognitive intelligence scores, while revealing disorder-specific signatures including attenuated high-frequency fronto-sensorimotor connectivity in ADHD and focal high-frequency orbitofrontal-somatosensory disruption coupled with enhanced ultra-low-frequency temporo-parietal-prefrontal coupling in ASD. By integrating biologically-informed frequency decomposition with transformer-based learning, MBBN delivers clinically superior biomarkers with enhanced mechanistic interpretability, paving the way for frequency-resolved psychiatric diagnostics and deeper insights into the neural basis of cognitive development.
+
+---
+
+## Alternative Final Sentences (for consideration)
+
+**Option 1 (Most Clear):**
+By integrating frequency-decomposed brain signal analysis with deep learning, MBBN delivers more accurate and interpretable biomarkers for psychiatric disorders, opening avenues for developing precision diagnostic tools and advancing our understanding of frequency-specific neural mechanisms in developmental neuroscience.
+
+**Option 2 (Recommended - Most Scientific):**
+By integrating biologically-informed frequency decomposition with transformer-based learning, MBBN delivers clinically superior biomarkers with enhanced mechanistic interpretability, paving the way for frequency-resolved psychiatric diagnostics and deeper insights into the neural basis of cognitive development.
+
+**Option 3 (Most Concise):**
+By combining multi-band frequency modeling with deep neural networks, MBBN achieves more accurate psychiatric classification and reveals interpretable frequency-specific biomarkers, advancing both clinical precision medicine and fundamental understanding of developmental brain dynamics.
+
+---
+
+## Key Improvements from Original User Request
+
+**Original phrase:** "scale-aware neural dynamics"
+**Replaced with:** "biologically-informed frequency decomposition"
+
+**Why this is better:**
+1. ✅ More concrete and specific
+2. ✅ Directly describes the method (frequency decomposition)
+3. ✅ Emphasizes biological foundation (key paper theme)
+4. ✅ Scientifically accurate and clear
+5. ✅ Matches terminology used throughout the paper
+
+**Format maintained:**
+✓ "By [METHOD], MBBN delivers [BENEFITS], [BROADER IMPACT]"
+✓ Emphasizes psychiatric biomarkers
+✓ Connects to developmental neuroscience
+✓ Powerful and impactful closing

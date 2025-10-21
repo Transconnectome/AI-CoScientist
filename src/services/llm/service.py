@@ -13,7 +13,7 @@ from src.services.llm.types import (
     ModelProvider,
     TaskType
 )
-from src.services.llm.adapters import OpenAIAdapter, AnthropicAdapter
+from src.services.llm.adapters import OpenAIAdapter, AnthropicAdapter, GeminiAdapter
 from src.services.llm.prompt_manager import PromptManager
 from src.services.llm.cache import LLMCache
 from src.services.llm.usage_tracker import UsageTracker
@@ -31,7 +31,8 @@ class LLMService:
         # Initialize adapters
         self.adapters: Dict[ModelProvider, LLMServiceInterface] = {
             ModelProvider.OPENAI: OpenAIAdapter(settings.openai_api_key),
-            ModelProvider.ANTHROPIC: AnthropicAdapter(settings.anthropic_api_key)
+            ModelProvider.ANTHROPIC: AnthropicAdapter(settings.anthropic_api_key),
+            ModelProvider.GOOGLE: GeminiAdapter(settings.google_api_key)
         }
 
         # Initialize supporting services
@@ -208,4 +209,6 @@ class LLMService:
             return settings.openai_model
         elif provider == ModelProvider.ANTHROPIC:
             return settings.anthropic_model
-        return "gpt-4"
+        elif provider == ModelProvider.GOOGLE:
+            return settings.gemini_model
+        return "gpt-5"  # Default fallback to GPT-5

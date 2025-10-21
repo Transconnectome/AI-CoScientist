@@ -1,0 +1,78 @@
+# Response to Reviewer 1
+
+Dear Reviewer 1,
+
+Thank you for your thoughtful and constructive feedback. Your comments have substantially strengthened our manuscript. Below we address each of your concerns with detailed responses and corresponding revisions.
+
+---
+
+## Major Concerns
+
+### 1. Regression Performance
+
+**Reviewer's Comment:** While MBBN achieves notable gains in classification tasks (e.g., sex, ADHD, ASD), its performance in regression (e.g., fluid intelligence, depression) is marginal or even inferior to some baselines. Please (i) discuss why MBBN underperforms in regression contexts, (ii) clarify whether architectural components favor categorical rather than continuous targets, and (iii) consider architectural modifications better suited for continuous variables.
+
+**Our Response:** 
+
+We agree that the regression results warranted deeper analysis. We have now added a comprehensive two-part explanation in the Discussion:
+
+**Primary factor—Label quality:** The regression targets derive from single-modality measures (e.g., PHQ-9 questionnaire, NIH Toolbox scores) that carry inherently higher noise than the multifaceted diagnostic labels used for classification (e.g., biological sex, clinical diagnoses established through multi-informant assessment).
+
+**Compounding factor—Architectural bias:** Transformers excel at learning sharp decision boundaries but are less suited to approximating the smooth functions required for noisy continuous variables, as documented in the literature.
+
+We also propose concrete architectural enhancements—Smoothness Regularization and Hybrid Architectures—to address continuous targets in future work.
+
+**Revised Manuscript:**
+
+- **[Discussion, Paragraph 12]:** "Second, a limitation pertains to the model's modest performance on regression tasks. We attribute this primarily to the nature of the regression targets (e.g., scores from single questionnaires or behavioral tests), which have an inherently lower signal-to-noise ratio compared to the robust diagnostic labels used for classification. This data-level challenge is likely compounded by the intrinsic bias of transformers to learn non-smooth functions, which may be less optimal for capturing the subtle variations in continuous phenotypes."
+
+- **[Discussion, Paragraph 13]:** "In addition, future research could explore architectural enhancements—such as Smoothness Regularization or a Hybrid Architecture—to further improve regression performance, complementing the model's strong classification capability."
+
+---
+
+### 2. Validation of Frequency-Dividing
+
+**Reviewer's Comment:** The manuscript relies heavily on Lorentzian and spline-based knee detection to define frequency bands (f₁, f₂), yet: (i) these thresholds are data-driven but not cross-validated across subjects or datasets, (ii) there is no evidence of their physiological stability across time or populations, and (iii) the bands do not align with canonical neurophysiological frequencies. Authors should validate whether these frequency divisions are consistent, interpretable, and generalizable, or consider adaptive band definitions (e.g., wavelet-based, learned filters).
+
+**Our Response:**
+
+We have substantially expanded the Methods and Supplementary Materials to address each of these concerns with empirical validation.
+
+#### (A) Cross-subject and cross-dataset stability
+
+We performed three complementary robustness checks demonstrating that the learned knee frequencies are stable across population subgroups, measurement occasions, and parameter perturbations:
+
+1. **Bootstrap resampling** across demographic subgroups showed no significant variation in f₁ or f₂ (p = 0.6541 and p = 0.8956, respectively).
+2. **Test–retest analysis** using HCP paired sessions (run-1 vs. run-2) confirmed temporal stability (p = 1.000 for f₁; p = 0.9428 for f₂).
+3. **Boundary perturbation** analysis (±5–10%) revealed a broad performance plateau centered at the learned boundaries (peak AUROC = 0.916), indicating insensitivity to small shifts.
+
+**Revised Manuscript:**
+
+- **[Methods 3.4.4, Paragraph 2]:** "In addition to the TR/Nyquist effects summarized in Table 4, we verified that the learned knees are robust along three axes: population, measurement time, and boundary shifts. First, bootstrap resampling across subgroups revealed no significant differences in f₁ or f₂ (p = 0.6541 and p = 0.8956). Second, an HCP test–retest analysis (run-1 vs. run-2) showed no significant shifts (p = 1.000 for f₁; p = 0.9428 for f₂). Third, perturbing each cutoff by ±5–10% yielded a broad performance plateau centered at the learned boundaries (peak AUROC = 0.916), indicating insensitivity to small boundary changes. Full procedures and results are provided in Supplementary Materials F.4, F.5."
+
+#### (B) Cross-dataset consistency explained by acquisition physics
+
+While absolute knee frequencies differ across datasets (UKB, ABCD, ABIDE), we demonstrate that these differences are systematic and attributable to acquisition parameters—specifically, the repetition time (TR) and corresponding Nyquist limit.
+
+**Key finding:** When normalized by the Nyquist frequency, the knee positions occupy consistent relative portions of the spectrum: f₁ ≈ 5–10% and f₂ ≈ 9–18% of Nyquist across all datasets. This indicates that our data-driven procedure adapts to each dataset's spectral support while preserving a coherent band structure aligned with fMRI acquisition physics.
+
+**Revised Manuscript:**
+
+- **[Methods 3.4.4, Paragraph 1]:** "Table 4 reports the dataset-wise knee frequencies (f₁, f₂; mean ± s.d.), together with the acquisition repetition time (TR) and the corresponding Nyquist limit (Nyquist = 1/(2·TR)). As expected, absolute knee values differ across datasets because the analyzable frequency range is physically bounded by TR: ABCD (TR = 0.735 s; Nyquist = 0.6803 Hz) and UKB (TR = 0.8 s; Nyquist = 0.625 Hz) exhibit higher f₁/f₂ than ABIDE, which spans longer TRs (1.5–3.0 s; Nyquist = 0.1667–0.3333 Hz). Importantly, when expressed relative to the Nyquist limit, the knees occupy comparable portions of the spectrum across datasets—f₁ ≈ 5–10% and f₂ ≈ 9–18% of Nyquist. This pattern indicates that our data-driven procedure adapts to each dataset's spectral support while preserving a consistent relative band structure, in line with the TR/Nyquist constraints of fMRI acquisitions."
+
+#### (C) Sensitivity analysis confirms performance plateau
+
+To verify that model performance does not depend critically on exact cutoff values, we systematically perturbed f₁ and f₂ by ±5% and ±10% and re-evaluated performance on ABCD sex classification.
+
+**Result:** Performance remained stable across all perturbations (AUROC range: 0.912–0.916), with the empirically derived boundaries at the center of a broad plateau. This demonstrates that the frequency divisions are robust to minor variations.
+
+**Revised Manuscript:**
+
+- **[Supplementary Materials F.4]:** "To assess the robustness of our model to minor variations in the data-driven frequency cutoffs, we conducted a sensitivity analysis. We systematically perturbed the empirically derived knee frequencies (f₁ and f₂) by ±5% and ±10% and re-evaluated the model's performance on the ABCD sex classification task. The four perturbation conditions were: [conditions detailed]. Results showed stable performance across all conditions (AUROC = 0.912–0.916), confirming that our frequency divisions are robust to small boundary shifts."
+
+---
+
+We believe these revisions fully address your concerns regarding the validation, interpretability, and generalizability of our frequency-division approach. Thank you again for helping us strengthen this aspect of the manuscript.
+
+Sincerely,  
+[Authors]

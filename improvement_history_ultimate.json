@@ -1,0 +1,27 @@
+[
+  {
+    "iteration": 0,
+    "standard_score": 6.9,
+    "weighted_score": 6.75,
+    "word_count": 209,
+    "scores_by_dimension": {
+      "clarity": 6.5,
+      "completeness": 8.5,
+      "conciseness": 5.0,
+      "impact": 7.5
+    }
+  },
+  {
+    "iteration": 1,
+    "standard_score": 7.85,
+    "weighted_score": 7.775,
+    "word_count": 154,
+    "scores_by_dimension": {
+      "clarity": 7.5,
+      "completeness": 8.5,
+      "conciseness": 7.0,
+      "impact": 8.25
+    },
+    "strategy": "Balanced-Elite"
+  }
+]

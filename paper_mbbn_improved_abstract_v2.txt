@@ -1,0 +1,23 @@
+# Abstract (Version 2 - Enhanced Clarity)
+
+Understanding how the brain's complex nonlinear dynamics give rise to cognitive function remains a central challenge in neuroscience, yet conventional neuroimaging analytics assume linearity and stationarity, failing to capture the frequency-specific neural computations underlying scale-free and multifractal brain dynamics. While recent deep learning approaches have improved prediction of clinical outcomes from fMRI, no existing framework explicitly models frequency-dependent spatiotemporal interactions despite extensive evidence that distinct frequency bands encode different neural computations and that psychiatric disorders exhibit frequency-specific disruptions. We introduce Multi-Band Brain Net (MBBN), a transformer-based framework that decomposes brain signals into biologically meaningful frequency bands and analyzes their temporal patterns independently through specialized attention mechanisms to discover frequency-dependent network interactions from fMRI data. Trained on 49,673 individuals across three large-scale cohorts (UK Biobank, ABCD, ABIDE), MBBN achieves state-of-the-art performance with up to 41.36% higher AUROC in psychiatric classification (depression, ADHD, ASD) and superior prediction of cognitive intelligence scores, while revealing disorder-specific signatures including attenuated high-frequency fronto-sensorimotor connectivity in ADHD and focal high-frequency orbitofrontal-somatosensory disruption coupled with enhanced ultra-low-frequency temporo-parietal-prefrontal coupling in ASD.
+
+---
+
+## Key Changes from Previous Version:
+
+**Original phrase (v1)**: "integrates biologically-grounded frequency decomposition with multi-band self-attention mechanisms"
+
+**New phrase (v2)**: "decomposes brain signals into biologically meaningful frequency bands and analyzes their temporal patterns independently through specialized attention mechanisms"
+
+**Improvements**:
+1. **More concrete**: "decomposes brain signals" vs "integrates...decomposition" (active verb, clearer action)
+2. **Explicit process**: Shows the two-step process (decompose → analyze)
+3. **Clarifies "temporal patterns"**: Makes it clear we're analyzing time-varying activity
+4. **"Independently"**: Emphasizes that each frequency band gets separate analysis
+5. **"Specialized attention mechanisms"**: More accessible than "multi-band self-attention mechanisms"
+
+**What this clarifies about the original "scale-aware neural dynamics"**:
+- "Scale-aware" → "frequency bands" (explicit about what scales mean)
+- "Neural dynamics" → "temporal patterns" (specific about what dynamics are being captured)
+- The integration → decomposition + independent analysis (concrete methodological steps)

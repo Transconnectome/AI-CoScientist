@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "ai-coscientist": {
+      "command": "python",
+      "args": ["-m", "src.mcp.server"],
+      "cwd": "/Users/jiookcha/Documents/git/AI-CoScientist",
+      "env": {
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}"
+      }
+    }
+  }
+}

@@ -163,7 +163,7 @@ Return JSON:
 
         try:
             response = await self._gpt4_client.chat.completions.create(
-                model="gpt-4-turbo-preview",
+                model="gpt-5",  # GPT-5 (Aug 2025)
                 messages=[
                     {"role": "system", "content": "You are an expert peer reviewer."},
                     {"role": "user", "content": prompt}

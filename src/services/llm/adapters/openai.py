@@ -24,11 +24,16 @@ class OpenAIAdapter(LLMServiceInterface):
         self.client = AsyncOpenAI(api_key=api_key)
         self.encoder = tiktoken.encoding_for_model("gpt-4")
 
-        # Model pricing (per 1K tokens)
+        # Model pricing (per 1K tokens) - Updated 2025
         self.pricing = {
-            "gpt-4": {"input": 0.03, "output": 0.06},
+            "gpt-5": {"input": 0.003, "output": 0.015},  # GPT-5 (Aug 2025)
+            "gpt-5-mini": {"input": 0.0005, "output": 0.002},  # GPT-5 Mini
+            "gpt-5-nano": {"input": 0.0001, "output": 0.0005},  # GPT-5 Nano
+            "gpt-4o": {"input": 0.005, "output": 0.015},  # GPT-4 Omni
+            "gpt-4o-mini": {"input": 0.00015, "output": 0.0006},
             "gpt-4-turbo": {"input": 0.01, "output": 0.03},
             "gpt-4-turbo-preview": {"input": 0.01, "output": 0.03},
+            "gpt-4": {"input": 0.03, "output": 0.06},
             "gpt-3.5-turbo": {"input": 0.0005, "output": 0.0015}
         }
 
@@ -151,44 +156,44 @@ class OpenAIAdapter(LLMServiceInterface):
         configs = {
             TaskType.HYPOTHESIS_GENERATION: LLMConfig(
                 provider=ModelProvider.OPENAI,
-                model="gpt-4-turbo-preview",
+                model="gpt-5",  # GPT-5 for creative tasks
                 temperature=0.8,
                 max_tokens=1000
             ),
             TaskType.LITERATURE_ANALYSIS: LLMConfig(
                 provider=ModelProvider.OPENAI,
-                model="gpt-4",
+                model="gpt-5",  # GPT-5 for analytical tasks
                 temperature=0.3,
                 max_tokens=2000
             ),
             TaskType.EXPERIMENT_DESIGN: LLMConfig(
                 provider=ModelProvider.OPENAI,
-                model="gpt-4",
+                model="gpt-5",  # GPT-5 for structured design
                 temperature=0.5,
                 max_tokens=1500
             ),
             TaskType.DATA_ANALYSIS: LLMConfig(
                 provider=ModelProvider.OPENAI,
-                model="gpt-4",
+                model="gpt-5",  # GPT-5 for precision
                 temperature=0.2,
                 max_tokens=2000
             ),
             TaskType.PAPER_WRITING: LLMConfig(
                 provider=ModelProvider.OPENAI,
-                model="gpt-4-turbo-preview",
+                model="gpt-5",  # GPT-5 for long-form writing
                 temperature=0.6,
                 max_tokens=3000
             ),
             TaskType.PEER_REVIEW: LLMConfig(
                 provider=ModelProvider.OPENAI,
-                model="gpt-4",
+                model="gpt-5",  # GPT-5 for critical review
                 temperature=0.4,
                 max_tokens=2000
             )
         }
         return configs.get(task_type, LLMConfig(
             provider=ModelProvider.OPENAI,
-            model="gpt-4",
+            model="gpt-5",  # Default to GPT-5
             temperature=0.7,
             max_tokens=2000
         ))

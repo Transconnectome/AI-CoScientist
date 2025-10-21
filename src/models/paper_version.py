@@ -4,7 +4,8 @@ from enum import Enum
 from typing import Optional, List
 from uuid import UUID
 
-from sqlalchemy import String, Text, Integer, Float, ForeignKey, JSON, Boolean
+from datetime import datetime
+from sqlalchemy import String, Text, Integer, Float, ForeignKey, JSON, Boolean, DateTime, ARRAY
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from src.models.base import BaseModel
@@ -180,3 +181,65 @@ class IterationSession(BaseModel):
 
     # Relationships
     paper: Mapped["Paper"] = relationship("Paper", back_populates="iteration_sessions")
+
+
+class LiteratureSource(BaseModel):
+    """Literature monitoring source configuration.
+
+    Tracks ArXiv categories or PubMed queries for automated paper collection.
+    """
+
+    __tablename__ = "literature_sources"
+
+    # Source configuration
+    source_type: Mapped[str] = mapped_column(
+        String(50), nullable=False
+    )  # 'arxiv' or 'pubmed'
+    category: Mapped[Optional[str]] = mapped_column(
+        String(100), nullable=True
+    )  # ArXiv categories (e.g., 'cs.AI,cs.LG')
+    query: Mapped[Optional[str]] = mapped_column(
+        Text, nullable=True
+    )  # PubMed query string
+
+    # Sync management
+    last_sync_time: Mapped[Optional[datetime]] = mapped_column(
+        DateTime, nullable=True
+    )
+    status: Mapped[str] = mapped_column(
+        String(20), default="active", nullable=False
+    )  # active, paused, disabled
+    sync_frequency: Mapped[str] = mapped_column(
+        String(20), default="daily", nullable=False
+    )  # daily, weekly, monthly
+
+
+class MonitoringAlert(BaseModel):
+    """Monitoring alert configuration for keyword matching.
+
+    Defines topics and keywords for filtering collected papers.
+    """
+
+    __tablename__ = "monitoring_alerts"
+
+    # Alert configuration
+    user_id: Mapped[Optional[UUID]] = mapped_column(
+        nullable=True
+    )
+    topic: Mapped[str] = mapped_column(
+        String(200), nullable=False
+    )
+    keywords: Mapped[Optional[list]] = mapped_column(
+        ARRAY(Text), nullable=True
+    )
+
+    # Alert management
+    frequency: Mapped[str] = mapped_column(
+        String(20), default="daily", nullable=False
+    )  # daily, weekly, monthly
+    last_alert_sent: Mapped[Optional[datetime]] = mapped_column(
+        DateTime, nullable=True
+    )
+    active: Mapped[bool] = mapped_column(
+        Boolean, default=True, nullable=False
+    )

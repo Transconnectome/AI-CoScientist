@@ -52,14 +52,20 @@ class Settings(BaseSettings):
 
     # OpenAI
     openai_api_key: str
-    openai_model: str = "gpt-4-turbo-preview"
+    openai_model: str = "gpt-5"  # GPT-5 (Released Aug 2025)
     openai_max_tokens: int = 4000
     openai_temperature: float = 0.7
 
     # Anthropic
     anthropic_api_key: str
-    anthropic_model: str = "claude-3-sonnet-20240229"
-    anthropic_max_tokens: int = 4000
+    anthropic_model: str = "claude-sonnet-4-5"  # Claude Sonnet 4.5 (Released Sep 2025)
+    anthropic_max_tokens: int = 8000  # Claude 4.5 supports up to 8K output
+
+    # Google Gemini
+    google_api_key: str = ""
+    gemini_model: str = "gemini-2.5-pro"  # Gemini 2.5 Pro (Released Mar 2025)
+    gemini_max_tokens: int = 8192
+    gemini_temperature: float = 0.7
 
     # LLM Configuration
     llm_primary_provider: str = "openai"

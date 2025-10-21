@@ -38,6 +38,8 @@ ENV/
 .env
 .env.local
 .env.*.local
+.env.production  # NEVER commit production secrets!
+.env.production.*
 
 # Testing
 .coverage
@@ -79,15 +81,24 @@ data/
 *.csv
 *.parquet
 
-# ChromaDB
+# ChromaDB (CRITICAL: Contains RAG embeddings - DO NOT DELETE!)
 chroma/
+chroma_data/
+chromadb_data/  # Active ChromaDB storage - 355 documents, ~10K+ chunks
 
-# Large files (>100MB)
-papers_collection/DIVER_REAL_withMarginNotes.pdf
-papers_collection/har_med13.docx
-papers_collection/_발표슬라이드.pdf
-papers_collection/0422_Jinwoo-Yi_AweVR_lab-meeting.pdf
+# Backups (don't commit to git, use external storage)
+backups/
+chromadb_backups/  # ChromaDB automatic backups
+*.sql
+*.sql.gz
+*.tar.gz.backup
 
-# Large paper collections
-papers_collection/*.pdf
-papers_collection/*.docx
+# PDF Storage (automatically downloaded papers)
+# Ignore all PDFs and docs but keep directory structure
+papers_collection/**/*.pdf
+papers_collection/**/*.docx
+papers_collection/**/*.doc
+papers_collection/**/*.pptx
+papers_collection/**/*.ppt
+!papers_collection/.gitkeep
+!papers_collection/*/.gitkeep
