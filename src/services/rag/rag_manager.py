@@ -17,6 +17,13 @@ from chromadb.config import Settings as ChromaSettings
 
 from src.services.embeddings import EmbeddingService
 from src.services.knowledge_base.vector_store import VectorStore
+from src.services.rag.graph_index_store import GraphIndexStore
+from src.services.rag.graph_seed_selector import GraphSeedSelector
+from src.services.rag.graph_rag_pipeline import GraphRAGPipeline, GraphRAGPipelineResult
+from src.services.rag.multi_agent_orchestrator import (
+    AgentDefinition,
+    MultiAgentOrchestrator,
+)
 
 
 class RAGManager:
@@ -28,7 +35,11 @@ class RAGManager:
         chromadb_mode: str = "auto",
         chromadb_host: str = "localhost",
         chromadb_port: int = 8001,
-        chromadb_path: str = "./chromadb_data"
+        chromadb_path: str = "./chromadb_data",
+        graph_store: Optional[GraphIndexStore] = None,
+        graph_seed_selector: Optional[GraphSeedSelector] = None,
+        graph_orchestrator: Optional[MultiAgentOrchestrator] = None,
+        graph_pipeline: Optional[GraphRAGPipeline] = None,
     ):
         """
         Initialize RAG Manager.
@@ -49,6 +60,28 @@ class RAGManager:
         self.client = None
         self.client_type = None
         self.enabled = False
+
+        # Graph-based RAG components
+        self.graph_store = graph_store
+        if graph_seed_selector is not None:
+            self.graph_seed_selector = graph_seed_selector
+        elif graph_store is not None:
+            self.graph_seed_selector = GraphSeedSelector(graph_store)
+        else:
+            self.graph_seed_selector = None
+
+        self.graph_orchestrator = graph_orchestrator
+
+        if graph_pipeline is not None:
+            self.graph_pipeline = graph_pipeline
+        elif self.graph_store and self.graph_seed_selector and self.graph_orchestrator:
+            self.graph_pipeline = GraphRAGPipeline(
+                graph_store=self.graph_store,
+                seed_selector=self.graph_seed_selector,
+                orchestrator=self.graph_orchestrator,
+            )
+        else:
+            self.graph_pipeline = None
 
         # Collection names
         self.IMPROVEMENT_PATTERNS = "improvement_patterns"
@@ -168,6 +201,27 @@ class RAGManager:
     def is_enabled(self) -> bool:
         """Check if RAG is enabled."""
         return self.enabled
+
+    async def run_graph_rag(
+        self,
+        query: str,
+        agents: List[AgentDefinition],
+        seed_limit: int = 5,
+        max_depth: int = 2,
+        max_nodes: int = 50,
+    ) -> GraphRAGPipelineResult:
+        """Execute graph-aware multi-agent RAG pipeline."""
+
+        if self.graph_pipeline is None:
+            raise RuntimeError("Graph RAG pipeline is not configured")
+
+        return await self.graph_pipeline.run(
+            query=query,
+            agents=agents,
+            seed_limit=seed_limit,
+            max_depth=max_depth,
+            max_nodes=max_nodes,
+        )
 
     async def store_improvement_pattern(
         self,

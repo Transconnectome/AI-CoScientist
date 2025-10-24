@@ -94,6 +94,27 @@ class CostOptimizer:
         """옵티마이저 초기화"""
         self._model_pricing = MODEL_PRICING
 
+    def calculate_cost(self, model: str, prompt_tokens: int, completion_tokens: int) -> float:
+        """Calculate cost for given model and token usage.
+        
+        Args:
+            model: Model name
+            prompt_tokens: Number of prompt tokens
+            completion_tokens: Number of completion tokens
+            
+        Returns:
+            Estimated cost in USD
+        """
+        if model not in self._model_pricing:
+            logger.warning(f"Unknown model '{model}', using fallback pricing")
+            return 0.0
+        
+        pricing = self._model_pricing[model]
+        prompt_cost = (prompt_tokens / 1000) * pricing['prompt']
+        completion_cost = (completion_tokens / 1000) * pricing['completion']
+        
+        return prompt_cost + completion_cost
+
     def analyze_costs(self, usage_data: dict[str, Any]) -> dict[str, Any]:
         """비용 분석
 

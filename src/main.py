@@ -1,16 +1,16 @@
 """Main FastAPI application."""
 
+from collections.abc import AsyncGenerator
 from contextlib import asynccontextmanager
-from typing import AsyncGenerator
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import PlainTextResponse
 
-from src.core.config import settings
-from src.core.database import init_db, close_db
-from src.core.redis import redis_client
 from src.api.v1 import api_router
+from src.core.config import settings
+from src.core.database import close_db, init_db
+from src.core.redis import redis_client
 
 
 @asynccontextmanager
@@ -58,6 +58,25 @@ async def root() -> dict:
         "docs": "/docs",
         "health": "/api/v1/health"
     }
+
+
+@app.get("/metrics", response_class=PlainTextResponse)
+async def metrics() -> str:
+    """Prometheus metrics endpoint."""
+    # Placeholder: Will integrate with PrometheusMetricsExporter in Phase 2.2
+    return """# HELP rag_evaluation_requests_total Total RAG evaluation requests
+# TYPE rag_evaluation_requests_total counter
+rag_evaluation_requests_total 0
+
+# HELP rag_evaluation_latency_seconds RAG evaluation latency
+# TYPE rag_evaluation_latency_seconds histogram
+rag_evaluation_latency_seconds_bucket{le="0.1"} 0
+rag_evaluation_latency_seconds_bucket{le="0.5"} 0
+rag_evaluation_latency_seconds_bucket{le="1.0"} 0
+rag_evaluation_latency_seconds_bucket{le="+Inf"} 0
+rag_evaluation_latency_seconds_sum 0
+rag_evaluation_latency_seconds_count 0
+"""
 
 
 if __name__ == "__main__":

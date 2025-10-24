@@ -2,7 +2,7 @@
 
 from fastapi import APIRouter
 
-from src.api.v1 import projects, health, literature, hypotheses, experiments, papers, improvements, monitoring, multi_agent, research
+from src.api.v1 import projects, health, literature, hypotheses, experiments, papers, improvements, monitoring, multi_agent, research, rag_evaluation
 
 api_router = APIRouter()
 
@@ -16,5 +16,6 @@ api_router.include_router(improvements.router, prefix="/improvements", tags=["im
 api_router.include_router(monitoring.router, prefix="/monitoring", tags=["monitoring"])
 api_router.include_router(multi_agent.router, prefix="/multi-agent", tags=["multi-agent"])
 api_router.include_router(research.router, tags=["research"])  # GPT Researcher endpoints
+api_router.include_router(rag_evaluation.router, tags=["rag-evaluation"])  # RAG Evaluation endpoints
 
 __all__ = ["api_router"]

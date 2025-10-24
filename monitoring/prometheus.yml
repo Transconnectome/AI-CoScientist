@@ -1,0 +1,61 @@
+# Prometheus Configuration for AI-CoScientist RAG Evaluation Monitoring
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    monitor: 'ai-coscientist-monitor'
+    environment: 'production'
+
+# Alertmanager configuration (optional, can be enabled later)
+# alerting:
+#   alertmanagers:
+#     - static_configs:
+#         - targets:
+#           - alertmanager:9093
+
+# Rule files for recording and alerting rules
+rule_files:
+  # - "alerts/*.yml"
+  # - "rules/*.yml"
+
+# Scrape configurations
+scrape_configs:
+  # Prometheus self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+        labels:
+          component: 'prometheus'
+
+  # FastAPI application metrics
+  - job_name: 'api'
+    metrics_path: '/metrics'
+    static_configs:
+      - targets: ['api:8000']
+        labels:
+          component: 'fastapi'
+          service: 'ai-coscientist-api'
+    scrape_interval: 10s
+    scrape_timeout: 5s
+
+  # PostgreSQL exporter (optional, requires postgres_exporter)
+  # - job_name: 'postgres'
+  #   static_configs:
+  #     - targets: ['postgres-exporter:9187']
+  #       labels:
+  #         component: 'database'
+
+  # Redis exporter (optional, requires redis_exporter)
+  # - job_name: 'redis'
+  #   static_configs:
+  #     - targets: ['redis-exporter:9121']
+  #       labels:
+  #         component: 'cache'
+
+  # Celery exporter (optional, requires celery_exporter)
+  # - job_name: 'celery'
+  #   static_configs:
+  #     - targets: ['celery-exporter:9808']
+  #       labels:
+  #         component: 'worker'

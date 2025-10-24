@@ -90,14 +90,18 @@ create_env_file() {
     POSTGRES_PASSWORD=$(openssl rand -base64 32)
     REDIS_PASSWORD=$(openssl rand -base64 32)
     SECRET_KEY=$(openssl rand -hex 32)
+    GRAFANA_PASSWORD=$(openssl rand -base64 24)
 
     # Update .env.production with generated passwords
     sed -i.bak "s/YOUR_SECURE_PASSWORD_HERE/$POSTGRES_PASSWORD/" .env.production
     sed -i.bak "s/YOUR_REDIS_PASSWORD_HERE/$REDIS_PASSWORD/" .env.production
     sed -i.bak "s/YOUR_SECURE_SECRET_KEY_HERE/$SECRET_KEY/" .env.production
+    sed -i.bak "s/change-this-password/$GRAFANA_PASSWORD/" .env.production
     sed -i.bak "s/DEPLOYED_AT=/DEPLOYED_AT=$DEPLOYMENT_DATE/" .env.production
     sed -i.bak "s/GIT_COMMIT=/GIT_COMMIT=$GIT_COMMIT/" .env.production
     rm -f .env.production.bak
+
+    log_info "✓ Generated secure passwords for PostgreSQL, Redis, and Grafana"
 
     log_warn "⚠️  IMPORTANT: You must add your OpenAI API key to .env.production"
     log_warn "   Edit .env.production and set: OPENAI_API_KEY=sk-proj-YOUR_KEY"
@@ -121,8 +125,9 @@ create_directories() {
 
     mkdir -p papers_collection/{arxiv/{2024,2025},pubmed,conferences/{neurips_2024,iclr_2025,icml_2025,miccai_2024},manual}
     mkdir -p logs
+    mkdir -p monitoring/grafana/{dashboards,datasources}
 
-    chmod -R 755 papers_collection logs
+    chmod -R 755 papers_collection logs monitoring
 
     log_info "✓ Directories created"
 }
@@ -138,9 +143,9 @@ build_images() {
 
 # Start infrastructure services
 start_infrastructure() {
-    log_info "Starting PostgreSQL and Redis..."
+    log_info "Starting PostgreSQL, Redis, Prometheus, and Grafana..."
 
-    docker-compose up -d postgres redis
+    docker-compose up -d postgres redis prometheus grafana
 
     # Wait for health checks
     log_info "Waiting for services to be healthy (30-60 seconds)..."
@@ -207,7 +212,7 @@ verify_deployment() {
 
     # 1. Check all containers are running
     log_info "Checking container status..."
-    EXPECTED_CONTAINERS=5
+    EXPECTED_CONTAINERS=7  # postgres, redis, api, celery-worker, celery-beat, prometheus, grafana
     RUNNING_CONTAINERS=$(docker-compose ps | grep "Up" | wc -l | tr -d ' ')
 
     if [ "$RUNNING_CONTAINERS" -lt "$EXPECTED_CONTAINERS" ]; then
@@ -262,6 +267,22 @@ verify_deployment() {
         log_warn "Celery beat may not be running"
     fi
 
+    # 7. Check Prometheus
+    log_info "Checking Prometheus..."
+    if curl -s -f http://localhost:9090/-/healthy > /dev/null 2>&1; then
+        log_info "✓ Prometheus is healthy"
+    else
+        log_warn "Prometheus may not be accessible"
+    fi
+
+    # 8. Check Grafana
+    log_info "Checking Grafana..."
+    if curl -s http://localhost:3000/api/health | grep -q "ok"; then
+        log_info "✓ Grafana is healthy"
+    else
+        log_warn "Grafana may not be accessible"
+    fi
+
     log_info "✓ Deployment verification completed"
 }
 
@@ -278,6 +299,8 @@ display_summary() {
     echo "  • API URL: http://localhost:8000"
     echo "  • API Docs: http://localhost:8000/docs"
     echo "  • Health Check: http://localhost:8000/api/v1/health"
+    echo "  • Prometheus: http://localhost:9090"
+    echo "  • Grafana: http://localhost:3000 (admin / check .env.production)"
     echo
     log_info "Running Services:"
     docker-compose ps
@@ -292,16 +315,19 @@ display_summary() {
     echo "  • View logs: docker-compose logs -f"
     echo "  • View API logs: docker-compose logs -f api"
     echo "  • View worker logs: docker-compose logs -f celery-worker"
+    echo "  • View monitoring: docker-compose logs -f prometheus grafana"
     echo "  • Stop services: docker-compose stop"
     echo "  • Restart services: docker-compose restart"
     echo "  • View papers: ls -lh papers_collection/arxiv/2025/"
     echo
     log_info "Next Steps:"
-    echo "  1. Monitor logs for first paper sync (may take a few minutes)"
-    echo "  2. Check papers_collection/ for downloaded PDFs"
-    echo "  3. Review DEPLOYMENT_GUIDE.md for monitoring and maintenance"
-    echo "  4. Set up automated backups (see guide)"
-    echo "  5. Configure firewall rules (see guide)"
+    echo "  1. Access Grafana at http://localhost:3000 and log in"
+    echo "  2. View RAG Evaluation dashboard for performance metrics"
+    echo "  3. Monitor logs for first paper sync (may take a few minutes)"
+    echo "  4. Check papers_collection/ for downloaded PDFs"
+    echo "  5. Review DEPLOYMENT_GUIDE.md for monitoring and maintenance"
+    echo "  6. Set up automated backups (see guide)"
+    echo "  7. Configure firewall rules (see guide)"
     echo
     log_warn "Important: This system will now run 24/7 collecting papers"
     log_warn "Monitor disk space regularly: df -h papers_collection/"
