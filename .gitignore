@@ -102,3 +102,20 @@ papers_collection/**/*.pptx
 papers_collection/**/*.ppt
 !papers_collection/.gitkeep
 !papers_collection/*/.gitkeep
+
+# Archives and temporary files
+output/archived/
+input/archive/
+scripts/archived/
+
+# Temporary paper/abstract files in root
+abstract_*.txt
+abstract_*.docx
+paper_*.txt
+paper_*.docx
+response_*.txt
+improvement_*.json
+improvement_*.txt
+
+# AI-generated outputs
+ai_coscientist.pdf

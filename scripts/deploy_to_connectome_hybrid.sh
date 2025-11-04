@@ -88,7 +88,7 @@ check_gpu_prerequisites() {
 
     # Verify Docker GPU runtime
     log_gpu "Verifying Docker GPU runtime..."
-    if ! docker run --rm --gpus all nvidia/cuda:12.0.0-base-ubuntu20.04 nvidia-smi &> /dev/null; then
+    if ! docker run --rm --runtime=nvidia --gpus all nvidia/cuda:12.0.0-base-ubuntu20.04 nvidia-smi &> /dev/null; then
         log_error "Docker GPU runtime test failed. Please install nvidia-docker2."
         exit 1
     fi
@@ -113,13 +113,15 @@ check_prerequisites() {
     fi
 
     # Check if running on Connectome server (optional check)
-    if [[ ! "$HOSTNAME" =~ "connectome" ]] && [[ ! "$HOSTNAME" =~ "snu.ac.kr" ]]; then
+    if [[ ! "$HOSTNAME" =~ "connectome" ]] && [[ ! "$HOSTNAME" =~ "snu.ac.kr" ]] && [[ ! "$HOSTNAME" =~ "node" ]]; then
         log_warn "Not running on Connectome server (hostname: $HOSTNAME)"
         read -p "Continue anyway? (y/N) " -n 1 -r
         echo
         if [[ ! $REPLY =~ ^[Yy]$ ]]; then
             exit 1
         fi
+    elif [[ "$HOSTNAME" =~ "node" ]]; then
+        log_warn "Running on SLURM compute node (hostname: $HOSTNAME) - auto-continuing"
     fi
 
     log_info "✓ Prerequisites check passed"
@@ -131,6 +133,11 @@ create_env_file() {
 
     if [ -f .env.production ]; then
         log_warn ".env.production already exists"
+        # In non-interactive mode (SLURM), always use existing file
+        if [[ -z "$PS1" ]] || [[ "$HOSTNAME" =~ "node" ]]; then
+            log_info "Using existing .env.production (non-interactive mode)"
+            return
+        fi
         read -p "Overwrite? (y/N) " -n 1 -r
         echo
         if [[ ! $REPLY =~ ^[Yy]$ ]]; then
