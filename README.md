@@ -1364,6 +1364,74 @@ Iteration 9-10: Significance 집중
 
 ---
 
+## 🔧 NVIDIA NIM 모델 다운로드
+
+### 모델 배포 방식
+
+**중요**: NVIDIA NIM 모델들은 **Docker 이미지**로 제공되며, Git 저장소에 포함되지 않습니다.
+
+#### 자동 다운로드 (권장)
+
+```bash
+# 1. NGC API 키 설정 (.env.production)
+NGC_API_KEY=nvapi-your-key-here
+
+# 2. docker-compose 실행 시 자동 다운로드
+docker-compose -f docker-compose.connectome.yml up -d
+
+# 다운로드되는 NVIDIA NIM 이미지:
+# - nemotron-llm:       16.5 GB (Nemotron-Nano 9B 모델)
+# - nemo-embedder:      3.94 GB (LLaMa-3.2 EmbedQA 1B)
+# - nemo-reranker:      3.92 GB (LLaMa-3.2 RerankQA 1B)
+# 총 다운로드 크기:     ~24.4 GB
+```
+
+#### 다운로드 소요 시간
+
+| 인터넷 속도 | 예상 시간 |
+|------------|----------|
+| 100 Mbps   | ~35분    |
+| 1 Gbps     | ~3-5분   |
+| 10 Gbps    | ~30초    |
+
+**첫 배포 시**: 모델 다운로드로 인해 30분~1시간 소요
+**이후 배포**: 로컬 캐시 사용, 수 초 내 시작
+
+#### NGC API 키 발급
+
+```bash
+# 1. NVIDIA NGC 가입 (무료)
+https://ngc.nvidia.com/signin
+
+# 2. API Key 생성
+Profile → Setup → Generate API Key
+
+# 3. .env.production에 추가
+NGC_API_KEY=nvapi-your-generated-key-here
+```
+
+#### Git LFS 불필요
+
+**❌ Git LFS는 필요하지 않습니다**
+
+- 모델들은 Docker 이미지 (NVIDIA NGC 레지스트리에서 pull)
+- Git 저장소에는 설정 파일만 포함 (docker-compose.yml, .env.example 등)
+- 모델 파일을 Git에 커밋하지 않음
+
+#### 로컬 확인
+
+```bash
+# 다운로드된 이미지 확인
+docker images | grep -E "nemotron|nemo-embed|nemo-rerank"
+
+# 예상 출력:
+# nvcr.io/nim/nvidia/nvidia-nemotron-nano-9b-v2    latest    d19cf3502e24    16.5GB
+# nvcr.io/nim/nvidia/llama-3.2-nv-embedqa-1b-v2    latest    19cc5549b472    3.94GB
+# nvcr.io/nim/nvidia/llama-3.2-nv-rerankqa-1b-v2   latest    015429eb016e    3.92GB
+```
+
+---
+
 ## 🚀 빠른 시작
 
 ### 5분 내 시작 (스크립트 전용)

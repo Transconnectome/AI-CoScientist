@@ -1345,6 +1345,74 @@ docker-compose -f docker-compose.prod.yml up -d
 # - frontend: React UI (port 3000) # After Phase 5
 ```
 
+### NVIDIA NIM Model Deployment
+
+**Model Distribution**: NVIDIA NIM models are distributed as **Docker images** (not Git files)
+
+#### Automatic Download Process
+
+Models are automatically downloaded during `docker-compose up`:
+
+```bash
+# 1. Configure NGC API key in .env.production
+NGC_API_KEY=nvapi-your-key-here
+
+# 2. Start services (models download automatically)
+docker-compose -f docker-compose.connectome.yml up -d
+
+# Downloaded NVIDIA NIM images:
+# - nemotron-llm:       16.5 GB (Nemotron-Nano 9B)
+# - nemo-embedder:      3.94 GB (LLaMa-3.2 EmbedQA 1B)
+# - nemo-reranker:      3.92 GB (LLaMa-3.2 RerankQA 1B)
+# Total download:       ~24.4 GB
+```
+
+#### Download Time Estimates
+
+| Internet Speed | Download Time |
+|----------------|---------------|
+| 100 Mbps       | ~35 minutes   |
+| 1 Gbps         | ~3-5 minutes  |
+| 10 Gbps        | ~30 seconds   |
+
+**First deployment**: 30-60 minutes (model download)
+**Subsequent deployments**: Seconds (uses local cache)
+
+#### NGC API Key Setup
+
+```bash
+# 1. Sign up for NVIDIA NGC (free)
+https://ngc.nvidia.com/signin
+
+# 2. Generate API Key
+Profile → Setup → Generate API Key
+
+# 3. Add to .env.production
+NGC_API_KEY=nvapi-your-generated-key-here
+```
+
+#### Git LFS Not Required
+
+**❌ Git LFS is NOT needed for this project**
+
+- Models are Docker images (pulled from NVIDIA NGC registry)
+- Git repository only contains configuration files
+- No model files are committed to Git
+
+#### Verify Model Downloads
+
+```bash
+# Check downloaded images
+docker images | grep -E "nemotron|nemo-embed|nemo-rerank"
+
+# Expected output:
+# nvcr.io/nim/nvidia/nvidia-nemotron-nano-9b-v2    latest    d19cf3502e24    16.5GB
+# nvcr.io/nim/nvidia/llama-3.2-nv-embedqa-1b-v2    latest    19cc5549b472    3.94GB
+# nvcr.io/nim/nvidia/llama-3.2-nv-rerankqa-1b-v2   latest    015429eb016e    3.92GB
+```
+
+---
+
 ### Environment Variables
 
 ```bash
@@ -1358,6 +1426,12 @@ OPENAI_API_KEY=sk-...
 ANTHROPIC_API_KEY=sk-ant-...
 LLM_PRIMARY_PROVIDER=openai
 LLM_FALLBACK_PROVIDER=anthropic
+
+# NVIDIA NIM Configuration
+NGC_API_KEY=nvapi-...  # Required for NIM model downloads
+NEMOTRON_GPU_ID=1
+NEMO_EMBEDDER_GPU_ID=4
+NEMO_RERANKER_GPU_ID=6
 
 CHROMADB_HOST=localhost
 CHROMADB_PORT=8001
