@@ -1,0 +1,40 @@
+[Unit]
+Description=Model Router Proxy for Cline Dynamic Model Selection
+Documentation=https://github.com/Transconnectome/AI-CoScientist
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=juke
+Group=juke
+WorkingDirectory=/home/juke/git/AI-CoScientist
+
+# Environment
+Environment="PATH=/usr/local/bin:/usr/bin:/bin"
+Environment="PYTHONUNBUFFERED=1"
+
+# Main process
+ExecStart=/usr/bin/python3 /home/juke/git/AI-CoScientist/scripts/model_router_proxy.py
+
+# Restart policy
+Restart=always
+RestartSec=10
+StartLimitInterval=200
+StartLimitBurst=5
+
+# Logging
+StandardOutput=append:/home/juke/git/AI-CoScientist/logs/model_router_stdout.log
+StandardError=append:/home/juke/git/AI-CoScientist/logs/model_router_stderr.log
+SyslogIdentifier=model-router
+
+# Resource limits
+LimitNOFILE=65536
+LimitNPROC=4096
+
+# Security settings
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

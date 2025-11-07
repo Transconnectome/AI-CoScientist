@@ -1,0 +1,199 @@
+{
+  "cline.apiProvider": "ollama",
+  "cline.ollamaBaseUrl": "http://localhost:11435",
+  "cline.ollamaModelId": "deepseek-r1:32b",
+
+  "cline.modelRouting": {
+    "enabled": true,
+    "policy": "balanced",
+    "manualOverride": null,
+    "analytics": {
+      "enabled": true,
+      "logPath": "/home/juke/git/AI-CoScientist/logs/routing_analytics.json"
+    },
+
+    "models": {
+      "deepseek-r1:32b": {
+        "displayName": "DeepSeek-R1 32B (Reasoning)",
+        "description": "Chain-of-thought reasoning model for complex problems",
+        "capabilities": [
+          "reasoning",
+          "architecture",
+          "debugging",
+          "design",
+          "security",
+          "performance"
+        ],
+        "performance": {
+          "tokensPerSecond": 4.5,
+          "loadTimeSeconds": 5,
+          "vramGB": 18.5
+        },
+        "priority": 2,
+        "enabled": true,
+        "tags": ["reasoning", "complex", "slow", "accurate"]
+      },
+
+      "nemotron-nano-9b-v2": {
+        "displayName": "Nemotron Nano 9B (Fast)",
+        "description": "Fast general-purpose coding assistant with thinking budget control",
+        "capabilities": [
+          "code_completion",
+          "refactoring",
+          "documentation",
+          "simple_edit",
+          "explanation",
+          "code_review"
+        ],
+        "performance": {
+          "tokensPerSecond": 17.5,
+          "loadTimeSeconds": 2,
+          "vramGB": 14
+        },
+        "priority": 1,
+        "enabled": true,
+        "thinkingBudget": 0.5,
+        "tags": ["fast", "general", "efficient"]
+      }
+    },
+
+    "routingPolicies": {
+      "conservative": {
+        "description": "Prefer DeepSeek-R1 for safety, use Nemotron only for simple tasks",
+        "complexityThreshold": 0.5,
+        "defaultModel": "deepseek-r1:32b",
+        "fallbackModel": "deepseek-r1:32b",
+        "taskTypeMapping": {
+          "code_completion": "nemotron-nano-9b-v2",
+          "simple_edit": "nemotron-nano-9b-v2",
+          "documentation": "nemotron-nano-9b-v2"
+        }
+      },
+
+      "balanced": {
+        "description": "Balance speed and quality (recommended)",
+        "complexityThreshold": 0.7,
+        "defaultModel": "nemotron-nano-9b-v2",
+        "fallbackModel": "deepseek-r1:32b",
+        "taskTypeMapping": {
+          "code_completion": "nemotron-nano-9b-v2",
+          "simple_edit": "nemotron-nano-9b-v2",
+          "documentation": "nemotron-nano-9b-v2",
+          "refactoring": "nemotron-nano-9b-v2",
+          "explanation": "nemotron-nano-9b-v2",
+          "code_review": "nemotron-nano-9b-v2",
+          "debugging": "deepseek-r1:32b",
+          "architecture": "deepseek-r1:32b",
+          "design": "deepseek-r1:32b",
+          "security": "deepseek-r1:32b",
+          "performance": "deepseek-r1:32b",
+          "testing": "deepseek-r1:32b"
+        }
+      },
+
+      "aggressive": {
+        "description": "Maximize speed, use DeepSeek-R1 only when necessary",
+        "complexityThreshold": 0.8,
+        "defaultModel": "nemotron-nano-9b-v2",
+        "fallbackModel": "deepseek-r1:32b",
+        "taskTypeMapping": {
+          "architecture": "deepseek-r1:32b",
+          "security": "deepseek-r1:32b"
+        }
+      },
+
+      "deepseek_only": {
+        "description": "Use only DeepSeek-R1 (disable dynamic routing)",
+        "complexityThreshold": 0.0,
+        "defaultModel": "deepseek-r1:32b",
+        "fallbackModel": "deepseek-r1:32b",
+        "taskTypeMapping": {}
+      },
+
+      "nemotron_only": {
+        "description": "Use only Nemotron (disable dynamic routing)",
+        "complexityThreshold": 1.0,
+        "defaultModel": "nemotron-nano-9b-v2",
+        "fallbackModel": "nemotron-nano-9b-v2",
+        "taskTypeMapping": {}
+      }
+    },
+
+    "healthCheck": {
+      "enabled": true,
+      "intervalSeconds": 60,
+      "timeout": 5000,
+      "retries": 3
+    },
+
+    "fallbackStrategy": {
+      "onModelFailure": "use_fallback",
+      "onTimeout": "use_faster_model",
+      "maxRetries": 2
+    },
+
+    "userPreferences": {
+      "learningEnabled": true,
+      "preferredModelForComplexity": {},
+      "taskTypeOverrides": {}
+    }
+  },
+
+  "cline.mcpServers": {
+    "serena": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@serenaai/mcp-server-serena"
+      ],
+      "disabled": false
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@executeautomation/playwright-mcp-server"
+      ],
+      "disabled": false
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "disabled": false
+    },
+    "tavily": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@tavily/tavily-mcp-server"
+      ],
+      "env": {
+        "TAVILY_API_KEY": "${TAVILY_API_KEY}"
+      },
+      "disabled": false
+    },
+    "fetch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ],
+      "disabled": false
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mcp-get/chrome-devtools-server"
+      ],
+      "disabled": false
+    }
+  },
+
+  "cline.customInstructions": "You are an AI coding assistant with access to dynamic model routing. Use thinking budget control for speed/quality trade-offs.",
+  "cline.alwaysAllowReadOnly": true,
+  "cline.diffStrategy": "search-replace"
+}
