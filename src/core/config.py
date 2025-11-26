@@ -50,11 +50,21 @@ class Settings(BaseSettings):
     rabbitmq_exchange: str = "ai_coscientist"
     rabbitmq_queue: str = "tasks"
 
-    # OpenAI
-    openai_api_key: str
-    openai_model: str = "gpt-5"  # GPT-5 (Released Aug 2025)
-    openai_max_tokens: int = 4000
-    openai_temperature: float = 0.7
+    @property
+    def openai_client(self) -> "openai.AsyncClient":
+        """Return an async OpenAI client initialized with the API key.
+        This property lazily creates the client when first accessed.
+        """
+        try:
+            import openai
+        except ImportError as e:
+            raise ImportError("openai package is required for OpenAI integration") from e
+        # Ensure the key is set
+        if not self.openai_api_key:
+            raise ValueError("OPENAI_API_KEY is not configured in .env")
+        # Configure the client
+        client = openai.AsyncClient(api_key=self.openai_api_key)
+        return client
 
     # Anthropic
     anthropic_api_key: str

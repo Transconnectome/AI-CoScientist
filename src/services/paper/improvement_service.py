@@ -667,6 +667,82 @@ class ImprovementService:
             logger.error(f"Iterative improvement failed: {e}", exc_info=True)
             raise ValueError(f"Iterative improvement failed: {str(e)}")
 
+    async def run_publication_committee_loop(
+        self,
+        paper_id: UUID,
+        domain: str = "General Science",
+        max_rounds: int = 3
+    ) -> Dict:
+        """Run the full publication committee loop (Editor -> Reviewers -> Revision)."""
+        from src.services.review.editor_agent import EditorAgent
+        from src.services.review.domain_expert_agent import DomainExpertAgent
+        from src.services.review.reviewer_agent import ReviewerAgent
+        
+        editor = EditorAgent()
+        expert = DomainExpertAgent()
+        reviewer2 = ReviewerAgent()
+        
+        paper = await self._get_paper(paper_id)
+        
+        history = []
+        
+        for round_num in range(1, max_rounds + 1):
+            logger.info(f"Starting Publication Committee Round {round_num}")
+            
+            # 1. Editor Screening
+            sections = await self._get_all_sections(paper_id)
+            abstract = next((s.content for s in sections if s.name == "abstract"), "")
+            intro = next((s.content for s in sections if s.name == "introduction"), "")
+            
+            editor_decision = await editor.evaluate_paper(abstract, intro, self.llm)
+            history.append({"round": round_num, "role": "Editor", "output": str(editor_decision)})
+            
+            if editor_decision.decision == "desk_reject":
+                if round_num < max_rounds:
+                    logger.info(f"Paper desk rejected in round {round_num}. Attempting revision based on feedback.")
+                    # Apply revision based on editor feedback
+                    await self.improver.improve_section(
+                        paper_id=paper_id, 
+                        section_name="introduction", # Focus on intro for editor
+                        feedback=f"Editor rejected: {editor_decision.feedback}"
+                    )
+                    continue
+                else:
+                    return {"status": "rejected", "history": history}
+                
+            # 2. Full Review
+            current_content = paper.content or ""
+            expert_review = await expert.review_paper(current_content, domain, self.llm)
+            reviewer2_review = await reviewer2.review_paper(current_content, self.llm)
+            
+            history.append({"round": round_num, "role": "DomainExpert", "output": str(expert_review)})
+            history.append({"round": round_num, "role": "Reviewer2", "output": str(reviewer2_review)})
+            
+            # 3. Check for Acceptance
+            if expert_review.technical_correctness > 8.0 and reviewer2_review.recommendation == "accept":
+                return {"status": "accepted", "history": history}
+            
+            # 4. Revision
+            # Aggregate feedback
+            feedback = f"""
+            Editor Feedback: {editor_decision.feedback}
+            Expert Flaws: {', '.join(expert_review.methodological_flaws)}
+            Reviewer 2 Issues: {', '.join(reviewer2_review.major_issues)}
+            """
+            
+            # Apply improvements (simplified - in reality would target specific sections)
+            # We target 'methods' and 'results' as they are critical for technical correctness
+            await self.improver.improve_section(
+                paper_id=paper_id,
+                section_name="methods",
+                feedback=feedback
+            )
+            
+            # Refresh paper content for next round
+            paper = await self._get_paper(paper_id)
+            
+        return {"status": "max_rounds_reached", "history": history}
+
     def _build_rag_context(
         self, similar_patterns: List[Dict], exemplars: List[Dict]
     ) -> str:

@@ -1,0 +1,355 @@
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/(ver2)_virtual_brain_with_ldm.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/0422_Jinwoo-Yi_AweVR_lab-meeting.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/0630_GRF-workshop_abstract.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/090324_affect-dynamics_lab-talk_Jinwoo-Yi_public.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/1-s2.0-S0890856723022347-mmc1.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/1000-Days-Full-Program-Announcement.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/2024.emnlp-main.1133.pdf.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/20241119_왕희환_연구발표.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/2024년도 RA 인건비 policy_1.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/2025.09.29.랩미팅.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/20250103_Proposal_YooShinjae (2).pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/20250326 NESAP JubinChoi.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/20250415215802_survey_0871e694.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/20250430 NESAP JubinChoi.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/20250709 NESAP meeting.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/2026-INCITE-Proposal-Peer-Review-Panel-Questionnaire.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/2026-INCITE-Proposal-Technical-Assessment-Questionnaire.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/2026_INCITE_CV_template.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/2026_INCITE_New_Project_Narrative_template.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/2026_INCITE_Publications_template.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/2026_incite_proposal_webinar_slides.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/2108.07258.pdf .pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/2112.12750v1.pdf.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/2206.07682v2.pdf.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/24.06.03 연구발표.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/2402.10251v4.pdf.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/240207 최주빈 연구발표.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/240514_histogram_1KG504.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/240514_histogram_ABCD137.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/240514_histogram_KoGES41673.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/240514_histogram_WCDI55.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/240514_histogram_all42369.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/240715 KISTI Server Workshop.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/240722_divfreqBERT_tutorial.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/240806_JubASDGDD.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/2410.07196v1.pdf.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/241029 김도원 연구발표.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/241220_BraindayPoster (2).pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/250401_glm.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/250402 최주빈 딥러닝 실험 워크샵.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/250416 EmoCL Meeting Note.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/250416_journal_club.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/250430_MSJ_Journal_Club_Surprise.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/250521_이세빈_연구발표.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/250611 Journal Club (Stella Sangyoon Bae).pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/250613_OHBM_ver1.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/250617_OHBM2025_Ahhyun 1.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/250619_CaPOYO-SSL-movie_decoding.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/5486ABB4C6E7611E6A7B3CA01A3DCD6A1752717194203.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/A foundation model to predict and capture human cognition_250915_JournalClub.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/ABCD_BMI_revised_v4.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/ADHD GRF Methods.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AICA_Application_Ephys_2025.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AICA_Application_MRI_2025.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AICA_지역 인프라 컴퓨팅 자원 지원 사업.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AI연구원 서포팅 레터.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AMOS 사용법.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Abstract 최종.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Abstract_revision_Janice.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AnxieDy_main-text_draft_public.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Archival Report_Screentime_JMY v8.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Archival Report_Screentime_JMY v8_ConnectomeLab.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/ArtMed_Figure captions.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/ArtMed_Highlights.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/ArtMed_Manuscript.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/ArtMed_Supplementary materials.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_IRB.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_cover-letter_Comms-Psych_revised_stage-3_final.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_cover-letter_Sci-Adv.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_cover-letter_eLife.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_draft_v1.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_main-text_Comms-Psych_revised.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_main-text_Comms-Psych_revised_editorFINAL.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_main-text_Comms-Psych_revised_stage-2.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_main-text_Comms-Psych_revised_stage-3_final.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_main-text_Nat-Hum-Behav_cited.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_main-text_Sci-Adv_revised-final.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_main-text_eLife.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_response-letter_Comms-Psych_final.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_response-letter_Comms-Psych_revised_stage-3_final.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_response-letter_Comms-Psych_revision_2.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_supp_Comms-Psych_revised_stage-3_final.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_supp_Nat-Hum-Behav.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/AweVR_supp_eLife.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/BCS_rationale_aim.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/BMB 개별연구 발표회 포스터_이태양_수정본.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Brain clock LAC+non-AC.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/CCN2025_Poster_Jinwoo-Lee.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/COVID-GRF_Mol-Psych_cover-letter.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/CT-to-MRI_20250614.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/CV_Jiook Cha.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Caps_점수별 시각화.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Centaur.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Competing Interests Declaration.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Composable_Brain_Decoding_.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Composable_Decoding_PPT.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Count1_new.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Count2_new.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Count3_new.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Count5_new.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Cover Letter_Nature Human Behaviour.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Cover letter_PNAS.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/CoverLetter_NPP_SY.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Cover_Letter_.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/DCN_revision_preparation.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/DD HTE manuscript_NatureComputationalScience.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/DD HTE manuscript_NatureHumanBehaviour_revised.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/DD HTE manuscript_Neuron_Submission.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/DD HTE manuscript_TranslationalPsychiatry.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/DIVER_REAL_withMarginNotes.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Data Preparation - Kyle Lo.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/DataUseAgreementTemplate2024.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Detail.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Digital Communication & Brain pdf.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Digital Communication & Brain.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/EEG 0513.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Equilibrium Potentials.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Exploring the Brain_Test Bank (1).pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/FA1_new.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Follow.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Fondly Fahrenheit.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/GARD_MRI_프로토콜.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/GDD ASD DL-methods.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/GRF Analysis.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/GRFProtocol_appendix_v2.0.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/GRFProtocol_draft_v1.0_Maria.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/GRFProtocol_draft_v1.1.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/GRFProtocol_main-text_v2.1.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/GeneBERT.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Genotype-Method-edit.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/HBCD.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/IC component를 활용한 SwiFUN 결과.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/IC-IG-Cog.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/IEEE_QCE_2024_QRL_Manuscript (3).pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/IEEE_QCE_2025_QuantumTSTransformer (1).pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/JaniceMin_연구발표_0602_배포용.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/JournalClub_Titans_250225.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/KHBM 초록.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/KHBM-COVID-ABSTRACT.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/KISTI_안교수님_신청서_초안.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/KT Cloud AICA (KO) - User Guide(최종).pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/KT Cloud AICA FastTrack (KO) - User Guide.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/LF.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/LabMeeting_20240523_SYChoi_배포용.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Lars-CV-ResNarrative-2022-light-SNU.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/M-BBN_procedure.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/M-BBN_results_whole.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/MBBN_배상윤_저작권.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/MLVU-ASD.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/MP_TWI_3DCNN_draftv9.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Manuscript_BioPsychiatry.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Manuscript_DCN_revised.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Manuscript_Imaging_Neuroscience.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Manuscript_Imaging_Neuroscience_revision_20250626.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Manuscript_JCPP_SY_revision.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Manuscript_NPP_SY_final.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Meeting.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Methods.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Mila_Support_Letter.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/MultiChip_QML_Jan19 (2).pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/NBS 결과 리포트.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/NCOMMS-24-17347B_author_checklist_1745501020_35.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/NEUMIX Meeting Note 24.11.21.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/NEUMIX 협업 미팅 노트.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/NMH_coverletter.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/NPU Farm 소개자료-1.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Nature Communications Appeal Letter.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Nature Perspectives Paper 구상.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/NeuroBOLT_250825_JournalClub.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/NeuroLM.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/OHBM.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/OHBM2023_abstract-JCedits.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/OHBM2023_abstract.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/OHBM2024_final_AweVR.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/OHBM_JaniceMin_draftv2.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Original MBBN from scratch vs. finetuning.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/PIIS2666675823001534.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/PSS-10.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Perspectives Paper.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Perspectives Paper_eks 0729.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Planningo_중간발표.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Protocol_Imaging_Sequences.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Punch Drunk Subtitles.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/QCNN_Ansatz2.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/QCNN_NeurIPS_2024.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/QML_Survey4Biomedical.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Reference Letter template.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Reference_Atlas.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Response Letter_250511.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Response to Reviewers_v2.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Resume_Youngchan_Ryu_2411.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Reviewer Comments.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Revision Letter.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Room 8 Subtitles.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/SEM Results.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/SFN_psychosis.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/SFNabstract_final.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/SFNposter_SY_final.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/SNUBIC_ARTFAIR_2 (1).pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Scope of Work_SeungjuLee.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Sismologia Jan 3_2025 아피찻퐁 감독.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Sismologia_pilot_instruction_수정본1.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Sismologia_pilot_instruction_초안.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Sociability.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Statistics.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Supplement_figure_abcd gps.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Supplementary Figure-v3.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Supplementary Information_Neuron_submission.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Supplementary Material.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Supplementary materials.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Supplementary v3.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/SwiFUN.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/TP_TWI_3DCNN_draftv6.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Table1.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Tables and Figures_v5 1.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/The Nine Billion Names of God.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/The Paper Menagerie.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/The Quest for Saint Aquin.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Thesis 연습장 _ Methods.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Thesis 연습장 _ Results (1).docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/Thesis 연습장_intro.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/WCDIdepression_Abstract_SY.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/WECANDOIT_보고서_커넥톰.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/WECANDOIT_서버정리.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/[1차추적]IRB승인동의서(2025).pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/[1차추적]IRB승인동의서(2025)_예시.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/[1차추적]IRB승인동의서.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/[차지욱]wecandoit IRB 승인서 (1).pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/_0평가지표.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/_1proposal4.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/_FINAL.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/_Merged_PDF.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/_NeurIPS_workshop_2025__DiT_4D__Diffusion_Transformer_for_fMRI_data_generation-2.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/_nature_neuro__MBBN.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/_발표슬라이드.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/_창의선도 연차보고서_2025.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/abcd-gps_confirmed_mail.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/abcd_gps_main_250123.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/abstact-fens.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/abstract_FENS_Janice_UPDATED.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/anxiedy_pilot_script.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/appendix.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/bench.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/check_ncomms_formatting.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/classification_2yr.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/classification_2yr_dotplot_sd_250507.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/classification_2yr_se.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/classification_2yr_zoomed.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/classification_baseline.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/classification_baseline_dotplot_sd_250507.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/classification_baseline_se.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/classification_baseline_zoomed.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/conditional mamba causal inference.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/cover letter-bmi.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/cover letter-enigma.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/cover letter-iScience-v4.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/cover letter-v6.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/cover letter-박마리아 페이퍼.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/cover letter_1_2.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/cover letter_1_2_3.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/cover letter_1_2_3_4.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/cover letter_1_2_3_4_5.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/cover letter_1_2_3_4_5_6.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/cover letter_MP.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/cover letter_NPP.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/cover_letter_EEG2024.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/coverletter_sex classification.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/email.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/figs_MLvis.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/figure1.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/figure2.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/figure3.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/figure4.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/figure5.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/fnins-13-01131.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/fsci-01-1017235.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/grf_protocol_fig3.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/har_med13.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/healthbench_paper.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/journal club 20250316.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/kording-dyer-2023-why-the-simplest-explanation-isn-t-always-the-best.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/kpmg-korea-jpmorgan-healthcare-2024-20240115.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/main figure-v3.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/main table-v3.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/manuscript-NatureService.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/manuscript-v3.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/manuscript_outline.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/manuscript_psychosis.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/multi_FI.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/neuron_play_pong.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/new_gps.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/poster_final.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/presentation.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/readme.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/regression_2yr.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/regression_2yr_dotplot_sd_250507.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/regression_2yr_se.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/regression_baseline.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/regression_baseline_se.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/research note.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/response.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/results_CCAvis_241009.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/results_MLvis_241101.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/results_rTMS.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/revision_draft1.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/revision_draft11.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/revision_draft1_Backup_241130.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/revision_response1.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/revision_response_250124.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/revision_suppleText_sFigs.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/revisiting_your_memory.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/rs1_new.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/rs2_new.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/scidata-data-descriptor-document-template.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/ssk3.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/supplementary_1st_20230531.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/temp.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/user-manual.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/v8_hetero-COVID_manuscript_240221.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/vmPFC_발표용_PDF_final.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/wecandoit_Data_ReadMe_240110.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/weightwatcher.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/weightwatcher_BrainLM.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/weightwatcher_SwiFT.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/공고문.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/공고안내서.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/뇌데사 책 배포 공지.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/독자 AI 파운데이션 모델.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/세미나 보고서 형식.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/심리학특강-포스터.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/연구교류회_poster_2.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/연합랩미팅 DIVER poster.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/연합랩미팅 sismologia poster.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/이아현_Braindayposter.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/저널클럽.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/커넥텀_튜토리얼_SwiFT_SwiFUN_240701.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/파견연구계획서_왕희환.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/교내융복합연구제안서.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/뇌마음행동 개별연구 발표회 포스터_이태양.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/뇌마음행동 개별연구 보고서_이태양_수정본.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/룩시드랩스_예산계획서.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/문서.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/배상윤 파견연구 계획서.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/생명윤리교육_이보희.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/실험설계.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/심리학과 뉴스레터 2024년 봄호 1호 목차 및 내용_ver1.2.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/심리학특강-포스터_ver8.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/연습장_Discussion.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/연합랩미팅 DIVER poster_로고수정.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/연합랩미팅 QML Poster.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/이승주_프로포절_0924랩미팅발표.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/제안서-digital phenotyping.docx
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/제안서-교내융합연구_사회대 차지욱 교수님.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/커넥텀_플래닝고_협업.pdf
+/Users/jiookcha/Documents/git/AI-CoScientist/papers_collection/프로포절_박마리아.pdf

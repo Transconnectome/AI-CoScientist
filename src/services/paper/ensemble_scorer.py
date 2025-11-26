@@ -29,7 +29,9 @@ class EnsemblePaperScorer:
         hybrid_weight: float = 0.3,
         multitask_weight: float = 0.3,
         use_gpt4: bool = True,
-        device: Optional[str] = None
+        device: Optional[str] = None,
+        include_advanced_metrics: bool = True,
+        advanced_metrics_weight: float = 0.15
     ):
         """Initialize ensemble scorer.
 
@@ -39,6 +41,8 @@ class EnsemblePaperScorer:
             multitask_weight: Weight for Multi-task model (default 0.3)
             use_gpt4: Whether to include GPT-4 (requires API key)
             device: Device for PyTorch models (cuda/cpu)
+            include_advanced_metrics: Whether to compute advanced metrics (default True)
+            advanced_metrics_weight: Weight for advanced metrics in overall score (default 0.15)
         """
         # Normalize weights
         total_weight = gpt4_weight + hybrid_weight + multitask_weight
@@ -47,6 +51,8 @@ class EnsemblePaperScorer:
         self.multitask_weight = multitask_weight / total_weight
 
         self.use_gpt4 = use_gpt4
+        self.include_advanced_metrics = include_advanced_metrics
+        self.advanced_metrics_weight = advanced_metrics_weight
 
         # Set device
         if device is None:
@@ -309,6 +315,19 @@ Return JSON:
                 "interpretation": self._interpret_agreement(max_diff)
             }
 
+        # Compute advanced metrics if enabled
+        if self.include_advanced_metrics:
+            result["advanced_metrics"] = await self._compute_advanced_metrics(paper_text)
+            
+            # Optionally blend advanced metrics into overall score
+            if self.advanced_metrics_weight > 0:
+                advanced_score = self._aggregate_advanced_score(result["advanced_metrics"])
+                # Weighted blend: existing score (1 - weight) + advanced (weight)
+                result["overall"] = (
+                    result["overall"] * (1 - self.advanced_metrics_weight) +
+                    advanced_score * self.advanced_metrics_weight
+                )
+
         return result
 
     def _interpret_agreement(self, max_diff: float) -> str:
@@ -328,6 +347,61 @@ Return JSON:
             return "Moderate agreement - some uncertainty"
         else:
             return "Low agreement - significant uncertainty, recommend human review"
+
+    async def _compute_advanced_metrics(self, paper_text: str) -> Dict:
+        """Compute advanced metrics (reproducibility, narrative).
+        
+        Args:
+            paper_text: Full paper text
+            
+        Returns:
+            Dict with reproducibility and narrative scores
+        """
+        from src.services.paper.metrics import PaperMetrics
+        
+        # Extract code snippets (simplified - looks for code blocks)
+        import re
+        code_pattern = r'```[\s\S]*?```|`[^`]+`'
+        code_snippets = re.findall(code_pattern, paper_text)
+        
+        # Compute reproducibility
+        reproducibility_score = PaperMetrics.score_reproducibility(
+            content=paper_text,
+            code_snippets=code_snippets
+        )
+        
+        # Extract abstract and intro (heuristic)
+        # Assume first 500 chars as abstract, next 500 as intro
+        abstract = paper_text[:500]
+        introduction = paper_text[500:1000] if len(paper_text) > 500 else ""
+        
+        # Compute narrative arc
+        narrative_result = await PaperMetrics.score_narrative_arc(
+            abstract=abstract,
+            introduction=introduction
+        )
+        
+        return {
+            "reproducibility": float(reproducibility_score),
+            "narrative": narrative_result
+        }
+    
+    def _aggregate_advanced_score(self, advanced_metrics: Dict) -> float:
+        """Aggregate advanced metrics into a single 0-10 score.
+        
+        Args:
+            advanced_metrics: Dict with reproducibility and narrative scores
+            
+        Returns:
+            Aggregated score (0-10)
+        """
+        # Weighted average: reproducibility (60%), narrative (40%)
+        reproducibility = advanced_metrics.get("reproducibility", 5.0)
+        narrative_hook = advanced_metrics.get("narrative", {}).get("hook_score", 5.0)
+        
+        aggregate = reproducibility * 0.6 + narrative_hook * 0.4
+        return min(10.0, max(0.0, aggregate))
+
 
 
 async def test_ensemble():

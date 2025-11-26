@@ -11,6 +11,55 @@ from sqlalchemy.orm import selectinload
 from src.services.llm.service import LLMService
 from src.services.knowledge_base.search import KnowledgeBaseSearch
 from src.models.project import Project, Paper, PaperSection, Hypothesis, Experiment, PaperStatus
+from dataclasses import dataclass
+from typing import List
+
+@dataclass
+class GenerationRequest:
+    section_type: str
+    topic: str
+    key_points: List[str]
+    target_journal: str = "Nature"
+    style_guide: Optional[str] = None
+
+class SectionGenerator:
+    def __init__(self, llm, rag_client):
+        self.llm = llm
+        self.rag = rag_client
+
+    async def generate_section(self, request: GenerationRequest) -> str:
+        # 1. Retrieve context from RAG
+        context = []
+        if self.rag:
+            query = f"{request.topic} {request.section_type}"
+            context = await self.rag.search(query)
+        
+        context_str = "\\n".join(context) if context else "No external context."
+
+        # 2. Construct prompt with style guide
+        prompt = f"""
+        Write the {request.section_type} section for a {request.target_journal} paper.
+        
+        Topic: {request.topic}
+        Key Points:
+        {chr(10).join(f'- {p}' for p in request.key_points)}
+        
+        Context from Literature:
+        {context_str}
+        
+        Style Guide:
+        {request.style_guide or "Use clear, concise scientific writing."}
+        
+        Requirements:
+        - Follow the structure of {request.target_journal} papers.
+        - Integrate the provided key points naturally.
+        - Use the literature context to support arguments.
+        """
+
+        # 3. Generate content
+        response, _ = await self.llm.generate(prompt)
+        return response
+
 
 
 class PaperGenerator:
@@ -237,22 +286,25 @@ class PaperGenerator:
             ])
 
         prompt = f"""
-        Write an academic abstract for this research.
-
+        Write a "Nature-style" abstract for this research.
+        
         Research Question: {project.research_question}
         Domain: {project.domain}
-
+        
         Hypotheses:
         {hypotheses_text if hypotheses_text else "Not specified"}
-
+        
         Structure points: {structure.get('abstract', [])}
-
+        
         Requirements:
-        - 150-250 words
-        - Background, methods, results, conclusion structure
-        - Clear and concise
-        - Academic tone
-
+        - **Narrative Hook**: Start with a broad statement that appeals to a general scientist (not just a specialist).
+        - **The Gap**: Clearly state what is unknown and why it matters.
+        - **The "Here we show"**: Explicitly state the main finding ("Here we show that...").
+        - **The Surprise**: Highlight what is unexpected or conceptually novel.
+        - **Broad Impact**: End with a sentence on the wider implications.
+        - 150-200 words.
+        - No jargon in the first sentence.
+        
         Return only the abstract text.
         """
 
@@ -291,24 +343,24 @@ class PaperGenerator:
                 literature_context = ""
 
         prompt = f"""
-        Write the Introduction section for this academic paper.
-
+        Write a "Nature-style" Introduction for this academic paper.
+        
         Research Question: {project.research_question}
         Domain: {project.domain}
         Description: {project.description or "Not provided"}
-
+        
         Related literature:
         {literature_context if literature_context else "Limited literature available"}
-
+        
         Structure: {structure.get('introduction', [])}
-
+        
         Requirements:
-        - Provide background and context
-        - Identify research gap
-        - State objectives clearly
-        - 3-4 paragraphs
-        - Academic tone with proper flow
-
+        - **Funnel Structure**: Start broad (general audience), narrow down to the specific gap.
+        - **No Jargon**: The first paragraph must be readable by any scientist.
+        - **The "But"**: Clearly articulate the conflict or gap in existing knowledge ("However, it remains unknown...").
+        - **Conceptual Advance**: Explicitly state how this work changes the paradigm.
+        - 3-4 paragraphs.
+        
         Return only the introduction text.
         """
 

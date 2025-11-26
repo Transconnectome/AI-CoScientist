@@ -1,6 +1,6 @@
 """Pydantic schemas for Hybrid RAG API."""
 
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 from pydantic import BaseModel, Field
 
 
@@ -98,4 +98,4 @@ class HybridRAGStatusResponse(BaseModel):
     enabled_providers: List[str]
     ensemble_weights: Dict[str, float]
     nemotron_services: Dict[str, str]
-    configuration: Dict[str, any]
+    configuration: Dict[str, Any]

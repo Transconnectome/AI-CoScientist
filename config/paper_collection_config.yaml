@@ -1,0 +1,21 @@
+journals:
+  nature:
+    url: "https://www-nature-com-ssl.libproxy.snu.ac.kr"
+    search_url: "/search/advanced"
+    date_range:
+      start: 2020
+      end: 2025
+    target_count: 100
+    
+download:
+  output_dir: "data/reference_papers/pdfs"
+  metadata_file: "data/reference_papers/metadata.json"
+  rate_limit_seconds: 4
+  max_retries: 3
+  timeout_seconds: 30
+  
+filters:
+  # Focus on high-quality research articles
+  article_types:
+    - "Article"
+    - "Review"
