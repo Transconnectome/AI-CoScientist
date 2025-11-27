@@ -1,0 +1,354 @@
+{
+  "papers": [
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07441-w",
+      "title": "A whole-slide foundation model for digital pathology from real-world data",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06555-x",
+      "title": "A foundation model for generalizable disease detection from retinal images",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07894-z",
+      "title": "A pathology foundation model for cancer diagnosis and prognosis prediction",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08411-y",
+      "title": "A cell atlas foundation model for scalable search of similar human cells",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08338-4",
+      "title": "The Human Cell Atlas from a cell census to a unified foundation model",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08328-6",
+      "title": "Accurate predictions on small data with a tabular foundation model",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09005-y",
+      "title": "A foundation model for the Earth system",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08378-w",
+      "title": "A vision\u2013language foundation model for precision oncology",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08391-z",
+      "title": "A foundation model of transcription across human cell types",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08829-y",
+      "title": "Foundation model of neural activity predicts response to new stimulus types",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09079-8",
+      "title": "A fully open AI foundation model applied to chest radiography",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09215-4",
+      "title": "A foundation model to predict and capture human cognition",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08169-3",
+      "title": "Foundation models for fast, label-free detection of glioma infiltration",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08710-y",
+      "title": "Towards multimodal foundation models in molecular cell biology",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07204-7",
+      "title": "A patterned human neural tube model using microfluidic gradients",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08469-8",
+      "title": "Precise modelling of mitochondrial diseases using optimized mitoBEs",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09631-6",
+      "title": "Aligning machine and human visual representations across abstraction levels",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09850-x",
+      "title": "Comprehensive echocardiogram evaluation with view primed vision language AI.",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-023-01623-8",
+      "title": "Counted at last: US federal agency to pilot PhD survey with questions on LGBT+ scientists",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-03146-y",
+      "title": "Ebola virus antibody decay\u2013stimulation in a high proportion of survivors",
+      "venue": "Nature",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-05881-4",
+      "title": "Foundation models for generalist medical artificial intelligence",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07215-4",
+      "title": "Automated model building and protein identification in cryo-EM maps",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08025-4",
+      "title": "Scalable watermarking for identifying large language model outputs",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07763-9",
+      "title": "A Drosophila computational brain model reveals sensorimotor processing",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07689-2",
+      "title": "Antiferromagnetic phase transition in a 3D fermionic Hubbard model",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07451-8",
+      "title": "Mapping model units to visual neurons reveals population code for social behaviour",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07716-2",
+      "title": "A human autoimmune organoid model reveals IL-7 function in coeliac disease",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08878-3",
+      "title": "Multimodal cell maps as a foundation for structural and functional genomics",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07042-7",
+      "title": "A model of human neural networks reveals NPTX2 pathology in ALS and FTLD",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06999-1",
+      "title": "Model uncertainty obscures major driver of soil carbon",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08628-5",
+      "title": "A generative model for inorganic materials design",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08661-4",
+      "title": "Optimizing generative AI by backpropagating language model feedback",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-02599-9",
+      "title": "Has your paper been used to train an AI model? Almost certainly",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-025-00229-6",
+      "title": "China\u2019s cheap, open AI model DeepSeek thrills scientists",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06368-y",
+      "title": "Pluripotent stem cell-derived model of the post-implantation human embryo",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-03169-9",
+      "title": "\u2018In awe\u2019: scientists impressed by latest ChatGPT model o1",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-022-01192-2",
+      "title": "Climate simulations: recognize the \u2018hot model\u2019 problem",
+      "venue": "Nature",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-025-00259-0",
+      "title": "How China created AI model DeepSeek and shocked the world",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09475-0",
+      "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-022-05246-3",
+      "title": "Embryo model completes gastrulation to neurulation and organogenesis",
+      "venue": "Nature",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07244-z",
+      "title": "Light-wave-controlled Haldane model in monolayer hexagonal boron nitride",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-022-01997-1",
+      "title": "Greek scientists desperate for a national research foundation",
+      "venue": "Nature",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08808-3",
+      "title": "Human assembloid model of the ascending neural sensory pathway",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-021-04267-8",
+      "title": "Human blastoids model blastocyst development and implantation",
+      "venue": "Nature",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-2085-3",
+      "title": "Simulation of Hubbard model physics in WSe2/WS2 moir\u00e9 superlattices",
+      "venue": "Nature",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09113-9",
+      "title": "A molecular cell atlas of mouse lemur, an emerging model primate",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-2708-8",
+      "title": "A mouse-adapted model of SARS-CoV-2 to test COVID-19 countermeasures",
+      "venue": "Nature",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-2383-9",
+      "title": "An in vitro model of early anteroposterior organization during human development",
+      "venue": "Nature",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-022-05123-z",
+      "title": "Extended Bose\u2013Hubbard model with dipolar excitons",
+      "venue": "Nature",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-2388-4",
+      "title": "Reversing Parkinson Disease Model with in situ Converted Nigral Neurons",
+      "venue": "Nature",
+      "year": 2020,
+      "has_open_access": true
+    }
+  ]
+}

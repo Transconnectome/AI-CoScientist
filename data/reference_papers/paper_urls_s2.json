@@ -1,0 +1,4932 @@
+{
+  "papers": [
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07441-w",
+      "title": "A whole-slide foundation model for digital pathology from real-world data",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06555-x",
+      "title": "A foundation model for generalizable disease detection from retinal images",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07894-z",
+      "title": "A pathology foundation model for cancer diagnosis and prognosis prediction",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08411-y",
+      "title": "A cell atlas foundation model for scalable search of similar human cells",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08338-4",
+      "title": "The Human Cell Atlas from a cell census to a unified foundation model",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08328-6",
+      "title": "Accurate predictions on small data with a tabular foundation model",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09005-y",
+      "title": "A foundation model for the Earth system",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08378-w",
+      "title": "A vision\u2013language foundation model for precision oncology",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08391-z",
+      "title": "A foundation model of transcription across human cell types",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08829-y",
+      "title": "Foundation model of neural activity predicts response to new stimulus types",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09079-8",
+      "title": "A fully open AI foundation model applied to chest radiography",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09215-4",
+      "title": "A foundation model to predict and capture human cognition",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08169-3",
+      "title": "Foundation models for fast, label-free detection of glioma infiltration",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08710-y",
+      "title": "Towards multimodal foundation models in molecular cell biology",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07204-7",
+      "title": "A patterned human neural tube model using microfluidic gradients",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08469-8",
+      "title": "Precise modelling of mitochondrial diseases using optimized mitoBEs",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09631-6",
+      "title": "Aligning machine and human visual representations across abstraction levels",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09850-x",
+      "title": "Comprehensive echocardiogram evaluation with view primed vision language AI.",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-023-01623-8",
+      "title": "Counted at last: US federal agency to pilot PhD survey with questions on LGBT+ scientists",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-03146-y",
+      "title": "Ebola virus antibody decay\u2013stimulation in a high proportion of survivors",
+      "venue": "Nature",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-05881-4",
+      "title": "Foundation models for generalist medical artificial intelligence",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07215-4",
+      "title": "Automated model building and protein identification in cryo-EM maps",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08025-4",
+      "title": "Scalable watermarking for identifying large language model outputs",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07763-9",
+      "title": "A Drosophila computational brain model reveals sensorimotor processing",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07689-2",
+      "title": "Antiferromagnetic phase transition in a 3D fermionic Hubbard model",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07451-8",
+      "title": "Mapping model units to visual neurons reveals population code for social behaviour",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07716-2",
+      "title": "A human autoimmune organoid model reveals IL-7 function in coeliac disease",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08878-3",
+      "title": "Multimodal cell maps as a foundation for structural and functional genomics",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07042-7",
+      "title": "A model of human neural networks reveals NPTX2 pathology in ALS and FTLD",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06999-1",
+      "title": "Model uncertainty obscures major driver of soil carbon",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08628-5",
+      "title": "A generative model for inorganic materials design",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08661-4",
+      "title": "Optimizing generative AI by backpropagating language model feedback",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-02599-9",
+      "title": "Has your paper been used to train an AI model? Almost certainly",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-025-00229-6",
+      "title": "China\u2019s cheap, open AI model DeepSeek thrills scientists",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06368-y",
+      "title": "Pluripotent stem cell-derived model of the post-implantation human embryo",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-03169-9",
+      "title": "\u2018In awe\u2019: scientists impressed by latest ChatGPT model o1",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-022-01192-2",
+      "title": "Climate simulations: recognize the \u2018hot model\u2019 problem",
+      "venue": "Nature",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-025-00259-0",
+      "title": "How China created AI model DeepSeek and shocked the world",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09475-0",
+      "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-022-05246-3",
+      "title": "Embryo model completes gastrulation to neurulation and organogenesis",
+      "venue": "Nature",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07244-z",
+      "title": "Light-wave-controlled Haldane model in monolayer hexagonal boron nitride",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-022-01997-1",
+      "title": "Greek scientists desperate for a national research foundation",
+      "venue": "Nature",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08808-3",
+      "title": "Human assembloid model of the ascending neural sensory pathway",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-021-04267-8",
+      "title": "Human blastoids model blastocyst development and implantation",
+      "venue": "Nature",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-2085-3",
+      "title": "Simulation of Hubbard model physics in WSe2/WS2 moir\u00e9 superlattices",
+      "venue": "Nature",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09113-9",
+      "title": "A molecular cell atlas of mouse lemur, an emerging model primate",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-2708-8",
+      "title": "A mouse-adapted model of SARS-CoV-2 to test COVID-19 countermeasures",
+      "venue": "Nature",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-2383-9",
+      "title": "An in vitro model of early anteroposterior organization during human development",
+      "venue": "Nature",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-022-05123-z",
+      "title": "Extended Bose\u2013Hubbard model with dipolar excitons",
+      "venue": "Nature",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-2388-4",
+      "title": "Reversing Parkinson Disease Model with in situ Converted Nigral Neurons",
+      "venue": "Nature",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-021-01076-x",
+      "title": "How a historic funding boom might transform the US National Science Foundation",
+      "venue": "Nature",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-022-04951-3",
+      "title": "C. elegans as a model for inter-individual variation in metabolism",
+      "venue": "Nature",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-021-04258-9",
+      "title": "On the role of atmospheric model transport uncertainty in estimating the Chinese land carbon sink",
+      "venue": "Nature",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-3033-y",
+      "title": "Spin transport in a tunable Heisenberg model realized with ultracold atoms",
+      "venue": "Nature",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-03058-x",
+      "title": "Competing magnetic orders in a bilayer Hubbard model with ultracold atoms",
+      "venue": "Nature",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-2673-2",
+      "title": "Structure of LRRK2 in Parkinson\u2019s disease and model for microtubule interaction",
+      "venue": "Nature",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-021-03369-7",
+      "title": "Presymptomatic training mitigates functional deficits in a mouse model of Rett syndrome",
+      "venue": "Nature",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-2022-5",
+      "title": "A simple dynamic model explains the diversity of island birds worldwide",
+      "venue": "Nature",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-2563-7",
+      "title": "Rescue of oxytocin response and social behavior in a rodent model of autism",
+      "venue": "Nature",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-020-02051-8",
+      "title": "Exclusive: US National Science Foundation reveals first details on foreign-influence investigations",
+      "venue": "Nature",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07487-w",
+      "title": "Accurate structure prediction of biomolecular interactions with AlphaFold 3",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07421-0",
+      "title": "Detecting hallucinations in large language models using semantic entropy",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06747-5",
+      "title": "Solving olympiad geometry without human demonstrations",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07711-7",
+      "title": "Loss of plasticity in deep continual learning",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07566-y",
+      "title": "AI models collapse when trained on recursively generated data",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09422-z",
+      "title": "DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08744-2",
+      "title": "Mastering diverse control tasks through world models",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08252-9",
+      "title": "Probabilistic weather forecasting with machine learning",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07618-3",
+      "title": "A multimodal generative AI copilot for human pathology",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-07004-5",
+      "title": "Conformational ensembles of the human intrinsically disordered proteome",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08866-7",
+      "title": "Towards conversational diagnostic artificial intelligence",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07132-6",
+      "title": "Multisensory gamma stimulation promotes glymphatic clearance of amyloid",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07686-5",
+      "title": "Whole-brain annotation and multi-connectome cell typing of Drosophila",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07145-1",
+      "title": "Global prediction of extreme floods in ungauged watersheds",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07335-x",
+      "title": "Scaling neural machine translation to 200 languages",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07930-y",
+      "title": "Larger and more instructable language models become less reliable",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07167-9",
+      "title": "Mitochondrial complex I activity in microglia sustains neuroinflammation",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08463-0",
+      "title": "Engineered heart muscle allografts for heart repair in primates and humans",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07020-z",
+      "title": "Fertilizer management for global ammonia emission reduction",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07687-4",
+      "title": "Fully forward mode training for optical neural networks",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07069-w",
+      "title": "A single-cell time-lapse of mouse prenatal development from gastrula to birth",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08840-3",
+      "title": "Functional connectomics reveals general wiring rule in mouse visual cortex",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08460-3",
+      "title": "Thermalization and criticality on an analogue\u2013digital quantum simulator",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07379-z",
+      "title": "Tumour-selective activity of RAS-GTP inhibition in pancreatic cancer",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07090-z",
+      "title": "Site-specific reactivity of stepped Pt surfaces driven by stress release",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08008-5",
+      "title": "Targeting immune\u2013fibroblast cell communication in heart failure",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08897-0",
+      "title": "End-to-end data-driven weather prediction",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07871-6",
+      "title": "Cellular communities reveal trajectories of brain ageing and Alzheimer\u2019s disease",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07024-9",
+      "title": "Avoiding fusion plasma tearing instability with deep reinforcement learning",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06956-y",
+      "title": "Motion of VAPB molecules reveals ER\u2013mitochondria contact site subdomains",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07342-y",
+      "title": "Regioselective hydroformylation of propene catalysed by rhodium-zeolite",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09442-9",
+      "title": "The Virtual Lab of AI agents designs new SARS-CoV-2 nanobodies",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09112-w",
+      "title": "A neutral-atom Hubbard quantum simulator in the cryogenic regime",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08477-8",
+      "title": "SARS-CoV-2 evolution on a dynamic immune landscape",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06221-2",
+      "title": "Scientific discovery in the age of artificial intelligence",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06139-9",
+      "title": "Transfer learning enables predictions in network biology",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-03214-7",
+      "title": "Chemistry Nobel goes to developers of AlphaFold AI that predicts protein structures",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07681-w",
+      "title": "In situ targeted base editing of bacteria in the mouse gut",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07939-3",
+      "title": "Connectome-constrained networks predict neural activity across the fly visual system",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07547-1",
+      "title": "Global variability in atmospheric new particle formation mechanisms",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06291-2",
+      "title": "Large language models encode clinical knowledge",
+      "venue": "Nature",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06647-8",
+      "title": "Role play with large language models",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08869-4",
+      "title": "Towards accurate differential diagnosis with large language models",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06160-y",
+      "title": "Health system-scale language models are all-purpose prediction engines",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-02842-3",
+      "title": "Researchers built an \u2018AI Scientist\u2019 \u2014 what can it do?",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-02420-7",
+      "title": "AI models fed AI-generated data quickly spew nonsense",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-025-02495-w",
+      "title": "OpenAI launches reasoning LLM that you can download and tweak",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-023-04043-w",
+      "title": "DeepMind AI outdoes human mathematicians on unsolved problem",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-023-03545-x",
+      "title": "AI writes summaries of preprints in bioRxiv trial",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06924-6",
+      "title": "Mathematical discoveries from program search with large language models",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06792-0",
+      "title": "Autonomous chemical research with large language models",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-01314-y",
+      "title": "How does ChatGPT \u2018think\u2019? Psychology and neuroscience crack open AI large language models",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-023-03998-0",
+      "title": "Large language models help computer programs to evolve",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06455-0",
+      "title": "Publisher Correction: Large language models encode clinical knowledge.",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-02839-y",
+      "title": "Why I'm committed to breaking the bias in large language models.",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-01562-y",
+      "title": "Audio long read: How does ChatGPT 'think'? Psychology and neuroscience crack open AI large language models.",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-023-01411-4",
+      "title": "Online tools help large language models to solve problems through reasoning",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-023-03790-0",
+      "title": "Large language models direct automated chemistry laboratory",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09581-z",
+      "title": "Age and gender distortion in online media and large language models",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09749-7",
+      "title": "Semantic design of functional de novo genes from a genomic language model.",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-00824-z",
+      "title": "Three reasons why AI doesn\u2019t model human language",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07710-8",
+      "title": "Split intein-mediated protein trans-splicing to express large dystrophins",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08086-5",
+      "title": "Large-scale medieval urbanism traced by UAV\u2013lidar in highland Central Asia",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-05906-y",
+      "title": "Large-scale mapping and mutagenesis of human transcriptional effector domains",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06768-0",
+      "title": "Exploring large-scale entanglement in quantum simulation",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-023-03845-2",
+      "title": "Small numbers of sodium channels on cartilage cells have a large effect on joint damage",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09680-x",
+      "title": "The Taiwan Precision Medicine Initiative provides a cohort for large-scale studies.",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08322-y",
+      "title": "Global 3D model of mantle attenuation using seismic normal modes",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09437-6",
+      "title": "Ancient DNA connects large-scale migration with the spread of Slavs",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-00189-3",
+      "title": "Two-faced AI language models learn to hide deception.",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-021-04148-0",
+      "title": "A large West Antarctic Ice Sheet explains early Neogene sea-level amplitude",
+      "venue": "Nature",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-021-03414-5",
+      "title": "Dynamics of large effusive eruptions driven by caldera collapse",
+      "venue": "Nature",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-023-01504-0",
+      "title": "Machine-learning model makes predictions about network biology",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-025-03386-w",
+      "title": "AI language models killed the Turing test: do we even need a replacement?",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-2577-1",
+      "title": "Discovery of SARS-CoV-2 Antivirals through Large-scale Drug Repositioning",
+      "venue": "Nature",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-2448-9",
+      "title": "Potential for large-scale CO2 removal via enhanced rock weathering with croplands",
+      "venue": "Nature",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-025-01500-6",
+      "title": "AI language models develop social norms like groups of people.",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-00964-2",
+      "title": "Meta\u2019s AI translation model embraces overlooked languages",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-021-04287-4",
+      "title": "Large-scale migration into Britain during the Middle to Late Bronze Age",
+      "venue": "Nature",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-021-03248-1",
+      "title": "Propagation of large earthquakes as self-healing pulses or mild cracks",
+      "venue": "Nature",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-020-2979-0",
+      "title": "Detection of large-scale X-ray bubbles in the Milky Way halo",
+      "venue": "Nature",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-025-00068-5",
+      "title": "AI hallucinations can\u2019t be stopped \u2014 but these techniques can limit their damage",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-022-01705-z",
+      "title": "Open-source language AI challenges big tech\u2019s models",
+      "venue": "Nature",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-00592-w",
+      "title": "Is ChatGPT making scientists hyper-productive? The highs and lows of using AI",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09298-z",
+      "title": "Design of highly functional genome editors by modelling CRISPR\u2013Cas sequences",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-023-02361-7",
+      "title": "ChatGPT broke the Turing test \u2014 the race is on for new ways to assess AI",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-03905-1",
+      "title": "How close is AI to human-level intelligence?",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-03990-2",
+      "title": "The AI revolution is running out of data. What can researchers do?",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07107-7",
+      "title": "High-threshold and low-overhead fault-tolerant quantum memory",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-02757-z",
+      "title": "AI firms must play fair when they use academic data in training",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08702-y",
+      "title": "Water structure and electric fields at the interface of oil droplets",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07902-2",
+      "title": "Linear symmetric self-selecting 14-bit kinetic molecular memristors",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09505-x",
+      "title": "Delegation to artificial intelligence can increase dishonest behaviour",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06734-w",
+      "title": "An autonomous laboratory for the accelerated synthesis of novel materials",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-023-01295-4",
+      "title": "Why open-source generative AI models are an ethical way forward for science",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-023-03507-3",
+      "title": "ChatGPT has entered the classroom: how LLMs could transform education",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07028-5",
+      "title": "Drought triggers and sustains overnight fires in North America",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06415-8",
+      "title": "De novo design of protein structure and function with RFdiffusion",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-023-02366-2",
+      "title": "ChatGPT is a black box: how AI research can break it open",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08639-2",
+      "title": "A mixed-precision memristor and SRAM compute-in-memory AI processor",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09227-0",
+      "title": "Detecting structural heart disease from electrocardiograms using AI",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-05759-5",
+      "title": "Thousands of conductance levels in memristors integrated on CMOS",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06474-x",
+      "title": "Anthropogenic fingerprints in daily precipitation revealed by deep learning",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07216-3",
+      "title": "Structure and assembly of a bacterial gasdermin pore",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07327-x",
+      "title": "Stepwise activation of a metabotropic glutamate receptor",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-024-00779-1",
+      "title": "Chatbot AI makes racist judgements on the basis of dialect",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-025-00005-6",
+      "title": "Particle accelerators get an assist from AI co-pilots",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08136-y",
+      "title": "A mechanism for hypoxia-induced inflammatory cell death in cancer",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/d41586-025-02343-x",
+      "title": "DeepMind and OpenAI models solve maths problems at level of top students",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09482-1",
+      "title": "Long-range PM2.5 pollution and health impacts from the 2023 Canadian wildfires",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08216-z",
+      "title": "Spatially restricted immune and microbiota-driven adaptation of the gut",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09529-3",
+      "title": "Learning the natural history of human disease with generative transformers",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06045-0",
+      "title": "A genomic mutational constraint map using variation in 76,156 human genomes",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07187-5",
+      "title": "Disease-associated astrocyte epigenetic memory promotes CNS pathology",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08675-y",
+      "title": "Multimodal generative AI for medical image interpretation",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08514-6",
+      "title": "Emergence of collective oscillations in massive human crowds",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08600-3",
+      "title": "World and Human Action Models towards gameplay ideation",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09384-2",
+      "title": "Training of physical neural networks",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07454-5",
+      "title": "Reproducible graphene synthesis by oxygen-free chemical vapour deposition",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07534-6",
+      "title": "Explainable El Ni\u00f1o predictability from climate mode interactions",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08359-z",
+      "title": "Joint speech and text machine translation for up to 100 languages",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08337-5",
+      "title": "Structural diversity of axonemes across mammalian motile cilia",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08562-y",
+      "title": "An early precursor CD8+ T cell that adapts to acute or chronic viral infection",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09119-3",
+      "title": "Observation of charge\u2013parity symmetry breaking in baryon decays",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02857-3",
+      "title": "Towards a general-purpose foundation model for computational pathology",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02856-4",
+      "title": "A visual-language foundation model for computational pathology",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02959-y",
+      "title": "Vision\u2013language foundation model for echocardiogram interpretation",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03141-0",
+      "title": "A foundation model for clinical-grade computational pathology and rare cancers detection",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-023-02504-3",
+      "title": "A visual\u2013language foundation model for pathology image analysis using medical Twitter",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02887-x",
+      "title": "Transparent medical image AI via an image\u2013text foundation model grounded in medical literature",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03359-y",
+      "title": "Self-improving generative foundation model for synthetic medical image generation and clinical applications",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03185-2",
+      "title": "A generalist vision\u2013language foundation model for diverse biomedical tasks",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03233-x",
+      "title": "A foundation model for clinician-centered drug repurposing",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03333-8",
+      "title": "An explainable foundation model for drug repurposing",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03747-y",
+      "title": "A multimodal vision foundation model for clinical dermatology",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03780-x",
+      "title": "Real-world deployment of a fine-tuned pathology foundation model for lung cancer biomarker detection",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03982-3",
+      "title": "A multimodal whole-slide foundation model for pathology",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03900-7",
+      "title": "An eyecare foundation model for clinical assistance: a randomized controlled trial",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03859-5",
+      "title": "Building the world\u2019s first truly global medical foundation model",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02970-3",
+      "title": "Artificial intelligence in surgery",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-023-02335-2",
+      "title": "Personalized antisense oligonucleotides \u2018for free, for life\u2019 \u2014 the n-Lorem Foundation",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03148-7",
+      "title": "Outpatient reception via collaboration between nurses and a large language model: a randomized controlled trial",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-023-02412-6",
+      "title": "Large language model AI chatbots require approval as medical devices",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03416-6",
+      "title": "A generalist medical language model for disease diagnosis assistance",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-023-02226-6",
+      "title": "A longitudinal circulating tumor DNA-based model associated with survival in metastatic non-small-cell lung cancer",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-023-02475-5",
+      "title": "A reinforcement learning model for AI-based decision support in skin cancer",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03726-3",
+      "title": "Comparative benchmarking of the DeepSeek large language model on medical tasks and clinical reasoning",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03146-9",
+      "title": "Safety and reactogenicity of a controlled human infection model of sand fly-transmitted cutaneous leishmaniasis",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03520-1",
+      "title": "Medical large language model for diagnostic reasoning across specialties",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-023-02656-2",
+      "title": "Reporting standards for the use of large language model-linked chatbots for health advice",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-023-02720-x",
+      "title": "A six-step quality-improvement model for cancer diagnosis and treatment in China",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03888-0",
+      "title": "A personal health large language model for sleep and fitness coaching",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03716-5",
+      "title": "A reference model of circulating hematopoietic stem cells across the lifespan with applications to diagnostics",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03466-w",
+      "title": "In vivo base editing extends lifespan of a humanized mouse model of prion disease",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-022-01811-5",
+      "title": "Machine learning model to predict mental health crises from electronic health records",
+      "venue": "Nature Medicine",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-023-02615-x",
+      "title": "Model-based predictions of protective HIV pre-exposure prophylaxis adherence levels in cisgender women",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03856-8",
+      "title": "Large language model-based biological age prediction in large-scale populations",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03836-y",
+      "title": "Rapid deployment of large language model DeepSeek in Chinese hospitals demands a regulatory response",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03917-y",
+      "title": "Influenza vaccine strain selection with an AI-based evolutionary and antigenicity model",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-022-01799-y",
+      "title": "A T cell resilience model associated with response to immunotherapy in multiple tumor types",
+      "venue": "Nature Medicine",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-020-1001-6",
+      "title": "A stochastic agent-based model of the SARS-CoV-2 epidemic in France",
+      "venue": "Nature Medicine",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03942-x",
+      "title": "Clinical implementation of an AI-based prediction model for decision support for patients undergoing colorectal cancer surgery",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03670-2",
+      "title": "Inflammation and disrupted hematopoiesis drive clonal dominance in a mouse model of VEXAS syndrome",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03540-x",
+      "title": "Author Correction: In vivo base editing extends lifespan of a humanized mouse model of prion disease",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-020-1036-8",
+      "title": "Using a real-world network to model localized COVID-19 control strategies",
+      "venue": "Nature Medicine",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-020-0759-x",
+      "title": "A controlled human Schistosoma mansoni infection model to advance novel drugs, vaccines and diagnostics",
+      "venue": "Nature Medicine",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-020-1043-9",
+      "title": "Neuronal defects in a human cellular model of 22q11.2 deletion syndrome",
+      "venue": "Nature Medicine",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-022-01997-8",
+      "title": "Publisher Correction: A T cell resilience model associated with response to immunotherapy in multiple tumor types",
+      "venue": "Nature Medicine",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-021-01563-8",
+      "title": "The impact of school opening model on SARS-CoV-2 community incidence and mortality",
+      "venue": "Nature Medicine",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-020-0937-x",
+      "title": "Pre-existing immunity to influenza virus hemagglutinin stalk might drive selection for antibody-escape mutant viruses in a human challenge model",
+      "venue": "Nature Medicine",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-021-01380-z",
+      "title": "\u2018N of 1\u2019 therapies need a better model",
+      "venue": "Nature Medicine",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-021-01566-5",
+      "title": "Author Correction: Chronic stress promotes tumor growth and angiogenesis in a mouse model of ovarian carcinoma",
+      "venue": "Nature Medicine",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-021-01669-z",
+      "title": "Author Correction: The impact of school opening model on SARS-CoV-2 community incidence and mortality",
+      "venue": "Nature Medicine",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-021-01669-z",
+      "title": "Author Correction: The impact of school opening model on SARS-CoV-2 community incidence and mortality",
+      "venue": "Nature Medicine",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03425-5",
+      "title": "The TRIPOD-LLM reporting guideline for studies using large language models",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03139-8",
+      "title": "Integrated image-based deep learning and language models for primary diabetes care",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03489-3",
+      "title": "Clinical applications of human organoids",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02971-2",
+      "title": "Screening and diagnosis of cardiovascular disease using artificial intelligence-enabled cardiac magnetic resonance imaging",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03087-3",
+      "title": "Cell-free DNA for the detection of kidney allograft rejection",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03258-2",
+      "title": "A toolbox for surfacing health equity harms and biases in large language models",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02802-4",
+      "title": "Therapeutic targeting of cellular senescence in diabetic macular edema: preclinical and phase 1 trial results",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03668-w",
+      "title": "SPIRIT 2025 statement: updated guideline for protocols of randomized trials",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02993-w",
+      "title": "Prediction of recurrence risk in endometrial cancer with multimodal deep learning",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03118-z",
+      "title": "AI-based differential diagnosis of dementia etiologies on multimodal data",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03511-2",
+      "title": "Telemedicine-based integrated management of atrial fibrillation in village clinics: a cluster randomized trial",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03406-8",
+      "title": "Autologous macrophage therapy for liver cirrhosis: a phase 2 open-label randomized controlled trial",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03140-1",
+      "title": "An evidence-based screening tool for heart failure with preserved ejection fraction: the HFpEF-ABA score",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-023-02790-x",
+      "title": "Prospective observational study on biomarkers of response in pancreatic ductal adenocarcinoma",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03224-y",
+      "title": "High-throughput identification of repurposable neuroactive drugs with potent anti-glioblastoma activity",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03329-4",
+      "title": "International multicenter validation of AI-driven ultrasound detection of ovarian cancer",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-023-02332-5",
+      "title": "A deep learning algorithm to predict risk of pancreatic cancer from disease trajectories",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03167-4",
+      "title": "Molecular classification to refine surgical and radiotherapeutic decision-making in meningioma",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02995-8",
+      "title": "Prediction of DNA methylation-based tumor types from histopathology in central nervous system tumors with deep learning",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03626-6",
+      "title": "Sociodemographic biases in medical decision making by large language models",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03613-x",
+      "title": "Broad versus limited gene panels to guide treatment in patients with advanced solid tumors: a randomized controlled trial",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03117-0",
+      "title": "Disparities in air pollution attributable mortality in the US population by race/ethnicity and sociodemographic factors",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02895-x",
+      "title": "Single-cell transcriptomic analyses reveal distinct immune cell contributions to epithelial barrier dysfunction in checkpoint inhibitor colitis",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-023-02640-w",
+      "title": "Large-scale pancreatic cancer detection via non-contrast CT and deep learning",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03286-y",
+      "title": "Prediction of brain metastasis development with DNA methylation signatures",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-023-02396-3",
+      "title": "Machine learning for ECG diagnosis and risk stratification of occlusion myocardial infarction",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-023-02229-3",
+      "title": "Real-world effectiveness of a single dose of mpox vaccine in males",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03560-7",
+      "title": "Prediction of mental health risk in adolescents",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03516-x",
+      "title": "Artificial intelligence for direct-to-physician reporting of ambulatory electrocardiography",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03431-7",
+      "title": "Impact of RSVpreF vaccination on reducing the burden of respiratory syncytial virus in infants and older adults",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-022-02134-1",
+      "title": "Multistain deep learning for prediction of prognosis and therapy response in colorectal cancer",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03526-9",
+      "title": "Transmission dynamics of the 2022 mpox epidemic in New York City",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03532-x",
+      "title": "An inflammatory biomarker signature of response to CAR-T cell therapy in non-Hodgkin lymphoma",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03509-w",
+      "title": "Preeclampsia risk prediction from prenatal cell-free DNA screening",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03035-1",
+      "title": "Enhancing pediatric access to cell and gene therapies",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03601-1",
+      "title": "AI-guided precision parenteral nutrition for neonatal intensive care units",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03243-9",
+      "title": "Artificial intelligence guided screening for cardiomyopathies in an obstetric population: a pragmatic randomized clinical trial",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02981-0",
+      "title": "Surgery versus no surgery in platinum-sensitive relapsed ovarian cancer: final overall survival analysis of the SOC-1 randomized phase 3 trial",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-023-02212-y",
+      "title": "Estimating the transmission dynamics of SARS-CoV-2 Omicron BF.7 in Beijing after adjustment of the zero-COVID policy in November\u2013December 2022",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03538-5",
+      "title": "Cerebrospinal fluid circulating tumor DNA profiling for risk stratification and matched treatment of central nervous system metastases",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03369-w",
+      "title": "Can quantum computing crack the biggest challenges in health?",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-022-01911-2",
+      "title": "Emergence of SARS-CoV-2 Omicron lineages BA.4 and BA.5 in South Africa",
+      "venue": "Nature Medicine",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03358-z",
+      "title": "Large floods drive changes in cause-specific mortality in the United States",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-025-03501-4",
+      "title": "Pandemic monitoring with global aircraft-based wastewater surveillance networks",
+      "venue": "Nature Medicine",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02904-z",
+      "title": "Risk-based lung cancer screening performance in a universal healthcare setting",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03232-y",
+      "title": "Health and economic impacts of Lassa vaccination campaigns in West Africa",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03195-0",
+      "title": "DNA liquid biopsy-based prediction of cancer-associated venous thromboembolism",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02852-8",
+      "title": "Enhanced cholera surveillance to improve vaccination campaign efficiency",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02838-6",
+      "title": "Generative models improve fairness of medical classifiers under distribution shifts",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-023-02278-8",
+      "title": "Incident type 2 diabetes attributable to suboptimal diet in 184 countries",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01246-y",
+      "title": "A vision\u2013language foundation model for the generation of realistic chest X-ray images",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01283-7",
+      "title": "A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01497-3",
+      "title": "A generalist foundation model and database for open-world medical image segmentation.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01488-4",
+      "title": "A generalizable pathology foundation model using a unified knowledge distillation pretraining framework.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01365-0",
+      "title": "A data-efficient strategy for building high-performing medical foundation models",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01516-3",
+      "title": "Benchmarking foundation models as feature extractors for weakly supervised computational pathology.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01413-9",
+      "title": "A deep learning system for detecting silent brain infarction and predicting stroke risk",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01284-6",
+      "title": "Simple and effective embedding model for single-cell biology built from ChatGPT",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01045-x",
+      "title": "A transformer-based representation-learning model with unified processing of multimodal input for clinical diagnostics",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01375-y",
+      "title": "Synthetic data boosts medical foundation models",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01302-7",
+      "title": "A multimodal machine learning model for the stratification of breast cancer risk",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01257-9",
+      "title": "Accurate prediction of disease-risk factors from volumetric medical scans by a deep vision model pre-trained with 2D scans",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01007-3",
+      "title": "Cas9-mediated replacement of expanded CAG repeats in a pig model of Huntington\u2019s disease",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01337-w",
+      "title": "A lifespan-generalizable skull-stripping model for magnetic resonance images that leverages prior knowledge from brain atlases",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01456-y",
+      "title": "A generative model uses healthy and diseased image pairs for pixel-level chest X-ray pathology localization.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01370-3",
+      "title": "A deep-learning model for quantifying circulating tumour DNA from the density distribution of DNA-fragment lengths",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01513-6",
+      "title": "Enzyme-converted O kidneys allow ABO-incompatible transplantation without hyperacute rejection in a human decedent model.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01423-7",
+      "title": "A deep generative model for deciphering cellular dynamics and in silico drug discovery in complex diseases.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01471-z",
+      "title": "A collaborative large language model for drug analysis.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-022-00952-9",
+      "title": "A deep-learning model for transforming the style of tissue images from cryosectioned to formalin-fixed and paraffin-embedded",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01455-z",
+      "title": "Accelerating primer design for amplicon sequencing using large language model-powered agents.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01528-z",
+      "title": "A pre-trained large generative model for translating single-cell transcriptomes to proteomes.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01320-5",
+      "title": "A generalist model for enhancing brain MRIs",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01434-4",
+      "title": "Biomimetic model to study penile dysfunctions",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-022-00971-6",
+      "title": "An implantable soft robotic ventilator augments inspiration in a pig model of respiratory insufficiency",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01540-3",
+      "title": "Next-generation anti-A\u03b2 antibodies show promise in a mouse model of Alzheimer disease",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-022-00921-2",
+      "title": "A humanized minipig model for the toxicological testing of therapeutic recombinant antibodies",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-020-0566-1",
+      "title": "Generation of model tissues with dendritic vascular networks via sacrificial laser-sintered carbohydrate templates",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-020-00662-0",
+      "title": "A mathematical model for the quantification of a patient\u2019s sensitivity to checkpoint inhibitors and long-term tumour burden",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-022-00854-w",
+      "title": "Addendum: A tissue-engineered scale model of the heart ventricle",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-020-00662-0",
+      "title": "A mathematical model for the quantification of a patient\u2019s sensitivity to checkpoint inhibitors and long-term tumour burden",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01312-5",
+      "title": "Interpretable identification of cancer genes across biological networks via transformer-powered graph representation learning",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01183-w",
+      "title": "Miniaturized implantable temperature sensors for the long-term monitoring of chronic intestinal inflammation",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01190-x",
+      "title": "A serine-conjugated butyrate prodrug with high oral bioavailability suppresses autoimmune arthritis and neuroinflammation in mice",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01056-8",
+      "title": "Algorithmic fairness in artificial intelligence for medicine and healthcare",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01049-7",
+      "title": "Robust and data-efficient generalization of self-supervised machine learning for diagnostic imaging",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01243-1",
+      "title": "Deep mutational scanning and machine learning for the analysis of antimicrobial-peptide features driving membrane selectivity",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01223-5",
+      "title": "A pathologist\u2013AI collaboration framework for enhancing diagnostic accuracies and efficiencies",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-021-00761-6",
+      "title": "Author Correction: Generation of model tissues with dendritic vascular networks via sacrificial laser-sintered carbohydrate templates",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01242-2",
+      "title": "Contributions of network structure, chemoarchitecture and diagnostic categories to transitions between cognitive topographies",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01209-3",
+      "title": "Durable lymph-node expansion is associated with the efficacy of therapeutic vaccination",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01449-x",
+      "title": "Holographic transcranial ultrasound neuromodulation enhances stimulation efficacy by cooperatively recruiting distributed brain circuits.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01387-8",
+      "title": "Targeting inflammation with chimeric antigen receptor macrophages using a signal switch",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01399-4",
+      "title": "Treatment of a metabolic liver disease in mice with a transient prime editing approach",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01022-4",
+      "title": "A battery-less wireless implant for the continuous monitoring of vascular pressure, flow rate and temperature",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01272-w",
+      "title": "Viscoelastic synthetic antigen-presenting cells for augmenting the potency of cancer therapies",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01367-y",
+      "title": "3D-printed perfused models of the penis for the study of penile physiology and for restoring erectile function in rabbits and pigs",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01250-2",
+      "title": "Meta-analysis of the make-up and properties of in vitro models of the healthy and diseased blood\u2013brain barrier",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01248-w",
+      "title": "A pan-cancer dye for solid-tumour screening, resection and wound monitoring via short-wave and near-infrared fluorescence imaging",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01280-w",
+      "title": "A stealthy neural recorder for the study of behaviour in primates",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01342-z",
+      "title": "Site-directed multivalent conjugation of antibodies to ubiquitinated payloads",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01481-x",
+      "title": "Combinatorial prediction of therapeutic perturbations using causally inspired neural networks.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01397-6",
+      "title": "Long-term engraftment of human stem and progenitor cells for large-scale production of functional immune cells in engineered pigs",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01465-x",
+      "title": "Non-invasive characterization of pericyte dysfunction in mouse brain using functional ultrasound localization microscopy.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01408-6",
+      "title": "High-throughput single-cell density measurements enable dynamic profiling of immune cell and drug response from patient samples",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01390-z",
+      "title": "Focused ultrasound-microbubble treatment arrests the growth and formation of cerebral cavernous malformations",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01264-w",
+      "title": "Downregulating human leucocyte antigens on mesenchymal stromal cells by epigenetically repressing a \u03b22-microglobulin super-enhancer",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01478-6",
+      "title": "A modular vaccine platform for optimized lipid nanoparticle mRNA immunogenicity.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01447-z",
+      "title": "Nanobody-based bispecific antibody engagers targeting CTLA-4 or PD-L1 for cancer immunotherapy.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01428-2",
+      "title": "Bioengineered immunocompetent preclinical trial-on-chip tool enables screening of CAR T cell therapy for leukaemia.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01324-1",
+      "title": "Synthetic multimodal data modelling for data imputation",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01238-y",
+      "title": "Prevention and treatment of peri-implant fibrosis by functionally inhibiting skeletal cells expressing the leptin receptor",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01534-1",
+      "title": "Steric stabilization-independent stealth cloak enables nanoreactors-mediated starvation therapy against refractory cancer.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01517-2",
+      "title": "Intranasal vaccine combining adenovirus and trimeric subunit protein provides superior immunity against SARS-CoV-2 Omicron variant.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01433-5",
+      "title": "Imaging the brain by traversing the skull with light and sound",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01508-3",
+      "title": "Collagen-binding IL-12-armoured STEAP1 CAR-T cells reduce toxicity and treat prostate cancer in mouse models.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01504-7",
+      "title": "Label-free metabolic imaging monitors the fitness of chimeric antigen receptor T cells.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01453-1",
+      "title": "Precise virulence inactivation using a CRISPR-associated transposase for combating Enterobacteriaceae gut pathogens.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01448-y",
+      "title": "Cancer biomarkers discovered using pan-cancer plasma proteomic profiling.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01381-0",
+      "title": "Tension-induced directional migration of hepatic stellate cells potentially coordinates liver fibrosis progression",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01098-y",
+      "title": "Synchronized wearables for the detection of haemodynamic states via electrocardiography and multispectral photoplethysmography",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01241-3",
+      "title": "Profiling protein\u2013protein interactions to predict the efficacy of B-cell-lymphoma-2-homology-3 mimetics for acute myeloid leukaemia",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01128-9",
+      "title": "Screening oral drugs for their interactions with the intestinal transportome via porcine tissue explants and machine learning",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-022-00936-9",
+      "title": "Expert-level detection of pathologies from unannotated chest X-ray images via self-supervised learning",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01052-y",
+      "title": "Generation of functionally distinct T-cell populations by altering the viscoelasticity of their extracellular matrix",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-020-0550-9",
+      "title": "An in vitro model of myocardial infarction",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-022-00882-6",
+      "title": "A multi-organ chip with matured tissue niches linked by vascular flow",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01240-4",
+      "title": "Reprogramming human B cells with custom heavy-chain antibodies",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01131-0",
+      "title": "Screening for lipid nanoparticles that modulate the immune activity of helper T cells towards enhanced antitumour activity",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-022-00898-y",
+      "title": "Shifting machine learning for healthcare from development to deployment and from models to data",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01024-2",
+      "title": "A swallowable X-ray dosimeter for the real-time monitoring of radiotherapy",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01426-4",
+      "title": "A pig with functional human immunity",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01417-5",
+      "title": "Macrophage-augmented organoids recapitulate the complex pathophysiology of viral diseases and enable development of multitarget therapeutics",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01500-x",
+      "title": "Leveraging large language and vision models for knowledge extraction from large-scale image-text colonoscopy records.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01499-1",
+      "title": "Treatment of a severe vascular disease using a bespoke CRISPR-Cas9 base editor in mice.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01561-y",
+      "title": "Label-free navigation system for grading prostate tumour malignancy in situ via tissue pH and prostate-specific antigen activity.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01491-9",
+      "title": "An immune-competent lung-on-a-chip for modelling the human severe influenza infection response.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01458-w",
+      "title": "Artificial intelligence advances skull stripping across lifespan",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01544-z",
+      "title": "A vision-language pretrained transformer for versatile clinical respiratory disease applications.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01549-8",
+      "title": "Engineered thoracic spinal cord organoids for transplantation after spinal cord injury.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01495-5",
+      "title": "Deep-learning-based HER2 status assessment from multimodal breast cancer data predicts neoadjuvant therapy response.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01538-x",
+      "title": "A targeted vector for brain endothelial cell gene delivery and cerebrovascular malformation modelling.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01327-y",
+      "title": "A learned writing assistant for radiologists",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01261-z",
+      "title": "Synthetic chest X-ray images from text prompts",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01304-5",
+      "title": "Advancing breast cancer risk stratification using multimodal AI",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01093-3",
+      "title": "Rapid discovery of high-affinity antibodies via massively parallel sequencing, ribosome display and affinity screening",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01160-9",
+      "title": "Auditing the inference processes of medical-image classifiers by leveraging generative AI and the expertise of physicians",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01112-3",
+      "title": "Exosome-loaded degradable polymeric microcapsules for the treatment of vitreoretinal diseases",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01086-2",
+      "title": "Synthetically glycosylated antigens for the antigen-specific suppression of established immune responses",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01106-1",
+      "title": "Dynamical flexible inference of nonlinear latent factors and structures in neural population activity",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01012-6",
+      "title": "Prepare for truly useful large language models",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-020-0540-y",
+      "title": "Targeted tumour theranostics in mice via carbon quantum dots structurally mimicking large amino acids",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01535-0",
+      "title": "High-throughput evaluation of in vitro CRISPR activities enables optimized large-scale multiplex enrichment of rare variants.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-020-00666-w",
+      "title": "Modelling and prediction of the dynamic responses of large-scale brain networks during direct electrical stimulation",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01463-z",
+      "title": "CRISPR-GPT for agentic automation of gene-editing experiments.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-020-0540-y",
+      "title": "Targeted tumour theranostics in mice via carbon quantum dots structurally mimicking large amino acids",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01185-8",
+      "title": "Techniques for supercharging academic writing with generative AI",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01344-5",
+      "title": "Small circular RNAs as vaccines for cancer immunotherapy",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01120-3",
+      "title": "Multiple-instance learning of somatic mutations for the classification of tumour type and the prediction of microsatellite status",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-021-00834-6",
+      "title": "Systemic immune responses to irradiated tumours via the transport of antigens to the tumour periphery by injected flagellate bacteria",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01193-8",
+      "title": "Generation of synthetic whole-slide image tiles of tumours from RNA-sequencing data via cascaded diffusion models",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01207-5",
+      "title": "A bilingual speech neuroprosthesis driven by cortical articulatory representations shared between languages",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01288-2",
+      "title": "Solvent-mediated analgesia via the suppression of water permeation through TRPV1 ion channels",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01425-5",
+      "title": "Engineering multi-specific nano-antibodies for cancer immunotherapy.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01117-y",
+      "title": "Macroscopic resting-state brain dynamics are best described by linear models",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-022-00914-1",
+      "title": "Self-supervised learning in medicine and healthcare",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01501-w",
+      "title": "Minimally invasive implantation of scalable high-density cortical microelectrode arrays for multimodal neural decoding and stimulation.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01034-0",
+      "title": "Uncovering expression signatures of synergistic drug responses via ensembles of explainable machine-learning models",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-022-00929-8",
+      "title": "Fast and scalable search of whole-slide images via self-supervised deep learning",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-020-00667-9",
+      "title": "Deep-learning-assisted analysis of echocardiographic videos improves predictions of all-cause mortality",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-022-00906-1",
+      "title": "Multiscale optical and optoacoustic imaging of amyloid-\u03b2 deposits in mice",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01135-w",
+      "title": "Identification of druggable regulators of cell secretion via a kinome-wide screen and high-throughput immunomagnetic cell sorting",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-022-00915-0",
+      "title": "Generation of T-cell-receptor-negative CD8\u03b1\u03b2-positive CAR T cells from T-cell-derived induced pluripotent stem cells",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-022-00938-7",
+      "title": "Variants of the adeno-associated virus serotype 9 with enhanced penetration of the blood\u2013brain barrier in rodents and primates",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-021-00810-0",
+      "title": "Enhanced tendon healing by a tough hydrogel with an adhesive side and high drug-loading capacity",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-020-0549-2",
+      "title": "Collagen-binding IL-12 enhances tumour inflammation and drives the complete remission of established immunologically cold mouse tumours",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-022-00895-1",
+      "title": "Synthetic libraries of immune cells displaying a diverse repertoire of chimaeric antigen receptors as a potent cancer immunotherapy",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-021-00733-w",
+      "title": "Adaptive adversarial neural networks for the analysis of lossy and domain-shifted datasets of medical images",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-020-0545-6",
+      "title": "Robotically handled whole-tissue culture system for the screening of oral drug formulations",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-021-00747-4",
+      "title": "Retinal detection of kidney disease and diabetes",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01392-x",
+      "title": "Multiplex imaging of amyloid-\u03b2 plaques dynamics in living brains with quinoline-malononitrile-based probes",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01440-6",
+      "title": "A thermogalvanic cell dressing for smart wound monitoring and accelerated healing.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01550-1",
+      "title": "Nonexpansive biodegradable matrix promotes blood vessel organoid development for neurovascular repair and functional recovery in ischaemic stroke.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-022-00896-0",
+      "title": "Screening for CD19-specific chimaeric antigen receptors with enhanced signalling via a barcoded library of intracellular domains",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01010-8",
+      "title": "A vision transformer for decoding surgeon activity from surgical videos",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01348-1",
+      "title": "Characterization of tumour heterogeneity through segmentation-free representation learning on multiplexed imaging data",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01079-1",
+      "title": "Computational optimization of antibody humanness and stability by systematic energy-based ranking",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02273-8",
+      "title": "Quantifying large language model usage in scientific papers.",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02190-w",
+      "title": "Large language model-powered meta-analysis of mobile interventions for stress management",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01783-7",
+      "title": "Driving and suppressing the human language network using large language models",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02228-z",
+      "title": "A semantic embedding space based on large language models for modelling human beliefs",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01659-w",
+      "title": "Emergent analogical reasoning in large language models",
+      "venue": "Nature Human Behaviour",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02203-8",
+      "title": "Large language models without grounding recover non-sensorimotor but not sensorimotor features of human concepts",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01671-0",
+      "title": "Large-scale AI language systems display an emergent ability to reason by analogy",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-024-01886-9",
+      "title": "Large-scale lexical and genetic alignment supports a hybrid model of Han Chinese demic and cultural diffusions",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02258-7",
+      "title": "Testing for completions that simulate altruism in early language models",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02231-4",
+      "title": "Conversational content is organized across multiple timescales in the brain",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01732-4",
+      "title": "Openly accessible LLMs can help us to understand human cognition",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-021-01133-5",
+      "title": "Reconsidering evidence of moral contagion in online social networks",
+      "venue": "Nature Human Behaviour",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-024-01882-z",
+      "title": "Testing theory of mind in large language models and humans",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-024-02046-9",
+      "title": "Large language models surpass human experts in predicting neuroscience results",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-024-01959-9",
+      "title": "How large language models can reshape collective intelligence",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-024-01847-2",
+      "title": "How to write effective prompts for large language models",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-024-01859-y",
+      "title": "Use of large language models might affect our cognitive skills",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02172-y",
+      "title": "Playing repeated games with large language models",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02297-0",
+      "title": "Active use of latent tree-structured sentence representation in humans and large language models.",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02132-6",
+      "title": "Large-scale examination of early-age sex differences in neurotypical toddlers and those with autism spectrum disorder or other developmental conditions",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02105-9",
+      "title": "A unified acoustic-to-speech-to-language embedding space captures the neural basis of natural language processing in everyday conversations",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-024-01907-7",
+      "title": "Self-administered mindfulness interventions reduce stress in a large, randomized controlled multi-site study",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-020-0924-8",
+      "title": "Cultural influences on word meanings revealed through large-scale semantic alignment",
+      "venue": "Nature Human Behaviour",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-020-00935-3",
+      "title": "Inferring latent learning factors in large-scale cognitive training data",
+      "venue": "Nature Human Behaviour",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02194-6",
+      "title": "On the conversational persuasiveness of GPT-4",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-021-01057-0",
+      "title": "A rational model of the Dunning\u2013Kruger effect supports insensitivity to evidence in low performers",
+      "venue": "Nature Human Behaviour",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02247-w",
+      "title": "Comparing the value of perceived human versus AI-generated empathy",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02137-1",
+      "title": "The next generation of experimental research with LLMs",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02124-6",
+      "title": "The global landscape of academic guidelines for generative AI and LLMs",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02242-1",
+      "title": "Cultural tendencies in generative AI",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02162-0",
+      "title": "A systematic review and Bayesian network meta-analysis on the efficacy and potential of mobile interventions for stress management",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-024-02065-6",
+      "title": "Web-browsing patterns reflect and shape mood and mental health",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02230-5",
+      "title": "Capturing the complexity of human strategic decision-making with machine learning",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-024-01926-4",
+      "title": "Consumption patterns in prehistoric Europe are consistent with modern economic behaviour",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02234-1",
+      "title": "Advancing the psychology of social class with large-scale replications in four countries",
+      "venue": "Nature Human Behaviour",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01744-0",
+      "title": "To protect science, we must use LLMs as zero-shot translators",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01723-5",
+      "title": "LLMs differ from human cognition because they are not embodied",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01784-6",
+      "title": "Modelling dataset bias in machine-learned theories of economic decision-making",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01771-x",
+      "title": "The trade-off between sustainability and social segregation in the 15-minute city",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02254-x",
+      "title": "Measuring the semantic priming effect across many languages.",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-024-02038-9",
+      "title": "Social movements boosted online orders for US Black-owned restaurants after the murder of George Floyd",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01519-7",
+      "title": "A highly replicable decline in mood during rest and simple tasks",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-022-01505-5",
+      "title": "Modelling individual and cross-cultural variation in the mapping of emotions to speech prosody",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01721-7",
+      "title": "Presentation matters for AI-generated clinical advice",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01730-6",
+      "title": "LLMs are not ready for editorial work",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-024-02096-z",
+      "title": "How to evaluate the cognitive abilities of LLMs",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-024-02089-y",
+      "title": "Semantic embeddings reveal and address taxonomic incommensurability in psychological measurement",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-024-01902-y",
+      "title": "Big-team science does not guarantee generalizability",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-022-01516-2",
+      "title": "Evidence of a predictive coding hierarchy in the human brain listening to speech",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-024-01891-y",
+      "title": "Deep history of cultural and linguistic evolution among Central African hunter-gatherers",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01769-5",
+      "title": "The motivating effect of monetary over psychological incentives is stronger in WEIRD cultures",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01559-z",
+      "title": "A quasi-comprehensive exploration of the mechanisms of spatial working memory",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02183-9",
+      "title": "Binary climate data visuals amplify perceived impact of climate change",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-020-0909-7",
+      "title": "COVID-19 Government Response Event Dataset (CoronaNet v.1.0)",
+      "venue": "Nature Human Behaviour",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-024-01887-8",
+      "title": "Evolutionary\u2013developmental (evo-devo) dynamics of hominin brain size",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02236-z",
+      "title": "Social clustering of preference for female genital mutilation/cutting in south-central Ethiopia",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-021-01282-7",
+      "title": "Mental speed is high until age 60 as revealed by analysis of over a million participants",
+      "venue": "Nature Human Behaviour",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02270-x",
+      "title": "The development of aperiodic neural activity in the human brain.",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02323-1",
+      "title": "Attention on social media depends more on how you express yourself than on who you are.",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02314-2",
+      "title": "Statistical evidence in psychological networks.",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02282-7",
+      "title": "Decoupling geographical constraints from human mobility.",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02142-4",
+      "title": "How growing up without siblings affects the adult brain and behaviour in the CHIMGEN cohort",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-022-01509-1",
+      "title": "Urban scaling laws arise from within-city inequalities",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-022-01388-6",
+      "title": "Combining interventions to reduce the spread of viral misinformation",
+      "venue": "Nature Human Behaviour",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01670-1",
+      "title": "The challenges and prospects of brain-based prediction of behaviour",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-022-01487-4",
+      "title": "A 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-022-01510-8",
+      "title": "Modelling human behaviour in cognitive tasks with latent dynamical systems",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01644-3",
+      "title": "A taxonomy of anti-vaccination arguments from a systematic literature review and text modelling",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01527-7",
+      "title": "Facilitating system-level behavioural climate action using computational social science",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-021-01069-w",
+      "title": "The genetic architecture of structural left\u2013right asymmetry of the human brain",
+      "venue": "Nature Human Behaviour",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-021-01155-z",
+      "title": "Despite vaccination, China needs non-pharmaceutical interventions to prevent widespread outbreaks of COVID-19 in 2021",
+      "venue": "Nature Human Behaviour",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-020-00982-w",
+      "title": "Spatiotemporal dynamics of orthographic and lexical processing in the ventral visual pathway",
+      "venue": "Nature Human Behaviour",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-022-01312-y",
+      "title": "Global evidence of expressed sentiment alterations during the COVID-19 pandemic",
+      "venue": "Nature Human Behaviour",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-022-01429-0",
+      "title": "Strategic COVID-19 vaccine distribution can simultaneously elevate social utility and equity",
+      "venue": "Nature Human Behaviour",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-022-01289-8",
+      "title": "Equitable access to COVID-19 vaccines makes a life-saving difference to all countries",
+      "venue": "Nature Human Behaviour",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-020-01040-1",
+      "title": "Competition for priority harms the reliability of science, but reforms can help",
+      "venue": "Nature Human Behaviour",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-021-01103-x",
+      "title": "Social connections and the healthfulness of food choices in an employee population",
+      "venue": "Nature Human Behaviour",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-020-00969-7",
+      "title": "State-level needs for social distancing and contact tracing to contain COVID-19 in the United States",
+      "venue": "Nature Human Behaviour",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-020-00946-0",
+      "title": "A unified account of numerosity perception",
+      "venue": "Nature Human Behaviour",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-022-01489-2",
+      "title": "Deep learning reveals what vocal bursts express in different cultures",
+      "venue": "Nature Human Behaviour",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-021-01145-1",
+      "title": "How young children integrate information sources to infer the meaning of words",
+      "venue": "Nature Human Behaviour",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-020-0854-5",
+      "title": "Investigating the effect of changing parameters when building prediction models for post-stroke aphasia",
+      "venue": "Nature Human Behaviour",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-020-0908-8",
+      "title": "The end of social confinement and COVID-19 re-emergence risk",
+      "venue": "Nature Human Behaviour",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01703-9",
+      "title": "Discrimination reduces work effort of those who are disadvantaged and those who are advantaged by it",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01580-2",
+      "title": "Consider the home research environments of international students",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-020-0875-0",
+      "title": "Mapping global variation in human mobility",
+      "venue": "Nature Human Behaviour",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-021-01220-7",
+      "title": "Psychologists update their beliefs about effect sizes after replication studies",
+      "venue": "Nature Human Behaviour",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-020-01002-7",
+      "title": "Gendered movement ecology and landscape use in Hadza hunter-gatherers",
+      "venue": "Nature Human Behaviour",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-021-01090-z",
+      "title": "Detecting and modelling real percolation and phase transitions of information on social media",
+      "venue": "Nature Human Behaviour",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-024-01957-x",
+      "title": "Conceptual structure and the growth of scientific knowledge",
+      "venue": "Nature Human Behaviour",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-020-0909-7",
+      "title": "COVID-19 Government Response Event Dataset (CoronaNet v.1.0)",
+      "venue": "Nature Human Behaviour",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-021-01101-z",
+      "title": "The Dunning-Kruger effect revisited",
+      "venue": "Nature Human Behaviour",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-021-01053-4",
+      "title": "Genetic correlates of socio-economic status influence the pattern of shared heritability across mental health traits",
+      "venue": "Nature Human Behaviour",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-020-0901-2",
+      "title": "Memorability of Words in Arbitrary Verbal Associations Modulates Memory Retrieval in the Anterior Temporal Lobe",
+      "venue": "Nature Human Behaviour",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01682-x",
+      "title": "Flexible social inference facilitates targeted social learning when rewards are not observable",
+      "venue": "Nature Human Behaviour",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01698-3",
+      "title": "How adults understand what young children say",
+      "venue": "Nature Human Behaviour",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-020-01036-x",
+      "title": "An implicit memory of errors limits human sensorimotor adaptation",
+      "venue": "Nature Human Behaviour",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-021-01147-z",
+      "title": "What are you talking about?",
+      "venue": "Nature Human Behaviour",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-020-01002-7",
+      "title": "Gendered movement ecology and landscape use in Hadza hunter-gatherers",
+      "venue": "Nature Human Behaviour",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-021-01086-9",
+      "title": "Reply to: Towards increasing the clinical applicability of machine learning biomarkers in psychiatry",
+      "venue": "Nature Human Behaviour",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adp1848",
+      "title": "Considerations for governing open foundation models",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.aed6115",
+      "title": "A foundation of trust.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ado9336",
+      "title": "Sequence modeling and design from molecular to genome scale with Evo.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adi8982",
+      "title": "AI safety on whose terms?",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adt3007",
+      "title": "Learning the language of DNA.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abl6502",
+      "title": "Structural basis of synergistic neutralization of Crimean-Congo hemorrhagic fever virus by human antibodies",
+      "venue": "Science",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.369.6505.757",
+      "title": "Fed-up archaeologists aim to fix field schools' party culture.",
+      "venue": "Science",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adr6006",
+      "title": "Rapid in silico directed evolution by a protein language model with EVOLVEpro.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adk8946",
+      "title": "Unsupervised evolution of protein and antibody complexes with a structure-informed language model",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adp6029",
+      "title": "Gates foundation places bold bet on preprints",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adm9724",
+      "title": "Design of a SARS-CoV-2 papain-like protease inhibitor with antiviral efficacy in a mouse model",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adq7082",
+      "title": "Realization of a Rydberg-dressed extended Bose-Hubbard model.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adl0544",
+      "title": "Trigeminal ganglion neurons are directly activated by influx of CSF solutes in a migraine model",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.add1236",
+      "title": "ApoE isoform\u2013 and microbiota-dependent progression of neurodegeneration in a mouse model of tauopathy",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adx7802",
+      "title": "AI to rewire life's interactome: Structural foundation models help to elucidate and reprogram molecular biology.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adj2154",
+      "title": "A shared foundation of language change",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ads0018",
+      "title": "Simulating 500 million years of evolution with a language model.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adh7691",
+      "title": "Coexistence of superconductivity with partially filled stripes in the Hubbard model",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.aec2623",
+      "title": "The EPA's shaken foundation.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.add4679",
+      "title": "Mastering the game of Stratego with model-free multiagent reinforcement learning",
+      "venue": "Science",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abc7520",
+      "title": "Isolation of potent SARS-CoV-2 neutralizing antibodies and protection from disease in a small animal model",
+      "venue": "Science",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adv9836",
+      "title": "Chinese firm's large language model makes a splash.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abg0818",
+      "title": "Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adl5549",
+      "title": "Inverse design of a pyrochlore lattice of DNA origami through model-driven experiments",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adj6152",
+      "title": "Rapid model-guided design of organ-scale synthetic vasculature for biomanufacturing.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abe6959",
+      "title": "Model-informed COVID-19 vaccine prioritization strategies by age and serostatus",
+      "venue": "Science",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abf1611",
+      "title": "SARS-CoV-2 Mpro inhibitors with antiviral activity in a transgenic mouse model",
+      "venue": "Science",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adp7466",
+      "title": "Probe bolsters model of ever-expanding universe",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adr5922",
+      "title": "Model citizens",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abb7314",
+      "title": "Comparative pathogenesis of COVID-19, MERS, and SARS in a nonhuman primate model",
+      "venue": "Science",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abc6810",
+      "title": "A mathematical model reveals the influence of population heterogeneity on herd immunity to SARS-CoV-2",
+      "venue": "Science",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abj7747",
+      "title": "The state of zinc in methanol synthesis over a Zn/ZnO/Cu(211) model catalyst",
+      "venue": "Science",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.aaz7597",
+      "title": "The foundation of efficient robot learning",
+      "venue": "Science",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abm7192",
+      "title": "A two-phase model that unifies and extends the classical models of membrane transport",
+      "venue": "Science",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ade9194",
+      "title": "Origin and fate of the pseudogap in the doped Hubbard model",
+      "venue": "Science",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abe5757",
+      "title": "Unraveling CO adsorption on model single-atom catalysts",
+      "venue": "Science",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abm0101",
+      "title": "An upset to the standard model",
+      "venue": "Science",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.aba3304",
+      "title": "An evolution-based model for designing chorismate mutase enzymes",
+      "venue": "Science",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.aax5863",
+      "title": "Therapeutic targeting of preleukemia cells in a mouse model of NPM1 mutant acute myeloid leukemia",
+      "venue": "Science",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.aay1645",
+      "title": "Chromatin accessibility dynamics in a model of human forebrain development",
+      "venue": "Science",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abq0956",
+      "title": "No model is perfect, but some are useful",
+      "venue": "Science",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abc6141",
+      "title": "The search for a COVID-19 animal model",
+      "venue": "Science",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.aaz3893",
+      "title": "Female-specific synaptic dysfunction and cognitive impairment in a mouse model of PCDH19 disorder",
+      "venue": "Science",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ade9573",
+      "title": "The model, the modeler, and the truth",
+      "venue": "Science",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adg8538",
+      "title": "Illusory generalizability of clinical prediction models",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adn3441",
+      "title": "Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900 to 2050",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adq9592",
+      "title": "Direct neutrino-mass measurement based on 259 days of KATRIN data.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adk3705",
+      "title": "A 485-million-year history of Earth\u2019s surface temperature",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adu2454",
+      "title": "Computational design of serine hydrolases.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ado6285",
+      "title": "Beyond-classical computation in quantum simulation.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adn0558",
+      "title": "Spin-mediated promotion of Co catalysts for ammonia synthesis",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adg8488",
+      "title": "Diversity begets stability: Sublinear growth and competitive coexistence across ecosystems",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adi1374",
+      "title": "Grounded language acquisition through the eyes and ears of a single child",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adg7492",
+      "title": "Accurate proteome-wide missense variant effect prediction with AlphaMissense",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adi2336",
+      "title": "Learning skillful medium-range global weather forecasting",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adk5864",
+      "title": "Large-scale chemoproteomics expedites ligand discovery and predicts ligand behavior in cells",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ado6638",
+      "title": "Predictions of groundwater PFAS occurrence at drinking water supply depths in the United States.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ado7069",
+      "title": "Debates on the nature of artificial general intelligence.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adj2167",
+      "title": "Observation of current whirlpools in graphene at room temperature",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abo7027",
+      "title": "Apoptotic cell identity induces distinct functional responses to IL-4 in efferocytic macrophages",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adm8857",
+      "title": "A neuroimmune circuit mediates cancer cachexia-associated apathy.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adl4237",
+      "title": "Programming tissue-sensing T cells that deliver therapies to the brain.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adp2407",
+      "title": "Disease diagnostics using machine learning of B cell and T cell receptor sequences.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adv4414",
+      "title": "Learning the language of life with AI.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adi5199",
+      "title": "Single-cell genomics and regulatory networks for 388 human brains",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adi3252",
+      "title": "Realization of one-dimensional anyons with arbitrary statistical phase.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ads8738",
+      "title": "In-cell architecture of the mitochondrial respiratory chain.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adi3332",
+      "title": "Hepatic glycogenesis antagonizes lipogenesis by blocking S1P via UDPG",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adj0116",
+      "title": "Sequence basis of transcription initiation in the human genome",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adn2838",
+      "title": "Fracturing and tectonic stress drive ultrarapid magma flow into dikes",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adl2992",
+      "title": "Modeling late-onset Alzheimer\u2019s disease neuropathology via direct neuronal reprogramming",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abl5197",
+      "title": "Cross-tissue immune cell analysis reveals tissue-specific features in humans",
+      "venue": "Science",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abn7950",
+      "title": "Exceeding 1.5\u00b0C global warming could trigger multiple climate tipping points",
+      "venue": "Science",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adh0559",
+      "title": "Massively parallel characterization of regulatory elements in the developing human cortex",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adq0911",
+      "title": "Observation of generalized t-J spin dynamics with tunable dipolar interactions.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adm8143",
+      "title": "Rare codon recoding for efficient noncanonical amino acid incorporation in mammalian cells",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adl3962",
+      "title": "BCG vaccination reduces bovine tuberculosis transmission, improving prospects for elimination",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adk9167",
+      "title": "Dietary pro-oxidant therapy by a vitamin K precursor targets PI 3-kinase VPS34 function",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ads8412",
+      "title": "Structural mechanism of LINE-1 target-primed reverse transcription",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adl3043",
+      "title": "Prefrontal synaptic regulation of homeostatic sleep pressure revealed through synaptic chemogenetics",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abl7597",
+      "title": "Toward a holistic model of Alzheimer\u2019s",
+      "venue": "Science",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ade7147",
+      "title": "Modification of ground-state chemical reactivity via light\u2013matter coherence in infrared cavities",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adr0510",
+      "title": "Protective antibodies target cryptic epitope unmasked by cleavage of malaria sporozoite protein.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adi3794",
+      "title": "Machine learning predicts which rivers, streams, and wetlands the Clean Water Act regulates",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adq1977",
+      "title": "AI and biosecurity: The need for governance",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adl3353",
+      "title": "Top-down brain circuits for operant bradycardia",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adn7272",
+      "title": "Structural basis of U12-type intron engagement by the fully assembled human minor spliceosome",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adh4893",
+      "title": "Oxygen rise in the tropical upper ocean during the Paleocene-Eocene Thermal Maximum",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abp9556",
+      "title": "MEG3 activates necroptosis in human neuron xenografts modeling Alzheimer\u2019s disease",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abn3445",
+      "title": "The central role of density functional theory in the AI age",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abm0594",
+      "title": "CAR T cells produced in vivo to treat cardiac injury",
+      "venue": "Science",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adg9328",
+      "title": "A tera\u2013electron volt afterglow from a narrow jet in an extremely bright gamma-ray burst",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abk1781",
+      "title": "High-precision measurement of the W boson mass with the CDF II detector.",
+      "venue": "Science",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adn5866",
+      "title": "Engineered deletions of HIV replicate conditionally to reduce disease in nonhuman primates",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adl6480",
+      "title": "Natural selection could determine whether Acropora corals persist under expected climate change.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adm8201",
+      "title": "Predicting fusion ignition at the National Ignition Facility with physics-informed deep learning.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adp1166",
+      "title": "The evolutionary history of wild and domestic brown rats (Rattus norvegicus)",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adi7895",
+      "title": "Humane genomics education can reduce racism",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adl4443",
+      "title": "Bomb radiocarbon evidence for strong global carbon uptake and turnover in terrestrial vegetation",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adn0415",
+      "title": "Resetting tropospheric OH and CH4 lifetime with ultraviolet H2O absorption",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adl1203",
+      "title": "Large-scale photonic chiplet Taichi empowers 160-TOPS/W artificial general intelligence",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adi9601",
+      "title": "Large effective magnetic fields from chiral phonons in rare-earth halides",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adn3450",
+      "title": "Biogeographic climate sensitivity controls Earth system response to large igneous province carbon degassing",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ade9097",
+      "title": "Human-level play in the game of Diplomacy by combining language models with strategic reasoning",
+      "venue": "Science",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adn1146",
+      "title": "Evidence of spillover benefits from large-scale marine protected areas to purse seine fisheries.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adt9819",
+      "title": "Large AI models are cultural and social technologies.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ade7981",
+      "title": "From language development to language evolution: A unified view of human lexical creativity",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.aaz9600",
+      "title": "Large contribution from anthropogenic warming to an emerging North American megadrought",
+      "venue": "Science",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abe2629",
+      "title": "Using large-scale experiments and machine learning to discover theories of human decision-making",
+      "venue": "Science",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abg4020",
+      "title": "Multiscale representation of very large environments in the hippocampus of flying bats",
+      "venue": "Science",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abf5787",
+      "title": "Early giant reveals faster evolution of large body size in ichthyosaurs than in cetaceans",
+      "venue": "Science",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abi8870",
+      "title": "MIC-Drop: A platform for large-scale in vivo CRISPR screens",
+      "venue": "Science",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abd7331",
+      "title": "Learning the language of viral evolution and escape",
+      "venue": "Science",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.aaz2511",
+      "title": "A physics-based method that can predict imminent large solar flares",
+      "venue": "Science",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adh4451",
+      "title": "Art and the science of generative AI",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adi1778",
+      "title": "AI and the transformation of social science research",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adt6140",
+      "title": "The metaphors of artificial intelligence.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adw5211",
+      "title": "Artificial intelligence learns to reason.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adp3757",
+      "title": "Vocal labeling of others by nonhuman primates",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abm9903",
+      "title": "Native architecture of a human GBP1 defense complex for cell-autonomous immunity to infection",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adk4902",
+      "title": "Electrically driven proton transfer promotes Br\u00f8nsted acid catalysis by orders of magnitude",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ads4760",
+      "title": "The time course and organization of hippocampal replay.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adu1058",
+      "title": "Evolutionary-scale enzymology enables exploration of a rugged catalytic landscape.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ads6303",
+      "title": "Cryptic infection of a giant virus in a unicellular green alga.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adn1262",
+      "title": "Human activities shape global patterns of decomposition rates in rivers",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adr3339",
+      "title": "NREM sleep improves behavioral performance by desynchronizing cortical circuits.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adn6269",
+      "title": "Acoustic cognitive map-based navigation in echolocating bats.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adj2462",
+      "title": "Alpha and helion particle charge radius difference determined from quantum-degenerate helium.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adq7347",
+      "title": "Supersaturation mutagenesis reveals adaptive rewiring of essential genes among malaria parasites.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adi4728",
+      "title": "Mapping twist-tuned multiband topology in bilayer WSe2",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adj0998",
+      "title": "GPTs are GPTs: Labor market impact potential of LLMs",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.aec5465",
+      "title": "Researchers customize AI tools at global 'hackathon'.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adu1567",
+      "title": "Artificial intelligence speaks upThese Strange New Minds: How AI Learned to Talk and What It Means Christopher Summerfield Viking, 2025. 384 pp.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.aec5467",
+      "title": "Ethicists flirt with AI for reviewing human research.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adi8474",
+      "title": "Backpropagation-free training of deep physical neural networks",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abq5202",
+      "title": "Kupffer cell\u2013like syncytia replenish resident macrophage function in the fibrotic liver",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abf6894",
+      "title": "The language of a virus",
+      "venue": "Science",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adi9405",
+      "title": "Programming memristor arrays with arbitrarily high precision for analog computing",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adi7918",
+      "title": "Size, distribution, and vulnerability of the global soil inorganic carbon",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adw3158",
+      "title": "How does Antarctic ice deform?",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.aeb4815",
+      "title": "Rewiring science diplomacy.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adw0099",
+      "title": "Invisible matter, invisible brains?",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ads6761",
+      "title": "Fly-fishing for flagella",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abc1669",
+      "title": "SARS-CoV-2 productively infects human gut enterocytes",
+      "venue": "Science",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adn6354",
+      "title": "AlphaFold2 structures guide prospective ligand discovery",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ads0901",
+      "title": "Inverse design workflow discovers hole-transport materials tailored for perovskite solar cells.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adp6581",
+      "title": "Insulating electromagnetic-shielding silicone compound enables direct potting electronics",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adh1215",
+      "title": "Sedimentary parameters control the sulfur isotope composition of marine pyrite",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adh1720",
+      "title": "Deploying synthetic coevolution and machine learning to engineer protein-protein interactions",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adi5639",
+      "title": "Mechanism for feature learning in neural networks and backpropagation-free machine learning models",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adj4503",
+      "title": "Genomic factors shape carbon and nitrogen metabolic niche breadth across Saccharomycotina yeasts",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adk9880",
+      "title": "Bioresorbable shape-adaptive structures for ultrasonic monitoring of deep-tissue homeostasis",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adg7021",
+      "title": "Pervasive within-species spatial repulsion among adult tropical trees",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adl1517",
+      "title": "Humans are biocultural, science should be too.",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adk8544",
+      "title": "Molecular mechanism of dynein-dynactin complex assembly by LIS1",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adl5361",
+      "title": "Relocalizing transcriptional kinases to activate apoptosis",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adp1950",
+      "title": "Ship collision risk threatens whales across the world's oceans.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adg6757",
+      "title": "Structure, biophysics, and circuit function of a \u201cgiant\u201d cortical presynaptic terminal",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ado4113",
+      "title": "Accelerating 2D materials discovery",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adp7708",
+      "title": "Linear-viscous flow of temperate ice.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abo2812",
+      "title": "Satellites reveal widespread decline in global lake water storage",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adv1170",
+      "title": "Extensive compositionality in the vocal system of bonobos.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adm9218",
+      "title": "Practical challenges for precision medicine",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adi1393",
+      "title": "Momentum-exchange interactions in a Bragg atom interferometer suppress Doppler dephasing",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adh2861",
+      "title": "A far-ultraviolet\u2013driven photoevaporation flow observed in a protoplanetary disk",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abm6791",
+      "title": "Models predict planned phosphorus load reduction will make Lake Erie more toxic",
+      "venue": "Science",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adx0339",
+      "title": "AI drug development's data problem.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adn5371",
+      "title": "Massively parallel analysis of single-molecule dynamics on next-generation sequencing chips",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ado4220",
+      "title": "Unexpected far-field deformation of the 2023 Kahramanmara\u015f earthquakes revealed by space geodesy",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ado3290",
+      "title": "Giant polyketide synthase enzymes in the biosynthesis of giant marine polyether toxins",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ade2420",
+      "title": "The growing influence of industry in AI research",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adr8470",
+      "title": "Deep generative models design mRNA sequences with enhanced translational capacity and stability.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abh1614",
+      "title": "Biomimetic fracture model of lizard tail autotomy",
+      "venue": "Science",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abq1158",
+      "title": "Competition-level code generation with AlphaCode",
+      "venue": "Science",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adj2793",
+      "title": "Imbalanced speciation pulses sustain the radiation of mammals",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adq5564",
+      "title": "Antarctic krill vertical migrations modulate seasonal carbon export.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adk1334",
+      "title": "Cooperative adsorbate binding catalyzes high-temperature hydrogen oxidation on palladium.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adm7966",
+      "title": "A kalihinol analog disrupts apicoplast function and vesicular trafficking in P. falciparum malaria",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ade4401",
+      "title": "A principal odor map unifies diverse tasks in olfactory perception",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adh7670",
+      "title": "Atomic-scale polarization switching in wurtzite ferroelectrics",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adn6121",
+      "title": "Human neuron subtype programming via single-cell transcriptome-coupled patterning screens.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adp3752",
+      "title": "Energetic constraints drive the decline of a sentinel polar bear population.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adg7700",
+      "title": "A magnetic massive star has experienced a stellar merger",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    }
+  ]
+}

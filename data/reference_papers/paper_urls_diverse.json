@@ -1,0 +1,354 @@
+{
+  "papers": [
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07441-w",
+      "title": "A whole-slide foundation model for digital pathology from real-world data",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06555-x",
+      "title": "A foundation model for generalizable disease detection from retinal images",
+      "venue": "Nature",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-07894-z",
+      "title": "A pathology foundation model for cancer diagnosis and prognosis prediction",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08411-y",
+      "title": "A cell atlas foundation model for scalable search of similar human cells",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08338-4",
+      "title": "The Human Cell Atlas from a cell census to a unified foundation model",
+      "venue": "Nature",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08328-6",
+      "title": "Accurate predictions on small data with a tabular foundation model",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09005-y",
+      "title": "A foundation model for the Earth system",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08378-w",
+      "title": "A vision\u2013language foundation model for precision oncology",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-024-08391-z",
+      "title": "A foundation model of transcription across human cell types",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-08829-y",
+      "title": "Foundation model of neural activity predicts response to new stimulus types",
+      "venue": "Nature",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02857-3",
+      "title": "Towards a general-purpose foundation model for computational pathology",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02856-4",
+      "title": "A visual-language foundation model for computational pathology",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02959-y",
+      "title": "Vision\u2013language foundation model for echocardiogram interpretation",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03141-0",
+      "title": "A foundation model for clinical-grade computational pathology and rare cancers detection",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-023-02504-3",
+      "title": "A visual\u2013language foundation model for pathology image analysis using medical Twitter",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-02887-x",
+      "title": "Transparent medical image AI via an image\u2013text foundation model grounded in medical literature",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03359-y",
+      "title": "Self-improving generative foundation model for synthetic medical image generation and clinical applications",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03185-2",
+      "title": "A generalist vision\u2013language foundation model for diverse biomedical tasks",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03233-x",
+      "title": "A foundation model for clinician-centered drug repurposing",
+      "venue": "Nature Medicine",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41591-024-03333-8",
+      "title": "An explainable foundation model for drug repurposing",
+      "venue": "Nature Medicine",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01246-y",
+      "title": "A vision\u2013language foundation model for the generation of realistic chest X-ray images",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01283-7",
+      "title": "A foundation model for enhancing magnetic resonance images and downstream segmentation, registration and diagnostic tasks",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01497-3",
+      "title": "A generalist foundation model and database for open-world medical image segmentation.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01488-4",
+      "title": "A generalizable pathology foundation model using a unified knowledge distillation pretraining framework.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01365-0",
+      "title": "A data-efficient strategy for building high-performing medical foundation models",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01516-3",
+      "title": "Benchmarking foundation models as feature extractors for weakly supervised computational pathology.",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01413-9",
+      "title": "A deep learning system for detecting silent brain infarction and predicting stroke risk",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-024-01284-6",
+      "title": "Simple and effective embedding model for single-cell biology built from ChatGPT",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-023-01045-x",
+      "title": "A transformer-based representation-learning model with unified processing of multimodal input for clinical diagnostics",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41551-025-01375-y",
+      "title": "Synthetic data boosts medical foundation models",
+      "venue": "Nature Biomedical Engineering",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02273-8",
+      "title": "Quantifying large language model usage in scientific papers.",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02190-w",
+      "title": "Large language model-powered meta-analysis of mobile interventions for stress management",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01783-7",
+      "title": "Driving and suppressing the human language network using large language models",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02228-z",
+      "title": "A semantic embedding space based on large language models for modelling human beliefs",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01659-w",
+      "title": "Emergent analogical reasoning in large language models",
+      "venue": "Nature Human Behaviour",
+      "year": 2022,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02203-8",
+      "title": "Large language models without grounding recover non-sensorimotor but not sensorimotor features of human concepts",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-023-01671-0",
+      "title": "Large-scale AI language systems display an emergent ability to reason by analogy",
+      "venue": "Nature Human Behaviour",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-024-01886-9",
+      "title": "Large-scale lexical and genetic alignment supports a hybrid model of Han Chinese demic and cultural diffusions",
+      "venue": "Nature Human Behaviour",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02258-7",
+      "title": "Testing for completions that simulate altruism in early language models",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1038/s41562-025-02231-4",
+      "title": "Conversational content is organized across multiple timescales in the brain",
+      "venue": "Nature Human Behaviour",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adp1848",
+      "title": "Considerations for governing open foundation models",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.aed6115",
+      "title": "A foundation of trust.",
+      "venue": "Science",
+      "year": 2025,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.ado9336",
+      "title": "Sequence modeling and design from molecular to genome scale with Evo.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adi8982",
+      "title": "AI safety on whose terms?",
+      "venue": "Science",
+      "year": 2023,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adt3007",
+      "title": "Learning the language of DNA.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.abl6502",
+      "title": "Structural basis of synergistic neutralization of Crimean-Congo hemorrhagic fever virus by human antibodies",
+      "venue": "Science",
+      "year": 2021,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.369.6505.757",
+      "title": "Fed-up archaeologists aim to fix field schools' party culture.",
+      "venue": "Science",
+      "year": 2020,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adr6006",
+      "title": "Rapid in silico directed evolution by a protein language model with EVOLVEpro.",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adk8946",
+      "title": "Unsupervised evolution of protein and antibody complexes with a structure-informed language model",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    },
+    {
+      "url": "https://doi.org/10.1126/science.adp6029",
+      "title": "Gates foundation places bold bet on preprints",
+      "venue": "Science",
+      "year": 2024,
+      "has_open_access": true
+    }
+  ]
+}

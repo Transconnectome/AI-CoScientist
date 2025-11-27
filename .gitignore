@@ -77,9 +77,13 @@ dmypy.json
 .ruff_cache/
 
 # Data
-data/
+# data/  <-- Commented out to allow data folder upload
 *.csv
 *.parquet
+
+# Large files (exceeds GitHub 100MB limit)
+data/QuantERA.zip
+data/reference_papers/pdfs/A_model_of_human_neural_networks_reveals_NPTX2_pathology_in_ALS_and_FTLD.pdf
 
 # ChromaDB (CRITICAL: Contains RAG embeddings - DO NOT DELETE!)
 chroma/

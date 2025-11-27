@@ -1,0 +1,42 @@
+{
+  "papers": [
+    {
+      "url": "https://www.nature.com/articles/s41591-025-03856-8",
+      "title": "Large language model-based biological age prediction in large-scale populations",
+      "pdf_path": "data/reference_papers/pdfs/nature_Large language model-based biological age predicti.pdf",
+      "downloaded_at": "2025-11-22T21:02:42.786623"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41591-025-03726-3",
+      "title": "Comparative benchmarking of the DeepSeek large language model on medical tasks and clinical reasoning",
+      "pdf_path": "data/reference_papers/pdfs/nature_Comparative benchmarking of the DeepSeek large lan.pdf",
+      "downloaded_at": "2025-11-22T21:03:06.336071"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41591-024-03148-7",
+      "title": "Outpatient reception via collaboration between nurses and a large language model: a randomized controlled trial",
+      "pdf_path": "data/reference_papers/pdfs/nature_Outpatient reception via collaboration between nur.pdf",
+      "downloaded_at": "2025-11-22T21:03:27.462404"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41562-025-02273-8",
+      "title": "Quantifying large language model usage in scientific papers",
+      "pdf_path": "data/reference_papers/pdfs/nature_Quantifying large language model usage in scientif.pdf",
+      "downloaded_at": "2025-11-22T21:28:10.329533"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41586-025-09079-8",
+      "title": "A fully open AI foundation model applied to chest radiography",
+      "pdf_path": "data/reference_papers/pdfs/nature_A fully open AI foundation model applied to chest .pdf",
+      "downloaded_at": "2025-11-22T21:29:10.206397"
+    }
+  ],
+  "downloaded_urls": [
+    "https://www.nature.com/articles/s41591-025-03856-8",
+    "https://www.nature.com/articles/s41591-025-03726-3",
+    "https://www.nature.com/articles/s41591-024-03148-7",
+    "https://www.nature.com/articles/s41562-025-02273-8",
+    "https://www.nature.com/articles/s41586-025-09079-8"
+  ],
+  "last_updated": "2025-11-22T21:29:16.896282"
+}
