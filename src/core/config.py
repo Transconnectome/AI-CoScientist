@@ -66,6 +66,9 @@ class Settings(BaseSettings):
         client = openai.AsyncClient(api_key=self.openai_api_key)
         return client
 
+    # OpenAI
+    openai_api_key: str = ""
+
     # Anthropic
     anthropic_api_key: str
     anthropic_model: str = "claude-sonnet-4-5"  # Claude Sonnet 4.5 (Released Sep 2025)
@@ -119,6 +122,16 @@ class Settings(BaseSettings):
     upload_dir: str = "./uploads"
     max_upload_size: int = 10485760  # 10MB
 
+    # RL System Configuration
+    rl_enabled: bool = True
+    rl_ab_testing_enabled: bool = True
+    rl_initial_traffic_pct: int = 10
+    rl_max_traffic_pct: int = 90
+    rl_model_path: str = "./models/rl_agent_selection"
+    rl_config_path: str = "./config/rl/rl_system_config.yaml"
+    rl_training_enabled: bool = True
+    rl_performance_threshold: float = 0.8
+
     @field_validator("secret_key")
     @classmethod
     def validate_secret_key(cls, v: str) -> str:
@@ -145,3 +158,8 @@ class Settings(BaseSettings):
 
 # Global settings instance
 settings = Settings()
+
+
+def get_settings() -> Settings:
+    """Get application settings instance."""
+    return settings
