@@ -1,0 +1,79 @@
+# DGX Spark GPU 최적화 Dockerfile
+# NVIDIA CUDA 12.6 + Python 3.11 기반
+
+FROM nvidia/cuda:12.6.0-cudnn-devel-ubuntu22.04
+
+# 환경 변수 설정
+ENV DEBIAN_FRONTEND=noninteractive
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PIP_NO_CACHE_DIR=1
+ENV PIP_DISABLE_PIP_VERSION_CHECK=1
+
+# CUDA 환경 변수
+ENV CUDA_HOME=/usr/local/cuda
+ENV PATH=${CUDA_HOME}/bin:${PATH}
+ENV LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
+
+# 작업 디렉토리 설정
+WORKDIR /app
+
+# 시스템 의존성 설치
+RUN apt-get update && apt-get install -y \
+    python3.11 \
+    python3.11-dev \
+    python3.11-venv \
+    python3-pip \
+    build-essential \
+    curl \
+    git \
+    wget \
+    libpq-dev \
+    && ln -sf /usr/bin/python3.11 /usr/bin/python3 \
+    && ln -sf /usr/bin/python3.11 /usr/bin/python \
+    && rm -rf /var/lib/apt/lists/*
+
+# pip 업그레이드
+RUN python -m pip install --upgrade pip setuptools wheel
+
+# Poetry 설치
+RUN curl -sSL https://install.python-poetry.org | python3 -
+ENV PATH="/root/.local/bin:$PATH"
+
+# 의존성 파일 복사
+COPY pyproject.toml poetry.lock* ./
+
+# Poetry 설정 및 의존성 설치 (CPU 버전 PyTorch 제외)
+RUN poetry config virtualenvs.create false \
+    && poetry install --no-interaction --no-ansi --no-root
+
+# PyTorch CUDA 12.6 버전 설치 (DGX Spark 최적화)
+RUN pip install torch==2.5.1+cu126 torchvision==0.20.1+cu126 torchaudio==2.5.1+cu126 \
+    --index-url https://download.pytorch.org/whl/cu126
+
+# Flash Attention 2 설치 (선택사항 - Blackwell 아키텍처 최적화)
+RUN pip install flash-attn --no-build-isolation || echo "Flash Attention installation skipped"
+
+# 애플리케이션 코드 복사
+COPY . .
+
+# 프로젝트 설치
+RUN poetry install --no-interaction --no-ansi
+
+# 업로드 및 캐시 디렉토리 생성
+RUN mkdir -p /app/uploads /root/.cache/huggingface /root/.cache/torch
+
+# 포트 노출
+EXPOSE 8000
+
+# 헬스체크
+HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
+    CMD curl -f http://localhost:8000/health || exit 1
+
+# GPU 사용 검증 스크립트
+RUN echo '#!/bin/bash\n\
+python -c "import torch; print(f\"CUDA Available: {torch.cuda.is_available()}\"); print(f\"GPU: {torch.cuda.get_device_name(0) if torch.cuda.is_available() else None}\")"' > /app/check_gpu.sh \
+    && chmod +x /app/check_gpu.sh
+
+# 기본 명령
+CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "4"]
