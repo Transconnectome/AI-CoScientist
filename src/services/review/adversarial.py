@@ -163,9 +163,8 @@ async def _review_with_openai_premium(
     prompt: str,
     document_text: str,
     api_key: str,
-    deepseek_key: Optional[str],
 ) -> ReviewAgentResult:
-    """Try GPT-5.x → GPT-4o cascade before falling back to DeepSeek."""
+    """Try GPT-5.x → GPT-4o cascade; offline critic if all fail."""
 
     full_prompt = _build_full_prompt(prompt, document_text, MAX_OPENAI_CHARS)
     client = OpenAI(api_key=api_key)  # type: ignore[misc]
@@ -213,10 +212,6 @@ async def _review_with_openai_premium(
             last_error = str(exc)
             continue
 
-    # Fallback to DeepSeek if available
-    if deepseek_key and OpenAI:
-        return await _review_with_deepseek(prompt, document_text, deepseek_key)
-
     return ReviewAgentResult(model="OpenAI", review="", success=False, error=last_error)
 
 
@@ -224,9 +219,8 @@ async def _review_with_claude_premium(
     prompt: str,
     document_text: str,
     api_key: str,
-    deepseek_key: Optional[str],
 ) -> ReviewAgentResult:
-    """Try Claude Opus 4.5 cascade before falling back to DeepSeek."""
+    """Try Claude Opus 4.5 cascade; offline critic if all fail."""
 
     full_prompt = _build_full_prompt(prompt, document_text, MAX_ANTHROPIC_CHARS)
     client = Anthropic(api_key=api_key)  # type: ignore[misc]
@@ -270,9 +264,6 @@ async def _review_with_claude_premium(
             last_error = str(exc)
             continue
 
-    if deepseek_key and OpenAI:
-        return await _review_with_deepseek(prompt, document_text, deepseek_key)
-
     return ReviewAgentResult(model="Anthropic", review="", success=False, error=last_error)
 
 
@@ -280,9 +271,8 @@ async def _review_with_gemini_premium(
     prompt: str,
     document_text: str,
     api_key: str,
-    deepseek_key: Optional[str],
 ) -> ReviewAgentResult:
-    """Try Gemini 3.x cascade before falling back to DeepSeek."""
+    """Try Gemini 3.x cascade; offline critic if all fail."""
 
     full_prompt = _build_full_prompt(prompt, document_text, MAX_GEMINI_CHARS)
     genai.configure(api_key=api_key)  # type: ignore[attr-defined]
@@ -326,41 +316,7 @@ async def _review_with_gemini_premium(
             last_error = str(exc)
             continue
 
-    if deepseek_key and OpenAI:
-        return await _review_with_deepseek(prompt, document_text, deepseek_key)
-
     return ReviewAgentResult(model="Google Gemini", review="", success=False, error=last_error)
-
-
-async def _review_with_deepseek(prompt: str, document_text: str, api_key: str) -> ReviewAgentResult:
-    """DeepSeek fallback when premium models are unavailable."""
-    full_prompt = _build_full_prompt(prompt, document_text, MAX_OPENAI_CHARS)
-
-    try:
-        # DeepSeek uses OpenAI-compatible API
-        # Base URL should be https://api.deepseek.com (without /v1)
-        client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")  # type: ignore[misc]
-        model_name = os.getenv("DEEPSEEK_MODEL", "deepseek-chat")
-        
-        response = client.chat.completions.create(
-            model=model_name,
-            messages=[
-                {
-                    "role": "system",
-                    "content": (
-                        "You are Reviewer #2 focusing on rigor, fatal flaws, and "
-                        "reproducibility."
-                    ),
-                },
-                {"role": "user", "content": full_prompt},
-            ],
-            temperature=0.3,
-            max_tokens=6000,
-        )
-        review_text = response.choices[0].message.content
-        return ReviewAgentResult(model=f"DeepSeek {model_name}", review=review_text, success=True)
-    except Exception as exc:
-        return ReviewAgentResult(model="DeepSeek", review="", success=False, error=str(exc))
 
 
 async def _offline_review(prompt: str, document_text: str) -> ReviewAgentResult:
