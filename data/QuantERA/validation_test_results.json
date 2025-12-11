@@ -1,0 +1,103 @@
+{
+  "ingestion": {
+    "status": "passed",
+    "details": {
+      "papers_processed": 5,
+      "total_chunks": 106,
+      "math_elements": 0,
+      "circuit_elements": 390,
+      "output_file": "/home/juke/git/AI-CoScientist/data/QuantERA/test_db/processed_docs.json"
+    }
+  },
+  "raptor": {
+    "status": "passed",
+    "details": {
+      "trees_created": 5,
+      "total_nodes": 141,
+      "nodes_by_level": {
+        "0": 106,
+        "1": 30,
+        "2": 5
+      },
+      "sample_query_results": 0
+    }
+  },
+  "knowledge_graph": {
+    "status": "passed",
+    "details": {
+      "papers_added": 5,
+      "total_entities": 47,
+      "total_relationships": 0,
+      "entity_types": {
+        "algorithms": 11,
+        "concepts": 13,
+        "hardware": 10,
+        "metrics": 9,
+        "techniques": 4
+      },
+      "vqe_query_results": 2,
+      "ansatz_query_results": 1,
+      "related_concepts_found": 0
+    }
+  },
+  "agent": {
+    "status": "passed",
+    "details": {
+      "system_status": "operational",
+      "raptor_nodes": 0,
+      "kg_entities": 47
+    }
+  },
+  "queries": {
+    "status": "passed",
+    "details": {
+      "total_queries": 5,
+      "successful_queries": 5,
+      "success_rate": 1.0,
+      "query_results": [
+        {
+          "query": "What is a variational quantum eigensolver?",
+          "success": true,
+          "confidence": 0.1,
+          "sources_count": 0,
+          "answer_length": 69
+        },
+        {
+          "query": "How does barren plateau affect quantum machine learning?",
+          "success": true,
+          "confidence": 0.1,
+          "sources_count": 0,
+          "answer_length": 69
+        },
+        {
+          "query": "Compare VQE and QAOA algorithms",
+          "success": true,
+          "confidence": 0.1,
+          "sources_count": 0,
+          "answer_length": 116
+        },
+        {
+          "query": "What are the challenges with NISQ devices?",
+          "success": true,
+          "confidence": 0.1,
+          "sources_count": 0,
+          "answer_length": 69
+        },
+        {
+          "query": "How to mitigate quantum noise in VQE?",
+          "success": true,
+          "confidence": 0.1,
+          "sources_count": 0,
+          "answer_length": 77
+        }
+      ]
+    }
+  },
+  "overall": {
+    "status": "passed",
+    "success_rate": 1.0,
+    "passed_tests": 5,
+    "total_tests": 5,
+    "summary": "5/5 components working"
+  }
+}

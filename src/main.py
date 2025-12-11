@@ -11,6 +11,7 @@ from src.api.v1 import api_router
 from src.core.config import settings
 from src.core.database import close_db, init_db
 from src.core.redis import redis_client
+from src.core.rl_system import rl_lifespan_manager, add_rl_health_endpoints
 
 
 @asynccontextmanager
@@ -18,7 +19,11 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     """Application lifespan context manager."""
     # Startup
     await init_db()
-    yield
+
+    # Initialize RL system with enhanced agent pool integration
+    async with rl_lifespan_manager(app):
+        yield
+
     # Shutdown
     await close_db()
     await redis_client.close()
@@ -46,6 +51,9 @@ app.add_middleware(
 
 # Include API router
 app.include_router(api_router, prefix="/api/v1")
+
+# Add RL system health endpoints
+add_rl_health_endpoints(app)
 
 
 @app.get("/")

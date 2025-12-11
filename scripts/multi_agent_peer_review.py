@@ -1,346 +1,121 @@
 #!/usr/bin/env python3
-"""Multi-agent peer review system using GPT-4, Claude, and Gemini.
+"""Multi-agent peer review CLI.
 
-This script conducts a professional peer review using three independent LLMs
-and synthesizes their evaluations into a comprehensive review.
+This script now relies on ``src.services.review.adversarial`` so the same
+logic can be reused inside the unified pipeline.
 """
 
-import sys
-import os
+from __future__ import annotations
+
+import argparse
+import asyncio
 import json
 from pathlib import Path
-from typing import Dict, List
-import asyncio
-from datetime import datetime
+from typing import Optional
 
-# Add src to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
-import openai
-from anthropic import Anthropic
-import google.generativeai as genai
-from dotenv import load_dotenv
 import PyPDF2
+from dotenv import load_dotenv
 
-# Load environment variables
+from src.services.review.adversarial import run_adversarial_review
+
 load_dotenv()
 
-# Initialize API clients
-openai.api_key = os.getenv("OPENAI_API_KEY")
-anthropic_client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-
-def extract_pdf_text(pdf_path: str) -> str:
-    """Extract text from PDF file.
-
-    Args:
-        pdf_path: Path to PDF file
-
-    Returns:
-        Extracted text
-    """
-    text = []
-    with open(pdf_path, 'rb') as file:
-        pdf_reader = PyPDF2.PdfReader(file)
-        for page in pdf_reader.pages:
+def extract_pdf_text(pdf_path: Path) -> str:
+    text: list[str] = []
+    with pdf_path.open("rb") as handle:
+        reader = PyPDF2.PdfReader(handle)
+        for page in reader.pages:
             text.append(page.extract_text())
-    return '\n'.join(text)
+    return "\n".join(text)
 
 
-def load_review_prompt(prompt_path: str) -> str:
-    """Load the peer review prompt.
-
-    Args:
-        prompt_path: Path to prompt file
-
-    Returns:
-        Prompt text
-    """
-    with open(prompt_path, 'r', encoding='utf-8') as f:
-        return f.read()
+def load_review_prompt(prompt_path: Path) -> str:
+    return prompt_path.read_text(encoding="utf-8")
 
 
-async def review_with_gpt4(prompt: str, paper_text: str) -> Dict:
-    """Conduct review using GPT-4.
-
-    Args:
-        prompt: Review prompt
-        paper_text: Paper text content
-
-    Returns:
-        Review results
-    """
-    print("\n🤖 GPT-4 is reviewing...")
-
-    try:
-        # Truncate paper if too long
-        max_chars = 40000
-        if len(paper_text) > max_chars:
-            paper_text = paper_text[:max_chars] + "\n\n[... truncated for length ...]"
-
-        full_prompt = f"{prompt}\n\n---\n\nPAPER TEXT:\n\n{paper_text}"
-
-        response = openai.chat.completions.create(
-            model="gpt-4-turbo-preview",
-            messages=[
-                {"role": "system", "content": "You are an expert peer reviewer for Neuropsychopharmacology with deep expertise in neuroimaging, OCD research, and biomarker studies."},
-                {"role": "user", "content": full_prompt}
-            ],
-            temperature=0.3,
-            max_tokens=8000
-        )
-
-        review_text = response.choices[0].message.content
-
-        return {
-            "model": "GPT-4",
-            "review": review_text,
-            "timestamp": datetime.now().isoformat(),
-            "success": True
-        }
-
-    except Exception as e:
-        print(f"❌ GPT-4 error: {e}")
-        return {
-            "model": "GPT-4",
-            "error": str(e),
-            "timestamp": datetime.now().isoformat(),
-            "success": False
-        }
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Multi-agent peer review utility")
+    parser.add_argument(
+        "--input",
+        "-i",
+        type=Path,
+        required=True,
+        help="Path to manuscript (PDF or text)",
+    )
+    parser.add_argument(
+        "--prompt",
+        "-p",
+        type=Path,
+        required=True,
+        help="Path to reviewer prompt",
+    )
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=Path("output"),
+        help="Directory for synthesized review output",
+    )
+    parser.add_argument(
+        "--copy-to-repo",
+        type=Path,
+        help="Optional path to mirror the review file (e.g., Reviews repo)",
+    )
+    return parser.parse_args()
 
 
-async def review_with_claude(prompt: str, paper_text: str) -> Dict:
-    """Conduct review using Claude.
-
-    Args:
-        prompt: Review prompt
-        paper_text: Paper text content
-
-    Returns:
-        Review results
-    """
-    print("\n🤖 Claude is reviewing...")
-
-    try:
-        # Truncate paper if too long
-        max_chars = 40000
-        if len(paper_text) > max_chars:
-            paper_text = paper_text[:max_chars] + "\n\n[... truncated for length ...]"
-
-        full_prompt = f"{prompt}\n\n---\n\nPAPER TEXT:\n\n{paper_text}"
-
-        response = anthropic_client.messages.create(
-            model="claude-sonnet-4-5-20250929",
-            max_tokens=8000,
-            temperature=0.3,
-            messages=[
-                {"role": "user", "content": full_prompt}
-            ]
-        )
-
-        review_text = response.content[0].text
-
-        return {
-            "model": "Claude Sonnet 4.5",
-            "review": review_text,
-            "timestamp": datetime.now().isoformat(),
-            "success": True
-        }
-
-    except Exception as e:
-        print(f"❌ Claude error: {e}")
-        return {
-            "model": "Claude Sonnet 4.5",
-            "error": str(e),
-            "timestamp": datetime.now().isoformat(),
-            "success": False
-        }
+def read_document(path: Path) -> str:
+    if path.suffix.lower() == ".pdf":
+        return extract_pdf_text(path)
+    return path.read_text(encoding="utf-8")
 
 
-async def review_with_gemini(prompt: str, paper_text: str) -> Dict:
-    """Conduct review using Gemini.
-
-    Args:
-        prompt: Review prompt
-        paper_text: Paper text content
-
-    Returns:
-        Review results
-    """
-    print("\n🤖 Gemini is reviewing...")
-
-    try:
-        # Truncate paper if too long
-        max_chars = 30000  # Gemini has smaller context
-        if len(paper_text) > max_chars:
-            paper_text = paper_text[:max_chars] + "\n\n[... truncated for length ...]"
-
-        full_prompt = f"{prompt}\n\n---\n\nPAPER TEXT:\n\n{paper_text}"
-
-        model = genai.GenerativeModel('gemini-pro')
-
-        response = model.generate_content(
-            full_prompt,
-            generation_config=genai.types.GenerationConfig(
-                temperature=0.3,
-                max_output_tokens=8000
-            )
-        )
-
-        review_text = response.text
-
-        return {
-            "model": "Gemini Pro",
-            "review": review_text,
-            "timestamp": datetime.now().isoformat(),
-            "success": True
-        }
-
-    except Exception as e:
-        print(f"❌ Gemini error: {e}")
-        return {
-            "model": "Gemini Pro",
-            "error": str(e),
-            "timestamp": datetime.now().isoformat(),
-            "success": False
-        }
+def mirror_output(source_path: Path, destination_dir: Path) -> Optional[Path]:
+    destination_dir.mkdir(parents=True, exist_ok=True)
+    target = destination_dir / source_path.name
+    target.write_text(source_path.read_text(encoding="utf-8"), encoding="utf-8")
+    return target
 
 
-def synthesize_reviews(reviews: List[Dict]) -> str:
-    """Synthesize multiple agent reviews into final review.
+async def main() -> None:
+    args = parse_args()
 
-    Args:
-        reviews: List of review results from different models
+    if not args.input.exists():
+        raise FileNotFoundError(f"Input file not found: {args.input}")
+    if not args.prompt.exists():
+        raise FileNotFoundError(f"Prompt file not found: {args.prompt}")
 
-    Returns:
-        Synthesized review text
-    """
-    successful_reviews = [r for r in reviews if r.get('success', False)]
-
-    if not successful_reviews:
-        return "ERROR: All review agents failed. No reviews to synthesize."
-
-    synthesis = []
-    synthesis.append("# MULTI-AGENT PEER REVIEW SYNTHESIS")
-    synthesis.append("=" * 80)
-    synthesis.append(f"\n**Review Date:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    synthesis.append(f"**Number of Agents:** {len(successful_reviews)}")
-    synthesis.append(f"**Models Used:** {', '.join([r['model'] for r in successful_reviews])}")
-    synthesis.append("\n" + "=" * 80 + "\n")
-
-    # Include each agent's review
-    for i, review in enumerate(successful_reviews, 1):
-        synthesis.append(f"\n## AGENT {i}: {review['model']}")
-        synthesis.append("-" * 80)
-        synthesis.append(review['review'])
-        synthesis.append("\n" + "=" * 80 + "\n")
-
-    # Add meta-analysis section
-    synthesis.append("\n## META-ANALYSIS: Cross-Agent Consensus")
-    synthesis.append("-" * 80)
-    synthesis.append("\n**Instructions for Final Synthesis:**")
-    synthesis.append("1. Identify consensus areas where all agents agree")
-    synthesis.append("2. Identify divergence areas where agents disagree")
-    synthesis.append("3. Extract the most critical concerns across all agents")
-    synthesis.append("4. Combine recommendations into actionable list")
-    synthesis.append("5. Provide unified final recommendation\n")
-
-    return "\n".join(synthesis)
-
-
-async def main():
-    """Main execution function."""
+    document_text = read_document(args.input)
+    prompt = load_review_prompt(args.prompt)
 
     print("=" * 80)
     print("MULTI-AGENT PEER REVIEW SYSTEM")
-    print("Neuropsychopharmacology Manuscript MS 37480")
     print("=" * 80)
+    print(f"📄 Manuscript: {args.input}")
+    print(f"📝 Prompt: {args.prompt}")
 
-    # File paths
-    base_dir = Path(__file__).parent.parent
-    pdf_path = base_dir / "input" / "37480_0_merged_1758766294.pdf"
-    prompt_path = base_dir / "data" / "2025-10-npp" / "PEER_REVIEW_PROMPT.md"
-    output_path = base_dir / "output" / f"MULTI_AGENT_REVIEW_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
+    result = await run_adversarial_review(
+        document_text=document_text,
+        prompt=prompt,
+        output_dir=args.output_dir,
+        file_prefix="MULTI_AGENT_REVIEW",
+    )
 
-    # Check files exist
-    if not pdf_path.exists():
-        print(f"❌ ERROR: PDF not found at {pdf_path}")
-        return
-
-    if not prompt_path.exists():
-        print(f"❌ ERROR: Prompt not found at {prompt_path}")
-        return
-
-    print(f"\n📄 Paper: {pdf_path.name}")
-    print(f"📋 Prompt: {prompt_path.name}")
-    print(f"💾 Output: {output_path.name}")
-
-    # Extract PDF text
-    print("\n📖 Extracting paper text...")
-    try:
-        paper_text = extract_pdf_text(str(pdf_path))
-        print(f"✅ Extracted {len(paper_text)} characters")
-    except Exception as e:
-        print(f"❌ PDF extraction error: {e}")
-        return
-
-    # Load prompt
-    print("\n📝 Loading review prompt...")
-    try:
-        prompt = load_review_prompt(str(prompt_path))
-        print(f"✅ Loaded prompt ({len(prompt)} characters)")
-    except Exception as e:
-        print(f"❌ Prompt loading error: {e}")
-        return
-
-    # Conduct reviews in parallel
-    print("\n" + "=" * 80)
-    print("PHASE 1: INDEPENDENT AGENT REVIEWS")
     print("=" * 80)
-
-    tasks = [
-        review_with_gpt4(prompt, paper_text),
-        review_with_claude(prompt, paper_text),
-        review_with_gemini(prompt, paper_text)
-    ]
-
-    reviews = await asyncio.gather(*tasks)
-
-    # Check results
-    successful = [r for r in reviews if r.get('success', False)]
-    failed = [r for r in reviews if not r.get('success', False)]
-
-    print("\n" + "=" * 80)
-    print(f"✅ Successful reviews: {len(successful)}")
-    print(f"❌ Failed reviews: {len(failed)}")
-
-    if failed:
-        for f in failed:
-            print(f"   - {f['model']}: {f.get('error', 'Unknown error')}")
-
-    # Synthesize reviews
-    print("\n" + "=" * 80)
-    print("PHASE 2: SYNTHESIS")
+    print("PHASE 1: AGENT RESULTS")
     print("=" * 80)
+    print(f"✅ Successful agents: {result.success_count}")
+    print(f"❌ Failed agents: {result.failure_count}")
 
-    synthesis = synthesize_reviews(reviews)
+    if result.output_path:
+        print(f"\n✅ Multi-agent review saved to: {result.output_path}")
 
-    # Save output
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(output_path, 'w', encoding='utf-8') as f:
-        f.write(synthesis)
+    if args.copy_to_repo and result.output_path:
+        mirrored = mirror_output(Path(result.output_path), args.copy_to_repo)
+        print(f"✅ Copy saved to: {mirrored}")
 
-    print(f"\n✅ Multi-agent review saved to: {output_path}")
-    print("\n" + "=" * 80)
-    print("REVIEW COMPLETE")
-    print("=" * 80)
-
-    # Also save to Reviews repo
-    reviews_output = Path("/Users/jiookcha/Documents/git/Reviews/data/2025-10-npp") / f"MULTI_AGENT_REVIEW_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
-    with open(reviews_output, 'w', encoding='utf-8') as f:
-        f.write(synthesis)
-    print(f"\n✅ Copy saved to Reviews repo: {reviews_output}")
+    print("\nSummary JSON:")
+    print(json.dumps(result.to_dict(), indent=2))
 
 
 if __name__ == "__main__":

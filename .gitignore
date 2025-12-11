@@ -124,3 +124,5 @@ improvement_*.txt
 # AI-generated outputs
 ai_coscientist.pdf
 chromadb_data_dd/  # Developmental Disability VectorDB (재생성 가능)
+.env.backup.*
+*.backup.*

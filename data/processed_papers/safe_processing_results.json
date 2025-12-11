@@ -1,0 +1,1822 @@
+{
+  "total_papers": 66,
+  "processed_successfully": 66,
+  "failed_papers": [],
+  "domain_distribution": {
+    "neuroscience": 16,
+    "clinical_psychology": 2,
+    "developmental_psychology": 8,
+    "cognitive_psychology": 18,
+    "educational_psychology": 6,
+    "general_psychology": 6,
+    "social_psychology": 6,
+    "health_psychology": 4
+  },
+  "author_distribution": {
+    "안우영": 10,
+    "박주용": 6,
+    "안우영": 10,
+    "한소원": 9,
+    "한소원": 9,
+    "이수현": 8,
+    "이수현": 8,
+    "박주용": 6
+  },
+  "papers_metadata": [
+    {
+      "title": "kim2023 tdcs",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/kim2023_tdcs.pdf",
+      "folder": "안우영",
+      "file_size_mb": 0.97,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "neuroscience",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.12,
+      "vector_store_added": false
+    },
+    {
+      "title": "chang2023",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/chang2023.pdf",
+      "folder": "안우영",
+      "file_size_mb": 1.22,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "clinical_psychology",
+      "methodology": "meta_analysis",
+      "target_population": "clinical",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "kwon2023 soda",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/kwon2023_soda.pdf",
+      "folder": "안우영",
+      "file_size_mb": 1.79,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "developmental_psychology",
+      "methodology": "not_specified",
+      "target_population": "children",
+      "domain_confidence": 0.2,
+      "vector_store_added": false
+    },
+    {
+      "title": "wang2023",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/wang2023.pdf",
+      "folder": "안우영",
+      "file_size_mb": 3.15,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "developmental_psychology",
+      "methodology": "not_specified",
+      "target_population": "children",
+      "domain_confidence": 0.2,
+      "vector_store_added": false
+    },
+    {
+      "title": "lee2024 igd",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2024,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/lee2024_igd.pdf",
+      "folder": "안우영",
+      "file_size_mb": 2.62,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "clinical",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "kwon2022 ado",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2022,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/kwon2022_ado.pdf",
+      "folder": "안우영",
+      "file_size_mb": 0.67,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "educational_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "lee2023 smoking",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/lee2023_smoking.pdf",
+      "folder": "안우영",
+      "file_size_mb": 0.84,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "kwon2024 igd",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2024,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/kwon2024_igd.pdf",
+      "folder": "안우영",
+      "file_size_mb": 2.92,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "neuroscience",
+      "methodology": "not_specified",
+      "target_population": "clinical",
+      "domain_confidence": 0.24,
+      "vector_store_added": false
+    },
+    {
+      "title": "lee2024 irl",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2024,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/lee2024_irl.pdf",
+      "folder": "안우영",
+      "file_size_mb": 4.22,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "general_psychology",
+      "methodology": "experimental",
+      "target_population": "healthy",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "park2023 ploscb",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/park2023_ploscb.pdf",
+      "folder": "안우영",
+      "file_size_mb": 2.19,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "general_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "업무 시뮬레이션을 활용한 상호평가 기반 논술형 SJT와 직무적성검사의 타당도",
+      "authors": [
+        "박주용"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/박주용/업무 시뮬레이션을 활용한 상호평가 기반 논술형 SJT와 직무적성검사의 타당도.pdf",
+      "folder": "박주용",
+      "file_size_mb": 1.56,
+      "psychology_terms": [
+        "문제해결능력",
+        "평가"
+      ],
+      "english_mappings": {
+        "문제해결능력": "problem solving",
+        "평가": "assessment"
+      },
+      "sentiment": {
+        "label": "negative",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 1
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.3,
+      "vector_store_added": false
+    },
+    {
+      "title": "시간을 반영한 채점이 동형검사 신뢰도에 미치는 영향",
+      "authors": [
+        "박주용"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/박주용/시간을 반영한 채점이 동형검사 신뢰도에 미치는 영향.pdf",
+      "folder": "박주용",
+      "file_size_mb": 0.56,
+      "psychology_terms": [
+        "인지"
+      ],
+      "english_mappings": {
+        "인지": "인지"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.2,
+      "vector_store_added": false
+    },
+    {
+      "title": "팀 기반 학습에서동료평가의 타당도 분석",
+      "authors": [
+        "박주용"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/박주용/팀 기반 학습에서동료평가의 타당도 분석.pdf",
+      "folder": "박주용",
+      "file_size_mb": 0.35,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "educational_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.7,
+      "vector_store_added": false
+    },
+    {
+      "title": "피드백이 추가된 하이브리드 협력이 의사결정에 미치는 영향",
+      "authors": [
+        "박주용"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/박주용/피드백이 추가된 하이브리드 협력이 의사결정에 미치는 영향.pdf",
+      "folder": "박주용",
+      "file_size_mb": 0.64,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "비전문가의 평가 정확도 향상 방안 탐색 공통 평가 항목 점수 기반 가중치 하",
+      "authors": [
+        "박주용"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/박주용/비전문가의 평가 정확도 향상 방안 탐색 공통 평가 항목 점수 기반 가중치 하.pdf",
+      "folder": "박주용",
+      "file_size_mb": 0.27,
+      "psychology_terms": [
+        "학습",
+        "인지",
+        "평가",
+        "상담"
+      ],
+      "english_mappings": {
+        "학습": "학습",
+        "인지": "인지",
+        "평가": "assessment",
+        "상담": "counseling"
+      },
+      "sentiment": {
+        "label": "positive",
+        "confidence": 0.6666666666666666,
+        "positive_count": 2,
+        "negative_count": 0
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.3,
+      "vector_store_added": false
+    },
+    {
+      "title": "실험 수행과 보고서 작성 역량 강화를 위한  실험 심리학 수업 방안",
+      "authors": [
+        "박주용"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/박주용/실험 수행과 보고서 작성 역량 강화를 위한  실험 심리학 수업 방안.pdf",
+      "folder": "박주용",
+      "file_size_mb": 6.55,
+      "psychology_terms": [
+        "학습"
+      ],
+      "english_mappings": {
+        "학습": "학습"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "educational_psychology",
+      "methodology": "experimental",
+      "target_population": "not_specified",
+      "domain_confidence": 0.4,
+      "vector_store_added": false
+    },
+    {
+      "title": "kim2023 tdcs",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/kim2023_tdcs.pdf",
+      "folder": "안우영",
+      "file_size_mb": 0.97,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "neuroscience",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.12,
+      "vector_store_added": false
+    },
+    {
+      "title": "chang2023",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/chang2023.pdf",
+      "folder": "안우영",
+      "file_size_mb": 1.22,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "clinical_psychology",
+      "methodology": "meta_analysis",
+      "target_population": "clinical",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "kwon2023 soda",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/kwon2023_soda.pdf",
+      "folder": "안우영",
+      "file_size_mb": 1.79,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "developmental_psychology",
+      "methodology": "not_specified",
+      "target_population": "children",
+      "domain_confidence": 0.2,
+      "vector_store_added": false
+    },
+    {
+      "title": "wang2023",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/wang2023.pdf",
+      "folder": "안우영",
+      "file_size_mb": 3.15,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "developmental_psychology",
+      "methodology": "not_specified",
+      "target_population": "children",
+      "domain_confidence": 0.2,
+      "vector_store_added": false
+    },
+    {
+      "title": "lee2024 igd",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2024,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/lee2024_igd.pdf",
+      "folder": "안우영",
+      "file_size_mb": 2.62,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "clinical",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "kwon2022 ado",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2022,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/kwon2022_ado.pdf",
+      "folder": "안우영",
+      "file_size_mb": 0.67,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "educational_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "lee2023 smoking",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/lee2023_smoking.pdf",
+      "folder": "안우영",
+      "file_size_mb": 0.84,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "kwon2024 igd",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2024,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/kwon2024_igd.pdf",
+      "folder": "안우영",
+      "file_size_mb": 2.92,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "neuroscience",
+      "methodology": "not_specified",
+      "target_population": "clinical",
+      "domain_confidence": 0.24,
+      "vector_store_added": false
+    },
+    {
+      "title": "lee2024 irl",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2024,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/lee2024_irl.pdf",
+      "folder": "안우영",
+      "file_size_mb": 4.22,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "general_psychology",
+      "methodology": "experimental",
+      "target_population": "healthy",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "park2023 ploscb",
+      "authors": [
+        "안우영"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/안우영/park2023_ploscb.pdf",
+      "folder": "안우영",
+      "file_size_mb": 2.19,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "general_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "whn 2025 08 12",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2025,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/whn-2025-08-12.pdf",
+      "folder": "한소원",
+      "file_size_mb": 1.29,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "developmental_psychology",
+      "methodology": "not_specified",
+      "target_population": "children",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "s12369 024 01196 0",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/s12369-024-01196-0.pdf",
+      "folder": "한소원",
+      "file_size_mb": 0.91,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "social_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "중년 여성의 폐경기 증상과 관련된 신체 계측, 체력, 신체활동 요인 탐색 연구",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/중년 여성의 폐경기 증상과 관련된 신체 계측, 체력, 신체활동 요인 탐색 연구.pdf",
+      "folder": "한소원",
+      "file_size_mb": 0.7,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "negative",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 1
+      },
+      "research_domain": "developmental_psychology",
+      "methodology": "not_specified",
+      "target_population": "children",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "fpsyg 15 1282036 (1)",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2036,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/fpsyg-15-1282036 (1).pdf",
+      "folder": "한소원",
+      "file_size_mb": 0.65,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "social_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.2,
+      "vector_store_added": false
+    },
+    {
+      "title": "Effect of Feedback Styles in Robotic Fitness Coach",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/Effect of Feedback Styles in Robotic Fitness Coach.pdf",
+      "folder": "한소원",
+      "file_size_mb": 0.69,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "health_psychology",
+      "methodology": "not_specified",
+      "target_population": "adults",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "KCI FI003065686",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/KCI_FI003065686.pdf",
+      "folder": "한소원",
+      "file_size_mb": 0.41,
+      "psychology_terms": [
+        "CBT",
+        "인지"
+      ],
+      "english_mappings": {
+        "CBT": "CBT",
+        "인지": "인지"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.3,
+      "vector_store_added": false
+    },
+    {
+      "title": "KCI FI002926812",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/KCI_FI002926812.pdf",
+      "folder": "한소원",
+      "file_size_mb": 0.74,
+      "psychology_terms": [
+        "개입",
+        "인지능력",
+        "인지"
+      ],
+      "english_mappings": {
+        "개입": "intervention",
+        "인지능력": "cognitive ability",
+        "인지": "인지"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "health_psychology",
+      "methodology": "survey",
+      "target_population": "not_specified",
+      "domain_confidence": 0.4,
+      "vector_store_added": false
+    },
+    {
+      "title": "s12369 023 01059 0",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/s12369-023-01059-0.pdf",
+      "folder": "한소원",
+      "file_size_mb": 0.54,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "social_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "한소원 교수님(인간공학심리 연구실) 대표 논문",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/한소원 교수님(인간공학심리 연구실) 대표 논문.pdf",
+      "folder": "한소원",
+      "file_size_mb": 2.5,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "general_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "whn 2025 08 12",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2025,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/whn-2025-08-12.pdf",
+      "folder": "한소원",
+      "file_size_mb": 1.29,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "developmental_psychology",
+      "methodology": "not_specified",
+      "target_population": "children",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "s12369 024 01196 0",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/s12369-024-01196-0.pdf",
+      "folder": "한소원",
+      "file_size_mb": 0.91,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "social_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "한소원 교수님(인간공학심리 연구실) 대표 논문",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/한소원 교수님(인간공학심리 연구실) 대표 논문.pdf",
+      "folder": "한소원",
+      "file_size_mb": 2.5,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "general_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "fpsyg 15 1282036 (1)",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2036,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/fpsyg-15-1282036 (1).pdf",
+      "folder": "한소원",
+      "file_size_mb": 0.65,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "social_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.2,
+      "vector_store_added": false
+    },
+    {
+      "title": "Effect of Feedback Styles in Robotic Fitness Coach",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/Effect of Feedback Styles in Robotic Fitness Coach.pdf",
+      "folder": "한소원",
+      "file_size_mb": 0.69,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "health_psychology",
+      "methodology": "not_specified",
+      "target_population": "adults",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "KCI FI003065686",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/KCI_FI003065686.pdf",
+      "folder": "한소원",
+      "file_size_mb": 0.41,
+      "psychology_terms": [
+        "CBT",
+        "인지"
+      ],
+      "english_mappings": {
+        "CBT": "CBT",
+        "인지": "인지"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.3,
+      "vector_store_added": false
+    },
+    {
+      "title": "중년 여성의 폐경기 증상과 관련된 신체 계측, 체력, 신체활동 요인 탐색 연구",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/중년 여성의 폐경기 증상과 관련된 신체 계측, 체력, 신체활동 요인 탐색 연구.pdf",
+      "folder": "한소원",
+      "file_size_mb": 0.7,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "negative",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 1
+      },
+      "research_domain": "developmental_psychology",
+      "methodology": "not_specified",
+      "target_population": "children",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "KCI FI002926812",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/KCI_FI002926812.pdf",
+      "folder": "한소원",
+      "file_size_mb": 0.74,
+      "psychology_terms": [
+        "개입",
+        "인지능력",
+        "인지"
+      ],
+      "english_mappings": {
+        "개입": "intervention",
+        "인지능력": "cognitive ability",
+        "인지": "인지"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "health_psychology",
+      "methodology": "survey",
+      "target_population": "not_specified",
+      "domain_confidence": 0.4,
+      "vector_store_added": false
+    },
+    {
+      "title": "s12369 023 01059 0",
+      "authors": [
+        "한소원"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/한소원/s12369-023-01059-0.pdf",
+      "folder": "한소원",
+      "file_size_mb": 0.54,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "social_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    },
+    {
+      "title": "1 s2.0 S0165027023001577 main",
+      "authors": [
+        "이수현"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/이수현/1-s2.0-S0165027023001577-main.pdf",
+      "folder": "이수현",
+      "file_size_mb": 2.2,
+      "psychology_terms": [
+        "fMRI"
+      ],
+      "english_mappings": {
+        "fMRI": "fMRI"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "neuroscience",
+      "methodology": "neuroimaging",
+      "target_population": "not_specified",
+      "domain_confidence": 0.48,
+      "vector_store_added": false
+    },
+    {
+      "title": "1 s2.0 S1053811922007121 main 2",
+      "authors": [
+        "이수현"
+      ],
+      "year": 2007,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/이수현/1-s2.0-S1053811922007121-main-2.pdf",
+      "folder": "이수현",
+      "file_size_mb": 2.7,
+      "psychology_terms": [
+        "fMRI"
+      ],
+      "english_mappings": {
+        "fMRI": "fMRI"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "neuroscience",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.24,
+      "vector_store_added": false
+    },
+    {
+      "title": "s41467 021 22335 5",
+      "authors": [
+        "이수현"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/이수현/s41467-021-22335-5.pdf",
+      "folder": "이수현",
+      "file_size_mb": 2.7,
+      "psychology_terms": [
+        "fMRI"
+      ],
+      "english_mappings": {
+        "fMRI": "fMRI"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "neuroscience",
+      "methodology": "neuroimaging",
+      "target_population": "not_specified",
+      "domain_confidence": 0.36,
+      "vector_store_added": false
+    },
+    {
+      "title": "1 s2.0 S1053811922006097 main 2",
+      "authors": [
+        "이수현"
+      ],
+      "year": 2006,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/이수현/1-s2.0-S1053811922006097-main-2.pdf",
+      "folder": "이수현",
+      "file_size_mb": 1.22,
+      "psychology_terms": [
+        "fMRI"
+      ],
+      "english_mappings": {
+        "fMRI": "fMRI"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "neuroscience",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.24,
+      "vector_store_added": false
+    },
+    {
+      "title": "Human Brain Mapping   2023   Kwon   Hippocampal integration and separation processes with different temporal and spatial 3",
+      "authors": [
+        "이수현"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/이수현/Human Brain Mapping - 2023 - Kwon - Hippocampal integration and separation processes with different temporal and spatial-3.pdf",
+      "folder": "이수현",
+      "file_size_mb": 1.37,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.3,
+      "vector_store_added": false
+    },
+    {
+      "title": "s41467 025 59825 9",
+      "authors": [
+        "이수현"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/이수현/s41467-025-59825-9.pdf",
+      "folder": "이수현",
+      "file_size_mb": 4.06,
+      "psychology_terms": [
+        "fMRI"
+      ],
+      "english_mappings": {
+        "fMRI": "fMRI"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.2,
+      "vector_store_added": false
+    },
+    {
+      "title": "s42003 025 08504 y",
+      "authors": [
+        "이수현"
+      ],
+      "year": 2003,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/이수현/s42003-025-08504-y.pdf",
+      "folder": "이수현",
+      "file_size_mb": 2.45,
+      "psychology_terms": [
+        "fMRI"
+      ],
+      "english_mappings": {
+        "fMRI": "fMRI"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "neuroscience",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.12,
+      "vector_store_added": false
+    },
+    {
+      "title": "s41467 024 53342 x",
+      "authors": [
+        "이수현"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/이수현/s41467-024-53342-x.pdf",
+      "folder": "이수현",
+      "file_size_mb": 3.28,
+      "psychology_terms": [
+        "fMRI"
+      ],
+      "english_mappings": {
+        "fMRI": "fMRI"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "neuroscience",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.36,
+      "vector_store_added": false
+    },
+    {
+      "title": "1 s2.0 S0165027023001577 main",
+      "authors": [
+        "이수현"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/이수현/1-s2.0-S0165027023001577-main.pdf",
+      "folder": "이수현",
+      "file_size_mb": 2.2,
+      "psychology_terms": [
+        "fMRI"
+      ],
+      "english_mappings": {
+        "fMRI": "fMRI"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "neuroscience",
+      "methodology": "neuroimaging",
+      "target_population": "not_specified",
+      "domain_confidence": 0.48,
+      "vector_store_added": false
+    },
+    {
+      "title": "1 s2.0 S1053811922007121 main 2",
+      "authors": [
+        "이수현"
+      ],
+      "year": 2007,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/이수현/1-s2.0-S1053811922007121-main-2.pdf",
+      "folder": "이수현",
+      "file_size_mb": 2.7,
+      "psychology_terms": [
+        "fMRI"
+      ],
+      "english_mappings": {
+        "fMRI": "fMRI"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "neuroscience",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.24,
+      "vector_store_added": false
+    },
+    {
+      "title": "s41467 021 22335 5",
+      "authors": [
+        "이수현"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/이수현/s41467-021-22335-5.pdf",
+      "folder": "이수현",
+      "file_size_mb": 2.7,
+      "psychology_terms": [
+        "fMRI"
+      ],
+      "english_mappings": {
+        "fMRI": "fMRI"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "neuroscience",
+      "methodology": "neuroimaging",
+      "target_population": "not_specified",
+      "domain_confidence": 0.36,
+      "vector_store_added": false
+    },
+    {
+      "title": "1 s2.0 S1053811922006097 main 2",
+      "authors": [
+        "이수현"
+      ],
+      "year": 2006,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/이수현/1-s2.0-S1053811922006097-main-2.pdf",
+      "folder": "이수현",
+      "file_size_mb": 1.22,
+      "psychology_terms": [
+        "fMRI"
+      ],
+      "english_mappings": {
+        "fMRI": "fMRI"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "neuroscience",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.24,
+      "vector_store_added": false
+    },
+    {
+      "title": "Human Brain Mapping   2023   Kwon   Hippocampal integration and separation processes with different temporal and spatial 3",
+      "authors": [
+        "이수현"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/이수현/Human Brain Mapping - 2023 - Kwon - Hippocampal integration and separation processes with different temporal and spatial-3.pdf",
+      "folder": "이수현",
+      "file_size_mb": 1.37,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.3,
+      "vector_store_added": false
+    },
+    {
+      "title": "s41467 025 59825 9",
+      "authors": [
+        "이수현"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/이수현/s41467-025-59825-9.pdf",
+      "folder": "이수현",
+      "file_size_mb": 4.06,
+      "psychology_terms": [
+        "fMRI"
+      ],
+      "english_mappings": {
+        "fMRI": "fMRI"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.2,
+      "vector_store_added": false
+    },
+    {
+      "title": "s42003 025 08504 y",
+      "authors": [
+        "이수현"
+      ],
+      "year": 2003,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/이수현/s42003-025-08504-y.pdf",
+      "folder": "이수현",
+      "file_size_mb": 2.45,
+      "psychology_terms": [
+        "fMRI"
+      ],
+      "english_mappings": {
+        "fMRI": "fMRI"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "neuroscience",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.12,
+      "vector_store_added": false
+    },
+    {
+      "title": "s41467 024 53342 x",
+      "authors": [
+        "이수현"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/이수현/s41467-024-53342-x.pdf",
+      "folder": "이수현",
+      "file_size_mb": 3.28,
+      "psychology_terms": [
+        "fMRI"
+      ],
+      "english_mappings": {
+        "fMRI": "fMRI"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "neuroscience",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.36,
+      "vector_store_added": false
+    },
+    {
+      "title": "비전문가의 평가 정확도 향상 방안 탐색 공통 평가 항목 점수 기반 가중치 하",
+      "authors": [
+        "박주용"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/박주용/비전문가의 평가 정확도 향상 방안 탐색 공통 평가 항목 점수 기반 가중치 하.pdf",
+      "folder": "박주용",
+      "file_size_mb": 0.27,
+      "psychology_terms": [
+        "학습",
+        "인지",
+        "평가",
+        "상담"
+      ],
+      "english_mappings": {
+        "학습": "학습",
+        "인지": "인지",
+        "평가": "assessment",
+        "상담": "counseling"
+      },
+      "sentiment": {
+        "label": "positive",
+        "confidence": 0.6666666666666666,
+        "positive_count": 2,
+        "negative_count": 0
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.3,
+      "vector_store_added": false
+    },
+    {
+      "title": "팀 기반 학습에서동료평가의 타당도 분석",
+      "authors": [
+        "박주용"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/박주용/팀 기반 학습에서동료평가의 타당도 분석.pdf",
+      "folder": "박주용",
+      "file_size_mb": 0.35,
+      "psychology_terms": [
+        "학습",
+        "평가"
+      ],
+      "english_mappings": {
+        "학습": "학습",
+        "평가": "assessment"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "educational_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.9,
+      "vector_store_added": false
+    },
+    {
+      "title": "실험 수행과 보고서 작성 역량 강화를 위한  실험 심리학 수업 방안",
+      "authors": [
+        "박주용"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/박주용/실험 수행과 보고서 작성 역량 강화를 위한  실험 심리학 수업 방안.pdf",
+      "folder": "박주용",
+      "file_size_mb": 6.55,
+      "psychology_terms": [
+        "학습"
+      ],
+      "english_mappings": {
+        "학습": "학습"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "educational_psychology",
+      "methodology": "experimental",
+      "target_population": "not_specified",
+      "domain_confidence": 0.4,
+      "vector_store_added": false
+    },
+    {
+      "title": "시간을 반영한 채점이 동형검사 신뢰도에 미치는 영향",
+      "authors": [
+        "박주용"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/박주용/시간을 반영한 채점이 동형검사 신뢰도에 미치는 영향.pdf",
+      "folder": "박주용",
+      "file_size_mb": 0.56,
+      "psychology_terms": [
+        "인지"
+      ],
+      "english_mappings": {
+        "인지": "인지"
+      },
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.2,
+      "vector_store_added": false
+    },
+    {
+      "title": "업무 시뮬레이션을 활용한 상호평가 기반 논술형 SJT와 직무적성검사의 타당도",
+      "authors": [
+        "박주용"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/박주용/업무 시뮬레이션을 활용한 상호평가 기반 논술형 SJT와 직무적성검사의 타당도.pdf",
+      "folder": "박주용",
+      "file_size_mb": 1.56,
+      "psychology_terms": [
+        "문제해결능력",
+        "평가"
+      ],
+      "english_mappings": {
+        "문제해결능력": "problem solving",
+        "평가": "assessment"
+      },
+      "sentiment": {
+        "label": "negative",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 1
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.3,
+      "vector_store_added": false
+    },
+    {
+      "title": "피드백이 추가된 하이브리드 협력이 의사결정에 미치는 영향",
+      "authors": [
+        "박주용"
+      ],
+      "year": 2023,
+      "journal": "Korean Psychology Journal",
+      "keywords": [],
+      "file_path": "data/심리학과/박주용/피드백이 추가된 하이브리드 협력이 의사결정에 미치는 영향.pdf",
+      "folder": "박주용",
+      "file_size_mb": 0.64,
+      "psychology_terms": [],
+      "english_mappings": {},
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.5,
+        "positive_count": 0,
+        "negative_count": 0
+      },
+      "research_domain": "cognitive_psychology",
+      "methodology": "not_specified",
+      "target_population": "not_specified",
+      "domain_confidence": 0.1,
+      "vector_store_added": false
+    }
+  ],
+  "system_info": {
+    "java_safe_mode": true,
+    "vector_store_available": true,
+    "classifier_available": true,
+    "pdf_available": true,
+    "safe_nlp_available": true
+  }
+}

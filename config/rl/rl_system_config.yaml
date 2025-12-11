@@ -1,0 +1,114 @@
+# RL System Configuration for AI-CoScientist
+# This configuration defines the RL-enhanced agent selection system
+
+system:
+  name: "AI-CoScientist-RL-Agent-Selection"
+  version: "1.0.0"
+  environment: "production"
+
+  # Core RL settings
+  rl_enabled: true
+  fallback_enabled: true
+  hybrid_mode: true
+
+# DQN Model Configuration
+model:
+  algorithm: "DQN"
+  network_architecture:
+    input_dim: 128
+    hidden_layers: [256, 128, 64]
+    output_dim: 6  # Number of agents
+    activation: "relu"
+
+  hyperparameters:
+    learning_rate: 0.0001
+    gamma: 0.95
+    epsilon_start: 1.0
+    epsilon_end: 0.01
+    epsilon_decay: 0.995
+    target_update_freq: 100
+    batch_size: 32
+    memory_size: 10000
+
+  training:
+    total_timesteps: 50000
+    eval_freq: 1000
+    save_freq: 5000
+    log_interval: 100
+
+# Environment Configuration
+environment:
+  state_encoding:
+    task_features: 32
+    agent_features: 72
+    system_features: 24
+    total_dim: 128
+
+  reward_weights:
+    success_rate: 0.4
+    quality_score: 0.25
+    efficiency: 0.20
+    collaboration: 0.15
+
+  action_space:
+    type: "multi_binary"
+    n_agents: 6
+    max_team_size: 4
+
+# Traffic Management
+traffic:
+  initial_rl_percentage: 10
+  max_rl_percentage: 90
+  increment_step: 10
+  rollback_threshold: 0.7
+
+  migration:
+    gradual_rollout: true
+    canary_percentage: 5
+    validation_window: 300  # seconds
+
+# Safety and Monitoring
+safety:
+  circuit_breaker:
+    enabled: true
+    failure_threshold: 5
+    recovery_time: 60
+
+  fallback:
+    enabled: true
+    timeout_ms: 5000
+    max_retries: 3
+
+  rate_limiting:
+    enabled: true
+    max_requests_per_minute: 1000
+
+monitoring:
+  metrics_enabled: true
+  health_check_interval: 30
+  performance_window: 3600
+
+  alerts:
+    error_rate_threshold: 0.1
+    latency_threshold_ms: 2000
+
+# Paths and Storage
+paths:
+  model_save_dir: "./models/rl_agent_selection"
+  logs_dir: "./logs/rl_system"
+  config_dir: "./config/rl"
+
+  model_file: "dqn_agent_selection.zip"
+  experience_replay: "experience_replay.pkl"
+  performance_history: "performance_history.json"
+
+# Integration Settings
+integration:
+  agent_pool_integration: true
+  existing_metrics_preservation: true
+  backward_compatibility: true
+
+  api_endpoints:
+    health: "/health/rl"
+    metrics: "/metrics/rl"
+    control: "/rl/control"

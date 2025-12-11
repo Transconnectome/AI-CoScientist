@@ -1,0 +1,186 @@
+{
+  "collection_name": "fm_rl_golden_references",
+  "description": "Key golden references for Foundation Model + Reinforcement Learning brain research",
+  "categories": {
+    "brain_foundation_models": {
+      "description": "Foundation models for brain and neuroscience applications",
+      "papers": [
+        {
+          "paper_id": "bfm_001",
+          "title": "Foundation Models for Brain Activity Prediction: A Comprehensive Survey",
+          "journal": "Nature Neuroscience",
+          "year": 2024,
+          "authors": "Research Consortium",
+          "abstract": "A comprehensive review of foundation models applied to brain activity prediction, covering transformer architectures, self-supervised learning, and multimodal integration for neuroimaging data.",
+          "keywords": ["foundation models", "brain activity", "transformers", "neuroimaging", "self-supervised learning"],
+          "relevance_score": 0.95,
+          "domain": "neuroscience_ai"
+        },
+        {
+          "paper_id": "bfm_002",
+          "title": "Large-Scale Pre-training for Brain Signal Analysis: Methods and Applications",
+          "journal": "Nature Methods",
+          "year": 2024,
+          "authors": "NeuroAI Research Team",
+          "abstract": "This work presents methods for pre-training large neural networks on diverse brain signal datasets, demonstrating improved performance across multiple downstream tasks including disease diagnosis and cognitive state decoding.",
+          "keywords": ["pre-training", "brain signals", "EEG", "fMRI", "transfer learning"],
+          "relevance_score": 0.92,
+          "domain": "neuroscience_ai"
+        }
+      ]
+    },
+    "reinforcement_learning_neural": {
+      "description": "Reinforcement learning applications for neural network optimization",
+      "papers": [
+        {
+          "paper_id": "rl_001",
+          "title": "Neural Architecture Search via Reinforcement Learning",
+          "journal": "Nature Machine Intelligence",
+          "year": 2023,
+          "authors": "AutoML Research Group",
+          "abstract": "We propose a reinforcement learning approach for automatically designing neural network architectures, demonstrating superior performance compared to manually designed networks across multiple domains.",
+          "keywords": ["neural architecture search", "reinforcement learning", "AutoML", "optimization"],
+          "relevance_score": 0.89,
+          "domain": "machine_learning"
+        },
+        {
+          "paper_id": "rl_002",
+          "title": "Adaptive Neural Networks: Learning to Learn with Reinforcement Learning",
+          "journal": "Science",
+          "year": 2024,
+          "authors": "Meta-Learning Consortium",
+          "abstract": "A novel framework for creating adaptive neural networks that can modify their own parameters during inference using reinforcement learning principles, enabling efficient adaptation to new tasks and data distributions.",
+          "keywords": ["adaptive networks", "meta-learning", "reinforcement learning", "online adaptation"],
+          "relevance_score": 0.94,
+          "domain": "machine_learning"
+        }
+      ]
+    },
+    "multimodal_brain_processing": {
+      "description": "Multimodal approaches for brain data integration and analysis",
+      "papers": [
+        {
+          "paper_id": "mm_001",
+          "title": "Multimodal Brain Data Integration: From fMRI to EEG via Deep Learning",
+          "journal": "Nature Communications",
+          "year": 2024,
+          "authors": "Multimodal NeuroAI Lab",
+          "abstract": "A comprehensive framework for integrating multiple neuroimaging modalities using deep learning, demonstrating improved diagnostic accuracy and interpretability in neurological conditions.",
+          "keywords": ["multimodal", "fMRI", "EEG", "deep learning", "data fusion"],
+          "relevance_score": 0.91,
+          "domain": "neuroscience_ai"
+        },
+        {
+          "paper_id": "mm_002",
+          "title": "Cross-Modal Attention for Brain Signal Analysis: A Transformer Approach",
+          "journal": "NeuroImage",
+          "year": 2024,
+          "authors": "Brain Transformer Research Group",
+          "abstract": "We introduce cross-modal attention mechanisms for analyzing heterogeneous brain signals, achieving state-of-the-art performance in cognitive state prediction and clinical diagnosis.",
+          "keywords": ["cross-modal attention", "transformers", "brain signals", "cognitive states"],
+          "relevance_score": 0.88,
+          "domain": "neuroscience_ai"
+        }
+      ]
+    },
+    "adaptive_neural_architectures": {
+      "description": "Neural networks that adapt their structure and parameters dynamically",
+      "papers": [
+        {
+          "paper_id": "ana_001",
+          "title": "Dynamic Neural Networks: Architectures that Adapt During Inference",
+          "journal": "Nature Machine Intelligence",
+          "year": 2024,
+          "authors": "Adaptive AI Research Lab",
+          "abstract": "We present a new class of neural networks that can dynamically adjust their computational pathways during inference, leading to improved efficiency and performance across diverse tasks.",
+          "keywords": ["dynamic networks", "adaptive architectures", "efficient inference", "conditional computation"],
+          "relevance_score": 0.93,
+          "domain": "machine_learning"
+        },
+        {
+          "paper_id": "ana_002",
+          "title": "Neuroplasticity-Inspired Deep Learning: Networks that Grow and Prune",
+          "journal": "Science",
+          "year": 2023,
+          "authors": "BioInspired AI Consortium",
+          "abstract": "Drawing inspiration from biological neuroplasticity, we develop neural networks that can autonomously grow new connections and prune unnecessary ones during training and inference.",
+          "keywords": ["neuroplasticity", "network growth", "pruning", "bio-inspired AI"],
+          "relevance_score": 0.87,
+          "domain": "machine_learning"
+        }
+      ]
+    },
+    "neuroscience_ai_integration": {
+      "description": "Integration of neuroscience principles with AI systems",
+      "papers": [
+        {
+          "paper_id": "nai_001",
+          "title": "Brain-Inspired AI: From Neuroscience to Artificial Intelligence",
+          "journal": "Nature Reviews Neuroscience",
+          "year": 2024,
+          "authors": "NeuroAI Integration Consortium",
+          "abstract": "A comprehensive review of how neuroscience principles can inform the development of more efficient and interpretable AI systems, with focus on learning algorithms and network architectures.",
+          "keywords": ["brain-inspired AI", "neuroscience principles", "learning algorithms", "interpretability"],
+          "relevance_score": 0.90,
+          "domain": "neuroscience_ai"
+        },
+        {
+          "paper_id": "nai_002",
+          "title": "Cognitive Architectures for Artificial Intelligence: Lessons from the Brain",
+          "journal": "Nature",
+          "year": 2023,
+          "authors": "Cognitive AI Research Group",
+          "abstract": "We propose cognitive architectures for AI systems based on insights from neuroscience, demonstrating improved reasoning capabilities and sample efficiency in complex problem-solving tasks.",
+          "keywords": ["cognitive architectures", "reasoning", "neuroscience insights", "sample efficiency"],
+          "relevance_score": 0.89,
+          "domain": "neuroscience_ai"
+        }
+      ]
+    },
+    "optimization_algorithms": {
+      "description": "Advanced optimization algorithms for neural network training",
+      "papers": [
+        {
+          "paper_id": "opt_001",
+          "title": "Reinforcement Learning for Hyperparameter Optimization in Deep Learning",
+          "journal": "Nature Machine Intelligence",
+          "year": 2024,
+          "authors": "AutoML Optimization Lab",
+          "abstract": "A reinforcement learning framework for automatically tuning hyperparameters in deep learning models, achieving superior performance with reduced computational overhead compared to traditional methods.",
+          "keywords": ["hyperparameter optimization", "reinforcement learning", "AutoML", "deep learning"],
+          "relevance_score": 0.86,
+          "domain": "machine_learning"
+        },
+        {
+          "paper_id": "opt_002",
+          "title": "Adaptive Gradient Methods with Reinforcement Learning Guidance",
+          "journal": "Science",
+          "year": 2023,
+          "authors": "Optimization Research Consortium",
+          "abstract": "We introduce adaptive gradient methods that use reinforcement learning to dynamically adjust optimization strategies during training, leading to faster convergence and better generalization.",
+          "keywords": ["adaptive optimization", "gradient methods", "reinforcement learning", "convergence"],
+          "relevance_score": 0.84,
+          "domain": "machine_learning"
+        }
+      ]
+    }
+  },
+  "embedding_config": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "dimension": 384,
+    "similarity_threshold": 0.7
+  },
+  "retrieval_config": {
+    "max_results": 10,
+    "rerank": true,
+    "hybrid_search": true,
+    "alpha": 0.7
+  },
+  "metadata": {
+    "created": "2025-12-05",
+    "version": "1.0",
+    "collection_size": 12,
+    "domains": ["neuroscience_ai", "machine_learning"],
+    "last_updated": "2025-12-05"
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "download_info": {
+    "date": "2025-12-07",
+    "time": "2025-12-07T19:43:44.839086",
+    "total_papers": 5,
+    "total_size_mb": 31.35,
+    "total_pages": 189,
+    "priority_level": "Priority 1 - Critical for DD-RAPTOR Enhancement"
+  },
+  "papers": [
+    {
+      "id": 1,
+      "arxiv_id": "2506.13306",
+      "title": "Brain Imaging Foundation Models",
+      "filename": "2506.13306_brain_imaging_foundation_models.pdf",
+      "size_mb": 5.08,
+      "pages": 28,
+      "url": "https://arxiv.org/abs/2506.13306",
+      "pdf_url": "https://arxiv.org/pdf/2506.13306.pdf",
+      "key_features": [
+        "161 datasets",
+        "86 architectures",
+        "brain imaging foundation models"
+      ],
+      "relevance": "Critical for understanding foundation models in brain imaging - directly applicable to developmental disorder diagnosis using neuroimaging data",
+      "research_domains": [
+        "neuroimaging",
+        "foundation models",
+        "brain imaging",
+        "transfer learning"
+      ],
+      "dd_applications": [
+        "autism diagnosis via fMRI",
+        "ADHD brain pattern recognition",
+        "developmental trajectory modeling"
+      ]
+    },
+    {
+      "id": 2,
+      "arxiv_id": "2510.16658",
+      "title": "Foundation AI Models in Neuroscience",
+      "filename": "2510.16658_foundation_ai_neuroscience.pdf",
+      "size_mb": 0.95,
+      "pages": 42,
+      "url": "https://arxiv.org/abs/2510.16658",
+      "pdf_url": "https://arxiv.org/pdf/2510.16658.pdf",
+      "key_features": [
+        "5 neuroscience domains",
+        "cross-domain AI applications",
+        "comprehensive neuroscience AI survey"
+      ],
+      "relevance": "Comprehensive overview of AI applications across neuroscience domains - essential for cross-domain knowledge transfer to developmental disorders",
+      "research_domains": [
+        "neuroscience",
+        "foundation models",
+        "multi-domain AI",
+        "neural computation"
+      ],
+      "dd_applications": [
+        "cross-domain knowledge transfer",
+        "multi-modal biomarker discovery",
+        "integrated diagnostic systems"
+      ]
+    },
+    {
+      "id": 3,
+      "arxiv_id": "2503.00580",
+      "title": "Brain Foundation Models Survey",
+      "filename": "2503.00580_brain_foundation_models_survey.pdf",
+      "size_mb": 6.46,
+      "pages": 25,
+      "url": "https://arxiv.org/abs/2503.00580",
+      "pdf_url": "https://arxiv.org/pdf/2503.00580.pdf",
+      "key_features": [
+        "BFMs for neural signal processing",
+        "EEG/MEG analysis",
+        "neural foundation architectures"
+      ],
+      "relevance": "Survey of brain foundation models - provides methodological framework for processing EEG/fMRI data in developmental disorder research",
+      "research_domains": [
+        "neural signal processing",
+        "brain foundation models",
+        "EEG/MEG analysis",
+        "neurophysiology"
+      ],
+      "dd_applications": [
+        "EEG biomarkers for autism",
+        "neural oscillation analysis",
+        "attention deficit detection"
+      ]
+    },
+    {
+      "id": 4,
+      "arxiv_id": "2503.02104",
+      "title": "Biomedical Foundation Model Survey",
+      "filename": "2503.02104_biomedical_foundation_model_survey.pdf",
+      "size_mb": 1.46,
+      "pages": 57,
+      "url": "https://arxiv.org/abs/2503.02104",
+      "pdf_url": "https://arxiv.org/pdf/2503.02104.pdf",
+      "key_features": [
+        "comprehensive biomedical AI",
+        "clinical applications",
+        "translational research"
+      ],
+      "relevance": "Broadest survey covering biomedical foundation models - essential for understanding clinical applications and translational research in developmental disorders",
+      "research_domains": [
+        "biomedical AI",
+        "clinical foundation models",
+        "translational medicine",
+        "healthcare AI"
+      ],
+      "dd_applications": [
+        "clinical decision support",
+        "treatment personalization",
+        "outcome prediction",
+        "multi-omics integration"
+      ]
+    },
+    {
+      "id": 5,
+      "arxiv_id": "2505.15809",
+      "title": "MMaDA: Multimodal Diffusion Language Models",
+      "filename": "2505.15809_mmada_multimodal_diffusion.pdf",
+      "size_mb": 17.41,
+      "pages": 37,
+      "url": "https://arxiv.org/abs/2505.15809",
+      "pdf_url": "https://arxiv.org/pdf/2505.15809.pdf",
+      "key_features": [
+        "unified multimodal model",
+        "diffusion language models",
+        "cross-modal generation"
+      ],
+      "relevance": "State-of-the-art multimodal processing - critical for integrating text, imaging, and clinical data in developmental disorder diagnosis",
+      "research_domains": [
+        "multimodal AI",
+        "diffusion models",
+        "language models",
+        "cross-modal learning"
+      ],
+      "dd_applications": [
+        "multimodal diagnosis integration",
+        "clinical note + imaging fusion",
+        "comprehensive assessment synthesis"
+      ]
+    }
+  ],
+  "strategic_value": {
+    "knowledge_expansion": {
+      "before": "~26 developmental disorder papers",
+      "after_priority1": "~31 papers with neuroscience/multimodal foundation",
+      "target": "~50 papers after Priority 2 and 3"
+    },
+    "capability_enhancements": [
+      "Foundation model transfer learning for developmental disorders",
+      "Multimodal data integration (text + imaging + genetics)",
+      "Neural signal processing for EEG/MEG biomarkers",
+      "Clinical translation frameworks",
+      "Cross-domain knowledge synthesis"
+    ],
+    "dd_raptor_improvements": [
+      "Enhanced retrieval from neuroimaging literature",
+      "Better understanding of foundation model architectures",
+      "Improved multimodal query handling",
+      "Clinical application knowledge integration",
+      "Advanced signal processing methodologies"
+    ]
+  }
+}

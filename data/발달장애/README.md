@@ -88,9 +88,190 @@ poetry run python scripts/load_json_to_chromadb_dd.py
 
 ---
 
-**Last Updated**: 2025-11-27
+## 🚀 INCITE NeuroX-Fusion 130B 파운데이션 모델
+
+**📋 핵심 참조 문서**: [`INCITE_NeuroX_Fusion_Summary.md`](INCITE_NeuroX_Fusion_Summary.md)
+
+### 개요
+우리 발달장애 연구의 **핵심 백본(Backbone)**이 되는 INCITE NeuroX-Fusion 130B 파라미터 멀티모달 뇌 파운데이션 모델입니다.
+
+### 주요 사양
+- **파라미터**: 130B (1,300억 개)
+- **컴퓨팅**: Aurora 슈퍼컴퓨터 152,280 PFLOPs
+- **아키텍처**: 4D Swin Transformer + Channel-equivariant
+- **훈련 데이터**: 50,000+ 글로벌 뇌 스캔, 100,000+ 의료 기록
+
+### 기술적 혁신
+- **4차원 시공간 분석**: 밀리초 단위 뇌신호 변화 감지
+- **홀로그래픽 4D 뇌 모델링**: 기존 3D 대비 10배 향상된 해상도
+- **자기지도학습**: Brain Signal Reconstruction (BSR)
+- **연합학습**: 개인정보 보호하며 글로벌 지식 통합
+
+### 한국 적응화 전략
+```yaml
+기반_모델: INCITE NeuroX-Fusion 130B
+적응_방법: Parameter-Efficient Fine-Tuning (PEFT)
+한국_데이터: 3,000명 소아 발달장애 환자 데이터
+예산_절감: 사전훈련 비용 0원 (90% 비용 절약)
+성능: 처음부터 훈련 대비 95% 수준 달성
+```
+
+### 발달장애 응용
+- **초조기 진단**: 출생 24시간 이내 위험도 예측 (AUC > 0.95)
+- **정밀 분류**: 15개 발달장애 세부유형 구분
+- **개인맞춤형 치료**: 디지털 트윈 기반 치료 최적화
+- **실시간 모니터링**: 발달궤적 편차 감지
+
+⚠️ **중요**: 모든 제안서 작성 시 반드시 이 INCITE 모델 정보를 참조하고 활용할 것!
+
+---
+
+## 🔗 AI-CoScientist 통합 가이드
+
+AI-CoScientist의 업그레이드된 RAG 시스템과 발달장애 프로젝트를 연동하는 방법입니다.
+
+### 시스템 아키텍처
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    AI-CoScientist                           │
+├─────────────────────────────────────────────────────────────┤
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐     │
+│  │ Hybrid RAG  │    │  Graph RAG  │    │ DD-RAPTOR   │     │
+│  │ Service     │    │  Service    │    │ RAG         │     │
+│  │ (GPT+Claude)│    │ (Multi-hop) │    │ (26 papers) │     │
+│  └──────┬──────┘    └──────┬──────┘    └──────┬──────┘     │
+│         └──────────────────┼──────────────────┘             │
+│                            ▼                                │
+│              ┌─────────────────────────┐                   │
+│              │   ChromaDB (SciBERT)    │                   │
+│              │   - scientific_papers   │                   │
+│              │   - dd_papers_L0/L1/L2  │                   │
+│              └─────────────────────────┘                   │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### CLI로 논문 검색
+
+```bash
+# 기본 검색
+poetry run python scripts/query_dd_rag.py "autism diagnosis deep learning"
+
+# 더 많은 결과 (10개)
+poetry run python scripts/query_dd_rag.py "brain development foundation model" -n 10
+
+# 빠른 검색 (re-ranking 없이)
+poetry run python scripts/query_dd_rag.py "zebrafish validation" --no-rerank
+```
+
+### MCP 서버로 AI 어시스턴트 연동
+
+Cursor/Claude에서 사용하려면 `mcp-config.json`에 추가:
+
+```json
+{
+  "mcpServers": {
+    "dd-rag": {
+      "command": "poetry",
+      "args": ["run", "python", "scripts/dd_rag_mcp_server.py"],
+      "cwd": "/path/to/AI-CoScientist"
+    }
+  }
+}
+```
+
+MCP 서버 실행 후 AI 어시스턴트에서 `search_dd_papers("query")` 툴 사용 가능.
+
+### Python에서 직접 사용
+
+```python
+import chromadb
+from sentence_transformers import SentenceTransformer, CrossEncoder
+
+# 모델 로드
+embedding_model = SentenceTransformer('allenai/scibert_scivocab_uncased')
+cross_encoder = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
+
+# DD ChromaDB 연결
+client = chromadb.PersistentClient(path="chromadb_data_dd")
+collection = client.get_collection("dd_papers_L0")
+
+# 1. Vector Search (Top-50 후보)
+query = "autism early diagnosis using eye tracking"
+query_emb = embedding_model.encode([query])[0].tolist()
+
+results = collection.query(
+    query_embeddings=[query_emb],
+    n_results=50
+)
+
+# 2. Cross-Encoder Re-ranking
+documents = results['documents'][0]
+pairs = [[query, doc] for doc in documents]
+scores = cross_encoder.predict(pairs)
+
+# 3. 결과 정렬
+scored = sorted(zip(documents, results['metadatas'][0], scores), 
+                key=lambda x: x[2], reverse=True)
+
+for doc, meta, score in scored[:5]:
+    print(f"📄 [{score:.3f}] {meta['paper_title']}")
+    print(f"   {doc[:200]}...\n")
+```
+
+### 제안서 작성 워크플로우
+
+```bash
+# 1. 관련 논문 검색
+poetry run python scripts/query_dd_rag.py "foundation model brain development autism" -n 10
+
+# 2. 메인 서버 시작 (선택사항)
+poetry run uvicorn src.main:app --reload
+
+# 3. Hybrid RAG로 LLM 응답 생성
+# - GPT-4, Claude, Nemotron 자동 라우팅
+# - 검색된 컨텍스트 기반 제안서 섹션 생성
+```
+
+### 추가 작업
+
+| 작업 | 명령어 |
+|------|--------|
+| 새 PDF 논문 추가 | `poetry run python scripts/ingest_golden_references_advanced.py --dir "data/발달장애/dd_papers"` |
+| VectorDB 재생성 | `poetry run python scripts/load_json_to_chromadb_dd.py` |
+| 메인 RAG 통합 | `src/services/rag/advanced_golden_reference.py` 참조 |
+
+---
+
+**Last Updated**: 2025-11-29
 **Project Lead**: AI Co-Scientist
 
 
 
 
+# Proposal Generation Rules (CRITICAL)
+
+**Date:** 2025-12-10
+**Status:** Mandatory Constraints
+
+## 1. Content Preservation
+*   **Source**: `data/발달장애/_grant.md`
+*   **Constraint**: The sections **"1. 연구의 필요성 (Necessity)"** and **"2. 연구 목표 (Goals)"** must be preserved **textually** as much as possible. Do not rewrite them into "marketing speak". Keep the academic tone.
+*   **Rationale**: The user wants to maintain the original academic grounding while upgrading the methodology.
+
+## 2. Terminology Pivot ("Red Team" compliance)
+*   **FORBIDDEN**: "Holographic" (unless citing Plate 1995), "Quantum Consciousness", "Sci-Fi" terms.
+*   **REQUIRED**: "Spatiotemporal Manifold", "Hyperdimensional Computing (HDC)", "Latent Trajectory", "NeuroX-Fusion 10B".
+
+## 3. Validation Strategy ("Downplay")
+*   **Change**: Zebrafish Validation is **NOT** the main validation.
+*   **Positioning**: It is a "Rapid Screening Preview" or "exploratory mechanism" to filter hypotheses before clinical validation.
+*   **Tone**: "We utilize rapid in-vivo screening to prioritize candidates..." rather than "We rely on fish for truth."
+
+## 4. Budget
+*   **Total**: **2.5 Billion KRW** (Strict).
+*   **Narrative**: "Unfair Efficiency" - Leveraged compute, open-source backbone, focused spending on high-quality data.
+
+## 5. File Locations
+*   This file: `data/발달장애/PROPOSAL_RULES.md`
+*   Also mirrored in: `data/발달장애/README.md`

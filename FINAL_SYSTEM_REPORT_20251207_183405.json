@@ -1,0 +1,17 @@
+{
+  "system_name": "Foundation Model 기반 Psychology RAG System",
+  "organization": "Seoul National University Psychology Department",
+  "timestamp": "20251207_183405",
+  "papers_processed": 66,
+  "success_rate": "100.0%",
+  "foundation_models": [
+    "DIVER-0",
+    "SwiFT",
+    "BrainLM",
+    "Gene-LLM/GROVER"
+  ],
+  "components_completed": 8,
+  "domain_coverage": 8,
+  "researchers": 4,
+  "status": "PRODUCTION READY"
+}

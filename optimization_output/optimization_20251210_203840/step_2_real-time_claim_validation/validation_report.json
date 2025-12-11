@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "file": "/home/juke/git/AI-CoScientist/optimization_output/optimization_20251210_203840/original__grant.md",
+    "timestamp": "2025-12-10T20:39:06.077975",
+    "total_lines": 76,
+    "total_issues": 11
+  },
+  "summary": {
+    "validation_score": 50.6,
+    "average_evidence_strength": 0.0,
+    "issues_by_severity": {
+      "critical": 2,
+      "major": 9,
+      "minor": 0
+    },
+    "issues_by_type": {
+      "unsupported": 11
+    }
+  },
+  "priority_fixes": [
+    {
+      "line": 11,
+      "severity": "critical",
+      "type": "unsupported",
+      "claim": "[ 연구내용에는 목표를 제시하고, 이를 달성하기 위한 독창적/혁신적인 접근방법,",
+      "evidence_strength": 0.0,
+      "suggestion": "Consider removing unsupported claim or find strong evidence",
+      "auto_fix_available": true
+    },
+    {
+      "line": 58,
+      "severity": "critical",
+      "type": "unsupported",
+      "claim": "- 연구내용에는 목표를 제시하고, 이를 달성하기 위한 독창적/혁신적인 접근방법,",
+      "evidence_strength": 0.0,
+      "suggestion": "Consider removing unsupported claim or find strong evidence",
+      "auto_fix_available": true
+    },
+    {
+      "line": 1,
+      "severity": "major",
+      "type": "unsupported",
+      "claim": "소아 발달장애 멀티모달 데이터 기반 AI 파운데이션 모델 구축을 통한",
+      "evidence_strength": 0.0,
+      "suggestion": "Add citation or evidence for technical claim",
+      "auto_fix_available": true
+    },
+    {
+      "line": 3,
+      "severity": "major",
+      "type": "unsupported",
+      "claim": "AI Foundation Model Based on Multimodal Pediatric Neurodevelopmental Data for Clinical Outcome Predi...",
+      "evidence_strength": 0.0,
+      "suggestion": "Add citation or evidence for technical claim",
+      "auto_fix_available": true
+    },
+    {
+      "line": 8,
+      "severity": "major",
+      "type": "unsupported",
+      "claim": "국내에 등록된 발달장애인은 약 26만명으로 매년 지속적으로 7~8천명씩 증가하는 추세이나, 진단을 받는 시기는 치료가 필요한 시기에 비해 늦음. 대다수는 대동작, 미세동작, 언어,...",
+      "evidence_strength": 0.0,
+      "suggestion": "Add citation or evidence for technical claim",
+      "auto_fix_available": true
+    },
+    {
+      "line": 21,
+      "severity": "major",
+      "type": "unsupported",
+      "claim": "방법 2. 대규모 AI 파운데이션 모델 구축",
+      "evidence_strength": 0.0,
+      "suggestion": "Add citation or evidence for technical claim",
+      "auto_fix_available": true
+    },
+    {
+      "line": 23,
+      "severity": "major",
+      "type": "unsupported",
+      "claim": "- 대규모 공공 텍스트-이미지 데이터 기반의 파운데이션 모델을 적극적으로 활용하고, 발달장애의 멀티모달 데이터의 특성에 맞는 최적의 AI 방법론을 개발하여 적용할 것임(연합모델, ...",
+      "evidence_strength": 0.0,
+      "suggestion": "Add citation or evidence for technical claim",
+      "auto_fix_available": true
+    },
+    {
+      "line": 25,
+      "severity": "major",
+      "type": "unsupported",
+      "claim": "방법 3. 파운데이션 모델 기반 임상 데이터, 뇌영상, 유전체의 통합 AI 모델 개발, 이를 통한 발달장애 조기진단과 임상 경과 예측을 위한 바이오마커의 발굴",
+      "evidence_strength": 0.0,
+      "suggestion": "Add citation or evidence for technical claim",
+      "auto_fix_available": true
+    },
+    {
+      "line": 32,
+      "severity": "major",
+      "type": "unsupported",
+      "claim": "-\t정제한 데이터를 활용하여 발달장애 분류 및 진단을 위한 임상, 뇌영상, 유전체 데이터의 모달리티별 AI 모델 개발 -->? 정리하셔도 됩니다.",
+      "evidence_strength": 0.0,
+      "suggestion": "Add citation or evidence for technical claim",
+      "auto_fix_available": true
+    },
+    {
+      "line": 35,
+      "severity": "major",
+      "type": "unsupported",
+      "claim": "- 향후 추가적 개발을 위하여 뇌파와 행동(놀이 활동 등)을 녹화한 데이터를 확보하고, 이를 AI 파운데이션 모델에 추가하여 타 데이터들과의 연관성 파악, 정밀진료의 정확성 증대",
+      "evidence_strength": 0.0,
+      "suggestion": "Add citation or evidence for technical claim",
+      "auto_fix_available": true
+    }
+  ],
+  "recommendations": [
+    "🔴 Critical: Multiple serious validation issues. Major revision needed.",
+    "⚡ Fix 2 critical claims lacking evidence",
+    "📚 Add citations for 11 unsupported claims",
+    "🔍 Use DD-RAPTOR database for evidence-based claims"
+  ]
+}

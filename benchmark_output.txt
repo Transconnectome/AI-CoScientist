@@ -1,0 +1,30 @@
+No sentence-transformers model found with name allenai/scibert_scivocab_uncased. Creating a new one with mean pooling.
+/home/juke/superclaude-env/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+[0;93m2025-12-08 02:53:03.314293851 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+
+====================================================================================================
+HYBRID DD SEARCH PERFORMANCE BENCHMARK
+====================================================================================================
+
+Clinical Queries
+----------------------------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/juke/git/AI-CoScientist/tests/rag/test_hybrid_search.py", line 566, in <module>
+    run_performance_benchmark()
+  File "/home/juke/git/AI-CoScientist/tests/rag/test_hybrid_search.py", line 500, in run_performance_benchmark
+    response = search_system.search(query, top_k=10)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/juke/git/AI-CoScientist/src/services/rag/hybrid_dd_search.py", line 210, in search
+    dd_results = self._search_database(
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/juke/git/AI-CoScientist/src/services/rag/hybrid_dd_search.py", line 286, in _search_database
+    results = collection.query(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/juke/superclaude-env/lib/python3.12/site-packages/chromadb/api/models/Collection.py", line 227, in query
+    query_results = self._client._query(
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "/home/juke/superclaude-env/lib/python3.12/site-packages/chromadb/api/rust.py", line 539, in _query
+    rust_response = self.bindings.query(
+                    ^^^^^^^^^^^^^^^^^^^^
+chromadb.errors.InvalidArgumentError: Collection expecting embedding with dimension of 768, got 384

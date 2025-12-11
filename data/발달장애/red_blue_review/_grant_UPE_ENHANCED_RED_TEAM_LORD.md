@@ -1,0 +1,133 @@
+
+# 🔴 RED TEAM DEVASTATING CRITIQUE
+## Dr. Catherine Lord (UCLA Semel Institute, USA)
+### Distinguished Professor of Psychiatry & Education
+
+---
+
+## EXPERT PROFILE
+- **H-index**: 180
+- **Major Works**: ADOS-2 (Gold Standard ASD Diagnosis), Lancet Commission on ASD 2022, Nature Reviews 2020
+- **Review Style**: Clinical rigor with developmental perspective. Demands replicable diagnostic criteria and longitudinal validation.
+- **Expertise**: Autism Spectrum Disorder, ADOS-2 Development, Developmental Psychopathology, Longitudinal Studies
+
+---
+
+## MISSION: FIND FATAL FLAWS
+
+As Dr. Catherine Lord, one of the world's leading experts in Autism Spectrum Disorder, you are tasked with a RUTHLESS critical analysis of this proposal. Your goal is to identify ALL weaknesses that could lead to:
+
+1. **Project Failure** (technical infeasibility)
+2. **Wasted Resources** (unrealistic claims)
+3. **Ethical Harm** (patient safety risks)
+4. **Scientific Misconduct** (overclaiming, cherry-picking)
+
+---
+
+## ATTACK VECTORS (Your Focus Areas)
+
+- **1. 진단 도구의 임상적 타당성**
+- **2. 조기 진단의 위양성/위음성 윤리적 문제**
+- **3. 발달 궤적의 개인차 반영 여부**
+- **4. 다문화/다인종 적용 가능성**
+- **5. 부모 심리적 영향 고려**
+
+---
+
+## PROPOSAL UNDER REVIEW
+
+소아 발달장애 멀티모달 데이터 기반 AI 파운데이션 모델 구축을 통한
+임상 예후예측 및 조기 맞춤재활 플랫폼 개발
+
+AI Foundation Model Based on Multimodal Pediatric Neurodevelopmental Data for Clinical Outcome Prediction and Early Precision Rehabilitation
+
+## 연구의 필요성
+
+국내 발달장애인은 2025년 기준 28만 명을 넘어 매년 8천 명 이상 증가하나, 조기 진단과 개입은 여전히 평균 2~3년 지연되어 치료 골든타임을 놓치고 있다. ICLR 2024에서 발표된 BrainLM은 대규모 fMRI 기반 뇌 파운데이션 모델로 정신질환 예측력 향상을 입증하였으나, 단일 모달(fMRI)·성인 중심 한계가 있어 멀티모달·소아 특화 확장이 과제로 남아 있다. Nature 2022 Brain Chart 프로젝트는 100,000+ MRI를 기반으로 생애 전주기 뇌 발달 정상 범위를 제시했으나, 영·유아 및 아시아 집단 데이터 부족과 질환 특이적 디지털 진단 한계를 명시하였다. 또한 SwiFT(2024) 논문은 신생아 fMRI Transformer로 인지·언어·운동 지연 예측을 시도했으나, 단일 모달과 100명 내외 소규모 데이터로 일반화 한계가 있다. ESM3(2024)는 5억 년 진화 시뮬레이션 기반 단백질 구조 예측으로 혁신을 이뤘으나, 신경발달장애 적용은 미개척 영역이다. 본 과제는 20년 이상 축적된 3,000명 멀티모달 종단 데이터와 INCITE NeuroX-Fusion 130B 파운데이션 모델을 결합하여 (1) 출생 직후 위험 예측(AUC>0.92), (2) ESM3 기반 인과 바이오마커 발굴, (3) 강화학습 맞춤형 중재 최적화를 실현함으로써 조기진단율 15%→90%, 치료성공률 30%→85%로 향상시키고 연간 사회경제적 부담 5조원을 1조원 수준으로 절감하는 것을 목표로 한다.
+
+## 연구내용
+
+### 궁극적 목표
+INCITE NeuroX-Fusion 130B 멀티모달 뇌 파운데이션 모델의 한국 소아 발달장애 데이터 적응화 및 ESM3 기반 유전체-단백질-신경발달 통합 분석, 자율적 과학추론 AI(Large Reasoning Model + Causal Discovery) 통합으로 출생 직후 발달장애 위험 예측(AUC>0.92), 인과 바이오마커 발굴(신규 50개+), 개인별 최적 치료전략 제시가 가능한 임상검증 정밀의학 플랫폼 구축. 3세 미만 조기중재율 90% 달성, 자폐·ADHD·지적장애 등 15개 세부유형 정밀분류, 5-20년 장기예후 예측 정확도 88%로 국가 발달장애 정밀의학 표준 시스템 확립.
+
+### 방법 1. 멀티모달 데이터의 체계적 축적 및 INCITE NeuroX-Fusion 130B 모델 한국 적응화
+- 20년+ 축적 3천 명 소아 종단 데이터: 대동작·미세동작·언어·지능·사회성·행동·감각통합 점수, 2.5천례 DTI 뇌영상, 퍼블릭 소아 뇌 데이터, 유전체 검사(전엑솜시퀀싱, 다유전자위험점수)
+- INCITE NeuroX-Fusion 130B 파운데이션 모델: Aurora 슈퍼컴퓨터(152,280 PFLOPs, INCITE 파트너십), 4D Swin Transformer+Channel-equivariant 아키텍처, 50,000+ 글로벌 뇌스캔 사전학습
+- Parameter-Efficient Fine-Tuning (LoRA): 130B 중 0.5%(650M)만 한국 데이터로 미세조정, 학습비용 1/100 절감, 한국어 언어발달·아시아인 뇌구조 특성 반영
+- 연합학습 글로벌 확장: EU Human Brain Project(5천명)+US BRAIN Initiative(1만명) 연계, 개인정보 보호하며 글로벌 지식 통합, 총 2.5만명 메타 코호트
+
+### 방법 2. ESM3 기반 유전체-단백질-신경발달 통합 인과분석 및 바이오마커 발굴
+- ESM3(2024) 단백질 구조 예측 최초 적용: 발달장애 연관 VUS(Variant of Uncertain Significance) 1,500개 → ESM3 단백질 구조 변화 예측 → 병원성 분류 정확도 70%→95%
+- Neuro-Symbolic Causal Discovery: Knowledge Graph(유전자 1.5만→단백질 5만→경로 3천→표현형 500) + NOTEARS+PC-algorithm 인과관계 규명
+- 자율적 가설검증 루프: AI 100개 가설 생성 → Knowledge Graph 일관성 체크 → 인과추론 순위화 → 디지털트윈 시뮬레이션 → 전문가위원회 승인 → 오가노이드/제브라피쉬 실험검증
+- Multi-Level Causal Analysis: 분자(유전자×후성유전체) → 뇌회로(DTI 백질신경로) → 행동(시선추적·언어분석) → 환경(산전스트레스·가족력) 통합 인과분석
+
+### 방법 3. 파운데이션 모델 기반 조기진단 및 임상예후 예측
+- 초조기 위험예측(출생 24시간 이내): 신생아 뇌MRI+DTI+제대혈 유전체(PRS)+산전요인 입력, AUC>0.92 목표(현재 0.65 대비 41% 향상)
+- 위양성 관리 3계층: Tier 1(고위험 >90%ile) 즉시 전문의 의뢰, Tier 2(중위험 70-90%ile) 3개월 모니터링, Tier 3(저위험 <70%ile) 표준 추적, 부모 상담 프로토콜(불확실성 명시, 심리지원)
+- 정밀분류: 15개 세부유형(자폐 3단계·ADHD 3아형·지적장애 4단계), 동반질환 예측(불안·우울·수면장애 75%), 5-20년 예후(학업·독립생활, 불확실성 구간 ±15%)
+
+### 방법 4. Offline RL + Human-in-the-Loop 안전 치료 최적화 및 임상검증
+- Offline RL 선학습: 15년 역사 데이터(1만+ 환자) Conservative Q-Learning, 안전 행동공간(FDA/KFDA 승인 치료만 허용), 제약조건 MDP(부작용 <1%)
+- 디지털트윈 시뮬레이터: Neural ODE 개인별 뇌 시뮬레이션, 치료 효과 사전예측, 가상 임상시험으로 RCT 비용 50% 절감
+- 3단계 임상검증: Phase 1 회고적(Year 1, N=1,500, κ>0.85), Phase 2 Shadow Mode(Year 2-3, N=500), Phase 3 RCT(Year 4-5, N=500, RL최적화 vs 표준치료, IRB승인+독립DSMB감시)
+
+### 기대효과
+- 과학기술적: 한국형 뇌 파운데이션 모델 확보(국가 AI 주권), Nature/Science 논문 50편+, 특허 10건+
+- 임상적: 조기진단율 15%→90%(6배), 진단지연 2년 단축(5세→3세), 치료성공률 30%→85%(2.8배)
+- 사회경제적: 발달장애 비용 연 1조원 절감(20%), 경제가치 1천억+, 글로벌 수출(동남아 5국 MOU), 일자리 100명+
+- ROI: 투자 250억원 대비 연 1조원 절감 (ROI 400:1)
+
+| 연구인력 | 연구기간 | 총 연구비 |
+|---------|---------|----------|
+| 총 15명 (교수 6명/연구원 9명) | '26년 03월 ~ '31년 02월 (60개월) | 2,500백만원 |
+
+※ 팀: 소아신경과 2(PI+공동), AI/컴퓨터공학 2, 정신의학 1, 유전학 1, 뇌영상 2, AI모델링 2(RL전문가), 임상연구 1, 데이터분석 2, 소프트웨어 2, 임상윤리학자 1, 의료경제학자 1
+※ 생성형AI 활용: AI-CoScientist Unified Proposal Engine (UPE), 7-Strategy RAG 기반 문헌검색·요약·가설생성·검증 전 주기 지원 (별첨 기재)
+
+
+---
+
+## REQUIRED OUTPUT FORMAT
+
+### SECTION 1: FATAL FLAWS (Score: X/100)
+Identify 3-5 critical issues that could KILL this project.
+
+| # | Fatal Flaw | Impact | Probability | Risk Level |
+|---|-----------|--------|-------------|------------|
+| 1 | ... | Catastrophic/Major/Moderate | X% | CRITICAL/HIGH/MEDIUM |
+
+### SECTION 2: TECHNICAL ATTACKS
+- **Claim**: [Exact quote from proposal]
+- **Attack**: [Why this is wrong/exaggerated]
+- **Evidence**: [Counter-evidence or missing verification]
+- **Damage**: [Consequence if unaddressed]
+
+### SECTION 3: METHODOLOGICAL WEAKNESSES
+Specific issues with:
+- Sample size justification
+- Statistical power
+- Validation strategy
+- Reproducibility
+
+### SECTION 4: CREDIBILITY ATTACKS
+- Overclaimed capabilities ("세계 최초", "혁신적")
+- Unverified partnerships
+- Unrealistic timelines
+- Budget inconsistencies
+
+### SECTION 5: RISK SCORE
+**Overall Credibility Score**: X/100
+**Recommendation**: REJECT / MAJOR REVISION / MINOR REVISION / ACCEPT
+**Top 3 Reasons for Score**:
+1. ...
+2. ...
+3. ...
+
+---
+
+## EXPERT VERDICT
+
+As Dr. Catherine Lord, my professional assessment is:
+
+[2-3 paragraphs of expert-level critique in the voice of the expert]
