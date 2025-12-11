@@ -66,6 +66,50 @@ from src.agents.types import AgentTask as PoolAgentTask, TaskType as AgentTaskTy
 from src.context.manager import ResearchContextManager
 from src.services.llm.mock_service import MockLLMService
 from src.services.review.adversarial import run_adversarial_review
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
+def create_llm_service():
+    """Create real LLM service from available API keys, fallback to MockLLMService."""
+    try:
+        # Try OpenAI first (premium models)
+        openai_key = os.getenv("OPENAI_API_KEY")
+        if openai_key:
+            try:
+                from src.services.llm.adapters.openai import OpenAIAdapter
+                logger.info("✅ Using OpenAI LLM service (premium models)")
+                return OpenAIAdapter(api_key=openai_key)
+            except Exception as e:
+                logger.warning(f"⚠️ OpenAI adapter failed: {e}")
+        
+        # Try Anthropic (Claude)
+        anthropic_key = os.getenv("ANTHROPIC_API_KEY")
+        if anthropic_key:
+            try:
+                from src.services.llm.adapters.anthropic import AnthropicAdapter
+                logger.info("✅ Using Anthropic LLM service (Claude)")
+                return AnthropicAdapter(api_key=anthropic_key)
+            except Exception as e:
+                logger.warning(f"⚠️ Anthropic adapter failed: {e}")
+        
+        # Try Gemini
+        google_key = os.getenv("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY")
+        if google_key:
+            try:
+                from src.services.llm.adapters.gemini import GeminiAdapter
+                logger.info("✅ Using Gemini LLM service")
+                return GeminiAdapter(api_key=google_key)
+            except Exception as e:
+                logger.warning(f"⚠️ Gemini adapter failed: {e}")
+        
+        # Fallback to MockLLMService
+        logger.warning("⚠️ No API keys found, using MockLLMService")
+        return MockLLMService()
+    except Exception as e:
+        logger.error(f"❌ LLM service creation failed: {e}, falling back to MockLLMService")
+        return MockLLMService()
 
 try:
     from src.services.rag.unified_rag_orchestrator import (
@@ -255,10 +299,10 @@ class UnifiedMultiAgentPipeline:
 
         # Initialize Agent Pool + dependencies
         try:
-            self.llm_service = MockLLMService()
+            self.llm_service = create_llm_service()
         except Exception as exc:
-            logger.warning(f"⚠️ MockLLMService initialization warning: {exc}")
-            self.llm_service = None
+            logger.warning(f"⚠️ LLM service initialization warning: {exc}")
+            self.llm_service = MockLLMService()  # Fallback to mock
 
         self.context_manager = ResearchContextManager(vector_store=None, graph_db=None)
 
