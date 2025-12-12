@@ -1,0 +1,2098 @@
+{
+  "metadata": {
+    "dataset_name": "Golden QA Benchmark for RAG Evaluation",
+    "version": "1.0",
+    "created_date": "2025-12-05",
+    "total_pairs": 100,
+    "domain_distribution": {
+      "neuroscience": 30,
+      "quantum_ml": 30,
+      "general_science": 40
+    },
+    "difficulty_distribution": {
+      "simple": 40,
+      "medium": 40,
+      "complex": 20
+    },
+    "description": "High-quality question-answer pairs for evaluating RAG pipeline performance across multiple scientific domains and difficulty levels"
+  },
+  "qa_pairs": [
+    {
+      "id": "neuro_simple_001",
+      "domain": "neuroscience",
+      "difficulty": "simple",
+      "question": "What is brain decoding and what technology is commonly used for it?",
+      "answer": "Brain decoding is the process of inferring mental states, cognitive processes, or intended actions from brain activity patterns. It commonly uses functional neuroimaging technologies like fMRI (functional Magnetic Resonance Imaging) and EEG (Electroencephalography) to measure brain activity and apply machine learning algorithms to decode the underlying cognitive processes.",
+      "ground_truth": "Brain decoding uses neuroimaging (fMRI, EEG) to infer mental states from brain activity patterns",
+      "contexts": [
+        "Brain decoding involves reading minds by analyzing brain activity patterns",
+        "fMRI provides spatial resolution while EEG provides temporal resolution",
+        "Machine learning algorithms are applied to decode cognitive processes from brain signals"
+      ],
+      "source_file": "neuroscience_ml_papers/Brain decoding Reading minds_2013.pdf",
+      "tags": [
+        "brain_decoding",
+        "neuroimaging",
+        "fMRI",
+        "EEG"
+      ]
+    },
+    {
+      "id": "quantum_simple_001",
+      "domain": "quantum_ml",
+      "difficulty": "simple",
+      "question": "What is a variational quantum algorithm (VQA)?",
+      "answer": "A Variational Quantum Algorithm (VQA) is a hybrid quantum-classical approach that uses a classical optimizer to train a parameterized quantum circuit. The quantum circuit evaluates a cost function, and the classical optimizer updates the circuit parameters to minimize this cost. VQAs are designed to work on near-term quantum devices with limited circuit depth and qubit counts.",
+      "ground_truth": "VQAs use classical optimizers to train parameterized quantum circuits to minimize cost functions",
+      "contexts": [
+        "VQAs combine quantum and classical computing advantages",
+        "Parameterized quantum circuits have trainable parameters",
+        "Classical optimizers update parameters based on cost function evaluations",
+        "VQAs are suited for NISQ (Noisy Intermediate-Scale Quantum) devices"
+      ],
+      "source_file": "QuantERA/processed_output/Cerezo-2021-Variational quantum algorithms_processed.json",
+      "tags": [
+        "VQA",
+        "quantum_computing",
+        "NISQ",
+        "hybrid_algorithm"
+      ]
+    },
+    {
+      "id": "general_simple_001",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is the difference between supervised and unsupervised learning?",
+      "answer": "Supervised learning uses labeled training data where each example has an input and corresponding correct output, allowing the model to learn the mapping between inputs and outputs. Unsupervised learning works with unlabeled data and seeks to discover hidden patterns or structures without explicit guidance, such as clustering similar data points or reducing dimensionality.",
+      "ground_truth": "Supervised learning uses labeled data; unsupervised learning finds patterns in unlabeled data",
+      "contexts": [
+        "Supervised learning requires labeled training examples",
+        "Unsupervised learning discovers patterns without labels",
+        "Classification and regression are supervised learning tasks",
+        "Clustering and dimensionality reduction are unsupervised tasks"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "machine_learning",
+        "supervised",
+        "unsupervised"
+      ]
+    },
+    {
+      "id": "neuro_simple_002",
+      "domain": "neuroscience",
+      "difficulty": "simple",
+      "question": "What are the main advantages of fMRI over EEG in brain imaging?",
+      "answer": "fMRI provides superior spatial resolution, typically on the order of millimeters, allowing researchers to pinpoint specific brain regions involved in cognitive processes. It can image deep brain structures that EEG cannot reach effectively. However, fMRI has poorer temporal resolution (seconds) compared to EEG (milliseconds) and is more expensive and less portable.",
+      "ground_truth": "fMRI has better spatial resolution and can image deep brain structures, but worse temporal resolution than EEG",
+      "contexts": [
+        "fMRI measures blood oxygen level dependent (BOLD) signals",
+        "Spatial resolution of fMRI is typically 1-3mm",
+        "EEG has millisecond temporal resolution but poor spatial resolution",
+        "fMRI requires large, expensive equipment"
+      ],
+      "source_file": "neuroscience_ml_papers/Best practices in data analysis and sharing in neuroimaging using MRI_2017.pdf",
+      "tags": [
+        "fMRI",
+        "EEG",
+        "neuroimaging",
+        "spatial_resolution"
+      ]
+    },
+    {
+      "id": "quantum_simple_002",
+      "domain": "quantum_ml",
+      "difficulty": "simple",
+      "question": "What is a barren plateau in quantum machine learning?",
+      "answer": "A barren plateau is a phenomenon in variational quantum algorithms where the gradients of the cost function become exponentially small as the problem size (number of qubits) increases. This makes optimization extremely difficult because the landscape becomes flat and featureless, requiring exponentially many measurements to distinguish signal from noise, effectively preventing trainability of the quantum model.",
+      "ground_truth": "Barren plateaus occur when cost function gradients vanish exponentially with problem size, preventing optimization",
+      "contexts": [
+        "Gradients become exponentially suppressed with increasing qubits",
+        "The optimization landscape becomes flat and featureless",
+        "Exponentially many measurements needed to resolve gradients",
+        "Barren plateaus are a major trainability challenge for VQAs"
+      ],
+      "source_file": "QuantERA/processed_output/BarrenPlateaus_processed.json",
+      "tags": [
+        "barren_plateau",
+        "VQA",
+        "trainability",
+        "optimization"
+      ]
+    },
+    {
+      "id": "general_simple_002",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is overfitting in machine learning and how can it be detected?",
+      "answer": "Overfitting occurs when a model learns the training data too well, including noise and specific details, resulting in poor generalization to new data. It can be detected by observing a large gap between training and validation performance - the model achieves high accuracy on training data but significantly lower accuracy on validation or test data. Common prevention methods include regularization, cross-validation, and using more training data.",
+      "ground_truth": "Overfitting is when models memorize training data and fail to generalize; detected by train-validation performance gap",
+      "contexts": [
+        "Overfit models have low training error but high test error",
+        "Model complexity relative to data size affects overfitting",
+        "Regularization techniques like L1/L2 can prevent overfitting",
+        "Cross-validation helps detect and prevent overfitting"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "overfitting",
+        "generalization",
+        "regularization"
+      ]
+    },
+    {
+      "id": "neuro_simple_003",
+      "domain": "neuroscience",
+      "difficulty": "simple",
+      "question": "What is the default mode network (DMN) and when is it most active?",
+      "answer": "The default mode network is a large-scale brain network that includes regions like the posterior cingulate cortex, medial prefrontal cortex, and angular gyrus. It is most active during rest and internal mentation such as self-referential thinking, autobiographical memory retrieval, and mind-wandering. The DMN typically shows decreased activity during goal-directed, externally-focused tasks.",
+      "ground_truth": "DMN is a brain network active during rest and internal thought, decreases during external tasks",
+      "contexts": [
+        "DMN includes posterior cingulate and medial prefrontal cortex",
+        "Shows anticorrelation with task-positive networks",
+        "Involved in self-referential and autobiographical processes",
+        "DMN dysfunction linked to various psychiatric disorders"
+      ],
+      "source_file": "neuroscience_general",
+      "tags": [
+        "DMN",
+        "resting_state",
+        "brain_network"
+      ]
+    },
+    {
+      "id": "quantum_simple_003",
+      "domain": "quantum_ml",
+      "difficulty": "simple",
+      "question": "What is quantum entanglement and why is it important for quantum computing?",
+      "answer": "Quantum entanglement is a phenomenon where two or more qubits become correlated in such a way that the quantum state of each qubit cannot be described independently. Measuring one entangled qubit immediately affects the others, regardless of distance. Entanglement is crucial for quantum computing because it enables quantum parallelism, allows quantum algorithms to explore exponentially large solution spaces, and is necessary for quantum error correction and quantum communication protocols.",
+      "ground_truth": "Entanglement creates correlated quantum states that enable quantum parallelism and are essential for quantum algorithms",
+      "contexts": [
+        "Entangled qubits show non-local correlations",
+        "Measurement of one qubit affects entangled partners",
+        "Entanglement enables quantum speedup for certain algorithms",
+        "Used in quantum teleportation and error correction"
+      ],
+      "source_file": "quantum_fundamentals",
+      "tags": [
+        "entanglement",
+        "quantum_computing",
+        "quantum_state"
+      ]
+    },
+    {
+      "id": "general_simple_003",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is the bias-variance tradeoff in machine learning?",
+      "answer": "The bias-variance tradeoff describes the fundamental tension between two sources of error in predictive models. Bias is the error from overly simple models that underfit the data, missing relevant patterns. Variance is the error from overly complex models that overfit, being too sensitive to training data fluctuations. Total error is the sum of bias squared, variance, and irreducible noise. The goal is to find the optimal model complexity that minimizes total error.",
+      "ground_truth": "Bias-variance tradeoff balances underfitting (high bias) and overfitting (high variance) to minimize total error",
+      "contexts": [
+        "Simple models have high bias, low variance",
+        "Complex models have low bias, high variance",
+        "Total error = bias² + variance + noise",
+        "Optimal complexity balances the two sources of error"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "bias_variance",
+        "model_complexity",
+        "error_analysis"
+      ]
+    },
+    {
+      "id": "neuro_simple_004",
+      "domain": "neuroscience",
+      "difficulty": "simple",
+      "question": "What is neuroplasticity and what are its two main forms?",
+      "answer": "Neuroplasticity is the brain's ability to reorganize itself by forming new neural connections throughout life. The two main forms are: 1) Structural plasticity - physical changes in brain structure such as growth of new neurons (neurogenesis) or synapses, and 2) Functional plasticity - changes in the strength of synaptic connections and neural network activity patterns. Both forms enable learning, memory formation, and recovery from brain injury.",
+      "ground_truth": "Neuroplasticity is brain reorganization ability; includes structural (physical changes) and functional (activity changes) forms",
+      "contexts": [
+        "Plasticity enables learning and memory throughout life",
+        "Structural changes include neurogenesis and synaptogenesis",
+        "Functional changes involve synaptic strengthening/weakening",
+        "Critical for recovery after stroke or traumatic brain injury"
+      ],
+      "source_file": "neuroscience_general",
+      "tags": [
+        "neuroplasticity",
+        "learning",
+        "brain_development"
+      ]
+    },
+    {
+      "id": "quantum_simple_004",
+      "domain": "quantum_ml",
+      "difficulty": "simple",
+      "question": "What is the difference between a quantum gate and a classical logic gate?",
+      "answer": "Classical logic gates operate on bits (0 or 1) and perform irreversible Boolean operations. Quantum gates operate on qubits in superposition states and must be reversible (unitary transformations). While classical gates have fixed inputs and outputs, quantum gates manipulate probability amplitudes and can create or maintain entanglement. Quantum gates are represented by unitary matrices, and their action preserves the norm of quantum states.",
+      "ground_truth": "Quantum gates are reversible unitary operations on qubits in superposition; classical gates are irreversible Boolean operations on bits",
+      "contexts": [
+        "Quantum gates must be reversible and unitary",
+        "Qubits exist in superposition unlike classical bits",
+        "Quantum gates represented by unitary matrices",
+        "Common quantum gates include Hadamard, CNOT, and Pauli gates"
+      ],
+      "source_file": "quantum_fundamentals",
+      "tags": [
+        "quantum_gates",
+        "qubits",
+        "quantum_operations"
+      ]
+    },
+    {
+      "id": "general_simple_004",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is gradient descent and how does it work?",
+      "answer": "Gradient descent is an optimization algorithm used to minimize a loss function by iteratively adjusting parameters in the direction of steepest descent. It computes the gradient (partial derivatives) of the loss with respect to each parameter, then updates parameters by moving in the opposite direction of the gradient, scaled by a learning rate. The process repeats until convergence or a stopping criterion is met. Variants include batch, mini-batch, and stochastic gradient descent.",
+      "ground_truth": "Gradient descent iteratively updates parameters opposite to loss gradient direction to find minimum",
+      "contexts": [
+        "Gradient indicates direction of steepest increase",
+        "Parameters updated as: θ = θ - α∇L(θ)",
+        "Learning rate α controls step size",
+        "Can get stuck in local minima for non-convex functions"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "optimization",
+        "gradient_descent",
+        "training"
+      ]
+    },
+    {
+      "id": "neuro_medium_001",
+      "domain": "neuroscience",
+      "difficulty": "medium",
+      "question": "How does the BOLD signal in fMRI relate to neural activity, and what are its limitations?",
+      "answer": "The Blood Oxygen Level Dependent (BOLD) signal measures changes in blood oxygenation that occur in response to neural activity. When neurons are active, they consume oxygen, triggering increased blood flow that overcompensates, resulting in higher oxygenated hemoglobin concentration. This creates a detectable signal change. However, BOLD is an indirect measure with limitations: 1) Slow hemodynamic response (4-6 second delay), 2) Cannot distinguish excitatory vs inhibitory activity, 3) Sensitive to vascular factors unrelated to neural activity, 4) Complex relationship between neural firing and hemodynamics varies across brain regions.",
+      "ground_truth": "BOLD measures blood oxygenation changes from neural activity but is indirect, delayed, and cannot distinguish activity types",
+      "contexts": [
+        "BOLD reflects neurovascular coupling",
+        "Hemodynamic response function has ~4-6 second peak",
+        "Signal reflects metabolic demand not neural firing directly",
+        "Baseline activity and vascular anatomy affect BOLD"
+      ],
+      "source_file": "neuroscience_ml_papers/Best practices in data analysis and sharing in neuroimaging using MRI_2017.pdf",
+      "tags": [
+        "fMRI",
+        "BOLD",
+        "hemodynamic_response",
+        "limitations"
+      ]
+    },
+    {
+      "id": "quantum_medium_001",
+      "domain": "quantum_ml",
+      "difficulty": "medium",
+      "question": "Explain the quantum approximate optimization algorithm (QAOA) and its ansatz structure.",
+      "answer": "QAOA is a variational quantum algorithm designed for combinatorial optimization problems. Its ansatz alternates between two types of unitaries: 1) Problem unitary e^(-iγH_P) encoding the problem Hamiltonian H_P, and 2) Mixer unitary e^(-iβH_M) with mixing Hamiltonian H_M (typically X rotations). The full ansatz is U(γ,β) = ∏[e^(-iβ_l H_M)e^(-iγ_l H_P)] for p layers. Starting from an easily prepared state, QAOA alternates between evolving towards problem solutions and maintaining superposition. The parameters γ and β are optimized classically to maximize the probability of measuring good solutions.",
+      "ground_truth": "QAOA alternates problem and mixer unitaries in layers, with classical parameter optimization to solve combinatorial problems",
+      "contexts": [
+        "QAOA ansatz has alternating structure of problem and mixer Hamiltonians",
+        "Number of layers p determines solution quality",
+        "Inspired by quantum annealing and adiabatic computation",
+        "Used for MaxCut, graph coloring, and other NP problems"
+      ],
+      "source_file": "QuantERA/processed_output/Cerezo-2021-Variational quantum algorithms_processed.json",
+      "tags": [
+        "QAOA",
+        "ansatz",
+        "optimization",
+        "combinatorial"
+      ]
+    },
+    {
+      "id": "general_medium_001",
+      "domain": "general_science",
+      "difficulty": "medium",
+      "question": "Explain the concept of transfer learning and when it is most effective.",
+      "answer": "Transfer learning leverages knowledge from a source task/domain to improve learning on a target task/domain. A model pre-trained on large datasets (e.g., ImageNet) learns general features that transfer to new tasks. The process typically involves: 1) Pre-training on source task, 2) Freezing early layers (general features), 3) Fine-tuning later layers (task-specific features) on target task. Transfer learning is most effective when: source and target domains are related, source dataset is large and diverse, target dataset is small, and computational resources are limited. It dramatically reduces training time and data requirements while improving performance.",
+      "ground_truth": "Transfer learning reuses pre-trained model knowledge for new tasks; most effective with related domains and limited target data",
+      "contexts": [
+        "Pre-trained models capture general features",
+        "Early layers learn low-level features, later layers task-specific",
+        "Reduces need for large labeled datasets",
+        "Common in computer vision and NLP applications"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "transfer_learning",
+        "fine_tuning",
+        "pre_training"
+      ]
+    },
+    {
+      "id": "neuro_medium_002",
+      "domain": "neuroscience",
+      "difficulty": "medium",
+      "question": "What is the multiple comparison problem in neuroimaging and how is it addressed?",
+      "answer": "The multiple comparison problem arises because neuroimaging analyzes thousands to millions of voxels/electrodes simultaneously, dramatically increasing false positive risk. Testing all voxels at α=0.05 would yield thousands of false positives by chance alone. Solutions include: 1) Bonferroni correction (divide α by number of tests, very conservative), 2) False Discovery Rate (FDR) control using Benjamini-Hochberg procedure, 3) Random Field Theory (RFT) accounting for spatial smoothness, 4) Cluster-based permutation testing, 5) Multivariate approaches that test patterns rather than individual voxels. FDR and permutation methods balance sensitivity and specificity better than Bonferroni.",
+      "ground_truth": "Multiple comparisons inflate false positives; addressed via Bonferroni, FDR, permutation testing, or multivariate approaches",
+      "contexts": [
+        "fMRI analyses test 100,000+ voxels simultaneously",
+        "Uncorrected p<0.05 yields ~5000 false positives",
+        "FDR controls proportion of false discoveries",
+        "Cluster-based tests exploit spatial structure"
+      ],
+      "source_file": "neuroscience_ml_papers/Best practices in data analysis and sharing in neuroimaging using MRI_2017.pdf",
+      "tags": [
+        "multiple_comparisons",
+        "statistics",
+        "fMRI",
+        "correction"
+      ]
+    },
+    {
+      "id": "quantum_medium_002",
+      "domain": "quantum_ml",
+      "difficulty": "medium",
+      "question": "What causes barren plateaus in variational quantum algorithms and what ansatz types are prone to them?",
+      "answer": "Barren plateaus arise from operating in an unstructured manner in exponentially large Hilbert spaces, essentially a quantum curse of dimensionality. Main causes include: 1) Random or hardware-efficient ansatzes that form 2-designs lose gradient signal exponentially, 2) Global cost functions that measure properties of the entire state, 3) Highly entangled input states, 4) Noise that acts globally. Ansatzes prone to BPs: randomly initialized deep circuits, certain hardware-efficient ansatzes, and circuits with expressibility that is too high. Problem-inspired ansatzes (QAOA, UCC) and geometric/local cost functions can help avoid BPs.",
+      "ground_truth": "Barren plateaus caused by unstructured exploration of Hilbert space; random deep circuits and global measurements most prone",
+      "contexts": [
+        "Gradient variance scales as exp(-poly(n)) with qubits n",
+        "2-designs and deeper circuits more susceptible",
+        "Global observables measuring all qubits cause BPs",
+        "Local cost functions and problem structure help mitigation"
+      ],
+      "source_file": "QuantERA/processed_output/BarrenPlateaus_processed.json",
+      "tags": [
+        "barren_plateaus",
+        "ansatz",
+        "trainability",
+        "causes"
+      ]
+    },
+    {
+      "id": "general_medium_002",
+      "domain": "general_science",
+      "difficulty": "medium",
+      "question": "Explain the difference between batch, mini-batch, and stochastic gradient descent.",
+      "answer": "These are variants of gradient descent differing in training data usage per update: 1) Batch GD computes gradient using entire dataset, providing accurate gradient but expensive per iteration and memory-intensive. Updates are smooth but slow. 2) Stochastic GD (SGD) uses single random example per update, providing noisy gradient estimates but very fast iterations. Can escape local minima due to noise. 3) Mini-batch GD uses small random subsets (e.g., 32-256 examples), balancing computational efficiency with gradient accuracy. Most practical; leverages vectorization, reduces gradient variance compared to SGD, enables parallelization. Mini-batch is standard in modern deep learning.",
+      "ground_truth": "Batch uses full dataset (accurate, slow), SGD uses one sample (noisy, fast), mini-batch uses small subsets (balanced)",
+      "contexts": [
+        "Batch size affects convergence speed and stability",
+        "Mini-batch enables GPU parallelization",
+        "SGD noise can help escape local minima",
+        "Larger batches need higher learning rates"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "gradient_descent",
+        "optimization",
+        "batch_size"
+      ]
+    },
+    {
+      "id": "neuro_medium_003",
+      "domain": "neuroscience",
+      "difficulty": "medium",
+      "question": "How do multivariate pattern analysis (MVPA) techniques differ from traditional univariate neuroimaging analysis?",
+      "answer": "Univariate analysis tests each voxel independently, asking if individual voxels show significant activation differences between conditions. MVPA examines patterns across multiple voxels simultaneously, using machine learning to decode information from distributed representations. Key differences: 1) Sensitivity - MVPA can detect information in subtle patterns that univariate misses, 2) Interpretation - MVPA reveals what information is represented, not just where, 3) Spatial specificity - better localization by considering multivariate patterns, 4) Multiple comparison - MVPA tests one hypothesis (classification accuracy) rather than thousands. MVPA is particularly powerful for distinguishing similar conditions and testing representational theories.",
+      "ground_truth": "Univariate tests individual voxels; MVPA decodes information from multi-voxel patterns, more sensitive to distributed codes",
+      "contexts": [
+        "MVPA uses classifiers like SVM on voxel patterns",
+        "Searchlight analysis applies MVPA locally",
+        "RSA (Representational Similarity Analysis) compares pattern geometries",
+        "MVPA requires careful cross-validation"
+      ],
+      "source_file": "neuroscience_ml_papers/Brain decoding Reading minds_2013.pdf",
+      "tags": [
+        "MVPA",
+        "pattern_analysis",
+        "decoding",
+        "fMRI"
+      ]
+    },
+    {
+      "id": "quantum_medium_003",
+      "domain": "quantum_ml",
+      "difficulty": "medium",
+      "question": "What is the no-free-lunch theorem for quantum machine learning and what are its implications?",
+      "answer": "The no-free-lunch (NFL) theorem states that averaged over all possible learning problems, no quantum machine learning algorithm outperforms random guessing. This means quantum advantage only exists for specific problem classes, not universally. Implications: 1) Must identify problem structure where quantum helps, 2) Inductive biases (ansatz choice, architecture) are crucial, 3) Quantum advantage requires alignment between quantum operations and problem structure, 4) Generic quantum algorithms without problem-specific design unlikely to outperform classical methods. Success requires careful co-design of quantum algorithms with target applications, exploiting quantum properties like interference and entanglement where they match problem requirements.",
+      "ground_truth": "NFL theorem shows quantum ML only helps for specific problems; requires problem-specific design and inductive biases",
+      "contexts": [
+        "Analogous to classical NFL theorem",
+        "Quantum advantage needs problem-algorithm alignment",
+        "Generic parameterized circuits may not help",
+        "Importance of ansatz design and problem structure"
+      ],
+      "source_file": "QuantERA/processed_output/Caro-2022-Generalization in quantum machine le_processed.json",
+      "tags": [
+        "no_free_lunch",
+        "quantum_advantage",
+        "problem_structure"
+      ]
+    },
+    {
+      "id": "general_medium_003",
+      "domain": "general_science",
+      "difficulty": "medium",
+      "question": "Explain cross-validation and describe the k-fold cross-validation procedure.",
+      "answer": "Cross-validation assesses model generalization by testing on held-out data not used in training. K-fold CV procedure: 1) Randomly partition data into k equal-sized folds, 2) For each fold i, train model on k-1 folds and test on fold i, 3) Compute performance metric on each fold, 4) Average metrics across all k folds for final estimate. Typical k values are 5 or 10. Special cases: Leave-One-Out CV (k=n, expensive but low bias), stratified k-fold (maintains class proportions). CV provides more reliable performance estimates than single train-test split, helps detect overfitting, and guides hyperparameter tuning. Essential for small datasets.",
+      "ground_truth": "K-fold CV splits data into k parts, trains on k-1 and tests on 1, rotating through all folds for robust evaluation",
+      "contexts": [
+        "Reduces variance in performance estimates",
+        "Common choices: k=5 or k=10",
+        "More computationally expensive than single split",
+        "Used for model selection and hyperparameter tuning"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "cross_validation",
+        "model_evaluation",
+        "generalization"
+      ]
+    },
+    {
+      "id": "neuro_medium_004",
+      "domain": "neuroscience",
+      "difficulty": "medium",
+      "question": "What is functional connectivity analysis and how does it differ from effective connectivity?",
+      "answer": "Functional connectivity measures statistical dependencies (correlation/coherence) between time series from different brain regions, without implying causation. It captures which regions co-activate but not information flow direction. Effective connectivity characterizes causal influences between regions, modeling directed effects where activity in one region causes changes in another. Methods differ: functional connectivity uses correlation, ICA, or graph theory; effective connectivity uses Granger causality, DCM (Dynamic Causal Modeling), or SEM (Structural Equation Modeling). Effective connectivity requires stronger assumptions about causal structure but provides mechanistic insights. Both complement anatomical (structural) connectivity from DTI.",
+      "ground_truth": "Functional connectivity measures statistical co-activation; effective connectivity models directed causal influences between regions",
+      "contexts": [
+        "Functional connectivity often computed from resting-state fMRI",
+        "Effective connectivity requires time series with good temporal resolution",
+        "DCM models neural population dynamics",
+        "Graph theory analyzes functional connectivity networks"
+      ],
+      "source_file": "neuroscience_ml_papers/Spatial-Temporal DAG Convolutional Networks for End-to-End Joint Effective Connectivity Learning and_2312.10317v1.pdf",
+      "tags": [
+        "functional_connectivity",
+        "effective_connectivity",
+        "brain_networks"
+      ]
+    },
+    {
+      "id": "quantum_medium_004",
+      "domain": "quantum_ml",
+      "difficulty": "medium",
+      "question": "What is quantum kernel method and how does it relate to classical kernel methods?",
+      "answer": "Quantum kernel methods map classical data into a high-dimensional quantum Hilbert space using a feature map φ(x) = U(x)|0⟩, then compute inner products (kernels) K(x,x') = |⟨φ(x)|φ(x')⟩|². This quantum kernel is evaluated by preparing states U(x)|0⟩ and U(x')|0⟩ and measuring their overlap via SWAP test or direct measurement. Like classical kernels, they enable implicit high-dimensional feature spaces without explicit computation. Quantum advantage arises when: 1) Quantum feature spaces are hard to simulate classically, 2) The kernel is computationally cheaper quantum mechanically. Applications include quantum SVM. Challenges include barren plateaus in trainability and ensuring genuine quantum advantage over classical kernels.",
+      "ground_truth": "Quantum kernels embed data in quantum Hilbert space via parameterized circuits; advantage from hard-to-simulate quantum feature spaces",
+      "contexts": [
+        "Quantum feature maps use parameterized quantum circuits",
+        "Kernel evaluation via state overlap measurement",
+        "Can be used with classical SVM training",
+        "Geometric differences from classical kernels under study"
+      ],
+      "source_file": "QuantERA/Quantum AI_processed.json",
+      "tags": [
+        "quantum_kernels",
+        "feature_map",
+        "SVM",
+        "quantum_advantage"
+      ]
+    },
+    {
+      "id": "general_medium_004",
+      "domain": "general_science",
+      "difficulty": "medium",
+      "question": "What are attention mechanisms in neural networks and why are they important?",
+      "answer": "Attention mechanisms allow models to dynamically focus on relevant parts of input when making predictions. Core idea: compute attention weights α_i indicating importance of each input element i, then produce weighted combination ∑α_i·v_i. In transformers, attention is computed as: Attention(Q,K,V) = softmax(QK^T/√d_k)V, where queries Q, keys K, and values V are learned projections. Multi-head attention uses multiple attention functions in parallel. Attention is important because: 1) Handles variable-length inputs, 2) Captures long-range dependencies better than RNNs, 3) Enables interpretability via attention weights, 4) Parallelizes better than sequential models. Foundation of transformer architecture dominating NLP and increasingly computer vision.",
+      "ground_truth": "Attention weighs input importance dynamically; enables long-range dependencies and parallelization in transformers",
+      "contexts": [
+        "Self-attention compares positions within same sequence",
+        "Cross-attention attends from one sequence to another",
+        "Scaled dot-product attention most common",
+        "Transformers use multi-head self-attention"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "attention",
+        "transformers",
+        "neural_networks"
+      ]
+    },
+    {
+      "id": "neuro_complex_001",
+      "domain": "neuroscience",
+      "difficulty": "complex",
+      "question": "Describe the prefrontal cortex's role in cognitive control and how its dysfunction relates to addiction.",
+      "answer": "The prefrontal cortex (PFC), particularly dorsolateral PFC and anterior cingulate cortex, implements cognitive control through: 1) Working memory maintenance, 2) Response inhibition, 3) Goal-directed behavior, 4) Conflict monitoring, 5) Value-based decision making. In addiction, chronic drug exposure causes PFC hypofunction via: 1) Reduced D2 receptor availability, 2) Decreased prefrontal metabolism, 3) Weakened top-down control over limbic reward circuits, 4) Impaired executive function. This creates imbalance: hyperactive reward system (nucleus accumbens, ventral tegmental area) coupled with hypoactive control system (PFC). Result is compulsive drug-seeking despite negative consequences. Neuroplastic changes persist during abstinence, explaining relapse vulnerability. Treatment targets: enhance PFC function via cognitive training, pharmacotherapy (e.g., modafinil), or neuromodulation (TMS, tDCS).",
+      "ground_truth": "PFC provides cognitive control over behavior; addiction causes PFC hypofunction and imbalanced top-down control over reward circuits",
+      "contexts": [
+        "Ventromedial PFC involved in value computation",
+        "Dorsolateral PFC critical for working memory and inhibition",
+        "Drug cues activate reward areas while PFC shows blunted response",
+        "PFC volume and connectivity reduced in chronic users"
+      ],
+      "source_file": "neuroscience_ml_papers/Dysfunction of the prefrontal cortex in addiction neuroimaging findings and clin_2011.pdf",
+      "tags": [
+        "prefrontal_cortex",
+        "addiction",
+        "cognitive_control",
+        "executive_function"
+      ]
+    },
+    {
+      "id": "quantum_complex_001",
+      "domain": "quantum_ml",
+      "difficulty": "complex",
+      "question": "Analyze the relationship between barren plateaus and classical simulability in variational quantum algorithms.",
+      "answer": "Intriguing connection exists: conditions preventing barren plateaus often coincide with classical simulability. When quantum circuits are classically simulable (e.g., Clifford circuits, limited entanglement, local structure), gradient information is accessible and BPs avoided. Conversely, circuits in regimes potentially offering quantum advantage (deep, highly entangling, forming 2-designs) often exhibit BPs. This creates a dilemma: avoid BPs → classically simulable, seek quantum advantage → encounter BPs. Resolution requires: 1) Problem-inspired ansatzes exploiting structure, 2) Local cost functions measuring subsystems, 3) Careful entanglement growth balancing expressivity and trainability, 4) Techniques like parameter initialization, layer-by-layer training. Recent work suggests absence of BPs doesn't guarantee classical hardness, but BP presence often indicates computational regime where quantum advantage might exist if trainability is salvaged.",
+      "ground_truth": "BP-free regimes often classically simulable; quantum advantage regimes prone to BPs; requires balancing trainability and expressivity",
+      "contexts": [
+        "Clifford circuits simulable and BP-free but not universal",
+        "Shallow circuits avoid BPs but have limited expressivity",
+        "Local observables help trainability but may limit advantage",
+        "Trade-off between trainability and quantum computational power"
+      ],
+      "source_file": "QuantERA/processed_output/BarrenPlateaus_processed.json",
+      "tags": [
+        "barren_plateaus",
+        "classical_simulability",
+        "quantum_advantage",
+        "trainability"
+      ]
+    },
+    {
+      "id": "general_complex_001",
+      "domain": "general_science",
+      "difficulty": "complex",
+      "question": "Explain the theoretical guarantees and limitations of PAC learning framework.",
+      "answer": "Probably Approximately Correct (PAC) learning provides theoretical framework for generalization. A concept class C is PAC-learnable if there exists algorithm that, given: 1) Any target concept c in C, 2) Training examples from c, 3) Error parameter ε, 4) Confidence parameter δ, produces hypothesis h with error ≤ε with probability ≥1-δ, using poly(1/ε, 1/δ, problem size) samples and time. Sample complexity bound: m ≥ (1/ε)(ln|H| + ln(1/δ)) for finite hypothesis space H. VC dimension generalizes to infinite spaces. Limitations: 1) Assumes realizability (target in hypothesis class), 2) Distribution-free but doesn't exploit distribution knowledge, 3) Worst-case analysis may be pessimistic, 4) Doesn't address computational efficiency, 5) Binary classification focus. Extensions include agnostic PAC (no realizability), statistical queries, boosting theory.",
+      "ground_truth": "PAC learning bounds samples needed for probably approximately correct generalization; limited by realizability assumption and worst-case analysis",
+      "contexts": [
+        "VC dimension characterizes PAC learnability",
+        "Sample complexity O(d/ε) for VC dimension d",
+        "Fundamental theory connecting statistics and computation",
+        "Influenced modern ML theory and algorithms"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "PAC_learning",
+        "learning_theory",
+        "sample_complexity",
+        "VC_dimension"
+      ]
+    },
+    {
+      "id": "neuro_complex_002",
+      "domain": "neuroscience",
+      "difficulty": "complex",
+      "question": "Explain the neurovascular coupling mechanisms underlying the BOLD signal and factors affecting coupling strength across brain regions and states.",
+      "answer": "Neurovascular coupling links neural activity to local blood flow via complex mechanisms: 1) Glutamate release → astrocyte activation → Ca²⁺ waves → arachidonic acid metabolites (prostaglandins, EETs) → smooth muscle relaxation → vasodilation, 2) NO (nitric oxide) from neurons and endothelium → cGMP → vasodilation, 3) K⁺ and adenosine from active neurons → hyperpolarization → relaxation, 4) Pericytes regulating capillary diameter. Coupling strength varies: 1) Brain regions - stronger in cortex than subcortex, varies with vascular density, 2) Cell types - stronger for excitatory than inhibitory, 3) State-dependent - altered in disease (Alzheimer's, stroke), affected by aging, vasoconstrictors (caffeine), anesthesia, 4) Frequency-dependent - better coupling for sustained than brief activity. This variability complicates interpretation: equal BOLD across regions doesn't imply equal neural activity. Individual vascular reactivity testing (e.g., breath-hold) helps calibration.",
+      "ground_truth": "Neurovascular coupling via astrocytes, NO, and metabolites; strength varies by region, cell type, state, complicating BOLD interpretation",
+      "contexts": [
+        "Astrocytes bridge neurons and vasculature",
+        "Multiple parallel pathways ensure robust coupling",
+        "Vascular pathology disrupts coupling in disease",
+        "Calibrated fMRI attempts to factor out vascular effects"
+      ],
+      "source_file": "neuroscience_ml_papers/Best practices in data analysis and sharing in neuroimaging using MRI_2017.pdf",
+      "tags": [
+        "neurovascular_coupling",
+        "BOLD",
+        "fMRI",
+        "hemodynamics",
+        "mechanisms"
+      ]
+    },
+    {
+      "id": "quantum_complex_002",
+      "domain": "quantum_ml",
+      "difficulty": "complex",
+      "question": "Analyze quantum generalization bounds and compare to classical PAC learning for quantum machine learning models.",
+      "answer": "Quantum generalization theory extends classical learning theory to quantum settings. For quantum ML model with T parameterized gates trained on N samples, generalization error scales as √(T/N), analogous to classical √(d/N) with d parameters. However, quantum has subtleties: 1) Effective parameters K<T if many gates undergo little change during optimization, improving bound to √(K/N), 2) Quantum no-free-lunch theorem - advantage only for specific problems, 3) Pseudo-dimension and fat-shattering dimension characterize quantum hypothesis classes, 4) Measurement introduces additional sampling complexity beyond parameter learning, 5) Quantum data advantages - exponential sample complexity advantage possible when learning quantum states or processes, 6) Hardware noise affects generalization differently than training. Unlike classical, quantum training data itself might be expensive (quantum state preparation). Recent results show good generalization possible from few training points when exploiting problem structure, but generic training may require exponential samples.",
+      "ground_truth": "Quantum generalization scales as √(T/N) for T gates, improved to √(K/N) with K updated gates; quantum data enables sample advantages",
+      "contexts": [
+        "Unitary compilation benefits from good generalization",
+        "Quantum state learning can show exponential separation",
+        "Rademacher complexity tools extended to quantum",
+        "Measurement budget affects quantum learning complexity"
+      ],
+      "source_file": "QuantERA/processed_output/Caro-2022-Generalization in quantum machine le_processed.json",
+      "tags": [
+        "generalization",
+        "quantum_ML",
+        "learning_theory",
+        "sample_complexity"
+      ]
+    },
+    {
+      "id": "general_complex_002",
+      "domain": "general_science",
+      "difficulty": "complex",
+      "question": "Compare and contrast different normalization techniques in deep learning (Batch, Layer, Instance, Group) and explain when each is most appropriate.",
+      "answer": "Normalization techniques stabilize training and improve convergence: 1) **Batch Normalization** - normalizes across batch dimension, computes statistics over (N,H,W) for CNNs. Pros: fast training, allows higher learning rates. Cons: batch size dependent, issues with small batches or test-train distribution shift. Best for: large batch training, not for RNNs. 2) **Layer Normalization** - normalizes across feature dimension, independent of batch. Pros: batch size independent, works for sequences/RL. Cons: slower than BN for CNNs. Best for: RNNs, transformers, small batch scenarios. 3) **Instance Normalization** - normalizes each feature map independently (N,H,W separately). Pros: invariant to instance-specific contrast. Best for: style transfer, GAN discriminators. 4) **Group Normalization** - divides channels into groups, normalizes within groups. Pros: performance between BN and LN, batch-independent. Best for: small batch training, object detection. Choice depends on architecture, batch size, and task requirements.",
+      "ground_truth": "BN normalizes across batch (best for large batches), LN across features (sequences), IN per instance (style), GN groups channels",
+      "contexts": [
+        "All normalize to zero mean, unit variance with learned affine parameters",
+        "Normalization acts as regularization",
+        "BN maintains running statistics for inference",
+        "Modern architectures often mix normalization types"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "normalization",
+        "batch_norm",
+        "layer_norm",
+        "deep_learning"
+      ]
+    },
+    {
+      "id": "neuro_complex_003",
+      "domain": "neuroscience",
+      "difficulty": "complex",
+      "question": "Describe the technical and conceptual challenges in using naturalistic stimuli paradigms (e.g., movies) for developmental neuroscience research.",
+      "answer": "Naturalistic paradigms using movies/stories offer ecological validity but face challenges: **Technical**: 1) Temporal alignment - matching complex stimulus features to BOLD responses across variable hemodynamics, 2) Feature extraction - decomposing movies into relevant dimensions (objects, faces, motion, audio, narrative), 3) Statistical power - fewer repetitions than block designs, requiring larger samples or sophisticated analyses, 4) Head motion - more problematic in children viewing long clips, 5) Individual differences - varying attention, comprehension levels. **Conceptual**: 1) Interpretation - correlations don't establish causality or mechanisms, 2) Stimulus confounds - multiple features co-occur in natural stimuli, hard to isolate, 3) Developmental appropriateness - age-appropriate content limits cross-age comparisons, 4) Attention fluctuations - unclear if differences reflect neural representation or engagement. **Solutions**: Inter-subject correlation (ISC) measures shared processing, reverse correlation isolates features, eye-tracking confirms attention, computational models (CNNs, NLP) provide feature spaces, within-subject designs reduce individual difference variance. Most powerful for: network-level function, real-world relevance, child-friendly protocols.",
+      "ground_truth": "Naturalistic paradigms offer ecological validity but face technical challenges (motion, statistics) and conceptual issues (interpretation, confounds)",
+      "contexts": [
+        "ISC quantifies shared neural responses across subjects",
+        "Naturalistic stimuli engage multiple brain systems simultaneously",
+        "Trade-off between experimental control and real-world validity",
+        "Particularly valuable for social cognition and language development"
+      ],
+      "source_file": "neuroscience_ml_papers/Movies in the magnet Naturalistic paradigms in developmental functional neuroima_2018.pdf",
+      "tags": [
+        "naturalistic_stimuli",
+        "developmental",
+        "fMRI",
+        "ecological_validity"
+      ]
+    },
+    {
+      "id": "quantum_complex_003",
+      "domain": "quantum_ml",
+      "difficulty": "complex",
+      "question": "Explain quantum error mitigation strategies and their applicability to variational quantum algorithms.",
+      "answer": "Quantum error mitigation (QEM) reduces errors without full fault-tolerance. Key strategies: 1) **Zero-Noise Extrapolation** - run circuit at different noise levels (via gate stretching/folding), extrapolate to zero-noise limit. Applicable to VQAs but increases circuit depth. 2) **Probabilistic Error Cancellation** - represent noisy ops as linear combination of noiseless ops with overhead, execute with quasi-probability distribution. Overhead grows with error rate. 3) **Measurement Error Mitigation** - characterize readout confusion matrix via calibration, invert to correct measured distributions. Low overhead, applicable to all VQAs. 4) **Clifford Data Regression** - train classical model on Clifford circuit outputs (simulable) to predict corrections for full circuits. 5) **Symmetry Verification** - post-select or reweight based on conserved quantities. For VQAs specifically: error-aware training (incorporate noise model), noise-induced barren plateaus avoidable via warm-starting, layer-wise training. Trade-off: mitigation overhead vs error reduction. Most effective for modest error rates; sampling cost can be exponential. Essential bridge to useful near-term quantum advantage.",
+      "ground_truth": "QEM strategies (extrapolation, error cancellation, measurement correction) reduce VQA errors without full error correction; have sampling overhead",
+      "contexts": [
+        "Distinguished from quantum error correction (no encoding overhead)",
+        "Enables better NISQ algorithm performance",
+        "Sampling overhead major limitation",
+        "Combined with hardware improvements for quantum advantage"
+      ],
+      "source_file": "quantum_error_mitigation",
+      "tags": [
+        "error_mitigation",
+        "NISQ",
+        "VQA",
+        "noise"
+      ]
+    },
+    {
+      "id": "general_complex_003",
+      "domain": "general_science",
+      "difficulty": "complex",
+      "question": "Explain the vanishing gradient problem in deep neural networks, its causes, and modern solutions beyond simple activation function changes.",
+      "answer": "Vanishing gradients occur when gradients become exponentially small in deep networks, preventing learning in early layers. **Causes**: 1) Gradient chaining via backpropagation: ∂L/∂w₁ = ∂L/∂aₙ · ∏ᵢ (∂aᵢ/∂aᵢ₋₁), products of small derivatives shrink exponentially, 2) Saturating activation functions (sigmoid, tanh) with derivatives near zero, 3) Poor initialization concentrating activations in saturation regions, 4) Deep architecture amplifying exponential decay. **Modern solutions beyond ReLU**: 1) **Normalization** - Batch/Layer Norm maintains gradient scale across layers, prevents activations drifting to saturation, 2) **Residual connections** - skip connections provide direct gradient paths: ∂L/∂wₗ includes additive term bypassing intermediate layers, 3) **Careful initialization** - Xavier/He initialization scales weights by layer size, maintains activation/gradient variance, 4) **Architecture design** - Highway networks, DenseNet with multiple skip paths, 5) **Gradient clipping** - prevents exploding gradients in RNNs, 6) **LSTM/GRU** - gating mechanisms control information flow. Modern architectures (ResNet, Transformers) combine multiple techniques, enabling very deep networks (1000+ layers).",
+      "ground_truth": "Vanishing gradients from exponential decay in backpropagation; solved by normalization, skip connections, initialization, not just activation functions",
+      "contexts": [
+        "Residual networks seminal solution",
+        "Batch normalization reduces internal covariate shift",
+        "Related: exploding gradients (opposite problem)",
+        "Still relevant for RNNs/transformers with long sequences"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "vanishing_gradients",
+        "deep_learning",
+        "backpropagation",
+        "residual_networks"
+      ]
+    },
+    {
+      "id": "neuro_complex_004",
+      "domain": "neuroscience",
+      "difficulty": "complex",
+      "question": "Critically evaluate the replication crisis in neuroimaging and proposed solutions for improving reproducibility.",
+      "answer": "Neuroimaging faces replication crisis with many findings failing to replicate. **Issues**: 1) **Statistical** - underpowered studies (typical N=20-30, should be 100+), p-hacking, HARKing, publication bias toward positive results, flexible analysis pipelines inflating false positives, 2) **Methodological** - preprocessing variations (smoothing, motion correction, registration), uncorrected multiple comparisons, circular analysis (\"double dipping\"), 3) **Conceptual** - reverse inference fallacies, low base rates of real effects, 4) **Reporting** - incomplete methods, missing data, no code/materials sharing. **Solutions**: 1) **Pre-registration** - specify hypotheses/analyses before data collection, distinguishes confirmatory from exploratory, 2) **Power analysis** - prospective sample size determination, large-scale consortia (ABCD, UK Biobank, HCP), 3) **Open science** - share raw data (BIDS format), analysis code (containerized workflows), negative results, 4) **Methodological rigor** - proper corrections, cross-validation, holdout validation, multiverse analysis, 5) **Multi-site replication** - test findings across sites/scanners, 6) **Prediction focus** - emphasize out-of-sample prediction over inference. Cultural shift needed: value replication, methodological quality over novelty.",
+      "ground_truth": "Neuroimaging replication crisis due to low power, flexibility, publication bias; solutions include pre-registration, open data, larger samples, rigor",
+      "contexts": [
+        "Many influential findings failed large-scale replication",
+        "Voodoo correlations controversy highlighted circular analysis",
+        "BIDS standard facilitates data sharing",
+        "Meta-science studies reveal extent of problems"
+      ],
+      "source_file": "neuroscience_ml_papers/Replicability or reproducibility On the replication crisis in computational neur_2018.pdf",
+      "tags": [
+        "replication_crisis",
+        "reproducibility",
+        "open_science",
+        "methodology"
+      ]
+    },
+    {
+      "id": "quantum_complex_004",
+      "domain": "quantum_ml",
+      "difficulty": "complex",
+      "question": "Analyze the prospects and challenges for quantum advantage in machine learning, considering both computational complexity and practical resource requirements.",
+      "answer": "Quantum advantage in ML is complex, nuanced issue. **Theoretical prospects**: 1) Proven exponential advantages for learning certain quantum states/processes (shadow tomography, quantum process learning), 2) Potential polynomial speedups for linear algebra (HHL algorithm), though with caveats, 3) Quantum kernel methods could access hard-to-simulate feature spaces. **Practical challenges**: 1) **NISQ limitations** - noise, limited coherence, gate fidelity constrain circuit depth, 2) **Barren plateaus** - trainability issues in generic ansatzes prevent optimization, 3) **Data loading** - encoding classical data quantum mechanically (QRAM) may negate advantage, 4) **Measurement overhead** - estimating expectation values requires many shots, 5) **Classical competition** - GPUs, specialized hardware advancing rapidly. **Context-dependent advantage**: 1) **Quantum data** - strong advantage when data is already quantum (chemistry, materials, quantum simulation), 2) **Specific structure** - advantage for problems matching quantum operations (symmetries, group theory), 3) **Near-term applications** - unitary compilation, VQE for small molecules, generative modeling showing promise. **Consensus**: Generic quantum ML superiority unlikely; advantage requires careful problem selection, quantum-specific structure, and quantum-native data. Most promising: quantum chemistry, quantum dynamics, specialized optimization.",
+      "ground_truth": "Quantum ML advantage proven for quantum data, unlikely for generic classical ML; requires problem-structure matching and overcoming NISQ challenges",
+      "contexts": [
+        "No-free-lunch limits universal advantage claims",
+        "QRAM assumption controversial for practical advantage",
+        "Quantum-inspired classical algorithms closing some gaps",
+        "Hybrid algorithms most practical near-term path"
+      ],
+      "source_file": "QuantERA/processed_output/Huang-2025-The vast world of quantum advantage_processed.json",
+      "tags": [
+        "quantum_advantage",
+        "quantum_ML",
+        "NISQ",
+        "complexity",
+        "practical_constraints"
+      ]
+    },
+    {
+      "id": "neuro_simple_005",
+      "domain": "neuroscience",
+      "difficulty": "simple",
+      "question": "What is the difference between structural and functional MRI?",
+      "answer": "Structural MRI (sMRI) captures high-resolution anatomical images showing brain structure, tissue types, and morphology. It uses T1 or T2 weighted sequences to differentiate gray matter, white matter, and CSF. Functional MRI (fMRI) measures brain activity over time by detecting blood oxygenation changes (BOLD signal). While sMRI shows what the brain looks like, fMRI shows what the brain is doing during tasks or at rest.",
+      "ground_truth": "sMRI images brain anatomy/structure; fMRI measures brain activity via blood oxygen changes over time",
+      "contexts": [
+        "sMRI used for volumetry, cortical thickness analysis",
+        "fMRI has lower spatial resolution but captures dynamics",
+        "Both can be collected in same scanning session",
+        "Complementary information about brain structure and function"
+      ],
+      "source_file": "neuroscience_general",
+      "tags": [
+        "MRI",
+        "structural_MRI",
+        "functional_MRI"
+      ]
+    },
+    {
+      "id": "quantum_simple_005",
+      "domain": "quantum_ml",
+      "difficulty": "simple",
+      "question": "What is superposition in quantum computing?",
+      "answer": "Superposition is the ability of a quantum system to exist in multiple states simultaneously. A qubit can be in state |0⟩, |1⟩, or any linear combination α|0⟩ + β|1⟩ where |α|² + |β|² = 1. This differs from classical bits which are always definitively 0 or 1. Superposition enables quantum parallelism, where quantum operations act on all superposition components at once, potentially allowing simultaneous exploration of multiple solution paths.",
+      "ground_truth": "Superposition allows qubits to be in combinations of 0 and 1 simultaneously, enabling quantum parallelism",
+      "contexts": [
+        "Coefficients α and β are complex probability amplitudes",
+        "Measurement collapses superposition to definite state",
+        "Hadamard gate creates equal superposition",
+        "Basis for quantum algorithm speedups"
+      ],
+      "source_file": "quantum_fundamentals",
+      "tags": [
+        "superposition",
+        "qubits",
+        "quantum_state"
+      ]
+    },
+    {
+      "id": "general_simple_005",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is a confusion matrix and what does it show?",
+      "answer": "A confusion matrix is a table showing classification model performance by comparing predicted vs actual classes. For binary classification, it has four entries: True Positives (correctly predicted positive), True Negatives (correctly predicted negative), False Positives (incorrectly predicted positive), and False Negatives (incorrectly predicted negative). From these, metrics like accuracy, precision, recall, and F1-score are calculated. It reveals which classes are being confused with each other.",
+      "ground_truth": "Confusion matrix shows predicted vs actual classifications in table form, revealing TP/TN/FP/FN counts",
+      "contexts": [
+        "Diagonal elements are correct predictions",
+        "Off-diagonal elements are misclassifications",
+        "Extends to multi-class with larger matrices",
+        "Foundation for precision, recall, F1 metrics"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "confusion_matrix",
+        "classification",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "neuro_simple_006",
+      "domain": "neuroscience",
+      "difficulty": "simple",
+      "question": "What brain regions comprise the limbic system and what is its primary function?",
+      "answer": "The limbic system includes the hippocampus, amygdala, cingulate cortex, hypothalamus, and related structures. Its primary function is processing emotions and memory formation. The amygdala handles emotional responses especially fear, the hippocampus is critical for forming new memories, and the cingulate cortex integrates emotional and cognitive processing. The limbic system interfaces between higher cortical functions and basic survival drives.",
+      "ground_truth": "Limbic system (hippocampus, amygdala, cingulate) processes emotions and memory",
+      "contexts": [
+        "Amygdala central to fear conditioning",
+        "Hippocampus essential for episodic memory",
+        "Connects cortex to hypothalamus and brainstem",
+        "Dysfunction linked to mood and memory disorders"
+      ],
+      "source_file": "neuroscience_general",
+      "tags": [
+        "limbic_system",
+        "emotion",
+        "memory",
+        "amygdala",
+        "hippocampus"
+      ]
+    },
+    {
+      "id": "quantum_simple_006",
+      "domain": "quantum_ml",
+      "difficulty": "simple",
+      "question": "What does NISQ stand for and what does it mean?",
+      "answer": "NISQ stands for Noisy Intermediate-Scale Quantum, referring to current and near-term quantum computers with 50-1000 qubits that are noisy (error-prone) and lack full error correction. These devices can perform computations beyond classical simulation but are limited by noise, short coherence times, and limited gate fidelity. Variational quantum algorithms are specifically designed to work within NISQ constraints by using shallow circuits and classical optimization.",
+      "ground_truth": "NISQ = Noisy Intermediate-Scale Quantum; describes current error-prone quantum computers with limited qubits",
+      "contexts": [
+        "Term coined by John Preskill",
+        "Intermediate scale: too large to simulate, too small for full error correction",
+        "Noise limits circuit depth and complexity",
+        "VQAs and quantum error mitigation designed for NISQ era"
+      ],
+      "source_file": "QuantERA/processed_output/Cerezo-2021-Variational quantum algorithms_processed.json",
+      "tags": [
+        "NISQ",
+        "quantum_computing",
+        "quantum_hardware"
+      ]
+    },
+    {
+      "id": "general_simple_006",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is the purpose of a learning rate in gradient descent?",
+      "answer": "The learning rate controls the step size when updating parameters during gradient descent optimization. It determines how much parameters change in response to the estimated error gradient. A learning rate that's too high causes oscillation or divergence, while too low results in very slow convergence. Typical values range from 0.001 to 0.1. Learning rate scheduling (decreasing over time) and adaptive methods (Adam, RMSprop) automatically adjust learning rates during training.",
+      "ground_truth": "Learning rate controls parameter update step size in gradient descent; balances convergence speed and stability",
+      "contexts": [
+        "Hyperparameter requiring careful tuning",
+        "Too high: unstable training, divergence",
+        "Too low: slow convergence, local minima",
+        "Adaptive optimizers adjust learning rate automatically"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "learning_rate",
+        "gradient_descent",
+        "hyperparameter"
+      ]
+    },
+    {
+      "id": "neuro_simple_007",
+      "domain": "neuroscience",
+      "difficulty": "simple",
+      "question": "What is the difference between gray matter and white matter in the brain?",
+      "answer": "Gray matter consists primarily of neuronal cell bodies, dendrites, and unmyelinated axons. It appears gray and is where information processing occurs. Gray matter is concentrated in the cortex and deep nuclei. White matter consists of myelinated axons that connect different gray matter regions. It appears white due to myelin sheaths and serves as the brain's communication infrastructure, transmitting signals between regions. Gray matter processes information while white matter transmits it.",
+      "ground_truth": "Gray matter contains neuron bodies (processing); white matter contains myelinated axons (communication)",
+      "contexts": [
+        "Cortical gray matter forms outer brain layer",
+        "White matter forms inner connections",
+        "Myelin provides insulation and speeds signal transmission",
+        "Both measured in structural MRI studies"
+      ],
+      "source_file": "neuroscience_general",
+      "tags": [
+        "gray_matter",
+        "white_matter",
+        "brain_structure"
+      ]
+    },
+    {
+      "id": "quantum_simple_007",
+      "domain": "quantum_ml",
+      "difficulty": "simple",
+      "question": "What is quantum decoherence?",
+      "answer": "Quantum decoherence is the loss of quantum properties (superposition, entanglement) due to unwanted interaction with the environment. It occurs when a quantum system becomes entangled with its environment, causing quantum information to leak out and the system to behave classically. Decoherence limits how long quantum computations can run (coherence time, typically microseconds to milliseconds). It's the primary reason quantum computers need to be isolated at ultra-low temperatures and why quantum error correction is necessary.",
+      "ground_truth": "Decoherence is loss of quantum properties from environmental interaction, limiting computation time",
+      "contexts": [
+        "Different qubit types have different coherence times",
+        "Superconducting qubits: tens of microseconds",
+        "Trapped ions: seconds or longer",
+        "Major engineering challenge for scaling quantum computers"
+      ],
+      "source_file": "quantum_fundamentals",
+      "tags": [
+        "decoherence",
+        "quantum_noise",
+        "coherence_time"
+      ]
+    },
+    {
+      "id": "general_simple_007",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is the difference between a parametric and non-parametric model?",
+      "answer": "Parametric models have a fixed number of parameters independent of training data size (e.g., linear regression with fixed coefficients, neural networks with fixed architecture). They make strong assumptions about data distribution. Non-parametric models have complexity that grows with data size (e.g., k-NN, decision trees, kernel methods). They make fewer assumptions and are more flexible. Parametric models are more efficient with less data and computationally cheaper but can underfit. Non-parametric models are more flexible but need more data and are computationally expensive.",
+      "ground_truth": "Parametric models have fixed parameters; non-parametric complexity grows with data, offering more flexibility",
+      "contexts": [
+        "Linear regression, logistic regression are parametric",
+        "K-NN, kernel methods, Gaussian processes are non-parametric",
+        "Trade-off between efficiency and flexibility",
+        "Semi-parametric models combine both approaches"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "parametric",
+        "non_parametric",
+        "model_complexity"
+      ]
+    },
+    {
+      "id": "neuro_simple_008",
+      "domain": "neuroscience",
+      "difficulty": "simple",
+      "question": "What is a neurotransmitter and name three important ones?",
+      "answer": "A neurotransmitter is a chemical messenger that transmits signals across synapses from one neuron to another. They are released from the presynaptic terminal, diffuse across the synaptic cleft, and bind to receptors on the postsynaptic cell. Three important neurotransmitters: 1) Dopamine - involved in reward, motivation, and motor control, 2) Serotonin - regulates mood, sleep, and appetite, 3) Glutamate - the main excitatory neurotransmitter in the brain, essential for learning and memory.",
+      "ground_truth": "Neurotransmitters are chemical messengers transmitting signals across synapses; examples: dopamine, serotonin, glutamate",
+      "contexts": [
+        "Other important neurotransmitters: GABA, acetylcholine, norepinephrine",
+        "Imbalances linked to psychiatric and neurological disorders",
+        "Targeted by many medications and drugs",
+        "Different neurotransmitter systems have distinct brain distributions"
+      ],
+      "source_file": "neuroscience_general",
+      "tags": [
+        "neurotransmitter",
+        "dopamine",
+        "serotonin",
+        "glutamate"
+      ]
+    },
+    {
+      "id": "quantum_simple_008",
+      "domain": "quantum_ml",
+      "difficulty": "simple",
+      "question": "What is the difference between a quantum simulator and a universal quantum computer?",
+      "answer": "A quantum simulator is a specialized quantum device designed to simulate specific quantum systems (e.g., molecules, materials) efficiently but cannot run arbitrary quantum algorithms. It solves targeted problems using analog quantum evolution. A universal quantum computer can execute any quantum algorithm via gate-based digital operations, making it programmable for diverse applications. Universal computers are more powerful but harder to build and currently smaller scale. Simulators can be larger and more specialized but less flexible.",
+      "ground_truth": "Quantum simulators specialize in specific quantum system simulations; universal quantum computers run any quantum algorithm",
+      "contexts": [
+        "Analog vs digital quantum computing paradigms",
+        "Simulators useful for chemistry and condensed matter",
+        "Universal computers require full gate control",
+        "Current large systems often simulators, universal computers smaller"
+      ],
+      "source_file": "quantum_fundamentals",
+      "tags": [
+        "quantum_simulator",
+        "universal_quantum_computer",
+        "quantum_hardware"
+      ]
+    },
+    {
+      "id": "general_simple_008",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is the curse of dimensionality?",
+      "answer": "The curse of dimensionality refers to various phenomena that arise when working with high-dimensional data. As dimensions increase: 1) Data becomes exponentially sparse (volume grows exponentially with dimension), 2) Distance metrics become less meaningful (all points roughly equidistant), 3) More data needed to maintain same density, 4) Computational costs explode, 5) Models more prone to overfitting. Dimensionality reduction techniques (PCA, t-SNE, autoencoders) help mitigate these issues by finding lower-dimensional representations.",
+      "ground_truth": "Curse of dimensionality: high-dimensional spaces cause sparsity, meaningless distances, and exponential data/computation requirements",
+      "contexts": [
+        "Affects k-NN and other distance-based methods particularly",
+        "Volume of hypersphere concentrates in thin shell",
+        "Intrinsic dimensionality often lower than ambient",
+        "Manifold hypothesis suggests real data lower-dimensional"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "curse_of_dimensionality",
+        "high_dimensional",
+        "dimensionality_reduction"
+      ]
+    },
+    {
+      "id": "neuro_simple_009",
+      "domain": "neuroscience",
+      "difficulty": "simple",
+      "question": "What is the motor cortex and where is it located?",
+      "answer": "The motor cortex is a brain region responsible for planning, control, and execution of voluntary movements. The primary motor cortex (M1) is located in the precentral gyrus, just anterior to the central sulcus in the frontal lobe. It has a somatotopic organization (motor homunculus) where different body parts map to specific regions, with disproportionate representation for hands and face reflecting their fine motor control. Damage to motor cortex causes weakness or paralysis of contralateral body parts.",
+      "ground_truth": "Motor cortex in precentral gyrus controls voluntary movement with somatotopic body organization",
+      "contexts": [
+        "Supplementary motor area and premotor cortex also involved",
+        "Output via corticospinal tract to spinal motor neurons",
+        "Motor homunculus shows distorted body map",
+        "Primary motor cortex one target for brain-computer interfaces"
+      ],
+      "source_file": "neuroscience_general",
+      "tags": [
+        "motor_cortex",
+        "movement",
+        "somatotopy"
+      ]
+    },
+    {
+      "id": "quantum_simple_009",
+      "domain": "quantum_ml",
+      "difficulty": "simple",
+      "question": "What is a quantum circuit?",
+      "answer": "A quantum circuit is a computational model for quantum computing consisting of quantum gates applied to qubits in a specific sequence. It's represented as a diagram with horizontal lines (qubits) and symbols (gates) showing the computation flow from left to right. Circuits start with initialization, apply unitary gate operations, and end with measurements. Unlike classical circuits, quantum circuits must be reversible (except measurement) and can create and utilize superposition and entanglement. Circuit depth (layers of gates) and width (number of qubits) characterize circuit complexity.",
+      "ground_truth": "Quantum circuit is sequence of quantum gates applied to qubits, visualized as diagram showing computation flow",
+      "contexts": [
+        "Circuit model equivalent to quantum Turing machine",
+        "Gates include single-qubit (Hadamard, Pauli, rotation) and two-qubit (CNOT)",
+        "Circuit depth limited by decoherence in NISQ devices",
+        "Used in all gate-based quantum algorithms"
+      ],
+      "source_file": "quantum_fundamentals",
+      "tags": [
+        "quantum_circuit",
+        "quantum_gates",
+        "circuit_model"
+      ]
+    },
+    {
+      "id": "general_simple_009",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is the difference between classification and regression?",
+      "answer": "Classification and regression are two main types of supervised learning. Classification predicts discrete categorical labels (e.g., spam/not spam, disease present/absent) from input features. The output is a class membership. Regression predicts continuous numerical values (e.g., house price, temperature) from input features. Classification uses metrics like accuracy, precision, recall; regression uses MSE, RMSE, R². Classification algorithms include logistic regression, SVM, decision trees; regression includes linear regression, ridge, lasso. Both learn from labeled training data.",
+      "ground_truth": "Classification predicts discrete categories; regression predicts continuous numerical values",
+      "contexts": [
+        "Binary vs multi-class classification",
+        "Logistic regression is classification despite name",
+        "Some algorithms (decision trees, neural nets) handle both",
+        "Problem type determines loss function and evaluation"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "classification",
+        "regression",
+        "supervised_learning"
+      ]
+    },
+    {
+      "id": "neuro_simple_010",
+      "domain": "neuroscience",
+      "difficulty": "simple",
+      "question": "What is synaptic plasticity and why is it important?",
+      "answer": "Synaptic plasticity is the ability of synapses to strengthen or weaken over time in response to activity levels. When synapses are frequently activated together, they strengthen (long-term potentiation, LTP); when activation is weak or uncorrelated, they weaken (long-term depression, LTD). This is the cellular basis for learning and memory, implementing Hebbian learning ('neurons that fire together wire together'). Plasticity allows the brain to adapt to experience, learn new skills, and form memories throughout life.",
+      "ground_truth": "Synaptic plasticity is activity-dependent strengthening/weakening of synapses, underlying learning and memory",
+      "contexts": [
+        "LTP and LTD are main forms",
+        "Involves changes in receptor number and structure",
+        "NMDA receptors crucial for many forms of plasticity",
+        "Impaired plasticity in neurological disorders"
+      ],
+      "source_file": "neuroscience_general",
+      "tags": [
+        "synaptic_plasticity",
+        "LTP",
+        "learning",
+        "memory"
+      ]
+    },
+    {
+      "id": "quantum_simple_010",
+      "domain": "quantum_ml",
+      "difficulty": "simple",
+      "question": "What is the Hadamard gate and what does it do?",
+      "answer": "The Hadamard gate (H) is a fundamental single-qubit quantum gate that creates superposition. Applied to |0⟩, it produces (|0⟩+|1⟩)/√2, an equal superposition of 0 and 1. Applied to |1⟩, it produces (|0⟩-|1⟩)/√2. The Hadamard gate is its own inverse (H²=I) and is essential for quantum algorithms, used to create initial superpositions and implement quantum Fourier transforms. It's represented by the matrix [[1,1],[1,-1]]/√2.",
+      "ground_truth": "Hadamard gate creates equal superposition of |0⟩ and |1⟩ states, fundamental for quantum algorithms",
+      "contexts": [
+        "First gate in many quantum algorithms",
+        "Basis change between computational and Hadamard basis",
+        "Self-inverse: applying twice returns original state",
+        "Essential component of quantum Fourier transform"
+      ],
+      "source_file": "quantum_fundamentals",
+      "tags": [
+        "Hadamard_gate",
+        "quantum_gates",
+        "superposition"
+      ]
+    },
+    {
+      "id": "general_simple_010",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is feature engineering?",
+      "answer": "Feature engineering is the process of creating new input features from raw data to improve machine learning model performance. It involves transforming, combining, or selecting features to make patterns more apparent to algorithms. Examples include: creating polynomial features, binning continuous variables, encoding categorical variables, extracting date components, aggregating features, domain-specific transformations. Good feature engineering can dramatically improve model performance, sometimes more than sophisticated algorithms. Deep learning reduces need for manual feature engineering by learning features automatically.",
+      "ground_truth": "Feature engineering creates informative input features from raw data to improve model performance",
+      "contexts": [
+        "Often requires domain expertise",
+        "Can include feature creation, transformation, selection",
+        "Critical for traditional ML algorithms",
+        "Automated feature engineering tools emerging"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "feature_engineering",
+        "data_preprocessing",
+        "feature_creation"
+      ]
+    },
+    {
+      "id": "neuro_simple_011",
+      "domain": "neuroscience",
+      "difficulty": "simple",
+      "question": "What is the blood-brain barrier and what is its function?",
+      "answer": "The blood-brain barrier (BBB) is a selective semipermeable border of endothelial cells that prevents most substances in blood from entering brain tissue. It protects the brain from toxins, pathogens, and fluctuations in blood composition while allowing essential nutrients (glucose, amino acids, oxygen) to pass through. Tight junctions between endothelial cells and specialized transport mechanisms control what enters. The BBB is important for brain homeostasis but poses challenges for drug delivery to treat neurological diseases.",
+      "ground_truth": "Blood-brain barrier selectively protects brain from blood-borne substances while allowing essential nutrients",
+      "contexts": [
+        "Formed by brain capillary endothelial cells",
+        "Some brain regions lack BBB (circumventricular organs)",
+        "Compromised in diseases like multiple sclerosis",
+        "Major challenge for CNS drug development"
+      ],
+      "source_file": "neuroscience_general",
+      "tags": [
+        "blood_brain_barrier",
+        "neurovascular",
+        "brain_protection"
+      ]
+    },
+    {
+      "id": "quantum_simple_011",
+      "domain": "quantum_ml",
+      "difficulty": "simple",
+      "question": "What is measurement in quantum computing?",
+      "answer": "Measurement in quantum computing is the process of extracting classical information from a quantum state. When a qubit in superposition α|0⟩+β|1⟩ is measured in the computational basis, it collapses to |0⟩ with probability |α|² or |1⟩ with probability |β|², and subsequent measurements yield the same result. Measurement is irreversible and destroys superposition. Quantum algorithms manipulate superpositions and entanglement before measurement to ensure desired outcomes have high probability. Multiple measurements needed to estimate expectation values.",
+      "ground_truth": "Measurement collapses quantum superposition to classical bit probabilistically and irreversibly",
+      "contexts": [
+        "Measurement basis can be computational, Hadamard, or arbitrary",
+        "Projective measurement described by measurement operators",
+        "Repeated measurements estimate probability distributions",
+        "Deferred measurement principle allows moving measurements"
+      ],
+      "source_file": "quantum_fundamentals",
+      "tags": [
+        "measurement",
+        "quantum_state",
+        "collapse"
+      ]
+    },
+    {
+      "id": "general_simple_011",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is ensemble learning?",
+      "answer": "Ensemble learning combines predictions from multiple models to produce better results than any single model. The idea is that diverse models make different errors, so combining them reduces overall error. Common methods: 1) Bagging (e.g., Random Forest) trains models on different data subsets and averages predictions, 2) Boosting (e.g., AdaBoost, XGBoost) trains models sequentially, each correcting previous errors, 3) Stacking trains meta-model on base model predictions. Ensembles typically improve accuracy and robustness but increase computational cost and complexity.",
+      "ground_truth": "Ensemble learning combines multiple models to improve accuracy by leveraging diverse error patterns",
+      "contexts": [
+        "Random forest ensembles decision trees with bagging",
+        "Boosting creates strong learners from weak learners",
+        "Diversity among base models critical for improvement",
+        "Trade-off between performance and interpretability"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "ensemble_learning",
+        "bagging",
+        "boosting",
+        "random_forest"
+      ]
+    },
+    {
+      "id": "neuro_medium_005",
+      "domain": "neuroscience",
+      "difficulty": "medium",
+      "question": "Explain the concept of representational similarity analysis (RSA) and its advantages over traditional fMRI analysis.",
+      "answer": "Representational Similarity Analysis (RSA) characterizes information representation by comparing patterns of neural responses rather than absolute activations. Method: 1) Compute neural response patterns for different stimuli/conditions, 2) Calculate pairwise dissimilarities (1-correlation) forming a representational dissimilarity matrix (RDM), 3) Compare neural RDM to model RDMs (computational, behavioral, or theoretical) using correlation or regression. Advantages: 1) Tests representational hypotheses directly without requiring encoding/decoding models, 2) Abstraction level - can compare across species, measurement modalities, and computational models, 3) Handles high-dimensional patterns naturally, 4) Statistically powerful - one comparison of RDMs rather than many voxels, 5) Reveals representational geometry, not just presence of information. Applications: test computational models, compare brain regions, inter-species comparison, relate behavior to neural codes.",
+      "ground_truth": "RSA characterizes representation by comparing pattern similarity; enables model comparison across modalities and species",
+      "contexts": [
+        "RDM is second-order representation (pattern of patterns)",
+        "Related to information geometry",
+        "Searchlight RSA maps representational content",
+        "Can test alternative similarity structures"
+      ],
+      "source_file": "neuroscience_ml_papers/Decoding semantic representations in mind and brain_2023.pdf",
+      "tags": [
+        "RSA",
+        "fMRI",
+        "pattern_analysis",
+        "representation"
+      ]
+    },
+    {
+      "id": "quantum_medium_005",
+      "domain": "quantum_ml",
+      "difficulty": "medium",
+      "question": "Explain quantum phase estimation algorithm and its applications in quantum machine learning.",
+      "answer": "Quantum Phase Estimation (QPE) estimates eigenvalue phases of unitary operators. Given unitary U with eigenvector |ψ⟩ (U|ψ⟩=e^(2πiφ)|ψ⟩), QPE estimates phase φ to precision ε using O(1/ε) operations. Algorithm: 1) Prepare ancilla qubits in superposition, 2) Apply controlled-U^(2^k) operations, 3) Inverse quantum Fourier transform on ancilla, 4) Measure ancilla to get binary approximation of φ. QML applications: 1) **VQE/QPE hybrid** - refine VQE energy estimates using QPE for higher precision, 2) **Quantum linear systems** (HHL) - uses QPE to prepare eigenvector superposition, 3) **Quantum principal component analysis** - estimates eigenvalues of covariance matrices, 4) **Quantum singular value transformation** - foundation for quantum machine learning algorithms. Limitation: requires eigenstate preparation and deep circuits, challenging for NISQ devices. Variational quantum eigensolvers approximate QPE with shallower circuits.",
+      "ground_truth": "QPE estimates eigenvalue phases of unitaries; used in VQE, HHL, PCA, and quantum linear algebra",
+      "contexts": [
+        "Fundamental subroutine in many quantum algorithms",
+        "Quantum Fourier transform central component",
+        "Requires O(1/ε) depth for ε precision",
+        "NISQ variants trade precision for shallower depth"
+      ],
+      "source_file": "quantum_algorithms",
+      "tags": [
+        "phase_estimation",
+        "quantum_algorithms",
+        "eigenvalues"
+      ]
+    },
+    {
+      "id": "general_medium_005",
+      "domain": "general_science",
+      "difficulty": "medium",
+      "question": "Explain the concept of receptive fields in convolutional neural networks and how they grow with depth.",
+      "answer": "A receptive field is the region of input space that affects a particular neuron's activation. In CNNs: first layer neurons have receptive fields equal to kernel size (e.g., 3×3), but deeper layers have increasingly large receptive fields. Receptive field size grows with depth according to: RF_l = RF_(l-1) + (k-1) × ∏stride_i, where k is kernel size. For multiple 3×3 conv layers: two layers give 5×5 RF, three layers give 7×7 RF, etc. Effective receptive field (region with significant contribution) is often smaller than theoretical due to Gaussian-like distributions of gradient flow. Large receptive fields enable: 1) Capture long-range dependencies, 2) Integrate contextual information, 3) Build hierarchical features. Modern architectures use combinations of convolutions, pooling, dilation, and attention to control receptive field growth efficiently.",
+      "ground_truth": "Receptive field is input region affecting a neuron; grows with depth, enabling hierarchical feature detection",
+      "contexts": [
+        "Dilated convolutions increase RF without parameters",
+        "Pooling layers increase RF substantially",
+        "Global average pooling gives full-image RF",
+        "Attention mechanisms provide adaptive, data-dependent RFs"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "receptive_field",
+        "CNN",
+        "feature_hierarchy"
+      ]
+    },
+    {
+      "id": "neuro_medium_006",
+      "domain": "neuroscience",
+      "difficulty": "medium",
+      "question": "What are event-related potentials (ERPs) and what information do they provide that fMRI cannot?",
+      "answer": "Event-Related Potentials are time-locked brain responses measured with EEG, averaged across many trials of same event type. ERPs reveal temporal dynamics with millisecond precision, showing when different cognitive processes occur. Key ERP components: P300 (~300ms, attention/surprise), N170 (~170ms, face processing), N400 (~400ms, semantic violation), error-related negativity (~100ms post-error). Advantages over fMRI: 1) Temporal resolution - milliseconds vs seconds, can distinguish processing stages, 2) Direct neural activity measurement vs hemodynamic proxy, 3) Cheaper, more accessible, 4) Better for timing-critical questions, 5) Can study rapid dynamics invisible to BOLD. Limitations vs fMRI: poor spatial resolution (cm scale), hard to localize deep sources, scalp electrode montage limited. Complementary techniques: combine EEG temporal precision with fMRI spatial precision in simultaneous or sequential studies.",
+      "ground_truth": "ERPs are time-locked EEG responses with millisecond precision, revealing temporal dynamics fMRI misses",
+      "contexts": [
+        "Averaging increases signal-to-noise ratio",
+        "Different components reflect different cognitive processes",
+        "Source localization estimates brain generators",
+        "EEG-fMRI fusion combines strengths"
+      ],
+      "source_file": "neuroscience_general",
+      "tags": [
+        "ERP",
+        "EEG",
+        "temporal_resolution",
+        "electrophysiology"
+      ]
+    },
+    {
+      "id": "quantum_medium_006",
+      "domain": "quantum_ml",
+      "difficulty": "medium",
+      "question": "What is quantum data encoding and what are the main encoding strategies?",
+      "answer": "Quantum data encoding maps classical data x into quantum states |ψ(x)⟩ for quantum algorithm processing. Main strategies: 1) **Basis encoding** - encode n-bit string as computational basis state |x⟩, requires n qubits, simple but limited, 2) **Amplitude encoding** - encode N values as amplitudes of N-dimensional state, requires log₂N qubits, exponentially efficient but preparation expensive, 3) **Angle encoding** - encode data as rotation angles: R(x_i)|0⟩ for each qubit, features mapped to gate parameters, n qubits for n features, 4) **Qubit reduction** - encode multiple features per qubit using different bases, 5) **Hamiltonian encoding** - encode data in Hamiltonian time evolution. Trade-offs: efficiency vs preparation cost vs expressivity. Angle encoding most common in VQAs due to natural parameter integration. Data re-uploading (encoding same data multiple times in circuit) increases expressivity. Challenge: encoding high-dimensional classical data quantum mechanically may negate quantum advantage if preparation requires exponential resources (QRAM debate).",
+      "ground_truth": "Quantum encoding maps classical data to quantum states; strategies include basis, amplitude, and angle encoding with different trade-offs",
+      "contexts": [
+        "Encoding strategy affects circuit depth and qubit requirements",
+        "Amplitude encoding efficient but hard to prepare",
+        "Angle encoding compatible with parameterized circuits",
+        "Data re-uploading increases expressivity"
+      ],
+      "source_file": "QuantERA/Quantum AI_processed.json",
+      "tags": [
+        "data_encoding",
+        "quantum_ML",
+        "feature_map"
+      ]
+    },
+    {
+      "id": "general_medium_006",
+      "domain": "general_science",
+      "difficulty": "medium",
+      "question": "Explain the differences between L1 (Lasso) and L2 (Ridge) regularization in terms of properties and use cases.",
+      "answer": "L1 and L2 regularization add penalty terms to loss function to prevent overfitting. **L2 (Ridge)**: adds ||w||₂² = Σw_i², penalizes large weights quadratically. Properties: 1) Shrinks weights smoothly toward zero but doesn't zero them, 2) Differentiable everywhere enabling gradient descent, 3) Closed-form solution available, 4) Handles multicollinearity by distributing weights among correlated features, 5) Gaussian prior in Bayesian interpretation. **L1 (Lasso)**: adds ||w||₁ = Σ|w_i|, penalizes absolute weights. Properties: 1) Produces sparse solutions (many exact zeros), performs feature selection, 2) Non-differentiable at zero, requires subgradient methods, 3) No closed form generally, 4) Picks one feature from correlated group, 5) Laplacian prior in Bayesian view. **Use cases**: L2 when all features potentially relevant, L1 for feature selection and interpretability. **Elastic Net** combines both: α||w||₁ + (1-α)||w||₂², balancing sparsity and grouping.",
+      "ground_truth": "L1 produces sparse solutions (feature selection); L2 shrinks weights smoothly (handles multicollinearity); Elastic Net combines both",
+      "contexts": [
+        "Regularization strength controlled by hyperparameter λ",
+        "L1 geometry (diamond) causes sparsity",
+        "L2 geometry (sphere) causes proportional shrinkage",
+        "Critical for high-dimensional problems"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "regularization",
+        "L1",
+        "L2",
+        "lasso",
+        "ridge"
+      ]
+    },
+    {
+      "id": "neuro_medium_007",
+      "domain": "neuroscience",
+      "difficulty": "medium",
+      "question": "Explain how independent component analysis (ICA) is used in fMRI and what assumptions it makes.",
+      "answer": "ICA is a blind source separation technique that decomposes fMRI data into maximally spatially independent components. Method: fMRI data matrix X (time×voxels) decomposed as X = AS, where A is mixing matrix (time courses) and S is source matrix (spatial maps). ICA finds components by maximizing non-Gaussianity (using kurtosis or negentropy). Assumptions: 1) Components are spatially or temporally independent (typically spatial ICA for fMRI), 2) Sources are non-Gaussian, 3) Mixing is linear and instantaneous. Applications: 1) **Artifact removal** - identify and remove motion, physiological artifacts, 2) **Network identification** - find resting-state networks without a priori models, 3) **Data-driven analysis** - discover unexpected patterns. Advantages: model-free, finds artifacts automatically, handles multiple networks simultaneously. Limitations: component interpretation requires expertise, number of components must be specified or estimated, independence assumption may not perfectly hold, ordering of components arbitrary. Common preprocessing: temporal concatenation of subjects for group ICA, dimensionality reduction with PCA first.",
+      "ground_truth": "ICA decomposes fMRI into maximally independent spatial/temporal components; used for artifact removal and network discovery",
+      "contexts": [
+        "FastICA most common algorithm",
+        "Group ICA finds shared components across subjects",
+        "Dual regression projects group components to individuals",
+        "Alternative to seed-based correlation analysis"
+      ],
+      "source_file": "neuroscience_ml_papers/Best practices in data analysis and sharing in neuroimaging using MRI_2017.pdf",
+      "tags": [
+        "ICA",
+        "fMRI",
+        "blind_source_separation",
+        "resting_state"
+      ]
+    },
+    {
+      "id": "quantum_medium_007",
+      "domain": "quantum_ml",
+      "difficulty": "medium",
+      "question": "What is quantum advantage in the context of quantum machine learning and what conditions are necessary for it?",
+      "answer": "Quantum advantage (or supremacy for specific benchmarks) occurs when quantum algorithms solve problems faster or with fewer resources than best known classical algorithms. For QML specifically, conditions necessary: 1) **Problem structure alignment** - problem must have structure matching quantum operations (symmetries, interference patterns), 2) **Quantum data** - processing inherently quantum data (states, processes) provides clearest advantages, 3) **Classical hardness** - problem hard to simulate classically (not in BPP), 4) **Resource efficiency** - quantum solution uses polynomial resources vs exponential classical, 5) **Practical advantage** - quantum speedup overcomes quantum overhead (preparation, measurement, error mitigation). Types of advantage: 1) **Computational** - faster algorithm asymptotically, 2) **Sample complexity** - fewer training examples needed, 3) **Model capacity** - express functions classical methods cannot. Challenges: QRAM (loading classical data), barren plateaus, noise, classical algorithm improvements. Current status: proven advantages for specific problems (quantum state learning, certain kernels), heuristic advantages being explored (optimization, sampling), but universal QML advantage over classical deep learning unproven.",
+      "ground_truth": "Quantum advantage requires problem-structure alignment, typically quantum data, and overcoming practical overheads; proven for specific cases",
+      "contexts": [
+        "No free lunch limits universal advantage",
+        "Quantum-inspired classical algorithms closing some gaps",
+        "Near-term focus on heuristic advantages",
+        "Chemistry and materials science most promising applications"
+      ],
+      "source_file": "QuantERA/processed_output/Huang-2025-The vast world of quantum advantage_processed.json",
+      "tags": [
+        "quantum_advantage",
+        "quantum_ML",
+        "speedup",
+        "resources"
+      ]
+    },
+    {
+      "id": "general_medium_007",
+      "domain": "general_science",
+      "difficulty": "medium",
+      "question": "Explain the transformer architecture and why it has become dominant in NLP and beyond.",
+      "answer": "Transformers use self-attention mechanisms instead of recurrence or convolution. Architecture: 1) **Input** - token embeddings + positional encoding, 2) **Encoder** - stacked layers with multi-head self-attention + feedforward networks, residual connections, layer normalization, 3) **Decoder** (for seq-to-seq) - similar to encoder + cross-attention to encoder outputs, 4) **Multi-head attention** - Attention(Q,K,V) = softmax(QK^T/√d_k)V computed in parallel for multiple heads. Advantages driving dominance: 1) **Parallelization** - no sequential dependencies like RNNs, trains much faster, 2) **Long-range dependencies** - attention directly connects distant tokens, avoids gradient vanishing, 3) **Scalability** - performance improves smoothly with size (GPT-3, GPT-4), 4) **Transfer learning** - pre-train on massive data, fine-tune for tasks, 5) **Versatility** - succeeds in NLP, vision (ViT), multimodal, RL, protein folding. Key innovation: attention replaces inductive biases (recurrence, locality) with learned patterns from data. Limitations: quadratic complexity in sequence length (addressed by efficient attention variants), requires substantial data and compute.",
+      "ground_truth": "Transformers use self-attention for parallelization and long-range dependencies; dominant due to scalability and transfer learning",
+      "contexts": [
+        "Attention is all you need paper introduced architecture",
+        "BERT, GPT, T5 major transformer variants",
+        "Vision transformers outperform CNNs at scale",
+        "Foundation of modern large language models"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "transformer",
+        "attention",
+        "NLP",
+        "architecture"
+      ]
+    },
+    {
+      "id": "neuro_medium_008",
+      "domain": "neuroscience",
+      "difficulty": "medium",
+      "question": "How does transcranial magnetic stimulation (TMS) work and what can it reveal about brain function?",
+      "answer": "TMS uses electromagnetic induction to non-invasively stimulate cortical neurons. Mechanism: rapidly changing magnetic field from coil placed on scalp induces electric current in underlying cortex (~2-3cm deep), depolarizing neurons. Applications: 1) **Functional mapping** - stimulate region during task to create \"virtual lesions\", showing necessity for function, 2) **Chronometry** - time-locked stimulation reveals when a region is critical (millisecond precision), 3) **Connectivity** - stimulate one region, measure effects elsewhere with EEG/fMRI, maps effective connectivity, 4) **Therapy** - repetitive TMS (rTMS) modulates neural excitability for depression, OCD. Advantages over fMRI: causal not correlational, excellent timing, can test necessity. Limitations: only reaches cortical surface, spatial resolution ~1cm, individual variability in coil positioning, cannot easily stimulate deep structures. Reveals: causal role of regions in cognition, timing of processing, compensatory mechanisms, plasticity. Safe, non-invasive method for establishing brain-behavior causality in humans.",
+      "ground_truth": "TMS uses magnetic pulses to temporarily disrupt cortical activity, revealing causal timing and necessity of brain regions",
+      "contexts": [
+        "Single-pulse vs paired-pulse vs repetitive TMS",
+        "Combined TMS-EEG reveals connectivity",
+        "FDA-approved for treatment-resistant depression",
+        "Complementary to lesion studies and neuroimaging"
+      ],
+      "source_file": "neuroscience_general",
+      "tags": [
+        "TMS",
+        "brain_stimulation",
+        "causal_inference",
+        "neuromodulation"
+      ]
+    },
+    {
+      "id": "quantum_medium_008",
+      "domain": "quantum_ml",
+      "difficulty": "medium",
+      "question": "Explain the concept of quantum neural networks and how they differ from classical neural networks.",
+      "answer": "Quantum Neural Networks (QNNs) are variational quantum circuits structured to process information similarly to classical NNs. Implementations: 1) **Parameterized Quantum Circuits (PQCs)** - layers of rotation and entangling gates, parameters trained via classical optimization, 2) **Quantum Convolutional NNs** - use local unitary operations mimicking convolutions with translational properties, 3) **Dissipative QNNs** - incorporate open quantum system dynamics. Differences from classical NNs: 1) **Computation** - quantum gates vs matrix multiplications, superposition enables parallelism, 2) **Parameters** - control gate angles rather than weights, typically fewer parameters due to exponential state space, 3) **Non-linearity** - measurements provide non-linearity, vs activation functions, 4) **Expressivity** - can represent functions classical NNs cannot (quantum advantage) but also limited by circuit ansatz, 5) **Training** - classical optimizers on quantum-evaluated loss, measurement shot noise affects gradients, barren plateaus challenge. Similarities: layered structure, composable, trainable, similar optimization procedures. Current research: understanding expressivity, preventing barren plateaus, finding quantum-advantageous applications, scaling to larger problems.",
+      "ground_truth": "QNNs use parameterized quantum circuits analogous to classical NNs but with quantum superposition/entanglement and measurement-based nonlinearity",
+      "contexts": [
+        "Also called variational quantum circuits or quantum machine learning models",
+        "Can implement quantum versions of perceptrons, CNNs",
+        "Training faces barren plateau problem",
+        "Quantum advantage unclear for most applications"
+      ],
+      "source_file": "QuantERA/Quantum AI_processed.json",
+      "tags": [
+        "quantum_neural_network",
+        "QNN",
+        "variational_circuits"
+      ]
+    },
+    {
+      "id": "general_medium_008",
+      "domain": "general_science",
+      "difficulty": "medium",
+      "question": "What is the concept of a loss landscape in neural network optimization and what properties affect trainability?",
+      "answer": "The loss landscape is the high-dimensional surface formed by loss function L(θ) over parameter space θ. Properties affecting trainability: 1) **Curvature** - flat regions (plateaus) make gradient descent slow, sharp minima generalize worse than flat minima, second-order methods use curvature information, 2) **Local minima** - non-convex landscapes have many local minima, though in overparameterized networks most minima have similar loss values (mode connectivity), 3) **Saddle points** - more common than local minima in high dimensions, gradient descent escapes via noise, 4) **Gradient pathology** - vanishing gradients in deep networks, exploding gradients in RNNs, barren plateaus in quantum circuits, 5) **Symmetries** - parameter permutations create identical solutions. Modern understanding: overparameterized networks have relatively benign landscapes, many good solutions, loss paths between minima. Visualization techniques: projection methods, filter normalization. Improving trainability: better initialization, normalization layers, residual connections, adaptive optimizers.",
+      "ground_truth": "Loss landscape is high-dimensional loss surface; trainability affected by curvature, minima, saddles, gradient behavior, symmetries",
+      "contexts": [
+        "Mode connectivity shows minima connected by low-loss paths",
+        "Wide minima correlate with better generalization",
+        "Lottery ticket hypothesis about subnetworks",
+        "Random matrix theory explains initialization and dynamics"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "loss_landscape",
+        "optimization",
+        "neural_networks",
+        "trainability"
+      ]
+    },
+    {
+      "id": "neuro_simple_012",
+      "domain": "neuroscience",
+      "difficulty": "simple",
+      "question": "What is the difference between excitatory and inhibitory neurotransmitters?",
+      "answer": "Excitatory neurotransmitters increase the likelihood that the postsynaptic neuron will fire an action potential by depolarizing the membrane (making it more positive). The main excitatory neurotransmitter is glutamate. Inhibitory neurotransmitters decrease firing probability by hyperpolarizing the membrane (making it more negative). The main inhibitory neurotransmitter is GABA (gamma-aminobutyric acid). The balance between excitation and inhibition is critical for proper brain function, and disruptions can lead to seizures, anxiety disorders, and other neurological conditions.",
+      "ground_truth": "Excitatory neurotransmitters (e.g., glutamate) increase firing probability; inhibitory (e.g., GABA) decrease it",
+      "contexts": [
+        "Glutamate is the primary excitatory neurotransmitter in the CNS",
+        "GABA is the primary inhibitory neurotransmitter",
+        "Excitation-inhibition balance critical for brain function",
+        "Imbalances linked to epilepsy and psychiatric disorders"
+      ],
+      "source_file": "neuroscience_general",
+      "tags": [
+        "neurotransmitter",
+        "excitation",
+        "inhibition",
+        "glutamate",
+        "GABA"
+      ]
+    },
+    {
+      "id": "neuro_simple_013",
+      "domain": "neuroscience",
+      "difficulty": "simple",
+      "question": "What is diffusion tensor imaging (DTI) and what does it measure?",
+      "answer": "Diffusion Tensor Imaging (DTI) is an MRI technique that measures water diffusion in brain tissue to map white matter structure. Water diffuses preferentially along axon bundles, creating anisotropic (directionally dependent) diffusion. DTI quantifies this directionality with metrics like fractional anisotropy (FA, 0=isotropic, 1=highly directional). Tractography algorithms use DTI to reconstruct white matter fiber pathways, revealing brain connectivity. Applications include studying development, aging, brain injuries, and neurological diseases. DTI complements functional connectivity by providing anatomical connectivity information.",
+      "ground_truth": "DTI measures water diffusion anisotropy to map white matter structure and connectivity pathways",
+      "contexts": [
+        "Water diffuses along axon bundles creating directional signal",
+        "Fractional anisotropy quantifies diffusion directionality",
+        "Tractography reconstructs white matter pathways",
+        "Useful for studying structural connectivity and white matter diseases"
+      ],
+      "source_file": "neuroscience_general",
+      "tags": [
+        "DTI",
+        "white_matter",
+        "diffusion",
+        "tractography",
+        "connectivity"
+      ]
+    },
+    {
+      "id": "neuro_simple_014",
+      "domain": "neuroscience",
+      "difficulty": "simple",
+      "question": "What is the cerebellum and what are its primary functions?",
+      "answer": "The cerebellum is a large structure at the base of the brain, posterior to the brainstem. Despite occupying only 10% of brain volume, it contains over 50% of the brain's neurons. Primary functions: 1) Motor coordination and balance - integrates sensory and motor information to refine movements, 2) Motor learning - adapts movements through practice, 3) Timing and prediction of movements, 4) Cognitive functions - recently discovered roles in language, attention, and emotion processing. Damage causes ataxia (uncoordinated movements), intention tremor, dysmetria (overshooting targets), and impaired motor learning. The cerebellum has dense connections with motor cortex and spinal cord.",
+      "ground_truth": "Cerebellum coordinates movement, balance, and motor learning; also involved in cognition",
+      "contexts": [
+        "Contains majority of brain's neurons despite small volume",
+        "Critical for motor coordination and adaptation",
+        "Purkinje cells main computational neurons",
+        "Damage causes characteristic ataxia and tremor"
+      ],
+      "source_file": "neuroscience_general",
+      "tags": [
+        "cerebellum",
+        "motor_control",
+        "coordination",
+        "motor_learning"
+      ]
+    },
+    {
+      "id": "neuro_medium_009",
+      "domain": "neuroscience",
+      "difficulty": "medium",
+      "question": "Explain the concept of population coding in neural systems and how it differs from single neuron coding.",
+      "answer": "Population coding represents information through patterns of activity across many neurons rather than individual neuron responses. Single neurons have broad tuning (respond to range of stimuli), noisy responses, and limited information capacity. Populations overcome these limitations: 1) Averaging reduces noise, increasing reliability, 2) Different neurons prefer different stimuli, covering full range, 3) Joint activity patterns represent stimuli precisely, 4) Distributed representation robust to neuron loss. Types: 1) Rate coding - information in firing rates across population, 2) Temporal coding - spike timing contains information, 3) Correlation/synchrony coding - coordinated activity between neurons. Advantages: higher capacity, noise reduction, flexibility. Decoding methods: population vectors, maximum likelihood, neural networks. Applications: motor control (M1 populations encode movement direction), sensory processing (V1 populations represent orientation), memory (hippocampal ensembles represent locations).",
+      "ground_truth": "Population coding uses patterns across many neurons for robust, high-capacity information representation vs individual neuron responses",
+      "contexts": [
+        "Reduces noise through averaging across neurons",
+        "Distributed representation more robust and flexible",
+        "Population vectors decode motor cortex activity",
+        "Enables brain-computer interfaces"
+      ],
+      "source_file": "neuroscience_general",
+      "tags": [
+        "population_coding",
+        "neural_coding",
+        "distributed_representation"
+      ]
+    },
+    {
+      "id": "neuro_medium_010",
+      "domain": "neuroscience",
+      "difficulty": "medium",
+      "question": "What is the hemodynamic response function (HRF) and why is it important for fMRI analysis?",
+      "answer": "The HRF describes the stereotypical BOLD signal time course following brief neural activity. Canonical HRF: initial dip (~2s, controversial), main positive peak (~4-6s), undershoot (~10-20s), return to baseline (~20-30s). The HRF acts as a temporal filter between neural activity and BOLD signal. Importance for fMRI: 1) Temporal convolution - predicted BOLD = HRF ⊗ neural time course, basis for GLM analysis, 2) Individual differences - HRF varies across subjects, regions, ages, diseases, affecting statistical sensitivity, 3) Event timing - HRF shape enables distinguishing closely-spaced events, 4) Deconvolution - can estimate underlying neural activity from BOLD, though ill-posed. Analysis implications: using canonical vs estimated HRF, accounting for regional variations, finite impulse response (FIR) models for data-driven estimation. HRF knowledge enables proper experimental design, statistical modeling, and result interpretation.",
+      "ground_truth": "HRF is stereotypical BOLD response time course; critical for modeling temporal relationship between neural activity and fMRI signal",
+      "contexts": [
+        "Peak response delayed 4-6 seconds after neural activity",
+        "Convolution with HRF predicts BOLD from neural activation",
+        "Varies across individuals, regions, and conditions",
+        "Basis for general linear model in fMRI analysis"
+      ],
+      "source_file": "neuroscience_ml_papers/Best practices in data analysis and sharing in neuroimaging using MRI_2017.pdf",
+      "tags": [
+        "HRF",
+        "fMRI",
+        "BOLD",
+        "temporal_modeling"
+      ]
+    },
+    {
+      "id": "neuro_complex_005",
+      "domain": "neuroscience",
+      "difficulty": "complex",
+      "question": "Critically analyze the challenges and solutions for building generalizable predictive models of brain disorders from neuroimaging data.",
+      "answer": "Building generalizable brain disorder prediction models faces multiple challenges: **Data challenges**: 1) Sample size - typical neuroimaging studies have N=50-200, need thousands for deep learning, 2) Heterogeneity - psychiatric diagnoses group diverse biological subtypes, 3) Comorbidity - real patients have multiple conditions, 4) Scanner effects - multi-site studies have systematic biases, 5) Demographic confounds - age, sex, education correlate with both imaging and diagnosis. **Modeling challenges**: 1) High dimensionality - millions of features, thousands of samples, severe overfitting risk, 2) Weak effects - most disorders have small effect sizes (Cohen's d~0.3), 3) Non-stationarity - disorder manifestations change with development, medication, 4) Class imbalance - controls vastly outnumber patients. **Solutions**: 1) **Large-scale consortia** - UK Biobank, ABCD, ENIGMA provide 10,000+ subjects, 2) **Transfer learning** - pre-train on healthy brains, fine-tune on patients, 3) **Federated learning** - train across sites without data sharing, 4) **Careful validation** - nested cross-validation, external validation sets, prospective testing, 5) **Interpretability** - attention mechanisms, saliency maps to understand predictions, 6) **Multimodal integration** - combine structural, functional, genetic, behavioral data, 7) **Subtype discovery** - cluster-then-predict rather than assuming homogeneity. **Reality**: most published models don't replicate; focus shifting from diagnosis to dimensional symptom prediction, treatment response, prognosis. Requires transparent reporting, data sharing, prospective validation.",
+      "ground_truth": "Brain disorder prediction challenged by small samples, heterogeneity, weak effects; solutions include large consortia, transfer learning, careful validation",
+      "contexts": [
+        "Most neuropsychiatric disorders have small effect sizes",
+        "Scanner and site effects major confounds in multi-site studies",
+        "External validation critical but rarely performed",
+        "Shift toward dimensional predictions and treatment response"
+      ],
+      "source_file": "neuroscience_ml_papers/Best practices in data analysis and sharing in neuroimaging using MRI_2017.pdf",
+      "tags": [
+        "predictive_modeling",
+        "neuroimaging",
+        "brain_disorders",
+        "generalization",
+        "machine_learning"
+      ]
+    },
+    {
+      "id": "neuro_complex_006",
+      "domain": "neuroscience",
+      "difficulty": "complex",
+      "question": "Explain the forward and inverse problems in brain decoding and their computational complexities.",
+      "answer": "Brain decoding involves two complementary problems: **Forward problem** (encoding): predict neural activity from stimuli/behavior - f: S → N where S is stimulus space, N is neural activity. Computationally well-posed: unique solution exists. Methods: linear regression, encoding models, deep neural networks predict voxel responses. Validates understanding: if model predicts responses accurately, it captures relevant representational structure. **Inverse problem** (decoding): infer stimuli/mental states from neural activity - f⁻¹: N → S. Computationally ill-posed: infinite stimuli could produce similar neural patterns, high-dimensional neural space maps to lower-dimensional stimulus space, noise makes problem worse. Solutions require regularization/constraints: 1) Bayes' rule with priors over stimuli, 2) Linear classification with regularization (ridge, lasso), 3) Representational similarity, 4) Deep generative models (VAEs, GANs) constrain outputs. **Complexities**: Forward problem scales with neural dimensions (millions of voxels), inverse problem additionally requires searching stimulus space (potentially infinite), underdetermined system needs strong priors or constraints. **Trade-offs**: Simple decoders (SVM) work well for classification but require labeled data; generative models can reconstruct stimuli but need large datasets and computational resources; encoding models inform inverse problem by providing stimulus-to-neural mapping. Success depends on signal quality, amount of data, appropriate regularization, match between model and true brain representations.",
+      "ground_truth": "Forward (encoding) problem well-posed predicts neural from stimuli; inverse (decoding) ill-posed requires constraints to infer stimuli from neural activity",
+      "contexts": [
+        "Encoding models test hypotheses about brain representations",
+        "Decoding demonstrates information presence but not mechanism",
+        "Inverse problem requires regularization due to ill-posedness",
+        "Generative models enable stimulus reconstruction from brain activity"
+      ],
+      "source_file": "neuroscience_ml_papers/Brain decoding Reading minds_2013.pdf",
+      "tags": [
+        "brain_decoding",
+        "encoding_models",
+        "inverse_problem",
+        "forward_problem",
+        "computational_neuroscience"
+      ]
+    },
+    {
+      "id": "quantum_simple_012",
+      "domain": "quantum_ml",
+      "difficulty": "simple",
+      "question": "What is a CNOT gate and what does it do?",
+      "answer": "CNOT (Controlled-NOT) is a two-qubit quantum gate that flips the second qubit (target) if and only if the first qubit (control) is |1⟩. It maps: |00⟩→|00⟩, |01⟩→|01⟩, |10⟩→|11⟩, |11⟩→|10⟩. CNOT is crucial for: 1) Creating entanglement - applying CNOT to superposed control creates entangled state, 2) Quantum error correction - detects bit flip errors, 3) Universal quantum computation - any multi-qubit gate can be built from CNOTs and single-qubit rotations. Along with Hadamard and phase gates, CNOT forms universal gate set. It's represented by 4×4 matrix with control bit identity and target bit X operator conditionally applied.",
+      "ground_truth": "CNOT flips target qubit if control is |1⟩; creates entanglement and enables universal quantum computation",
+      "contexts": [
+        "Fundamental two-qubit gate in quantum computing",
+        "Creates entanglement when control in superposition",
+        "Universal gate set: {H, T, CNOT}",
+        "Basis for quantum error correction codes"
+      ],
+      "source_file": "quantum_fundamentals",
+      "tags": [
+        "CNOT",
+        "quantum_gates",
+        "entanglement",
+        "universal_computation"
+      ]
+    },
+    {
+      "id": "quantum_simple_013",
+      "domain": "quantum_ml",
+      "difficulty": "simple",
+      "question": "What does quantum supremacy (or quantum advantage) mean?",
+      "answer": "Quantum supremacy (now often called quantum advantage) is the point when a quantum computer can solve a problem that would be practically impossible for classical computers in reasonable time. Google claimed supremacy in 2019 by performing random circuit sampling in 200 seconds that would take classical supercomputers thousands of years (though disputed). Important distinctions: 1) Supremacy tasks often artificial (random sampling) not useful applications, 2) Advantage for practical problems more meaningful, 3) Near-term advantage focuses on optimization, chemistry, machine learning. Supremacy demonstrated quantum hardware capabilities but practical quantum advantage for real-world problems remains actively researched goal.",
+      "ground_truth": "Quantum supremacy/advantage is when quantum computers solve problems impractical for classical computers",
+      "contexts": [
+        "Google claimed supremacy with 53-qubit Sycamore processor",
+        "Random circuit sampling first supremacy task",
+        "Practical advantage more important than supremacy",
+        "Active research on advantageous applications"
+      ],
+      "source_file": "quantum_fundamentals",
+      "tags": [
+        "quantum_supremacy",
+        "quantum_advantage",
+        "computational_power"
+      ]
+    },
+    {
+      "id": "quantum_simple_014",
+      "domain": "quantum_ml",
+      "difficulty": "simple",
+      "question": "What is quantum noise and what are its main sources?",
+      "answer": "Quantum noise refers to errors and unwanted interactions that degrade quantum information. Main sources: 1) Decoherence - loss of quantum properties due to environmental coupling, dominant error source, 2) Gate errors - imperfect implementation of quantum gates due to control imprecision, typically 0.1-1% error per gate, 3) Measurement errors - readout mistakes confusing |0⟩ and |1⟩, typically 1-5%, 4) Crosstalk - unwanted interactions between nearby qubits, 5) Control noise - imperfect pulses implementing gates. Different qubit technologies have different noise profiles: superconducting qubits have short coherence times but fast gates; trapped ions have long coherence but slower gates. Quantum error mitigation and correction techniques aim to reduce noise impact.",
+      "ground_truth": "Quantum noise includes decoherence, gate errors, measurement errors, and crosstalk degrading quantum information",
+      "contexts": [
+        "Decoherence most significant error source",
+        "Gate fidelity improving but still limits circuit depth",
+        "Error rates vary by qubit technology",
+        "Mitigation and correction strategies under development"
+      ],
+      "source_file": "quantum_fundamentals",
+      "tags": [
+        "quantum_noise",
+        "errors",
+        "decoherence",
+        "gate_fidelity"
+      ]
+    },
+    {
+      "id": "quantum_medium_009",
+      "domain": "quantum_ml",
+      "difficulty": "medium",
+      "question": "Explain how the quantum Fourier transform works and its role in quantum algorithms.",
+      "answer": "Quantum Fourier Transform (QFT) is quantum analog of discrete Fourier transform, mapping computational basis to Fourier basis. For n qubits: QFT|x⟩ = (1/√2ⁿ) Σ_y e^(2πixy/2ⁿ)|y⟩. Circuit: uses Hadamards and controlled phase rotations in specific pattern, O(n²) gates compared to classical FFT's O(n2ⁿ) operations. Key property: period finding - QFT converts periodic functions to peaks at periods. **Roles in quantum algorithms**: 1) **Shor's algorithm** - period finding enables factoring, QFT extracts period from quantum state, 2) **Phase estimation** - measures eigenvalue phases, core subroutine for many algorithms, 3) **Quantum simulation** - implements time evolution, 4) **HHL algorithm** - quantum linear systems, 5) **Quantum walk** - QFT enables quantum walk implementation. **Advantages**: exponential speedup for certain operations, enables interference between computational paths. **Limitation**: measuring QFT output collapses state, limiting direct classical use; amplitude estimation and quantum sampling provide workarounds.",
+      "ground_truth": "QFT maps computational to Fourier basis in O(n²) gates; enables period finding in Shor's, phase estimation, and quantum algorithms",
+      "contexts": [
+        "Exponentially faster than classical FFT for quantum states",
+        "Critical component of Shor's factoring algorithm",
+        "Enables phase estimation and quantum sampling",
+        "Circuit uses Hadamards and controlled phase gates"
+      ],
+      "source_file": "quantum_algorithms",
+      "tags": [
+        "QFT",
+        "quantum_Fourier_transform",
+        "Shor_algorithm",
+        "phase_estimation"
+      ]
+    },
+    {
+      "id": "quantum_medium_010",
+      "domain": "quantum_ml",
+      "difficulty": "medium",
+      "question": "What is the quantum variational eigensolver (VQE) algorithm and what problems does it solve?",
+      "answer": "VQE is variational algorithm for finding ground state energies of quantum systems. Method: 1) Prepare parameterized ansatz state |ψ(θ)⟩ on quantum computer, 2) Measure energy expectation E(θ) = ⟨ψ(θ)|H|ψ(θ)⟩ for Hamiltonian H, 3) Classical optimizer updates parameters to minimize E(θ), 4) Iterate until convergence. By variational principle, E(θ) ≥ E_ground with equality only at ground state. **Applications**: 1) **Molecular chemistry** - calculate molecule ground state energies, binding energies, reaction barriers; main near-term use case, 2) **Materials science** - electronic structure of solids, superconductors, 3) **Condensed matter** - study quantum phase transitions, many-body systems, 4) **Optimization** - MaxCut, graph problems encoded as Hamiltonians. **Advantages over classical**: exponentially large Hilbert space, polynomial quantum resources. **Challenges**: barren plateaus in generic ansatzes, measurement overhead for complex Hamiltonians, ansatz design critical. **Ansatzes**: Unitary Coupled Cluster (chemistry-inspired), Hardware-Efficient (device-native), problem-specific constructions. Most promising near-term quantum algorithm for practical advantage in quantum chemistry.",
+      "ground_truth": "VQE variationally finds ground state energies using parameterized quantum circuits; primary application is molecular chemistry",
+      "contexts": [
+        "Variational principle guarantees energy upper bound",
+        "Hybrid quantum-classical optimization",
+        "Chemistry applications most mature",
+        "Ansatz choice critical for performance and trainability"
+      ],
+      "source_file": "QuantERA/processed_output/Cerezo-2021-Variational quantum algorithms_processed.json",
+      "tags": [
+        "VQE",
+        "ground_state",
+        "quantum_chemistry",
+        "variational_algorithm"
+      ]
+    },
+    {
+      "id": "quantum_complex_005",
+      "domain": "quantum_ml",
+      "difficulty": "complex",
+      "question": "Analyze the quantum circuit expressivity vs. trainability trade-off and implications for practical quantum machine learning.",
+      "answer": "Quantum ML faces fundamental tension between expressivity and trainability: **Expressivity** (model capacity): measure of functions quantum circuit can represent. Higher expressivity: deeper circuits, more entangling gates, approaches 2-designs over unitary group, can approximate arbitrary unitaries. Benefits: represent complex functions, potential quantum advantage. **Trainability**: ability to optimize parameters efficiently. Measured by gradient magnitudes, cost landscape structure. Deep expressive circuits suffer from: barren plateaus (exponentially vanishing gradients), gradient concentration, requiring exponential measurements. **Trade-off analysis**: 1) **Shallow circuits** - trainable, limited expressivity, no quantum advantage for most problems, 2) **Deep random circuits** - high expressivity, severe barren plateaus, untrainable for large systems, 3) **Problem-inspired circuits** - moderate expressivity aligned with problem structure, better trainability via exploiting symmetries/locality. **Implications**: 1) **NISQ reality** - limited to circuits navigating this trade-off, O(poly log n) depth feasible, 2) **Algorithm design** - must co-design ansatz with problem, exploit structure, use initialization strategies, 3) **Quantum advantage** - likely requires careful circuit design matching problem, not brute-force deep circuits, 4) **Near-term strategy** - problem-specific shallow circuits with smart initialization, layer-by-layer training. **Future directions**: geometric quantum ML leveraging symmetries, classical initialization using compressed sensing, hardware-efficient ansatzes matching device topology, quantum-aware optimization algorithms. Conclusion: practical quantum ML requires navigating expressivity-trainability trade-off through problem-structure alignment, not maximizing either independently.",
+      "ground_truth": "Deep circuits are expressive but suffer barren plateaus; shallow circuits trainable but limited; requires problem-structure alignment",
+      "contexts": [
+        "2-designs have maximal expressivity but worst trainability",
+        "Problem-inspired ansatzes balance trade-off",
+        "Expressivity-trainability tension unique to quantum",
+        "Practical quantum ML requires careful circuit design"
+      ],
+      "source_file": "QuantERA/processed_output/BarrenPlateaus_processed.json",
+      "tags": [
+        "expressivity",
+        "trainability",
+        "barren_plateaus",
+        "circuit_design",
+        "quantum_ML"
+      ]
+    },
+    {
+      "id": "quantum_complex_006",
+      "domain": "quantum_ml",
+      "difficulty": "complex",
+      "question": "Critically evaluate the prospects for quantum advantage in optimization problems, considering both theory and practical constraints.",
+      "answer": "Quantum advantage for optimization is complex, nuanced question: **Theoretical landscape**: 1) **QAOA**: approximation algorithm for combinatorial optimization (MaxCut, graph coloring), polynomial advantage unclear, performance depends on depth p, 2) **Grover search**: quadratic speedup for unstructured search, limited practical impact, 3) **Quantum annealing**: hardware approach, advantage demonstrated for specific instances but debates over generality, 4) **Quantum walks**: quadratic to exponential speedups for structured problems (spatial search, element distinctness). **Practical challenges**: 1) **Problem encoding** - loading classical problem into quantum state may negate advantage (QRAM overhead), 2) **NISQ limitations** - noise limits QAOA depth, restricting approximation quality, 3) **Classical competition** - specialized hardware (GPUs, TPUs), sophisticated algorithms (branch and bound, SAT solvers) highly optimized, 4) **Measurement overhead** - estimating expectation values requires many shots, 5) **Barren plateaus** - optimization landscapes can be flat for deep circuits. **Evidence evaluation**: 1) **Positive**: quantum annealing shows advantages for specific optimization instances, QAOA promising for graph problems at small scale, quantum walks proven speedups for certain searches, 2) **Negative**: no convincing practical advantage for real-world optimization at scale, classical algorithms improving faster than quantum hardware, most QAOA demonstrations not beyond classical, 3) **Uncertain**: scaling behavior unclear - does advantage grow with problem size? Noise mitigation essential but costly. **Realistic assessment**: 1) **Near-term (5 years)**: specialized optimization with quantum characteristics (quantum chemistry, materials), not general optimization advantage, 2) **Medium-term (10 years)**: possible advantage for specific problem classes if error mitigation/correction matures, 3) **Long-term**: fault-tolerant quantum computers enable provable advantages via Grover, amplitude amplification. **Conclusion**: quantum advantage for general optimization unlikely near-term; best prospects in quantum-native problems (chemistry optimization, materials design) or highly structured problems matching quantum operations; classical algorithms remain formidable competitors requiring constant reassessment of advantage claims.",
+      "ground_truth": "Quantum optimization advantage unclear; QAOA promising but limited by NISQ; best prospects in quantum-native or structured problems",
+      "contexts": [
+        "QAOA performance vs classical uncertain at scale",
+        "Quantum annealing shows instance-specific advantages",
+        "Classical optimization algorithms highly mature",
+        "Quantum advantage likely requires problem-structure match"
+      ],
+      "source_file": "QuantERA/processed_output/Huang-2025-The vast world of quantum advantage_processed.json",
+      "tags": [
+        "quantum_optimization",
+        "QAOA",
+        "quantum_advantage",
+        "practical_constraints",
+        "optimization"
+      ]
+    },
+    {
+      "id": "general_simple_012",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is precision and recall in classification?",
+      "answer": "Precision and recall are complementary metrics for classification performance. Precision (positive predictive value) = TP/(TP+FP) measures what fraction of predicted positives are actually positive - answers 'Of items labeled positive, how many truly are?' High precision means few false positives. Recall (sensitivity, true positive rate) = TP/(TP+FN) measures what fraction of actual positives are correctly identified - answers 'Of all positive items, how many did we find?' High recall means few false negatives. Trade-off: making classifier more conservative increases precision but decreases recall and vice versa. F1-score = 2PR/(P+R) balances both. Choice depends on application: spam detection needs high precision (few false alarms), disease screening needs high recall (catch all cases).",
+      "ground_truth": "Precision is accuracy of positive predictions (TP/(TP+FP)); recall is completeness of positive detection (TP/(TP+FN))",
+      "contexts": [
+        "Precision emphasizes avoiding false positives",
+        "Recall emphasizes finding all positives",
+        "F1-score harmonic mean balancing both",
+        "Choice depends on relative costs of FP vs FN"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "precision",
+        "recall",
+        "classification",
+        "metrics"
+      ]
+    },
+    {
+      "id": "general_simple_013",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is the activation function in neural networks and why is it necessary?",
+      "answer": "An activation function is a non-linear function applied to neuron outputs, introducing non-linearity into neural networks. Without activation functions, stacking layers would remain linear: f(W₂·f(W₁·x)) = W₂W₁x, collapsing to single layer. Common activations: 1) ReLU (Rectified Linear Unit): f(x) = max(0,x), most popular for hidden layers, 2) Sigmoid: f(x) = 1/(1+e⁻ˣ), outputs [0,1], used for probabilities, 3) Tanh: f(x) = (eˣ-e⁻ˣ)/(eˣ+e⁻ˣ), outputs [-1,1], zero-centered, 4) Softmax: for multi-class output. Activation functions enable networks to learn complex non-linear patterns and approximate arbitrary functions (universal approximation theorem).",
+      "ground_truth": "Activation functions introduce non-linearity enabling neural networks to learn complex patterns; ReLU, sigmoid, tanh common types",
+      "contexts": [
+        "ReLU most common for hidden layers due to efficiency",
+        "Sigmoid/softmax used for output layer probabilities",
+        "Non-linearity essential for deep network expressivity",
+        "Choice affects gradient flow and training dynamics"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "activation_function",
+        "neural_networks",
+        "non_linearity",
+        "ReLU"
+      ]
+    },
+    {
+      "id": "general_simple_014",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is data augmentation and why is it used?",
+      "answer": "Data augmentation artificially expands training datasets by creating modified versions of existing examples, increasing diversity without collecting new data. For images: rotations, flips, crops, color jittering, mixup. For text: synonym replacement, back-translation, paraphrasing. For audio: time stretching, pitch shifting, adding noise. Benefits: 1) Reduces overfitting by increasing effective dataset size, 2) Improves generalization by exposing model to variations, 3) Makes models robust to transformations, 4) Reduces need for expensive data collection. Essential for domains with limited data (medical imaging, rare languages). Modern techniques include learnable augmentation policies (AutoAugment) and generative augmentation (using GANs/diffusion models).",
+      "ground_truth": "Data augmentation creates training variations to expand datasets, reduce overfitting, and improve generalization",
+      "contexts": [
+        "Critical when training data limited",
+        "Common in computer vision (geometric/color transforms)",
+        "Must preserve label meaning",
+        "Can be domain-specific or learned automatically"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "data_augmentation",
+        "regularization",
+        "training",
+        "generalization"
+      ]
+    },
+    {
+      "id": "general_simple_015",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is the difference between generative and discriminative models?",
+      "answer": "Discriminative models learn decision boundary between classes, modeling P(Y|X) - probability of label given features. They answer 'Given features, what is the class?' Examples: logistic regression, SVM, neural network classifiers. Discriminative models directly optimize classification and typically perform better with sufficient data. Generative models learn joint distribution P(X,Y) or class-conditional P(X|Y) and prior P(Y), enabling generation of new samples. They answer 'What do examples from each class look like?' Examples: Naive Bayes, GANs, VAEs, diffusion models. Generative models can generate new data, handle missing features, but require more data and stronger assumptions. Hybrid approaches exist (semi-supervised learning using generative models for representation).",
+      "ground_truth": "Discriminative models learn P(Y|X) for classification; generative models learn P(X,Y) enabling generation and density estimation",
+      "contexts": [
+        "Discriminative: decision boundaries directly",
+        "Generative: model data distribution",
+        "Generative can synthesize new examples",
+        "Discriminative often better classification with enough data"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "generative_models",
+        "discriminative_models",
+        "classification",
+        "generation"
+      ]
+    },
+    {
+      "id": "general_simple_016",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is dropout and how does it prevent overfitting?",
+      "answer": "Dropout is a regularization technique that randomly sets a fraction of neuron activations to zero during training. At each iteration, randomly drop neurons with probability p (typically 0.2-0.5), forcing network to learn redundant representations that don't rely on specific neurons. At test time, use all neurons but scale outputs by (1-p) to account for training dropout. Benefits: 1) Prevents co-adaptation of neurons (complex interdependencies), 2) Acts like training ensemble of exponentially many thinned networks, 3) Improves generalization by reducing overfitting, 4) Provides uncertainty estimates via Monte Carlo dropout. Dropout especially effective for large networks and limited data. Modern alternatives include DropConnect (drop connections not neurons) and concrete/variational dropout.",
+      "ground_truth": "Dropout randomly deactivates neurons during training to prevent co-adaptation and overfitting; acts like ensemble training",
+      "contexts": [
+        "Typically drop 20-50% of neurons",
+        "Applied during training, scaled at test time",
+        "Particularly effective for fully connected layers",
+        "Reduces reliance on specific neurons"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "dropout",
+        "regularization",
+        "overfitting",
+        "neural_networks"
+      ]
+    },
+    {
+      "id": "general_simple_017",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is a ROC curve and AUC metric?",
+      "answer": "ROC (Receiver Operating Characteristic) curve plots True Positive Rate (Recall) vs False Positive Rate across all classification thresholds. Each point represents different decision threshold from 0 to 1. Perfect classifier reaches top-left corner (TPR=1, FPR=0); random classifier is diagonal line. AUC (Area Under Curve) summarizes ROC in single number: 1.0 = perfect, 0.5 = random. AUC interpretation: probability randomly chosen positive ranked higher than randomly chosen negative. Advantages: threshold-independent evaluation, handles class imbalance better than accuracy, compares models across operating points. Useful when optimal threshold unknown or varies by application. Precision-Recall curves alternative when classes severely imbalanced.",
+      "ground_truth": "ROC curve plots TPR vs FPR across thresholds; AUC summarizes with single metric (1=perfect, 0.5=random)",
+      "contexts": [
+        "Threshold-independent performance metric",
+        "AUC = area under ROC curve",
+        "Better than accuracy for imbalanced classes",
+        "Enables comparison across operating points"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "ROC",
+        "AUC",
+        "classification",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "general_medium_009",
+      "domain": "general_science",
+      "difficulty": "medium",
+      "question": "Explain the concept of word embeddings and how they capture semantic relationships.",
+      "answer": "Word embeddings map words to dense, low-dimensional continuous vectors (typically 100-300D) where semantic similarity reflected by geometric proximity. Key models: **Word2Vec** (Skip-gram, CBOW) - predicts context from word or vice versa, learns representations where similar words are close; **GloVe** - factorizes co-occurrence matrix, combines global statistics with local context; **FastText** - extends Word2Vec with subword information, handles out-of-vocabulary words. **Semantic properties**: 1) Similar words cluster together (king near queen, monarchy), 2) **Analogies via vector arithmetic**: king - man + woman ≈ queen; Paris - France + Germany ≈ Berlin, 3) Different dimensions capture different semantic aspects (gender, plurality, tense), 4) Non-linear manifold structure captures complex relationships. **Modern evolution**: contextual embeddings (BERT, GPT) produce different vectors for same word in different contexts, capturing polysemy. Applications: similarity search, analogy completion, downstream NLP tasks initialization, cross-lingual transfer. Limitations: static embeddings miss context, capture statistical co-occurrence not true understanding, can encode societal biases.",
+      "ground_truth": "Word embeddings map words to vectors where geometric relationships reflect semantic meaning; enable analogies and similarity",
+      "contexts": [
+        "Learned from large text corpora via prediction tasks",
+        "Vector arithmetic captures semantic relationships",
+        "Contextual embeddings (BERT) supersede static (Word2Vec)",
+        "Foundation of modern NLP architectures"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "word_embeddings",
+        "Word2Vec",
+        "semantics",
+        "NLP",
+        "representation_learning"
+      ]
+    },
+    {
+      "id": "general_medium_010",
+      "domain": "general_science",
+      "difficulty": "medium",
+      "question": "Compare convolutional neural networks (CNNs) and vision transformers (ViTs) for image processing.",
+      "answer": "CNNs and ViTs represent different paradigms for visual processing: **CNNs**: 1) **Inductive bias** - built-in locality (conv filters), translation equivariance, hierarchical structure matches vision; 2) **Architecture** - stacked convolutions + pooling, local receptive fields grow with depth, feature maps; 3) **Efficiency** - parameter sharing via kernels, fewer parameters than ViTs; 4) **Data requirements** - work well with moderate data due to inductive biases. **ViTs**: 1) **Inductive bias** - minimal assumptions, learns relationships from data; patches treated as tokens; 2) **Architecture** - divide image into patches, flatten to sequences, pure transformer (self-attention + MLP); 3) **Flexibility** - global receptive field from layer 1, attention captures long-range dependencies naturally; 4) **Data requirements** - need large-scale pre-training (ImageNet-21K+) to match CNN performance. **Performance comparison**: CNNs better for small/medium datasets with inductive bias advantages; ViTs outperform at large scale (billions of parameters, hundreds of millions of examples) due to superior scaling laws. **Hybrid approaches**: ConvNets + attention (ConvNeXt matches ViT with CNN architecture), early conv layers + transformer (Swin Transformer uses shifted windows). **Trade-offs**: CNNs more sample-efficient, ViTs more scalable; CNNs interpretable via feature maps, ViTs via attention; CNNs deployed widely, ViTs gaining adoption as foundation models.",
+      "ground_truth": "CNNs use local convolutions with strong inductive bias; ViTs use global self-attention, scale better with data but need more examples",
+      "contexts": [
+        "CNNs dominant until 2020, ViTs emerging at scale",
+        "ViTs require large-scale pre-training (ImageNet-21K)",
+        "Hybrid models combine benefits",
+        "ViTs foundation for modern vision-language models"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "CNN",
+        "vision_transformer",
+        "ViT",
+        "computer_vision",
+        "architecture"
+      ]
+    },
+    {
+      "id": "general_medium_011",
+      "domain": "general_science",
+      "difficulty": "medium",
+      "question": "Explain the concept of knowledge distillation and its applications.",
+      "answer": "Knowledge distillation transfers knowledge from large 'teacher' model to smaller 'student' model while maintaining performance. **Method**: 1) Train teacher model on task achieving high accuracy; 2) Student trained on both hard targets (true labels) and soft targets (teacher's softmax outputs at temperature T>1); 3) Loss combines classification loss and distillation loss: L = αL_CE(student, labels) + (1-α)L_KD(student, teacher); **Temperature**: T>1 softens probability distribution, revealing relative similarities between classes (dark knowledge). **Benefits**: 1) **Compression** - deploy efficient small models with large model performance; 2) **Acceleration** - faster inference on edge devices; 3) **Ensemble knowledge** - distill ensemble into single model; 4) **Cross-modality** - transfer from one architecture to another. **Applications**: 1) Mobile deployment (BERT → DistilBERT 40% size, 97% performance); 2) Real-time systems (large models → fast models); 3) Privacy (deploy small model, keep large model private); 4) Continual learning (old model → new model on new data). **Extensions**: multi-teacher distillation, self-distillation, feature-based distillation, attention transfer. **Why it works**: soft targets provide richer supervision than hard labels, revealing model's learned similarities; model regularization prevents overfitting.",
+      "ground_truth": "Knowledge distillation trains small student model mimicking large teacher using soft probability outputs, enabling compression with performance retention",
+      "contexts": [
+        "Soft targets at temperature T>1 reveal relative class similarities",
+        "Enables deployment of compressed models",
+        "DistilBERT successful NLP example",
+        "Dark knowledge carries information beyond hard labels"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "knowledge_distillation",
+        "model_compression",
+        "transfer_learning",
+        "deployment"
+      ]
+    },
+    {
+      "id": "general_medium_012",
+      "domain": "general_science",
+      "difficulty": "medium",
+      "question": "What is catastrophic forgetting in neural networks and how can it be mitigated?",
+      "answer": "Catastrophic forgetting (interference) occurs when neural networks forget previously learned tasks upon learning new ones - weights optimized for new task override previous knowledge. Particularly severe in continual/lifelong learning scenarios. **Causes**: 1) Distributed representations shared across tasks - updating weights for new task disrupts old; 2) SGD optimization finds separate minima for each task; 3) No mechanisms preserving old task performance. **Mitigation strategies**: 1) **Regularization** - Elastic Weight Consolidation (EWC) penalizes changes to important weights (measured by Fisher information); 2) **Replay** - store/generate old task samples, interleave with new data (requires memory or generative model); 3) **Dynamic architectures** - add new parameters/modules for new tasks (Progressive Neural Networks); 4) **Meta-learning** - learn to learn enabling fast adaptation without forgetting; 5) **Dual memory systems** - complementary learning systems with slow consolidation (inspired by hippocampus-cortex). **Evaluation**: measure average accuracy across all tasks over time. **Trade-off**: plasticity (learning new) vs stability (retaining old). **Applications**: robotics (learn new skills continuously), personalization (adapt to user without forgetting others), real-time systems. Challenge: finding general solution approaching human-like continual learning.",
+      "ground_truth": "Catastrophic forgetting is loss of old task knowledge when learning new tasks; mitigated by regularization, replay, or dynamic architectures",
+      "contexts": [
+        "Major challenge for continual/lifelong learning",
+        "EWC uses Fisher information to protect important weights",
+        "Experience replay most effective but memory-intensive",
+        "Biological inspiration from complementary learning systems"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "catastrophic_forgetting",
+        "continual_learning",
+        "neural_networks",
+        "interference"
+      ]
+    },
+    {
+      "id": "general_medium_013",
+      "domain": "general_science",
+      "difficulty": "medium",
+      "question": "Explain the concept of few-shot learning and meta-learning approaches.",
+      "answer": "Few-shot learning adapts models to new tasks with limited examples (1-shot, 5-shot). Critical for domains where data collection expensive or impossible. **Approaches**: 1) **Metric learning** - learn embedding space where similar items cluster; classify via nearest neighbor (Siamese networks, Prototypical networks); 2) **Meta-learning** (learning to learn) - train on distribution of tasks to learn how to quickly adapt to new tasks; MAML (Model-Agnostic Meta-Learning) finds initialization enabling fast fine-tuning; 3) **Memory-augmented** - external memory (Neural Turing Machines) stores examples for rapid retrieval; 4) **Generative** - generate synthetic examples for data augmentation. **Meta-learning framework**: Split data into support set (few examples for adaptation) and query set (evaluation). Train across many tasks: in each episode, sample task, adapt using support set, evaluate on query set. Optimize for post-adaptation performance. **Applications**: 1) Drug discovery (few known examples of activity); 2) Robotics (quick adaptation to new environments); 3) Personalization (adapt to users with limited data); 4) Rare language translation. **Challenges**: Task distribution mismatch between meta-training and deployment; computational cost of meta-learning; limited theoretical understanding. Promising direction: combining pre-trained foundation models with few-shot prompting.",
+      "ground_truth": "Few-shot learning adapts to new tasks with few examples using metric learning, meta-learning, or memory; enables rapid task adaptation",
+      "contexts": [
+        "MAML learns initialization for fast adaptation",
+        "Prototypical networks embed and classify via prototypes",
+        "Meta-learning trains on task distribution",
+        "Critical for domains with limited data"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "few_shot_learning",
+        "meta_learning",
+        "MAML",
+        "transfer_learning"
+      ]
+    },
+    {
+      "id": "general_medium_014",
+      "domain": "general_science",
+      "difficulty": "medium",
+      "question": "What are generative adversarial networks (GANs) and how do they work?",
+      "answer": "GANs are generative models consisting of two neural networks in adversarial game: **Generator G**: takes random noise z, produces synthetic data G(z) mimicking real distribution. **Discriminator D**: distinguishes real data x from generated G(z). **Training**: minimax game min_G max_D E_x[log D(x)] + E_z[log(1-D(G(z)))]. Discriminator maximizes ability to classify real vs fake; Generator minimizes discriminator's success, learning to fool it. Equilibrium: generator produces indistinguishable samples, discriminator guesses randomly. **Training dynamics**: alternate between discriminator and generator updates. **Advantages**: 1) High-quality generation (photorealistic images); 2) No explicit likelihood, flexible; 3) Learns data distribution implicitly. **Challenges**: 1) Training instability (mode collapse, oscillation); 2) Difficult to train (balancing G and D); 3) No likelihood for evaluation. **Improvements**: Wasserstein GAN (better gradient flow), StyleGAN (disentangled control), BigGAN (large-scale generation), conditional GANs (controlled generation). **Applications**: image synthesis, super-resolution, style transfer, data augmentation, domain adaptation. **Alternatives**: Diffusion models increasingly popular due to better training stability.",
+      "ground_truth": "GANs use adversarial game between generator (creates samples) and discriminator (detects fakes) to learn data distribution",
+      "contexts": [
+        "Generator learns to fool discriminator",
+        "Training as minimax game",
+        "Mode collapse common challenge",
+        "StyleGAN, BigGAN achieve photorealistic generation"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "GAN",
+        "generative_models",
+        "adversarial_training",
+        "image_generation"
+      ]
+    },
+    {
+      "id": "general_complex_004",
+      "domain": "general_science",
+      "difficulty": "complex",
+      "question": "Analyze the sample complexity of deep learning in light of statistical learning theory and explain the apparent contradiction with empirical success.",
+      "answer": "**Theoretical prediction**: Classical PAC learning and VC theory predict sample complexity should grow with model capacity (number of parameters). Deep networks have millions/billions of parameters, suggesting need for astronomical training sets. **Empirical reality**: Deep networks generalize well despite: 1) Overparameterization - more parameters than training examples, 2) Zero training loss - perfect fit including noise, 3) Classical theory predicts catastrophic overfitting, yet generalization is good. **The paradox**: Classical bounds are vacuous for deep networks (VC dimension ~ number of parameters >> number of samples), yet they work. **Modern understanding**: 1) **Implicit regularization** - SGD biases toward solutions with good generalization properties (minimum norm, flat minima), 2) **Effective capacity** - not all parameters used equally; effective degrees of freedom << total parameters, 3) **Overparameterization helps** - interpolating solutions exist with good generalization (benign overfitting), 4) **Neural tangent kernel** - infinite-width limit provides theoretical insights, but finite networks behave differently, 5) **Lottery ticket hypothesis** - sparse sub-networks exist that train effectively. **Revised theory**: 1) **Uniform convergence** insufficient - need distribution-specific analysis, 2) **Algorithmic-dependent bounds** - considering SGD dynamics, not just hypothesis class, 3) **Interpolation regime** - distinct from classical underparameterized regime, new principles apply, 4) **Margin theory** - generalization depends on margin, not just capacity. **Open questions**: Why do neural networks find generalizing solutions in vast space? What makes real-world data amenable to deep learning? Complete theoretical explanation lacking, active research area.",
+      "ground_truth": "Classical theory predicts deep networks need astronomical data but they generalize well; explained by implicit regularization, effective capacity, benign overfitting",
+      "contexts": [
+        "Overparameterized networks generalize despite zero training loss",
+        "SGD implicitly regularizes toward good solutions",
+        "Classical VC/PAC bounds vacuous for deep networks",
+        "New theory emerging for interpolation regime"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "sample_complexity",
+        "generalization",
+        "deep_learning",
+        "learning_theory",
+        "overparameterization"
+      ]
+    },
+    {
+      "id": "general_complex_005",
+      "domain": "general_science",
+      "difficulty": "complex",
+      "question": "Critically evaluate the interpretability vs performance trade-off in machine learning and approaches to reconcile them.",
+      "answer": "**Trade-off thesis**: Complex high-performing models (deep neural networks, ensembles) are black boxes; simple interpretable models (linear, trees) sacrifice performance. **Interpretability types**: 1) **Transparent** - understand full model logic (linear regression coefficients), 2) **Post-hoc** - explain predictions after training (saliency maps, SHAP), 3) **Simulatable** - human can mentally execute model. **Why trade-off exists**: 1) Expressivity requires complexity - capturing non-linear interactions, high-dimensional patterns needs complex functions, 2) Ensemble methods sacrifice individual comprehension for aggregate performance, 3) Feature learning in deep nets creates abstract representations losing human interpretation. **Approaches to reconcile**: 1) **Interpretable-by-design** - constrain architecture to maintain interpretability (Generalized Additive Models, Neural Additive Models, attention mechanisms with interpretable heads), 2) **Post-hoc explanation** - train black box, explain afterwards: a) Local explanations: LIME (local linear approximation), SHAP (game-theoretic feature attribution), integrated gradients, b) Global understanding: feature importance, partial dependence plots, prototypes, 3) **Model distillation** - compress complex model into interpretable surrogate (decision tree approximating neural network), 4) **Hybrid architectures** - combine interpretable and black-box components (attention weights show where model looks, neural networks still process). **Evaluation challenges**: How to measure interpretability? Faithfulness (explanation matches model), plausibility (makes sense to humans), utility (helps humans). **Domain considerations**: High-stakes domains (medicine, justice) prioritize interpretability; perception tasks (vision, speech) tolerate black boxes. **Critical view**: 1) Post-hoc explanations may mislead - show what humans want to see, not true model behavior, 2) Interpretability definition unclear - means different things to different people, 3) False dichotomy - some complex models more interpretable than assumed, some simple models opaque at scale. **Future directions**: Neuro-symbolic AI combining reasoning and learning, causal models for mechanism understanding, interactive explanation systems for iterative refinement.",
+      "ground_truth": "Interpretability-performance trade-off exists but not absolute; reconciled via interpretable architectures, post-hoc explanations, distillation, hybrid models",
+      "contexts": [
+        "High-stakes domains prioritize interpretability",
+        "Post-hoc methods (LIME, SHAP) explain black boxes",
+        "Attention mechanisms provide some transparency",
+        "Trade-off nuanced, not binary"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "interpretability",
+        "explainable_AI",
+        "trade_offs",
+        "LIME",
+        "SHAP"
+      ]
+    },
+    {
+      "id": "general_complex_006",
+      "domain": "general_science",
+      "difficulty": "complex",
+      "question": "Explain the theoretical foundations and practical challenges of causal inference from observational data in machine learning.",
+      "answer": "**Goal**: Infer causal relationships (X causes Y) from observational data, not just correlations. Essential for: policy decisions, intervention planning, understanding mechanisms. **Theoretical frameworks**: 1) **Potential outcomes** (Rubin causal model) - define causal effect as difference in outcomes under treatment vs control for same unit; fundamental problem: can't observe both; 2) **Structural causal models** (Pearl) - represent causal mechanisms via directed acyclic graphs (DAGs); do-calculus provides rules for causal inference; 3) **Graphical models** - causal graphs encode assumptions; d-separation characterizes conditional independence. **Assumptions required**: 1) **Unconfoundedness** (ignorability) - treatment assignment independent of potential outcomes given covariates; strong, often violated; 2) **Positivity** (overlap) - all covariate combinations have non-zero probability of each treatment; 3) **SUTVA** (no interference) - individual outcomes unaffected by others' treatments; 4) **Correct functional form** - model properly specified. **Methods**: 1) **Matching** - compare similar treated/control units; propensity score matching most common; 2) **Weighting** - inverse propensity weighting creates pseudo-randomized sample; 3) **Instrumental variables** - use variable affecting treatment but not outcome directly; 4) **Regression discontinuity** - exploit cutoff creating quasi-random assignment; 5) **Difference-in-differences** - compare changes over time between groups; 6) **Causal forests** - machine learning for heterogeneous treatment effects. **ML integration**: 1) **Double ML** - use ML for nuisance parameter estimation while maintaining valid inference; 2) **Causal representation learning** - learn representations capturing causal mechanisms; 3) **Counterfactual prediction** - estimate outcomes under interventions. **Challenges**: 1) **Hidden confounding** - unmeasured variables bias estimates; sensitivity analysis quantifies robustness; 2) **High-dimensional settings** - many covariates relative to samples; regularization and selection needed; 3) **Temporal confounding** - time-varying confounders and treatment; 4) **Interference** - SUTVA violated in networks, spillovers; 5) **Measurement error** - noisy covariates bias estimates. **Validity threats**: 1) Confounding (omitted variable bias), 2) Selection bias, 3) Measurement error, 4) Model misspecification. **Best practices**: 1) Pre-register analysis plans, 2) Sensitivity analysis, 3) Multiple methods (triangulation), 4) Causal diagrams make assumptions explicit, 5) Domain knowledge essential. **Reality check**: Causation from observation fundamentally requires untestable assumptions; randomized experiments gold standard; observational causal inference approximation under strong assumptions; results suggestive not definitive.",
+      "ground_truth": "Causal inference from observations requires strong untestable assumptions (unconfoundedness, positivity); methods include matching, weighting, IV; challenges include hidden confounding",
+      "contexts": [
+        "Potential outcomes and structural causal models key frameworks",
+        "Propensity scores enable matching on high-dimensional covariates",
+        "Hidden confounding major validity threat",
+        "ML enables flexible estimation but doesn't solve fundamental problems"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "causal_inference",
+        "observational_data",
+        "confounding",
+        "potential_outcomes",
+        "propensity_score"
+      ]
+    },
+    {
+      "id": "general_complex_007",
+      "domain": "general_science",
+      "difficulty": "complex",
+      "question": "Analyze the challenges and recent advances in neural architecture search (NAS) for automated machine learning.",
+      "answer": "NAS automates neural architecture design, searching for optimal architectures for specific tasks. **Challenges**: 1) **Search space** - combinatorial explosion (layer types, connections, hyperparameters), carefully constraining space critical, 2) **Evaluation cost** - training each candidate architecture expensive (GPU-days), original NAS required thousands of GPU-years, 3) **Overfitting to search data** - architectures may not generalize beyond search dataset/task, 4) **Search algorithms** - exploration-exploitation trade-off, local optima in architecture space, 5) **Transferability** - architectures for one task may not transfer to others. **Search methods evolution**: 1) **Reinforcement learning** - original NAS used RL controller generating architectures, rewards based on validation performance, slow but effective, 2) **Evolution** - genetic algorithms mutate/crossover architectures, parallelizable but still expensive, 3) **Gradient-based** - DARTS makes architecture search differentiable by relaxing discrete choices to continuous, much faster (GPU-days instead of GPU-years), 4) **One-shot** - train single over-parameterized network (supernet), sub-architectures share weights, very fast but less accurate. **Recent advances**: 1) **Efficient search** - weight sharing, early stopping, performance prediction reduce cost, 2) **Transfer NAS** - search on proxy tasks, transfer to target, 3) **Hardware-aware NAS** - optimize for latency, energy, not just accuracy, 4) **Multi-objective NAS** - balance accuracy, efficiency, robustness, 5) **Neural architecture generation** - use generative models, transformers to propose architectures. **Results**: Discovered architectures (EfficientNet, NASNet) competitive with human-designed, sometimes superior efficiency. **Limitations**: 1) Still expensive despite improvements, 2) Requires expertise to define search space and constraints, 3) Black-box optimization, limited understanding of why architectures work, 4) May overfit to benchmark datasets. **Future**: AutoML platforms integrating NAS, learning transferable architectural principles, combining NAS with other AutoML components (hyperparameter tuning, data augmentation).",
+      "ground_truth": "NAS automates architecture design but faces search cost and overfitting challenges; advances include efficient methods (DARTS), weight sharing, hardware-aware optimization",
+      "contexts": [
+        "Original NAS required thousands of GPU-years",
+        "DARTS makes architecture search differentiable",
+        "Weight sharing enables one-shot NAS",
+        "Hardware-aware NAS optimizes for deployment constraints"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "NAS",
+        "AutoML",
+        "architecture_search",
+        "optimization"
+      ]
+    },
+    {
+      "id": "general_simple_018",
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is the purpose of validation and test sets in machine learning?",
+      "answer": "Training, validation, and test sets serve different purposes in ML workflow. **Training set** - used to fit model parameters, optimize weights through gradient descent. **Validation set** - separate data for hyperparameter tuning (learning rate, regularization strength, architecture choices), model selection (comparing different approaches), early stopping (prevent overfitting). Model sees validation performance during development, informing decisions. **Test set** - held out completely until final evaluation, provides unbiased performance estimate on unseen data, simulates real-world deployment. Never used for any training decisions. **Typical split**: 70% train, 15% validation, 15% test, but varies with dataset size. **Importance**: Validation prevents overfitting to training data during tuning; test prevents overfitting to validation during model selection. Using test for tuning invalidates final performance estimate.",
+      "ground_truth": "Training fits parameters; validation tunes hyperparameters and selects models; test provides final unbiased evaluation",
+      "contexts": [
+        "Test set completely held out until final evaluation",
+        "Validation used during development for decisions",
+        "Prevents overfitting at multiple stages",
+        "Cross-validation alternative when data limited"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "train_test_split",
+        "validation",
+        "evaluation",
+        "overfitting"
+      ]
+    },
+    {
+      "id": "general_medium_015",
+      "domain": "general_science",
+      "difficulty": "medium",
+      "question": "Explain the concept of self-supervised learning and how it differs from supervised and unsupervised learning.",
+      "answer": "Self-supervised learning creates supervised signals from unlabeled data by defining pretext tasks where labels generated automatically from data structure. **Key idea**: Design task where input-output relationship determined by data itself, not human annotation. **Distinction from unsupervised**: Self-supervised uses surrogate supervision signal; pure unsupervised (clustering, dimensionality reduction) seeks structure without any labels. **Common pretext tasks**: 1) **Masked prediction** - mask portions of input, predict masked content (BERT masks words, MAE masks image patches), 2) **Contrastive learning** - learn representations where similar examples attract, dissimilar repel (SimCLR, MoCo), 3) **Context prediction** - predict spatial/temporal context (relative position of patches, video frame order), 4) **Colorization** - predict color from grayscale, 5) **Rotation prediction** - predict image rotation angle. **Advantages**: 1) Leverages vast unlabeled data (internet-scale text, images, videos), 2) Learns rich representations transferable to downstream tasks, 3) Reduces annotation costs dramatically, 4) Often outperforms supervised pre-training. **Workflow**: Pre-train on pretext task with self-supervision → fine-tune on downstream task with limited labels. **Success stories**: BERT (language), SimCLR/MoCo (vision), wav2vec (speech), pre-training foundation of modern AI. **Theoretical interest**: Self-supervised models learn semantic features useful beyond pretext task, suggesting captures meaningful data structure. Foundation models (GPT, CLIP) primarily use self-supervision at scale.",
+      "ground_truth": "Self-supervised learning creates automatic supervision from data structure via pretext tasks; enables learning from unlabeled data",
+      "contexts": [
+        "Contrastive learning major self-supervised paradigm",
+        "BERT's masked language modeling canonical example",
+        "Bridges supervised and unsupervised learning",
+        "Foundation for modern pre-training"
+      ],
+      "source_file": "general_machine_learning",
+      "tags": [
+        "self_supervised",
+        "pre_training",
+        "contrastive_learning",
+        "representation_learning"
+      ]
+    }
+  ]
+}

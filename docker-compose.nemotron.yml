@@ -1,0 +1,272 @@
+version: '3.8'
+
+services:
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # Nemotron LLM (9B parameter model)
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  nemotron-llm:
+    image: nvcr.io/nim/nvidia/nvidia-nemotron-nano-9b-v2:latest
+    container_name: nemotron-llm
+    runtime: nvidia
+    environment:
+      - NGC_API_KEY=${NGC_API_KEY}
+      - NIM_OPTIMIZATION_PROFILE=${NIM_OPTIMIZATION_PROFILE:-throughput}
+    volumes:
+      - nim-cache:/opt/nim/.cache
+    ports:
+      - "8000:8000"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    shm_size: 16gb
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 300s
+    restart: unless-stopped
+    networks:
+      - ai-coscientist-network
+
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # NeMo Retriever Embedding (EmbedQA 1B)
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  nemo-embedder:
+    image: nvcr.io/nim/nvidia/llama-3.2-nv-embedqa-1b-v2:latest
+    container_name: nemo-embedder
+    runtime: nvidia
+    environment:
+      - NGC_API_KEY=${NGC_API_KEY}
+    volumes:
+      - nim-cache:/opt/nim/.cache
+    ports:
+      - "8001:8000"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    shm_size: 16gb
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 180s
+    restart: unless-stopped
+    networks:
+      - ai-coscientist-network
+
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # NeMo Retriever Reranker (RerankQA 1B)
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  nemo-reranker:
+    image: nvcr.io/nim/nvidia/llama-3.2-nv-rerankqa-1b-v2:latest
+    container_name: nemo-reranker
+    runtime: nvidia
+    environment:
+      - NGC_API_KEY=${NGC_API_KEY}
+    volumes:
+      - nim-cache:/opt/nim/.cache
+    ports:
+      - "8002:8000"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    shm_size: 16gb
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 180s
+    restart: unless-stopped
+    networks:
+      - ai-coscientist-network
+
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # ChromaDB (Vector Database)
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: chromadb
+    ports:
+      - "8003:8000"
+    volumes:
+      - chromadb-data:/chroma/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+      - ANONYMIZED_TELEMETRY=${CHROMA_TELEMETRY:-FALSE}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/heartbeat"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - ai-coscientist-network
+
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # PostgreSQL (Main Database)
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  postgres:
+    image: postgres:15-alpine
+    container_name: ai-coscientist-postgres
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:-ai_coscientist}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-changeme}
+      - POSTGRES_DB=${POSTGRES_DB:-ai_coscientist}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-ai_coscientist}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - ai-coscientist-network
+
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # Redis (Caching & Queue)
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  redis:
+    image: redis:7-alpine
+    container_name: ai-coscientist-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - ai-coscientist-network
+
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # AI-CoScientist API (Hybrid Mode)
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai-coscientist-api
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      chromadb:
+        condition: service_healthy
+      nemotron-llm:
+        condition: service_healthy
+      nemo-embedder:
+        condition: service_healthy
+      nemo-reranker:
+        condition: service_healthy
+    environment:
+      # Nemotron Configuration
+      - NEMOTRON_BASE_URL=http://nemotron-llm:8000/v1
+      - NEMOTRON_MODEL=nvidia/nvidia-nemotron-nano-9b-v2
+      - EMBEDDER_BASE_URL=http://nemo-embedder:8000/v1
+      - EMBEDDER_MODEL=nvidia/llama-3.2-nv-embedqa-1b-v2
+      - RERANKER_BASE_URL=http://nemo-reranker:8000/v1
+      - RERANKER_MODEL=nvidia/llama-3.2-nv-rerankqa-1b-v2
+
+      # Hybrid Mode Configuration
+      - HYBRID_MODE=true
+      - USE_NEMOTRON_FOR_SUMMARIZATION=true
+      - USE_NEMOTRON_FOR_EXTRACTION=true
+      - USE_GPT4_FOR_EVALUATION=true
+
+      # External LLM APIs
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+
+      # Database
+      - DATABASE_URL=postgresql://${POSTGRES_USER:-ai_coscientist}:${POSTGRES_PASSWORD:-changeme}@postgres:5432/${POSTGRES_DB:-ai_coscientist}
+
+      # Redis
+      - REDIS_URL=redis://redis:6379/0
+
+      # ChromaDB
+      - CHROMADB_HOST=chromadb
+      - CHROMADB_PORT=8000
+      - CHROMADB_MODE=docker
+
+      # Application
+      - SECRET_KEY=${SECRET_KEY:-change-this-to-a-random-secret-key-min-32-chars}
+      - DEBUG=${DEBUG:-false}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    ports:
+      - "8080:8000"
+    volumes:
+      - ./src:/app/src:ro
+      - ./scripts:/app/scripts:ro
+      - ./claudedocs:/app/claudedocs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - ai-coscientist-network
+
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # Celery Worker (Async Tasks)
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  celery-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai-coscientist-celery-worker
+    command: celery -A src.tasks.celery_app worker --loglevel=info
+    depends_on:
+      - redis
+      - postgres
+      - api
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - DATABASE_URL=postgresql://${POSTGRES_USER:-ai_coscientist}:${POSTGRES_PASSWORD:-changeme}@postgres:5432/${POSTGRES_DB:-ai_coscientist}
+      - NEMOTRON_BASE_URL=http://nemotron-llm:8000/v1
+      - EMBEDDER_BASE_URL=http://nemo-embedder:8000/v1
+      - RERANKER_BASE_URL=http://nemo-reranker:8000/v1
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    volumes:
+      - ./src:/app/src:ro
+    restart: unless-stopped
+    networks:
+      - ai-coscientist-network
+
+networks:
+  ai-coscientist-network:
+    driver: bridge
+
+volumes:
+  nim-cache:
+    driver: local
+  chromadb-data:
+    driver: local
+  postgres-data:
+    driver: local
+  redis-data:
+    driver: local

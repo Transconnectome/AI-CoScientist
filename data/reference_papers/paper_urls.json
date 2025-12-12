@@ -1,0 +1,64 @@
+{
+  "papers": [
+    {
+      "url": "https://www.nature.com/articles/s41586-025-09215-4",
+      "title": "A foundation model to predict and capture human cognition"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41551-025-01471-z",
+      "title": "A collaborative large language model for drug analysis"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41591-025-03982-3",
+      "title": "A multimodal whole-slide foundation model for pathology"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41551-025-01455-z",
+      "title": "Accelerating primer design for amplicon sequencing using large language model-powered agents"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41591-025-03888-0",
+      "title": "A personal health large language model for sleep and fitness coaching"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41591-025-03856-8",
+      "title": "Large language model-based biological age prediction in large-scale populations"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41591-025-03520-1",
+      "title": "Medical large language model for diagnostic reasoning across specialties"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41591-025-03726-3",
+      "title": "Comparative benchmarking of the DeepSeek large language model on medical tasks and clinical reasoning"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41591-025-03836-y",
+      "title": "Rapid deployment of large language model DeepSeek in Chinese hospitals demands a regulatory response"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41591-024-03148-7",
+      "title": "Outpatient reception via collaboration between nurses and a large language model: a randomized controlled trial"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41562-025-02273-8",
+      "title": "Quantifying large language model usage in scientific papers"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41562-025-02190-w",
+      "title": "Large language model-powered meta-analysis of mobile interventions for stress management"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41586-024-08025-4",
+      "title": "Scalable watermarking for identifying large language model outputs"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41586-025-09079-8",
+      "title": "A fully open AI foundation model applied to chest radiography"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41591-023-02412-6",
+      "title": "Large language model AI chatbots require approval as medical devices"
+    }
+  ]
+}

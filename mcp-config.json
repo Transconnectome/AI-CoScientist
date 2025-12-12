@@ -1,0 +1,36 @@
+{
+  "mcpServers": {
+    "ai-coscientist": {
+      "command": "python",
+      "args": ["-m", "src.mcp.server"],
+      "cwd": "/Users/jiookcha/Documents/git/AI-CoScientist",
+      "env": {
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}"
+      }
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "disabled": false
+    },
+    "serena": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena",
+        "start-mcp-server",
+        "--project",
+        "/home/juke/git/AI-CoScientist",
+        "--context",
+        "desktop-app",
+        "--mode",
+        "interactive,editing"
+      ],
+      "disabled": false
+    }
+  }
+}

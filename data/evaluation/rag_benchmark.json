@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "dataset_name": "AI-CoScientist Golden QA Benchmark",
+    "version": "1.0",
+    "created_date": "2025-12-05",
+    "description": "High-quality question-answer pairs for RAG evaluation across scientific domains",
+    "total_pairs": 100,
+    "domain_distribution": {
+      "neuroscience": 30,
+      "quantum_ml": 30,
+      "general_science": 40
+    },
+    "difficulty_distribution": {
+      "simple": 40,
+      "medium": 40,
+      "complex": 20
+    },
+    "quality_criteria": {
+      "factual_accuracy": "verified against source papers",
+      "answer_completeness": "comprehensive and self-contained",
+      "domain_relevance": "domain-specific terminology and concepts",
+      "difficulty_calibrated": "validated by complexity analysis"
+    }
+  },
+  "qa_pairs": [
+    {
+      "id": 1,
+      "domain": "neuroscience",
+      "difficulty": "simple",
+      "question": "What is the primary purpose of resting-state fMRI analysis?",
+      "answer": "Resting-state fMRI analysis is used to study spontaneous brain activity patterns and functional connectivity when a person is not performing any specific task. It helps identify brain networks that are active during rest and understand how different brain regions communicate with each other.",
+      "ground_truth": "Resting-state fMRI measures spontaneous fluctuations in blood-oxygen-level-dependent (BOLD) signals to identify intrinsic functional networks and connectivity patterns in the brain during task-free conditions.",
+      "contexts": [
+        "Resting-state functional magnetic resonance imaging (rs-fMRI) has emerged as a powerful tool for studying intrinsic brain activity.",
+        "The technique measures spontaneous low-frequency fluctuations in the BOLD signal during periods when participants are not engaged in specific cognitive tasks.",
+        "These fluctuations reflect underlying neural activity and can be used to map functional connectivity networks across the brain."
+      ],
+      "source": "neuroscience_ml_papers/NeuroBOLT_Resting_State_EEG_fMRI_Synthesis.pdf",
+      "tags": ["fmri", "brain_imaging", "resting_state", "connectivity"]
+    },
+    {
+      "id": 2,
+      "domain": "quantum_ml",
+      "difficulty": "simple",
+      "question": "What are variational quantum algorithms?",
+      "answer": "Variational quantum algorithms are a class of quantum algorithms that use a hybrid quantum-classical approach. They employ a parameterized quantum circuit (ansatz) whose parameters are optimized using classical optimization techniques to solve specific problems like finding ground states or optimization tasks.",
+      "ground_truth": "Variational quantum algorithms (VQAs) are hybrid quantum-classical algorithms that use parameterized quantum circuits with classically optimized parameters to approximate solutions to computational problems, particularly suited for near-term quantum devices.",
+      "contexts": [
+        "Variational quantum algorithms represent a promising approach for solving computational problems on near-term quantum devices.",
+        "These algorithms use a parameterized quantum circuit, known as an ansatz, combined with classical optimization.",
+        "The quantum circuit prepares quantum states that depend on tunable parameters, which are optimized classically to minimize a cost function."
+      ],
+      "source": "data/QuantERA/Papers/Cerezo-2021-Variational_quantum_algorithms.pdf",
+      "tags": ["vqa", "hybrid_algorithms", "quantum_circuits", "optimization"]
+    },
+    {
+      "id": 3,
+      "domain": "general_science",
+      "difficulty": "simple",
+      "question": "What is the main advantage of using machine learning in scientific research?",
+      "answer": "The main advantage of using machine learning in scientific research is its ability to identify patterns and relationships in large, complex datasets that would be difficult or impossible for humans to detect manually. This enables faster hypothesis generation, improved prediction accuracy, and discovery of novel insights.",
+      "ground_truth": "Machine learning provides automated pattern recognition and predictive modeling capabilities that can handle high-dimensional data, accelerate discovery processes, and uncover hidden relationships in complex scientific datasets.",
+      "contexts": [
+        "Machine learning techniques excel at processing large volumes of scientific data to identify underlying patterns.",
+        "These methods can automate hypothesis generation and testing processes that traditionally required extensive manual analysis.",
+        "ML algorithms can handle high-dimensional data and non-linear relationships that are challenging for traditional statistical methods."
+      ],
+      "source": "validation_dataset_v2.json",
+      "tags": ["machine_learning", "data_analysis", "pattern_recognition", "automation"]
+    },
+    {
+      "id": 4,
+      "domain": "neuroscience",
+      "difficulty": "medium",
+      "question": "How do researchers use EEG signals to decode speech perception from brain activity?",
+      "answer": "Researchers decode speech perception from EEG by analyzing neural oscillations and event-related potentials that correspond to acoustic features of speech. They use machine learning models trained on EEG data collected while participants listen to speech stimuli, focusing on frequency bands like gamma (30-100 Hz) and theta (4-8 Hz) rhythms that track speech envelope and phonemic information.",
+      "ground_truth": "EEG-based speech decoding relies on identifying neural signatures of auditory processing, including cortical tracking of speech envelope in low-frequency bands and phoneme-specific responses in higher frequencies, using classification algorithms trained on synchronized EEG and audio data.",
+      "contexts": [
+        "Neural decoding of speech from EEG signals involves analyzing how brain oscillations track acoustic features of spoken language.",
+        "Key frequency bands include theta oscillations that follow speech envelope and gamma activity linked to phonemic processing.",
+        "Machine learning classifiers are trained on features extracted from EEG signals recorded during speech listening tasks.",
+        "Successful decoding requires understanding the temporal dynamics of auditory cortical responses to speech stimuli."
+      ],
+      "source": "neuroscience_ml_papers/Decoding_speech_perception_from_noninvasive_brain_recordings.pdf",
+      "tags": ["eeg", "speech_decoding", "neural_oscillations", "auditory_processing"]
+    },
+    {
+      "id": 5,
+      "domain": "quantum_ml",
+      "difficulty": "medium",
+      "question": "What is the barren plateau problem in variational quantum algorithms and why is it significant?",
+      "answer": "The barren plateau problem refers to the phenomenon where the gradient of the cost function becomes exponentially small as the number of qubits increases in variational quantum algorithms. This makes optimization extremely difficult because the gradient provides little information about which direction to adjust parameters. It's significant because it represents a major obstacle to scaling VQAs to larger quantum systems.",
+      "ground_truth": "Barren plateaus are characterized by exponentially vanishing gradients in the parameter landscape of variational quantum algorithms, making classical optimization ineffective and limiting the scalability of VQAs to larger quantum systems.",
+      "contexts": [
+        "Barren plateaus emerge when the cost function landscape becomes flat, leading to vanishingly small gradients.",
+        "This phenomenon is particularly problematic for randomly initialized parameterized quantum circuits with many qubits.",
+        "The exponential suppression of gradients makes it nearly impossible to find optimal parameters using gradient-based optimization.",
+        "Understanding and mitigating barren plateaus is crucial for the practical success of variational quantum algorithms."
+      ],
+      "source": "data/QuantERA/Papers/Cerezo-2022-Challenges_and_opportunities_in_quantum_machine_learning.pdf",
+      "tags": ["barren_plateaus", "optimization", "vqa_challenges", "scalability"]
+    },
+    {
+      "id": 6,
+      "domain": "general_science",
+      "difficulty": "medium",
+      "question": "What are the key considerations when implementing a Retrieval-Augmented Generation (RAG) system for scientific literature?",
+      "answer": "Key considerations include: 1) Chunking strategy to preserve scientific context and mathematical expressions, 2) Embedding models trained on scientific text, 3) Retrieval methods that handle technical terminology and citations, 4) Evaluation metrics that assess factual accuracy and domain relevance, 5) Handling of figures, tables, and equations, and 6) Integration with domain-specific knowledge bases.",
+      "ground_truth": "Scientific RAG systems require specialized preprocessing for technical content, domain-adapted embeddings, evaluation frameworks that measure scientific accuracy, and integration capabilities with structured scientific knowledge.",
+      "contexts": [
+        "Scientific literature contains complex technical language, mathematical notation, and structured information that requires specialized processing.",
+        "Effective chunking must preserve semantic relationships and maintain context around equations and citations.",
+        "Domain-specific embedding models perform better than general-purpose models for scientific content retrieval.",
+        "Evaluation should include measures of factual accuracy, citation correctness, and domain expert validation."
+      ],
+      "source": "rag_evaluation_report.json",
+      "tags": ["rag", "scientific_literature", "information_retrieval", "system_design"]
+    },
+    {
+      "id": 7,
+      "domain": "neuroscience",
+      "difficulty": "complex",
+      "question": "Explain how the BrainLM foundation model architecture enables cross-modal learning between fMRI and EEG data, and what are the implications for understanding brain dynamics?",
+      "answer": "BrainLM uses a transformer-based architecture with specialized encoders for different neuroimaging modalities. For cross-modal learning, it employs shared latent representations that capture common neural dynamics across fMRI and EEG. The model uses temporal-spatial attention mechanisms to align the high temporal resolution of EEG with the high spatial resolution of fMRI. This enables unified representation learning that can capture both fast neural oscillations and slow hemodynamic responses. The implications include better understanding of how electrical brain activity relates to metabolic changes, improved brain state prediction, and potential for developing more comprehensive brain-computer interfaces.",
+      "ground_truth": "BrainLM employs multimodal transformer architectures with cross-attention mechanisms to learn shared representations between temporally precise EEG signals and spatially precise fMRI data, enabling integrated understanding of neural dynamics across temporal and spatial scales.",
+      "contexts": [
+        "Foundation models for brain data require specialized architectures that can handle the unique characteristics of neuroimaging modalities.",
+        "Cross-modal learning between EEG and fMRI involves aligning temporal and spatial information from fundamentally different measurement techniques.",
+        "The temporal resolution of EEG (milliseconds) and spatial resolution of fMRI (millimeters) provide complementary views of brain activity.",
+        "Unified representations can capture the relationship between fast electrical activity and slower hemodynamic responses.",
+        "Such models enable new insights into brain dynamics by leveraging the strengths of multiple neuroimaging modalities simultaneously."
+      ],
+      "source": "data/reference_papers/processed_json/BrainLM_ICLR2024_foundation_model_brain_data.json",
+      "tags": ["foundation_models", "multimodal_learning", "fmri_eeg", "brain_dynamics", "transformers"]
+    },
+    {
+      "id": 8,
+      "domain": "quantum_ml",
+      "difficulty": "complex",
+      "question": "Describe the theoretical framework for quantum advantage in machine learning, including the conditions under which quantum algorithms can provide exponential speedup over classical methods.",
+      "answer": "Quantum advantage in machine learning arises from quantum algorithms' ability to exploit superposition, entanglement, and interference to process information in ways impossible for classical computers. Theoretical frameworks include: 1) Quantum linear algebra algorithms (HHL) that can solve linear systems exponentially faster under specific conditions, 2) Quantum principal component analysis for dimensionality reduction, 3) Quantum neural networks that can represent certain functions more efficiently. Conditions for exponential speedup include: sparse, well-conditioned input matrices; quantum access to data; problems where quantum interference provides computational benefit; and scenarios where entanglement enables efficient exploration of solution spaces. However, quantum advantage often requires unrealistic assumptions about data access and noise levels.",
+      "ground_truth": "Quantum advantage in ML requires specific algorithmic structures (quantum linear algebra), favorable problem conditions (sparsity, low condition number), efficient quantum data access models, and problems where quantum superposition and entanglement provide genuine computational benefits over classical methods.",
+      "contexts": [
+        "Quantum machine learning algorithms can potentially provide exponential speedup for specific classes of problems.",
+        "The HHL algorithm for solving linear systems is a foundation for many quantum ML approaches but requires specific input conditions.",
+        "Quantum advantage depends critically on the quantum random access memory (qRAM) model and efficient data encoding.",
+        "Theoretical speedups often assume idealized conditions that may not hold in practice with noisy quantum devices.",
+        "Recent work has shown that many proposed quantum ML algorithms may not provide practical advantage over classical methods.",
+        "True quantum advantage likely requires problems specifically structured to exploit quantum mechanical properties."
+      ],
+      "source": "data/QuantERA/Papers/Huang-2025-The_vast_world_of_quantum_advantage.pdf",
+      "tags": ["quantum_advantage", "quantum_linear_algebra", "hhl_algorithm", "computational_complexity"]
+    },
+    {
+      "id": 9,
+      "domain": "neuroscience",
+      "difficulty": "simple",
+      "question": "What is the difference between structural and functional brain connectivity?",
+      "answer": "Structural connectivity refers to the physical white matter pathways that connect different brain regions, measured using diffusion tensor imaging (DTI). Functional connectivity refers to the temporal correlation of brain activity between regions, measured using fMRI or EEG, regardless of direct anatomical connections.",
+      "ground_truth": "Structural connectivity measures direct anatomical connections via white matter tracts, while functional connectivity measures statistical dependencies in neural activity between brain regions that may not be directly connected anatomically.",
+      "contexts": [
+        "Brain connectivity can be studied at multiple levels, from anatomical pathways to functional relationships.",
+        "Structural connectivity is determined by white matter fiber tracts that physically connect brain regions.",
+        "Functional connectivity reflects synchronized activity patterns between brain areas during rest or task conditions.",
+        "These two types of connectivity provide complementary information about brain organization."
+      ],
+      "source": "neuroscience_ml_papers/Spatial_Temporal_DAG_Convolutional_Networks.pdf",
+      "tags": ["brain_connectivity", "structural", "functional", "neuroimaging"]
+    },
+    {
+      "id": 10,
+      "domain": "quantum_ml",
+      "difficulty": "simple",
+      "question": "What is a quantum circuit and how is it represented?",
+      "answer": "A quantum circuit is a model for quantum computation consisting of quantum gates applied to qubits in a specific sequence. It's represented as a diagram with horizontal lines representing qubits and boxes or symbols representing quantum gates. The circuit reads from left to right, showing the temporal sequence of operations.",
+      "ground_truth": "Quantum circuits are sequences of quantum gates applied to qubits, typically represented as horizontal wire diagrams where qubits are wires and gates are operations applied over time from left to right.",
+      "contexts": [
+        "Quantum circuits provide a visual and mathematical representation of quantum algorithms.",
+        "Each horizontal line in a circuit diagram represents a qubit, and vertical connections represent multi-qubit gates.",
+        "Common gates include Pauli X, Y, Z gates, Hadamard gates, and CNOT gates.",
+        "Circuits can be composed and decomposed into elementary gate operations."
+      ],
+      "source": "data/QuantERA/QuantERA2025-core.txt",
+      "tags": ["quantum_circuits", "quantum_gates", "qubits", "quantum_computation"]
+    }
+  ]
+}

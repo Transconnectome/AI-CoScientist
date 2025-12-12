@@ -6,161 +6,241 @@ services:
     image: postgres:16-alpine
     container_name: ai-coscientist-postgres
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: ai_coscientist
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-ai_coscientist}
+      PGDATA: /var/lib/postgresql/data/pgdata
     ports:
-      - "5432:5432"
+      - "${POSTGRES_PORT:-5432}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
       interval: 10s
       timeout: 5s
       retries: 5
+    restart: unless-stopped
+    networks:
+      - coscientist-network
 
-  # Redis Cache
+  # Redis Cache & Celery Broker
   redis:
     image: redis:7-alpine
     container_name: ai-coscientist-redis
+    command: redis-server --appendonly yes ${REDIS_PASSWORD:+--requirepass $REDIS_PASSWORD}
     ports:
-      - "6379:6379"
+      - "${REDIS_PORT:-6379}:6379"
     volumes:
       - redis_data:/data
     healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
       interval: 10s
       timeout: 5s
       retries: 5
+    restart: unless-stopped
+    networks:
+      - coscientist-network
 
-  # RabbitMQ Message Broker
-  rabbitmq:
-    image: rabbitmq:3-management-alpine
-    container_name: ai-coscientist-rabbitmq
-    environment:
-      RABBITMQ_DEFAULT_USER: guest
-      RABBITMQ_DEFAULT_PASS: guest
-    ports:
-      - "5672:5672"   # AMQP
-      - "15672:15672" # Management UI
-    volumes:
-      - rabbitmq_data:/var/lib/rabbitmq
-    healthcheck:
-      test: ["CMD", "rabbitmq-diagnostics", "ping"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
-  # ChromaDB Vector Database
-  chromadb:
-    image: chromadb/chroma:latest
-    container_name: ai-coscientist-chromadb
-    ports:
-      - "8001:8000"
-    volumes:
-      - chromadb_data:/chroma/chroma
-    environment:
-      IS_PERSISTENT: "TRUE"
-      ANONYMIZED_TELEMETRY: "FALSE"
-
-  # API Gateway (FastAPI)
+  # FastAPI Application
   api:
     build:
       context: .
-      dockerfile: docker/Dockerfile
+      dockerfile: Dockerfile
+      args:
+        PYTHON_VERSION: 3.11
     container_name: ai-coscientist-api
-    command: uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
-    ports:
-      - "8000:8000"
+    environment:
+      # Database
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-ai_coscientist}
+
+      # Redis
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-}
+
+      # Application
+      APP_NAME: ${APP_NAME:-AI-CoScientist}
+      APP_VERSION: ${APP_VERSION:-1.0.0}
+      DEBUG: ${DEBUG:-false}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+
+      # API Keys
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      ARXIV_API_KEY: ${ARXIV_API_KEY:-}
+      PUBMED_API_KEY: ${PUBMED_API_KEY:-}
+
+      # Celery (using Redis as broker)
+      CELERY_BROKER_URL: redis://${REDIS_PASSWORD:+:$REDIS_PASSWORD@}redis:6379/0
+      CELERY_RESULT_BACKEND: redis://${REDIS_PASSWORD:+:$REDIS_PASSWORD@}redis:6379/0
     volumes:
-      - .:/app
-      - ./uploads:/app/uploads
-    env_file:
-      - .env
+      - ./papers_collection:/app/papers_collection
+      - ./logs:/app/logs
+    ports:
+      - "${API_PORT:-8000}:8000"
     depends_on:
       postgres:
         condition: service_healthy
       redis:
         condition: service_healthy
-      rabbitmq:
-        condition: service_healthy
-      chromadb:
-        condition: service_started
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
       interval: 30s
       timeout: 10s
       retries: 3
+      start_period: 40s
+    restart: unless-stopped
+    networks:
+      - coscientist-network
+    command: uvicorn src.main:app --host 0.0.0.0 --port 8000 --workers 4
 
-  # Celery Worker
+  # Celery Worker (for async paper downloads & processing)
   celery-worker:
     build:
       context: .
-      dockerfile: docker/Dockerfile
+      dockerfile: Dockerfile
+      args:
+        PYTHON_VERSION: 3.11
     container_name: ai-coscientist-celery-worker
-    command: celery -A src.core.celery worker --loglevel=info
+    environment:
+      # Database
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-ai_coscientist}
+
+      # Redis
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-}
+
+      # Application
+      APP_NAME: ${APP_NAME:-AI-CoScientist}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+
+      # API Keys
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      ARXIV_API_KEY: ${ARXIV_API_KEY:-}
+      PUBMED_API_KEY: ${PUBMED_API_KEY:-}
+
+      # Celery
+      CELERY_BROKER_URL: redis://${REDIS_PASSWORD:+:$REDIS_PASSWORD@}redis:6379/0
+      CELERY_RESULT_BACKEND: redis://${REDIS_PASSWORD:+:$REDIS_PASSWORD@}redis:6379/0
     volumes:
-      - .:/app
-    env_file:
-      - .env
+      - ./papers_collection:/app/papers_collection
+      - ./logs:/app/logs
     depends_on:
+      postgres:
+        condition: service_healthy
       redis:
         condition: service_healthy
-      rabbitmq:
-        condition: service_healthy
     restart: unless-stopped
+    networks:
+      - coscientist-network
+    command: celery -A src.tasks.celery_app worker --loglevel=info --concurrency=4
 
-  # Celery Beat (Scheduler)
+  # Celery Beat (for scheduled paper syncs)
   celery-beat:
     build:
       context: .
-      dockerfile: docker/Dockerfile
+      dockerfile: Dockerfile
+      args:
+        PYTHON_VERSION: 3.11
     container_name: ai-coscientist-celery-beat
-    command: celery -A src.core.celery beat --loglevel=info
+    environment:
+      # Database
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-ai_coscientist}
+
+      # Redis
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-}
+
+      # Application
+      APP_NAME: ${APP_NAME:-AI-CoScientist}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+
+      # API Keys
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      ARXIV_API_KEY: ${ARXIV_API_KEY:-}
+      PUBMED_API_KEY: ${PUBMED_API_KEY:-}
+
+      # Celery
+      CELERY_BROKER_URL: redis://${REDIS_PASSWORD:+:$REDIS_PASSWORD@}redis:6379/0
+      CELERY_RESULT_BACKEND: redis://${REDIS_PASSWORD:+:$REDIS_PASSWORD@}redis:6379/0
     volumes:
-      - .:/app
-    env_file:
-      - .env
+      - ./papers_collection:/app/papers_collection
+      - ./logs:/app/logs
     depends_on:
+      postgres:
+        condition: service_healthy
       redis:
         condition: service_healthy
     restart: unless-stopped
+    networks:
+      - coscientist-network
+    command: celery -A src.tasks.celery_app beat --loglevel=info
 
-  # Prometheus (Metrics)
+  # Prometheus (Metrics Collection)
   prometheus:
-    image: prom/prometheus:latest
+    image: prom/prometheus:v2.47.0
     container_name: ai-coscientist-prometheus
-    ports:
-      - "9090:9090"
     volumes:
-      - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
       - prometheus_data:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
-
-  # Grafana (Visualization)
-  grafana:
-    image: grafana/grafana:latest
-    container_name: ai-coscientist-grafana
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+      - '--storage.tsdb.retention.time=30d'
     ports:
-      - "3001:3000"
+      - "${PROMETHEUS_PORT:-9090}:9090"
+    restart: unless-stopped
+    networks:
+      - coscientist-network
+    depends_on:
+      - api
+
+  # Grafana (Metrics Visualization)
+  grafana:
+    image: grafana/grafana:10.1.0
+    container_name: ai-coscientist-grafana
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD}
+      GF_SERVER_ROOT_URL: ${GRAFANA_ROOT_URL:-http://localhost:3000}
+      GF_INSTALL_PLUGINS: ${GRAFANA_PLUGINS:-}
     volumes:
       - grafana_data:/var/lib/grafana
-    environment:
-      GF_SECURITY_ADMIN_PASSWORD: admin
-      GF_USERS_ALLOW_SIGN_UP: "false"
+      - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ./monitoring/grafana/datasources:/etc/grafana/provisioning/datasources
+    ports:
+      - "${GRAFANA_PORT:-3000}:3000"
+    restart: unless-stopped
+    networks:
+      - coscientist-network
     depends_on:
       - prometheus
 
 volumes:
   postgres_data:
+    driver: local
   redis_data:
-  rabbitmq_data:
-  chromadb_data:
+    driver: local
   prometheus_data:
+    driver: local
   grafana_data:
+    driver: local
 
 networks:
-  default:
-    name: ai-coscientist-network
+  coscientist-network:
+    driver: bridge

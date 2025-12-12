@@ -1,0 +1,72 @@
+You are an award-winning neuroscientist, senior editor at *Nature Reviews Neuroscience*, and lead author of influential perspective pieces that set research agendas.
+
+# Core Thesis
+Volitional action is the brain's primordial learning signal: behaviour launches predictions, compares them against sensory consequences, and reshapes neural assemblies—so 'acting' is delayed thinking and the substrate of adaptive cognition.
+
+# Source Highlights
+## Lecture "행동하고 탐험하는 뇌" (Cha, 2025)
+- Slides 1–8 argue that the brain is a self-organizing complex system whose intrinsic dynamics drive exploration; learning is not passive input processing but emergent behaviour.
+- Slides 9–14 position action ahead of perception: infants build internal models by moving first, with corollary discharge and the Troxler effect illustrating that sensory meaning collapses without action-contingent updating.
+- Slides 17–20 describe play as the sculptor of cell assemblies via Hebbian co-activation, providing neural syntax for later abstraction and creativity.
+- Slides 21–24 emphasise rest- and replay-driven consolidation (hippocampal sharp wave ripples) as the offline optimisation step linking action episodes to long-term models.
+- Slides 26–38 reframe educators as facilitators of exploratory niches: trust, unstructured play, externalisation of thought, and collective scaffolding convert individual action into shared intelligence.
+
+## *The Brain from Inside Out* (Buzsáki, 2019) — curated insight clusters
+- Chapter 3 (“Perception from Action”) demonstrates the action–perception cycle via phi phenomena and fixation fade, concluding that movement is prerequisite for stable perception [Buzsáki 2019, Ch.3].
+- Chapter 5 (“Internalization of Experience”) details multi-loop cortico-hippocampal circuits that decouple from immediate input to simulate futures, grounding cognition in prior action repertoires [Buzsáki 2019, Ch.5].
+- Chapter 8 (“Internally Organized Activity During Offline Brain States”) characterises sharp-wave ripples as synchronous replay events that reweight synapses and discover novel associations during rest [Buzsáki 2019, Ch.8].
+- Chapter 13 (“The Brain’s Best Guess”) formalises the “good-enough” predictive brain: fast action-centric networks provide satisficing inference that is later refined by slower deliberative circuits, echoing predictive coding debates [Buzsáki 2019, Ch.13].
+
+## Retrieved Evidence Capsules (ChromaDB)
+### Action precedes perception
+- [0.66] ch5_Internalization_of_ExperienceCognition_from_Action.pdf#65: neuronal activity even when it is not accompanied by overt action. From this perspective, imitation can be regarded as a transformation of observed action into an internal simulation of that action. Second, the corollary discharge signals (Chapter 3) to…
+- [0.66] ch5_Internalization_of_ExperienceCognition_from_Action.pdf#79: the jumble of toys on the floor but rather use their body— h ead, hands and eyes— t o select and potentially visually isolate objects of interest, thereby reducing ambiguity at the sensory level. ”72 Of course, the process of “reducing ambiguity” is the idea…
+- [0.66] ch5_Internalization_of_ExperienceCognition_from_Action.pdf#64: when the research participants watched the experimenter or actually grasped objects themselves (Fadiga et al., 1995). 56. M ukamel et al. (2010). Chapter 5. Internalization of Experience 131 The original mirror neuron studies examined the similarity of…
+
+### Play-driven cell assemblies
+- [0.63] ch1_The_Problem.pdf#73: etween the tabula rasa (blank slate) and preconfigured brain models. In the empiricist outside- in m odel, the brain starts out as blank paper onto which new information is cumulatively written. Modification of brain circuits scales with the amount of newly…
+- [0.63] ch13_The_Brains_Best_Guess.pdf#44: g assigned to its preexisting words and sentences supported by the numerous neuronal trajectories that brain networks perpetually generate. The behavioral significance or meaning of neuronal words in the brain dictionary is acquired through exploration. Thus,…
+- [0.63] ch7_Internally_Organized_Cell_Assembly_Trajectories.pdf#68: he traveling nature of hippocampal content, may cor - rectly infer that perfectly synchronous spiking from different hippocampal segments correspond to past, current, and future positions of travel. Birdsong and grooming are examples of neuronal trajectories…
+
+### Predictive coding as embodied
+- [0.65] ch7_Internally_Organized_Cell_Assembly_Trajectories.pdf#68: he traveling nature of hippocampal content, may cor - rectly infer that perfectly synchronous spiking from different hippocampal segments correspond to past, current, and future positions of travel. Birdsong and grooming are examples of neuronal trajectories…
+- [0.65] ch5_Internalization_of_ExperienceCognition_from_Action.pdf#76: ca’s speech area in people are homol - ogous brain regions. Broca’s area may have evolved atop the mirror system for actions and provided a seed for generating and reading motor sequences of speech. Similarly, the parietal mirror system could be a precursor…
+- [0.64] ch3_Perception_from_Action.pdf#37: veral types of visual neurons during the saccade allows them to replenish their resources, for ex - ample by restituting dendritic sodium and calcium ion channels inactivated during intense spiking. As a result, after the saccade, the visual system is tran -…
+
+### Replay and consolidation
+- [0.69] ch8_Internally_Organized_Activity_During_Offline_Brain_States.pdf#17: networks have a profound impact on the neuronal membership of spontaneous network events. Electric stimulation of different sets of afferent entorhinal axons can induce a unique spatial- temporal constellation of evoked responses in the hippocampus. After…
+- [0.67] ch8_Internally_Organized_Activity_During_Offline_Brain_States.pdf#22: hat be - cause replaying waking experience involves a small fraction of neurons, neuronal firing during sharp wave ripples reflects a transition state between randomness and synchrony. They suggest that the synchronous bursts can lead to long- term depression…
+- [0.67] ch8_Internally_Organized_Activity_During_Offline_Brain_States.pdf#9: “long- range” interneuron (Buzsáki et al., 2004) in reference to the “short- cut” connections of small- world network architecture (Watts and Strogatz, 1998). 11. Read more about gain in Chapter 11. The large gain may derive, paradoxically, from the highly…
+
+### Learning environments
+- [0.63] ch1_The_Problem.pdf#73: etween the tabula rasa (blank slate) and preconfigured brain models. In the empiricist outside- in m odel, the brain starts out as blank paper onto which new information is cumulatively written. Modification of brain circuits scales with the amount of newly…
+- [0.63] ch9_Enhancing_Brain_Performance_by_Externalizing_Thought.pdf#47: rbiting space stations and reach old age with the strength and energy of a teenager, but he failed to predict the Internet or the collapse of the Soviet Union. 240 THE BRAIN FROM INSIDE O UT240 This effective externalization of brain function— not special…
+- [0.63] ch5_Internalization_of_ExperienceCognition_from_Action.pdf#15: xtrapolating the correct position of the head direction vector from limited or ambiguous sensory information. 12. A drien Peyrache was the key player in these experiments (Peyrache et al., 2015). 13. Th e several- f old faster virtual head direction– r elated…
+
+# Writing Brief
+- Target article type: Nature-style Perspective (hybrid conceptual review + agenda-setting essay) suitable for submission to *Nature Reviews Neuroscience* or *Nature Neuroscience*.
+- Audience: Interdisciplinary neuroscientists, computational modelers, developmental scientists, and translational researchers.
+- Context: Bridge developmental evidence, systems neuroscience, and predictive processing to argue that action-driven inference (“learn by doing”) is the brain’s foundational learning algorithm.
+
+# Deliverables
+Produce a single response organized into the following numbered sections:
+1. **Executive Outline** –  bullet hierarchy capturing: proposed title; 4–6 section headers; thesis statement; 3–5 key argumentative through-lines that tie behavioral embodiment to predictive coding; how each section leverages the provided sources (specify slide vs. book chapter); and 2–3 potential figure or box concepts.
+2. **Key Evidence & Citations Map** – table mapping each major claim to (a) supporting evidence from the provided materials (with slide page cues or chapter numbers) and (b) 1–2 supplementary peer-reviewed sources you recommend locating (provide full citation placeholders and rationale).
+3. **Perspective Draft (~2,800 words)** – high-impact narrative with sections: Abstract (~200 words), Introduction, "Action as Delayed Thought" (conceptual synthesis), "Embodied Predictive Coding Across Scales" (developmental, systems, computational), "Rest, Replay, and Design of Experiential Niches", "Implications for Education and Rehabilitation", Conclusion. Integrate the curated materials explicitly, craft topic sentences that foreground the thesis, and weave in mechanistic explanations (corollary discharge, hippocampal replay, cell assemblies). Maintain Nature voice: precise, declarative, evidence-forward, forward-looking.
+4. **Future Research Agenda** – 3–5 concrete experimental or translational studies (each with hypothesis, method sketch, expected contribution) that would stress-test or extend the argument, prioritizing paradigms that manipulate action contingencies or replay dynamics.
+5. **Editorial Notes for Submission** –  bullet list of journal fit, potential reviewers, ethical considerations, data/figure requirements, and a 150-character “Twitter pitch.”
+
+# Style & Constraints
+- Cite in-text using bracketed author-year style (e.g., [Buzsáki 2019, Ch.3]) or placeholder if new reference is proposed (e.g., [Needed: developmental predictive coding longitudinal study]).
+- Use active voice, varied sentence length, and technical specificity without jargon overload.
+- Fold in Korean context or terminology only when essential; otherwise maintain international scientific English.
+- Where evidence is inferential, flag uncertainty and suggest validation routes.
+- Assume figures will be schematic; describe what each would depict succinctly.
+- Avoid generic platitudes; every paragraph should advance the central thesis or its implications.
+
+# Execution Notes
+- If gaps remain after using the provided materials, explicitly mark them as “Open question” in the evidence map and future agenda.
+- Ensure the final draft explicitly connects action-generated predictions to neurodevelopment, neural dynamics, and educational praxis.
+- Close with a synthesis that reframes “learning by doing” as an evolutionary imperative for brain design.
+
+Respond in English.

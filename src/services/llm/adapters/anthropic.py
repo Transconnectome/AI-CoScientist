@@ -22,8 +22,11 @@ class AnthropicAdapter(LLMServiceInterface):
         """Initialize Anthropic adapter."""
         self.client = AsyncAnthropic(api_key=api_key)
 
-        # Model pricing (per 1M tokens)
+        # Model pricing (per 1M tokens) - Updated 2025
         self.pricing = {
+            "claude-sonnet-4-5": {"input": 3.0, "output": 15.0},  # Claude Sonnet 4.5 (Sep 2025)
+            "claude-3-5-sonnet-20241022": {"input": 3.0, "output": 15.0},  # Claude 3.5 Sonnet (Oct 2024)
+            "claude-3-5-sonnet-20240620": {"input": 3.0, "output": 15.0},  # Claude 3.5 Sonnet (Jun 2024)
             "claude-3-opus-20240229": {"input": 15.0, "output": 75.0},
             "claude-3-sonnet-20240229": {"input": 3.0, "output": 15.0},
             "claude-3-haiku-20240307": {"input": 0.25, "output": 1.25}
@@ -106,7 +109,7 @@ class AnthropicAdapter(LLMServiceInterface):
         """Get default config for task type."""
         return LLMConfig(
             provider=ModelProvider.ANTHROPIC,
-            model="claude-3-sonnet-20240229",
+            model="claude-sonnet-4-5",  # Claude Sonnet 4.5 (Sep 2025)
             temperature=0.7,
-            max_tokens=2000
+            max_tokens=8000  # Claude Sonnet 4.5 supports 8K output tokens
         )

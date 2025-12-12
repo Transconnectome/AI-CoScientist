@@ -1,0 +1,36 @@
+{
+  "success": [
+    "A Review of and Roadmap for Data Science and Machine Learning for the Neuropsychiatric Phenotype of Autism .pdf",
+    "Altered structural brain asymmetry in autism spectrum disorder in a study of 54 datasets.pdf",
+    "Automated analysis of stereotypical movements in videos of children with autism spectrum disorder.pdf",
+    "BrainCharts for the Human Lifespan.pdf",
+    "BrainLM_ICLR2024.pdf",
+    "CONCH_Pathology_VL_Model_2023.pdf",
+    "Computational methods to measure patterns of gaze in toddlers with autism spectrum disorder.pdf",
+    "DIVER-0 - A Fully Channel Equivariant EEG Foundation Model .pdf",
+    "DNA language model GROVER learns sequence context in the human genome.pdf",
+    "Development and validation of a joint attention\u2013based deep learning system for detection and symptom severity assessment of autism spectrum disorder.pdf",
+    "Discovering the gene-brain-behavior link in autism via generative machine learning.pdf",
+    "Early brain development in infants at high risk for autism spectrum disorder.pdf",
+    "Eye-tracking\u2013based measurement of social visual engagement compared with expert clinical diagnosis of autism.pdf",
+    "Functional neuroimaging of high-risk 6-month-old infants predicts a diagnosis of autism at 24 months of age.pdf",
+    "Gene_LLMs_Survey_2025.pdf",
+    "Generalist_Medical_AI_Moor_2023.pdf",
+    "Genome modeling and design across all domains of life with Evo 2 .pdf",
+    "MMGPL_Multimodal_Medical_Graph_2023.pdf",
+    "Med-Gemini_2024.pdf",
+    "Molecular cascades and cell type\u2013specific signatures in ASD revealed by single-cell genomics.pdf",
+    "NeurIPS-2023-swift-swin-4d-fmri-transformer-Paper-Conference.pdf",
+    "Nicheformer- a foundation model for single-cell and spatial omics.pdf",
+    "Population Transformer- Learning Population-level Representations of Neural Activity .pdf",
+    "Swin fMRI Transformer Predicts Early Neurodevelopmental Outcomes from Neonatal fMRI.pdf",
+    "Triage and priority-based healthcare diagnosis using artificial intelligence for autism spectrum disorder and gene contribution- A systematic review .pdf",
+    "Zebrafish_Autism_Shank3b_2018.pdf"
+  ],
+  "failed": [
+    "Neural_Activity_Foundation_Model_BioRxiv_2023.pdf"
+  ],
+  "total_chunks_l0": 1387,
+  "total_chunks_l1": 112,
+  "total_chunks_l2": 26
+}

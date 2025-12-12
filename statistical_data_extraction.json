@@ -1,0 +1,2030 @@
+{
+  "queries": [
+    {
+      "query": "diagnostic accuracy sensitivity specificity AUC autism",
+      "category": "diagnostic_accuracy",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 3,
+      "findings": [
+        {
+          "paper_title": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "section": "case\u2013control studies",
+          "category": "diagnostic_accuracy",
+          "statistics": {
+            "confidence_interval": [
+              {
+                "lower": 66.0,
+                "upper": 68.0
+              }
+            ]
+          },
+          "raw_text": "After the human-extracted features are\nobtained, they are provided as input into an ML model, as in a study by Tariq et al (64), who\nachieved an 92% AUC (area under the curve) score using 116 videos of children with autism and46videosoftypicallydevelopingchildren.Thispipelinewasreplicatedin50neurotypicalchildren\nand50childrenwithautismfromBangladesh,achievinganAUCof85%(65)anddemonstrating\nthat this method has the potential to generalize to diverse global populations Animportantdesignconsideratio",
+          "relevance_score": -0.49424266815185547
+        },
+        {
+          "paper_title": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "section": "case\u2013control studies",
+          "category": "diagnostic_accuracy",
+          "statistics": {
+            "confidence_interval": [
+              {
+                "lower": 59.0,
+                "upper": 63.0
+              },
+              {
+                "lower": 98.0,
+                "upper": 100.0
+              },
+              {
+                "lower": 59.0,
+                "upper": 63.0
+              }
+            ]
+          },
+          "raw_text": "This\nrequires careful considerations of design,feasibility testing,and tests for clinical effectiveness us-\ning useful endpoints In this section, we focus on only the diagnostic and therapeutic tools that\nhave passed through regulatory review and have received market clearance by the US Food andDrug Administration (FDA) Diagnostictoolsforautismhavestartedtoenterthemarket.Cognoa(59\u201363)hasthefirstFDA-\napproved digital diagnostic, called Canvas Dx, that uses AI for clinical decision support in thei",
+          "relevance_score": -4.319056510925293
+        },
+        {
+          "paper_title": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "section": "data modalities and acquisition",
+          "category": "diagnostic_accuracy",
+          "statistics": {
+            "confidence_interval": [
+              {
+                "lower": 23.0,
+                "upper": 26.0
+              }
+            ]
+          },
+          "raw_text": "Wecoversuchstudiesinthisreview.Recentinnovations,however,centeraroundcollectingthese\ndata in naturalistic settings,and there is extensive room for novelty around the acquisition of ho-\nmogeneous and structured data streams.Stanford University\u2019s GuessWhat project,for example,\nprovides a framework for capturing videos of children with autism enriched for social behaviors\nthrough a charades-style game (19) In this game, a parent or caregiver places a smartphone on\ntheirforeheadwhilethechildactsoutc",
+          "relevance_score": -9.69094467163086
+        }
+      ]
+    },
+    {
+      "query": "machine learning classification performance autism ADHD",
+      "category": "diagnostic_accuracy",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 1,
+      "findings": [
+        {
+          "paper_title": "Published as a conference paper at ICLR 2024",
+          "section": "abstract",
+          "category": "diagnostic_accuracy",
+          "statistics": {
+            "sample_size": [
+              3662.0
+            ]
+          },
+          "raw_text": "This highlights the ben-\ne\ufb01ts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By \ufb01ne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identi\ufb01es intrinsic func-\ntion",
+          "relevance_score": -9.35072135925293
+        }
+      ]
+    },
+    {
+      "query": "ROC curve diagnostic performance developmental disorders",
+      "category": "diagnostic_accuracy",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 1,
+      "findings": [
+        {
+          "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+          "section": "discussion",
+          "category": "diagnostic_accuracy",
+          "statistics": {
+            "sample_size": [
+              59.0
+            ]
+          },
+          "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+          "relevance_score": -8.120153427124023
+        }
+      ]
+    },
+    {
+      "query": "predictive accuracy early detection autism",
+      "category": "diagnostic_accuracy",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 0,
+      "findings": []
+    },
+    {
+      "query": "sample size participants cohort study autism",
+      "category": "sample_sizes",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 5,
+      "findings": [
+        {
+          "paper_title": "Kundu et al., Sci. Adv. 10, eadl5307 (2024) 12 June 2024",
+          "section": "resul ts",
+          "category": "sample_sizes",
+          "statistics": {
+            "sample_size": [
+              118.0,
+              48.0,
+              40.0
+            ]
+          },
+          "raw_text": "Control subjects also had a chromosome \nmicroarray, neurologic exam, a clinical psychologist interview, and a \nphotograph evaluation for dysmorphology Subjects in the cohort were chosen with the aim of matching age \nand gender as closely as possible within each subgroup This study \ncohort consisted of high- resolution structural brain images from 206 \nindividuals belonging to control (N \u00a0=\u00a0118), deletion (N \u00a0=\u00a048), and \nduplication ( N\u00a0=\u00a040) cohorts Image acquisition\nT1- weighted magnetization- ",
+          "relevance_score": -1.6967003345489502
+        },
+        {
+          "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+          "section": "discussion",
+          "category": "sample_sizes",
+          "statistics": {
+            "sample_size": [
+              59.0
+            ]
+          },
+          "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+          "relevance_score": -3.823558807373047
+        },
+        {
+          "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+          "section": "results",
+          "category": "sample_sizes",
+          "statistics": {
+            "p_value": [
+              0.05
+            ]
+          },
+          "raw_text": "All rights reserved letter reSeArCHextended Data table 8 | Group differences in developmental trajectories and cross-sectional volumes by age for males\nThe primary analysis of brain volume trajectories included only those male and female study participants with three completed visits (6, 12 and 24\u00a0months), to best depict longitudinal trajectories \nover time Separate analyses on males and females are likely to be inadequately powered owing to small subsample size (males = 13, females = 2) and the",
+          "relevance_score": -5.11240291595459
+        },
+        {
+          "paper_title": "ARTICLE",
+          "section": "discussion",
+          "category": "sample_sizes",
+          "statistics": {
+            "sample_size": [
+              0.0
+            ]
+          },
+          "raw_text": "This is a lim-\nitation of the study We did not analyze handedness in the present\nstudy, as this had no signi \ufb01cant effect on the same brain asym-\nmetry measures as analyzed here, in studies of healthy individuals\ncomprising more than 15,000 participants\n43,44 In contrast to some prior studies of ASD, we did not adjust for\nIQ as a covariate effect in our main, case \u2013control analysis Rather,\nwe carried out post hoc analysis of possible associations between\nIQ and brain asymmetries, separately in c",
+          "relevance_score": -5.333907604217529
+        },
+        {
+          "paper_title": "Kundu et al., Sci. Adv. 10, eadl5307 (2024) 12 June 2024",
+          "section": "resul ts",
+          "category": "sample_sizes",
+          "statistics": {
+            "sample_size": [
+              206.0
+            ]
+          },
+          "raw_text": "RESUL TS\nSubject demographics\nSubject demographics are summarized in Table\u00a01 The duplication and \ndeletion carriers had a range of diagnoses, summarized in Table\u00a02, with \nmultiple diagnoses per individual being most common A one- way \nanalysis of variance (ANOV A) demonstrates that brain tissue volume \ndiffers significantly among duplication carriers, deletion carriers, and \ncontrols However, we report in later sections that brain tissue volume \nalone is not sufficient to distinguish the genetic",
+          "relevance_score": -7.586276054382324
+        }
+      ]
+    },
+    {
+      "query": "number of subjects neuroimaging study developmental disorders",
+      "category": "sample_sizes",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 4,
+      "findings": [
+        {
+          "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+          "section": "discussion",
+          "category": "sample_sizes",
+          "statistics": {
+            "sample_size": [
+              59.0
+            ]
+          },
+          "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+          "relevance_score": -1.8556067943572998
+        },
+        {
+          "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+          "section": "methods",
+          "category": "sample_sizes",
+          "statistics": {
+            "sample_size": [
+              34.0,
+              84.0
+            ],
+            "p_value": [
+              0.05
+            ]
+          },
+          "raw_text": "Exploratory analyses \nwere conducted with a surface map containing 78 regions of interest \n(see Supplementary Information), using an adaptive Hochberg method \nof P < 0.05 The coloured areas show the group effect for the HR-ASD \nversus LR subjects compared to the LR group, the HR-ASD group had \nsignificant expansion in the cortical surface area in the left/right middle \noccipital gyrus and right cuneus (1), right lingual gyrus (2), and to a lesser \nextent in the left inferior temporal gyrus (3), ",
+          "relevance_score": -3.9845738410949707
+        },
+        {
+          "paper_title": "ARTICLE",
+          "section": "methods",
+          "category": "sample_sizes",
+          "statistics": {
+            "sample_size": [
+              31.0
+            ],
+            "effect_size": [
+              15.0
+            ]
+          },
+          "raw_text": "1D) The presence/absence of\ncomorbid conditions had been recorded for 519 of the cases, but only 54 cases\nshowed at least one comorbid condition (which could be ADHD, OCD, depression,anxiety, and/or Tourette \u2019s syndrome\n14) Numbers related to DSM-IV subtypes of\nASD were not collated by the ENIGMA ASD working group, as this subtyping\nscheme has been dropped from DSM-V due to low reliability71 There was not a homogeneous assessment/recruitment process for controls\nacross the 54 data sets, but the ",
+          "relevance_score": -6.088304042816162
+        },
+        {
+          "paper_title": "Kundu et al., Sci. Adv. 10, eadl5307 (2024) 12 June 2024",
+          "section": "introduction",
+          "category": "sample_sizes",
+          "statistics": {
+            "confidence_interval": [
+              {
+                "lower": 19.0,
+                "upper": 21.0
+              },
+              {
+                "lower": 22.0,
+                "upper": 25.0
+              }
+            ]
+          },
+          "raw_text": "Endophenotypes are intermediate \ntraits that can be objectively defined and follow distinct developmen-\ntal trajectories ( 12) However, structural brain imaging in autism is often normal ( 13) Recent papers have used functional magnetic reso-\nnance imaging (14) and electrophysiology ( 15) to further subtype in-\ndividuals with autism, but these modalities are not widely available \noutside of specialized research settings Disentangling the effects of \nCNV on brain structure from other confounding ",
+          "relevance_score": -7.862390518188477
+        }
+      ]
+    },
+    {
+      "query": "patient cohort longitudinal study ADHD",
+      "category": "sample_sizes",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 0,
+      "findings": []
+    },
+    {
+      "query": "effect size Cohen's d statistical power autism",
+      "category": "effect_sizes",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 9,
+      "findings": [
+        {
+          "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+          "section": "methods",
+          "category": "effect_sizes",
+          "statistics": {
+            "p_value": [
+              0.04,
+              0.01,
+              0.99,
+              0.24
+            ],
+            "effect_size": [
+              0.74,
+              0.41,
+              0.88,
+              0.7
+            ]
+          },
+          "raw_text": "Group trajectories were estimated from the random coefficient piecewise \nlinear model (see Methods) The HR-ASD group showed a significantly \nincreased surface area growth rate in the first year of life (from 6 to \n12 months) compared to both the HR-neg ( t289 = 2.01, P = 0.04) and LR \ngroups ( t289 = 2.50, P = 0.01) There were no significant group differences in surface area growth rates in the second year ( Extended Data Table 2 ) Pairwise comparisons of surface area measured at 12 months of ag",
+          "relevance_score": 2.3610639572143555
+        },
+        {
+          "paper_title": "ARTICLE",
+          "section": "methods",
+          "category": "effect_sizes",
+          "statistics": {
+            "sample_size": [
+              35.0,
+              35.0,
+              8.0
+            ]
+          },
+          "raw_text": "Most pairwise correlations between AIs were low, with\nonly 33/78 pairwise correlations either lower than \u22120.3 or > 0.3, with a minimum\nR=\u22120.351 between the inferior parietal surface area AI and supramarginal surface\narea AI, and maximum R=0.487 between the cuneus surface area AI and peri-\ncalcarine surface area AI Cohen \u2019sdeffect sizes  The t-statistic for the factor \u2018diagnosis \u2019in each linear\nmixed effects model was used to calculate Cohen \u2019sd\n75, with\nd\u00bct/C3\u00f0n1\u00fen2\u00de\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03 \ufb03\n\u00f0n1/C3n2",
+          "relevance_score": 1.669635534286499
+        },
+        {
+          "paper_title": "ARTICLE",
+          "section": "methods",
+          "category": "effect_sizes",
+          "statistics": {
+            "sample_size": [
+              35.0,
+              35.0,
+              8.0
+            ],
+            "effect_size": [
+              0.13,
+              0.12
+            ]
+          },
+          "raw_text": "As each linear model included multiple predictor variables, the\npower to detect an effect of diagnosis on AI could not be computed exactly, but we\nobtained an indication of the effect size that would be needed to provide 80%power, had we been using simple ttests and Bonferroni correction for multiple\ntesting, using the \u2018pwr\u2019command in R For this purpose, a signi \ufb01cance level of\n0.0014 (i.e., 0.05/35) was set in the context of multiple testing over the regional andtotal cortical surface area AIs ",
+          "relevance_score": 1.032498836517334
+        },
+        {
+          "paper_title": "Nature | Vol 604 | 21 April 2022 | 525",
+          "section": "results",
+          "category": "effect_sizes",
+          "statistics": {
+            "effect_size": [
+              0.88
+            ]
+          },
+          "raw_text": "3) Individualized centile scores\nWe computed individualized centile scores that benchmarked each \nindividual scan in the context of normative age-related trends (Meth-\nods, \u2018Centile scores and case\u2013control differences\u2019 and Supplementary \nInformation\u00a01\u20136 for further details) This approach is conceptually \nsimilar to quantile rank mapping, as previously reported26,28 ,29, where the typicality or atypicality of each phenotype in each scan is quantified \nby its score on the distribution of phenotypi",
+          "relevance_score": -4.206628799438477
+        },
+        {
+          "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+          "section": "methods",
+          "category": "effect_sizes",
+          "statistics": {
+            "sample_size": [
+              34.0,
+              84.0
+            ],
+            "p_value": [
+              0.05
+            ]
+          },
+          "raw_text": "Exploratory analyses \nwere conducted with a surface map containing 78 regions of interest \n(see Supplementary Information), using an adaptive Hochberg method \nof P < 0.05 The coloured areas show the group effect for the HR-ASD \nversus LR subjects compared to the LR group, the HR-ASD group had \nsignificant expansion in the cortical surface area in the left/right middle \noccipital gyrus and right cuneus (1), right lingual gyrus (2), and to a lesser \nextent in the left inferior temporal gyrus (3), ",
+          "relevance_score": -6.842844009399414
+        },
+        {
+          "paper_title": "Computational Methods to Measure Patterns of Gaze",
+          "section": "discussion",
+          "category": "effect_sizes",
+          "statistics": {
+            "sample_size": [
+              360.0,
+              28.0,
+              366.0,
+              33.0
+            ]
+          },
+          "raw_text": "16We also found differences\nin how toddlers with ASD pay attention to salient socialmoments in the movies, a feature that increased discrimina-tion between toddlers with and without ASD (effect sizeincreased from medium to large) Although any one featureshowed overlap between toddlers with and without ASD, acomputational approach was used to measure and integratemultiple features, obtaining significantly lower overlapbetween the groups We plan to combine multiple gaze fea-tures with other behavi",
+          "relevance_score": -7.375635147094727
+        },
+        {
+          "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+          "section": "methods",
+          "category": "effect_sizes",
+          "statistics": {
+            "p_value": [
+              0.05
+            ]
+          },
+          "raw_text": "The latter part of the first and early second years of life are \ncharacterized by greater neural plasticity relative to later ages and is a \ntime when the social deficits associated with autism are not yet well \nestablished Intervention at this age may prove more efficacious than \nlater in development The fact that we demonstrate group differences \nin surface area growth rate from 6 to 12 months, that very early surface \narea changes are linked to later brain overgrowth in the second year, \nand ",
+          "relevance_score": -8.323383331298828
+        },
+        {
+          "paper_title": "Computational Methods to Measure Patterns of Gaze",
+          "section": "discussion",
+          "category": "effect_sizes",
+          "statistics": {
+            "sample_size": [
+              360.0,
+              28.0,
+              366.0,
+              33.0
+            ]
+          },
+          "raw_text": "Our goal is to assess multiple types ofbehavioral features, including gaze, and use all featuresFigure 2 Gaze Patterns During Salient Social Moments\nTime spent looking at right side\nof the screen, %IntervalA\n0 20 40 60 80 100\nTime spent looking at right side\nof the screen, %Entire movieB\n0 20 40 60 80 100Typical development\n(n = 360)ASD(n= 28) Typical development(n = 366) ASD(n = 33)Movie timeline\nDensity\nDensity\nChildren\u2019s gaze behavior was measured during a salient segment of the movie, during",
+          "relevance_score": -8.713319778442383
+        },
+        {
+          "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+          "section": "methods",
+          "category": "effect_sizes",
+          "statistics": {
+            "sample_size": [
+              15.0,
+              91.0
+            ]
+          },
+          "raw_text": "Methods for diagnostic and exclusion criteria) The three groups \nwere comparable in (mean) race/ethnicity (85% white), family income, \nmaternal age at birth (33 years old), infant birth weight (8\u00a0lb), and gesta -\ntional age at birth (39\u00a0weeks) The HR-ASD group had more males than \nthe other two groups (83% of the HR-ASD group was male compared to \n59% and 57% of the LR and HR-neg groups, respectively) and mothers \nin the LR group had a higher education level (Extended Data Table 1) Infants were ",
+          "relevance_score": -9.149099349975586
+        }
+      ]
+    },
+    {
+      "query": "treatment effect intervention outcome developmental disorders",
+      "category": "effect_sizes",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 4,
+      "findings": [
+        {
+          "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+          "section": "methods",
+          "category": "effect_sizes",
+          "statistics": {
+            "p_value": [
+              0.05
+            ]
+          },
+          "raw_text": "The latter part of the first and early second years of life are \ncharacterized by greater neural plasticity relative to later ages and is a \ntime when the social deficits associated with autism are not yet well \nestablished Intervention at this age may prove more efficacious than \nlater in development The fact that we demonstrate group differences \nin surface area growth rate from 6 to 12 months, that very early surface \narea changes are linked to later brain overgrowth in the second year, \nand ",
+          "relevance_score": -7.172938346862793
+        },
+        {
+          "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+          "section": "discussion",
+          "category": "effect_sizes",
+          "statistics": {
+            "sample_size": [
+              59.0
+            ]
+          },
+          "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+          "relevance_score": -7.174237251281738
+        },
+        {
+          "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+          "section": "methods",
+          "category": "effect_sizes",
+          "statistics": {
+            "sample_size": [
+              34.0,
+              84.0
+            ],
+            "p_value": [
+              0.05
+            ]
+          },
+          "raw_text": "Exploratory analyses \nwere conducted with a surface map containing 78 regions of interest \n(see Supplementary Information), using an adaptive Hochberg method \nof P < 0.05 The coloured areas show the group effect for the HR-ASD \nversus LR subjects compared to the LR group, the HR-ASD group had \nsignificant expansion in the cortical surface area in the left/right middle \noccipital gyrus and right cuneus (1), right lingual gyrus (2), and to a lesser \nextent in the left inferior temporal gyrus (3), ",
+          "relevance_score": -9.58326244354248
+        },
+        {
+          "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+          "section": "results",
+          "category": "effect_sizes",
+          "statistics": {
+            "sample_size": [
+              34.0
+            ]
+          },
+          "raw_text": "Results from \nthe 6 month brain volume findings have previously been reported for a subset of \nthis sample34 Subjects were enrolled as HR if they had an older sibling with a clinical diagno -\nsis of ASD confirmed with the Autism Diagnostic Interview-Revised35 (ADI-R) Subjects were enrolled in the LR group if they had an older sibling without evi -\ndence of ASD and no family history of a first or second-degree relative with ASD Exclusion criteria for both groups included the following: (1) diagno",
+          "relevance_score": -9.703184127807617
+        }
+      ]
+    },
+    {
+      "query": "odds ratio risk factor genetic association autism",
+      "category": "effect_sizes",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 1,
+      "findings": [
+        {
+          "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+          "section": "discussion",
+          "category": "effect_sizes",
+          "statistics": {
+            "sample_size": [
+              59.0
+            ]
+          },
+          "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+          "relevance_score": -5.450844764709473
+        }
+      ]
+    },
+    {
+      "query": "biomarker accuracy prediction early diagnosis autism",
+      "category": "biomarker_performance",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 1,
+      "findings": [
+        {
+          "paper_title": "Published as a conference paper at ICLR 2024",
+          "section": "abstract",
+          "category": "biomarker_performance",
+          "statistics": {
+            "sample_size": [
+              3662.0
+            ]
+          },
+          "raw_text": "This highlights the ben-\ne\ufb01ts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By \ufb01ne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identi\ufb01es intrinsic func-\ntion",
+          "relevance_score": -4.8847150802612305
+        }
+      ]
+    },
+    {
+      "query": "genetic biomarker sensitivity specificity developmental disorders",
+      "category": "biomarker_performance",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 3,
+      "findings": [
+        {
+          "paper_title": "RESEARCH ARTICLE SUMMARY\u25e5",
+          "section": "conclusion",
+          "category": "biomarker_performance",
+          "statistics": {
+            "confidence_interval": [
+              {
+                "lower": 5.0,
+                "upper": 13.0
+              }
+            ]
+          },
+          "raw_text": "We perfor med deep single-nucleus RNA sequencing (snRNA-seq)\nto examine cell composition and transcriptomi cs, identifying dysregulation of cell type \u2013specific gene\nregulatory networks (GRNs) in autism spectrum disord er (ASD), which we corrobora ted using sing le-nucleus\nassay for transposase-accessible chromatin with sequ encing (snATAC-seq) and spatial transcriptomics Transcriptomic changes were primarily cell type specific, involving multiple cell types, most prominently\ninterhemispheric and",
+          "relevance_score": -4.977638244628906
+        },
+        {
+          "paper_title": "Published as a conference paper at ICLR 2024",
+          "section": "abstract",
+          "category": "biomarker_performance",
+          "statistics": {
+            "sample_size": [
+              3662.0
+            ]
+          },
+          "raw_text": "This highlights the ben-\ne\ufb01ts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By \ufb01ne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identi\ufb01es intrinsic func-\ntion",
+          "relevance_score": -7.104399681091309
+        },
+        {
+          "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+          "section": "discussion",
+          "category": "biomarker_performance",
+          "statistics": {
+            "sample_size": [
+              59.0
+            ]
+          },
+          "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+          "relevance_score": -7.868966102600098
+        }
+      ]
+    },
+    {
+      "query": "neuroimaging biomarker diagnostic performance ASD",
+      "category": "biomarker_performance",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 2,
+      "findings": [
+        {
+          "paper_title": "RESEARCH ARTICLE SUMMARY\u25e5",
+          "section": "conclusion",
+          "category": "biomarker_performance",
+          "statistics": {
+            "confidence_interval": [
+              {
+                "lower": 5.0,
+                "upper": 13.0
+              }
+            ]
+          },
+          "raw_text": "We perfor med deep single-nucleus RNA sequencing (snRNA-seq)\nto examine cell composition and transcriptomi cs, identifying dysregulation of cell type \u2013specific gene\nregulatory networks (GRNs) in autism spectrum disord er (ASD), which we corrobora ted using sing le-nucleus\nassay for transposase-accessible chromatin with sequ encing (snATAC-seq) and spatial transcriptomics Transcriptomic changes were primarily cell type specific, involving multiple cell types, most prominently\ninterhemispheric and",
+          "relevance_score": -2.0033011436462402
+        },
+        {
+          "paper_title": "Published as a conference paper at ICLR 2024",
+          "section": "abstract",
+          "category": "biomarker_performance",
+          "statistics": {
+            "sample_size": [
+              3662.0
+            ]
+          },
+          "raw_text": "This highlights the ben-\ne\ufb01ts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By \ufb01ne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identi\ufb01es intrinsic func-\ntion",
+          "relevance_score": -5.141347885131836
+        }
+      ]
+    },
+    {
+      "query": "EEG biomarker classification accuracy ADHD",
+      "category": "biomarker_performance",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 2,
+      "findings": [
+        {
+          "paper_title": "Published as a conference paper at ICLR 2024",
+          "section": "abstract",
+          "category": "biomarker_performance",
+          "statistics": {
+            "sample_size": [
+              3662.0
+            ]
+          },
+          "raw_text": "This highlights the ben-\ne\ufb01ts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By \ufb01ne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identi\ufb01es intrinsic func-\ntion",
+          "relevance_score": -2.701106548309326
+        },
+        {
+          "paper_title": "DIVER-0 : A Fully Channel Equivariant EEG Foundation Model",
+          "section": "methods",
+          "category": "biomarker_performance",
+          "statistics": {
+            "sample_size": [
+              123.0
+            ]
+          },
+          "raw_text": "2.3 Finetuning\nFinetuning was done on two downstream datasets, FACED\nand PhysioNet-MI FACED dataset (Chen et al., 2023) con-\ntains 32-channel EEG recordings from 123 subjects who\nwatched 28 emotion-elicitation video clips covering nine\nemotion categories PhysioNet-MI (Goldberger et al., 2000)\nrefers to the EEG Motor Movement/Imagery Dataset from\nPhysioNet (Goldberger et al., 2000), which consists of more\nthan 1500 EEG recordings from 109 volunteers performing\na series of real and imagined motor ",
+          "relevance_score": -4.546681880950928
+        }
+      ]
+    },
+    {
+      "query": "multimodal accuracy performance imaging genomics autism",
+      "category": "multimodal_fusion",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 0,
+      "findings": []
+    },
+    {
+      "query": "fusion approach classification accuracy developmental disorders",
+      "category": "multimodal_fusion",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 1,
+      "findings": [
+        {
+          "paper_title": "Published as a conference paper at ICLR 2024",
+          "section": "abstract",
+          "category": "multimodal_fusion",
+          "statistics": {
+            "sample_size": [
+              3662.0
+            ]
+          },
+          "raw_text": "This highlights the ben-\ne\ufb01ts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By \ufb01ne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identi\ufb01es intrinsic func-\ntion",
+          "relevance_score": -9.403299331665039
+        }
+      ]
+    },
+    {
+      "query": "combined features diagnostic performance autism ADHD",
+      "category": "multimodal_fusion",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 2,
+      "findings": [
+        {
+          "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+          "section": "discussion",
+          "category": "multimodal_fusion",
+          "statistics": {
+            "sample_size": [
+              59.0
+            ]
+          },
+          "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+          "relevance_score": -5.117897987365723
+        },
+        {
+          "paper_title": "RESEARCH ARTICLE SUMMARY\u25e5",
+          "section": "conclusion",
+          "category": "multimodal_fusion",
+          "statistics": {
+            "confidence_interval": [
+              {
+                "lower": 5.0,
+                "upper": 13.0
+              }
+            ]
+          },
+          "raw_text": "We perfor med deep single-nucleus RNA sequencing (snRNA-seq)\nto examine cell composition and transcriptomi cs, identifying dysregulation of cell type \u2013specific gene\nregulatory networks (GRNs) in autism spectrum disord er (ASD), which we corrobora ted using sing le-nucleus\nassay for transposase-accessible chromatin with sequ encing (snATAC-seq) and spatial transcriptomics Transcriptomic changes were primarily cell type specific, involving multiple cell types, most prominently\ninterhemispheric and",
+          "relevance_score": -5.801280975341797
+        }
+      ]
+    },
+    {
+      "query": "longitudinal study sample size follow-up autism",
+      "category": "longitudinal_studies",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 2,
+      "findings": [
+        {
+          "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+          "section": "discussion",
+          "category": "longitudinal_studies",
+          "statistics": {
+            "sample_size": [
+              59.0
+            ]
+          },
+          "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+          "relevance_score": -4.0852203369140625
+        },
+        {
+          "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+          "section": "results",
+          "category": "longitudinal_studies",
+          "statistics": {
+            "p_value": [
+              0.05
+            ]
+          },
+          "raw_text": "All rights reserved letter reSeArCHextended Data table 8 | Group differences in developmental trajectories and cross-sectional volumes by age for males\nThe primary analysis of brain volume trajectories included only those male and female study participants with three completed visits (6, 12 and 24\u00a0months), to best depict longitudinal trajectories \nover time Separate analyses on males and females are likely to be inadequately powered owing to small subsample size (males = 13, females = 2) and the",
+          "relevance_score": -6.075100898742676
+        }
+      ]
+    },
+    {
+      "query": "prospective cohort developmental trajectory ADHD",
+      "category": "longitudinal_studies",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 2,
+      "findings": [
+        {
+          "paper_title": "Nature | Vol 604 | 21 April 2022 | 525",
+          "section": "results",
+          "category": "longitudinal_studies",
+          "statistics": {
+            "sample_size": [
+              2.0,
+              1.0
+            ]
+          },
+          "raw_text": "3 ) coincided with the early \nneonatal and adolescent peaks of height and weight velocity52,53 The \nvelocity of mean cortical thickness peaked even earlier, in the prena -\ntal period at \u22120.38\u00a0years (95% bootstrap CI\u00a0\u22120.4 to\u00a0\u22120.34) (relative to \nbirth), corresponding approximately to mid-gestation This early peak \nin cortical thickness velocity has not been reported previously\u2014to our \nknowledge\u2014in part owing to challenges in acquiring adequate and \nconsistent signal from typical MRI sequences in ",
+          "relevance_score": -7.731069564819336
+        },
+        {
+          "paper_title": "Published as a conference paper at ICLR 2024",
+          "section": "abstract",
+          "category": "longitudinal_studies",
+          "statistics": {
+            "sample_size": [
+              3662.0
+            ]
+          },
+          "raw_text": "This highlights the ben-\ne\ufb01ts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By \ufb01ne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identi\ufb01es intrinsic func-\ntion",
+          "relevance_score": -9.679530143737793
+        }
+      ]
+    },
+    {
+      "query": "attrition rate retention longitudinal study developmental disorders",
+      "category": "longitudinal_studies",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 4,
+      "findings": [
+        {
+          "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+          "section": "results",
+          "category": "longitudinal_studies",
+          "statistics": {
+            "sample_size": [
+              34.0
+            ]
+          },
+          "raw_text": "Results from \nthe 6 month brain volume findings have previously been reported for a subset of \nthis sample34 Subjects were enrolled as HR if they had an older sibling with a clinical diagno -\nsis of ASD confirmed with the Autism Diagnostic Interview-Revised35 (ADI-R) Subjects were enrolled in the LR group if they had an older sibling without evi -\ndence of ASD and no family history of a first or second-degree relative with ASD Exclusion criteria for both groups included the following: (1) diagno",
+          "relevance_score": -6.74128532409668
+        },
+        {
+          "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+          "section": "discussion",
+          "category": "longitudinal_studies",
+          "statistics": {
+            "sample_size": [
+              59.0
+            ]
+          },
+          "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+          "relevance_score": -7.0771355628967285
+        },
+        {
+          "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+          "section": "results",
+          "category": "longitudinal_studies",
+          "statistics": {
+            "p_value": [
+              0.05
+            ]
+          },
+          "raw_text": "All rights reserved letter reSeArCHextended Data table 8 | Group differences in developmental trajectories and cross-sectional volumes by age for males\nThe primary analysis of brain volume trajectories included only those male and female study participants with three completed visits (6, 12 and 24\u00a0months), to best depict longitudinal trajectories \nover time Separate analyses on males and females are likely to be inadequately powered owing to small subsample size (males = 13, females = 2) and the",
+          "relevance_score": -8.859642028808594
+        },
+        {
+          "paper_title": "ARTICLE",
+          "section": "methods",
+          "category": "longitudinal_studies",
+          "statistics": {
+            "sample_size": [
+              31.0
+            ],
+            "effect_size": [
+              15.0
+            ]
+          },
+          "raw_text": "1D) The presence/absence of\ncomorbid conditions had been recorded for 519 of the cases, but only 54 cases\nshowed at least one comorbid condition (which could be ADHD, OCD, depression,anxiety, and/or Tourette \u2019s syndrome\n14) Numbers related to DSM-IV subtypes of\nASD were not collated by the ENIGMA ASD working group, as this subtyping\nscheme has been dropped from DSM-V due to low reliability71 There was not a homogeneous assessment/recruitment process for controls\nacross the 54 data sets, but the ",
+          "relevance_score": -10.372310638427734
+        }
+      ]
+    },
+    {
+      "query": "meta-analysis pooled estimate sensitivity specificity autism",
+      "category": "meta_analysis",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 7,
+      "findings": [
+        {
+          "paper_title": "Eye-Tracking\u2013Based Measurement of Social Visual Engagement",
+          "section": "references",
+          "category": "meta_analysis",
+          "statistics": {
+            "sample_size": [
+              335.0
+            ]
+          },
+          "raw_text": "Referencestandarddiagnosisofautismspectrumdisorderornonautism spectrum disorder (labeled herein as autism andnonautism,respectively)wasmadebyexpertcliniciansusingstandardizedassessments:theAutismDiagnosticObservationKey Points\nQuestion Can eye-tracking\u2013based measurement of social visual\nengagement aid in early diagnosis and assessment of autism inyoung children Findings In a multisite, prospective, double-blind study of 475\nchildren aged 16 to 30 months assessed for autism in 6 specialtyclinics,",
+          "relevance_score": 1.7072844505310059
+        },
+        {
+          "paper_title": "Computational Methods to Measure Patterns of Gaze",
+          "section": "discussion",
+          "category": "meta_analysis",
+          "statistics": {
+            "sample_size": [
+              360.0,
+              28.0,
+              366.0,
+              33.0
+            ]
+          },
+          "raw_text": "Our goal is to assess multiple types ofbehavioral features, including gaze, and use all featuresFigure 2 Gaze Patterns During Salient Social Moments\nTime spent looking at right side\nof the screen, %IntervalA\n0 20 40 60 80 100\nTime spent looking at right side\nof the screen, %Entire movieB\n0 20 40 60 80 100Typical development\n(n = 360)ASD(n= 28) Typical development(n = 366) ASD(n = 33)Movie timeline\nDensity\nDensity\nChildren\u2019s gaze behavior was measured during a salient segment of the movie, during",
+          "relevance_score": -2.086771011352539
+        },
+        {
+          "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+          "section": "results",
+          "category": "meta_analysis",
+          "statistics": {
+            "p_value": [
+              0.01
+            ]
+          },
+          "raw_text": "However, when we analysed only males for group differences, our \nresults remain unchanged (Extended Data Fig 2 and Extended Data Table 8) As a sensitivity analysis, we also tested the model with other demographic, \nfamilial and child birth-related covariates (race, social economic status, mother\u2019s \neducation, mother\u2019s age at birth, birth weight and gestational age), and only the \nsite and sex remained in the model with P < 0.01 The association of 24-month clinical outcome (ADOS, cSBS) with brain",
+          "relevance_score": -4.500948905944824
+        },
+        {
+          "paper_title": "Nature | Vol 604 | 21 April 2022 | 525",
+          "section": "results",
+          "category": "meta_analysis",
+          "statistics": {
+            "sample_size": [
+              913.0
+            ],
+            "p_value": [
+              2.0,
+              2.0
+            ]
+          },
+          "raw_text": "Bottom, the normative trajectory of the median and confidence interval for each phenotype was plotted as a population reference curve Out-of-sample data from a new MRI study were aligned to the corresponding epoch of the normative trajectory, using maximum likelihood to estimate the study specific offsets (random effects) for three moments of the underlying statistical distributions: mean (\n\u03bc), variance ( \u03c3), and skewness \n(\u03bd) in an age- and sex-specific manner Centile scores of each phenotype\u00a0c",
+          "relevance_score": -5.918863773345947
+        },
+        {
+          "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+          "section": "discussion",
+          "category": "meta_analysis",
+          "statistics": {
+            "sample_size": [
+              59.0
+            ]
+          },
+          "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+          "relevance_score": -6.560934543609619
+        },
+        {
+          "paper_title": "Nature | Vol 604 | 21 April 2022 | 525",
+          "section": "references",
+          "category": "meta_analysis",
+          "statistics": {
+            "sample_size": [
+              9.0
+            ]
+          },
+          "raw_text": "Pairwise, sex stratified, post-hoc comparisons were \nconducted using non-parametric Monte Carlo permutation tests \n(10,000 permutations) and thresholded at a Benjamini\u2013Hochberg \nFDR of q\u2009<\u20090.05 Longitudinal stability\nTo use centile scores in a diagnostically meaningful or predictive way, \nthey need to be stable across multiple measuring points To assess this \nintra-individual stability, we calculated the subject-specific IQR of \ncentiles across timepoints for the datasets that included longitudi",
+          "relevance_score": -6.828854084014893
+        },
+        {
+          "paper_title": "ARTICLE",
+          "section": "methods",
+          "category": "meta_analysis",
+          "statistics": {
+            "sample_size": [
+              35.0,
+              35.0,
+              8.0
+            ],
+            "effect_size": [
+              0.13,
+              0.12
+            ]
+          },
+          "raw_text": "As each linear model included multiple predictor variables, the\npower to detect an effect of diagnosis on AI could not be computed exactly, but we\nobtained an indication of the effect size that would be needed to provide 80%power, had we been using simple ttests and Bonferroni correction for multiple\ntesting, using the \u2018pwr\u2019command in R For this purpose, a signi \ufb01cance level of\n0.0014 (i.e., 0.05/35) was set in the context of multiple testing over the regional andtotal cortical surface area AIs ",
+          "relevance_score": -7.094809055328369
+        }
+      ]
+    },
+    {
+      "query": "systematic review combined accuracy diagnostic ASD",
+      "category": "meta_analysis",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 2,
+      "findings": [
+        {
+          "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+          "section": "discussion",
+          "category": "meta_analysis",
+          "statistics": {
+            "sample_size": [
+              59.0
+            ]
+          },
+          "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+          "relevance_score": -1.4491190910339355
+        },
+        {
+          "paper_title": "ARTICLE",
+          "section": "methods",
+          "category": "meta_analysis",
+          "statistics": {
+            "sample_size": [
+              31.0
+            ],
+            "effect_size": [
+              15.0
+            ]
+          },
+          "raw_text": "1D) The presence/absence of\ncomorbid conditions had been recorded for 519 of the cases, but only 54 cases\nshowed at least one comorbid condition (which could be ADHD, OCD, depression,anxiety, and/or Tourette \u2019s syndrome\n14) Numbers related to DSM-IV subtypes of\nASD were not collated by the ENIGMA ASD working group, as this subtyping\nscheme has been dropped from DSM-V due to low reliability71 There was not a homogeneous assessment/recruitment process for controls\nacross the 54 data sets, but the ",
+          "relevance_score": -2.5341548919677734
+        }
+      ]
+    },
+    {
+      "query": "meta-analytic results effect size developmental disorders",
+      "category": "meta_analysis",
+      "n_documents_retrieved": 50,
+      "n_documents_reranked": 50,
+      "n_findings_extracted": 8,
+      "findings": [
+        {
+          "paper_title": "ARTICLE",
+          "section": "methods",
+          "category": "meta_analysis",
+          "statistics": {
+            "sample_size": [
+              35.0,
+              35.0,
+              8.0
+            ],
+            "effect_size": [
+              0.13,
+              0.12
+            ]
+          },
+          "raw_text": "As each linear model included multiple predictor variables, the\npower to detect an effect of diagnosis on AI could not be computed exactly, but we\nobtained an indication of the effect size that would be needed to provide 80%power, had we been using simple ttests and Bonferroni correction for multiple\ntesting, using the \u2018pwr\u2019command in R For this purpose, a signi \ufb01cance level of\n0.0014 (i.e., 0.05/35) was set in the context of multiple testing over the regional andtotal cortical surface area AIs ",
+          "relevance_score": -4.154445171356201
+        },
+        {
+          "paper_title": "Computational Methods to Measure Patterns of Gaze",
+          "section": "discussion",
+          "category": "meta_analysis",
+          "statistics": {
+            "sample_size": [
+              360.0,
+              28.0,
+              366.0,
+              33.0
+            ]
+          },
+          "raw_text": "16We also found differences\nin how toddlers with ASD pay attention to salient socialmoments in the movies, a feature that increased discrimina-tion between toddlers with and without ASD (effect sizeincreased from medium to large) Although any one featureshowed overlap between toddlers with and without ASD, acomputational approach was used to measure and integratemultiple features, obtaining significantly lower overlapbetween the groups We plan to combine multiple gaze fea-tures with other behavi",
+          "relevance_score": -5.553961753845215
+        },
+        {
+          "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+          "section": "methods",
+          "category": "meta_analysis",
+          "statistics": {
+            "sample_size": [
+              34.0,
+              84.0
+            ],
+            "p_value": [
+              0.05
+            ]
+          },
+          "raw_text": "Exploratory analyses \nwere conducted with a surface map containing 78 regions of interest \n(see Supplementary Information), using an adaptive Hochberg method \nof P < 0.05 The coloured areas show the group effect for the HR-ASD \nversus LR subjects compared to the LR group, the HR-ASD group had \nsignificant expansion in the cortical surface area in the left/right middle \noccipital gyrus and right cuneus (1), right lingual gyrus (2), and to a lesser \nextent in the left inferior temporal gyrus (3), ",
+          "relevance_score": -6.900236129760742
+        },
+        {
+          "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+          "section": "results",
+          "category": "meta_analysis",
+          "statistics": {
+            "sample_size": [
+              34.0
+            ]
+          },
+          "raw_text": "Results from \nthe 6 month brain volume findings have previously been reported for a subset of \nthis sample34 Subjects were enrolled as HR if they had an older sibling with a clinical diagno -\nsis of ASD confirmed with the Autism Diagnostic Interview-Revised35 (ADI-R) Subjects were enrolled in the LR group if they had an older sibling without evi -\ndence of ASD and no family history of a first or second-degree relative with ASD Exclusion criteria for both groups included the following: (1) diagno",
+          "relevance_score": -7.1551008224487305
+        },
+        {
+          "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+          "section": "results",
+          "category": "meta_analysis",
+          "statistics": {
+            "p_value": [
+              0.05
+            ]
+          },
+          "raw_text": "All rights reserved letter reSeArCHextended Data table 8 | Group differences in developmental trajectories and cross-sectional volumes by age for males\nThe primary analysis of brain volume trajectories included only those male and female study participants with three completed visits (6, 12 and 24\u00a0months), to best depict longitudinal trajectories \nover time Separate analyses on males and females are likely to be inadequately powered owing to small subsample size (males = 13, females = 2) and the",
+          "relevance_score": -7.346968650817871
+        },
+        {
+          "paper_title": "Kundu et al., Sci. Adv. 10, eadl5307 (2024) 12 June 2024",
+          "section": "introduction",
+          "category": "meta_analysis",
+          "statistics": {
+            "confidence_interval": [
+              {
+                "lower": 19.0,
+                "upper": 21.0
+              },
+              {
+                "lower": 22.0,
+                "upper": 25.0
+              }
+            ]
+          },
+          "raw_text": "Endophenotypes are intermediate \ntraits that can be objectively defined and follow distinct developmen-\ntal trajectories ( 12) However, structural brain imaging in autism is often normal ( 13) Recent papers have used functional magnetic reso-\nnance imaging (14) and electrophysiology ( 15) to further subtype in-\ndividuals with autism, but these modalities are not widely available \noutside of specialized research settings Disentangling the effects of \nCNV on brain structure from other confounding ",
+          "relevance_score": -7.872603416442871
+        },
+        {
+          "paper_title": "ARTICLE",
+          "section": "methods",
+          "category": "meta_analysis",
+          "statistics": {
+            "sample_size": [
+              64.0,
+              113.0
+            ]
+          },
+          "raw_text": "However, analyses were repeated using an additionalnon-linear term for age, to check whether this choice had affected the results As\nAge and Age\n2are highly correlated, we made use of the poly()-function in R for\nthese two predictors, which created a pair of uncorrelated variables to model age\neffects (so-called orthogonal polynomials)76, where one variable was linear and one\nnon-linear As our data included participants as young as 1.5 years of age, and segmentation\nof very young brains might be",
+          "relevance_score": -8.284408569335938
+        },
+        {
+          "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+          "section": "discussion",
+          "category": "meta_analysis",
+          "statistics": {
+            "sample_size": [
+              59.0
+            ]
+          },
+          "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+          "relevance_score": -8.916823387145996
+        }
+      ]
+    }
+  ],
+  "papers_analyzed": [
+    "DIVER-0 - A Fully Channel Equivariant EEG Foundation Model ",
+    "Altered structural brain asymmetry in autism spectrum disorder in a study of 54 datasets",
+    "Eye-tracking\u2013based measurement of social visual engagement compared with expert clinical diagnosis of autism",
+    "Computational methods to measure patterns of gaze in toddlers with autism spectrum disorder",
+    "BrainCharts for the Human Lifespan",
+    "Functional neuroimaging of high-risk 6-month-old infants predicts a diagnosis of autism at 24 months of age",
+    "BrainLM_ICLR2024",
+    "Molecular cascades and cell type\u2013specific signatures in ASD revealed by single-cell genomics",
+    "A Review of and Roadmap for Data Science and Machine Learning for the Neuropsychiatric Phenotype of Autism ",
+    "Discovering the gene-brain-behavior link in autism via generative machine learning",
+    "Early brain development in infants at high risk for autism spectrum disorder"
+  ],
+  "statistical_findings": [
+    {
+      "paper_title": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+      "section": "case\u2013control studies",
+      "category": "diagnostic_accuracy",
+      "statistics": {
+        "confidence_interval": [
+          {
+            "lower": 66.0,
+            "upper": 68.0
+          }
+        ]
+      },
+      "raw_text": "After the human-extracted features are\nobtained, they are provided as input into an ML model, as in a study by Tariq et al (64), who\nachieved an 92% AUC (area under the curve) score using 116 videos of children with autism and46videosoftypicallydevelopingchildren.Thispipelinewasreplicatedin50neurotypicalchildren\nand50childrenwithautismfromBangladesh,achievinganAUCof85%(65)anddemonstrating\nthat this method has the potential to generalize to diverse global populations Animportantdesignconsideratio",
+      "relevance_score": -0.49424266815185547
+    },
+    {
+      "paper_title": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+      "section": "case\u2013control studies",
+      "category": "diagnostic_accuracy",
+      "statistics": {
+        "confidence_interval": [
+          {
+            "lower": 59.0,
+            "upper": 63.0
+          },
+          {
+            "lower": 98.0,
+            "upper": 100.0
+          },
+          {
+            "lower": 59.0,
+            "upper": 63.0
+          }
+        ]
+      },
+      "raw_text": "This\nrequires careful considerations of design,feasibility testing,and tests for clinical effectiveness us-\ning useful endpoints In this section, we focus on only the diagnostic and therapeutic tools that\nhave passed through regulatory review and have received market clearance by the US Food andDrug Administration (FDA) Diagnostictoolsforautismhavestartedtoenterthemarket.Cognoa(59\u201363)hasthefirstFDA-\napproved digital diagnostic, called Canvas Dx, that uses AI for clinical decision support in thei",
+      "relevance_score": -4.319056510925293
+    },
+    {
+      "paper_title": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+      "section": "data modalities and acquisition",
+      "category": "diagnostic_accuracy",
+      "statistics": {
+        "confidence_interval": [
+          {
+            "lower": 23.0,
+            "upper": 26.0
+          }
+        ]
+      },
+      "raw_text": "Wecoversuchstudiesinthisreview.Recentinnovations,however,centeraroundcollectingthese\ndata in naturalistic settings,and there is extensive room for novelty around the acquisition of ho-\nmogeneous and structured data streams.Stanford University\u2019s GuessWhat project,for example,\nprovides a framework for capturing videos of children with autism enriched for social behaviors\nthrough a charades-style game (19) In this game, a parent or caregiver places a smartphone on\ntheirforeheadwhilethechildactsoutc",
+      "relevance_score": -9.69094467163086
+    },
+    {
+      "paper_title": "Published as a conference paper at ICLR 2024",
+      "section": "abstract",
+      "category": "diagnostic_accuracy",
+      "statistics": {
+        "sample_size": [
+          3662.0
+        ]
+      },
+      "raw_text": "This highlights the ben-\ne\ufb01ts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By \ufb01ne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identi\ufb01es intrinsic func-\ntion",
+      "relevance_score": -9.35072135925293
+    },
+    {
+      "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+      "section": "discussion",
+      "category": "diagnostic_accuracy",
+      "statistics": {
+        "sample_size": [
+          59.0
+        ]
+      },
+      "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+      "relevance_score": -8.120153427124023
+    },
+    {
+      "paper_title": "Kundu et al., Sci. Adv. 10, eadl5307 (2024) 12 June 2024",
+      "section": "resul ts",
+      "category": "sample_sizes",
+      "statistics": {
+        "sample_size": [
+          118.0,
+          48.0,
+          40.0
+        ]
+      },
+      "raw_text": "Control subjects also had a chromosome \nmicroarray, neurologic exam, a clinical psychologist interview, and a \nphotograph evaluation for dysmorphology Subjects in the cohort were chosen with the aim of matching age \nand gender as closely as possible within each subgroup This study \ncohort consisted of high- resolution structural brain images from 206 \nindividuals belonging to control (N \u00a0=\u00a0118), deletion (N \u00a0=\u00a048), and \nduplication ( N\u00a0=\u00a040) cohorts Image acquisition\nT1- weighted magnetization- ",
+      "relevance_score": -1.6967003345489502
+    },
+    {
+      "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+      "section": "discussion",
+      "category": "sample_sizes",
+      "statistics": {
+        "sample_size": [
+          59.0
+        ]
+      },
+      "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+      "relevance_score": -3.823558807373047
+    },
+    {
+      "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+      "section": "results",
+      "category": "sample_sizes",
+      "statistics": {
+        "p_value": [
+          0.05
+        ]
+      },
+      "raw_text": "All rights reserved letter reSeArCHextended Data table 8 | Group differences in developmental trajectories and cross-sectional volumes by age for males\nThe primary analysis of brain volume trajectories included only those male and female study participants with three completed visits (6, 12 and 24\u00a0months), to best depict longitudinal trajectories \nover time Separate analyses on males and females are likely to be inadequately powered owing to small subsample size (males = 13, females = 2) and the",
+      "relevance_score": -5.11240291595459
+    },
+    {
+      "paper_title": "ARTICLE",
+      "section": "discussion",
+      "category": "sample_sizes",
+      "statistics": {
+        "sample_size": [
+          0.0
+        ]
+      },
+      "raw_text": "This is a lim-\nitation of the study We did not analyze handedness in the present\nstudy, as this had no signi \ufb01cant effect on the same brain asym-\nmetry measures as analyzed here, in studies of healthy individuals\ncomprising more than 15,000 participants\n43,44 In contrast to some prior studies of ASD, we did not adjust for\nIQ as a covariate effect in our main, case \u2013control analysis Rather,\nwe carried out post hoc analysis of possible associations between\nIQ and brain asymmetries, separately in c",
+      "relevance_score": -5.333907604217529
+    },
+    {
+      "paper_title": "Kundu et al., Sci. Adv. 10, eadl5307 (2024) 12 June 2024",
+      "section": "resul ts",
+      "category": "sample_sizes",
+      "statistics": {
+        "sample_size": [
+          206.0
+        ]
+      },
+      "raw_text": "RESUL TS\nSubject demographics\nSubject demographics are summarized in Table\u00a01 The duplication and \ndeletion carriers had a range of diagnoses, summarized in Table\u00a02, with \nmultiple diagnoses per individual being most common A one- way \nanalysis of variance (ANOV A) demonstrates that brain tissue volume \ndiffers significantly among duplication carriers, deletion carriers, and \ncontrols However, we report in later sections that brain tissue volume \nalone is not sufficient to distinguish the genetic",
+      "relevance_score": -7.586276054382324
+    },
+    {
+      "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+      "section": "discussion",
+      "category": "sample_sizes",
+      "statistics": {
+        "sample_size": [
+          59.0
+        ]
+      },
+      "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+      "relevance_score": -1.8556067943572998
+    },
+    {
+      "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+      "section": "methods",
+      "category": "sample_sizes",
+      "statistics": {
+        "sample_size": [
+          34.0,
+          84.0
+        ],
+        "p_value": [
+          0.05
+        ]
+      },
+      "raw_text": "Exploratory analyses \nwere conducted with a surface map containing 78 regions of interest \n(see Supplementary Information), using an adaptive Hochberg method \nof P < 0.05 The coloured areas show the group effect for the HR-ASD \nversus LR subjects compared to the LR group, the HR-ASD group had \nsignificant expansion in the cortical surface area in the left/right middle \noccipital gyrus and right cuneus (1), right lingual gyrus (2), and to a lesser \nextent in the left inferior temporal gyrus (3), ",
+      "relevance_score": -3.9845738410949707
+    },
+    {
+      "paper_title": "ARTICLE",
+      "section": "methods",
+      "category": "sample_sizes",
+      "statistics": {
+        "sample_size": [
+          31.0
+        ],
+        "effect_size": [
+          15.0
+        ]
+      },
+      "raw_text": "1D) The presence/absence of\ncomorbid conditions had been recorded for 519 of the cases, but only 54 cases\nshowed at least one comorbid condition (which could be ADHD, OCD, depression,anxiety, and/or Tourette \u2019s syndrome\n14) Numbers related to DSM-IV subtypes of\nASD were not collated by the ENIGMA ASD working group, as this subtyping\nscheme has been dropped from DSM-V due to low reliability71 There was not a homogeneous assessment/recruitment process for controls\nacross the 54 data sets, but the ",
+      "relevance_score": -6.088304042816162
+    },
+    {
+      "paper_title": "Kundu et al., Sci. Adv. 10, eadl5307 (2024) 12 June 2024",
+      "section": "introduction",
+      "category": "sample_sizes",
+      "statistics": {
+        "confidence_interval": [
+          {
+            "lower": 19.0,
+            "upper": 21.0
+          },
+          {
+            "lower": 22.0,
+            "upper": 25.0
+          }
+        ]
+      },
+      "raw_text": "Endophenotypes are intermediate \ntraits that can be objectively defined and follow distinct developmen-\ntal trajectories ( 12) However, structural brain imaging in autism is often normal ( 13) Recent papers have used functional magnetic reso-\nnance imaging (14) and electrophysiology ( 15) to further subtype in-\ndividuals with autism, but these modalities are not widely available \noutside of specialized research settings Disentangling the effects of \nCNV on brain structure from other confounding ",
+      "relevance_score": -7.862390518188477
+    },
+    {
+      "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+      "section": "methods",
+      "category": "effect_sizes",
+      "statistics": {
+        "p_value": [
+          0.04,
+          0.01,
+          0.99,
+          0.24
+        ],
+        "effect_size": [
+          0.74,
+          0.41,
+          0.88,
+          0.7
+        ]
+      },
+      "raw_text": "Group trajectories were estimated from the random coefficient piecewise \nlinear model (see Methods) The HR-ASD group showed a significantly \nincreased surface area growth rate in the first year of life (from 6 to \n12 months) compared to both the HR-neg ( t289 = 2.01, P = 0.04) and LR \ngroups ( t289 = 2.50, P = 0.01) There were no significant group differences in surface area growth rates in the second year ( Extended Data Table 2 ) Pairwise comparisons of surface area measured at 12 months of ag",
+      "relevance_score": 2.3610639572143555
+    },
+    {
+      "paper_title": "ARTICLE",
+      "section": "methods",
+      "category": "effect_sizes",
+      "statistics": {
+        "sample_size": [
+          35.0,
+          35.0,
+          8.0
+        ]
+      },
+      "raw_text": "Most pairwise correlations between AIs were low, with\nonly 33/78 pairwise correlations either lower than \u22120.3 or > 0.3, with a minimum\nR=\u22120.351 between the inferior parietal surface area AI and supramarginal surface\narea AI, and maximum R=0.487 between the cuneus surface area AI and peri-\ncalcarine surface area AI Cohen \u2019sdeffect sizes  The t-statistic for the factor \u2018diagnosis \u2019in each linear\nmixed effects model was used to calculate Cohen \u2019sd\n75, with\nd\u00bct/C3\u00f0n1\u00fen2\u00de\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03\ufb03 \ufb03\n\u00f0n1/C3n2",
+      "relevance_score": 1.669635534286499
+    },
+    {
+      "paper_title": "ARTICLE",
+      "section": "methods",
+      "category": "effect_sizes",
+      "statistics": {
+        "sample_size": [
+          35.0,
+          35.0,
+          8.0
+        ],
+        "effect_size": [
+          0.13,
+          0.12
+        ]
+      },
+      "raw_text": "As each linear model included multiple predictor variables, the\npower to detect an effect of diagnosis on AI could not be computed exactly, but we\nobtained an indication of the effect size that would be needed to provide 80%power, had we been using simple ttests and Bonferroni correction for multiple\ntesting, using the \u2018pwr\u2019command in R For this purpose, a signi \ufb01cance level of\n0.0014 (i.e., 0.05/35) was set in the context of multiple testing over the regional andtotal cortical surface area AIs ",
+      "relevance_score": 1.032498836517334
+    },
+    {
+      "paper_title": "Nature | Vol 604 | 21 April 2022 | 525",
+      "section": "results",
+      "category": "effect_sizes",
+      "statistics": {
+        "effect_size": [
+          0.88
+        ]
+      },
+      "raw_text": "3) Individualized centile scores\nWe computed individualized centile scores that benchmarked each \nindividual scan in the context of normative age-related trends (Meth-\nods, \u2018Centile scores and case\u2013control differences\u2019 and Supplementary \nInformation\u00a01\u20136 for further details) This approach is conceptually \nsimilar to quantile rank mapping, as previously reported26,28 ,29, where the typicality or atypicality of each phenotype in each scan is quantified \nby its score on the distribution of phenotypi",
+      "relevance_score": -4.206628799438477
+    },
+    {
+      "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+      "section": "methods",
+      "category": "effect_sizes",
+      "statistics": {
+        "sample_size": [
+          34.0,
+          84.0
+        ],
+        "p_value": [
+          0.05
+        ]
+      },
+      "raw_text": "Exploratory analyses \nwere conducted with a surface map containing 78 regions of interest \n(see Supplementary Information), using an adaptive Hochberg method \nof P < 0.05 The coloured areas show the group effect for the HR-ASD \nversus LR subjects compared to the LR group, the HR-ASD group had \nsignificant expansion in the cortical surface area in the left/right middle \noccipital gyrus and right cuneus (1), right lingual gyrus (2), and to a lesser \nextent in the left inferior temporal gyrus (3), ",
+      "relevance_score": -6.842844009399414
+    },
+    {
+      "paper_title": "Computational Methods to Measure Patterns of Gaze",
+      "section": "discussion",
+      "category": "effect_sizes",
+      "statistics": {
+        "sample_size": [
+          360.0,
+          28.0,
+          366.0,
+          33.0
+        ]
+      },
+      "raw_text": "16We also found differences\nin how toddlers with ASD pay attention to salient socialmoments in the movies, a feature that increased discrimina-tion between toddlers with and without ASD (effect sizeincreased from medium to large) Although any one featureshowed overlap between toddlers with and without ASD, acomputational approach was used to measure and integratemultiple features, obtaining significantly lower overlapbetween the groups We plan to combine multiple gaze fea-tures with other behavi",
+      "relevance_score": -7.375635147094727
+    },
+    {
+      "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+      "section": "methods",
+      "category": "effect_sizes",
+      "statistics": {
+        "p_value": [
+          0.05
+        ]
+      },
+      "raw_text": "The latter part of the first and early second years of life are \ncharacterized by greater neural plasticity relative to later ages and is a \ntime when the social deficits associated with autism are not yet well \nestablished Intervention at this age may prove more efficacious than \nlater in development The fact that we demonstrate group differences \nin surface area growth rate from 6 to 12 months, that very early surface \narea changes are linked to later brain overgrowth in the second year, \nand ",
+      "relevance_score": -8.323383331298828
+    },
+    {
+      "paper_title": "Computational Methods to Measure Patterns of Gaze",
+      "section": "discussion",
+      "category": "effect_sizes",
+      "statistics": {
+        "sample_size": [
+          360.0,
+          28.0,
+          366.0,
+          33.0
+        ]
+      },
+      "raw_text": "Our goal is to assess multiple types ofbehavioral features, including gaze, and use all featuresFigure 2 Gaze Patterns During Salient Social Moments\nTime spent looking at right side\nof the screen, %IntervalA\n0 20 40 60 80 100\nTime spent looking at right side\nof the screen, %Entire movieB\n0 20 40 60 80 100Typical development\n(n = 360)ASD(n= 28) Typical development(n = 366) ASD(n = 33)Movie timeline\nDensity\nDensity\nChildren\u2019s gaze behavior was measured during a salient segment of the movie, during",
+      "relevance_score": -8.713319778442383
+    },
+    {
+      "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+      "section": "methods",
+      "category": "effect_sizes",
+      "statistics": {
+        "sample_size": [
+          15.0,
+          91.0
+        ]
+      },
+      "raw_text": "Methods for diagnostic and exclusion criteria) The three groups \nwere comparable in (mean) race/ethnicity (85% white), family income, \nmaternal age at birth (33 years old), infant birth weight (8\u00a0lb), and gesta -\ntional age at birth (39\u00a0weeks) The HR-ASD group had more males than \nthe other two groups (83% of the HR-ASD group was male compared to \n59% and 57% of the LR and HR-neg groups, respectively) and mothers \nin the LR group had a higher education level (Extended Data Table 1) Infants were ",
+      "relevance_score": -9.149099349975586
+    },
+    {
+      "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+      "section": "methods",
+      "category": "effect_sizes",
+      "statistics": {
+        "p_value": [
+          0.05
+        ]
+      },
+      "raw_text": "The latter part of the first and early second years of life are \ncharacterized by greater neural plasticity relative to later ages and is a \ntime when the social deficits associated with autism are not yet well \nestablished Intervention at this age may prove more efficacious than \nlater in development The fact that we demonstrate group differences \nin surface area growth rate from 6 to 12 months, that very early surface \narea changes are linked to later brain overgrowth in the second year, \nand ",
+      "relevance_score": -7.172938346862793
+    },
+    {
+      "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+      "section": "discussion",
+      "category": "effect_sizes",
+      "statistics": {
+        "sample_size": [
+          59.0
+        ]
+      },
+      "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+      "relevance_score": -7.174237251281738
+    },
+    {
+      "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+      "section": "methods",
+      "category": "effect_sizes",
+      "statistics": {
+        "sample_size": [
+          34.0,
+          84.0
+        ],
+        "p_value": [
+          0.05
+        ]
+      },
+      "raw_text": "Exploratory analyses \nwere conducted with a surface map containing 78 regions of interest \n(see Supplementary Information), using an adaptive Hochberg method \nof P < 0.05 The coloured areas show the group effect for the HR-ASD \nversus LR subjects compared to the LR group, the HR-ASD group had \nsignificant expansion in the cortical surface area in the left/right middle \noccipital gyrus and right cuneus (1), right lingual gyrus (2), and to a lesser \nextent in the left inferior temporal gyrus (3), ",
+      "relevance_score": -9.58326244354248
+    },
+    {
+      "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+      "section": "results",
+      "category": "effect_sizes",
+      "statistics": {
+        "sample_size": [
+          34.0
+        ]
+      },
+      "raw_text": "Results from \nthe 6 month brain volume findings have previously been reported for a subset of \nthis sample34 Subjects were enrolled as HR if they had an older sibling with a clinical diagno -\nsis of ASD confirmed with the Autism Diagnostic Interview-Revised35 (ADI-R) Subjects were enrolled in the LR group if they had an older sibling without evi -\ndence of ASD and no family history of a first or second-degree relative with ASD Exclusion criteria for both groups included the following: (1) diagno",
+      "relevance_score": -9.703184127807617
+    },
+    {
+      "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+      "section": "discussion",
+      "category": "effect_sizes",
+      "statistics": {
+        "sample_size": [
+          59.0
+        ]
+      },
+      "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+      "relevance_score": -5.450844764709473
+    },
+    {
+      "paper_title": "Published as a conference paper at ICLR 2024",
+      "section": "abstract",
+      "category": "biomarker_performance",
+      "statistics": {
+        "sample_size": [
+          3662.0
+        ]
+      },
+      "raw_text": "This highlights the ben-\ne\ufb01ts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By \ufb01ne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identi\ufb01es intrinsic func-\ntion",
+      "relevance_score": -4.8847150802612305
+    },
+    {
+      "paper_title": "RESEARCH ARTICLE SUMMARY\u25e5",
+      "section": "conclusion",
+      "category": "biomarker_performance",
+      "statistics": {
+        "confidence_interval": [
+          {
+            "lower": 5.0,
+            "upper": 13.0
+          }
+        ]
+      },
+      "raw_text": "We perfor med deep single-nucleus RNA sequencing (snRNA-seq)\nto examine cell composition and transcriptomi cs, identifying dysregulation of cell type \u2013specific gene\nregulatory networks (GRNs) in autism spectrum disord er (ASD), which we corrobora ted using sing le-nucleus\nassay for transposase-accessible chromatin with sequ encing (snATAC-seq) and spatial transcriptomics Transcriptomic changes were primarily cell type specific, involving multiple cell types, most prominently\ninterhemispheric and",
+      "relevance_score": -4.977638244628906
+    },
+    {
+      "paper_title": "Published as a conference paper at ICLR 2024",
+      "section": "abstract",
+      "category": "biomarker_performance",
+      "statistics": {
+        "sample_size": [
+          3662.0
+        ]
+      },
+      "raw_text": "This highlights the ben-\ne\ufb01ts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By \ufb01ne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identi\ufb01es intrinsic func-\ntion",
+      "relevance_score": -7.104399681091309
+    },
+    {
+      "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+      "section": "discussion",
+      "category": "biomarker_performance",
+      "statistics": {
+        "sample_size": [
+          59.0
+        ]
+      },
+      "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+      "relevance_score": -7.868966102600098
+    },
+    {
+      "paper_title": "RESEARCH ARTICLE SUMMARY\u25e5",
+      "section": "conclusion",
+      "category": "biomarker_performance",
+      "statistics": {
+        "confidence_interval": [
+          {
+            "lower": 5.0,
+            "upper": 13.0
+          }
+        ]
+      },
+      "raw_text": "We perfor med deep single-nucleus RNA sequencing (snRNA-seq)\nto examine cell composition and transcriptomi cs, identifying dysregulation of cell type \u2013specific gene\nregulatory networks (GRNs) in autism spectrum disord er (ASD), which we corrobora ted using sing le-nucleus\nassay for transposase-accessible chromatin with sequ encing (snATAC-seq) and spatial transcriptomics Transcriptomic changes were primarily cell type specific, involving multiple cell types, most prominently\ninterhemispheric and",
+      "relevance_score": -2.0033011436462402
+    },
+    {
+      "paper_title": "Published as a conference paper at ICLR 2024",
+      "section": "abstract",
+      "category": "biomarker_performance",
+      "statistics": {
+        "sample_size": [
+          3662.0
+        ]
+      },
+      "raw_text": "This highlights the ben-\ne\ufb01ts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By \ufb01ne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identi\ufb01es intrinsic func-\ntion",
+      "relevance_score": -5.141347885131836
+    },
+    {
+      "paper_title": "Published as a conference paper at ICLR 2024",
+      "section": "abstract",
+      "category": "biomarker_performance",
+      "statistics": {
+        "sample_size": [
+          3662.0
+        ]
+      },
+      "raw_text": "This highlights the ben-\ne\ufb01ts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By \ufb01ne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identi\ufb01es intrinsic func-\ntion",
+      "relevance_score": -2.701106548309326
+    },
+    {
+      "paper_title": "DIVER-0 : A Fully Channel Equivariant EEG Foundation Model",
+      "section": "methods",
+      "category": "biomarker_performance",
+      "statistics": {
+        "sample_size": [
+          123.0
+        ]
+      },
+      "raw_text": "2.3 Finetuning\nFinetuning was done on two downstream datasets, FACED\nand PhysioNet-MI FACED dataset (Chen et al., 2023) con-\ntains 32-channel EEG recordings from 123 subjects who\nwatched 28 emotion-elicitation video clips covering nine\nemotion categories PhysioNet-MI (Goldberger et al., 2000)\nrefers to the EEG Motor Movement/Imagery Dataset from\nPhysioNet (Goldberger et al., 2000), which consists of more\nthan 1500 EEG recordings from 109 volunteers performing\na series of real and imagined motor ",
+      "relevance_score": -4.546681880950928
+    },
+    {
+      "paper_title": "Published as a conference paper at ICLR 2024",
+      "section": "abstract",
+      "category": "multimodal_fusion",
+      "statistics": {
+        "sample_size": [
+          3662.0
+        ]
+      },
+      "raw_text": "This highlights the ben-\ne\ufb01ts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By \ufb01ne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identi\ufb01es intrinsic func-\ntion",
+      "relevance_score": -9.403299331665039
+    },
+    {
+      "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+      "section": "discussion",
+      "category": "multimodal_fusion",
+      "statistics": {
+        "sample_size": [
+          59.0
+        ]
+      },
+      "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+      "relevance_score": -5.117897987365723
+    },
+    {
+      "paper_title": "RESEARCH ARTICLE SUMMARY\u25e5",
+      "section": "conclusion",
+      "category": "multimodal_fusion",
+      "statistics": {
+        "confidence_interval": [
+          {
+            "lower": 5.0,
+            "upper": 13.0
+          }
+        ]
+      },
+      "raw_text": "We perfor med deep single-nucleus RNA sequencing (snRNA-seq)\nto examine cell composition and transcriptomi cs, identifying dysregulation of cell type \u2013specific gene\nregulatory networks (GRNs) in autism spectrum disord er (ASD), which we corrobora ted using sing le-nucleus\nassay for transposase-accessible chromatin with sequ encing (snATAC-seq) and spatial transcriptomics Transcriptomic changes were primarily cell type specific, involving multiple cell types, most prominently\ninterhemispheric and",
+      "relevance_score": -5.801280975341797
+    },
+    {
+      "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+      "section": "discussion",
+      "category": "longitudinal_studies",
+      "statistics": {
+        "sample_size": [
+          59.0
+        ]
+      },
+      "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+      "relevance_score": -4.0852203369140625
+    },
+    {
+      "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+      "section": "results",
+      "category": "longitudinal_studies",
+      "statistics": {
+        "p_value": [
+          0.05
+        ]
+      },
+      "raw_text": "All rights reserved letter reSeArCHextended Data table 8 | Group differences in developmental trajectories and cross-sectional volumes by age for males\nThe primary analysis of brain volume trajectories included only those male and female study participants with three completed visits (6, 12 and 24\u00a0months), to best depict longitudinal trajectories \nover time Separate analyses on males and females are likely to be inadequately powered owing to small subsample size (males = 13, females = 2) and the",
+      "relevance_score": -6.075100898742676
+    },
+    {
+      "paper_title": "Nature | Vol 604 | 21 April 2022 | 525",
+      "section": "results",
+      "category": "longitudinal_studies",
+      "statistics": {
+        "sample_size": [
+          2.0,
+          1.0
+        ]
+      },
+      "raw_text": "3 ) coincided with the early \nneonatal and adolescent peaks of height and weight velocity52,53 The \nvelocity of mean cortical thickness peaked even earlier, in the prena -\ntal period at \u22120.38\u00a0years (95% bootstrap CI\u00a0\u22120.4 to\u00a0\u22120.34) (relative to \nbirth), corresponding approximately to mid-gestation This early peak \nin cortical thickness velocity has not been reported previously\u2014to our \nknowledge\u2014in part owing to challenges in acquiring adequate and \nconsistent signal from typical MRI sequences in ",
+      "relevance_score": -7.731069564819336
+    },
+    {
+      "paper_title": "Published as a conference paper at ICLR 2024",
+      "section": "abstract",
+      "category": "longitudinal_studies",
+      "statistics": {
+        "sample_size": [
+          3662.0
+        ]
+      },
+      "raw_text": "This highlights the ben-\ne\ufb01ts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By \ufb01ne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identi\ufb01es intrinsic func-\ntion",
+      "relevance_score": -9.679530143737793
+    },
+    {
+      "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+      "section": "results",
+      "category": "longitudinal_studies",
+      "statistics": {
+        "sample_size": [
+          34.0
+        ]
+      },
+      "raw_text": "Results from \nthe 6 month brain volume findings have previously been reported for a subset of \nthis sample34 Subjects were enrolled as HR if they had an older sibling with a clinical diagno -\nsis of ASD confirmed with the Autism Diagnostic Interview-Revised35 (ADI-R) Subjects were enrolled in the LR group if they had an older sibling without evi -\ndence of ASD and no family history of a first or second-degree relative with ASD Exclusion criteria for both groups included the following: (1) diagno",
+      "relevance_score": -6.74128532409668
+    },
+    {
+      "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+      "section": "discussion",
+      "category": "longitudinal_studies",
+      "statistics": {
+        "sample_size": [
+          59.0
+        ]
+      },
+      "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+      "relevance_score": -7.0771355628967285
+    },
+    {
+      "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+      "section": "results",
+      "category": "longitudinal_studies",
+      "statistics": {
+        "p_value": [
+          0.05
+        ]
+      },
+      "raw_text": "All rights reserved letter reSeArCHextended Data table 8 | Group differences in developmental trajectories and cross-sectional volumes by age for males\nThe primary analysis of brain volume trajectories included only those male and female study participants with three completed visits (6, 12 and 24\u00a0months), to best depict longitudinal trajectories \nover time Separate analyses on males and females are likely to be inadequately powered owing to small subsample size (males = 13, females = 2) and the",
+      "relevance_score": -8.859642028808594
+    },
+    {
+      "paper_title": "ARTICLE",
+      "section": "methods",
+      "category": "longitudinal_studies",
+      "statistics": {
+        "sample_size": [
+          31.0
+        ],
+        "effect_size": [
+          15.0
+        ]
+      },
+      "raw_text": "1D) The presence/absence of\ncomorbid conditions had been recorded for 519 of the cases, but only 54 cases\nshowed at least one comorbid condition (which could be ADHD, OCD, depression,anxiety, and/or Tourette \u2019s syndrome\n14) Numbers related to DSM-IV subtypes of\nASD were not collated by the ENIGMA ASD working group, as this subtyping\nscheme has been dropped from DSM-V due to low reliability71 There was not a homogeneous assessment/recruitment process for controls\nacross the 54 data sets, but the ",
+      "relevance_score": -10.372310638427734
+    },
+    {
+      "paper_title": "Eye-Tracking\u2013Based Measurement of Social Visual Engagement",
+      "section": "references",
+      "category": "meta_analysis",
+      "statistics": {
+        "sample_size": [
+          335.0
+        ]
+      },
+      "raw_text": "Referencestandarddiagnosisofautismspectrumdisorderornonautism spectrum disorder (labeled herein as autism andnonautism,respectively)wasmadebyexpertcliniciansusingstandardizedassessments:theAutismDiagnosticObservationKey Points\nQuestion Can eye-tracking\u2013based measurement of social visual\nengagement aid in early diagnosis and assessment of autism inyoung children Findings In a multisite, prospective, double-blind study of 475\nchildren aged 16 to 30 months assessed for autism in 6 specialtyclinics,",
+      "relevance_score": 1.7072844505310059
+    },
+    {
+      "paper_title": "Computational Methods to Measure Patterns of Gaze",
+      "section": "discussion",
+      "category": "meta_analysis",
+      "statistics": {
+        "sample_size": [
+          360.0,
+          28.0,
+          366.0,
+          33.0
+        ]
+      },
+      "raw_text": "Our goal is to assess multiple types ofbehavioral features, including gaze, and use all featuresFigure 2 Gaze Patterns During Salient Social Moments\nTime spent looking at right side\nof the screen, %IntervalA\n0 20 40 60 80 100\nTime spent looking at right side\nof the screen, %Entire movieB\n0 20 40 60 80 100Typical development\n(n = 360)ASD(n= 28) Typical development(n = 366) ASD(n = 33)Movie timeline\nDensity\nDensity\nChildren\u2019s gaze behavior was measured during a salient segment of the movie, during",
+      "relevance_score": -2.086771011352539
+    },
+    {
+      "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+      "section": "results",
+      "category": "meta_analysis",
+      "statistics": {
+        "p_value": [
+          0.01
+        ]
+      },
+      "raw_text": "However, when we analysed only males for group differences, our \nresults remain unchanged (Extended Data Fig 2 and Extended Data Table 8) As a sensitivity analysis, we also tested the model with other demographic, \nfamilial and child birth-related covariates (race, social economic status, mother\u2019s \neducation, mother\u2019s age at birth, birth weight and gestational age), and only the \nsite and sex remained in the model with P < 0.01 The association of 24-month clinical outcome (ADOS, cSBS) with brain",
+      "relevance_score": -4.500948905944824
+    },
+    {
+      "paper_title": "Nature | Vol 604 | 21 April 2022 | 525",
+      "section": "results",
+      "category": "meta_analysis",
+      "statistics": {
+        "sample_size": [
+          913.0
+        ],
+        "p_value": [
+          2.0,
+          2.0
+        ]
+      },
+      "raw_text": "Bottom, the normative trajectory of the median and confidence interval for each phenotype was plotted as a population reference curve Out-of-sample data from a new MRI study were aligned to the corresponding epoch of the normative trajectory, using maximum likelihood to estimate the study specific offsets (random effects) for three moments of the underlying statistical distributions: mean (\n\u03bc), variance ( \u03c3), and skewness \n(\u03bd) in an age- and sex-specific manner Centile scores of each phenotype\u00a0c",
+      "relevance_score": -5.918863773345947
+    },
+    {
+      "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+      "section": "discussion",
+      "category": "meta_analysis",
+      "statistics": {
+        "sample_size": [
+          59.0
+        ]
+      },
+      "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+      "relevance_score": -6.560934543609619
+    },
+    {
+      "paper_title": "Nature | Vol 604 | 21 April 2022 | 525",
+      "section": "references",
+      "category": "meta_analysis",
+      "statistics": {
+        "sample_size": [
+          9.0
+        ]
+      },
+      "raw_text": "Pairwise, sex stratified, post-hoc comparisons were \nconducted using non-parametric Monte Carlo permutation tests \n(10,000 permutations) and thresholded at a Benjamini\u2013Hochberg \nFDR of q\u2009<\u20090.05 Longitudinal stability\nTo use centile scores in a diagnostically meaningful or predictive way, \nthey need to be stable across multiple measuring points To assess this \nintra-individual stability, we calculated the subject-specific IQR of \ncentiles across timepoints for the datasets that included longitudi",
+      "relevance_score": -6.828854084014893
+    },
+    {
+      "paper_title": "ARTICLE",
+      "section": "methods",
+      "category": "meta_analysis",
+      "statistics": {
+        "sample_size": [
+          35.0,
+          35.0,
+          8.0
+        ],
+        "effect_size": [
+          0.13,
+          0.12
+        ]
+      },
+      "raw_text": "As each linear model included multiple predictor variables, the\npower to detect an effect of diagnosis on AI could not be computed exactly, but we\nobtained an indication of the effect size that would be needed to provide 80%power, had we been using simple ttests and Bonferroni correction for multiple\ntesting, using the \u2018pwr\u2019command in R For this purpose, a signi \ufb01cance level of\n0.0014 (i.e., 0.05/35) was set in the context of multiple testing over the regional andtotal cortical surface area AIs ",
+      "relevance_score": -7.094809055328369
+    },
+    {
+      "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+      "section": "discussion",
+      "category": "meta_analysis",
+      "statistics": {
+        "sample_size": [
+          59.0
+        ]
+      },
+      "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+      "relevance_score": -1.4491190910339355
+    },
+    {
+      "paper_title": "ARTICLE",
+      "section": "methods",
+      "category": "meta_analysis",
+      "statistics": {
+        "sample_size": [
+          31.0
+        ],
+        "effect_size": [
+          15.0
+        ]
+      },
+      "raw_text": "1D) The presence/absence of\ncomorbid conditions had been recorded for 519 of the cases, but only 54 cases\nshowed at least one comorbid condition (which could be ADHD, OCD, depression,anxiety, and/or Tourette \u2019s syndrome\n14) Numbers related to DSM-IV subtypes of\nASD were not collated by the ENIGMA ASD working group, as this subtyping\nscheme has been dropped from DSM-V due to low reliability71 There was not a homogeneous assessment/recruitment process for controls\nacross the 54 data sets, but the ",
+      "relevance_score": -2.5341548919677734
+    },
+    {
+      "paper_title": "ARTICLE",
+      "section": "methods",
+      "category": "meta_analysis",
+      "statistics": {
+        "sample_size": [
+          35.0,
+          35.0,
+          8.0
+        ],
+        "effect_size": [
+          0.13,
+          0.12
+        ]
+      },
+      "raw_text": "As each linear model included multiple predictor variables, the\npower to detect an effect of diagnosis on AI could not be computed exactly, but we\nobtained an indication of the effect size that would be needed to provide 80%power, had we been using simple ttests and Bonferroni correction for multiple\ntesting, using the \u2018pwr\u2019command in R For this purpose, a signi \ufb01cance level of\n0.0014 (i.e., 0.05/35) was set in the context of multiple testing over the regional andtotal cortical surface area AIs ",
+      "relevance_score": -4.154445171356201
+    },
+    {
+      "paper_title": "Computational Methods to Measure Patterns of Gaze",
+      "section": "discussion",
+      "category": "meta_analysis",
+      "statistics": {
+        "sample_size": [
+          360.0,
+          28.0,
+          366.0,
+          33.0
+        ]
+      },
+      "raw_text": "16We also found differences\nin how toddlers with ASD pay attention to salient socialmoments in the movies, a feature that increased discrimina-tion between toddlers with and without ASD (effect sizeincreased from medium to large) Although any one featureshowed overlap between toddlers with and without ASD, acomputational approach was used to measure and integratemultiple features, obtaining significantly lower overlapbetween the groups We plan to combine multiple gaze fea-tures with other behavi",
+      "relevance_score": -5.553961753845215
+    },
+    {
+      "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+      "section": "methods",
+      "category": "meta_analysis",
+      "statistics": {
+        "sample_size": [
+          34.0,
+          84.0
+        ],
+        "p_value": [
+          0.05
+        ]
+      },
+      "raw_text": "Exploratory analyses \nwere conducted with a surface map containing 78 regions of interest \n(see Supplementary Information), using an adaptive Hochberg method \nof P < 0.05 The coloured areas show the group effect for the HR-ASD \nversus LR subjects compared to the LR group, the HR-ASD group had \nsignificant expansion in the cortical surface area in the left/right middle \noccipital gyrus and right cuneus (1), right lingual gyrus (2), and to a lesser \nextent in the left inferior temporal gyrus (3), ",
+      "relevance_score": -6.900236129760742
+    },
+    {
+      "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+      "section": "results",
+      "category": "meta_analysis",
+      "statistics": {
+        "sample_size": [
+          34.0
+        ]
+      },
+      "raw_text": "Results from \nthe 6 month brain volume findings have previously been reported for a subset of \nthis sample34 Subjects were enrolled as HR if they had an older sibling with a clinical diagno -\nsis of ASD confirmed with the Autism Diagnostic Interview-Revised35 (ADI-R) Subjects were enrolled in the LR group if they had an older sibling without evi -\ndence of ASD and no family history of a first or second-degree relative with ASD Exclusion criteria for both groups included the following: (1) diagno",
+      "relevance_score": -7.1551008224487305
+    },
+    {
+      "paper_title": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+      "section": "results",
+      "category": "meta_analysis",
+      "statistics": {
+        "p_value": [
+          0.05
+        ]
+      },
+      "raw_text": "All rights reserved letter reSeArCHextended Data table 8 | Group differences in developmental trajectories and cross-sectional volumes by age for males\nThe primary analysis of brain volume trajectories included only those male and female study participants with three completed visits (6, 12 and 24\u00a0months), to best depict longitudinal trajectories \nover time Separate analyses on males and females are likely to be inadequately powered owing to small subsample size (males = 13, females = 2) and the",
+      "relevance_score": -7.346968650817871
+    },
+    {
+      "paper_title": "Kundu et al., Sci. Adv. 10, eadl5307 (2024) 12 June 2024",
+      "section": "introduction",
+      "category": "meta_analysis",
+      "statistics": {
+        "confidence_interval": [
+          {
+            "lower": 19.0,
+            "upper": 21.0
+          },
+          {
+            "lower": 22.0,
+            "upper": 25.0
+          }
+        ]
+      },
+      "raw_text": "Endophenotypes are intermediate \ntraits that can be objectively defined and follow distinct developmen-\ntal trajectories ( 12) However, structural brain imaging in autism is often normal ( 13) Recent papers have used functional magnetic reso-\nnance imaging (14) and electrophysiology ( 15) to further subtype in-\ndividuals with autism, but these modalities are not widely available \noutside of specialized research settings Disentangling the effects of \nCNV on brain structure from other confounding ",
+      "relevance_score": -7.872603416442871
+    },
+    {
+      "paper_title": "ARTICLE",
+      "section": "methods",
+      "category": "meta_analysis",
+      "statistics": {
+        "sample_size": [
+          64.0,
+          113.0
+        ]
+      },
+      "raw_text": "However, analyses were repeated using an additionalnon-linear term for age, to check whether this choice had affected the results As\nAge and Age\n2are highly correlated, we made use of the poly()-function in R for\nthese two predictors, which created a pair of uncorrelated variables to model age\neffects (so-called orthogonal polynomials)76, where one variable was linear and one\nnon-linear As our data included participants as young as 1.5 years of age, and segmentation\nof very young brains might be",
+      "relevance_score": -8.284408569335938
+    },
+    {
+      "paper_title": "AUTISM 2017 \u00a9 The Authors,",
+      "section": "discussion",
+      "category": "meta_analysis",
+      "statistics": {
+        "sample_size": [
+          59.0
+        ]
+      },
+      "raw_text": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+      "relevance_score": -8.916823387145996
+    }
+  ],
+  "summary_statistics": {
+    "sample_sizes": {
+      "n": 76,
+      "mean": 428.25,
+      "median": 59.0,
+      "std": 1039.5649536047076,
+      "min": 0.0,
+      "max": 3662.0,
+      "quartiles": {
+        "q25": 33.0,
+        "q50": 59.0,
+        "q75": 119.25
+      }
+    },
+    "effect_sizes": {
+      "n": 14,
+      "mean": 3.525714285714286,
+      "median": 0.5549999999999999,
+      "std": 5.998923372793908,
+      "min": 0.12,
+      "max": 15.0,
+      "quartiles": {
+        "q25": 0.13,
+        "q50": 0.5549999999999999,
+        "q75": 0.88
+      }
+    },
+    "p_values": {
+      "n": 17,
+      "mean": 0.34058823529411764,
+      "median": 0.05,
+      "std": 0.6459144961464945,
+      "min": 0.01,
+      "max": 2.0,
+      "quartiles": {
+        "q25": 0.05,
+        "q50": 0.05,
+        "q75": 0.05
+      }
+    }
+  }
+}

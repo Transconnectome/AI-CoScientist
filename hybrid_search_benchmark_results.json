@@ -1,0 +1,97 @@
+{
+  "timestamp": "2025-12-08 02:53:58",
+  "results": [
+    {
+      "category": "Clinical",
+      "query": "autism spectrum disorder diagnosis and assessment",
+      "time_ms": 1477.1316051483154,
+      "dd_ratio": 0.9,
+      "fm_ratio": 0.1
+    },
+    {
+      "category": "Clinical",
+      "query": "ADHD treatment in pediatric populations",
+      "time_ms": 1119.9986934661865,
+      "dd_ratio": 0.8,
+      "fm_ratio": 0.2
+    },
+    {
+      "category": "Clinical",
+      "query": "behavioral interventions for developmental disorders",
+      "time_ms": 1107.691764831543,
+      "dd_ratio": 0.8,
+      "fm_ratio": 0.2
+    },
+    {
+      "category": "Clinical",
+      "query": "fMRI connectivity in ASD patients",
+      "time_ms": 1006.9460868835449,
+      "dd_ratio": 1.0,
+      "fm_ratio": 0.0
+    },
+    {
+      "category": "Technical",
+      "query": "transformer architecture for image classification",
+      "time_ms": 1039.9260520935059,
+      "dd_ratio": 0.7,
+      "fm_ratio": 0.3
+    },
+    {
+      "category": "Technical",
+      "query": "self-supervised learning methods",
+      "time_ms": 833.1105709075928,
+      "dd_ratio": 0.6,
+      "fm_ratio": 0.4
+    },
+    {
+      "category": "Technical",
+      "query": "attention mechanisms in neural networks",
+      "time_ms": 969.933032989502,
+      "dd_ratio": 0.6,
+      "fm_ratio": 0.4
+    },
+    {
+      "category": "Technical",
+      "query": "foundation models training strategies",
+      "time_ms": 988.83056640625,
+      "dd_ratio": 0.3,
+      "fm_ratio": 0.7
+    },
+    {
+      "category": "Mixed",
+      "query": "foundation models for autism diagnosis",
+      "time_ms": 1019.2325115203857,
+      "dd_ratio": 0.6,
+      "fm_ratio": 0.4
+    },
+    {
+      "category": "Mixed",
+      "query": "deep learning for EEG analysis in ADHD",
+      "time_ms": 646.547794342041,
+      "dd_ratio": 0.3,
+      "fm_ratio": 0.7
+    },
+    {
+      "category": "Mixed",
+      "query": "multimodal AI for brain imaging",
+      "time_ms": 641.3743495941162,
+      "dd_ratio": 0.2,
+      "fm_ratio": 0.8
+    },
+    {
+      "category": "Mixed",
+      "query": "large language models in clinical diagnosis",
+      "time_ms": 716.8877124786377,
+      "dd_ratio": 0.5,
+      "fm_ratio": 0.5
+    }
+  ],
+  "summary": {
+    "total_queries": 12,
+    "avg_time_ms": 963.9675617218018,
+    "min_time_ms": 641.3743495941162,
+    "max_time_ms": 1477.1316051483154,
+    "avg_dd_ratio": 0.6083333333333333,
+    "avg_fm_ratio": 0.39166666666666666
+  }
+}

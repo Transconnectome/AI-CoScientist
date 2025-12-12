@@ -1,0 +1,454 @@
+{
+  "processing_start": "2025-12-04T07:53:29.970931",
+  "papers_processed": [
+    {
+      "paper_name": "Adv Quantum Tech - 2024 - Parigi - Quantum\u2010Noi.pdf",
+      "status": "success",
+      "chunks_count": 16,
+      "math_elements": 0,
+      "circuit_elements": 5,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:53:33.611537"
+    },
+    {
+      "paper_name": "An invitation to distributed quantum neural networks.pdf",
+      "status": "success",
+      "chunks_count": 23,
+      "math_elements": 0,
+      "circuit_elements": 24,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:53:39.862571"
+    },
+    {
+      "paper_name": "Avron-2021-Quantum advantage and noise reducti.pdf",
+      "status": "success",
+      "chunks_count": 7,
+      "math_elements": 0,
+      "circuit_elements": 18,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:53:41.406354"
+    },
+    {
+      "paper_name": "BarrenPlateaus.pdf",
+      "status": "success",
+      "chunks_count": 23,
+      "math_elements": 0,
+      "circuit_elements": 135,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:53:47.750361"
+    },
+    {
+      "paper_name": "Burge-2023-Quantum Algorithms for Shapley Valu.pdf",
+      "status": "success",
+      "chunks_count": 10,
+      "math_elements": 1,
+      "circuit_elements": 17,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:53:50.224420"
+    },
+    {
+      "paper_name": "Caro-2022-Generalization in quantum machine le.pdf",
+      "status": "success",
+      "chunks_count": 13,
+      "math_elements": 0,
+      "circuit_elements": 17,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:53:55.463192"
+    },
+    {
+      "paper_name": "Cerezo-2021-Variational quantum algorithms.pdf",
+      "status": "success",
+      "chunks_count": 26,
+      "math_elements": 0,
+      "circuit_elements": 210,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:54:06.366285"
+    },
+    {
+      "paper_name": "Cerezo-2022-Challenges and opportunities in qu.pdf",
+      "status": "success",
+      "chunks_count": 12,
+      "math_elements": 0,
+      "circuit_elements": 35,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:54:10.764106"
+    },
+    {
+      "paper_name": "Cerezo-2025-Does provable absence of barren pl.pdf",
+      "status": "success",
+      "chunks_count": 15,
+      "math_elements": 0,
+      "circuit_elements": 58,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:54:14.531970"
+    },
+    {
+      "paper_name": "Distributed quantum neural networks via partitioned features.pdf",
+      "status": "success",
+      "chunks_count": 5,
+      "math_elements": 0,
+      "circuit_elements": 15,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:54:15.591535"
+    },
+    {
+      "paper_name": "DistributedQuantumComputing.pdf",
+      "status": "success",
+      "chunks_count": 51,
+      "math_elements": 0,
+      "circuit_elements": 84,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:54:31.475777"
+    },
+    {
+      "paper_name": "Generative Quantum Machine Learning via Denoising Diffusion Probabilistic Models.pdf",
+      "status": "success",
+      "chunks_count": 9,
+      "math_elements": 0,
+      "circuit_elements": 7,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:54:34.689112"
+    },
+    {
+      "paper_name": "Gu-2023-Mamba_ Linear-Time Sequence Modeling w.pdf",
+      "status": "success",
+      "chunks_count": 31,
+      "math_elements": 0,
+      "circuit_elements": 5,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:54:40.951849"
+    },
+    {
+      "paper_name": "Heese-2025-Explaining quantum circuits with Sh.pdf",
+      "status": "success",
+      "chunks_count": 26,
+      "math_elements": 0,
+      "circuit_elements": 31,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:54:48.968995"
+    },
+    {
+      "paper_name": "Huang-2025-The vast world of quantum advantage.pdf",
+      "status": "success",
+      "chunks_count": 28,
+      "math_elements": 1,
+      "circuit_elements": 81,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:54:55.901878"
+    },
+    {
+      "paper_name": "Hwang-2024-Hydra_ Bidirectional State Space Mo.pdf",
+      "status": "success",
+      "chunks_count": 23,
+      "math_elements": 50,
+      "circuit_elements": 3,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:55:01.131815"
+    },
+    {
+      "paper_name": "Jaschke-2023-Is quantum computing green_ An es.pdf",
+      "status": "success",
+      "chunks_count": 14,
+      "math_elements": 0,
+      "circuit_elements": 4,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:55:04.792069"
+    },
+    {
+      "paper_name": "Khatri-2024-Quixer_ A Quantum Transformer Mode.pdf",
+      "status": "success",
+      "chunks_count": 10,
+      "math_elements": 0,
+      "circuit_elements": 22,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:55:07.489027"
+    },
+    {
+      "paper_name": "Measurement-Based Quantum Diffusion Models.pdf",
+      "status": "success",
+      "chunks_count": 29,
+      "math_elements": 0,
+      "circuit_elements": 5,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:55:14.463059"
+    },
+    {
+      "paper_name": "Multi-chip.pdf",
+      "status": "success",
+      "chunks_count": 19,
+      "math_elements": 0,
+      "circuit_elements": 18,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:55:20.507357"
+    },
+    {
+      "paper_name": "NeurIPS-2024-exponential-quantum-communication.pdf",
+      "status": "success",
+      "chunks_count": 35,
+      "math_elements": 0,
+      "circuit_elements": 10,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:55:28.211785"
+    },
+    {
+      "paper_name": "Park-2024-Over the Quantum Rainbow_ Explaining.pdf",
+      "status": "success",
+      "chunks_count": 12,
+      "math_elements": 0,
+      "circuit_elements": 42,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:55:31.413029"
+    },
+    {
+      "paper_name": "Park-2025-Hybrid Quantum Temporal Convolutiona.pdf",
+      "status": "success",
+      "chunks_count": 5,
+      "math_elements": 0,
+      "circuit_elements": 7,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:55:33.453827"
+    },
+    {
+      "paper_name": "Park-2025-Resting-state fMRI Analysis using Qu.pdf",
+      "status": "success",
+      "chunks_count": 11,
+      "math_elements": 0,
+      "circuit_elements": 22,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:55:36.271202"
+    },
+    {
+      "paper_name": "Quantum AI.pdf",
+      "status": "success",
+      "chunks_count": 52,
+      "math_elements": 0,
+      "circuit_elements": 123,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:55:52.628542"
+    },
+    {
+      "paper_name": "Quantum diffusion models.pdf",
+      "status": "success",
+      "chunks_count": 8,
+      "math_elements": 0,
+      "circuit_elements": 30,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:55:55.052602"
+    },
+    {
+      "paper_name": "Quantum latent diffusion models.pdf",
+      "status": "success",
+      "chunks_count": 12,
+      "math_elements": 0,
+      "circuit_elements": 37,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:55:59.914710"
+    },
+    {
+      "paper_name": "QuantumComputingandAI.pdf",
+      "status": "success",
+      "chunks_count": 32,
+      "math_elements": 0,
+      "circuit_elements": 45,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:56:08.013976"
+    },
+    {
+      "paper_name": "QuantumMario.pdf",
+      "status": "success",
+      "chunks_count": 7,
+      "math_elements": 0,
+      "circuit_elements": 24,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:56:09.952930"
+    },
+    {
+      "paper_name": "Quantum_Denoising_Diffusion_Models.pdf",
+      "status": "success",
+      "chunks_count": 10,
+      "math_elements": 1,
+      "circuit_elements": 26,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:56:12.398572"
+    },
+    {
+      "paper_name": "bova-et-al-2022-quantum-economic-advantage.pdf",
+      "status": "success",
+      "chunks_count": 12,
+      "math_elements": 0,
+      "circuit_elements": 15,
+      "raptor_tree_levels": {
+        "L0": "processed",
+        "L1": "processed",
+        "L2": "processed"
+      },
+      "extracted_entities": 0,
+      "processing_time": "2025-12-04T07:56:16.278605"
+    }
+  ],
+  "failed_papers": [],
+  "statistics": {
+    "total_papers_attempted": 31,
+    "papers_successfully_processed": 31,
+    "papers_failed": 0,
+    "success_rate": 100.0,
+    "total_chunks_extracted": 586,
+    "total_mathematical_elements": 53,
+    "total_circuit_descriptions": 1175,
+    "total_concepts_extracted": 0,
+    "average_chunks_per_paper": 18.903225806451612,
+    "average_concepts_per_paper": 0.0
+  },
+  "knowledge_graph_stats": {},
+  "last_updated": "2025-12-04T07:56:16.280039"
+}

@@ -1,549 +1,259 @@
-# AI-CoScientist: AI-Powered Scientific Paper Enhancement System
+# AI-CoScientist: Unified Proposal Engine (UPE)
 
-Intelligent paper evaluation and enhancement system using ensemble machine learning to assess and improve scientific manuscripts across four key dimensions: Novelty, Methodology, Clarity, and Significance.
+> **7-Strategy RAG 기반 과학 제안서 자동 최적화 시스템**
 
-## 🎯 Primary Use Case: Paper Enhancement
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Poetry](https://img.shields.io/badge/poetry-package%20manager-blueviolet)](https://python-poetry.org/)
 
-The core functionality of AI-CoScientist is **automated paper evaluation and targeted improvement**. The system achieved a real-world improvement of **7.96 → 8.34 (+0.38 points, +4.8%)** with GPT-4 narrative score reaching the maximum 9.0/10.
+## 🚀 시스템 개요
 
-### Key Capabilities
+AI-CoScientist **Unified Proposal Engine (UPE)**는 과학 연구 제안서를 자동으로 분석, 개선, 생성하는 차세대 AI 시스템입니다.
 
-✅ **Multi-Dimensional Scoring**: Comprehensive evaluation across Novelty, Methodology, Clarity, Significance
-✅ **Ensemble Evaluation**: Combines GPT-4 (40%), Hybrid (30%), and Multi-task (30%) models
-✅ **Automated Enhancement**: Generates targeted improvement strategies based on score gaps
-✅ **Incremental Improvement**: Iterative enhancement with validation at each step
-✅ **No GPU Required**: Runs on standard CPU hardware
+```
+┌─────────────────────────────────────────────────────────────┐
+│              AI-CoScientist Unified RAG System              │
+├─────────────────────────────────────────────────────────────┤
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │         Multi-Strategy Search Engine (MSS)          │   │
+│  │  HYBRID │ GRAPH_RAG │ DD_RAPTOR │ GOLDEN_REFERENCE  │   │
+│  │  MULTIMODAL │ SIMPLE │ PSYCHOLOGY                   │   │
+│  └─────────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │         Knowledge Bases (1,761+ documents)          │   │
+│  │  DD-RAPTOR │ ESM3 Papers │ Grants │ NeurIPS 2025   │   │
+│  └─────────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │         6-Agent Proposal Pipeline (MAP)             │   │
+│  │  Literature│Statistical│Hypothesis│Grant│Clinical│Neuro│
+│  └─────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────┘
+```
 
-### Quick Start: Evaluate a Paper (30 seconds)
+### 핵심 구성요소
+
+| 약어 | 전체 이름 | 설명 |
+|-----|----------|-----|
+| **UPE** | Unified Proposal Engine | 전체 시스템 |
+| **MSS** | Multi-Strategy Search | 7-전략 검색 엔진 |
+| **URO** | Unified RAG Orchestrator | RAG 통합 오케스트레이터 |
+| **MAP** | Multi-Agent Pipeline | 6-에이전트 파이프라인 |
+
+---
+
+## ⚡ Quick Start
+
+### 설치
 
 ```bash
-# Evaluate any scientific paper
-python scripts/evaluate_docx.py /path/to/your/paper.docx
-```
-
-**Output**:
-```
-📊 Paper Evaluation Results
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Overall Score: 7.96/10 (confidence: 0.88)
-
-Dimensional Scores:
-  Novelty       : 7.46/10  ⚠️ Improve positioning
-  Methodology   : 7.89/10  ✅ Strong
-  Clarity       : 7.45/10  ⚠️ Enhance narrative
-  Significance  : 7.40/10  ⚠️ Quantify impact
-
-Model Contributions:
-  GPT-4 (40%):        8.00/10  [Narrative quality]
-  Hybrid (30%):       7.97/10  [Technical depth]
-  Multi-task (30%):   7.88/10  [Novelty assessment]
-```
-
-📖 **For complete tutorial and advanced features**: See [PAPER_ENHANCEMENT_GUIDE.md](PAPER_ENHANCEMENT_GUIDE.md)
-
-## 🏗️ System Architecture
-
-AI-CoScientist provides **four ways** to use the paper enhancement system:
-
-### 1. Enhanced Interactive Chatbot (Recommended) 🆕✨
-
-```bash
-# Start enhanced chatbot with Rich UI and LLM evaluation
-python scripts/chat_reviewer_enhanced.py
-```
-
-**What's New in Enhanced Version:**
-- 🎨 **Rich Terminal UI**: Beautiful colored tables, panels, and progress bars
-- 🤖 **Real AI Evaluation**: Claude AI-powered analysis with detailed feedback
-- 💾 **Session History**: Save and resume conversations
-- 📊 **Detailed Insights**: Strengths, weaknesses, and score justifications
-
-**Natural language interface**:
-```
-💬 You: "Review my paper: paper.docx"
-
-[Rich progress indicator: "Analyzing paper with LLM-based analysis..."]
-
-📊 Overall Score: 7.96/10 (Good)  [Color-coded panel]
-   Confidence: 0.92
-
-[Colored dimensional scores table]
-
-💪 Strengths:
-✓ Strong experimental validation
-✓ Clear methodology description
-
-⚠️ Areas for Improvement:
-• Limited discussion of computational complexity
-• Could expand real-world applications
-
-💬 You: "Get me to 8.5+"
-
-[Rich table of suggestions]
-
-💬 You: "save conversation"
-✅ Session saved! ID: 20241007_143022
-```
-
-📖 **Enhanced Guide**: See [ENHANCED_CHATBOT_GUIDE.md](ENHANCED_CHATBOT_GUIDE.md) for complete features
-📖 **Basic Guide**: See [CHATBOT_GUIDE.md](CHATBOT_GUIDE.md) for original version
-
-### 2. Command-Line Scripts (Fastest)
-
-```bash
-# Evaluate paper
-python scripts/evaluate_docx.py paper.docx
-
-# Add theoretical justification (~1200 words)
-python scripts/insert_theoretical_justification.py
-
-# Add method comparison table
-python scripts/add_comparison_table.py
-
-# Re-evaluate enhanced paper
-python scripts/evaluate_docx.py paper-revised.txt
-```
-
-### 3. Service Layer (Programmatic)
-
-```python
-from src.services.paper import PaperAnalyzer, PaperImprover
-from src.services.llm.service import LLMService
-
-# Initialize services
-llm = LLMService(primary_provider="openai")
-analyzer = PaperAnalyzer(llm, db)
-improver = PaperImprover(llm, db)
-
-# Analyze paper
-scores = await analyzer.analyze_paper(paper_id)
-suggestions = await analyzer.get_improvement_suggestions(paper_id)
-
-# Apply improvements
-improved = await improver.improve_section(paper_id, "introduction", suggestions)
-```
-
-### 4. REST API (Production)
-
-```bash
-# Start API server
-poetry run uvicorn src.main:app --reload
-
-# Access interactive docs at http://localhost:8000/docs
-```
-
-**API Endpoints**:
-- `POST /api/v1/papers/analyze` - Evaluate paper quality
-- `POST /api/v1/papers/improve` - Generate improvements
-- `GET /api/v1/papers/{id}/scores` - Retrieve scores
-- Full API documentation: [docs/API_REFERENCE.md](docs/API_REFERENCE.md)
-
-## 🚀 Quick Comparison: Which Method to Use?
-
-| Method | Best For | Speed | Ease of Use | Flexibility |
-|--------|----------|-------|-------------|-------------|
-| **Chatbot** | Beginners, exploratory review | Medium | ⭐⭐⭐⭐⭐ Easiest | High |
-| **Scripts** | Quick evaluations, automation | ⚡ Fastest | ⭐⭐⭐⭐ Easy | Medium |
-| **Services** | Custom workflows, integration | Fast | ⭐⭐⭐ Moderate | Very High |
-| **API** | Production, web apps, teams | Fast | ⭐⭐ Advanced | Highest |
-
-## 📦 Installation
-
-### Prerequisites
-
-- Python 3.8+
-- (Optional) Docker and Docker Compose for full system
-- (Optional) PostgreSQL for database persistence
-
-### Quick Install (Scripts Only)
-
-```bash
-# Clone repository
-git clone https://github.com/Transconnectome/AI-CoScientist.git
+# 1. Clone & Setup
+git clone https://github.com/your-repo/AI-CoScientist.git
 cd AI-CoScientist
 
-# Create virtual environment
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Set up API keys
-echo "ANTHROPIC_API_KEY=your_key_here" > .env
-
-# Verify installation
-python scripts/evaluate_docx.py --help
-```
-
-### Full System Install (API + Services)
-
-```bash
-# Install with Poetry
+# 2. 의존성 설치
 poetry install
 
-# Set up environment
+# 3. 환경 설정
 cp .env.example .env
 # Edit .env with your API keys
-
-# Initialize database
-poetry run alembic upgrade head
-
-# Start API server
-poetry run uvicorn src.main:app --reload
 ```
 
-### Docker Deployment
+### 🎯 기본 사용법
 
+#### 1. 제안서 최적화 (권장)
 ```bash
-# Start all services (PostgreSQL, Redis, API)
-docker-compose up -d
+# 전체 최적화 (95+ 점수 목표)
+poetry run python scripts/proposal_optimizer_unified.py optimize \
+    --input "your_proposal.md" \
+    --mode full \
+    --enable-cross-domain
 
-# Access API at http://localhost:8000
-# Access docs at http://localhost:8000/docs
+# 빠른 개선 (85+ 점수 목표)
+poetry run python scripts/proposal_optimizer_unified.py optimize \
+    --input "your_proposal.md" \
+    --mode quick
 ```
 
-## 🎓 Usage Examples
-
-### Example 1: Basic Evaluation
-
+#### 2. Multi-Strategy 검색
 ```bash
-python scripts/evaluate_docx.py ~/Desktop/my-paper.docx
+# CLI 검색
+poetry run python src/services/rag/multi_strategy_search.py \
+    "ESM3 protein structure brain development"
+
+# 특정 전략 지정
+poetry run python src/services/rag/multi_strategy_search.py \
+    "quantum machine learning" \
+    --strategies "GRAPH_RAG,HYBRID" \
+    --domain "quantum_ml"
 ```
 
-System generates:
-- Overall score and confidence level
-- Dimensional breakdown (Novelty, Methodology, Clarity, Significance)
-- Model-specific assessments
-- Improvement strategy document in `claudedocs/`
-
-### Example 2: Enhancement Workflow
-
+#### 3. Multi-Agent 파이프라인
 ```bash
-# Step 1: Baseline evaluation
-python scripts/evaluate_docx.py paper.docx > baseline-score.txt
-
-# Step 2: Review improvement strategy
-cat claudedocs/paper_improvement_strategy_*.md
-
-# Step 3: Apply highest-impact enhancement
-python scripts/insert_theoretical_justification.py
-
-# Step 4: Re-evaluate
-python scripts/evaluate_docx.py paper-revised-v2.txt
-
-# Result: Score improved from 7.96 to 8.34 (+0.38 points)
+# 6-에이전트 전체 파이프라인
+poetry run python scripts/multi_agent_unified_pipeline.py \
+    --mode full_pipeline \
+    --input "proposal.md" \
+    --output "enhanced_proposal.md" \
+    --enable-cross-domain
 ```
 
-### Example 3: Programmatic Use
+#### 4. 성능 벤치마크
+```bash
+# 벤치마크 실행
+poetry run python src/monitoring/unified_performance_dashboard.py \
+    --benchmark --queries 20
+
+# 리포트 생성
+poetry run python src/monitoring/unified_performance_dashboard.py \
+    --report --output report.json
+```
+
+---
+
+## 📊 최적화 모드
+
+| 모드 | 용도 | 품질 목표 | 소요시간 |
+|-----|------|----------|---------|
+| `full` | 전체 최적화 | 95+ 점수 | 15-20분 |
+| `quick` | 빠른 개선 | 85+ 점수 | 3-5분 |
+| `research` | 문헌 검토 강화 | 90+ 점수 | 5-10분 |
+| `validation` | 주장 검증 | 88+ 점수 | 5-10분 |
+| `cross_domain` | ESM3+뇌과학+양자ML 융합 | 95+ 점수 | 10-15분 |
+
+---
+
+## 🔧 7-Strategy RAG 시스템
+
+### 전략 설명
+
+| 전략 | 용도 | 최적 도메인 |
+|-----|------|-----------|
+| **HYBRID** | 범용 통합 검색 | 일반 |
+| **GRAPH_RAG** | 지식 그래프 기반 관계 분석 | Quantum ML, 복잡한 쿼리 |
+| **ENHANCED_DD_RAPTOR** | 발달장애 전문 검색 | 뇌과학, 발달장애 |
+| **GOLDEN_REFERENCE** | 고품질 참조 논문 | 일반, 신경과학 |
+| **MULTIMODAL_RAG** | 다중 모달 콘텐츠 | 복합 데이터 |
+| **SIMPLE_RAG** | 빠른 기본 검색 | 단순 쿼리 |
+| **PSYCHOLOGY_RAG** | 심리학 전문 검색 | 심리학, 정신건강 |
+
+### Python API 사용
 
 ```python
-#!/usr/bin/env python3
-"""Automated paper improvement pipeline."""
-
 import asyncio
-from pathlib import Path
-from src.services.paper import PaperAnalyzer, PaperImprover
-from src.services.llm.service import LLMService
+from src.services.rag.multi_strategy_search import create_search_engine
 
-async def improve_paper(paper_path: str):
-    """Analyze and improve a paper."""
+async def search_example():
+    # 엔진 초기화
+    engine = await create_search_engine()
 
-    # Initialize services
-    llm = LLMService(primary_provider="openai")
-    analyzer = PaperAnalyzer(llm, None)
+    # 검색 실행
+    result = await engine.search(
+        query="ESM3 protein structure prediction for brain development",
+        domain="neuroscience",
+        complexity="complex"
+    )
 
-    # Read paper
-    text = Path(paper_path).read_text()
+    print(f"전략 사용: {result.strategies_used}")
+    print(f"결과 수: {result.total_sources}")
+    print(f"평균 관련성: {result.avg_relevance:.3f}")
+    print(f"Cross-Domain: {result.cross_domain_detected}")
 
-    # Analyze
-    scores = await analyzer.analyze_text(text)
-    print(f"Overall Score: {scores['overall']:.2f}/10")
-
-    # Get improvement suggestions
-    suggestions = await analyzer.suggest_improvements(scores)
-
-    # Display top 3 suggestions
-    for i, suggestion in enumerate(suggestions[:3], 1):
-        print(f"{i}. {suggestion['title']}")
-        print(f"   Impact: +{suggestion['expected_gain']:.2f} points")
-        print(f"   Effort: {suggestion['estimated_hours']} hours")
-
-if __name__ == "__main__":
-    asyncio.run(improve_paper("paper.docx"))
+asyncio.run(search_example())
 ```
 
-## 📊 Evaluation Methodology
+---
 
-### Ensemble Architecture
+## 📚 Knowledge Base
+
+현재 시스템에 통합된 지식 베이스:
+
+| 데이터베이스 | 문서 수 | 도메인 | 임베딩 차원 |
+|------------|--------|-------|-----------|
+| DD-RAPTOR | 1,525 | 발달장애, 뇌과학 | 768 (SciBERT) |
+| ESM3 Papers | 84 | 단백질 연구 | 384 (MiniLM) |
+| Grant Proposals | 152 | 연구 제안서 | 384 (MiniLM) |
+| **Total** | **1,761+** | Multi-domain | Mixed |
+
+---
+
+## 📈 Performance Metrics
+
+최근 벤치마크 결과:
 
 ```
-Paper Input
-    │
-    ├─→ GPT-4 Scorer (40%)      → Narrative quality, communication
-    ├─→ Hybrid Scorer (30%)     → Technical depth, methodology
-    └─→ Multi-task Scorer (30%) → Novelty, contribution
-    │
-    └─→ Weighted Ensemble → Overall Score (0-10)
-                         → 4 Dimensional Scores
-                         → Confidence Level
+✅ 성공률: 100% (10/10 쿼리)
+⏱️ 평균 Latency: 426.8ms
+🔧 7개 Strategy 활성화
+🌐 Cross-Domain 감지: 100%
 ```
 
-### Scoring Dimensions
+### 모니터링
 
-| Dimension | Weight | Evaluates |
-|-----------|--------|-----------|
-| **Novelty** | 25% | Originality, paradigm shift vs incremental |
-| **Methodology** | 35% | Experimental rigor, validation, reproducibility |
-| **Clarity** | 20% | Writing quality, organization, communication |
-| **Significance** | 20% | Real-world impact, clinical/practical value |
+```bash
+# 실시간 대시보드
+poetry run python src/monitoring/unified_performance_dashboard.py --serve
 
-### Score Interpretation
+# JSON 리포트
+poetry run python src/monitoring/unified_performance_dashboard.py --report
+```
 
-| Score | Quality | Publication Outlook |
-|-------|---------|---------------------|
-| 9.0-10.0 | **Exceptional** | Nature, Science, Cell |
-| 8.5-8.9 | **Excellent** | Top specialty journals |
-| 8.0-8.4 | **Very Good** | Strong specialty journals |
-| 7.5-7.9 | **Good** | Respectable journals |
-| 7.0-7.4 | **Acceptable** | Mid-tier journals |
-| <7.0 | **Needs Work** | Major revisions required |
+---
 
-## 🚀 Enhancement Strategies
-
-### Quick Wins (5-10 hours, +0.3-0.5 points)
-
-1. **Transform Title** (30 min) → +0.3-0.5 GPT-4
-   - From: "A more comprehensive analysis..."
-   - To: "Solving the [Crisis] in [Field]: A [Framework]"
-
-2. **Rewrite Abstract with Crisis Framing** (45 min) → +0.2-0.4 GPT-4
-   - Lead with problem/crisis statement
-   - Quantify gap ("50% of methods fail")
-   - Position solution as paradigm shift
-
-3. **Quantify All Impact Statements** (1-2 hours) → +0.1-0.3 Significance
-   - Replace "improves outcomes" with "34% variance reduction"
-   - Replace "reduces costs" with "$9.65B projected savings"
-
-4. **Add Theoretical Justification** (2 hours with script) → +0.2-0.3 Methodology
-   ```bash
-   python scripts/insert_theoretical_justification.py
-   ```
-
-### Medium Effort (10-20 hours, +0.3-0.6 points)
-
-- Multi-dataset validation
-- Comparative benchmarking studies
-- Comprehensive sensitivity analyses
-
-### High Effort (20-40 hours, +0.4-0.7 points)
-
-- Theoretical proofs and bounds
-- Simulation studies (100+ scenarios)
-- Clinical validation
-
-**Detailed strategies**: See [PAPER_ENHANCEMENT_GUIDE.md](PAPER_ENHANCEMENT_GUIDE.md)
-
-## 🗺️ System Roadmap
-
-### ✅ Phase 1: Core Infrastructure (Complete)
-- [x] FastAPI-based REST API
-- [x] PostgreSQL database with SQLAlchemy ORM
-- [x] Redis caching layer
-- [x] Docker Compose deployment
-- [x] Health checks and monitoring
-
-### ✅ Phase 2: LLM Integration (Complete)
-- [x] Multi-provider LLM service (OpenAI, Anthropic)
-- [x] Prompt template system with Jinja2
-- [x] Usage tracking and cost calculation
-- [x] Streaming support
-
-### ✅ Phase 3: Paper Enhancement Engine (Complete)
-- [x] **Three-model ensemble evaluation**
-- [x] **Dimensional scoring (Novelty, Methodology, Clarity, Significance)**
-- [x] **Automated enhancement scripts**
-- [x] **Improvement strategy generation**
-- [x] **Service layer (PaperParser, PaperAnalyzer, PaperImprover)**
-- [x] **Validation: Real paper improved 7.96 → 8.34 (+4.8%)**
-
-### 🔄 Phase 4: Research Engine (In Progress)
-- [ ] Hypothesis generation from literature
-- [ ] Automated literature review
-- [ ] Knowledge graph construction
-
-### 📋 Phase 5: Experiment Engine (Planned)
-- [ ] Experimental protocol design
-- [ ] Statistical power analysis
-- [ ] Data analysis automation
-
-### 🎯 Phase 6: Full Paper Generation (Planned)
-- [ ] Section-by-section generation
-- [ ] Citation management
-- [ ] Figure and table generation
-
-### 🖥️ Phase 7: UI Development (Planned)
-- [ ] Web interface for paper upload
-- [ ] Interactive improvement dashboard
-- [ ] Real-time scoring and suggestions
-
-## 📚 Documentation
-
-### Core Guides
-- 📖 **[Paper Enhancement Guide](PAPER_ENHANCEMENT_GUIDE.md)** - Complete tutorial with examples
-- 📘 **[API Reference](docs/API_REFERENCE.md)** - Full API documentation
-- 📙 **[Documentation Index](docs/INDEX.md)** - Master documentation hub
-
-### Status Reports
-- ✅ **[System Ready](SYSTEM_READY.md)** - System configuration complete
-- ✅ **[Implementation Status](IMPLEMENTATION_STATUS.md)** - What's built
-- ✅ **[Enhancement Results](claudedocs/ENHANCEMENT_RESULTS_SUMMARY.md)** - Case study results
-
-## 🏆 Real-World Results
-
-**Case Study: Improving a Neuroscience Paper**
-
-| Metric | Before | After | Gain |
-|--------|--------|-------|------|
-| **Overall Score** | 7.96 | 8.34 | +0.38 (+4.8%) |
-| **GPT-4 Score** | 8.00 | 9.00 | +1.00 🎯 Max |
-| **Novelty** | 7.46 | 7.92 | +0.46 |
-| **Methodology** | 7.89 | 8.15 | +0.26 |
-| **Clarity** | 7.45 | 7.89 | +0.44 |
-| **Significance** | 7.40 | 8.12 | +0.72 |
-
-**Enhancements Applied**:
-1. Title transformation (crisis framing)
-2. Abstract rewrite with quantified impact
-3. Theoretical justification section (~1200 words)
-4. Impact quantification throughout
-
-**Time Investment**: 5-8 hours
-**Outcome**: Publication-ready for high-quality specialty journals
-
-## 🛠️ Development
-
-### Project Structure
+## 🏗️ 프로젝트 구조
 
 ```
 AI-CoScientist/
 ├── src/
-│   ├── api/              # FastAPI endpoints
-│   ├── core/             # Configuration, database, Redis
-│   ├── models/           # SQLAlchemy models
-│   ├── services/         # Business logic
-│   │   ├── llm/         # LLM service with multi-provider support
-│   │   ├── paper/       # Paper analysis and improvement services
-│   │   └── scoring/     # Ensemble scoring models
-│   └── utils/            # Utilities
-├── scripts/              # Enhancement scripts
-│   ├── evaluate_docx.py              # Main evaluation script
-│   ├── insert_theoretical_justification.py
-│   ├── add_impact_boxes.py
-│   ├── add_comparison_table.py
-│   └── add_literature_implications.py
-├── tests/                # Test suite
-├── docs/                 # Documentation
-│   ├── INDEX.md         # Master documentation index
-│   └── API_REFERENCE.md # Complete API documentation
-├── claudedocs/           # Generated analysis and reports
-├── docker/               # Docker configurations
-└── design/               # Architecture design documents
+│   ├── services/rag/
+│   │   ├── multi_strategy_search.py      # MSS: 7-전략 검색 엔진
+│   │   ├── unified_rag_orchestrator.py   # URO: RAG 오케스트레이터
+│   │   └── enhanced_dd_raptor.py         # DD-RAPTOR 전략
+│   ├── agents/
+│   │   ├── pool.py                       # 6-에이전트 풀
+│   │   └── proposal_generation_agent_unified.py
+│   └── monitoring/
+│       └── unified_performance_dashboard.py  # 성능 대시보드
+├── scripts/
+│   ├── proposal_optimizer_unified.py     # 제안서 최적화
+│   ├── multi_agent_unified_pipeline.py   # MAP 파이프라인
+│   └── map_proposal_to_unified_evidence.py  # 근거 매핑
+├── chromadb_data_dd/                     # DD-RAPTOR 벡터 DB
+├── chromadb_grants_*/                    # 그랜트 벡터 DB
+└── chromadb_new_papers_*/                # ESM3 벡터 DB
 ```
 
-### Running Tests
+---
 
-```bash
-# Run all tests
-poetry run pytest
+## 📖 Documentation
 
-# Run with coverage
-poetry run pytest --cov=src --cov-report=html
+- [`CLAUDE.md`](./CLAUDE.md) - 개발자 가이드 및 아키텍처
+- [`PROPOSAL_OPTIMIZATION_QUICK_REFERENCE_UNIFIED.md`](./PROPOSAL_OPTIMIZATION_QUICK_REFERENCE_UNIFIED.md) - 빠른 참조 가이드
+- [`UNIFIED_RAG_MIGRATION_SUMMARY.md`](./UNIFIED_RAG_MIGRATION_SUMMARY.md) - 마이그레이션 요약
 
-# Run specific test
-poetry run pytest tests/services/test_paper.py -v
+---
+
+## 🔑 환경 변수
+
+```env
+# LLM API Keys
+OPENAI_API_KEY=your_openai_key
+ANTHROPIC_API_KEY=your_anthropic_key
+
+# Database
+DATABASE_URL=postgresql://user:pass@localhost/aicoscientist
+
+# Vector Store (ChromaDB paths are auto-detected)
+CHROMADB_DD_RAPTOR_PATH=chromadb_data_dd
+
+# Optional: NVIDIA NIM
+NGC_API_KEY=your_ngc_key
 ```
 
-### Code Quality
-
-```bash
-# Format code
-poetry run black src tests
-
-# Lint code
-poetry run ruff check src tests
-
-# Type checking
-poetry run mypy src
-```
-
-## 🔐 Environment Variables
-
-Create `.env` file with:
-
-```bash
-# Required for GPT-4 evaluation
-ANTHROPIC_API_KEY=sk-ant-api03-your_key_here
-
-# Optional for additional models
-OPENAI_API_KEY=sk-your_openai_key
-
-# Database (optional, defaults to SQLite)
-DATABASE_URL=postgresql://user:pass@localhost:5432/ai_coscientist
-
-# Redis (optional, for API caching)
-REDIS_URL=redis://localhost:6379/0
-
-# API configuration
-SECRET_KEY=your_secret_key_min_32_characters
-```
-
-## 🤝 Contributing
-
-Contributions welcome! Areas for development:
-
-- Additional evaluation models and ensembles
-- Domain-specific scoring rubrics
-- Automated enhancement generation
-- Multi-language support
-- Web interface development
-
-**Process**:
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Write tests for new features
-4. Commit changes (`git commit -m 'Add amazing feature'`)
-5. Push to branch (`git push origin feature/amazing-feature`)
-6. Open Pull Request
+---
 
 ## 📝 License
 
-MIT License - see LICENSE file for details
+MIT License - see [LICENSE](./LICENSE) for details.
 
-## 🙏 Acknowledgments
+---
 
-- **Anthropic** for Claude API (GPT-4 evaluation)
-- **OpenAI** for GPT-4 API (alternative provider)
-- **Transconnectome Lab** for validation datasets
-- All contributors and researchers
-
-## 📧 Contact
-
-- **GitHub**: https://github.com/Transconnectome/AI-CoScientist
-- **Issues**: https://github.com/Transconnectome/AI-CoScientist/issues
-- **Lab Website**: [Transconnectome Lab]
-
-## 📖 Citation
-
-If you use AI-CoScientist in your research:
-
-```bibtex
-@software{ai_coscientist_2024,
-  title = {AI-CoScientist: AI-Powered Scientific Paper Enhancement System},
-  author = {Transconnectome Lab},
-  year = {2024},
-  url = {https://github.com/Transconnectome/AI-CoScientist},
-  note = {Ensemble machine learning for automated paper evaluation and improvement}
-}
-```
+**Built with ❤️ by AI-CoScientist Team**

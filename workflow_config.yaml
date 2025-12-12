@@ -1,0 +1,427 @@
+# RAG Enhancement Workflow Configuration
+# This file defines the complete implementation workflow for RAG system improvements
+
+project:
+  name: "AI-CoScientist RAG Enhancement"
+  version: "1.0.0"
+  start_date: "2024-12-04"
+  repository: "https://github.com/Transconnectome/AI-CoScientist"
+
+phases:
+  phase1:
+    name: "Foundation & Consolidation"
+    description: "Establish evaluation framework and unified architecture"
+    duration_weeks: 2
+    priority: "P0"
+
+    sprints:
+      sprint1_1:
+        name: "Evaluation Framework Foundation"
+        duration_days: 5
+        goals:
+          - "Complete RAGAS integration"
+          - "Establish benchmark dataset"
+          - "Implement monitoring infrastructure"
+
+        tasks:
+          ragas_integration:
+            name: "Extend RAG evaluator with RAGAS metrics"
+            file: "src/services/rag/rag_evaluator.py"
+            type: "implementation"
+            dependencies: []
+            estimated_hours: 8
+            priority: "P0"
+            acceptance_criteria:
+              - "RAGAS faithfulness metric implemented and tested"
+              - "Answer relevancy scoring functional with validation"
+              - "Context precision calculation working accurately"
+              - "Integration with existing evaluation pipeline"
+
+          comprehensive_tests:
+            name: "Create comprehensive test suite for evaluation"
+            file: "tests/rag/test_rag_evaluation.py"
+            type: "testing"
+            dependencies: ["ragas_integration"]
+            estimated_hours: 6
+            priority: "P0"
+            acceptance_criteria:
+              - "Unit tests for all RAGAS metrics (coverage ≥ 80%)"
+              - "Integration tests with mock data scenarios"
+              - "Performance benchmarks established"
+              - "Error handling validation"
+
+          benchmark_dataset:
+            name: "Build golden QA pairs dataset"
+            file: "data/evaluation/rag_benchmark.json"
+            type: "data"
+            dependencies: []
+            estimated_hours: 12
+            priority: "P0"
+            acceptance_criteria:
+              - "100 high-quality QA pairs across domains"
+              - "Domain coverage: neuroscience (30%), quantum ML (30%), general (40%)"
+              - "Difficulty distribution: simple (40%), medium (40%), complex (20%)"
+              - "Quality validation passed by domain experts"
+
+          automated_generation:
+            name: "Automated benchmark generation script"
+            file: "scripts/build_benchmark_dataset.py"
+            type: "automation"
+            dependencies: ["benchmark_dataset"]
+            estimated_hours: 6
+            priority: "P1"
+            acceptance_criteria:
+              - "Automated QA pair generation from golden references"
+              - "Quality validation pipeline implemented"
+              - "Domain-specific question templates created"
+              - "Batch processing capability"
+
+          monitoring_infrastructure:
+            name: "Prometheus metrics for RAG performance"
+            file: "src/monitoring/rag_metrics.py"
+            type: "infrastructure"
+            dependencies: ["ragas_integration"]
+            estimated_hours: 8
+            priority: "P0"
+            acceptance_criteria:
+              - "Latency tracking per RAG strategy"
+              - "Quality score distribution monitoring"
+              - "Resource utilization metrics"
+              - "Grafana dashboard integration"
+
+        quality_gates:
+          - "All RAGAS metrics return valid scores (0-1 range)"
+          - "Benchmark dataset passes expert validation"
+          - "Monitoring dashboard shows real-time metrics"
+          - "Test coverage ≥ 80% for evaluation code"
+          - "No performance regression in existing functionality"
+
+      sprint1_2:
+        name: "Unified RAG Orchestrator"
+        duration_days: 5
+        goals:
+          - "Implement unified interface for all RAG systems"
+          - "Deploy intelligent query routing"
+          - "Establish performance monitoring"
+
+        tasks:
+          unified_orchestrator:
+            name: "Implement unified RAG orchestrator"
+            file: "src/services/rag/unified_rag_orchestrator.py"
+            type: "implementation"
+            dependencies: []
+            estimated_hours: 16
+            priority: "P0"
+            acceptance_criteria:
+              - "Strategy registry for all 6 RAG systems functional"
+              - "Query routing logic with fallback mechanisms"
+              - "Performance logging and metrics integration"
+              - "Configuration-driven strategy selection"
+              - "Thread-safe concurrent execution support"
+
+          query_classifier:
+            name: "Advanced query classifier with ML"
+            file: "src/services/rag/advanced_query_classifier.py"
+            type: "implementation"
+            dependencies: []
+            estimated_hours: 12
+            priority: "P0"
+            acceptance_criteria:
+              - "ML-based complexity classification (simple/medium/complex)"
+              - "Domain detection: neuroscience, quantum ML, general"
+              - "Intent classification: factual, comparative, synthesis"
+              - "Confidence scoring for all predictions"
+              - "Evaluation accuracy ≥ 85% on test set"
+
+          unified_api:
+            name: "Unified RAG API endpoints"
+            file: "src/api/v1/unified_rag.py"
+            type: "api"
+            dependencies: ["unified_orchestrator"]
+            estimated_hours: 8
+            priority: "P0"
+            acceptance_criteria:
+              - "RESTful endpoints for unified search"
+              - "Strategy selection and override API"
+              - "Performance metrics and health check endpoints"
+              - "OpenAPI documentation complete"
+
+          integration_tests:
+            name: "Comprehensive integration tests"
+            file: "tests/rag/test_unified_orchestrator.py"
+            type: "testing"
+            dependencies: ["unified_orchestrator", "query_classifier"]
+            estimated_hours: 10
+            priority: "P0"
+            acceptance_criteria:
+              - "End-to-end workflow tests for all strategies"
+              - "Strategy routing validation scenarios"
+              - "Performance regression test suite"
+              - "Error handling and recovery testing"
+
+        quality_gates:
+          - "All 6 RAG strategies accessible through unified interface"
+          - "Query classification accuracy ≥ 85% on validation set"
+          - "Response time improvement ≥ 25% for complex queries"
+          - "Zero breaking changes to existing functionality"
+          - "API documentation completeness ≥ 95%"
+
+  phase2:
+    name: "Performance Optimization"
+    description: "Optimize retrieval performance and implement GraphRAG"
+    duration_weeks: 4
+    priority: "P1"
+
+    sprints:
+      sprint2_1:
+        name: "Adaptive Hybrid Retrieval"
+        duration_days: 10
+        goals:
+          - "Implement dynamic search optimization"
+          - "Add context sufficiency checking"
+          - "Deploy intelligent caching"
+
+        tasks:
+          adaptive_retriever:
+            name: "Adaptive hybrid retriever implementation"
+            file: "src/services/rag/adaptive_hybrid_retriever.py"
+            type: "implementation"
+            dependencies: ["query_classifier"]
+            estimated_hours: 20
+            priority: "P0"
+            acceptance_criteria:
+              - "Dynamic alpha tuning based on query characteristics"
+              - "Query-specific k-value selection algorithm"
+              - "Performance-aware strategy switching"
+              - "A/B testing framework integration"
+
+          context_checker:
+            name: "Context sufficiency checker"
+            file: "src/services/rag/context_sufficiency_checker.py"
+            type: "implementation"
+            dependencies: ["adaptive_retriever"]
+            estimated_hours: 16
+            priority: "P0"
+            acceptance_criteria:
+              - "Query decomposition into sub-questions"
+              - "Coverage analysis algorithm implementation"
+              - "Adaptive context expansion logic"
+              - "Confidence threshold configuration"
+
+          intelligent_cache:
+            name: "Intelligent caching system"
+            file: "src/core/intelligent_cache.py"
+            type: "implementation"
+            dependencies: []
+            estimated_hours: 12
+            priority: "P1"
+            acceptance_criteria:
+              - "Query-aware cache key generation"
+              - "TTL based on query complexity and domain"
+              - "Cache hit rate optimization algorithms"
+              - "Memory usage monitoring and limits"
+
+          performance_benchmark:
+            name: "Performance benchmark suite"
+            file: "scripts/performance_benchmark.py"
+            type: "testing"
+            dependencies: ["adaptive_retriever"]
+            estimated_hours: 12
+            priority: "P1"
+            acceptance_criteria:
+              - "Latency measurement framework"
+              - "Throughput testing scenarios"
+              - "Memory usage profiling"
+              - "Regression detection algorithms"
+
+        quality_gates:
+          - "Search latency reduced by ≥ 30% for medium complexity queries"
+          - "Context sufficiency accuracy ≥ 90% on test scenarios"
+          - "Cache hit rate ≥ 70% in production simulation"
+          - "Memory usage increase ≤ 20% from baseline"
+
+      sprint2_2:
+        name: "GraphRAG Enhancement"
+        duration_days: 10
+        goals:
+          - "Complete Neo4j integration"
+          - "Implement ML-based entity extraction"
+          - "Deploy graph-enhanced search"
+
+        tasks:
+          production_graph_rag:
+            name: "Production GraphRAG implementation"
+            file: "src/services/rag/production_graph_rag.py"
+            type: "implementation"
+            dependencies: []
+            estimated_hours: 24
+            priority: "P0"
+            acceptance_criteria:
+              - "Neo4j integration with connection pooling"
+              - "ML-based entity extraction using SciBERT"
+              - "Relationship classification model deployment"
+              - "Graph construction pipeline optimization"
+
+          entity_extractor:
+            name: "SciBERT entity extractor"
+            file: "models/entity_extractor_scibert.py"
+            type: "ml_model"
+            dependencies: []
+            estimated_hours: 16
+            priority: "P0"
+            acceptance_criteria:
+              - "Scientific entity recognition with F1 ≥ 0.85"
+              - "Domain-specific NER model fine-tuning"
+              - "Confidence scoring for extracted entities"
+              - "Batch processing optimization"
+
+          graph_construction:
+            name: "Knowledge graph construction pipeline"
+            file: "scripts/build_knowledge_graph.py"
+            type: "data_pipeline"
+            dependencies: ["production_graph_rag"]
+            estimated_hours: 16
+            priority: "P0"
+            acceptance_criteria:
+              - "Batch graph construction from document corpus"
+              - "Incremental update mechanisms"
+              - "Quality validation and consistency checks"
+              - "Performance optimization for large datasets"
+
+          graph_search:
+            name: "Graph-enhanced search implementation"
+            file: "src/services/rag/graph_enhanced_search.py"
+            type: "implementation"
+            dependencies: ["production_graph_rag"]
+            estimated_hours: 12
+            priority: "P1"
+            acceptance_criteria:
+              - "Entity-aware query expansion algorithms"
+              - "Graph traversal for contextual information"
+              - "Hybrid vector-graph search fusion"
+              - "Relevance scoring with graph signals"
+
+        quality_gates:
+          - "Graph construction processes all documents successfully"
+          - "Entity extraction accuracy ≥ 85% on scientific texts"
+          - "Graph-enhanced search improves complex query results by ≥ 40%"
+          - "Neo4j integration maintains sub-100ms query latency"
+
+  phase3:
+    name: "Advanced Features"
+    description: "Implement multimodal capabilities and self-learning systems"
+    duration_weeks: 12
+    priority: "P2"
+
+    sprints:
+      sprint3_1:
+        name: "Multimodal RAG Development"
+        duration_days: 20
+        goals:
+          - "CLIP integration for image processing"
+          - "Table extraction and understanding"
+          - "Frontend multimodal interface"
+
+        tasks:
+          multimodal_rag:
+            name: "Multimodal RAG core implementation"
+            file: "src/services/rag/multimodal_rag.py"
+            type: "implementation"
+            dependencies: []
+            estimated_hours: 32
+            priority: "P2"
+            acceptance_criteria:
+              - "CLIP integration for image-text processing"
+              - "Table extraction with structure preservation"
+              - "Cross-modal embedding fusion algorithms"
+              - "Multimodal similarity scoring"
+
+          image_text_fusion:
+            name: "Image-text fusion engine"
+            file: "src/services/rag/image_text_fusion.py"
+            type: "implementation"
+            dependencies: ["multimodal_rag"]
+            estimated_hours: 20
+            priority: "P2"
+            acceptance_criteria:
+              - "Vision-language model integration"
+              - "Attention-based fusion mechanisms"
+              - "Multimodal query understanding"
+              - "Cross-modal retrieval capabilities"
+
+# Quality gates for overall project
+project_quality_gates:
+  phase1_completion:
+    - "All Phase 1 sprints completed successfully"
+    - "Unified RAG interface operational"
+    - "Evaluation framework functional"
+    - "Performance benchmarks established"
+
+  phase2_completion:
+    - "Search performance improved by ≥ 50%"
+    - "GraphRAG fully integrated"
+    - "Context sufficiency detection operational"
+    - "No regression in accuracy metrics"
+
+  phase3_completion:
+    - "Multimodal capabilities functional"
+    - "Self-learning system operational"
+    - "User satisfaction ≥ 4.5/5"
+    - "System scalability demonstrated"
+
+# Monitoring and metrics
+metrics:
+  performance:
+    search_latency_p95: "≤ 300ms"
+    throughput: "≥ 500 QPS"
+    accuracy_complex_queries: "≥ 85%"
+    cache_hit_rate: "≥ 70%"
+
+  quality:
+    test_coverage: "≥ 80%"
+    code_quality_score: "≥ 8.0/10"
+    documentation_completeness: "≥ 95%"
+    security_scan_pass: "100%"
+
+  user_experience:
+    response_time_satisfaction: "≥ 90%"
+    result_relevance_score: "≥ 4.0/5"
+    system_reliability: "≥ 99.5%"
+    user_adoption_rate: "≥ 80%"
+
+# Team and resources
+team:
+  roles:
+    - "Technical Lead"
+    - "Backend Engineer (2x)"
+    - "ML Engineer"
+    - "Frontend Engineer"
+    - "DevOps Engineer"
+    - "QA Engineer"
+
+  skills_required:
+    - "Python/FastAPI expertise"
+    - "Vector database experience (ChromaDB)"
+    - "LLM integration (OpenAI, Anthropic)"
+    - "Neo4j and graph databases"
+    - "React/TypeScript frontend"
+    - "MLOps and model deployment"
+
+# Risk management
+risks:
+  technical:
+    - risk: "ChromaDB performance degradation with scale"
+      mitigation: "Implement horizontal scaling and optimization"
+      probability: "Medium"
+      impact: "High"
+
+    - risk: "LLM API rate limits and costs"
+      mitigation: "Implement intelligent caching and fallback strategies"
+      probability: "High"
+      impact: "Medium"
+
+  timeline:
+    - risk: "Complex integration delays"
+      mitigation: "Phased rollout with fallback plans"
+      probability: "Medium"
+      impact: "High"

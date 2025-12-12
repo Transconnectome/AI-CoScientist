@@ -1,0 +1,4351 @@
+Call 2025
+for Transnational Research Proposals
+supporting the topics of
+
+Quantum Phenomena and Resources
+and
+
+Applied Quantum Science
+
+Launch of the Call: 4 September 2025
+Submission deadline: 5 December 2025, 17.00 CET
+Documents and procedures: https://www.quantera.eu
+Call information: Maurice Tia, Ph.D.
++33 (0)1 72 73 06 90
+Maurice.Tia@anr.fr
+Call budget: ca. € 53 M
+
+History of changes
+Date
+
+Changes to the document
+The maximum funding per project for Italian partners (MUR) has been
+corrected in the funding overview table.
+
+10/10/2025
+
+The sentence “All project-related costs (of Estonian partner) must be
+incurred no later than 31.08.2029” has been added in the Estonian
+national annex (ETAG).
+
+QuantERA Call 2025 Announcement
+
+Page 2 of 83
+
+KEY FACTS & FIGURES
+Topics Quantum Phenomena and Resources
+Applied Quantum Science
+Indicative Call budget Approx. € 53 M
+Project consortium The project consortia must be composed of at least 3 partners eligible
+to receive funding from three or more different countries participating in
+the Call
+Standard consortium size: 3 to 6 partners
+Participating Austria, Belgium, Bulgaria, Croatia, Czechia, Estonia, Finland, France,
+countries Germany, Hungary, Ireland, Israel, Italy, Latvia, Lithuania, Luxembourg,
+Malta, Netherlands, Norway, Poland, Romania, Slovakia, Slovenia,
+South Korea, Spain, Sweden, Switzerland, Türkiye, United Kingdom
+Partner search tool Applicants are offered a Partner search tool that can be used to look for
+partners or to look for projects:
+https://www2.ncn.gov.pl/partners/quantera2025/
+
+Project duration 24-month or 36-month period
+
+Evaluation Proposals are evaluated based on the criteria of Excellence, Impact, and
+Quality and efficiency of the implementation
+Eligibility for funding The project consortium as a whole must be eligible with respect to
+transnational rules. Each partner must fulfil the conditions of the
+national/regional funding organisation, as described in the Annex 1.
+
+CALL CALENDAR
+5 December 2025
+17.00 CET
+May 2026
+June-September 2026
+
+Deadline for the proposal submission
+Notification of accepted proposals
+Funded project start
+
+QuantERA Call 2025 Announcement
+
+Page 3 of 83
+
+Table of Contents
+1.SCOPE AND OBJECTIVES ................................................................................................................ 6
+About QuantERA ..................................................................................................................................... 6
+Information about the Call ....................................................................................................................... 6
+Targeted Research .................................................................................................................................. 6
+2. FUNDING OVERVIEW ........................................................................................................................ 9
+3. APPLICATION GUIDE ...................................................................................................................... 12
+Project Consortia: Formation Principles ................................................................................................ 12
+Partner Search Tool .............................................................................................................................. 13
+Eligibility ................................................................................................................................................. 13
+Submission ............................................................................................................................................ 14
+4. EVALUATION AND SELECTION ..................................................................................................... 15
+Evaluation .............................................................................................................................................. 15
+Selection ................................................................................................................................................ 16
+5. MANAGEMENT OF FUNDED PROJECTS ...................................................................................... 17
+Establishing the Project Consortium ..................................................................................................... 17
+Reporting and Publications .................................................................................................................... 17
+Open Access Publishing / Open Research Data................................................................................... 18
+Compliance with EU obligations ............................................................................................................ 18
+6. MANAGEMENT OF THE CALL........................................................................................................ 18
+Annex 1: Requirements of Research Funding Organisations ........................................................ 20
+Austria (FFG) ........................................................................................................................................ 20
+Austria (FWF)........................................................................................................................................ 21
+Belgium (F.R.S.- FNRS) ........................................................................................................................ 23
+Belgium – Flanders (FWO) .................................................................................................................... 24
+Bulgaria (BNSF) .................................................................................................................................... 27
+Croatia (HRZZ) ...................................................................................................................................... 29
+Czechia (MEYS) .................................................................................................................................... 31
+Czechia (TA CR) ................................................................................................................................... 33
+Estonia (ETAG) ..................................................................................................................................... 35
+Finland (AKA) ....................................................................................................................................... 38
+France (ANR) ......................................................................................................................................... 40
+Germany – QPR (DFG) ......................................................................................................................... 41
+Germany – AQS (BMFTR) .................................................................................................................... 43
+Hungary (NKFIH) ................................................................................................................................... 45
+Ireland (TE-RI) ...................................................................................................................................... 46
+Israel (IIA) .............................................................................................................................................. 48
+Italy (MUR) ............................................................................................................................................. 50
+Latvia (LZP) ........................................................................................................................................... 51
+Lithuania (LMT)...................................................................................................................................... 52
+Luxembourg (FNR) ................................................................................................................................ 53
+Malta (MEY)........................................................................................................................................ 54
+Netherlands (QDNL) .............................................................................................................................. 55
+Norway (RCN) ....................................................................................................................................... 57
+Poland (NCBR) ...................................................................................................................................... 59
+Poland (NCN) ........................................................................................................................................ 60
+Romania (UEFISCDI) ............................................................................................................................ 62
+Slovakia (SAS) ....................................................................................................................................... 63
+Slovenia (MVZI) ..................................................................................................................................... 64
+South Korea (NRF Korea) ..................................................................................................................... 69
+Spain (AEI) ............................................................................................................................................ 70
+Sweden (VR) ......................................................................................................................................... 74
+Switzerland (SNSF) ............................................................................................................................... 76
+Türkiye (TÜBİTAK) ............................................................................................................................... 78
+United Kingdom (UKRI-EPSRC) ........................................................................................................... 79
+Annex 2: QuantERA Gender Equality Statement ............................................................................. 81
+Annex 3: QuantERA Guidelines for Responsible Research and Innovation (RRI) ....................... 82
+QuantERA Call 2025 Announcement
+
+Page 4 of 83
+
+List of Abbreviations
+Abbreviation
+
+Full name
+
+AQS
+
+Applied Quantum Science
+
+Call
+
+QuantERA Call 2025 for proposals
+
+CO
+
+Coordination Office
+
+CoI
+
+Conflict of Interest
+
+CS
+
+Call Secretariat
+
+CSC
+
+Call Steering Committee
+
+EC
+
+European Commission
+
+EP
+
+Evaluation Panel
+
+ESS
+
+Electronic Submission System
+
+EU
+
+European Union
+
+PI
+
+Principal Investigator – Partner in the project consortium, the leader of
+the national/regional team
+
+PC
+
+Project Coordinator – Coordinator of the project consortium and the
+leader of the transnational team
+
+QPR
+
+Quantum Phenomena and Resources
+
+QT
+
+Quantum Technologies
+
+RFO
+
+Research Funding Organisation
+
+SAB
+
+Strategic Advisory Board - Advisory body for QuantERA consisting of
+prominent scientists and industry representatives of Quantum
+Technologies (QT)
+
+QuantERA Call 2025 Announcement
+
+Page 5 of 83
+
+1. SCOPE AND OBJECTIVES
+About QuantERA
+The QuantERA programme1, supported by the European Commission, forms a network
+of Research Funding Organisations across Europe and beyond dedicated to advancing highquality research and innovation in the field of Quantum Technologies (QT). The programme
+brings together researchers, funding agencies, and policymakers to make sure that cuttingedge quantum projects get the support they need.
+The funding organisations of QuantERA jointly finance multilateral projects with the potential
+to initiate or foster new lines of QT. The support is intended to advance multidisciplinary
+science and drive cutting-edge engineering.
+
+Information about the Call
+The QuantERA Call 2025 is a joint transnational Call for research proposals in QT cofunded
+by organisations gathered under QuantERA III Research & Innovation Action, with additional
+EC contribution.
+Through this Call, the QuantERA III consortium aims at stimulating and intensifying research
+and innovation in the field of QT, contributing to the Strategic Research and Industry Agenda
+of the European Quantum Technology community2.
+
+Targeted Research
+Projects funded in QuantERA III should contribute to the development of European research
+and innovation in QT. The transformative research funded within QuantERA III should explore
+collaborative advanced interdisciplinary science and/or cutting-edge engineering with the
+potential to initiate or foster new lines of QT and help Europe grasp leadership early on in
+promising future technology areas.
+Projects are expected to start at 1-4 Technology Readiness Level3 (TRL) and achieve TRL
+in the range 1-6 commensurate with the Call topic.
+
+Call Topics
+The submitted proposals are expected to be aligned with one of the two QuantERA Call
+2025 topics:
+Quantum Phenomena and Resources (QPR)
+where the goal is to lay the foundations for the QT of the future. The focus is on basic
+quantum science and fundamental physics, and the projects should explore novel quantum
+phenomena, concepts, resources, protocols, algorithms, and/or address major challenges
+that prevent broad applications of some quantum technologies;
+
+1 See: https://quantera.eu/
+2
+
+See Strategic Research and Industry Agenda of the European Quantum Technology community
+at https://qt.eu/media/pdf/Strategic-Reseach-and-Industry-Agenda-2030.pdf
+3 For definition of TRL check: https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wpcall/2023-2024/wp-13-general-annexes_horizon-2023-2024_en.pdf
+
+Applied Quantum Science (AQS)
+where the goal is to take known quantum effects and established concepts from quantum
+science, translate them into technological applications and develop new products. These
+could be novel devices that are based on known quantum effects and that will serve a novel
+application in QT, or devices and systems that translate known quantum applications into
+products and industrial applications.
+Note: If the tasks of (a) partner(s) are not well in line with the consortium’s chosen call topic
+(and closer to the other topic), the said partner(s) are strongly encouraged to contact their
+respective RFOs to check their eligibility. Each funding organisation participating in the Call
+decides to allocate its budget to the QPR topic, or the AQS topic, or both. The budget table
+is available in the section Funding: Overview.
+
+Research areas
+Funded projects in both topics are expected to address one or more of the following
+areas:
+Quantum communication
+Methods/tools/materials/strategies to deal with the issues of distance, reliability, efficiency,
+robustness and security in quantum communication; novel protocols for multipartite quantum
+communication and quantum cryptography; quantum memory and quantum repeater
+concepts.
+Novel photonic sources for quantum information and quantum communication, coherent
+transduction of quantum states between different physical systems; integrated quantum
+photonics; quantum communication embedded in optical telecommunications systems; other
+communication protocols with functionality enhanced by quantum effects. Methods for
+quantum communications in space, between satellites and Earth.
+Quantum simulation
+Platforms and materials for quantum simulation; development of new measurement and
+control techniques and of strategies for the verification of quantum simulations.
+Application of quantum simulations to condensed matter, chemistry, thermodynamics, biology,
+high-energy physics, quantum field theories, quantum gravity, cosmology and other fields.
+Quantum computation
+Development of noisy intermediate-scale quantum platforms; devices to realise multiqubit
+algorithms; demonstration and optimisation of error correction codes; progress towards faulttolerance; interfaces between quantum computers and communication systems.
+Development of novel quantum algorithms and software stacks; demonstration of quantum
+speed-up; new architectures and programming paradigms for quantum computation, including
+hybrid approaches.
+Quantum sensing and metrology
+Use of quantum properties for time and frequency standards (including precise frequency
+distribution), light-based calibration and measurement, gravimetry, magnetometry,
+accelerometry, and other applications. Development of detection schemes that are optimised
+with respect to extracting relevant information from physical systems; novel solutions for
+quantum imaging and ranging. Implementation of micro- and nano- quantum sensors, for
+instance for quantum limited sensitivity in the measurement of magnetic fields at the
+nanoscale. Extension of the reach of quantum sensing and metrology to other fields of science
+including e.g. the prospects of offering new medical diagnostic tools.
+General quantum science
+Novel sources of non-classical states and methods to engineer such states. Development of
+device-independent quantum information processing. Methods for the reconstruction and
+QuantERA Call 2025 Announcement
+
+Page 7 of 83
+
+estimation of complex quantum states or channels and certification of their properties.
+Development of resource theory for quantum information. Study of topological systems for
+quantum information purposes. Understanding and control of open quantum systems and
+quantum measurement processes; development of methods to confine dynamics in
+controllable decoherence-free subspaces. Study of quantum energetics and thermodynamic
+processes at the quantum scale.
+Novel ideas and applications in quantum science and technologies, based on e.g.,
+superposition, interference, and entanglement, as means to achieve new or radically enhanced
+functionalities.
+
+Expected impacts
+Funded projects are expected to significantly advance the state-of-the-art of quantum
+sciences and technologies4 by achieving one or more of the following targets:
+•
+•
+•
+•
+•
+•
+•
+•
+
+Develop a deeper fundamental and practical understanding of systems and
+protocols/algorithms for manipulating and exploiting quantum information,
+Enhance the robustness and scalability of quantum information technologies in the
+presence of environmental decoherence, hence facilitating their real-world deployment,
+Develop reliable technologies for the different components of quantum architectures,
+Identify new opportunities and applications fostered through quantum technologies, and
+the possible ways to transfer these technologies from laboratories to industries,
+Enhance interdisciplinarity in crossing traditional boundaries between disciplines in order
+to enlarge the community involved in tackling these new challenges,
+Move towards a gender diverse and inclusive quantum community, in particular targeting
+PhD students and early-career researchers,
+Spread excellence throughout Europe by involving partners from the Widening Countries,
+Build leading innovation capacity across Europe by involvement of key actors that can
+make a difference in the future, for example excellent young researchers, ambitious hightech SMEs or first-time participants.
+
+4 QuantERA projects shall not duplicate research funded as part of the projects of the previous QuantERA Calls
+
+(see funded projects: Call 2017, Call 2019, Call 2021, Call 2023) and the projects of the EC Quantum Technologies
+Flagship Call (see here)
+
+QuantERA Call 2025 Announcement
+
+Page 8 of 83
+
+2. FUNDING OVERVIEW
+Country
+
+Funding
+Organisat
+ion
+
+QPR
+budget
+(M €)
+
+AQS
+budget
+(M €)
+
+Expected
+no of
+projects
+
+Limits on amount which may
+be requested (M €)
+
+Contact prior to
+submission
+
+Additional
+forms
+required
+
+Austria
+
+FFG
+
+-
+
+2.00
+
+4-6
+
+0.5 per project
+
+Recommended
+
+Yes
+
+Industrial
+partner
+eligible for
+funding
+Yes
+
+Austria
+Belgium
+
+FWF
+
+1.5
+
+-
+
+3-5
+
+-
+
+Recommended
+
+Yes
+
+No
+
+Sabine.Ertl@fwf.ac.at
+
+FNRS
+
+0.30
+
+-
+
+1
+
+0.30 per project
+
+Recommended
+
+Yes
+
+No
+
+international@frs-fnrs.be
+
+Belgium
+
+FWO
+
+0.7
+
+-
+
+2-3
+
+Recommended
+
+Yes
+
+No
+
+europe@fwo.be
+
+Bulgaria
+
+BNSF
+
+0.46
+
+2-3
+
+Mandatory
+
+Yes
+
+No
+
+Aleksandrova@mon.bg
+
+Croatia
+
+HRZZ
+
+0.20
+
+1
+
+0.35 per project (overhead
+included)
+0.15 per project (overhead
+included)
+0.20
+
+Recommended
+
+Yes
+
+Yes
+
+Czechia
+
+MEYS
+
+0.50
+
+-5
+
+-
+
+-
+
+Recommended
+
+Yes
+
+Yes
+
+international@hrzz.hr
+Milan@hrzz.hr
+Michal.Vavra@msmt.gov.cz
+
+Czechia
+
+TA CR
+
+-
+
+1.00
+
+3
+
+-
+
+Recommended
+
+Yes
+
+Yes
+
+Magdalena.Pillasagua@tacr.cz
+
+Estonia
+
+ETAG
+
+0.30
+
+Recommended
+
+No
+
+Yes
+
+Margit.Suuroja@etag.ee
+
+Finland
+
+AKA
+
+1.00
+
+2-3
+
+0.15 (partner) or 0.30
+(coordinator)
+Up to 0.45 per partner
+
+Recommended
+
+No
+
+Katrine.Mahlamaki@aka.fi
+
+France
+
+ANR
+
+2.50
+
+Recommended
+
+No
+
+Germany
+
+DFG
+
+-
+
+Up to 0.45 per project and up
+to 0.30 per partner
+-
+
+See national
+annex
+Yes
+
+-
+
+Yes
+
+No
+
+Germany
+
+BMFTR
+
+-
+
+-
+
+No
+
+Yes
+
+Hungary
+
+NKFIH
+
+1-2
+
+-
+
+No
+
+Yes
+
+ncp@nkfih.gov.hu
+
+Ireland
+
+TÉ – RI
+
+0.45
+0.75
+
+Mandatory (see
+annex 1)
+Not required
+
+Andreas.Deschner@dfg.de
+Michael.Moessle@dfg.de
+Krug@vdi.de
+
+1-2
+
+Yes, notification
+required
+
+No
+
+No
+
+Maria.nash@researchireland.ie
+EU-Cofund@researchireland.ie
+
+Israel
+
+IIA
+
+0.75
+
+3-4
+
+National application
+to be submitted
+mandatorily
+
+Yes
+
+Yes
+
+Dan@iserd.org.il
+Batzion.F@innovationisrael.org.il
+
+Italy
+
+MUR
+
+0.5
+
+5
+
+Up to 0.33 for project partner
+Up to 0.405 per project
+coordinator
+According to national
+regulations
+Please check eligibility rules
+for Academia
+Up to 0.10 per project
+
+National application
+to be submitted
+mandatorily
+
+Yes
+
+Yes
+
+Aldo.Covello@mur.gov.it
+Sonia.Angiolin@est.mur.gov.it
+
+4.00
+4.50
+
+5 In exceptional circumstances, the MEYS can finance also the projects from the AQS call.
+
+QuantERA Call 2023 Announcement
+
+Page 9 of 83
+
+Contact
+Fabienne.Nikowitz@ffg.at
+
+Maurice.Tia@agencerecherche.fr
+
+Latvia
+Lithuania
+
+LZP
+
+0.60
+
+2-3
+
+Up to 0.10 per year per partner
+
+Recommended
+
+No
+
+Industrial
+partner
+eligible for
+funding
+Yes
+
+LMT
+
+0.3
+
+-
+
+Recommended
+
+No
+
+Yes
+
+Saulius.Marcinkonis@lmt.lt
+
+Luxembourg
+
+FNR
+
+0.35
+
+1-2
+
+Up to 0.15 per project (for
+project partner) or up to 0.20
+EUR per project (for project
+coordinator)
+-
+
+Recommended
+
+Yes
+
+No
+
+Malta
+
+MEYR
+
+0.05
+
+1
+
+-
+
+Mandatory
+
+Yes
+
+Netherlands
+
+QDNL
+
+2.00
+
+-
+
+0.35 per project
+
+Recommended
+
+Yes
+
+Yes, but only
+basic
+research, not
+pursuing
+direct
+commercial
+goals
+No
+
+Christiane.Kaell@fnr.lu
+Helena.Burg@fnr.lu
+David.D.Muscat@gov.mt
+
+Norway
+Poland
+Poland
+
+RCN
+
+0.434
+
+-
+
+-
+
+Recommended
+
+No
+
+Yes
+
+twa@rcn.no
+
+Romania
+
+Country
+
+Funding
+Organisat
+ion
+
+QPR
+budget
+(M €)
+
+AQS
+budget
+(M €)
+
+Expected
+no of
+projects
+
+Limits on amount which may
+be requested (M €)
+
+Contact prior to
+submission
+
+Additional
+forms
+required
+
+Contact
+Maija.Bundule@lzp.gov.lv
+
+Julia.Oesterling@quantumdelta.nl
+
+NCBR
+
+-
+
+1.50
+
+-
+
+-
+
+Recommended
+
+No
+
+Yes
+
+Krystyna.Maciejko@ncbr.gov.pl
+
+NCN
+
+1.50
+
+-
+
+5-6
+
+-
+
+Yes
+
+Yes
+
+quantera@ncn.gov.pl
+alicja.dylag@ncn.gov.pl
+
+UEFISCDI
+
+0.50
+
+2-3
+
+No
+
+Yes
+
+Nicoleta.Dumitrache@uefiscdi.ro
+
+Slovakia
+
+SAS
+
+0.12
+
+1
+
+• 0.25 in case a Romanian
+institution is the coordinator
+(together with other Romanian
+partner(s) – if it is the case)
+• 0.20 for one/all Romanian
+partner(s) participating in a
+proposal.
+0.12
+
+National application
+to be submitted
+mandatorily
+Recommended
+
+Recommended
+
+No
+
+No
+
+Slovenia
+
+MVZI
+
+0.90
+
+3
+
+max. 0.3 per project
+
+Recommended
+
+No
+
+Yes
+
+Mnovak@up.upsav.sk
+Panisova@up.upsav.sk
+Anamarija.Meglic@gov.si
+
+1.6
+1.00
+
+2
+
+-
+
+Mandatory
+
+Yes
+
+Yes
+
+rock@nrf.re.kr
+
+4-6
+
+National application
+to be submitted
+mandatorily
+
+Yes
+
+No
+
+era-ict@aei.gob.es
+
+-
+
+-
+
+0.175 per project with one AEI
+applicant
+0.275 per project if AEI
+applicant is coordinator
+0.325 per project if two AEI
+applicants with one as
+coordinator
+See National Annex
+
+Recommended
+
+Yes
+
+No
+
+Tomas.Andersson@vr.se
+
+South Korea
+Spain
+
+NRF
+AEI
+
+Sweden
+
+VR
+
+1.00
+
+QuantERA Call 2025 Announcement
+
+Page 10 of 83
+
+Country
+
+Funding
+Organisat
+ion
+
+Switzerland
+
+SNSF
+
+QPR
+budget
+(M €)
+
+AQS
+budget
+(M €)
+2.00
+
+Expected
+no of
+projects
+5-8
+
+Limits on amount which may
+be requested (M €)
+
+Contact prior to
+submission
+
+Additional
+forms
+required
+
+For a 3-years project: CHF 0.4
+Mio. / partner
+
+Recommended
+
+Yes
+
+Recommended
+
+Yes
+
+For a 2-years project: CHF
+0.266 667 Mio. / partner
+
+Türkiye
+United
+Kingdom
+
+TÜBİTAK
+
+0.20
+
+2-3
+
+See National Annex
+
+UKRI
+5.0
+Up to £0.40M per partner, up
+Recommended
+No
+EPSRC
+to £0.75M per project
+1.The budget is indicative and represents the committed funding available for all the proposals expected to be funded in this Call.
+2. Partners are strongly discouraged from requesting greater budgets than are necessary for the activities being proposed.
+3. Please check the RFOs requirements in Annex 1.
+
+QuantERA Call 2025 Announcement
+
+Page 11 of 83
+
+Industrial
+partner
+eligible for
+funding
+Yes, but only
+basic
+research, not
+pursuing
+direct
+commercial
+goals
+Yes
+No
+
+Contact
+quantera@snf.ch
+
+Kivilcim.Koseoglu@tubitak.gov.tr
+QuantumTechnologies@epsrc.ukri.
+org
+
+3. APPLICATION GUIDE
+Project Consortia: Formation Principles
+When setting up project consortia, applicants are strongly encouraged to take into account the
+following aspects:
+
+Gender balance
+To promote equal opportunity and gender balance, QuantERA encourages the participation
+of consortia with a fair representation of female researchers as PCs, PIs and in the research
+team.
+
+Geographical diversity
+To spread research excellence throughout Europe, QuantERA projects are encouraged
+to include partners from the Widening countries6 participating in the Call: Bulgaria, Croatia,
+Czechia, Estonia, Hungary, Latvia, Lithuania, Malta, Poland, Romania, Slovakia, Slovenia,
+Türkiye and Outermost territories of France (defined in Art. 349 TFEU).
+
+Academic age balance
+To ensure heterogeneity of the project teams allowing for inter-generation transfer
+of knowledge, skills, etc. QuantERA encourages involvement of researchers at various stages
+of their research careers, including post-doctoral and PhD students as participants in the
+project.
+
+Involving industry actors
+To leverage innovation capacity across Europe and connect with industry, QuantERA projects
+are encouraged to involve industry actors (mostly for the AQS topic) that can contribute
+to development of QT domain in the future, e.g. ambitious high-tech SMEs, etc.
+
+Project Costs
+The typical total project cost, including own contributions across all partners, is approximately
+2,500,000.00 EUR. Proposals requesting other amounts are also welcome and will be
+considered. The average requested funding per project in previous QuantERA calls ranged
+between 750,000.00 EUR and 1,500,000.00 EUR, which has proven appropriate for effectively
+addressing the objectives of the QuantERA calls.
+
+Funding per entity
+The grant for one legal entity being a partner organisation in one or more project consortia
+in the Call cannot exceed 1,000,000.00 EUR7.
+
+6 See the list of Wideninig countries in Horizon Europe at https://rea.ec.europa.eu/horizon-europe-widening-who-
+
+should-apply_en
+7 This maximum amount, however, may be higher if the objective of the action would be impossible or overly difficult
+to achieve (and duly substantiated).
+
+QuantERA Call 2023 Announcement
+
+Page 12 of 83
+
+Partner Search Tool
+In order to facilitate the process of forming research consortia, we offer applicants a Partner
+Search Tool available here: https://www2.ncn.gov.pl/partners/quantera2025/.This tool can
+be used by projects looking for partners and partners looking for projects.
+
+Eligibility
+Consortium structure
+•
+•
+
+•
+
+•
+•
+
+Each project must comprise at least three eligible partners, based in institutions eligible
+to Research Funding Organisations (RFOs) participating in the QuantERA Call from
+at least three countries.
+Each consortium partner is led by a Principal Investigator (PI), who liaises with the
+respective RFO. The project is coordinated by one of the PIs, the Project Coordinator, who
+acts as the single point of contact towards the QuantERA Call Secretariat. One PI may not
+coordinate more than one proposal.
+The consortium budget must be balanced:
+- at most 60% of the total requested funding may be requested by partners from one
+country,
+- at most 40% of the total requested funding may be requested by a single partner.
+The consortium should maintain a clear focus, that is, the proposed research must have a
+clearly defined goal.
+Each partner can choose only one funding organisation when submitting a proposal.
+
+Note that partners who are not requesting funding may be part of a consortium if they are able
+to financially secure their participation. However, countries subject to sanction(s) by the
+European Union authorities are excluded from this Call. At the time of publication, these
+countries include the following: Belarus, Russia. Ukrainian territories out of control of the
+Ukrainian government are also concerned.
+Additionally, Beneficiaries implementing FSTP schemes also have to respect sanction regimes
+(also called ‘EU restrictive measures’ (EURM)) against persons, entities or certain economic
+sectors, including notably Russia and Belarus and also restrictions to participation of entities
+registered outside Israel’s 1967 borders (‘occupied Palestinian territories’) or Russian occupied
+territories of Ukraine8.
+The list of sanctioned countries and territories9 might evolve, and application measures will be
+taken accordingly.
+
+Project duration
+In general, QuantERA projects have a duration of 36 months. Consortia may also propose
+24 months, but each member of the consortium is strongly advised to read the national rules
+of their RFOs (Annex 1), to be aware of the durations authorised by respective RFO.
+
+8 See: https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/other/guidance_fstp-good-
+
+practices_en.pdf
+9 See: https://data.europa.eu/apps/eusanctionstracker/
+
+QuantERA Call 2025 Announcement
+
+Page 13 of 83
+
+Eligibility of Partners
+•
+•
+•
+
+•
+•
+
+The consortium as a whole must be eligible with respect to transnational rules.
+Each consortium partner must be eligible with national rules as stated in Research Funding
+Organisation Information specified in Annex 1.
+If an eligibility issue is detected at the transnational or national level, the proposal’s
+Coordinator will be contacted and asked to provide the solution to the Call Secretariat
+within one week.
+Submitted proposals cannot request funding to cover any work, that is part of a project
+benefitting from any other EU grant.
+In order not to jeopardise the whole consortium, partners should enquire about the eligibility
+at the national level regarding:
+- institution (university, academic institution, industry, end user, standard organisation
+etc.),
+- partners (permanent staff, position secured for the duration of the project, etc.),
+- eligible costs and budget balance,
+- any other conditions stipulated in the Annex 1 or in the applicable national regulations.
+
+Submission
+Prior to the submission proposers are asked to check if:
+•
+•
+•
+
+The research is in line with the scope of the Call,
+The consortium meets all transnational eligibility criteria,
+Each partner meets the national eligibility criteria.
+
+It is the responsibility of the partners to ensure their eligibility (see the Eligibility section).
+The Call follows a one-stage submission and evaluation procedure, with each proposal
+comprising a scientific document (a proposal form typically between 25 and 35 pages) and
+financial document (a table listing the detailed requested funding and lists of participants).
+The Project Coordinator (PC) prepares a joint proposal for the whole consortium, using the
+templates available on the QuantERA website: http://www.quantera.eu/. The two forms
+(proposal form and financial form) composing the proposal are submitted via the Electronic
+Submission System (ESS) for QPR and for AQS.
+The ESS will require administrative and financial information to be filled in by the Project
+Coordinator (PC) when creating the submission on the platform. Once the email addresses
+of the other partners are filled in by the PC, they receive an automatic email from the platform
+inviting them to connect to the submission platform and adjust the administrative and financial
+information already filled in by the PC.
+It is crucial that each person involved in a proposal (Project Coordinator, Principal Investigator,
+permanent staff, non-permanent staff such as postdocs and PhD students) has their first and
+last name specified in the financial template as well as in the table appearing on the first page
+of the proposal form.
+Partners whose funding organisation requires submitting forms alongside the joint proposal
+submission must do so (see requirements of respective Research Funding Organisation in
+Annex 1).
+
+QuantERA Call 2025 Announcement
+
+Page 14 of 83
+
+We recommend submitting the proposal several days before the deadline in case that
+unforeseen issues occur. Submitted proposals can be modified until the Call deadline.
+The Project Coordinator and all partners must be prepared to diligently answer email queries
+after the submission.
+Note: The Electronic Submission System will be open within several weeks after the Call
+launch. Its opening will be announced on the QuantERA website: http://www.quantera.eu/.
+Detailed step-by-step user instructions will be made available at the same time.
+
+4. EVALUATION AND SELECTION
+Evaluation
+The evaluation relies on international Evaluation Panels of experts (EP), one for the Call
+topic of Quantum Phenomena and Resources (QPR) and one for Applied Quantum
+Science (AQS).
+By default, each evaluation criterion is scored 0, 1, 2, 3, 4 or 5.
+The scores indicate the following with respect to the criterion under examination (the definitions
+of scores are taken from Horizon Europe Evaluation Form10):
+0. The proposal fails to address the criterion or cannot be assessed due to missing
+or incomplete information (unless the result of an ‘obvious clerical error’).
+1. Poor. The criterion is inadequately addressed, or there are serious inherent
+weaknesses.
+2. Fair. The proposal broadly addresses the criterion, but there are significant
+weaknesses.
+3. Good. The proposal addresses the criterion well, but a number of shortcomings are
+present.
+4. Very good. The proposal addresses the criterion very well, but a small number
+of shortcomings are present.
+5. Excellent. The proposal successfully addresses all relevant aspects of the criterion.
+Any shortcomings are minor.
+The eligible proposals recommended by the EPs are those proposals that reach at least
+a score of 3 in each of the three criteria used for the evaluation and detailed below. While the
+“Quality” threshold is the same for each criterion and each topic, the weights of the other two
+criteria differ between the QPR and the AQS topics (see below).
+Excellence (weight in QPR: 50%; weight in AQS: 25%)
+•
+•
+•
+
+Clarity and novelty of long-term vision, and ambition and concreteness of the targeted
+breakthroughs towards that vision.
+Novelty, non-incrementality and plausibility of the proposed research for achieving the
+targeted breakthrough and its foundational character.
+Soundness of the research methodology and its suitability to address high scientific
+and technological risks in the context of potential benefits.
+
+10
+
+See: https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/temp-form/ef/ef_he-riaia_en.pdf
+
+QuantERA Call 2025 Announcement
+
+Page 15 of 83
+
+•
+•
+
+Appropriate consideration of the gender dimension in research content and the quality
+of open science practices.
+Range and added value from interdisciplinarity, including measures for exchange,
+cross-fertilisation and synergy.
+
+Impact (weight in QPR: 25%; weight in AQS: 50%)
+Extent to which the outputs of the project contribute at the European or international level to:
+• The expected impacts (see p.8).
+• Positive transformative effects to the economy, environment and/or society.
+Quality of the proposed measures to:
+•
+•
+•
+
+Exploit and disseminate the project results (incl. management of intellectual property
+rights), and to manage research data where relevant.
+Communicate the project activities to different target audiences, especially considering
+the need to inspire STEM students and early-career researchers.
+Facilitate subsequent translation of research results into innovations and development
+of new products and/or services when applicable.
+
+Quality and efficiency of the implementation (weight in QPR: 25%; weight in AQS: 25%)
+•
+•
+•
+•
+
+Quality, coherence and effectiveness of the work plan, including extent to which the
+resources assigned to work packages are in line with their objectives and deliverables.
+Appropriateness of the management structures and procedures, including risk
+mitigation measures and innovation management.
+Complementarity of the participants and extent to which the consortium as a whole
+brings together the necessary expertise.
+Appropriateness of the allocation of tasks, ensuring that all participants have a clearly
+defined role and adequate resources in the project to fulfil that role.
+
+The Evaluation Panels will meet to discuss the proposals and each one of them will establish
+a ranking list of the proposals. The evaluation of each proposal will be summarised in
+a consensus report, which will be made available to the applicants at the end of the evaluation
+and selection process.
+
+Selection
+Based on the two ranking lists (AQS, QPR) provided by the Evaluation Panels, a final list of
+projects selected for funding will be approved by the QuantERA CSC. The CSC will strive to
+fund as many excellent collaborative projects as possible. If at a given rank in the list not all ex
+aequo proposals can be selected, the criteria listed below will be applied in the following order:
+1. The output of the Call, i.e. the overall funding, should be maximised.
+2. The success rates (i.e. the overall number of funded projects relative to the overall
+number of proposals) of both topics should be as close as possible to each other.
+3. If possible, each Research Funding Organisation should fund at least one project.
+4. Projects involving partners from the Widening countries and territories should be
+prioritised.
+5. The distribution of genders among the PIs and co-PIs considering all funded proposals
+should be as balanced as possible. Note that this criterion should not be understood
+as a distribution of genders per funded proposal. As an example, a proposal with more
+
+QuantERA Call 2025 Announcement
+
+Page 16 of 83
+
+female PIs and co-PIs than male PIs or co-PIs, will be prioritised if it results in a better
+overall balanced distribution of genders considering all the funded proposals.
+
+5. MANAGEMENT OF FUNDED PROJECTS
+Establishing the Project Consortium
+The administrative and financial management of projects is overseen by the respective
+Research Funding Organisations, according to the respective national/regional rules and
+guidelines.
+In order to ensure that the collaborative research can be conducted as planned, all partners of
+a consortium should strive to start their part of the project at approximately the same date.
+The project must follow the European Charter for Researchers and the Code of Conduct
+for the Recruitment of Researchers11. The project should bear in mind gender balance,
+especially at the PhD level and early-career opportunities resulting from the funded projects,
+and promote equal opportunities between women and men at all levels in the implementation
+of the research activities.
+A consortium agreement managing inter alia the ownership and access to key
+knowledge (including IPR, data management, GDPR etc.) has to be signed by all
+partners and sent to QuantERA Coordination Office no later than three months after the
+start of a project. Some funding organisations require that the consortium agreement be signed
+before the contract can be finalised or have other requirements regarding the consortium
+agreement (see Annex 1). Please see DESCA Model Consortium Agreement as an example:
+http://www.desca-agreement.eu.
+
+Reporting and Publications
+Consortia must present the status of their project at three follow-up events organised by
+QuantERA. The related costs are eligible and must be secured by the consortia as part of the
+project’s budget.
+Each Coordinator of a funded project has to submit to QuantERA a mid-term report and
+a final report.
+PIs will have reporting duties to their respective national Research Funding
+Organisations regarding administrative and financial matters. This is specified in the
+individual contracts with respective national/regional funders.
+Any publication resulting from this Call must acknowledge QuantERA, the European
+Commission and the relevant national funders involved according to the national requirements.
+The acknowledgement to be used is: This work has been supported by QuantERA [insert
+project acronym], by [insert the funding organisation and the grant number for that funding
+organisation], [insert the next funding organisation and the grant number for that funding
+organisation] and co-funded by the European Commission “.
+
+11
+
+See: https://euraxess.ec.europa.eu/hrexcellenceaward/european-charter-researchers
+
+QuantERA Call 2025 Announcement
+
+Page 17 of 83
+
+Open Access Publishing / Open Research Data
+Project consortia are encouraged to adhere to the Horizon Europe regulation on Open
+Science12 for all output of scholarly research as long as it is in line with the national/regional
+requirements of the partners in the project.
+The project consortia should agree upon and lay out publishing strategies and data
+management plans in their consortium agreements at the beginning of the project and
+should always aim for Open Access research data and publications, as well as Open
+Science best practices. Journal articles should be archived in either institutional or subjectspecific repositories. Applicants should check the national information about open access.
+Research artefacts (data, software, etc.) should be shared on repositories fulfilling the FAIR
+data principles13.
+
+Compliance with EU obligations
+Due to the obligations imposed on the QuantERA Consortium by the European Commission,
+the funded project partners are subject to the obligations defined in the standard provisions of
+Horizon Europe grants:
+•
+
+•
+
+EU regulations under the following Model Grant Agreement (MGA)14 Articles:
+12 (conflict of interest), 13 (confidentiality and security), 14 (ethics), 17.2 (visibility),
+18 (specific rules for carrying out action), 19 (information) and 20 (record-keeping),
+The exercise of rights by the bodies listed in Article 25 of MGA (e.g. granting authority,
+OLAF, Court of Auditors (ECA), etc.).
+
+Additionally, all funded projects need to follow anti-discrimination rules and principles
+commonly shared by the EU (notably concerning racism, incitement to violence, discrimination
+based on religion, gender or sexual orientation).
+The specific obligations of the project consortia partners will, where applicable, be laid down
+in individual contracts with the respective national or regional funders.
+
+6. MANAGEMENT OF THE CALL
+The Call is administered by the Call Secretariat (CS) and the Call Steering Committee
+(CSC).
+The Call Secretariat (CS) is hosted by French Research Agency (ANR, FR), State Research
+Agency (AEI, ES) and supported by National Science Centre (NCN, PL). The CS assists the
+EPs and the CSC with the implementation of the evaluation and selection process.
+The Call Steering Committee (CSC) is the highest decision-making body of the QuantERA
+Call 2025 for proposals, being composed of representatives of QuantERA III Research
+Funding Organisations (RFOs) participating in the Call. The CSC steers all activities of the
+Call. In particular the CSC nominates the members of each Evaluation Panel (EP) and
+establishes the final list of projects recommended for funding to the RFOs, based on the
+
+12 For more information see: https://rea.ec.europa.eu/open-science_en
+13 For more information see: https://www.go-fair.org/fair-principles/
+14
+
+The Horizon Europe Model Grant Agreement (MAG) available here: https://ec.europa.eu/info/fundingtenders/opportunities/docs/2021-2027/common/agr-contr/general-mga_horizon-euratom_en.pdf
+
+QuantERA Call 2025 Announcement
+
+Page 18 of 83
+
+ranking lists provided by the EPs. All decisions concerning the Call implementation are taken
+by the CSC (e.g. management of confidentiality and conflicts of interest).
+The Evaluation Panels (EP) are the assessment bodies. The two Evaluation Panels, one
+for the Quantum Phenomena and Resources (QPR) topic, and one for the Applied Quantum
+Science (AQS) topic, are the evaluation bodies of the QuantERA Call 2025, being composed
+of scientific and industry experts in QT. The EP evaluate each eligible proposal. Each panel
+establishes a ranking list of proposals which serves as a basis for the CSC funding
+recommendation.
+With the aim of providing as much diversity as possible to the scientific evaluation, gender
+balance will be actively promoted in the panel formation.
+
+QuantERA Call 2025 Announcement
+
+Page 19 of 83
+
+Annex 1: Requirements of Research Funding Organisations
+Austria
+
+FFG
+
+Participating organisation
+Austrian Research Promotion Agency
+
+Contact
+Fabienne Nikowitz
+Programme Leader
+Telephone number: +43 5 7755 5081
+Email: fabienne.nikowitz@ffg.at
+
+Funding criteria and regulations
+Funding commitment: 2,000,000.00 EUR
+Funding regulations
+Maximum funding per proposal: 500,000.00 EUR
+For Austrian proposers, the same regulations hold as for cooperation projects, see the
+application guidelines and regulations available at the FFG website (available mid-September
+2025): https://www.ffg.at/quantentechnologien/quantera2025
+Eligibility of a partner as a beneficiary institution:
+Consortium requirement: at least one Austrian industry partner.
+Eligible for funding are Austrian applicants from:
+•
+•
+
+Companies;
+Universities and research institutes/organisations - only in cooperation with at least
+one Austrian company.
+
+Eligible TRL range: 2-7
+All Austrian applicants are encouraged to contact FFG prior to submission.
+Submission of the proposal at the national level
+In addition to the QuantERA application, Austrian applicants are requested to submit a national
+application to FFG, through the eCall available at the following link:
+https://ecall.ffg.at/Cockpit/Cockpit.aspx
+Mandatory are:
+•
+•
+
+QuantERA proposal application form and financial form as requested by QuantERA;
+Costs and requested funding.
+
+No application will be considered after the final submission date.
+Additional requirements
+Further information and requirements can be found at the FFG website (available midSeptember 2025): https://www.ffg.at/quantentechnologien/quantera2025
+
+QuantERA Call 2025 Announcement
+
+Page 20 of 83
+
+Austria
+
+FWF
+
+Participating organisation
+FWF Austrian Science Fund
+
+Contact
+Sabine Ertl
+Department Head - Department of Natural Sciences and Technology
+Scientific Project Officer
+Telephone number: +43 676 83487 8403
+Email: sabine.ertl@fwf.ac.at
+Natascha Dimovic
+Operative project officer
+Department of Natural Sciences and Technology
+Telephone number: +43 676 83487 8402
+Email: natascha.dimovic@fwf.ac.at
+
+Funding criteria and regulations
+Funding commitment
+Total FWF funding commitment: 1,500,000.00 EUR
+This commitment is solely to the Call topic “Quantum Phenomena and Resources”
+Funding regulations
+The FWF is a funding agency that funds basic sciences only. Hence, only proposals in the
+research Call topic “Quantum Phenomena and Resources” will be accepted.
+Eligibility of a partner as a beneficiary institution
+The same eligibility criteria apply as for regular Principal Investigator Projects. These criteria
+need to be fulfilled by the applicants.
+Please find the application guidelines on the FWF Webpage: Principal Investigator Projects FWF
+Austrian applicants are encouraged to contact FWF prior to submission.
+Submission of the proposal at the national level
+The submission criteria follow the same as Principal Investigator Projects - FWF. This includes
+eligible costs as well.
+In addition to the application submitted to the Call Secretariat, administrative and financial data
+as well as academic abstracts (in accordance with the FWF guidelines for Principal Investigator
+Projects) must also be submitted to the FWF using the online portal elane. The applicants must
+choose “KIN – International Multilaterale Initiativen”.
+The submission deadline, December 9th 2025, 14:00 CET must be strictly adhered to.
+Submissions after the deadline will not be considered.
+
+QuantERA Call 2025 Announcement
+
+Page 21 of 83
+
+The FWF does not finance infrastructure or basic equipment at research institutions.
+Overheads may not be requested.
+Austrian applicants are encouraged to contact FWF prior to submission.
+
+Additional requirements
+The FWF only funds proposals in the Call topic “Quantum Phenomena and Resources”.
+The FWF generally does not have any minimum or maximum limits but, given the limited nature
+of the financial commitment of the FWF to this Call (see above), we do expect Austrian
+participants not to exceed the average range of an FWF stand-alone Project (typically
+300,000.00 EUR to 450,000.00 EUR).
+Please be aware that the FWF eligibility criteria apply. See Principal Investigator Projects FWF.
+In case one or more partners would be found not eligible this would lead to dismissal of the
+proposal.
+
+QuantERA Call 2025 Announcement
+
+Page 22 of 83
+
+Belgium
+
+F.R.S.- FNRS
+
+Participating organisation
+Fund for Scientific Research – FNRS
+
+Contact
+Florence Quist
+Senior Scientific Officer
+Telephone number: +32 2 504 9351
+Email: Florence.quist@frs-fnrs.be
+
+Funding criteria and regulations
+Funding commitment
+300,000.00 EUR / project
+Funding regulations
+PINT-MULTI Regulations (FR / EN)
+Project duration is set at max. 36 months. If the project involves the recruitment of a PhD
+student, the project duration of the F.R.S.-FNRS sub-project could be up to four years. Since
+this is a co-financed call, this extra year should not be included in the proposal see article III.6
+of the PINT-MULTI Regulations (FR / EN).
+Eligibility of a partner as a beneficiary institution
+All eligibility criteria can be found in the PINT-MULTI Regulations (FR / EN)
+Submission of the proposal at the national level
+Applicants to F.R.S.-FNRS funding must provide basic administrative data by submitting an
+administrative application on e-space within 5 working days after the general deadline of the
+QuantERA Call to be eligible. Please select the “PINT-MULTI” funding instrument when
+creating the administrative application. Proposals invited to the second stage will be able to
+complete the pre-proposal form and provide information for the full proposal upon validation
+by the F.R.S.-FNRS.
+Additional requirements
+N/A
+
+QuantERA Call 2025 Announcement
+
+Page 23 of 83
+
+Belgium (Flanders)
+
+FWO
+
+Participating organisation
+The Research Foundation – Flanders (FWO)
+
+Contact
+Toon Monbaliu (FO)
+Advisor European Programmes
+Telephone number: +32 (0)2 550 15 70
+Email: europe@fwo.be
+Kristien Peeters (SBO)
+Science Policy Advisor
+Telephone number: +32 (0)2 550 15 95
+Email: europe@fwo.be
+
+Funding criteria and regulations
+Funding commitment
+Total FWO funding commitment: 700,000.00 EUR
+Maximum funding per project/consortium: 350,000.00 EUR (overhead included)
+Anticipated number of fundable projects with FWO partners: 2-3
+Funding regulations
+In essence, the FWO only intends to fund projects within the Quantum Phenomena and
+Resources (QPR) topic, focusing on basic quantum science and fundamental physics. If duly
+justified that the tasks performed by a researcher from Flanders (FWO) within an Applied
+Quantum Science (AQS) project/consortium fit the FWO funding channels that are integrated
+within this transnational Call (and as such include basic research), this might also be accepted.
+Eligibility of a partner as a beneficiary institution
+The FWO integrates two of its national/regional funding channels within this multilateral
+framework. The choice of the FWO funding channel depends on the type of project the
+researchers from Flanders wish to undertake (i.e. more fundamental in nature (FO) vs. strong
+emphasis on valorisation potential (SBO)).
+The scope and the eligibility of institutions and its researchers can be verified in the relevant
+chosen funding channel documents and regulations, which can be consulted on the FWO
+website:
+•
+•
+
+FWO Research Projects (FO)
+Strategic Basic Research (SBO)
+
+Or by contacting the FWO contact points mentioned above.
+Additional eligibility requirements for this framework
+•
+
+Participation in this Call does not interfere with the ‘national’ FWO calls and is
+consequently not taken into account for calculating the max. available number of new
+
+QuantERA Call 2025 Announcement
+
+Page 24 of 83
+
+applications and running projects combined. However, researchers can only
+participate within 2 different international consortia in this Call as partner, and
+only once as coordinator.
+•
+•
+
+•
+•
+
+Projects aiming at the development of a spin-off company are not eligible in this context.
+This potential ‘route’ should not be mentioned in the FWO pre-registration form, as
+such.
+The project duration is limited to 36 months, which implies the funding has to be
+budgeted and spent accordingly. An automatic prolongation and using positive
+(financial) balances after the end date is not applicable in this framework. As such
+article 28 of the FWO Research Projects and article 14 of the Strategic Basic Research
+(SBO) regulations do not apply here.
+The PI, for each of the participating institutions applying for FWO funds, must hold an
+appointment that fully covers the duration of the research project.
+Linked to the above, when it comes to the FWO research project regulations (FO):
+article 10, §7 is not applicable in this Call. I.e. supervisors (-spokespersons), or
+coordinators/consortium partners in this context, who are granted emeritus status
+during the calendar year of submission of the project application or during the duration
+of the project execution, are not eligible.
+
+Eligibility of costs
+The FWO foresees a budget of 700,000.00 EUR in total, which guarantees at least two
+projects. The respective funding channel regulations apply (see links to national rules above:
+‘Eligibility of a partner as a beneficiary institution’ section), unless specified otherwise, and both
+are capped at max. 350,000.00 EUR per project/consortium (incl. overhead, for which the
+calculation method diverges per funding channel - see explanation below).
+For the overhead calculation, even though the overhead rates differ, the fundamental (FO)
+and strategic research projects (SBO) use the same approach. More specifically, a structural
+overhead rate should be applied on the project costs, with an overhead rate of 6% for ‘FO
+projects’, and a 17% overhead rate for ‘SBO projects’. Some practical examples:
+o
+
+o
+
+FO: the sum of all costs (personnel, consumables, travel, subcontracting, etc.) amounts
+to 200.000 EUR, then the overhead will amount to 12,000.00 EUR (6% of 200,000.00
+EUR) and the total requested cost is 212,000.00 EUR. This total requested cost may
+never exceed the max. available amount of 350,000.00 EUR.
+SBO: the sum of all costs (personnel, consumables, travel, subcontracting, etc.)
+amounts to 200,000.00 EUR, then the overhead will amount to 34,000.00 EUR (17%
+of 200,000.00 EUR) and the total requested cost is 234,000.00 EUR. This total
+requested cost may never exceed the max. available amount of 350,000.00 EUR.
+
+The overhead cost should be mentioned in the Quantera budget tables, but it should not be
+inserted in the national/regional FWO pre-registration form on the FWO E-loket (see below
+under ‘Submission of the proposal at the national level’).
+Submission of the proposal at the national level
+A mandatory administrative application via the personal FWO e-loket of the PI from
+Flanders is an essential part of the application process.
+o
+
+For fundamental research projects (FO) select the application type: ‘Research projects
+– European programme fundamental research’.
+
+QuantERA Call 2025 Announcement
+
+Page 25 of 83
+
+For strategic basis research projects (SBO) select the application type: ‘Research
+projects – European programme strategic basic research’.
+In case the consortium includes more than one partner requesting funding from FWO, a single
+online form should be submitted by the main PI (promotor(-spokesperson)) itself, containing
+all relevant information for the different FWO applicants.
+o
+
+The deadline to submit this administrative application to the FWO is identical to the
+deadline of the joint transnational Call (pre-proposal stage). To ensure the eligibility of the
+proposal, it is recommended to consult the FWO administration at least one week in advance.
+Failure to comply with these requirements can lead to ineligibility.
+Again, it is strongly advised to approach the FWO contact points mentioned above, in
+order not to jeopardize any research projects/consortia.
+
+QuantERA Call 2025 Announcement
+
+Page 26 of 83
+
+Bulgaria
+
+BNSF
+
+Participating organisation
+Bulgarian National Science Fund - BNSF
+
+Contact
+Milena Aleksandrova
+Expert
+Telephone number: +359 884 171 363
+Email: aleksandrova@mon.bg
+
+Funding criteria and regulations
+Funding commitment
+Total BNSF funding commitment: 460,162.00 EUR
+Maximum funding per project/consortium: 153,387.00 EUR (overhead included)
+Anticipated number of fundable projects with BNSF partners: 2-3
+Funding regulations
+Type of research funded - Basic research, TRL 1-4
+The budget contains costs directly related to the implementation of the project (direct costs)
+and indirect (overhead) costs. The direct costs must be used to carry out the project and be
+separately identifiable.
+Eligible costs are specified in “National requirements and eligibility conditions” of Bulgarian
+National Science Fund available at:
+Link (in Bulgarian)
+Link (in English)
+Eligibility of a partner as a beneficiary institution
+1) Accredited universities as defined in Art.85 para.1, p. 7 of the Higher Education Act,
+2) Research organizations as defined in Art. 47, para 1 of the Higher Education Act:
+http://lll.mon.bg/uploaded_files/zkn_visseto_obr_01.03.2016_EN.pdf
+Submission of the proposal at the national level
+Applicants have to submit an application form for national eligibility when submitting the
+porposals. The formulier should be filled and elecronically submitted in both Bulgarian and in
+English at: https://nims.egov.bg/login#/
+BNSF requests the Bulgarian applicants to send the following documentation:
+1. Proposal (in PDF format, sealed on the date of Call deadline),
+2. Financial Plan for the Bulgarian research group, extracted from the - Financial Form
+submitted by the project consortium,
+3. Work plan for the Bulgarian research group.
+
+QuantERA Call 2025 Announcement
+
+Page 27 of 83
+
+Additional requirements
+The funded Bulgarian applicants will have to submit annual Narrative and Financial reports to
+BNSF, along with a Declaration on the prevention of double financing.
+Eligible costs are:
+•
+•
+•
+•
+•
+•
+•
+
+Personnel costs (employment of postdoctoral researchers),
+Equipment purchases and equipment maintenance costs,
+Consumables,
+Travel costs,
+Costs for open access publishing,
+Indirect costs - maximum 7% of total funds requested,
+Audit - maximum 1% of total funds requested.
+
+QuantERA Call 2025 Announcement
+
+Page 28 of 83
+
+Croatia
+
+HRZZ
+
+Participating organisation
+Croatian Science Foundation
+
+Contact
+Dejan Košćak
+Senior advisor, Department for International Cooperation
+Telephone number: +385 1 2356 607
+Email: dejan@hrzz.hr
+
+Funding criteria and regulations
+Funding commitment
+Max. funding per project: 200.000,00 EUR (1 project can be funded)
+Proposed projects may last from 24 to 36 months.
+Principal Investigators are not allowed to apply for funding in more than one proposal within
+this Call.
+Funding regulations
+Croatian applicants (Principal Investigators) are advised to consult the Guidelines for
+Applicants to Calls of the Croatian Science Foundation prior to submitting a proposal, in order
+to verify compliance with national funding terms and conditions.
+The End Beneficiary, i.e. Principal Investigator may hold the role of Principal Investigator (PI)
+and/or team member on a maximum two HRZZ projects: either as the PI of one project and
+team member or co-PI on another, or as a team member or co-PI on two projects. Therefore,
+at the time of application, an eligible PI may hold only one active role on HRZZ projects. Active
+roles do not include the role of PI or collaborator on HRZZ projects scheduled to conclude by
+May 31, 2026. PIs of Croatian research groups on projects in bilateral programmes, Multilateral
+Academic Projects, and other ERA-NET projects are considered Co-PIs for the purpose of this
+Call.
+Applicant can participate in only one project consortium in one ERA-NET Cofund Call.
+Eligibility of a partner as a beneficiary institution
+Eligible applicants are:
+• higher education institutions
+• scientific institutes
+• other research-oriented legal entities that employ at least five PhD holders who have
+been employed at the institution for at least one year
+Submission of the proposal at the national level
+The HRZZ requests the Croatian applicants to send the following documentation (in English),
+not later than 3 working days after the submission of the proposal:
+4. Proposal (in PDF format, sealed on the date of Call deadline),
+
+QuantERA Call 2025 Announcement
+
+Page 29 of 83
+
+5. Financial Plan for the Croatian research group (the part to be financed by the HRZZ),
+extracted from the - Financial Form submitted by the project consortium,
+6. Work plan for the Croatian research group,
+7. Institutional Support Letter - a written commitment from the Croatian applicant’s
+institution accepting the proposed research and committing to its administration (signed
+and certified by the authorized representative of the institution),
+8. Signed Letter of Commitment for participation in the project for all associates not
+employed at the applicant’s institution.
+The electronic version of the requested documentation shall be submitted via email to the
+following address: international@hrzz.hr.
+Additional requirements
+The funded Croatian applicants will have to submit annual Narrative and Financial reports to
+HRZZ, along with a Declaration on VAT status and Declaration on the prevention of double
+financing for the year in question.
+Eligible costs are:
+• Research costs,
+• Personnel costs (employment of postdoctoral researchers),
+• Equipment purchases and equipment maintenance costs,
+• Dissemination, training, and cooperation costs,
+• Costs for open access publishing,
+• Indirect costs - maximum 15% of total funds requested, only if they are directly
+connected with project activities and they cannot be placed into any of the categories
+of eligible costs.
+
+QuantERA Call 2025 Announcement
+
+Page 30 of 83
+
+Czechia
+
+MEYS
+
+Participating organisation
+Ministry of Education, Youth and Sports
+
+Contact
+Michal Vávra
+Policy Officer
+Telephone number: +420 773 793 439
+Email: michal.vavra@msmt.gov.cz
+
+Funding criteria and regulations
+Funding commitment
+The overall funding commitment of the Ministry of Education, Youth and Sports of Czechia is
+500,000.00 EUR for the Call Quantum Phenomena and Resources (QPR). Under exceptional
+circumstances, MEYS can finance also Czech participants in the AQS Call – e.g., when Czech
+partner is ineligible for funding by TA CR due to the fact that the basis of its activities in the
+project proposal is defined as fundamental research. In such a case, the applicant is obliged
+to contact the MEYS beforehand and consult the situation.
+Funding regulations
+Eligible costs for a Czech participant involved in a project consortium are defined by the Act
+No. 130/2002 Coll. on Support of Research, Experimental Development and Innovation from
+Public Funds and on Amendment to Some Related Acts. The maximum indirect costs set for
+the present Call are 25% (flat rate) of direct costs without the sub-contracting.
+The aid intensity for activities carried out by a research organisation might be at the level of
+100% provided that the research organisation complies entirely with requirements stipulated
+by the Article 2.1.1 “Public funding of non-economic activities” of the Framework for State Aid
+for Research and Development and Innovation (2014/C 198/03) and proves it by means of the
+Statutory Declaration.
+Should the above-stated criteria not be fulfilled by the Czech participant, funding rates will be
+adjusted appropriately by the Ministry of Education, Youth and Sports and will reach the level
+of 100% for fundamental / basic research activities, 50% for applied research activities and
+25% for experimental development activities.
+Each Czech participant in a project consortium is also requested to specify the costs related
+to the envisaged R&D activities in detail by using the Eligible Costs Specification template
+available on websites of the Ministry of Education, Youth and Sports:
+http://www.msmt.cz/vyzkum-a-vyvoj2/quantera.
+Eligibility of a partner as a beneficiary institution
+The participants from Czechia in the projects´ consortia must meet the criteria of the research
+and knowledge-dissemination organization (hereinafter referred to as “research organisation”)
+in accordance with the Framework for State Aid for Research and Development and Innovation
+(2014/C 198/03). These might be public universities, public research institutes and/or other
+entities classified as research organizations.
+
+QuantERA Call 2025 Announcement
+
+Page 31 of 83
+
+It is obligatory that the Czech participants involved in the projects´ consortia prove compliance
+with the eligibility criteria and fulfilment of the conditions set by § 18 of the Act No. 130/2002
+Coll. on Support of Research, Experimental Development and Innovation from Public Funds
+and on Amendment to Some Related Acts by means of a Statutory Declaration. The required
+procedure is described, and Statutory Declaration form will be available on website of the
+Ministry of Education, Youth and Sports: http://www.msmt.cz/vyzkum-a-vyvoj-2/quantera.
+Submission of the proposal at the national level
+The Full Project Proposal form and all the other requested documentation (Statutory
+Declaration and Eligible Costs Specification) shall be sent by each Czech participant in
+a project consortium to the Ministry of Education, Youth and Sports no later than 5th
+December 2025 via means specified at the website of the Ministry of Education, Youth and
+Sports: http://www.msmt.cz/vyzkum-a-vyvoj2/quantera.
+In the case that project with Czech participants is recommended for funding based on the
+international evaluation outcomes and is approved by the Call Steering Committee, the
+Ministry of Education, Youth and Sports may ask the successful Czech applicants to submit
+additional documents in order to issue the Grant Agreement needed for providing the national
+financial support according to the rules stipulated by the Ministry of Education, Youth and
+Sports
+Additional requirements
+N/A
+
+QuantERA Call 2025 Announcement
+
+Page 32 of 83
+
+Czechia
+
+TA CR
+
+Participating organisation
+TA CR – Technology Agency of the Czech Republic
+
+Contact
+Magdalena Pillasagua Ptakova
+Coordinator for International Cooperation
+Telephone number: +420 775 871 321
+Email: magdalena.pillasagua@tacr.cz
+
+Funding criteria and regulations
+Funding commitment
+Funding available: 1,000,000.00 EUR
+Maximum permissible aid intensity for the Czech part of the project is 80% of the total eligible
+costs, based on the type of entity.
+Czech applicants will be financed from the Programme to Support Applied Research and
+Innovation SIGMA (Sub-objective 4 – International collaboration).
+Funding regulations
+Type of research funded
+Applied research, i.e. industrial research and experimental development.
+Eligible costs:
+• Personnel costs (including scholarships),
+• Subcontracting costs (max. 20% of total eligible costs throughout the whole project
+period),
+• Other direct costs (write-offs, protection of intellectual property, operating expenses,
+travel costs, consumables),
+• Indirect costs (overheads) – full cost/flat rate 25% (indirect costs in the respective year
+are calculated as 25% of the sum of the personnel costs and other direct costs in the
+same year).
+Eligibility of a partner as a beneficiary institution
+Eligible applicants:
+1. Enterprises (according to Annex 1 of the Regulation),
+2. Enterprises who act as natural persons according to Annex 1 of the Regulation engaged in
+an economic activity pursuant to Act no. 455/1991 coll. on Trades (Trade Act),
+3. Research organizations (according to Article 2 paragraph 83 of the Regulation).
+TA CR excludes the disbursement of individual aid to an enterprise:
+• Against which a recovery order has been issued which is unpaid,
+• Meeting the definition of an “undertaking in difficulty”,
+• Which has not met the obligation to publish the financial statements for the years 2022,
+2023, 2024 in the respective register - the so-called "Veřejný rejstřík”
+• Which has not disclosed its ownership structure in the so-called “Evidence skutečných
+majitelů”.
+
+QuantERA Call 2025 Announcement
+
+Page 33 of 83
+
+Submission of the proposal at the national level
+Mandatory forms to be submitted:
+•
+•
+•
+•
+•
+
+A Sworn statement of the applicant.
+Completed “TACR Application Form” Excel file (submitted by the main Czech applicant
+only)*
+If the applicant plans to achieve “Nmet” type of result, the mandatory form for Nmet
+result needs to be attached*
+If the applicant plans to achieve the “Patent” type of result, patent search must be
+substantiated*
+Sworn statement of the composition of the consortium (only if Czech enterprise is part
+of the project consortium; submitted by the main Czech applicant only).
+
+All documents proving the eligibility of the Czech partner stated above shall be submitted via
+the TACR data box (TACR data box ID: afth9xp).
+Submission deadline: 5 December 2025, 17.00 CET
+All mandatory documents to be found on TA CR website.
+*Applicants who will not submit this mandatory form (if relevant) via databox before the
+deadline will be considered as not eligible for TA CR funding.
+Additional requirements
+Supported results
+Projects that achieve at least one of the following types of results can be supported in this
+Call. The type of the result has to be clearly described in the project proposal:
+•
+•
+•
+•
+•
+•
+•
+
+P - patent
+G - technically realised results - prototype, functional sample
+Z - pilot plant, proven technology
+R - software
+F - results with legal protection - utility model, industrial design
+N - Certified methodologies and practices, treatment, conservation methods,
+procedures and specialised maps with professional expert content
+O – Other
+
+Results not to be recognized only in combination with at least one other result listed above,
+i.e. not as a single result of a given project:
+• H - results reflected in non-legislative directives and regulations binding within the
+competence of the respective provider and results reflected in the approved strategic
+and conceptual documents of the state or public administration.
+Project start and end
+Please note that following the national legislation, Czech applicants shall start within 120 days
+from the funding decision being communicated by the Call Management (60-day period to
+make a contract + 60-day period to start the project).
+Guide for Czech applicants and all mandatory forms are available on TA CR website
+(in Czech).
+
+QuantERA Call 2025 Announcement
+
+Page 34 of 83
+
+Estonia
+
+ETAG
+
+Participating organisation
+Estonian Research Council
+
+Contact
+Margit Suuroja
+Senior Adviser
+Telephone number +372 731 7360
+Email: margit.suuroja@etag.ee
+
+Funding criteria and regulations
+Funding commitment
+Total: 300,000.00 EUR
+The maximum amount of requested funding per project is 150,000.00 EUR for a project partner
+and maximum 300,000.00 EUR for a project coordinator for a total period of up to three years.
+Funding regulations
+The budget contains costs directly related to the implementation of the project (direct costs)
+and indirect (overhead) costs. The direct costs must be used to carry out the project and be
+separately identifiable.
+Direct costs:
+Personnel costs are monthly salaries (along with all state taxes, contributions, and
+compensations arising from law) of the project participants, calculated according to their
+commitment and in proportion to their total workload at their Host Institution.
+Other direct costs are:
+•
+
+•
+•
+•
+•
+•
+•
+
+Travel costs that may cover expenses for transport, accommodation, daily
+allowances and travel Insurance. If the project is funded from the European
+Regional Development Fund (Mobilitas 3.0) resources, travel costs are eligible only
+for travels abroad,
+Consumables and minor equipment directly and fully related to the project,
+Publication and dissemination of project results,
+Organising meetings, seminars or conferences (e.g., room rent, catering, equipment
+rental and related costs),
+Fees for participating in scientific forums, conferences and other events directly and
+fully related to the project,
+Patent costs,
+All other costs that are identifiable as clearly required for carrying out the project
+(e.g., translation, copy editing, webpage hosting, postage costs etc.) and are directly
+and fully related to the project.
+
+Indirect costs (overhead) are costs that cannot be identified as specific costs directly linked
+to the performance of the action and/or should cover the general expenses of the Host
+Institution related to the management of the grant. Office consumables and costs for equipment
+and services intended for general use (e.g., phone bills, copy service, printer) should be
+
+QuantERA Call 2025 Announcement
+
+Page 35 of 83
+
+covered from the indirect costs. Indirect costs are 15% of the personnel costs of the Estonian
+sub-project.
+Subcontracting costs are direct costs. Subcontracting costs should cover only additional or
+complementary research related tasks (e.g., analyses, conducting surveys, building
+a prototype, etc.) performed by third parties. Subcontracting costs should not be included in
+the overhead calculation. The activities and budget should be described in the proposal. Core
+project tasks should not be subcontracted. Subcontracting costs may not exceed 15% of the
+total costs of the Estonian sub-project.
+Double funding of activities is not acceptable (i.e. the same cost item may not be reimbursed
+twice).
+If several Estonian institutions participate in one proposal, the sum of their requested budgets
+may not exceed the maximum contribution of the respective national Funding Organisation
+indicated in the Call documents.
+State Aid
+If the Host Institution is an undertaking, EU Regulations on State aid and de minimis aid must
+be taken into account when requesting funding. An undertaking is any entity, be it a natural or
+a legal person, engaged in an economic activity, regardless of its legal status and the way in
+which it is financed.
+Eligibility of a partner as a beneficiary institution
+The Host Institution may be any legal entity that is registered and located in Estonia and has
+an Estonian bank account. Restrictions to eligible institutions and applicants may however be
+stated in the general Call conditions which also apply to Estonian participants.
+The Principal Investigator (PI) is a researcher who acts as the Estonian team leader in the
+project proposal. He/she will be responsible for how the grant is used and how the Estonian
+part in the project is executed. The PI must be clearly identified in the proposal.
+The Principal Investigator:
+1. Must have an updated public profile in the Estonian Research Information System (ETIS)
+by the submission deadline (in case of two-stage application, by the preproposal deadline).
+2. Must hold a doctoral degree or an equivalent qualification. The degree must be awarded by
+the submission deadline (in case of two-stage application, by the preproposal deadline) at the
+latest.
+3. Must have published at least three articles that comply with the requirements of Clause 1.1
+of the ETIS classification of publications, or at least five articles that comply with the
+requirements of Clauses 1.1, 1.2, 2.1 or 3.1, within the last five calendar years prior to the
+proposal submission deadline (in case of two-stage application, prior to the preproposal
+deadline).1 Patents are equalled with publications specified under Clause 1.1. A monograph
+(ETIS Clause 2.1) is equalled with three publications specified in Clause 1.1 if the number of
+authors is three or fewer. If the applicant has been on maternity, paternity, or parental leave,
+in compulsory military service, or if there have been other exceptional circumstances (e.g.,
+serious illness), they can request the publication period requirement to be extended by the
+relevant period of time.
+If the Principal Investigator has received the PhD degree outside Estonia, its correspondence
+to an Estonian doctoral degree must be recognised by either the Estonian ENIC-NARIC Centre
+or the Host Institution in accordance with the Regulation of the Government of the Republic of
+
+QuantERA Call 2025 Announcement
+
+Page 36 of 83
+
+April 6, 2006, No. 89 "Evaluation and academic recognition of documents proving foreign
+education and the name of the qualification awarded in the foreign education system terms
+and conditions of use". The Funding Organisation may ask for a relevant Evaluation Report2.
+If several Estonian institutions participate in a proposal, all institutions must have a Principal
+Investigator who meets the national eligibility requirements.
+Submission of the proposal at the national level
+No
+Additional requirements
+Following the restrictions laid down in Article 7 of the Regulation of the European Parliament
+and of the Council No 2021/1058 of 24 June 2021 on the European Regional Development
+Fund and on the Cohesion Fund research and other activities related to fossil fuels and their
+use, as well as other activities not eligible as per Article 7 of the Regulation, cannot be funded
+from the European Regional Development Fund (Mobilitas 3.0) resources.
+All project-related costs (of Estonian partner) must be incurred no later than 31.08.2029.
+
+QuantERA Call 2025 Announcement
+
+Page 37 of 83
+
+Finland
+
+AKA
+
+Participating organisation
+Research Council of Finland
+
+Contact
+Katrine Mahlamäki
+Science Adviser
+Telephone number: +358 29 533 5062
+Email: katrine.mahlamaki@aka.fi
+
+Funding criteria and regulations
+Funding commitment
+Total: 1,000,000.00 EUR
+The Research Council of Finland plans to grant up to 450,000.00 EUR per partner (150,000.00
+EUR per year).
+Funding regulations
+In general, the conditions and restrictions on Academy Projects apply to the funding. The
+Research Council applies the full cost model in its funding, and the Research Council’s funding
+contribution for a project can come to no more than 70% of the total project costs. Funding can
+be granted to research teams for the purposes of hiring scientific staff, for the acquisition of
+equipment and supplies, and for other expenses arising, for instance, from researcher mobility
+and networking activities. The costs of making publications open access are included in the
+overheads of the sites of research and thus form part of the costs of the basic facilities they
+provide. The PI‘s salary costs must not be significant in relation to the project’s total costs. For
+example, a three-year research project must not include more than 4.5 months of the PI’s
+effective working hours. This is equivalent to about 1.5 months a year.
+Research Council funding cannot be used for economic activity. Economic activity is defined
+as all activity where goods or services are offered on an open market regardless of whether
+profits are pursued or generated. When an organisation is also engaged in economic activities,
+separate accounts must be kept of the funding and costs of and the revenue generated by
+such activities.
+The Research Council of Finland advises that funding recipients as soon as possible after the
+funding decision has been made agree in writing between all project partners on the rights of
+ownership and use of the project’s research results. At the launch of the project, the partners
+should also agree on the rights of ownership and use of the materials and data to be used by
+the project.
+Eligibility of a partner as a beneficiary institution
+Finnish applicants are recommended to contact the Academy of Finland before proposal
+submission for the purpose of checking national funding terms and conditions (e.g. national
+eligibility criteria).
+In addition to their doctorate, the PI must have other significant scientific merits. Usually, they
+are a professor or docent-level researcher. In addition, the applicant must have a close
+
+QuantERA Call 2025 Announcement
+
+Page 38 of 83
+
+connection with Finland to support the implementation of a multi-year project. A PI requesting
+funding from the Academy of Finland may not participate in more than two proposals.
+Submission of the proposal at the national level
+Finnish partners of projects that have been selected for funding will be invited to submit
+national application forms through the Research Council’s online system. The application must
+include an annex outlining the research security risk assessment and mitigation plan.
+Additional requirements
+Open Access to Publications and Research Data Policy
+We require that the scientific publications on the results of research projects funded by the
+Research Council of Finland are open access, and that the research data produced by the
+projects are made widely available. The degrees of data openness may justifiably vary, ranging
+from fully open to strictly confidential. More information is provided here:
+https://www.aka.fi/en/research-funding/responsible-science/open-science/
+
+QuantERA Call 2025 Announcement
+
+Page 39 of 83
+
+France
+
+ANR
+
+Participating organisation
+French National Research Agency
+
+Contact
+Maurice Tia
+Scientific Project Officer
+Telephone number: +33 1 72 73 06 90
+Email: Maurice.TIA@agencerecherche.fr
+
+Funding criteria and regulations
+Funding commitment
+The total ANR funding commitment is 2,500,000.00 EUR, the maximum funding per project is
+450,000.00 EUR and 300,000.00 EUR per partner.
+The document presenting the modalities of participation of the French applicants will be
+available in September 2025 at https://anr.fr/quantera-call-2025.
+Please note that companies with economic difficulties cannot receive ANR subventions.
+A DMP (Data management plan) must be transmitted to ANR and updated during the course
+of the project. Please refer to the ANR funding regulations for more details: https://anr.fr/fr/rf/
+If applicable, Declarations of Due Diligence for the financed projects (Nagoya Protocol) must
+also be transmitted to ANR in due time.
+
+QuantERA Call 2025 Announcement
+
+Page 40 of 83
+
+Germany (QPR)
+
+DFG
+
+Participating organisation
+German Research Foundation
+
+Contact
+Andreas Deschner
+Programme Director
+Telephone number: +49 228 885 2959
+Email: andreas.deschner@dfg.de
+
+Funding criteria and regulations
+Funding commitment
+4,000,000.00 EUR for the proposals of the topic QPR. No funds are allocated for the topic
+AQS.
+Funding regulations
+•
+
+•
+•
+
+Funding is implemented as a Research Grant (Sachbeihilfe). Information about eligible
+cost categories (related to specific Programme Modules) and other specifics of the
+programme are available on the DFG website.
+The standard module that fits most needs is the Basic Module (form 52.01).
+The DFG grants 22% of the direct costs as overhead (Programmpauschale). Please
+choose 22% of the direct costs as the overhead for the submission to QuantERA.
+
+Eligibility of a partner as a beneficiary institution
+•
+•
+
+The general DFG rules and conditions as defined in the current DFG Guidelines
+Research Grants Programme apply.
+The guidelines regarding the Duty to Cooperate do not apply.
+
+Participation of commercial enterprises
+If commercial companies are involved in the project, the cooperation agreement must meet
+the DFG requirements concerning exploitation rights granted to the cooperation. The model
+cooperation agreement provided by the DFG or the DESCA model cooperation agreement can
+be used for this purpose.
+When using the DESCA model cooperation agreement, the following must be observed with
+regard to the granting of rights of use to the commercial enterprises involved in the project
+regarding the work results achieved by the DFG grant recipients in the funded project: If these
+rights of use, granted by the DFG recipients, are to be utilised by the commercial enterprises
+for the purpose of exploiting the work results achieved by the commercial enterprises in the
+project, fair and reasonable conditions must be agreed to for the rights of use (see Section
+9.4.1 Option 1 of the DESCA Horizon Europe 2.0 model cooperation agreement in conjunction
+with Annex 5 of the Model Grant Agreement (Specific Rules on IPR)). In principle, the market
+value of the work results achieved by the grant recipient must be taken into account.
+
+QuantERA Call 2025 Announcement
+
+Page 41 of 83
+
+Submission of the proposal at the national level
+• Proposals have to be submitted at the latest on 5 December 2025 (same day as
+submission deadline of QuantERA).
+• If you do not have an elan account, you must register on the elan portal before
+submitting your proposal. Confirmation is usually provided within three working days. It
+is not possible to submit a proposal without prior registration.
+• For each project, one copy of the proposal, the financial form, necessary offers for
+scientific equipment and accompanying documentation (see below) has to be
+submitted via the DFG’s elan portal. All documents should be submitted using the
+Portable Document Format (PDF).
+• A CV for each applicant requesting funds from the DFG has to be submitted. Please
+use the current template on DFG’s site with submission instructions.
+• Regardless of the number of PIs requesting funding from the DFG, the proposal has to
+be submitted to the DFG only once. The person uploading the documents enters the
+relevant data for all PIs requesting funding from the DFG.
+• First steps on elan: Log-In > Proposal Submission > New Project / Draft proposal >
+Individual Grants Programme > “Proposal for a Research Grant” > Start online form.
+• Please select the Call “QuantERA 2025 (QPR)”.
+• Overheads (Programmpauschale) will be calculated automatically in elan during
+submission do the DFG.
+• It is compulsory to submit the project data form (to be made available before October
+2025).
+Equity and Diversity
+The DFG strongly welcomes proposals from researchers of all genders and sexual identities,
+from different ethnic, cultural, religious, ideological or social backgrounds, from different career
+stages, types of universities and research institutions, and with disabilities or chronic illness.
+With regard to the subject-specific focus of this Call, the DFG encourages female researchers
+in particular to submit proposals.
+Good Research Practice
+According to a resolution of the DFG General Assembly, DFG funding may only be awarded
+to research institutions that have implemented the guidelines laid down in the Code of Conduct
+for Safeguarding Good Research Practice in their own regulations. The management of your
+institution is responsible for implementing the guidelines in a legally binding manner. In order
+to avoid delays in the disbursement of funding, please verify implementation within your
+institution in good time. For information regarding the implementation, please refer to the
+Research Integrity Portal. If you have any questions on this subject, please contact the
+Research Integrity team at the DFG Head Office.
+Privacy Policy
+We, the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation), take the
+protection of your personal data and its confidential treatment extremely seriously. Therefore,
+please refer to the DFG’s Privacy Policy. If you intend to transmit personal data of third parties,
+please make sure to do so only if the necessary legitimation under data protection law exists.
+Before transmitting data of third parties to the DFG, please forward the DFG’s Data Protection
+Notice to the individuals affected (data subjects). If there is a legitimate interest not to inform
+individuals beforehand (e.g. for reasons of secrecy or in case of a nomination or candidate
+proposal), these individuals should be informed no later than at the time of publication.
+QuantERA Call 2025 Announcement
+
+Page 42 of 83
+
+Germany (AQS)
+
+BMFTR
+
+Participating organisation
+Federal Ministry of Research, Technology and Space
+
+Contact
+VDI Technologiezentrum GmbH (VDI TZ) – funding agency on behalf of the BMFTR
+Sebastian Krug
+Procedural contact person
+Telephone number: +49 211 6214 472
+Email: krug@vdi.de
+
+Dr. Bastian Hiltscher
+Scientific contact person
+Telephone number: +49 211 6214 441
+Email: hiltscher@vdi.de
+
+Funding criteria and regulations
+Funding commitment
+BMFTR budget earmarked for the funding of German participants in projects under the AQS
+topic: max. 4,500,000.00 EUR.
+Funding regulations
+Project proposals involving German participants requesting funding from the BMFTR must:
+1. Clearly address and be in line with the Applied Quantum Science (AQS) topic,
+2. Be in line with the BMBF Research Programme ‘Quantum Systems’ and the Federal
+Government´s ‘Quantum Technologies Conceptual Framework’ which can be
+downloaded at https://www.quantentechnologien.de/service/publikationen.html.
+Funding for German applicants under this Call will be granted based on §§ 23 and 44 BHO
+(‘Bundeshaushaltsordnung’) and the related administrative regulations and BMFTR/ BMBF
+guidelines. An entitlement to funding cannot be derived.
+In particular, the national regulations NABF, NKBF 2017 and BNBest-mittelbarer Abruf-BMBF
+apply. The documents can be found at: foerderportal.bund.de/easy/easy_index.php
+Eligibility of a partner as a beneficiary institution
+BMFTR funding of German participants is available:
+•
+
+For universities and research institutes/organisations (funding up to 100% of the total
+eligible costs/expenditures; while overhead is not eligible for universities, they will
+receive an additional lump sum (‘Projektpauschale’) equivalent to 20% of the eligible
+expenditures),
+
+•
+
+For companies (funding up to 50% of the total eligible costs; in addition, bonuses may
+be granted to SMEs under GBER Article 25(6)(a) (‘SME bonus’) and to companies
+under Article 25(6)(b)(i) (‘bonus for effective cooperation’)).
+
+QuantERA Call 2025 Announcement
+
+Page 43 of 83
+
+Submission of the proposal at the national level
+No additional national forms need to be submitted during the QuantERA application process.
+However, previous registration with the funding agency (VDI TZ) is mandatory (see section
+additional requirements below).
+Successful German participants must submit complete BMFTR application forms (AZA/AZK
+including annexes) within two months after the official notification of the project selection. Noncompliance may result in exclusion.
+Additional requirements
+Extending the stipulations of the Call announcement, the following requirements apply to
+German participants respectively to project proposals involving German participants:
+•
+
+Mandatory registration: German applicants are required to contact and to register
+with the responsible BMFTR funding agency (‘Projektträger’ VDI TZ – see section
+contact above) prior to the submission of a project proposal they are involved in.
+
+•
+
+Compulsory industry involvement: Due to the application orientation of the AQS
+topic, the involvement of at least one company (from Germany or another EEA country)
+in the project is compulsory.
+
+•
+
+Obligatory exploitation plan: In section 2.2 proposal must contain a concrete,
+appropriately detailed plan (who? what? when?) for the subsequent innovation steps,
+the technical application and the future commercial utilisation of the results in the EEA.
+Please note that in this context, the term application does not imply the utilisation of the
+results for merely scientific purposes.
+
+•
+
+Demonstrating additional benefit: To be eligible for BMFTR funding, project
+proposals must demonstrate an additional benefit due to the transnational cooperation.
+
+•
+
+Funding limits: The requested BMFTR funding must amount to at least 120 k€ per
+German partner over the entire duration of a project. Moreover, at least 50% of the total
+eligible costs/expenses on the part of the German participant(s) in a project must be
+personnel costs/expenses.
+
+QuantERA Call 2025 Announcement
+
+Page 44 of 83
+
+Hungary
+
+NKFIH
+
+Participating organisation
+NKFIH, Hungarian National Research, Development and Innovation Office
+
+Contact
+Flora Csesznok
+National Contact Point
+Email: ncp@nkfih.gov.hu
+
+Funding criteria and regulations
+Funding commitment
+The total indicative national funding for this Call is 450,000.00 EUR.
+Funding regulations
+The conditions for the call for ERA-NET COFUNDs (2024-1.2.2-ERA_NET) are applicable. For
+details see: https://nkfih.gov.hu/palyazoknak/nkfi-alap/palyazat-era-net-cofund-ejp-cofundegyeb-multilateralis-programok-2024-122-era-net/palyazati-felhivas
+Eligibility of a partner as a beneficiary institution
+The conditions for the call for ERA-NET COFUNDs (2024-1.2.2-ERA_NET) are applicable. For
+details see: https://nkfih.gov.hu/palyazoknak/nkfi-alap/palyazat-era-net-cofund-ejp-cofundegyeb-multilateralis-programok-2024-122-era-net/palyazati-felhivas
+Submission of the proposal at the national level
+Not required prior to the QuantERA Call submission.
+Following the international selection of the projects to be funded, a proposal should be formally
+submitted to NKFIH.
+
+QuantERA Call 2025 Announcement
+
+Page 45 of 83
+
+Ireland
+
+TE-RI
+
+Participating organisation
+Taighde Éireann – Research Ireland
+
+Contact
+Dr Maria Nash
+Senior EU affairs Executive
+Maria.nash@researchireland.ie
+Eu-cofund@researchireland.ie
+
+Funding criteria and regulations
+Funding commitment
+Maximum budget per project:
+Up to €330,000 direct costs, €405,000 including overheads, for Irish-based researchers
+applying as a project partner.
+Up to €405,000 direct costs, €530,000 including overheads, for Irish-based researchers
+applying as a project coordinator.
+Eligible costs:
+-
+
+Salary-related costs for research personnel. Please note the Irish-based partner
+cannot request their own salary.
+
+-
+
+Equipment
+
+-
+
+Travel
+
+-
+
+Direct running costs (materials and consumables)
+
+-
+
+Dissemination and knowledge exchange costs
+
+-
+
+Subcontracting costs are considered an eligible budget category however strong
+justification for subcontracting must be provided and pre-approved directly with
+Research Ireland in advance of proposal submission.
+
+-
+
+Overheads should be calculated as 30% of the direct costs, but excluding therefrom
+the cost of all equipment identified in the application.
+
+Unless otherwise stated, all rules regarding eligible and ineligible costs apply as defined
+within Research Ireland’s Grant Budget Policy.
+Funding regulations
+Please refer to the Research Ireland call webpage for funding regulations and applicant
+eligibility in full: https://www.researchireland.ie/funding/
+
+Eligibility of a partner as a beneficiary institution
+Only an academic partner or coordinator based in an eligible Irish Host Research body may
+apply for Research Ireland funding. Please refer to Research Ireland’s Policies and Guidance
+for the list of eligible Research Performing Organisations: Eligible Research Bodies Policy
+
+QuantERA Call 2025 Announcement
+
+Page 46 of 83
+
+The Irish-based applicant must:
+•
+
+hold a PhD or equivalent qualification for at least 3 years by the proposal deadline.
+The official date is defined as the day, month and year that the degree was conferred
+i.e., the month and year printed on the official PhD certificate.
+
+AND
+•
+
+be a member of the academic staff of an eligible Research Body (permanent or with
+an active contract that covers the period of the grant)
+
+•
+
+be a contract researcher with a contract that covers the period of the grant, who is
+recognised by the eligible Research Body as an independent investigator and will
+have an independent office and research space for which he/she will be fully
+responsible for at least the duration of the Research Ireland grant
+
+•
+
+be an individual who will be recognised by the eligible Research Body upon receipt of
+the grant as an academic staff or as a contract researcher as defined above. The
+applicant does not necessarily need to be employed by the Research Body at the
+time of the application submission.
+
+OR
+
+OR
+
+AND
+•
+
+be an author on at least three international peer-reviewed articles. Only original
+research publications, and not review articles or other secondary research literature,
+are acceptable.
+
+Submission of the proposal at the national level
+Please give a brief notification of your intent to submit a proposal through email before the
+submission deadline. Within the notification, please include the following information:
+•
+
+List of project partners
+
+•
+
+Irish Host institution
+
+•
+
+Total budget request to Research Ireland
+
+•
+
+Whether you intend to apply as a coordinating or non-coordinating partner
+
+Additional requirements
+Applicants are advised that funding awarded by Research Ireland under the QuantERA
+Programme will be subject to, and must comply with, State aid rules and the conditions of the
+EU Commission General Block Exemption Regulation (GBER). Funding will be awarded to
+successful applicants under Article 25, in respect of aid for research and development
+projects. For further details please consult: Taighde Éireann-Research Ireland Research and
+Innovation Scheme 2021-2026
+
+QuantERA Call 2025 Announcement
+
+Page 47 of 83
+
+Israel
+
+IIA
+
+Participating organisation
+Israel Innovation Authority - ISERD
+
+Contact
+Mr. Danny Seker
+Senior Director: Digital, Industry and Space; Civil Security for Society
++972 52 733 4127 – Dan@iserd.org.il
+
+Bat Zion Fisch
+NCP Cluster 4: AI, Digital and Industry
++972 54 435 8285 - Batzion.F@innovationisrael.org.il
+
+Funding criteria and regulations
+Funding commitment
+0.75 million
+Anticipated number of fundable projects with IIA partners: 3-4
+Funding regulations
+According to national regulations. Please refer to the following documents:
+Sub-route 5a' – Applied Research Consortia
+Procedure for the implementation of international agreements related to the European
+Framework Programme
+The QuantERA III call will appear at ISERD site in due course, please refer to ISERD site
+before submitting the national application.
+Eligibility of a partner as a beneficiary institution
+Israeli company engaged in R&D
+Israeli Academia Institute –subject to the following:
+1. Commitment of an Israeli company (a partner in the consortium) to fund at least 10% of
+the Academia's approved budget.
+2. Joint tasks/working package of the specific academia and company
+Eligible cost and expenses – In line with national rules and regulation as detailed in;
+The national call of QuantERA
+The QuantERA III call will appear at ISERD site in due course,
+Please refer to ISERD site before submitting the national application.
+Submission of the proposal at the national level
+National application to be submitted mandatorily
+Deadline for submission: 12.12.2025, at 12:00 PM (IST)
+Additional requirements
+
+QuantERA Call 2025 Announcement
+
+Page 48 of 83
+
+Israeli applicants must submit a parallel national application to the Israel Innovation Authority
+(IIA) in addition to the international proposal submission on the QuantERA III website.
+The national call for proposals for Israeli entities will be published on the Israel Innovation
+Authority website shortly after the official announcement on the QuantERA III partnership
+website.
+Where to Submit
+The submission of the national application in Israel is made exclusively through the online
+portal on the Israel Innovation Authority (IIA) website. Applicants must log into their
+personal account on the website to access the dedicated submission forms.
+To submit the application in Israel, one must act according to the following:
+•
+
+The "Procedure for the implementation of international agreements related to the
+European Framework Programme" (hereinafter: "ISERD Procedure").
+
+The instructions of Sub-route 5a' – Applied Research Consortia, as detailed in the ISERD
+Procedure.
+
+QuantERA Call 2025 Announcement
+
+Page 49 of 83
+
+Italy
+
+MUR
+
+Participating organisation
+Ministero dell’università e della ricerca
+
+Contact
+Aldo Covello
+Programme manager
+Telephone number: 375 510 2431
+Email: aldo.covello@mur.gov.it
+Sonia Angiolin
+Project officer
+Email: sonia.angiolin@est.mur.gov.it
+
+Funding criteria and regulations
+Funding commitment
+Total: 500,000.00 EUR
+Funding regulations:
+•
+
+Maximum funding per project: 100,000.00 EUR
+
+Eligibility of a partner as a beneficiary institution:
+•
+
+Eligible partners: Universities, Research institutes, Research organizations in
+accordance with EU Reg. n. 651/2014 of the European Commission - June 17, 2014,
+Enterprises, foundations and non-economic entities.
+
+Submission of the proposal at the national level
+•
+
+•
+
+In addition to the project proposal, which shall be submitted at European level, the
+Italian participants are requested to submit a national application to MUR, through the
+national web platform, available at the following link:
+https://banditransnazionali.mur.gov.it
+The national application must be submitted by the same deadline established by
+the international Call. Any participant who does not submit its national
+documents by this deadline will be considered not eligible for funding.
+
+Additional requirements
+•
+
+The complete list of criteria and provisions legally valid, which must be respected by all
+the Italian participants, is included in the “Avviso integrativo nazionale”, to be published
+on the dedicated web page on MUR website:
+http://www.ricercainternazionale.miur.it/era/european-partnership-2021-27
+and in the national web platform https://banditransnazionali.mur.gov.it
+
+QuantERA Call 2025 Announcement
+
+Page 50 of 83
+
+Latvia
+
+LZP
+
+Participating organisation
+Latvian Council of Science
+
+Contact
+Maija Bundule
+Head of Unit - International Research Programs Unit
+Telephone number: +371 26514481
+Email: maija.bundule@lzp.gov.lv
+
+Funding criteria and regulations
+Funding commitment
+Total: 600,000.00 EUR
+Funding regulations
+For project coordinator or partner a maximum of 100,000.00 EUR can be requested per project
+year. The grant can be used to cover all project-related costs, which include as direct costs
+personnel costs (corresponding to the level of activity in the project), travel costs, subcontracts
+(up to 25% of total direct costs), other direct costs such as materials, consumables and
+publication costs, equipment (only depreciation costs), and etc. Indirect project costs can reach
+a maximum of 25% of total direct costs, excluding subcontracting costs.
+Eligibility of a partner as a beneficiary institution
+Following legal persons are eligible for funding:
+(1) R&D institutions - research institutes, universities, higher education establishments, their
+institutes and research centers. R&D institution (research institute, university, higher education
+establishment, research center etc.) must be listed in the Registry of Research Institutions
+operated by the Ministry of Education and Science of the Republic of Latvia.
+(2) Enterprises. Enterprise must be registered in the Registry of Enterprises of the Republic of
+Latvia and most of its R&D&I activities must be carried out in the Republic of Latvia, be able
+to submit its financial statements for the last two closed financial years and has a Latvian bank
+account.
+Submission of the proposal at the national level
+Not requested
+Additional requirements
+No more than two partners from Latvia may participate in the project.
+A person, acting as a project leader or partner’s principal investigator can submit or take part
+only in one project proposal per Call.
+
+QuantERA Call 2025 Announcement
+
+Page 51 of 83
+
+Lithuania
+
+LMT
+
+Participating organisation
+Lietuvos mokslo taryba (Research council of Lithuania)
+
+Contact
+Saulius Marcinkonis
+Adviser
+Telephone number: +370 676 17256
+Email: saulius.marcinkonis@gmail.com
+
+Funding criteria and regulations
+Funding commitment
+Total: 300,000.00 EUR
+Up to 150,000.00 EUR per project (for project partner) or up to 200,000.00 EUR per project
+(for project coordinator).
+Funding regulations
+The general funding rules of Research Council of Lithuania (LMT) apply:
+The applicant is Lithuanian higher education and research institution (which is listed in the
+Register of Ministry of Education and Science of Republic of Lithuania),
+SME eligible to apply only in collaboration with Lithuanian higher education and research
+institution,
+The applicant who intends to act as a project leader (PL) or principal investigator (PI) has to
+be a scientist (researcher holding at least a Ph.D. degree).
+A person, acting as a PL, PI or a core group member can participate only in one proposal per
+Call.
+The workload of the core members of project team (PL and PI) must be ≥20 hours multiplied
+by the duration of the project in months.
+National funding will be provided according to the General Rules of the Research Council of
+Lithuania for the competitive funding of the Research and Dissemination Projects approved
+by the Order No V-176 of the Council Chairman on 4 April, 2019.
+Eligibility of a partner as a beneficiary institution
+Submission of the proposal at the national level
+Applicants are not requested to submit any national forms during pre-proposal and full proposal
+submission stages.
+Additional requirements
+Requested to submit regular financial, mid-term and final reports at the national level.
+
+QuantERA Call 2025 Announcement
+
+Page 52 of 83
+
+Luxembourg
+
+FNR
+
+Participating organisation
+Luxembourg National Research Fund
+
+Contact
+Christiane Kaell
+Head of Research Programmes
+Telephone number: +352 691 362 817
+Email: christiane.kaell@fnr.lu
+
+Funding criteria and regulations
+Funding commitment
+350,000.00 EUR
+Funding regulations
+FNR’s programme for international collaborations: INTER - FNR
+The FNR financial regulations specify the different costs categories and expenses eligible for
+reimbursement by the FNR.
+Eligibility of a partner as a beneficiary institution
+Public institutions performing research: https://www.fnr.lu/fnr-beneficiaries/
+Submission of the proposal at the national level
+Additional documentation must be submitted the FNR no later than 7 working days after
+the QUANTERA III deadlines. Submissions to the FNR must be done FNR Online Grant
+Management System.
+Applicants will need to provide basic information and attach the proposal (including all further
+relevant documents) based on the form provided by the lead agency/organising network.
+Additional requirements
+A principal investigator may act in one proposal only. A consortium leader from a Luxembourgbased public research institution should be a researcher with solid experience of managing
+collaborative research projects.
+
+QuantERA Call 2025 Announcement
+
+Page 53 of 83
+
+Malta
+
+MEY
+
+Participating organisation
+Ministry of Education, Sport, Youth, Research and Innovation - MEYR
+
+Contact
+David Muscat
+Snr Manager – Programme Implementation
+Telephone number: +356 2598 1074
+Email: david.d.muscat@gov.mt
+
+Funding criteria and regulations
+The following legal persons are eligible for funding:
+•
+•
+
+Research institutes, universities, higher education establishments, their institutes and
+research centres etc.
+Enterprises and companies.
+
+Entities must be registered in Malta.
+Funding commitment
+Total: 50,000.00 EUR
+Funding regulations
+YES
+Eligibility of a partner as a beneficiary institution
+YES
+Submission of the proposal at the national level
+Mandatory
+Additional requirements
+N/A
+
+QuantERA Call 2025 Announcement
+
+Page 54 of 83
+
+Netherlands
+
+QDNL
+
+Participating organisation
+Quantum Delta NL – QDNL
+
+Contact
+Dr. Julia Oesterling
+Senior Advisor EU programs
+Telephone number: +31-6-81110955
+Email: julia.oesterling@quantumdelta.nl
+
+Funding criteria and regulations
+Funding commitment
+Total: 1,500,000.00 EUR
+Maximum funding per the awarded project: 350,000.00 EUR
+Funding regulations
+Maximum number of fundable research groups
+3-5
+Eligibility of project duration
+3 years
+Eligibility of costs, types and their caps
+One Postdoctoral researcher and/or non-scientific personnel (up to a max of 3 years) and/or
+PhD student, material costs, traveling costs, network and consortium costs. With a maximum
+project duration for three years, only funding for 3 years can be granted. However, in case of
+a 4-year PhD employment contract, this may be indicated and included in the project budget.
+For all eligible applicants standard
+https://www.nwo.nl/en/salary-tables).
+
+tariffs
+
+for
+
+personal
+
+costs
+
+apply
+
+(see:
+
+A standard material budget can be requested up to a maximum of 15,000.00 EUR per year.
+This budget covers third party costs (related to external services such as consulting- provided
+by companies or freelancers, capped at a rate of 125.00 EUR per hour), costs for
+consumables, small instruments and aids, cost for travel and lodging, costs for buying the
+rights to patents necessary for the project, for the duration of the project, miscellaneous costs
+directly related to the project. Costs for cleanroom (access to NanoLabNL) can be claimed,
+additionally.
+Eligibility and assessment criteria
+(http://quantumdelta.nl/quantera).
+
+are
+
+accessible
+
+on
+
+the
+
+website
+
+of
+
+QDNL
+
+Eligibility of a partner as a beneficiary institution
+Full, associate, and assistant professors and other researchers with a comparable position
+may submit an application if they have a tenured position (and therefore a paid position for an
+indefinite period) or a tenure track agreement at Dutch universities, or NWO institutes, or at
+
+QuantERA Call 2025 Announcement
+
+Page 55 of 83
+
+other research organisations, that -at least in part- are funded by the Ministry of Education,
+Culture, and Science.
+SMEs are eligible to join a project together with one of the eligible organisations mentioned
+above. SMEs cannot however request funding within this call.
+Individuals who, in the framework of a tenure-track position, -do not yet have a permanent
+appointment can also be (co-) applicant. The employing institution, thus the dean or director
+of the institute, has to ensure a full 4-year PhD position employment contract.
+Submission of the proposal at the national level
+Yes. Submission of financial and scientific reports at national level is required in accordance
+with the rules of QDNL.
+Additional requirements
+Applicants must fit one of the themes of the NAQT (National Agenda of Quantum Technology),
+or the CAT (Catalyst) themes of QDNL. QDNL will host an information session in September
+2025 for applicants from Dutch entities to brief them of the selection criteria and how to ensure
+compliance with scope and increase a successful application.
+
+QuantERA Call 2025 Announcement
+
+Page 56 of 83
+
+Norway
+
+RCN
+
+Participating organisation
+The Research Council of Norway
+
+Contact
+Torgeir Waaga
+Senior Advisor
+Telephone number: +47 48234747
+Email: twa@rcn.no
+
+Funding criteria and regulations
+Funding commitment
+Total: 434,000.00 EUR
+The project period can only be extended for the Norwegian project partner if the project period
+is extended for the project as a whole. The project period must not exceed the project period
+of the framework of the partnership.
+The National Budget of the Call is 5 M NOK
+The official exchange rate can be found here:
+https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rate
+s/html/eurofxref-graph-nok.en.html
+The exchange rate at the timepoint of the Call application submission deadline will be the valid
+exchange rate.
+Funding regulations
+The aided part of the research and development project is set by the State Aid Rules. The aid
+is assessed to fall within, and must only be used in accordance with, the EU's Block Exemption
+Regulation Article 25 (Commission Regulation (EU) No. 651/2014). Undertakings that fall
+under the state aid regulations' definition of "undertaking in difficulty" cannot receive support
+from the Research Council. For more information see:
+https://www.forskningsradet.no/en/apply-for-funding/funding-from-the-researchcouncil/Conditions-for-awarding-state-aid/
+Depending on the volume of submitted and eligible projects, up to 25% additional
+funding may be allocated to the Call to fund additional projects on the ranking list.
+Eligibility of a partner as a beneficiary institution
+Only research organizations on the RCN’s list of approved research organizations are eligible
+for funding.
+Submission of the proposal at the national level
+Project partners of funded projects will have to submit national application forms to The
+Research Council of Norway after notification.
+
+QuantERA Call 2025 Announcement
+
+Page 57 of 83
+
+Additional requirements
+•
+
+The participation must follow RCN’s General Terms and Conditions for R&D Projects.
+
+•
+
+Norwegian project partners will sign a separate contract with the RCN. The currency in
+the Norwegian contracts will be in NOK to avoid currency risk.
+
+•
+
+The budget for the Norwegian partners shall follow RCN cost model and RCN
+regulations.
+
+QuantERA Call 2025 Announcement
+
+Page 58 of 83
+
+Poland
+
+NCBR
+
+Participating organisation
+National Centre for Research and Development
+
+Contact
+Krystyna Maciejko
+Project Coordinator
+Telephone number: +48 22 39 07 489
+E-mail: krystyna.maciejko@ncbr.gov.pl
+
+Funding criteria and regulations
+Funding commitment
+Maximum funding for the Call 2025: 1,500,000.00 EUR
+Funding regulations
+Detailed information (e.g. eligibility of the costs and funding rates) can be found at:
+https://www.gov.pl/web/ncbr/platforma-konkursowa
+NCBR supports only applied research and experimental development.
+Eligibility of a partner as a beneficiary institution
+•
+•
+•
+
+Research organisations15,
+Enterprises16 (micro, small, medium or large),
+Groups of entities (scientific consortia).
+
+For research organisations an industrial partner is not required to establish a national scientific
+consortium.
+Submission of the proposal at the national level
+After international evaluation has been completed and the ranking list established, Polish
+participants from consortia recommended for funding will be invited to submit the National
+Application Form (NAF).
+All eligible entities invited to submit NAF are obliged to use the rate of exchange of the
+European Central Bank dated on the day of opening of the Call.
+NAFs will be then examined by the interdisciplinary panel of experts for international projects
+for the appropriateness of funding requested. Based on recommendations of the panel, the
+Director of NCBR issues a funding decision.
+Additional requirements
+N/A
+
+15 As defined in Article 2 (83) of General Block Exemption Regulation (Regulation No 651/2014).
+16 As defined in Article 1 of Annex 1 to the General Block Exemption Regulation (Regulation No 651/2014).
+
+QuantERA Call 2025 Announcement
+
+Page 59 of 83
+
+Poland
+
+NCN
+
+Participating organisation
+National Science Centre
+
+Contact
+Alicja Dyląg
+International Cooperation Officer
+Email: alicja.dylag@ncn.gov.pl
+Dr Anna Koteja
+Coordinator for Physical Sciences and Engineering
+Email: anna.koteja@ncn.gov.pl
+National Science Centre: quantera@ncn.gov.pl
+
+Funding criteria and regulations
+Funding commitment
+Total: 1,500,000.00 EUR
+Funding regulations
+Only proposals involving basic research (experimental or theoretical endeavours undertaken
+to gain new knowledge of the foundations of phenomena and observable facts, without any
+direct commercial use) may be submitted in response to the Call for proposals.
+What are the eligible costs for Polish researchers?
+We strongly encourage all applicants to read information on eligible costs included in the Annex
+to NCN Council’s Resolution on awarding funding for research tasks funded or co-funded
+under international calls launched by the National Science Centre and carried out as
+multilateral collaboration UNISONO.
+Applicants can apply for funding for all costs relevant, necessary and directly connected to the
+proposed research project including:
+1. Personnel costs (salaries):
+•
+
+Full time remuneration: funds for full-time employment of the principal investigator or
+post-doc(s); Please note, if the principal investigator is also the coordinator of an
+international consortium submitting a joint proposal a full-time remuneration of PI can
+be increased.
+
+•
+
+Additional remuneration for members of the research team. Please note: if the
+principal investigator is also the coordinator of an international consortium submitting a
+joint proposal a budget for additional remuneration can be increased.
+
+•
+
+Salaries and scholarships for students and PhD students. Please note: if the
+principal investigator is also the coordinator of an international consortium submitting a
+joint proposal the budget for salaries and scholarships for students and PhD students
+can be increased.
+
+2. Purchase or manufacturing of research equipment, devices and software (the
+cost of an individual item of equipment must not exceed PLN 500,000.00).
+3. Other costs such as:
+•
+
+Purchase of material and small equipment,
+
+QuantERA Call 2025 Announcement
+
+Page 60 of 83
+
+•
+•
+•
+•
+•
+
+Outsourcing (costs of services rendered by third parties),
+Business trips (travel and subsistence costs),
+Visits and consultations,
+Compensation for collective investigators,
+Other costs crucial to the research project which comply with the Annex to NCN
+Council’s Resolution on awarding funding for research tasks funded or co-funded under
+international calls launched by the National Science Centre and carried out as
+multilateral collaboration UNISONO.
+
+4. Indirect costs must not exceed a maximum of 20% of the total eligible costs and may
+not be increased during the course of a research project.
+Additionally, indirect costs of up to 2% of direct costs may be spent on Open Access to
+publications and research data. Administrative personnel costs and costs of
+organisation of conferences have to be covered from overheads.
+EURO exchange rate: 1 EUR = 4,2858 PLN
+Eligibility of a partner as a beneficiary institution
+Proposals may be submitted by the entities specified in Article 27 (1) of the Act on the National
+Science Centre (NCN Act). For further details on eligibility of applicants, as well as terms of
+entry, please check the Annex to the NCN Council Resolution on funding granted within calls
+for proposals for international research projects (UNISONO).
+Who can act as Principal Investigator?
+The Principal Investigator in the Polish research team must be at least a PhD holder when
+submitting a proposal. The Principal Investigator must be a person employed at the host
+institution for the project for the entire project duration period pursuant to at least a part-time
+employment contract. The Principal Investigator must reside in Poland for at least 50% of the
+project duration period.
+Submission of the proposal at the national level
+Up to 7 days from the full proposal submission deadline Polish applicants must submit their
+national applications in the OSF submission system. The application will include a budget that
+should be calculated according to the Annex to NCN Council’s Resolution on awarding funding
+for research tasks funded or co-funded under international calls launched by the National
+Science Centre and carried out as multilateral collaboration (UNISONO).
+If one international project includes partners from two or more different Polish institutions, these
+institutions apply as a group of entities. Each entity within the group has a separate budget,
+but the limit on the remuneration applies to the group as a whole (please see: UNISONO).
+Please note that groups of entities have higher limits on the remuneration.
+Additional requirements
+Applicants are obliged to adhere to the rules included in the Annex to NCN Council’s
+Resolution on awarding funding for research tasks funded or co-funded under international
+calls launched by the National Science Centre and carried out as multilateral collaboration:
+UNISONO.
+The rules for awarding NCN scholarships are laid down in the Regulations on awarding
+scholarships.
+• Personal Data Processing at the NCN
+• Open Access Policy at the NCN
+• Data Management Plan requirements
+QuantERA Call 2025 Announcement
+
+Page 61 of 83
+
+Romania
+
+UEFISCDI
+
+Participating organisation
+Executive Agency for Higher Education, Research, Development and Innovation Funding
+
+Contact
+Nicoleta Dumitrache
+Expert international cooperation
+Telephone number: +40 2 1302 3886
+Email: nicoleta.dumitrache@uefiscdi.ro
+
+Funding criteria and regulations
+Funding commitment
+Total: 500,000.00 EUR
+Funding regulations:
+•
+
+250,000.00 EUR in case a Romanian institution is the Coordinator (together with other
+Romanian partner(s) – if it is the case),
+
+•
+
+200,000.00 EUR for one/all Romanian partner(s) participating in a proposal.
+
+Eligible costs:
+a. Staff costs,
+b. Logistics expenses:
+•
+•
+•
+
+Capital expenditures (cannot exceed 25% of the funding from the public budget),
+Expenditure on stocks – supplies and inventory items,
+Expenditure on services performed by third parties cannot exceed 25% of the funding
+from the public budget. The subcontracted parts should not be core/substantial parts
+of the project work,
+
+c. Travel expenses,
+d. Overhead (indirect costs) is calculated as a percentage of direct costs: staff costs, logistics
+costs (excluding capital costs and cost for subcontracting) and travel expenses. Indirect costs
+will not exceed 25% of direct costs.
+Eligibility of a partner as a beneficiary institution: Universities, national institutes, SMEs,
+other institutions with R&D activity.
+Submission of the proposal at the national level - the proposal will not be submitted
+at national level.
+Additional requirements:
+Funding rates vary in accordance with state aid legislation.
+A person, as project manager, regardless of whether the Romanian institution is a project
+coordinator or partner, at the level of a transnational competition, can participate in a single
+project proposal.
+For more information: https://uefiscdi.gov.ro/parteneriate-si-misiuni-europene
+
+QuantERA Call 2025 Announcement
+
+Page 62 of 83
+
+Slovakia
+
+SAS
+
+Participating organisation
+Slovak Academy of Sciences
+
+Contact
+Martin Novak,
+Program Officer
+Telephone number: +421257510119
+Email: mnovak@up.upsav.sk
+Zuzana Panisova
+Program Officer
+Telephone number: +421257510245
+Email: panisova@up.upsav.sk
+
+Funding criteria and regulations
+Funding commitment:
+Total: 120,000.00 EUR
+Funding regulations
+Personnel costs up to 15 % of all direct costs or up to 30% of all direct costs, if the Slovak team
+is the consortium’s coordinator.
+Overheads up to 20% of all direct costs.
+No capital expenditures are allowed.
+Eligibility of a partner as a beneficiary institution
+Only research institutes and/or centres of the Slovak Academy of Sciences are eligible
+organisations for funding by SAS (up to 100%). The main applicant must have, at the time of
+submission, a contract(s) with one or several of the institutes/centres equivalent to more than
+50% of the full-time employment valid for the whole duration of the project. Each member of
+the applicant’s team must also have an employment contract or a fellowship with the same or
+another SAS institute/centre.
+Submission of the proposal at the national level
+No
+Additional requirements
+N/A
+
+QuantERA Call 2025 Announcement
+
+Page 63 of 83
+
+Slovenia
+
+MVZI
+
+Participating organisation
+Ministry of Higher Education, Science and Innovation
+
+Contact
+Anamarija Meglič
+Function: Science Policy Officer - Directorate for Science and Innovation
+Telephone number: + 386 1 478 46 14,
+Email: anamarija.meglic@gov.si
+
+Funding criteria and regulations
+Funding commitment
+Max. 900,000.00 EUR with the possibility of additional EC funding depending on the EC
+contribution (in the form of top-up funding).
+Funding regulations
+Estimated number of research partners that can be cofunded: 3 research projects with
+Slovenian applicants.
+Maximum co-funding or grant awarded to a partner: max. 300,000.00 EUR per project (the
+actual amount and dynamics of co-funding shall be defined in the national co-funding contract).
+Eligibility of a partner as a beneficiary institution
+Type of research eligible for co-funding on the TRL scale:
+Basic or industrial research TRL 1-6 (foreseen activities of the Slovenian partner).
+The type of research to be carried out by Slovenian researchers must be identified and
+explained in the project proposal.
+Submission of the proposal at the national level
+Programme title:
+Programmes of International Scientific Cooperation
+Geographical coverage of the programme (national/regional):
+National programme
+Programme website:
+https://www.gov.si/zbirke/projekti-in-programi/obzorje-evropa/partnerstva/
+Legal basis:
+• State Administration Act (Official Gazette of the Republic of Slovenia [Uradni list RS],
+Nos 113/05 – official consolidated version, 89/07 – Constitutional Court Decision,
+126/07 – ZUP-E, 48/09, 8/10 – ZUP-G, 8/12 – ZVRS-F, 21/12, 47/13, 12/14, 90/14,
+51/16, 36/21, 82/21, 189/21, 153/22 and 18/23; hereinafter: ZDU-1);
+• Public Finance Act (Official Gazette of the Republic of Slovenia [Uradni list RS], Nos
+11/11 – official consolidated text, 14/13 – corr., 101/13, 55/15 – ZFisP, 96/15 –
+ZIPRS1617, 13/18, 195/20 – Constitutional Court Decision, 18/23 – ZDU-1O, 76/23
+
+QuantERA Call 2025 Announcement
+
+Page 64 of 83
+
+•
+•
+•
+
+•
+
+•
+
+•
+
+•
+•
+•
+
+•
+•
+
+•
+
+•
+•
+
+•
+
+and 24/25, hereinafter: ZJF);
+Scientific Research and Innovation Activity Act (Official Gazette of the Republic of
+Slovenia [Uradni list RS], Nos 186/21, 40/23, 102/24 and 102/24, hereinafter: ZZrID);
+Rules on co-funding scientific research activities (Official Gazette of the Republic of
+Slovenia [Uradni list RS], No 69/23);
+Rules determining special projects of national importance and the regulatory framework
+for the determination of salaries for researchers (Official Gazette of the Republic of
+Slovenia [Uradni list RS], No 126/23 and 106/24);
+Act Regulating the Implementation of the Budgets of the Republic of Slovenia for 2025
+and 2026, ZIPRS2526 (Official Gazette of the Republic of Slovenia [Uradni list RS],
+No 104/24 in 17/25 – ZFO-1E);
+Budget of the Republic of Slovenia for 2025 (Official Gazette of the Republic of Slovenia
+[Uradni list RS], No 123/23 and 104/24), Budget of the Republic of Slovenia for 2026
+(Official Gazette of the Republic of Slovenia [Uradni list RS], No 104/24);
+Integrity and Prevention of Corruption Act (Official Gazette of the Republic of Slovenia
+[Uradni list RS], No 69/11 – official consolidated text, 158/20, 3/22 – ZDeb and 16/23ZZPri);
+Personal Data Protection Act (Official Gazette of the Republic of Slovenia [Uradni list
+RS], No 163/22; hereinafter: ZVOP-2);
+Trade Secrets Act (Official Gazette of the Republic of Slovenia [Uradni list RS],
+No 22/19, hereinafter: ZPosS);
+Public Procurement Act (Official Gazette of the Republic of Slovenia [Uradni list RS],
+Nos 91/15, 14/18, 121/21, 10/22, 74/22 – Constitutional Court Decision, 100/22 –
+ZNUZSZS, 28/23 and 88/23 – ZOPNN-F, hereinafter: ZJN-3);
+Resolution on the Slovenian Scientific Research and Innovation Strategy 2030 (Official
+Gazette of the Republic of Slovenia [Uradni list RS], No 49/22);
+Decree on scientific research public funding from the budget of the Republic of Slovenia
+(Official Gazette of the Republic of Slovenia [Uradni list RS], Nos 35/22, 144/22 and
+79/23);
+The criteria for determining the achievement of internationally comparable research
+results and the period covering internationally comparable research achievements for
+research project or programme leaders, effective from 22 May 2024 (available at
+https://www.arrs.si/sl/akti/kriteriji-vodja-maj24.asp) and Amendment of the Criteria for
+determining the achievement of internationally comparable research results and the
+period covering internationally comparable research achievements for research project
+or programme leaders, effective from 24 May 2024 (available at https://www.arisrs.si/sl/akti/kriteriji-vodja-dop-maj24.asp)
+Framework for State Aid for Research and Development and Innovation (2014/C
+198/01);
+Programme of Collaborative Research and Development Projects and Other Projects
+Subject to State Aid of the Ministry of Higher Education, Science and Innovation 2022–
+2030, Minister, Version 2.0 (Consolidated Text), No. 440-4/2022/1 of 26 September
+2022, as amended and supplemented (Version 2.0) on 20 July 2023, available at:
+https://www.gov.si/assets/ministrstva/MVZI/Znanost/Strategije-predpisi-in-drugidokumenti/Program-sodelovalnih-raziskovalno-razvojnih-projektov-in-drugihprojektov-ki-so-predmet-drzavnih-pomoci-MVZI-2022-2030.pdf);
+Decree on the implementation of scientific research work in accordance with the
+principles of open science (Official Gazette of the Republic of Slovenia [Uradni list RS],
+No 59/23 and 39/25);
+
+QuantERA Call 2025 Announcement
+
+Page 65 of 83
+
+•
+
+Open Science Action Plan for the implementation of Action 6.2: Open science to
+improve the quality, efficiency and responsiveness of research in the framework of the
+Resolution on the Scientific Research and Innovation Strategy of Slovenia 2030 of
+31 May 2023, No 63100-1/2023/5 (available at:
+https://www.arrs.si/sl/dostop/inc/24/Akcijski_nacrt_odprta%20znanost.pdf).
+
+•
+
+Co-funding rate:
+•
+
+•
+
+100% for research organisations (such as universities, public and private research
+institutes) whose funded activity is non-commercial in accordance with the provisions
+of the Community Framework for State Aid for Research and Development and
+Innovation. Wide dissemination of all research results on a non-exclusive and nondiscriminatory basis is required.
+For research organisations whose funded activity is commercial in accordance with
+the provisions of the Community Framework for State Aid for Research and
+Development and Innovation, the provisions of the Community Framework for State
+Aid for Research and Development and Innovation (OJ EU C 198, 27.6.2014) and the
+national scheme for State aid for research and development (the Programme of
+collaborative research and development and other projects subject to State aid from
+the Ministry of Education, Science and Sport 2022-2030, as amended, published at:
+https: //www.gov.si/podrocja/izobrazevanje-znanost-in-sport/znanost/), the maximum
+co-funding rates shall be as follows:
+
+Type of research
+
+Large
+enterprises
+
+Medium-sized
+enterprises
+
+Small
+enterprises
+
+Basic research
+
+100%
+
+100%
+
+100%
+
+Industrial research
+
+65%
+
+75%
+
+80%
+
+Experimental
+development
+
+40%
+
+50%
+
+60%
+
+Main eligibility criteria (e.g. types of organisations, thematic restrictions, types of costs,
+level of co-funding, etc.)
+"Research organisations", as defined in the ZZrID, are eligible for co-funding. All participating
+organisations must be registered in the register of research organisations of the Public Agency
+for Scientific Research and Innovation of the Republic of Slovenia (Slovenian Current
+Research Information System, hereinafter: the SICRIS).
+The eligibility of the research leader and other members of the research team: The project
+activities of each Slovenian partner must be supervised by a research leader who fulfils the
+conditions for a project leader as defined in paragraph one of Article 63 of the ZzrID. Regarding
+the definition of internationally comparable research outputs, the criteria for determining the
+achievement of internationally comparable research results and the period covering
+internationally comparable research achievements for the management of a research project
+or programme of 22 May 2024 are available at https://www.arrs.si/sl/akti/kriteriji-vodjamaj24.asp
+All participating researchers must be registered in the SICRIS and have available research
+hours.
+The total funding requested per project for all Slovenian partners within a consortium
+may not exceed EUR 300,000.00 for the entire duration of the project.
+
+QuantERA Call 2025 Announcement
+
+Page 66 of 83
+
+Eligible costs
+The Ministry of Higher Education, Science and Innovation will finance all eligible costs of
+Slovenian applicants in selected transnational projects, in accordance with the Decree on
+scientific research public funding from the budget of the Republic of Slovenia. Eligible costs
+must be directly related to the research carried out and must include all of the following
+categories of direct costs:
+•
+•
+•
+
+Personnel (including social, health, pension and other contributions in accordance with
+national legislation),
+Materials (travel and meeting expenses, consumables, dissemination and knowledge
+exchange costs and other costs),
+Depreciation costs.
+
+Indirect costs are eligible for up to 25% of direct costs.
+This Call is suitable for implementing Article 64 of the Scientific Research and Innovation
+Activity Act (Official Gazette of the Republic of Slovenia [Uradni list RS], Nos 186/21, 40/23,
+102/24 and 40/25 (ZZrID)).
+For more detailed explanations, please refer to the Navodila za prijavitelje in upravičence
+(Instructions for Applicants and Eligible Persons) (available at:
+https://www.gov.si/zbirke/projekti-in-programi/obzorje-evropa/partnerstva/
+In the event of the application of the Rules determining special projects of national importance
+and the regulatory framework for the determination of salaries for researchers, costs will be
+planned in accordance with the provisions of this Annex.
+Public expenditure eligibility period: from the financial year 2027, until the end of the
+financial year 2029.
+Project expenditure eligibility period: From the start date of the transnational project, as
+specified in the National Documentation for the duration of the project, with the prescribed
+additional 30-day deadline for the payment of invoices related to the project costs. The project
+expenditure eligibility period starts after the entry into force of the consortium agreement
+between the selected consortium partners from the date on which the national co-funding
+contract enters into force.
+The co-funding contract enters into force on the date of the fulfilment of the suspensive
+condition, i.e. on the date of the conclusion/signing of the consortium agreement. The
+consortium agreement shall be deemed to be signed when the last signatory party signs it. If
+the consortium agreement is not signed at the latest within one year from the date of the start
+of the project (as specified in the national documentation), the contract between the parties
+shall not enter into force and therefore no rights and obligations shall arise between them In
+this case, the contracting party cannot demand performance from the counterparty as agreed
+in the above-mentioned contract. As from the date of the entry into force of the contract, the
+eligible person shall be entitled to the payment of eligible costs and expenses incurred by it as
+a result of the implementation of the project from the date of the start of the project.
+Applicants must submit the transnational application in accordance with the instructions and
+deadlines set out in the joint transnational Call for tender.
+Submission of the project proposal at the national/regional level (method, content,
+deadlines, etc.)
+
+QuantERA Call 2025 Announcement
+
+Page 67 of 83
+
+The submission of an application at the national level is not foreseen.
+All information necessary to establish the eligibility for the co-funding of Slovenian applicants
+must be evident from the duly submitted transnational project application.
+The national contracting procedure will start once the projects are proposed for co-funding at
+the level of the transnational Call for tenders. The national documentation submitted, including
+evidence of the start date of the transnational project, will be a prerequisite for the signature of
+the contract at the national level (a draft contract is annexed to the Navodila za prijavitelje in
+upravičence (Instructions for Applicants and Eligible Persons), available at:
+https://www.gov.si/zbirke/projekti-in-programi/obzorje-evropa/partnerstva/
+The submission of financial and substantive reports at the national/regional level
+In accordance with the co-funding contract and the National Annex.
+Additional requirements
+All Slovenian applicants are recommended to contact the Slovenian national contact
+person.
+All Slovenian applicants should refer to the information published on the Call for tenders at the
+following website:
+https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-visoko-solstvo-znanost-ininovacije/javne-objave/
+For more detailed explanations, please refer to the Navodila za prijavitelje in upravičence
+(Instructions for Applicants and Eligible Persons) (available at:
+https://www.gov.si/zbirke/projekti-in-programi/obzorje-evropa/partnerstva/).
+
+QuantERA Call 2025 Announcement
+
+Page 68 of 83
+
+South Korea
+
+NRF Korea
+
+Participating organisation
+National Research Foundation of Korea
+
+Contact
+Seok-Ho Kim
+Program Officer
+Telephone number: +82-42-869-7831
+Email: rock@nrf.re.kr
+
+Funding criteria and regulations
+Budget
+Maximum funding committed: 1,600,000.00 EUR
+Maximum number of fundable research groups: 2
+Eligibility of project duration: 3 years
+Funding regulations
+National funding will be provided according to the
+NATIONAL RESEARCH AND DEVELOPMENT INNOVATION ACT.
+Eligibility of a partner as a beneficiary institution
+Full, associate, and assistant professors and other researchers with a comparable position
+may submit an application if they have a tenured position (and therefore a paid position for an
+indefinite period) or a tenure track agreement at Korean universities, or national research
+institutes, or at other research organisations, that -at least in part- are funded by the Ministry
+of Science and ICT.
+SME eligible to apply only in collaboration with Korean higher education and research
+institution.
+Submission of the proposal at the national level
+Additional documentation must be submitted the NRF no later than 7 working days after the
+QUANTERA III deadlines.
+Additional requirements
+A principal investigator may act in one proposal only. A consortium leader from a Republic of
+Korea-based public research institution should be a researcher with solid experience of
+managing collaborative research projects.
+
+QuantERA Call 2025 Announcement
+
+Page 69 of 83
+
+Spain
+
+AEI
+
+Participating organisation
+Agencia Estatal de Investigación
+Subdivisión de Programas Científico - Técnicos Transversales, Fortalecimiento y Excelencia
+c/Torrelaguna, 58 bis – planta 6ª
+20827 Madrid
++34 916037990
+
+Contact
+Administrative and technical issues:
+Watse Castelein
+Telephone number: +34 9160 38876
+Email: era-ict@aei.gob.es
+Representative:
+Beatriz Goméz Miguel
+Telephone number: +34 916 038 707
+Email: beatriz.gomez@aei.gob.es
+
+Funding Criteria and Regulations
+Funding commitment
+Maximum funding for the QuantERA Call 2025: 1,000,000.00 EUR.
+Funding Programme
+Funding Programme: The framework for this funding action is the Plan Estatal de
+Investigación Científica, Técnica e Innovación 2024-2027. On a national level, the Call will be
+managed by the Subdivisión de Programas Científico-Técnicos Transversales,
+Fortalecimiento y Excelencia (STRAN) of the AEI.
+Instrument for funding the Spanish groups
+The instrument for funding the Spanish groups is “Proyectos de Colaboración Internacional”
+(Projects of International Collaboration).
+The applicants are strongly advised to read the call text of the PCI 2025-1 (“Resolución de 5
+de marzo de 2025”) for reference and especially the PCI Requirements document.
+Data Protection
+By submitting a grant application to the AEI, the applicants consent to communication of the
+data contained in the application to other public administrations, with the aim of further
+processing of the data for historical, statistical or scientific purposes, within the framework of
+the Organic Law 3/2018, of December 5, on Personal Data Protection and Guarantee of Digital
+Rights.
+
+QuantERA Call 2025 Announcement
+
+Page 70 of 83
+
+Eligibility criteria
+Eligible entities for the AEI funding are:
+Non-profit research organizations (such as universities, public research institutions,
+technological centres and other private non-profit institutions performing RDI activities in
+Spain), which must comply with the requirements established by this transnational Call and
+with the rules on eligibility defined in the corresponding Spanish national funding instrument
+“Proyectos de Colaboración Internacional” (PCI) and the PCI Requirements document. The
+entities must have been previously beneficiaries of any of the AEI calls. They have to ensure
+contractual relationship with the Principal Investigator (PI) during all the implementation of the
+project.
+Although private enterprises are not funded by the AEI, the Spanish industrial sector
+is welcome to participate in the transnational consortia using their own funds or obtaining funds
+from the CDTI or other innovation and technological development funding agencies.
+Additional eligibility criteria
+Principal Investigators (PIs) requesting funding to the AEI must:
+•
+•
+
+Be eligible to the corresponding PCI call (see PCI2025-1 as an example) and the PCI
+Requirements document
+Demonstrate experience as investigators in projects funded by the different Plan
+Estatal I+D+i: 2013-2016, 2017-2020, 2021-2023, 2024-2027, ERC Grants, European
+Framework Programmes or other relevant national or international programmes.
+
+Incompatibilities: These must be taken into account when participating in different ERA-Nets,
+European Co-funded Partnerships or other international initiatives.
+•
+
+•
+•
+•
+
+PIs are not allowed to apply for funding in (i) more than one proposal of this
+transnational Call, (ii) in more than one proposal in the same PCI call and (iii) in PCI
+calls in consecutive years.
+If the same PI submits two or more proposals in this transnational Call, they will all be
+declared ineligible, except one, without the possibility of changing the PI.
+PIs must remain unchanged between the proposal to this transnational Call and the
+corresponding PCI call should the proposal be recommended for funding.
+A PI that has been granted a PCI the previous year will be declared ineligible, without
+the possibility of changing the PI.
+
+Important
+1. Submission of proposals at the AEI. Within one week after the QuantERA short proposal
+submission (until 12th of December 2025 at the latest), the Spanish PI must submit
+a copy of the international joint proposal, and the “Declaración responsable del
+investigador principal (templates in PDF and WORD available on AEI website).
+You can find below the link to the AEI application system to upload these documents:
+https://aplicaciones.ciencia.gob.es/proyectostransnacionales/
+2. The applicants should include the PI’s full name and the full name of their institution
+as it is stated in the Sistema de Entidades (SISEN).
+
+QuantERA Call 2025 Announcement
+
+Page 71 of 83
+
+Eligible costs
+•
+•
+
+•
+
+•
+
+Research and innovation activities are eligible. Mere dissemination, communication or
+other similar activities will not be eligible
+Only Personnel costs for new temporary employment dedicated to the project are
+eligible. This must be clearly stated in the contract. The costs of permanent staff linked
+to the beneficiary entity or members of the research team will not be considered eligible
+costs.
+Direct costs such as current costs, disposable materials, travelling expenses,
+coordination costs and other costs that can be justified as necessary to carry out the
+proposed activities.
+Overheads (25% of all direct costs, including the subcontracting costs).
+
+The AEI will avoid double funding (overlapping with other EU or National funding) and will not
+grant projects or parts of projects already funded.
+Funding rates
+The following funding limits (including direct + 25% indirect costs) are considered eligibility
+criteria. Proposals not respecting these limits could be declared ineligible.
+Maximum funding per project
+One AEI applicant
+
+CD (EUR)
+140.000
+
+CI (25%) (EUR)
+35.000
+
+TOTAL (EUR)
+175.000
+
+One AEI applicant - coordinator
+
+220.000
+
+55.000
+
+275.000
+
+Two AEI applicants- one coordinator
+
+260.000
+
+65.000
+
+325.000
+
+Additional 30,000 EUR (direct costs) can be granted for the entire proposal if the work plan
+includes substantial experimental tasks.
+IMPORTANT
+•
+•
+•
+
+Only ONE applicant asking funding for AEI is allowed per proposal as partner,
+Two AEI applicants are allowed in the same proposal if one of them is acting as
+coordinator,
+These amounts refer to 3 years projects. In case of shorter projects, the amount will be
+adjusted accordingly.
+
+Other Funding Criteria
+•
+
+•
+
+Centres formed by different Spanish legal entities will be considered as a unique entity,
+and thus the maximum funding should not exceed the limits per proposal established
+above (for example mixed centres).
+Two centres or institutions belonging to the Consejo Superior de Investigaciones
+Científicas (CSIC) will be treated as two separate partners one from another when one
+of them is acting as Coordinator of the proposal and their tasks and identity in the
+project are sufficiently separated and justified.
+
+The final funding will take into account the transnational evaluation of the collaborative
+proposal, the scientific quality of the Spanish group, the added value of the international
+collaboration, the participation of the industrial sector, and the financial resources available.
+Mandatory acknowledgement
+
+QuantERA Call 2025 Announcement
+
+Page 72 of 83
+
+Any publication or dissemination activity resulting from the granted projects must acknowledge
+funding by the Agencia Estatal de Investigación: “Project (reference nº XX) funded by the
+Agencia Estatal de Investigación through the PCI (year) call (or its equivalent)”.
+Open Access and Open Data policy
+Applicants should comply with Open Access/Open Data specified in the respective PCI call or
+equivalent. The results of the funded research actions, including both the results disseminated
+through scientific publications and the data generated in the research, must be available in
+open access, with the exceptions indicated in the PCI call or equivalent.
+
+QuantERA Call 2025 Announcement
+
+Page 73 of 83
+
+Sweden
+
+VR
+
+Participating organisation
+Swedish Research Council
+
+Contact
+Tomas Andersson
+Senior Research Officer
+Telephone number: +46 8-546 44 173
+Email: Tomas.Andersson@vr.se
+
+Funding criteria and regulations
+Funding commitment
+Total: 1,000,000.00 EUR (approx. 10 M SEK)
+Funding regulations
+1.
+2.
+3.
+
+SRC funds Swedish partners within the sub-call Quantum phenomena and resources.
+SRC funds basic research of the highest scientific quality, and promotes research
+collaboration and the exchange of experience.
+Awarded grant: Maximum 1.5 M SEK per year for three years for the Swedish partner
+(Total 4.5 M SEK). Exchange rate by the deadline of the Call will be used.
+
+Eligibility of a partner as a beneficiary institution
+1.
+2.
+
+3.
+
+The investigators need to hold a PhD at the time of application.
+The grants distributed by the SRC must be administrated by a Swedish university,
+higher education institution (HEI) or other public organisation that fulfils the
+Swedish Research Councils criteria for an administrating organisation:
+https://vr.se/english/calls-and-decisions/apply-for-a-grant/who-can-apply.html
+A researcher may only apply for funds from the SRC in one application in the QuantERA
+III Call2025.
+
+Submission of the proposal at the national level
+Swedish applicants are encouraged to communicate with the national contact person
+regarding their intention to participate in the Call, before submission of the consortium
+application.
+All Swedish project leaders participating in the Call for support from the Swedish Research
+Council shall also submit a parallel application using the Swedish Research Council’s
+application system Prisma. The application form in Prisma can be reached from the Call text
+at the Council’s website.
+Parallel application is a mandatory eligibility criterion. Failure to submit the parallel
+application to the Swedish Research Council before the deadline of the Prisma call will
+result in the Swedish partner being declared ineligible.
+Additional requirements
+The project grant may be used to fund all types of project-related costs, such as salaries
+(including your own salary, however no more than corresponding to the person’s activity level
+in the project), running costs (such as consumables, travel including stays at research facilities,
+
+QuantERA Call 2025 Announcement
+
+Page 74 of 83
+
+publication costs and minor equipment), premises and depreciation costs. Grants may not be
+used for scholarships. If a doctoral student participates, project funds may not be paid out as
+salary during teaching or other departmental duties. The minimum amount for which you may
+apply is SEK 400 000 per year, including indirect costs.
+See national call texts in Swedish ( https://www.vr.se/5.69a4b979196f6304be29df8.html ) and
+English ( https://www.vr.se/5.69a4b979196f6304be29e81.html) for all national requirements.
+
+QuantERA Call 2025 Announcement
+
+Page 75 of 83
+
+Switzerland
+
+SNSF
+
+Participating organisation
+Swiss National Science Foundation
+Wildhainweg 3
+P.O. Box 8232
+CH-3001 Berne
+http://www.snf.ch
+
+Contact
+Dr. Ahmad Zein Assi
+Scientific Officer
+Telephone number: +41 31 308 21 83
+Email: quantera@snf.ch
+
+Funding criteria and regulations
+Funding commitment
+2,000,000.00 EUR for both topics
+Maximum awarded grant:
+•
+•
+
+For a 3-years project: 400‘000 CHF / partner
+For a 2-years project: 266‘667 CHF / partner
+
+Funding regulations
+There are no restrictions on the participation of researchers in Switzerland in this QuantERA
+Call. They can coordinate consortia and are even encouraged to do so.
+Projects must comply with the SNSF Project Funding regulations and practices.
+In particular, all Swiss applicants and co-applicants must be eligible for Project Funding, see
+also the Regulations on project funding. Applicants in Switzerland who have not previously
+obtained a Project Funding grant of the SNSF are encouraged to contact the national contact
+point.
+Partners of an international project consortium located in a country of the QuantERA
+transnational consortium cannot be declared as project partners in the sense of article 11.2 of
+the SNSF Funding Regulations. They should be declared as consortium partner instead and
+apply for their funding at their respective research funding organisation. In case a consortium
+includes industrial or commercial partners (in or outside Switzerland), a confirmation of noncommercial goals must be provided in case the project is approved as a condition for the
+release of funds.
+Article 17, cl. a, of the SNSF Funding Regulations only applies in the sense that proposals with
+overlapping funding periods are only approved if the research projects pursue different goals
+in the context of this European programme than any ongoing projects by the same applicant.
+Article 6.3 of the Regulations on project funding applies. Swiss applicants may participate in
+at most one QuantERA proposal.
+Article 13 of the Regulations on project funding applies. In particular, Swiss applicants may
+receive a maximum of three grants from the SNSF for the same funding period, except for the
+instruments highlighted here.
+
+QuantERA Call 2025 Announcement
+
+Page 76 of 83
+
+Overhead costs cannot be requested since those are settled at the institutional level and do
+not count towards the overall budget.
+Grants will be managed according to standard SNSF rules; reporting requirements duplicating
+those of QuantERA will not be enforced.
+Eligibility of a partner as a beneficiary institution
+Submission of the proposal at the national level
+Applicants must provide basic administrative data by submitting administrative applications
+via the online submission system mySNF for the same deadlines as the consortium
+applications. Please select the instrument “Programmes/ERA-NET + EJP”.
+Additional requirements
+Open Access to Publications and Research Data
+Since October 2018, any publication based on research funded by the SNSF must be
+published in Open Access, with the possibility of adopting the Green Road (maximum embargo
+of 6 months for articles and 12 months for books/book chapters). The SNSF covers the costs
+for publishing in Open Access through a dedicated platform. Further details can be found at
+https://www.snf.ch/en/VyUvGzptStOEpUoC/topic/research-policies.
+Since 2017 all funded proposals need to submit a DMP before the start of the project. In
+particular, research data is expected to be archived on FAIR data repositories. No funds will
+be transferred without submitting a consistent DMP. Further details can be found at
+https://www.snf.ch/en/dMILj9t4LNk8NwyR/topic/research-policies.
+
+QuantERA Call 2025 Announcement
+
+Page 77 of 83
+
+Türkiye
+
+TÜBİTAK
+
+Participating organisation
+The Scientific and Technological Research Council of Türkiye
+
+Contact
+Dr. Kıvılcım KÖSEOĞLU
+Scientific Expert
+Telephone number: 0090 312 298 1185
+Email: kivilcim.koseoglu@tubitak.gov.tr
+
+Funding criteria and regulations
+Funding commitment
+200,000.00 EUR
+Funding regulations
+https://tubitak.gov.tr/sites/default/files/2024-08/1071_arge_ve_yenilik_projeleri_surec_dokumani.pdf
+Eligibility of a partner as a beneficiary institution
+Higher education institutions within the scope of the Higher Education Law, training and
+research hospitals, public institutions and organizations, and capital companies that are based
+in Türkiye, hold a trade registry certificate, and generate added value at the firm level
+regardless of their sector or size are eligible for support under the TÜBİTAK 1071 Support
+Program. Foundations, associations and their economic enterprises, cooperatives, unions,
+sole proprietorships, and ordinary partnerships are not eligible to apply. For further details, the
+national call text should be reviewed carefully.
+Submission of the proposal at the national level
+Yes. To be announced on TÜBİTAK website.
+Additional requirements
+Successful projects will be funded under TÜBİTAK 1071 Programme - Support Programme for
+Increasing Capacity to Benefit from International Research Funds and Participation in
+International R&D Cooperation.
+
+QuantERA Call 2025 Announcement
+
+Page 78 of 83
+
+United Kingdom
+
+UKRI-EPSRC
+
+Participating organisation
+UK Research and Innovation, Engineering and Physical Sciences Research Council
+
+Contact
+Liam Behbehani Boyle
+Quantum Technologies Senior Manager
+Telephone number: +447874795747
+Email: quantumtechnologies@epsrc.ukri.org
+
+Funding criteria and regulations
+Funding commitment
+Total: 5,000,000.00 EUR
+Up to 5 M EUR is available to support projects within the Applied Quantum Science Call only
+involving researchers based in UK Higher Education Institutions or eligible research
+organisations.
+Funding regulations
+Funding is available for a maximum of £750,000 per consortium, £400,000 per partner at 80%
+full economic costs (fEC). All research grant proposals submitted must be costed on the basis
+fEC. If a grant is awarded, research councils will provide funding at 80% of the fEC. The
+applying organisation must agree to find the balance of fEC for the project from other
+resources.
+Eligibility of a partner as a beneficiary institution
+Before preparing a proposal, prospective applicants should familiarise themselves with:
+1. The eligibility of investigators for EPSRC funding:
+https://www.ukri.org/councils/epsrc/guidance-for-applicants/check-if-you-are-eligiblefor-funding/
+2. The eligibility of organisations for EPSRC funding:
+https://www.ukri.org/apply-for-funding/before-you-apply/check-if-you-are-eligible-forresearch-and-innovation-funding/eligibility-as-an-organisation/#contents-list
+3. The eligibility requirements relating to resources:
+https://www.ukri.org/councils/epsrc/guidance-for-applicants/costs-you-can-apply-for/
+All consortium ‘partners’ (research groups) that request funding from EPSRC must be
+represented by a Project Lead. The Project Lead must fulfil EPSRC’s standard eligibility
+requirements (see above). Eligible Investigators can only request EPSRC funding on one
+proposal submitted to this Call.
+Submission of the proposal at the national level
+Project Leads of UK partners are strongly advised to register their intention to submit by
+emailing EPSRC at: quantumtechnologies@epsrc.ukri.org before the submission deadline.
+
+QuantERA Call 2025 Announcement
+
+Page 79 of 83
+
+Project Leads of successful UK partners will be invited to make a submission through the UK
+Research and Innovation (UKRI) Funding Service following the notification of successful
+proposals.
+Additional requirements
+All of the outlined Target Research areas are open for UK funding as described in the
+QuantERA call document. We are expecting this research to align with the research priorities
+of the UKRI EPSRC Quantum Technology theme. Only proposals in the Call topic “Applied
+Quantum Science” will be accepted.
+
+QuantERA Call 2025 Announcement
+
+Page 80 of 83
+
+Annex 2: QuantERA Gender Equality Statement
+TOWARDS MORE GENDER-BALANCED RESEARCH IN QUANTUM TECHNOLOGIES
+Since its inception, the QuantERA Consortium has been committed to addressing the gender
+imbalance in Quantum Technologies (QT) research and spreading the research excellence
+across the European Research Area (ERA). QuantERA III continues its strive to improve the
+gender equality measures at both the consortium as well as the project level, thus becoming
+an active agent of the changes encouraged and promoted by the European Commission, i.e.
+through its Gender Equality Strategy, 2020–202517, research performing institutions and
+Research Funding Organisations.
+In 2022, female scientists and engineers in the EU accounted for 41 per cent of total
+employment in science and engineering with even lower figures in the quantum community 18.
+However:
+• Women’s representation is considerably lower among all tertiary education levels and
+academic staff in STEM, compared to all fields. Among grade A staff19 in Engineering and
+Technology women constitute 19 %20.
+• Women represent around 12% of quantum science positions across Europe, with minority
+groups facing additional barriers to entry and advancement21.
+The promotion of STEM vocations free from gender stereotypes should start at the level
+of schools, since this is a societal issue and constitutes a long-term objective.
+Aware of the impact that QuantERA Research Funding Organisations can have in the quantum
+field, we encourage physics institutes and departments as well as researchers in physics and
+in Quantum Technologies:
+• To create a gender-sensitive environment and organisational culture in the physics field
+that promotes equal opportunities between women and men at all levels.
+• To create an equality standard regarding the management structure of their organisations.
+• To acknowledge that diversity is beneficial for science and strengthens the quality
+of science.
+• To encourage all women PhDs in physics and in Quantum Technologies and provide them
+with the adequate career support services and fair chances in promotion process.
+• To acquaint STEM students with role models of women researchers in Quantum
+Technologies.
+And thus, help us to have a more gender-balanced research in Quantum Technologies in the
+coming years. The QuantERA III evaluation process will consider gender balance in the
+evaluation panels as much as possible and will provide gender-sensitive peer review
+guidelines for evaluators. The success rates of this Call will be monitored by the QuantERA
+consortium.
+Please visit our Call for proposals site and join us in our desire to reinforce the
+participation of fairly composed consortia of researchers.
+The QuantERA Call 2025 Call Steering Committee
+
+17
+
+See:
+https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/genderequality/gender-equality-strategy_en
+18 See: https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20240212-1
+19 the highest grade/post at which research is normally conducted
+20
+European Commission, She Figures 2024 (Gender Equality in Research & Innovation).
+https://op.europa.eu/en/publication-detail/-/publication/7646222f-e82b-11ef-b5e9-01aa75ed71a1
+21
+European Commission, She Figures 2021 (Gender Equality in Research & Innovation).
+https://op.europa.eu/en/publication-detail/-/publication/67d5a207-4da1-11ec-91ac-01aa75ed71a1
+
+QuantERA Call 2025 Announcement
+
+Page 81 of 83
+
+Annex 3: QuantERA Guidelines for Responsible Research and
+Innovation (RRI)
+The QuantERA consortium encourages incorporating Responsible Research and Innovation
+(RRI) into proposals submitted to QuantERA.
+What is RRI?
+Responsible Research and Innovation is an approach that anticipates and assesses potential
+implications and societal expectations regarding research and innovation, with the aim to foster
+the design of inclusive and sustainable research and innovation.
+Responsible Research and Innovation implies that societal actors (researchers, citizens, policy
+makers, business, third sector organisations, etc.) work together during the whole research
+and innovation process in order to better align both the process and its outcomes with the
+values, needs and expectations of society.
+RRI is a cross-cutting issue that is generally articulated around 5 main dimensions:
+•
+•
+•
+•
+•
+
+Public engagement,
+Open science,
+Gender,
+Ethics,
+Science education.
+
+QuantERA and RRI
+Provided below is a non-exhaustive list of possible actions that can be put in place to make
+RRI and integral part of your research. You may choose those that are relevant to your project.
+•
+•
+
+•
+•
+•
+
+•
+
+•
+•
+•
+•
+
+Involve all partners and participants in ongoing considerations of RRI throughout the
+project life.
+Draft and regularly update your data management plan outlining the procedures for data
+collection, storage, sharing, and archiving in alignment with the FAIR principles (Findable,
+Accessible, Interoperable, Reusable).
+Deposit a machine-readable electronic copy of the published version or the final peerreviewed manuscript in a trusted repository at the time of publication.
+Disseminate results/outcomes of your research on open access platforms and repositories
+(e.g. arXiv, Software Heritage, ORE, Zenodo, etc.).
+Consider licensing publications under the Creative Commons Attribution International
+Public Licence (CC BY) to maximise accessibility and reuse. For monographs and other
+long-text formats, CC BY-NC or CC BY-ND licenses may be used to exclude commercial
+uses and derivative works where appropriate.
+Make metadata for all deposited publications openly available under a Creative Commons
+Public Domain Dedication (CC0) and including comprehensive information, i.e. author
+details, publication venue, date, and Horizon Europe funding details.
+Provide persistent identifiers (e.g. DOI) for publications, authors, institutions, and all related
+research outputs.
+Disseminate your research results/outcomes towards the general public (scientific
+outreach).
+Reflect on your research with regards to ethical issues, in particular with regards to privacy
+and data protection issues, IP protection, etc.
+Encourage the implication of early career researchers in your research projects.
+
+QuantERA Call 2025 Announcement
+
+Page 82 of 83
+
+•
+•
+
+Provide equal opportunities for researchers of all genders (see Annex 2).
+Involve relevant stakeholders in your project at the earliest possible stage and consider the
+involvement of RRI experts in your project implementation.
+
+QuantERA Call 2025 Announcement
+
+Page 83 of 83
+
+

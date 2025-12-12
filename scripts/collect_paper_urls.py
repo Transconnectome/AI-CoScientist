@@ -1,0 +1,222 @@
+#!/usr/bin/env python3
+"""
+Automated URL collector for Nature search results.
+Collects high-quality papers for Golden Reference RAG.
+
+Option B (유연한 기준):
+- 저널: Nature, Nature Medicine, Nature Biotechnology, Nature Methods
+- 키워드: "foundation model" OR "large language model" OR "transformer model"
+- 기간: 2020-2025
+- 타입: Research Article, Article
+- 목표: 40-60편
+"""
+
+import asyncio
+import json
+import logging
+import os
+from pathlib import Path
+from urllib.parse import urlencode
+from playwright.async_api import async_playwright
+
+
+async def collect_urls(target_count=100):
+    """Collect paper URLs from Nature search results with Option B filters."""
+    
+    url_file = Path("data/reference_papers/paper_urls.json")
+    
+    # Load existing papers or start fresh
+    if os.path.exists(url_file):
+        with open(url_file, 'r') as f:
+            data = json.load(f)
+        existing_papers = data.get('papers', [])
+        print(f"Starting with {len(existing_papers)} existing URLs")
+    else:
+        print("Starting fresh (no existing URL file)")
+        data = {"papers": []}
+        existing_papers = []
+        # Create directory if needed
+        os.makedirs(os.path.dirname(url_file), exist_ok=True)
+        with open(url_file, 'w') as f:
+            json.dump(data, f, indent=2)
+    
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=False)
+        
+        # Load auth state if exists
+        auth_path = Path('data/reference_papers/auth_state.json')
+        if auth_path.exists():
+            print(f"Loading saved authentication from {auth_path}")
+            context = await browser.new_context(
+                viewport={'width': 1920, 'height': 1080},
+                storage_state=str(auth_path)
+            )
+        else:
+            context = await browser.new_context(viewport={'width': 1920, 'height': 1080})
+            
+        page = await context.new_page()
+        
+        try:
+            # Option B: 유연한 기준으로 검색
+            # Nature platform journals: Nature, Nature Medicine, Nature Biotechnology, Nature Methods
+            search_params = {
+                'q': '("foundation model" OR "large language model" OR "transformer model")',
+                'journal': 'nature,nmed,nbt,nmeth',  # Nature family journals
+                'date_range': '2020-2025',
+                'order': 'relevance'
+                # Note: article_type filter may not be available in URL params
+                # Will need to filter manually after collection
+            }
+
+            base_url = "https://www-nature-com-ssl.libproxy.snu.ac.kr/search"
+            search_url = f"{base_url}?{urlencode(search_params)}"
+
+            print(f"\n{'='*70}")
+            print(f"SEARCH CONFIGURATION (Option B)")
+            print(f"{'='*70}")
+            print(f"Journals: Nature, Nature Medicine, Nature Biotechnology, Nature Methods")
+            print(f"Keywords: foundation model | large language model | transformer model")
+            print(f"Period: 2020-2025")
+            print(f"Target: {target_count} papers")
+            print(f"{'='*70}\n")
+            print(f"Navigating to: {search_url}")
+
+            await page.goto(search_url)
+            await asyncio.sleep(5)
+            
+            # Polling loop for login/page detection
+            print("Checking page status...")
+            
+            while True:
+                try:
+                    current_url = page.url
+                    
+                    # Check if we are on a valid nature search page by looking for search results
+                    # Look for article links (more generic and reliable)
+                    is_search_page = await page.evaluate('''() => {
+                        // Check for article headings or links in search results
+                        const articleHeadings = document.querySelectorAll('article h3 a, article h2 a, article a[data-track-action="view article"]');
+                        return articleHeadings.length > 0;
+                    }''')
+
+                    # Also enforce URL check to be safe
+                    if is_search_page and "nature.com" in current_url and "search" in current_url:
+                        print(f"✓ Search results detected! Current URL: {current_url}")
+                        
+                        # Save auth state for the downloader script
+                        await context.storage_state(path='data/reference_papers/auth_state.json')
+                        print("✓ Saved authentication state")
+                        
+                        # Wait a bit for content to stabilize
+                        await asyncio.sleep(2)
+                        break
+                    
+                    # Feedback to user
+                    if 'i' not in locals():
+                        i = 0
+
+                    if i == 0:
+                        print("\n" + "="*70)
+                        print("WAITING FOR SEARCH RESULTS")
+                        print("="*70)
+                        print(f"Current URL: {current_url}")
+                        print("If login is required:")
+                        print("  1. Complete SNU SSO login in the browser")
+                        print("  2. Search results will load automatically")
+                        print("If search results don't appear:")
+                        print(f"  Manually navigate to: {search_url}")
+                        print("="*70 + "\n")
+                    else:
+                        print(f"Waiting for search results... (attempt {i}/24, Current: {current_url[:80]}...)")
+
+                    await asyncio.sleep(5)
+                    i += 1
+
+                    # Timeout after 2 minutes (24 attempts * 5 seconds)
+                    if i >= 24:
+                        print("\n⚠️  Timeout: Search results not detected after 2 minutes")
+                        print("Please check if login is required or search URL is correct")
+                        raise TimeoutError("Search results not loaded")
+                    
+                except Exception as e:
+                    print(f"Error checking page status: {e}")
+                    await asyncio.sleep(5)
+
+            print(f"Ready to collect. Current URL: {page.url}")
+
+            all_papers = existing_papers.copy()
+            page_num = 1
+            
+            while len(all_papers) < target_count:
+                print(f"\nPage {page_num}: Collecting URLs...")
+                
+                # Extract URLs from current page
+                papers_on_page = await page.evaluate('''() => {
+                    return Array.from(document.querySelectorAll('article h3 a, article h2 a'))
+                        .map(a => ({
+                            url: a.href,
+                            title: a.innerText.trim()
+                        }));
+                }''')
+                
+                # Add new papers (avoid duplicates)
+                existing_urls = {p['url'] for p in all_papers}
+                new_papers = [p for p in papers_on_page if p['url'] not in existing_urls]
+                
+                all_papers.extend(new_papers)
+                print(f"  Found {len(new_papers)} new papers (total: {len(all_papers)}/{target_count})")
+                
+                # Save progress
+                data['papers'] = all_papers
+                with open(url_file, 'w') as f:
+                    json.dump(data, f, indent=2)
+                
+                if len(all_papers) >= target_count:
+                    break
+                
+                # Go to next page
+                try:
+                    # Scroll to bottom to ensure pagination is loaded/visible
+                    await page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
+                    await asyncio.sleep(2)
+                    
+                    next_page_num = page_num + 1
+                    # Look for link with next page number in href
+                    next_button = await page.query_selector(f'a[href*="page={next_page_num}"]')
+                    
+                    if not next_button:
+                        # Fallback: try looking for the "Next" text or icon if specific page link fails
+                        next_button = await page.query_selector('a.c-pagination__link:has-text("Next")')
+                    
+                    if not next_button:
+                        print(f"No link found for page {next_page_num}")
+                        break
+                    
+                    await next_button.click()
+                    await page.wait_for_load_state('domcontentloaded')
+                    await asyncio.sleep(3)
+                    page_num += 1
+                    
+                except Exception as e:
+                    print(f"Error navigating to next page: {e}")
+                    break
+            
+            print(f"\n✓ Collection complete!")
+            print(f"Total URLs collected: {len(all_papers)}")
+            print(f"Saved to: {url_file}")
+            
+            # Close only on success
+            await browser.close()
+            
+        except Exception as e:
+            print(f"\nERROR OCCURRED: {e}")
+            print("Keeping browser open for debugging. Press Ctrl+C to exit.")
+            while True:
+                await asyncio.sleep(1)
+        
+        # Removed finally block to prevent auto-close on error
+
+
+if __name__ == '__main__':
+    # Option B: Target 40-60 papers
+    asyncio.run(collect_urls(target_count=100))

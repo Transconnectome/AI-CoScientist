@@ -1,0 +1,425 @@
+version: '3.8'
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# AI-CoScientist - Connectome Server Deployment (Hybrid Mode)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#
+# This configuration deploys AI-CoScientist in hybrid mode on Connectome server:
+# - Original 7 services: postgres, redis, api, celery-worker, celery-beat, prometheus, grafana
+# - New 4 Nemotron services: nemotron-llm, nemo-embedder, nemo-reranker, chromadb
+#
+# GPU Assignments (8x RTX 3090, 24GB each):
+# - GPU 1: Nemotron LLM (9B model, ~18GB VRAM)
+# - GPU 5: NeMo Embedder (1B model, ~4GB VRAM)
+# - GPU 6: NeMo Reranker (1B model, ~4GB VRAM)
+# - GPUs 0, 2, 3, 4, 7: Available for other workloads
+#
+# Total: 11 services combining traditional RAG + Nemotron hybrid capabilities
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+services:
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # INFRASTRUCTURE SERVICES (Core Database & Cache)
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: ai-coscientist-postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-ai_coscientist}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - coscientist-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: ai-coscientist-redis
+    command: redis-server --appendonly yes ${REDIS_PASSWORD:+--requirepass $REDIS_PASSWORD}
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - coscientist-network
+
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: ai-coscientist-chromadb
+    ports:
+      - "8003:8000"
+    volumes:
+      - chromadb_data:/chroma/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+      - ANONYMIZED_TELEMETRY=${CHROMA_TELEMETRY:-FALSE}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/heartbeat"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - coscientist-network
+
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # NEMOTRON GPU SERVICES (Hybrid AI Models)
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  nemotron-llm:
+    image: nvcr.io/nim/nvidia/nvidia-nemotron-nano-9b-v2:latest
+    container_name: ai-coscientist-nemotron-llm
+    environment:
+      - NGC_API_KEY=${NGC_API_KEY}
+      - NIM_OPTIMIZATION_PROFILE=${NIM_OPTIMIZATION_PROFILE:-throughput}
+      - CUDA_VISIBLE_DEVICES=${NEMOTRON_GPU_ID:-1}
+    volumes:
+      - nim_cache:/opt/nim/.cache
+    ports:
+      - "8000:8000"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["${NEMOTRON_GPU_ID:-1}"]
+              capabilities: [gpu]
+    shm_size: 16gb
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 300s
+    restart: unless-stopped
+    networks:
+      - coscientist-network
+
+  nemo-embedder:
+    image: nvcr.io/nim/nvidia/llama-3.2-nv-embedqa-1b-v2:latest
+    container_name: ai-coscientist-nemo-embedder
+    environment:
+      - NGC_API_KEY=${NGC_API_KEY}
+      - CUDA_VISIBLE_DEVICES=${NEMO_EMBEDDER_GPU_ID:-5}
+    volumes:
+      - nim_cache:/opt/nim/.cache
+    ports:
+      - "8001:8000"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["${NEMO_EMBEDDER_GPU_ID:-5}"]
+              capabilities: [gpu]
+    shm_size: 16gb
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 180s
+    restart: unless-stopped
+    networks:
+      - coscientist-network
+
+  nemo-reranker:
+    image: nvcr.io/nim/nvidia/llama-3.2-nv-rerankqa-1b-v2:latest
+    container_name: ai-coscientist-nemo-reranker
+    environment:
+      - NGC_API_KEY=${NGC_API_KEY}
+      - CUDA_VISIBLE_DEVICES=${NEMO_RERANKER_GPU_ID:-6}
+    volumes:
+      - nim_cache:/opt/nim/.cache
+    ports:
+      - "8002:8000"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["${NEMO_RERANKER_GPU_ID:-6}"]
+              capabilities: [gpu]
+    shm_size: 16gb
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 180s
+    restart: unless-stopped
+    networks:
+      - coscientist-network
+
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # APPLICATION SERVICES (AI-CoScientist API)
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PYTHON_VERSION: 3.11
+    container_name: ai-coscientist-api
+    environment:
+      # Database
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-ai_coscientist}
+
+      # Redis
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-}
+
+      # ChromaDB
+      CHROMADB_HOST: chromadb
+      CHROMADB_PORT: 8000
+
+      # Nemotron Services
+      NEMOTRON_BASE_URL: http://nemotron-llm:8000/v1
+      NEMOTRON_MODEL: nvidia/nvidia-nemotron-nano-9b-v2
+      NEMO_EMBEDDER_URL: http://nemo-embedder:8000/v1
+      NEMO_EMBEDDER_MODEL: nvidia/llama-3.2-nv-embedqa-1b-v2
+      NEMO_RERANKER_URL: http://nemo-reranker:8000/v1
+      NEMO_RERANKER_MODEL: nvidia/llama-3.2-nv-rerankqa-1b-v2
+
+      # Hybrid Mode Configuration
+      HYBRID_MODE: ${HYBRID_MODE:-true}
+      USE_GPT4_FOR_EVALUATION: ${USE_GPT4_FOR_EVALUATION:-true}
+      USE_CLAUDE_FOR_EVALUATION: ${USE_CLAUDE_FOR_EVALUATION:-true}
+      USE_NEMOTRON_FOR_SUMMARIZATION: ${USE_NEMOTRON_FOR_SUMMARIZATION:-true}
+      USE_NEMOTRON_FOR_EXTRACTION: ${USE_NEMOTRON_FOR_EXTRACTION:-true}
+      ENSEMBLE_WEIGHT_GPT4: ${ENSEMBLE_WEIGHT_GPT4:-0.40}
+      ENSEMBLE_WEIGHT_CLAUDE: ${ENSEMBLE_WEIGHT_CLAUDE:-0.30}
+      ENSEMBLE_WEIGHT_NEMOTRON: ${ENSEMBLE_WEIGHT_NEMOTRON:-0.30}
+
+      # External LLM APIs
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ARXIV_API_KEY: ${ARXIV_API_KEY:-}
+      PUBMED_API_KEY: ${PUBMED_API_KEY:-}
+
+      # Application
+      APP_NAME: ${APP_NAME:-AI-CoScientist}
+      APP_VERSION: ${APP_VERSION:-1.0.0}
+      DEBUG: ${DEBUG:-false}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      ENVIRONMENT: ${ENVIRONMENT:-production}
+
+      # Celery
+      CELERY_BROKER_URL: redis://${REDIS_PASSWORD:+:$REDIS_PASSWORD@}redis:6379/0
+      CELERY_RESULT_BACKEND: redis://${REDIS_PASSWORD:+:$REDIS_PASSWORD@}redis:6379/0
+    volumes:
+      - ./papers_collection:/app/papers_collection
+      - ./logs:/app/logs
+    ports:
+      - "${API_PORT:-8080}:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      chromadb:
+        condition: service_healthy
+      # Nemotron services are optional - API can degrade gracefully
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+    networks:
+      - coscientist-network
+    command: uvicorn src.main:app --host 0.0.0.0 --port 8000 --workers 4
+
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # WORKER SERVICES (Async Task Processing)
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  celery-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PYTHON_VERSION: 3.11
+    container_name: ai-coscientist-celery-worker
+    environment:
+      # Database
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-ai_coscientist}
+
+      # Redis
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-}
+
+      # Nemotron Services
+      NEMOTRON_BASE_URL: http://nemotron-llm:8000/v1
+      NEMO_EMBEDDER_URL: http://nemo-embedder:8000/v1
+      NEMO_RERANKER_URL: http://nemo-reranker:8000/v1
+
+      # Application
+      APP_NAME: ${APP_NAME:-AI-CoScientist}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+
+      # API Keys
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ARXIV_API_KEY: ${ARXIV_API_KEY:-}
+      PUBMED_API_KEY: ${PUBMED_API_KEY:-}
+
+      # Celery
+      CELERY_BROKER_URL: redis://${REDIS_PASSWORD:+:$REDIS_PASSWORD@}redis:6379/0
+      CELERY_RESULT_BACKEND: redis://${REDIS_PASSWORD:+:$REDIS_PASSWORD@}redis:6379/0
+    volumes:
+      - ./papers_collection:/app/papers_collection
+      - ./logs:/app/logs
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - coscientist-network
+    command: celery -A src.tasks.celery_app worker --loglevel=info --concurrency=4
+
+  celery-beat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PYTHON_VERSION: 3.11
+    container_name: ai-coscientist-celery-beat
+    environment:
+      # Database
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-ai_coscientist}
+
+      # Redis
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-}
+
+      # Application
+      APP_NAME: ${APP_NAME:-AI-CoScientist}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+
+      # API Keys
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      ARXIV_API_KEY: ${ARXIV_API_KEY:-}
+      PUBMED_API_KEY: ${PUBMED_API_KEY:-}
+
+      # Celery
+      CELERY_BROKER_URL: redis://${REDIS_PASSWORD:+:$REDIS_PASSWORD@}redis:6379/0
+      CELERY_RESULT_BACKEND: redis://${REDIS_PASSWORD:+:$REDIS_PASSWORD@}redis:6379/0
+    volumes:
+      - ./papers_collection:/app/papers_collection
+      - ./logs:/app/logs
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - coscientist-network
+    command: celery -A src.tasks.celery_app beat --loglevel=info
+
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # MONITORING SERVICES (Prometheus & Grafana)
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  prometheus:
+    image: prom/prometheus:v2.47.0
+    container_name: ai-coscientist-prometheus
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+      - '--storage.tsdb.retention.time=30d'
+    ports:
+      - "${PROMETHEUS_PORT:-9090}:9090"
+    restart: unless-stopped
+    networks:
+      - coscientist-network
+    depends_on:
+      - api
+
+  grafana:
+    image: grafana/grafana:10.1.0
+    container_name: ai-coscientist-grafana
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD}
+      GF_SERVER_ROOT_URL: ${GRAFANA_ROOT_URL:-http://localhost:3000}
+      GF_INSTALL_PLUGINS: ${GRAFANA_PLUGINS:-}
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ./monitoring/grafana/datasources:/etc/grafana/provisioning/datasources
+    ports:
+      - "${GRAFANA_PORT:-3000}:3000"
+    restart: unless-stopped
+    networks:
+      - coscientist-network
+    depends_on:
+      - prometheus
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# PERSISTENT VOLUMES
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  chromadb_data:
+    driver: local
+  nim_cache:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# NETWORKS
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+networks:
+  coscientist-network:
+    driver: bridge

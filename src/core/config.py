@@ -50,16 +50,35 @@ class Settings(BaseSettings):
     rabbitmq_exchange: str = "ai_coscientist"
     rabbitmq_queue: str = "tasks"
 
+    @property
+    def openai_client(self) -> "openai.AsyncClient":
+        """Return an async OpenAI client initialized with the API key.
+        This property lazily creates the client when first accessed.
+        """
+        try:
+            import openai
+        except ImportError as e:
+            raise ImportError("openai package is required for OpenAI integration") from e
+        # Ensure the key is set
+        if not self.openai_api_key:
+            raise ValueError("OPENAI_API_KEY is not configured in .env")
+        # Configure the client
+        client = openai.AsyncClient(api_key=self.openai_api_key)
+        return client
+
     # OpenAI
-    openai_api_key: str
-    openai_model: str = "gpt-4-turbo-preview"
-    openai_max_tokens: int = 4000
-    openai_temperature: float = 0.7
+    openai_api_key: str = ""
 
     # Anthropic
     anthropic_api_key: str
-    anthropic_model: str = "claude-3-sonnet-20240229"
-    anthropic_max_tokens: int = 4000
+    anthropic_model: str = "claude-sonnet-4-5"  # Claude Sonnet 4.5 (Released Sep 2025)
+    anthropic_max_tokens: int = 8000  # Claude 4.5 supports up to 8K output
+
+    # Google Gemini
+    google_api_key: str = ""
+    gemini_model: str = "gemini-2.5-pro"  # Gemini 2.5 Pro (Released Mar 2025)
+    gemini_max_tokens: int = 8192
+    gemini_temperature: float = 0.7
 
     # LLM Configuration
     llm_primary_provider: str = "openai"
@@ -103,6 +122,16 @@ class Settings(BaseSettings):
     upload_dir: str = "./uploads"
     max_upload_size: int = 10485760  # 10MB
 
+    # RL System Configuration
+    rl_enabled: bool = True
+    rl_ab_testing_enabled: bool = True
+    rl_initial_traffic_pct: int = 10
+    rl_max_traffic_pct: int = 90
+    rl_model_path: str = "./models/rl_agent_selection"
+    rl_config_path: str = "./config/rl/rl_system_config.yaml"
+    rl_training_enabled: bool = True
+    rl_performance_threshold: float = 0.8
+
     @field_validator("secret_key")
     @classmethod
     def validate_secret_key(cls, v: str) -> str:
@@ -129,3 +158,8 @@ class Settings(BaseSettings):
 
 # Global settings instance
 settings = Settings()
+
+
+def get_settings() -> Settings:
+    """Get application settings instance."""
+    return settings
