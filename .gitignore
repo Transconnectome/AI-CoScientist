@@ -75,7 +75,8 @@ dmypy.json
 .ruff_cache/
 
 # Data
-data/
+data/*
+!data/중견 폴더/
 *.csv
 *.parquet
 
