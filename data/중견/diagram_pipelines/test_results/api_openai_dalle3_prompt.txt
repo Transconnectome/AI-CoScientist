@@ -1,0 +1,45 @@
+Original Prompt:
+Create a professional scientific diagram of the Transformer architecture for a research paper.
+
+Structure:
+1. ENCODER (left side, blue theme):
+   - Input Embedding → Positional Encoding
+   - Multi-Head Self-Attention block
+   - Add & Normalize layer
+   - Feed Forward Network
+   - Add & Normalize layer
+   - Label: "Encoder Block × N"
+
+2. DECODER (right side, orange theme):
+   - Output Embedding → Positional Encoding
+   - Masked Multi-Head Self-Attention
+   - Add & Normalize
+   - Multi-Head Cross-Attention (with arrow from Encoder labeled "K, V")
+   - Add & Normalize
+   - Feed Forward Network
+   - Add & Normalize
+   - Label: "Decoder Block × N"
+
+3. FINAL OUTPUT:
+   - Linear layer
+   - Softmax
+   - Output Probabilities
+
+Requirements:
+- White background
+- Blue tones for encoder, orange/red tones for decoder
+- Clear arrows showing data flow
+- Professional, clean style suitable for academic publication
+- All text must be sharp and readable
+- High resolution
+
+Revised Prompt:
+Generate a professional scientific diagram of the Transformer architecture for a research paper. The composed diagram should have two sides; a left side portraying the encoder structure in shades of blue, and a right side outlining the decoder structure in tones of orange or red. The contexts and relationships should be arranged as follows: 
+
+ENCODER: Input Embedding followed by Positional Encoding, Multi-Head Self-Attention block, an Add & Normalize layer, a Feed Forward Network, and another Add & Normalize layer with a label at the end stating 'Encoder Block × N'. 
+
+DECODER: Output Embedding followed by Positional Encoding, Masked Multi-Head Self-Attention, an Add & Normalize layer, Multi-Head Cross-Attention with an arrow from the Encoder labeled 'K, V', another Add & Normalize layer, Feed Forward Network, another Add & Normalize layer with a label at the end stating 'Decoder Block × N'. 
+
+FINAL OUTPUT: A Linear layer leading to Softmax, culminating in Output Probabilities. 
+
+The diagram should have a white background, with clear arrows depicting data flow, and maintain a professional, clean style ideal for academic publications. All texts must be sharp and in high resolution.

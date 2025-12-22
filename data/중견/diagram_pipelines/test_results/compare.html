@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Transformer Diagram Comparison</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 20px;
+            color: #444;
+            margin: 30px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .image-box {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px;
+            width: 380px;
+            flex-shrink: 0;
+        }
+        .image-box.winner {
+            border: 3px solid #ffd700;
+            box-shadow: 0 4px 20px rgba(255,215,0,0.3);
+        }
+        .image-box h2 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            color: #555;
+        }
+        .image-box img {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: white;
+            cursor: pointer;
+        }
+        .image-box img:hover {
+            transform: scale(1.02);
+            transition: transform 0.2s;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            margin-left: 8px;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .info { background: #cce5ff; color: #004085; }
+        .warning { background: #fff3cd; color: #856404; }
+        .winner-badge { background: #ffd700; color: #333; font-weight: bold; }
+        table {
+            width: 100%;
+            margin-top: 10px;
+            font-size: 12px;
+            border-collapse: collapse;
+        }
+        td { padding: 4px; border-bottom: 1px solid #eee; }
+        td:first-child { color: #888; width: 70px; }
+        .rating { color: #f39c12; }
+        .summary {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .summary h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .summary table {
+            font-size: 14px;
+        }
+        .summary td { padding: 8px; }
+        .rank-1 { background: #fff9e6; }
+        .rank-2 { background: #f0f0f0; }
+        .rank-3 { background: #fdf0e6; }
+    </style>
+</head>
+<body>
+    <h1>Transformer Architecture Diagram Comparison</h1>
+    <p class="subtitle">AI 이미지 생성 모델 비교 테스트 결과</p>
+
+    <!-- Google Nano Banana Series -->
+    <h3 class="section-title">🍌 Google Nano Banana Series</h3>
+    <div class="container">
+        <div class="image-box">
+            <h2>Nano Banana <span class="badge info">gemini-2.5-flash</span></h2>
+            <img src="nano_banana.png" alt="Nano Banana" onclick="window.open(this.src)">
+            <table>
+                <tr><td>Time</td><td>8.8 seconds</td></tr>
+                <tr><td>Quality</td><td class="rating">★★★☆☆</td></tr>
+                <tr><td>Accuracy</td><td>Some typos (Embetling, Enconing)</td></tr>
+                <tr><td>Best For</td><td>Quick drafts</td></tr>
+            </table>
+        </div>
+
+        <div class="image-box winner">
+            <h2>Nano Banana Pro <span class="badge winner-badge">🏆 BEST</span></h2>
+            <img src="nano_banana_pro.png" alt="Nano Banana Pro" onclick="window.open(this.src)">
+            <table>
+                <tr><td>Time</td><td>17.4 seconds</td></tr>
+                <tr><td>Quality</td><td class="rating">★★★★★</td></tr>
+                <tr><td>Accuracy</td><td>Perfect structure & labels</td></tr>
+                <tr><td>Best For</td><td>Academic papers</td></tr>
+            </table>
+        </div>
+
+        <div class="image-box">
+            <h2>Imagen 4.0 <span class="badge warning">imagen-4.0</span></h2>
+            <img src="imagen4.png" alt="Imagen 4.0" onclick="window.open(this.src)">
+            <table>
+                <tr><td>Time</td><td>11.3 seconds</td></tr>
+                <tr><td>Quality</td><td class="rating">★★☆☆☆</td></tr>
+                <tr><td>Accuracy</td><td>Many typos, confusing layout</td></tr>
+                <tr><td>Best For</td><td>Not recommended</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Other Models -->
+    <h3 class="section-title">🤖 Other AI Models</h3>
+    <div class="container">
+        <div class="image-box">
+            <h2>OpenAI DALL-E 3 <span class="badge success">Direct Image</span></h2>
+            <img src="api_openai_dalle3.png" alt="DALL-E 3" onclick="window.open(this.src)">
+            <table>
+                <tr><td>Time</td><td>~40 seconds</td></tr>
+                <tr><td>Quality</td><td class="rating">★★★☆☆</td></tr>
+                <tr><td>Style</td><td>3D Isometric, Artistic</td></tr>
+                <tr><td>Best For</td><td>Creative visualization</td></tr>
+            </table>
+        </div>
+
+        <div class="image-box">
+            <h2>DeepSeek Code Gen <span class="badge info">matplotlib</span></h2>
+            <img src="api_deepseek_diagram.png" alt="DeepSeek" onclick="window.open(this.src)">
+            <table>
+                <tr><td>Time</td><td>~60 seconds</td></tr>
+                <tr><td>Quality</td><td class="rating">★★★★☆</td></tr>
+                <tr><td>Style</td><td>Clean flowchart</td></tr>
+                <tr><td>Best For</td><td>Editable diagrams</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="summary">
+        <h2>🏆 Final Ranking</h2>
+        <table>
+            <tr class="rank-1">
+                <td><strong>1st</strong></td>
+                <td><strong>Nano Banana Pro</strong></td>
+                <td>Perfect for academic papers - accurate structure, clean design</td>
+            </tr>
+            <tr class="rank-2">
+                <td><strong>2nd</strong></td>
+                <td><strong>DeepSeek (Code)</strong></td>
+                <td>Editable Python code, good for customization</td>
+            </tr>
+            <tr class="rank-3">
+                <td><strong>3rd</strong></td>
+                <td><strong>Nano Banana</strong></td>
+                <td>Fast generation, minor typos</td>
+            </tr>
+            <tr>
+                <td>4th</td>
+                <td>DALL-E 3</td>
+                <td>Creative but inaccurate for technical diagrams</td>
+            </tr>
+            <tr>
+                <td>5th</td>
+                <td>Imagen 4.0</td>
+                <td>Not recommended - many errors</td>
+            </tr>
+        </table>
+    </div>
+
+    <p style="text-align: center; color: #999; margin-top: 30px; font-size: 12px;">
+        Generated on 2025-12-14 | Click images to view full size
+    </p>
+</body>
+</html>

@@ -1,0 +1,74 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e3f2fd', 'secondaryColor': '#fff3e0'}}}%%
+flowchart TB
+    subgraph INPUT["INPUT: 멀티모달 데이터"]
+        direction LR
+        MRI["구조/기능 MRI<br/>91x109x91 x T<br/>70,000+ scans"]
+        EEG["EEG<br/>C채널 x T샘플<br/>30,000시간"]
+        GEN["유전체<br/>50+ PRS traits<br/>100K SNPs"]
+    end
+
+    subgraph ENCODER["MODALITY-SPECIFIC FOUNDATION MODELS: 300B"]
+        direction TB
+        subgraph FMRI_FM["fMRI FM: 100B"]
+            SWIN["4D Swin Transformer<br/>48 layers, 4096 dim<br/>MAE 75% masking"]
+        end
+        subgraph EEG_FM["EEG FM: 100B"]
+            DIVER["DIVER-XL<br/>48 layers, 채널등변<br/>RoPE + Binary Attn"]
+        end
+        subgraph GEN_FM["Genomic FM: 100B"]
+            PRST["PRS Transformer<br/>SNP + Trait Embed<br/>Cross-attention"]
+        end
+    end
+
+    subgraph FUSION["LLM FUSION LAYER: 100M"]
+        LLM["Lightweight LLM<br/>Cross-Modal Attention<br/>Semantic Alignment"]
+        UNIFIED["Unified Representation<br/>2048-dim"]
+    end
+
+    subgraph DOWNSTREAM["DOWNSTREAM TASKS: 8개"]
+        direction LR
+        subgraph TRAJECTORY["Killer Task: 궤적 예측"]
+            TRAJ1["발달 궤적<br/>피질/백질 변화"]
+            TRAJ2["노화 궤적<br/>인지저하/치매"]
+        end
+        subgraph DIAGNOSIS["질환 진단"]
+            AD["AD 진단<br/>AUC > 0.90"]
+            PD["PD 진단<br/>AUC > 0.85"]
+        end
+        subgraph INFERENCE["추론"]
+            ZERO["Zero-shot<br/>Acc > 70%"]
+            FEW["Few-shot<br/>AUC > 0.75"]
+        end
+        subgraph BENCHMARK["벤치마크"]
+            BAG["Brain Age<br/>MAE < 2.5y"]
+        end
+    end
+
+    MRI --> SWIN
+    EEG --> DIVER
+    GEN --> PRST
+
+    SWIN --> LLM
+    DIVER --> LLM
+    PRST --> LLM
+
+    LLM --> UNIFIED
+    UNIFIED --> TRAJ1
+    UNIFIED --> TRAJ2
+    UNIFIED --> AD
+    UNIFIED --> PD
+    UNIFIED --> ZERO
+    UNIFIED --> FEW
+    UNIFIED --> BAG
+
+    style INPUT fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style ENCODER fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    style FMRI_FM fill:#ffecb3,stroke:#ff8f00
+    style EEG_FM fill:#ffe0b2,stroke:#e65100
+    style GEN_FM fill:#fff8e1,stroke:#ffa000
+    style FUSION fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style DOWNSTREAM fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style TRAJECTORY fill:#c8e6c9,stroke:#388e3c
+    style DIAGNOSIS fill:#dcedc8,stroke:#689f38
+    style INFERENCE fill:#f1f8e9,stroke:#8bc34a
+    style BENCHMARK fill:#e0f2f1,stroke:#00897b

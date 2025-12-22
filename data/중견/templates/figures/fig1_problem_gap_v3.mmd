@@ -1,0 +1,31 @@
+graph TD
+    subgraph AS_IS ["AS-IS: 기존 연구 (Brain Age)"]
+        A1[단일 시점 스냅샷] --> A2(정적 상태 추정)
+        A3[횡단면 데이터] --> A4(개인 변화 과소추정)
+        A5[단일 모달리티] --> A6(생물학적 기전 미규명)
+        style A2 fill:#f9f9f9,stroke:#333,stroke-width:1px
+        style A4 fill:#f9f9f9,stroke:#333,stroke-width:1px
+        style A6 fill:#f9f9f9,stroke:#333,stroke-width:1px
+    end
+
+    subgraph GAP ["GAP: 핵심 한계"]
+        G1{{"어떻게 개인의<br/>미래 변화를<br/>예측할 것인가?"}}
+        style G1 fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    end
+
+    subgraph TO_BE ["TO-BE: 본 연구 (LifeSpan-FM)"]
+        B1[전생애주기 궤적] --> B2(동적 변화/가속도 예측)
+        B2 --> B2_1(조기 개입 골든타임 확보)
+        B3[SCENT/GINR 기술] --> B4(데이터 공백 연속화)
+        B4 --> B4_1(정밀 개인화 모델링)
+        B5[50B 멀티모달] --> B6(fMRI+EEG+유전체 통합)
+        B6 --> B6_1(근본 메커니즘 규명)
+        
+        style B2 fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+        style B4 fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+        style B6 fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    end
+
+    AS_IS --> GAP --> TO_BE
+
+

@@ -1,0 +1,18 @@
+Create a professional scientific diagram of the Transformer architecture.
+
+ENCODER (left, blue theme):
+- Input Embedding → Positional Encoding
+- Multi-Head Self-Attention → Add & Norm
+- Feed Forward → Add & Norm
+- Label: "Encoder × N"
+
+DECODER (right, orange theme):
+- Output Embedding → Positional Encoding
+- Masked Self-Attention → Add & Norm
+- Cross-Attention (with "K, V" arrow from encoder) → Add & Norm
+- Feed Forward → Add & Norm
+- Label: "Decoder × N"
+
+FINAL: Linear → Softmax → Output
+
+Style: White background, academic publication quality, sharp text labels.

@@ -38,7 +38,8 @@ ENV/
 .env
 .env.local
 .env.*.local
-.env.production  # NEVER commit production secrets!
+# NEVER commit production secrets!
+.env.production
 .env.production.*
 
 # Testing
@@ -88,11 +89,15 @@ data/reference_papers/pdfs/A_model_of_human_neural_networks_reveals_NPTX2_pathol
 # ChromaDB (CRITICAL: Contains RAG embeddings - DO NOT DELETE!)
 chroma/
 chroma_data/
-chromadb_data/  # Active ChromaDB storage - 355 documents, ~10K+ chunks
+# Active ChromaDB storage - 355 documents, ~10K+ chunks
+chromadb_data/
 
 # Backups (don't commit to git, use external storage)
 backups/
-chromadb_backups/  # ChromaDB automatic backups
+# ChromaDB automatic backups
+chromadb_backups/
+# Other ChromaDB backup snapshots (generated)
+chromadb_data_dd_backup*/
 *.sql
 *.sql.gz
 *.tar.gz.backup
@@ -123,6 +128,7 @@ improvement_*.txt
 
 # AI-generated outputs
 ai_coscientist.pdf
-chromadb_data_dd/  # Developmental Disability VectorDB (재생성 가능)
+# Developmental Disability VectorDB (재생성 가능)
+chromadb_data_dd/
 .env.backup.*
 *.backup.*

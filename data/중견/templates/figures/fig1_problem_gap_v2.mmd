@@ -1,0 +1,34 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e3f2fd', 'secondaryColor': '#fff3e0', 'tertiaryColor': '#e8f5e9', 'primaryTextColor': '#1a237e', 'lineColor': '#37474f'}}}%%
+flowchart TB
+    subgraph PROBLEM["PROBLEM: Brain Age Gap의 근본적 한계"]
+        P1["단일 시점 예측<br/>뇌 나이 = 스칼라 값<br/>개인 내 변화 포착 불가"]
+        P2["통계적 결함<br/>회귀 평균 편향<br/>임상 유용성 eta2=0.006"]
+        P3["횡단면 학습<br/>종단 변화 과소추정<br/>개인화 예측 실패"]
+    end
+
+    subgraph GAP["GAP: 궤적 예측 모델의 부재"]
+        G1["궤적 예측 FM 부재<br/>시간에 따른 변화<br/>속도/방향 예측 불가"]
+        G2["대규모 모델 갭<br/>뇌영상 FM은 수억 수준<br/>LLM급 300B+ 없음"]
+        G3["한국인 검증 부재<br/>서양인 중심 학습<br/>인종 편향 미해결"]
+    end
+
+    subgraph HYPOTHESIS["HYPOTHESIS: 궤적 예측 패러다임"]
+        H1["발달기 궤적 예측<br/>피질 두께/백질 성숙<br/>개인 성숙 속도 예측"]
+        H2["노화기 궤적 예측<br/>인지 저하 궤적<br/>치매 전환 시점 예측"]
+        H3["다운스트림 다양화<br/>Brain Age는 벤치마크<br/>8개 태스크 지원"]
+    end
+
+    subgraph CONTRIBUTION["CONTRIBUTION: 세계 최초 300B 궤적 FM"]
+        C1["300B 파운데이션 모델<br/>fMRI 100B + EEG 100B<br/>Genomic 100B + LLM 100M"]
+        C2["한국인 13K 종단 검증<br/>차병원 3K 발달<br/>조선대 10K 노화"]
+        C3["궤적 기반 임상 서비스<br/>개인화 변화 예측<br/>실시간 추론 30초"]
+    end
+
+    PROBLEM --> GAP
+    GAP --> HYPOTHESIS
+    HYPOTHESIS --> CONTRIBUTION
+
+    style PROBLEM fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style GAP fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    style HYPOTHESIS fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style CONTRIBUTION fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px

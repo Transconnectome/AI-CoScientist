@@ -1,0 +1,87 @@
+%%{init: {'theme': 'base'}}%%
+flowchart LR
+    subgraph DATA["데이터 수집: 70K+ MRI, 30Kh EEG"]
+        UKB["UK Biobank<br/>50,000명<br/>45-82세"]
+        ABCD["ABCD Study<br/>12,000명<br/>9-14세"]
+        HCP["HCP 발달+노화<br/>2,500명<br/>5-100세"]
+        TUEG["Temple 뇌파<br/>30,000시간<br/>전 연령"]
+        CHA["차병원 코호트<br/>3,000명 종단<br/>8-25세 발달"]
+        CSU["조선대 코호트<br/>10,000명 종단<br/>50-90세 노화"]
+    end
+
+    subgraph PREPROCESS["전처리"]
+        direction TB
+        MRIP["MRI 전처리<br/>FreeSurfer<br/>fMRIPrep"]
+        EEGP["EEG 전처리<br/>아티팩트 제거<br/>200Hz 리샘플링"]
+        GENP["유전체 전처리<br/>QC + Imputation<br/>PRS 계산"]
+    end
+
+    subgraph PRETRAIN["사전학습: 300B"]
+        direction TB
+        FMRI_PT["fMRI FM 100B<br/>4D Swin MAE<br/>단계적 스케일업"]
+        EEG_PT["EEG FM 100B<br/>DIVER-XL<br/>채널등변 학습"]
+        GEN_PT["Genomic FM 100B<br/>PRS Transformer<br/>대조학습"]
+        LLM_FT["LLM 융합 100M<br/>의미적 정렬<br/>교차모달 어텐션"]
+    end
+
+    subgraph TRAJECTORY["궤적 예측 학습"]
+        direction TB
+        CNF["Continuous<br/>Normalizing Flow<br/>개인 궤적 모델"]
+        DEV_TRAJ["발달 궤적 학습<br/>차병원 3K 종단<br/>성숙 패턴"]
+        AGE_TRAJ["노화 궤적 학습<br/>조선대 10K 종단<br/>인지 저하"]
+    end
+
+    subgraph VALIDATE["검증"]
+        direction TB
+        INTERNAL["내부 검증<br/>UK Biobank 20%"]
+        KOREAN["한국인 검증<br/>13K 종단<br/>도메인 적응"]
+        CLINICAL["임상 파일럿<br/>2,000명<br/>실증"]
+    end
+
+    subgraph DEPLOY["배포"]
+        direction TB
+        DISTILL["지식 증류<br/>300B to 3B"]
+        QUANT["INT8 양자화<br/>추론 최적화"]
+        API["추론 서비스<br/>30초 이내<br/>8개 태스크"]
+    end
+
+    UKB --> MRIP
+    UKB --> GENP
+    ABCD --> MRIP
+    ABCD --> EEGP
+    ABCD --> GENP
+    HCP --> MRIP
+    TUEG --> EEGP
+    CHA --> MRIP
+    CHA --> EEGP
+    CSU --> MRIP
+
+    MRIP --> FMRI_PT
+    EEGP --> EEG_PT
+    GENP --> GEN_PT
+
+    FMRI_PT --> LLM_FT
+    EEG_PT --> LLM_FT
+    GEN_PT --> LLM_FT
+
+    LLM_FT --> CNF
+    CHA --> DEV_TRAJ
+    CSU --> AGE_TRAJ
+    CNF --> DEV_TRAJ
+    CNF --> AGE_TRAJ
+
+    DEV_TRAJ --> INTERNAL
+    AGE_TRAJ --> INTERNAL
+    INTERNAL --> KOREAN
+    KOREAN --> CLINICAL
+
+    CLINICAL --> DISTILL
+    DISTILL --> QUANT
+    QUANT --> API
+
+    style DATA fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style PREPROCESS fill:#fff3e0,stroke:#ef6c00
+    style PRETRAIN fill:#f3e5f5,stroke:#7b1fa2
+    style TRAJECTORY fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style VALIDATE fill:#fce4ec,stroke:#c2185b
+    style DEPLOY fill:#e0f2f1,stroke:#00695c

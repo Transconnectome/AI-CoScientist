@@ -1,0 +1,12 @@
+# API Keys - 절대 커밋 금지!
+.env
+.env.local
+.env.*.local
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# 테스트 결과 (선택적)
+# test_results/

@@ -1,0 +1,113 @@
+{
+  "proposal_file": "data/중견/NRF_중견연구_제안서_통합본_v3.md",
+  "analysis_timestamp": "2025-12-17T07:37:34.067847",
+  "summary": {
+    "total_claims": 5,
+    "validated_claims": 5,
+    "evidence_coverage": 1.0,
+    "scientific_rigor_score": 0.9550000000000001,
+    "cross_domain_synthesis_score": 1.0
+  },
+  "unified_rag_summary": {
+    "total_queries": 10,
+    "strategies_used": [
+      "RAGStrategy.ENHANCED_DD_RAPTOR",
+      "RAGStrategy.HYBRID"
+    ],
+    "strategy_distribution": {
+      "RAGStrategy.ENHANCED_DD_RAPTOR": 6,
+      "RAGStrategy.HYBRID": 4
+    },
+    "cross_domain_enabled": true,
+    "target_domains": [
+      "all"
+    ]
+  },
+  "strategy_performance": {
+    "RAGStrategy.ENHANCED_DD_RAPTOR": {
+      "total_sources": 6,
+      "total_relevance": 5.1,
+      "claims_supported": 6,
+      "avg_relevance": 0.85
+    },
+    "RAGStrategy.HYBRID": {
+      "total_sources": 4,
+      "total_relevance": 3.4,
+      "claims_supported": 4,
+      "avg_relevance": 0.85
+    }
+  },
+  "recommendations": [],
+  "claim_evidence_details": [
+    {
+      "claim_id": "claim_0",
+      "claim_text": "최근 대규모 뇌영상 코호트(UK Biobank 50,000명, ABCD 12,000명)와 딥러닝의 발전으로 \"뇌 연령(Brain Age)\" 예측 연구가 활발하나, **두 가지 근본적 한계**가 존재한다:",
+      "claim_type": "hypothesis",
+      "validation_status": "strong",
+      "evidence_strength": 0.85,
+      "cross_domain_support": true,
+      "sources_count": 2,
+      "suggested_citations": [
+        "[Mock Source 1 - enhanced_dd_raptor] (Relevance: 0.85, Strategy: RAGStrategy.ENHANCED_DD_RAPTOR)",
+        "[Mock Source 2 - enhanced_dd_raptor] (Relevance: 0.85, Strategy: RAGStrategy.ENHANCED_DD_RAPTOR)"
+      ],
+      "improvements": []
+    },
+    {
+      "claim_id": "claim_1",
+      "claim_text": "| 문제 | 근거 | 출처 |\n|------|------|------|\n| **횡단면 과소추정** | 횡단면 데이터로 학습된 모델은 실제 종단 변화를 과소추정 | PNAS 2023 |\n| **회귀 평균 편향** | 어린 피험자 과대추정, 노인 과소추정 | de Lange & Cole 2020 |\n| **제한된 임상 유용성** | UK Biobank n>17",
+      "claim_type": "assertion",
+      "validation_status": "strong",
+      "evidence_strength": 0.85,
+      "cross_domain_support": true,
+      "sources_count": 2,
+      "suggested_citations": [
+        "[Mock Source 1 - hybrid] (Relevance: 0.85, Strategy: RAGStrategy.HYBRID)",
+        "[Mock Source 2 - hybrid] (Relevance: 0.85, Strategy: RAGStrategy.HYBRID)"
+      ],
+      "improvements": []
+    },
+    {
+      "claim_id": "claim_2",
+      "claim_text": "> **\"기존 Brain Age Gap 연구는 단일 시점 '나이'만 예측하며, 발달-노화 '궤적(변화 속도/방향)'을 예측하는 멀티모달 대규모 파운데이션 모델이 부재하여, 임상적으로 actionable한 조기 개입 시점을 제시하지 못한다.\"**",
+      "claim_type": "hypothesis",
+      "validation_status": "strong",
+      "evidence_strength": 0.85,
+      "cross_domain_support": true,
+      "sources_count": 2,
+      "suggested_citations": [
+        "[Mock Source 1 - enhanced_dd_raptor] (Relevance: 0.85, Strategy: RAGStrategy.ENHANCED_DD_RAPTOR)",
+        "[Mock Source 2 - enhanced_dd_raptor] (Relevance: 0.85, Strategy: RAGStrategy.ENHANCED_DD_RAPTOR)"
+      ],
+      "improvements": []
+    },
+    {
+      "claim_id": "claim_3",
+      "claim_text": "> **발달-노화 궤적 예측 멀티모달 파운데이션 모델 개발**:\n> 생애주기 전체(8-90세)의 뇌영상(fMRI/sMRI)-뇌파(EEG)-유전체 데이터를 모달리티별 대규모 파운데이션 모델(**fMRI 15B, EEG 15B, Genomic 15B**)로 사전학습하고, **Q-Former 스타일 융합층(500M)**을 활용하여 **발달기 뇌 성숙 궤적**과 ",
+      "claim_type": "hypothesis",
+      "validation_status": "strong",
+      "evidence_strength": 0.85,
+      "cross_domain_support": true,
+      "sources_count": 2,
+      "suggested_citations": [
+        "[Mock Source 1 - enhanced_dd_raptor] (Relevance: 0.85, Strategy: RAGStrategy.ENHANCED_DD_RAPTOR)",
+        "[Mock Source 2 - enhanced_dd_raptor] (Relevance: 0.85, Strategy: RAGStrategy.ENHANCED_DD_RAPTOR)"
+      ],
+      "improvements": []
+    },
+    {
+      "claim_id": "claim_4",
+      "claim_text": "| 영역 | 기대 효과 |\n|------|----------|\n| **의료** | 궤적 기반 치매 조기 선별 → 의료비 절감 (치매 관리비 연 18조원 중 5% 절감 목표) |\n| **경제** | 세계 최대 규모 뇌 FM → K-바이오 기술 경쟁력 확보 |\n| **산업화** | 궤적 예측 서비스 상용화 (의료기기 인허가 추진) |",
+      "claim_type": "assertion",
+      "validation_status": "strong",
+      "evidence_strength": 0.85,
+      "cross_domain_support": true,
+      "sources_count": 2,
+      "suggested_citations": [
+        "[Mock Source 1 - hybrid] (Relevance: 0.85, Strategy: RAGStrategy.HYBRID)",
+        "[Mock Source 2 - hybrid] (Relevance: 0.85, Strategy: RAGStrategy.HYBRID)"
+      ],
+      "improvements": []
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e3f2fd', 'secondaryColor': '#fff3e0'}}}%%
+flowchart TB
+    subgraph Input["📥 입력"]
+        I[/"Input Tokens"/] --> IE[Input Embedding]
+        IE --> PE1[⊕ Positional Encoding]
+    end
+
+    subgraph Encoder["🔷 인코더 블록 ×N"]
+        PE1 --> MHA1[Multi-Head<br/>Self-Attention]
+        MHA1 --> AN1[Add & Norm]
+        AN1 --> FF1[Feed Forward]
+        FF1 --> AN2[Add & Norm]
+    end
+
+    subgraph Output["📤 출력"]
+        O[/"Output Tokens"/] --> OE[Output Embedding]
+        OE --> PE2[⊕ Positional Encoding]
+    end
+
+    subgraph Decoder["🔶 디코더 블록 ×N"]
+        PE2 --> MMHA[Masked Multi-Head<br/>Self-Attention]
+        MMHA --> AN3[Add & Norm]
+        AN3 --> MHA2[Multi-Head<br/>Cross-Attention]
+        AN2 -.->|"K, V"| MHA2
+        MHA2 --> AN4[Add & Norm]
+        AN4 --> FF2[Feed Forward]
+        FF2 --> AN5[Add & Norm]
+    end
+
+    subgraph Final["🎯 최종 출력"]
+        AN5 --> Linear[Linear Layer]
+        Linear --> SM[Softmax]
+        SM --> Prob[/"Output Probabilities"/]
+    end
+
+    style Input fill:#e3f2fd,stroke:#1976d2
+    style Encoder fill:#e8f5e9,stroke:#388e3c
+    style Output fill:#fff3e0,stroke:#f57c00
+    style Decoder fill:#fce4ec,stroke:#c2185b
+    style Final fill:#f3e5f5,stroke:#7b1fa2

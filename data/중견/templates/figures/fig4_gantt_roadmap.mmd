@@ -1,0 +1,35 @@
+gantt
+    title 5-Year Research Roadmap (2026-2031)
+    dateFormat YYYY-MM
+    axisFormat %Y
+
+    section Aim 1 Foundation Model
+    Data Integration 60K MRI           :a1, 2026-03, 365d
+    1B Parameter Model                 :a2, 2026-09, 180d
+    5B Parameter Scale-up              :a3, 2027-03, 180d
+    M1 Data N over 50K                 :milestone, m1, 2027-02, 1d
+
+    section Aim 2 Multimodal Fusion
+    Channel-Equivariant EEG Encoder    :b1, 2027-03, 270d
+    3-Modal Cross-Modal Learning       :b2, 2027-09, 270d
+    Dev-Aging Biomarker Extraction     :b3, 2028-03, 180d
+    M2 MAE under 3.0 years             :milestone, m2, 2028-02, 1d
+
+    section Aim 3 Clinical Validation
+    Brain Age Gap Model                :c1, 2028-09, 180d
+    Korean Domain Adaptation KoGES     :c2, 2029-01, 240d
+    Clinical Correlation Validation    :c3, 2029-06, 180d
+    M3 Cross-Modal Retrieval over 70   :milestone, m3, 2029-02, 1d
+
+    section Aim 4 Inference System
+    Model Optimization INT8            :d1, 2029-09, 180d
+    Inference Service Development      :d2, 2030-01, 180d
+    Clinical System Integration        :d3, 2030-04, 150d
+    Pilot Operation 1000 subjects      :d4, 2030-06, 270d
+    M4 AUC over 0.75                   :milestone, m4, 2030-02, 1d
+
+    section Go No-Go Milestones
+    Go1 N over 50K Pipeline            :crit, g1, 2027-02, 30d
+    Go2 MAE under 3.0 years            :crit, g2, 2028-02, 30d
+    Go3 Korean Generalization 10pct    :crit, g3, 2029-08, 30d
+    Go4 Latency under 30sec            :crit, g4, 2030-08, 30d

@@ -1,0 +1,44 @@
+flowchart LR
+    subgraph Data_Sources ["Data Sources (70K+ Subjects)"]
+        DS1[("UK Biobank<br/>(50K)")]
+        DS2[("ABCD<br/>(12K)")]
+        DS3[("HCP<br/>(2.5K)")]
+        DS4[("TUEG<br/>(30K hrs)")]
+        DS5[("Cha Hospital<br/>(3K Longitudinal)")]
+        DS6[("Chosun Univ<br/>(10K Longitudinal)")]
+    end
+
+    subgraph Preprocessing ["Preprocessing Pipeline"]
+        P1[MRI: FreeSurfer<br/>fMRIPrep]
+        P2[EEG: Artifact Removal<br/>Resampling]
+        P3[Genomic: QC<br/>Imputation]
+    end
+
+    subgraph Training_Stages ["3-Stage Training"]
+        TS1["Stage 1: Scale-Up<br/>(Modality-Specific Pretraining)<br/>A100 x 512"]
+        TS2["Stage 2: Alignment<br/>(Cross-Modal Fusion)<br/>Q-Former Learning"]
+        TS3["Stage 3: Fine-Tuning<br/>(Trajectory Modeling)<br/>SCENT/GINR"]
+    end
+
+    subgraph Validation ["Validation & Deployment"]
+        V1[Korean Cohort Validation]
+        V2[Clinical Pilot (2K)]
+        V3[Model Distillation (3B)]
+        V4[Real-time Service]
+    end
+
+    DS1 & DS2 & DS3 --> P1 & P3
+    DS4 --> P2
+    DS5 & DS6 --> P1 & P2 & P3
+
+    P1 & P2 & P3 --> TS1
+    TS1 --> TS2
+    TS2 --> TS3
+    TS3 --> V1
+    V1 --> V2
+    V2 --> V3
+    V3 --> V4
+
+    style Training_Stages fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
+
+

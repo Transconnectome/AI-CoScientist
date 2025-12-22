@@ -216,6 +216,193 @@ poetry run python scripts/map_proposal_to_unified_evidence.py \
 - **6-Strategy Validation**: >85% claims supported across HYBRID, GRAPH_RAG, GOLDEN_REFERENCE strategies
 - **Cross-Modal Intelligence**: Text + Image + Table + Citation comprehensive analysis
 
+## 🇰🇷 Korean NRF Mid-Career Researcher Support
+
+This system provides specialized support for Korean NRF (국가연구재단) mid-career researchers with comprehensive proposal optimization, automated diagram generation, and NRF-specific compliance checking.
+
+> **CRITICAL RULE - NO EMOJIS IN PROPOSALS**: NRF 공식 제안서에는 이모지를 절대 사용하지 않습니다. 모든 다이어그램, 표, 텍스트에서 이모지를 제외하고 공식적인 학술 스타일을 유지해야 합니다. 이 규칙은 `proposal_diagram_generator.py` 및 모든 제안서 관련 출력물에 적용됩니다.
+
+> **CRITICAL RULE - 중견연구 제안서 작업 시 필수 참조 및 도구 활용**:
+>
+> 중견연구 제안서 관련 작업(Block 1-5 작성, Figure 생성, 검토, 수정 등)을 수행할 때는 **반드시** 다음을 준수해야 합니다:
+>
+> **📋 필수 참조 문서**:
+> 1. **`data/중견/templates/PROPOSAL_MASTER_PLAN.md`** - 리뷰어 친화적 평가 전략, 평가항목별 만점 체크리스트, 블록-평가항목 매핑
+> 2. **`data/중견/NRF_Midcareer_Proposal_Playbook.md`** - 섹션별 작성 가이드, 평가기준, Figure 요구사항
+>
+> **🛠️ 필수 활용 도구 (AI-CoScientist UPE 시스템)**:
+> - **제안서 최적화**: `poetry run python scripts/proposal_optimizer_unified.py optimize --input "proposal.md" --mode full`
+> - **주장 검증 (>85%)**: `poetry run python scripts/validate_claims_unified_rag.py`
+> - **6-Agent 파이프라인**: `poetry run python scripts/multi_agent_unified_pipeline.py`
+> - **인용 자동 생성**: `poetry run python scripts/unified_citation_generator.py`
+> - **NRF 샘플 RAG 검색**: `poetry run python scripts/integrate_nrf_samples_to_upe.py --test-query "검색어"`
+>
+> **🎨 Figure/다이어그램 생성 시 필수 활용 파이프라인** (`data/중견/diagram_pipelines_20251215_094550/diagram_pipelines/`):
+> - **Pipeline 1 (Claude + Mermaid/Code)**: 모델 아키텍처, 시스템 구조, 워크플로우 → 버전관리 가능, 학술적
+> - **Pipeline 2 (Direct Image AI)**: 빠른 시각화, 프레젠테이션용 고품질 이미지
+> - **Pipeline 3 (Kimi K2 Code)**: 복잡한 수학적 모델, Transformer/GAN 구조 → matplotlib/TikZ 코드 생성
+>
+> **⚠️ Figure 생성 시**: 이미 생성된 Mermaid 소스 (`data/중견/templates/figures/*.mmd`)가 있으면 먼저 활용하고, 새로운 Figure는 위 3개 파이프라인 중 적합한 것을 선택하여 생성합니다.
+>
+> **📊 평가 기준 (100점 만점)**:
+> - 창의성/도전성/융합성: **40점** → Block 1 + 2
+> - 방법론 적합성: **30점** → Block 3
+> - 연구자 우수성: **20점** → Block 4
+> - 기대효과: **10점** → Block 5
+>
+> 모든 작업은 **리뷰어가 각 평가항목에서 만점을 주기 쉽도록** 설계해야 합니다.
+
+### 🚀 UPE 5-Phase Master Workflow
+
+**체계적 제안서 작성을 위한 5단계 실행 파이프라인**:
+
+```
+Phase 1 (분석) → Phase 2 (검증) → Phase 3 (생성) → Phase 4 (최적화) → Phase 5 (완성)
+   증거매핑        주장검증        콘텐츠생성      6-Agent협업       인용+품질게이트
+   갭분석          RAG검색        다이어그램4종    95+점수목표       최종제출준비
+```
+
+| Phase | 목표 | 핵심 도구 | 품질 게이트 |
+|-------|------|----------|------------|
+| **Phase 1** | 갭 분석 & 5-Block 구조 확정 | `map_proposal_to_unified_evidence.py` | 핵심 갭 1문장 정의 |
+| **Phase 2** | 주장 검증률 >85% | `validate_claims_unified_rag.py` | 미검증 주장 수정 |
+| **Phase 3** | Figure 4종 + 콘텐츠 | `proposal_diagram_generator.py` | 10페이지 분량 준수 |
+| **Phase 4** | 95+ 점수 달성 | `proposal_optimizer_unified.py` | 6-Agent 협업 완료 |
+| **Phase 5** | 최종 제출 준비 | `unified_citation_generator.py` | "제출완료" 상태 확인 |
+
+### Mid-Career Research Documentation
+
+**📋 Complete Resource Hub**: `data/중견/` contains comprehensive guides for Korean mid-career researchers:
+
+- **`README.md`** - **UPE 5-Phase Master Workflow** + Quick start guide with 3 usage paths
+- **`AI_COSCIENTIST_중견연구자_온보딩_가이드.md`** - Complete AI-CoScientist onboarding with UPE system workflows
+- **`NRF_Midcareer_Proposal_Playbook.md`** - Section-by-section NRF proposal writing playbook with evaluation criteria
+- **`가이드라인.md`** - Comprehensive NRF mid-career research guidelines and latest policy updates
+- **`샘플-*.pdf`** - Successful proposal samples across multiple domains (neuroscience, quantum research, developmental studies)
+
+### NRF Sample Proposal RAG System
+
+**Golden Reference RAG Strategy** for Korean grant proposal optimization using ingested NRF sample proposals.
+
+**ChromaDB Collections**:
+| Collection | Documents | Description |
+|------------|-----------|-------------|
+| `nrf_midcareer_samples_L0` | 659 chunks | Detailed text segments |
+| `nrf_midcareer_samples_L1` | 24 sections | Section-level summaries |
+| `nrf_midcareer_samples_L2` | 4 documents | Full proposal summaries |
+
+**Quick Usage**:
+```bash
+# Verify integration
+poetry run python scripts/integrate_nrf_samples_to_upe.py --verify
+
+# Test RAG query
+poetry run python scripts/integrate_nrf_samples_to_upe.py --test-query "연구 방법론"
+
+# Run demo
+poetry run python scripts/integrate_nrf_samples_to_upe.py --demo
+```
+
+**Python Integration**:
+```python
+from src.services.rag.nrf_proposal_strategy import create_nrf_proposal_strategy
+
+nrf_rag = create_nrf_proposal_strategy()
+results = await nrf_rag.search("연구 방법론 예시")
+methods = await nrf_rag.search_by_section("추진전략", section_filter=['추진전략', 'Methods'])
+```
+
+**Key Files**: `src/services/rag/nrf_proposal_strategy.py`, `scripts/integrate_nrf_samples_to_upe.py`
+
+### Quick Start for Mid-Career Researchers
+
+**🚀 First-time users (Interactive):**
+```bash
+# Launch beginner-friendly interactive wizard
+poetry run python scripts/proposal_wizard.py
+```
+
+**⚡ Experienced users (Full 5-Phase, 95+ target):**
+```bash
+# Full auto-optimization targeting 95+ score for NRF grants
+poetry run python scripts/proposal_optimizer_unified.py optimize \
+    --input "제안서_초안.md" --mode full --enable-cross-domain --target-score 95
+```
+
+**🔬 Domain-Specific optimization:**
+```bash
+# Neuroscience research
+poetry run python scripts/proposal_optimizer_unified.py optimize \
+    --input "초안.md" --domains "neuroscience" --strategies "GRAPH_RAG,ENHANCED_DD_RAPTOR"
+
+# Protein/ESM3 research
+poetry run python scripts/proposal_optimizer_unified.py optimize \
+    --input "초안.md" --domains "protein_research" --strategies "MULTIMODAL_RAG,GRAPH_RAG"
+```
+
+**📚 Learning path users:**
+- Study `AI_COSCIENTIST_중견연구자_온보딩_가이드.md` for comprehensive workflow understanding
+- Reference `NRF_Midcareer_Proposal_Playbook.md` for section-specific checklists and evaluation criteria
+- **NEW**: Follow `README.md` UPE 5-Phase Master Workflow for step-by-step execution
+
+### 📐 Automated Diagram Generation Pipelines
+
+**Advanced Feature**: Multi-pipeline diagram generation for scientific proposals and papers.
+
+**Location**: `data/중견/diagram_pipelines_20251215_094550/diagram_pipelines/`
+
+**Three specialized pipelines**:
+
+1. **Pipeline 1 - Claude + Mermaid/Code** (`pipeline_1_claude_mermaid.md`)
+   - **Method**: Claude generates Mermaid, Python (matplotlib/networkx), TikZ/Graphviz code
+   - **Advantages**: Version-controllable diagrams, precise academic structure representation, Git-friendly
+   - **Use Case**: System architecture, model structure, reproducible workflow diagrams
+
+2. **Pipeline 2 - Direct Image AI** (`pipeline_2_image_ai.md`)
+   - **Method**: ChatGPT 4o, DALL·E 3, Gemini, Ideogram direct image generation
+   - **Advantages**: Rapid visualization, presentation-ready high-quality graphics
+   - **Use Case**: Initial ideation, presentation slides, style experimentation
+
+3. **Pipeline 3 - Kimi K2 Code-based** (`pipeline_3_kimi_k2_code.md`)
+   - **Method**: Kimi K2 generates complete matplotlib/Graphviz/TikZ code for execution
+   - **Advantages**: Complex structure control, free tier access, coding specialization
+   - **Use Case**: Mathematical models, complex architectures (Transformer, GAN, BERT, RL systems)
+
+**Testing and Evaluation**:
+```bash
+# Execute comprehensive pipeline testing (follow TEST_EXECUTION_GUIDE.md)
+cd "data/중견/diagram_pipelines_20251215_094550/diagram_pipelines/"
+
+# Test all three pipelines with standard cases (Transformer, CNN, GAN, BERT, Attention)
+python test_pipelines.py
+
+# Compare multiple image generation APIs
+python api_test.py
+```
+
+**Integration with Proposals**:
+1. Complete text/structure using playbook/onboarding guides
+2. Identify required diagram types (model structure, data flow, experimental design)
+3. Select appropriate pipeline(s) for diagram generation
+4. Insert generated diagrams into Word/HWP/LaTeX documents
+5. Final consistency check using RAG/UPE system
+
+### NRF-Specific Optimization Features
+
+**Target Outcomes for Korean Grants**:
+- **NRF Core Research (핵심연구)**: Optimized for 40% creativity/challenge + 30% methodology scoring
+- **Samsung Future Technology Grant**: 95+ score targeting with cross-domain innovation bonus
+- **Multi-Domain Synthesis**: Neuroscience + ESM3 protein research + Quantum ML integration
+- **Compliance Checking**: Automated validation against NRF submission requirements
+
+**Specialized 6-Agent System for Korean Proposals**:
+- **Literature Analyst**: Korean/international literature synthesis
+- **Statistical Analyst**: Methodology validation for NRF standards
+- **Grant Writer**: Samsung grant format optimization
+- **Hypothesis Generator**: Innovation-focused ideation for creativity scoring
+- **Clinical Validation**: Practical applicability assessment
+- **Neuroscience Expert**: ESM3 + neuroscience domain integration
+
 ## High-Level Architecture
 
 ### System Design

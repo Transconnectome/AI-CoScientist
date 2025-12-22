@@ -1,0 +1,46 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e3f2fd', 'secondaryColor': '#fff3e0'}}}%%
+flowchart TB
+    subgraph INPUT["입력 계층"]
+        direction LR
+        MRI["구조 자기공명영상<br/>182x218x182"]
+        FMRI["기능적 자기공명영상<br/>시계열 연결성"]
+        EEG["뇌파<br/>C채널 x T샘플"]
+        GEN["유전체<br/>다유전자위험점수"]
+    end
+
+    subgraph ENCODER["모달리티 인코더"]
+        direction TB
+        SWIN["4D Swin Transformer<br/>시공간 자기지도학습<br/>50억 파라미터"]
+        DIVER["채널등변 뇌파 인코더<br/>채널순열등변 블록<br/>회전위치임베딩"]
+        GENC["유전체 트랜스포머<br/>다유전자위험점수 임베딩"]
+    end
+
+    subgraph FUSION["융합 계층"]
+        CROSS["교차모달 어텐션<br/>3-모달 공동 임베딩 공간"]
+        MISSING["누락 모달리티 토큰<br/>유연 추론 지원"]
+    end
+
+    subgraph OUTPUT["출력 계층"]
+        AGE["뇌 연령 예측<br/>평균절대오차 < 2.0년"]
+        BIO["바이오마커 추출<br/>구조-기능-전기생리 통합"]
+        RISK["위험도 분류<br/>노화 가속 예측"]
+    end
+
+    MRI --> SWIN
+    FMRI --> SWIN
+    EEG --> DIVER
+    GEN --> GENC
+
+    SWIN --> CROSS
+    DIVER --> CROSS
+    GENC --> CROSS
+    MISSING -.-> CROSS
+
+    CROSS --> AGE
+    CROSS --> BIO
+    CROSS --> RISK
+
+    style INPUT fill:#e3f2fd,stroke:#1565c0
+    style ENCODER fill:#fff3e0,stroke:#ef6c00
+    style FUSION fill:#f3e5f5,stroke:#7b1fa2
+    style OUTPUT fill:#e8f5e9,stroke:#2e7d32

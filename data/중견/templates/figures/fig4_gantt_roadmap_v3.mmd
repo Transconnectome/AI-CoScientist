@@ -1,0 +1,31 @@
+gantt
+    title 5-Year Research Roadmap (LifeSpan-FM)
+    dateFormat YYYY-MM
+    axisFormat %Y-%m
+
+    section Year 1 (Scale-up)
+    Data Integration (UKB, ABCD, TUEG) :done, a1, 2026-03, 6M
+    1B Prototype Training              :active, a2, 2026-06, 6M
+    10B Scale-up & Validation          :a3, 2026-09, 6M
+
+    section Year 2 (Foundation)
+    50B-100B Full Scale Training       :b1, 2027-03, 12M
+    Modality-Specific Optimization     :b2, 2027-06, 9M
+    Go/No-Go: MAE < 3.0y               :crit, b3, 2028-02, 0M
+
+    section Year 3 (Fusion)
+    Cross-Modal Q-Former Training      :c1, 2028-03, 9M
+    Developmental Trajectory (Cha)     :c2, 2028-06, 9M
+    SCENT/GINR Implementation          :c3, 2028-09, 6M
+
+    section Year 4 (Aging)
+    Aging Trajectory (Chosun)          :d1, 2029-03, 9M
+    Korean Domain Adaptation (LoRA)    :d2, 2029-06, 9M
+    Go/No-Go: AUC > 0.85               :crit, d3, 2030-02, 0M
+
+    section Year 5 (Deployment)
+    Model Distillation (300B->3B)      :e1, 2030-03, 6M
+    Clinical Pilot & FDA Prep          :e2, 2030-06, 9M
+    Final Service Deployment           :e3, 2030-09, 6M
+
+

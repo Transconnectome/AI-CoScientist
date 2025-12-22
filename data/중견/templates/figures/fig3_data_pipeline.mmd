@@ -1,0 +1,76 @@
+%%{init: {'theme': 'base'}}%%
+flowchart LR
+    subgraph DATA["데이터 수집"]
+        UKB["UK Biobank<br/>50,000명<br/>45-82세"]
+        ABCD["ABCD Study<br/>12,000명<br/>9-14세"]
+        HCP["HCP 발달+노화<br/>2,500명<br/>5-100세"]
+        TUEG["Temple 뇌파<br/>30,000시간<br/>전 연령"]
+        KOGES["한국인유전체역학조사<br/>10,000명<br/>한국인 검증"]
+    end
+
+    subgraph PREPROCESS["전처리"]
+        direction TB
+        MRIP["자기공명영상 전처리<br/>FreeSurfer<br/>기능적 자기공명영상 전처리"]
+        EEGP["뇌파 전처리<br/>MNE-Python<br/>200Hz 리샘플링"]
+        GENP["유전체 전처리<br/>품질관리 + 대치<br/>LDpred2"]
+    end
+
+    subgraph PRETRAIN["사전학습"]
+        direction TB
+        MRIPRE["시공간 트랜스포머<br/>마스크 자기인코더<br/>75% 마스킹"]
+        EEGPRE["채널등변 뇌파 인코더<br/>Temple 코퍼스<br/>30,000시간"]
+    end
+
+    subgraph TRAIN["모델 학습"]
+        direction TB
+        SCALE1["10억 파라미터<br/>1차년도"]
+        SCALE2["50억 파라미터<br/>2차년도"]
+        MODAL["3-모달 융합<br/>교차모달 대조학습"]
+    end
+
+    subgraph VALIDATE["검증"]
+        direction TB
+        INTERNAL["내부 검증<br/>UK Biobank 20%"]
+        KOREAN["한국인 검증<br/>KoGES 10,000명"]
+        CLINICAL["임상 파일럿<br/>협력병원 1,000명"]
+    end
+
+    subgraph DEPLOY["배포"]
+        direction TB
+        OPT["모델 최적화<br/>지식증류 + INT8"]
+        API["추론 서비스<br/>< 30초/영상"]
+        CDSS["임상 통합<br/>의료영상저장전송시스템<br/>전자의무기록"]
+    end
+
+    UKB --> MRIP
+    ABCD --> MRIP
+    ABCD --> EEGP
+    HCP --> MRIP
+    TUEG --> EEGP
+    UKB --> GENP
+    ABCD --> GENP
+
+    MRIP --> MRIPRE
+    EEGP --> EEGPRE
+    GENP --> MODAL
+
+    MRIPRE --> SCALE1
+    SCALE1 --> SCALE2
+    EEGPRE --> MODAL
+    SCALE2 --> MODAL
+
+    MODAL --> INTERNAL
+    INTERNAL --> KOREAN
+    KOGES --> KOREAN
+    KOREAN --> CLINICAL
+
+    CLINICAL --> OPT
+    OPT --> API
+    API --> CDSS
+
+    style DATA fill:#e3f2fd,stroke:#1565c0
+    style PREPROCESS fill:#fff3e0,stroke:#ef6c00
+    style PRETRAIN fill:#f3e5f5,stroke:#7b1fa2
+    style TRAIN fill:#e8f5e9,stroke:#2e7d32
+    style VALIDATE fill:#fce4ec,stroke:#c2185b
+    style DEPLOY fill:#e0f2f1,stroke:#00695c

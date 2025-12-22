@@ -1,0 +1,51 @@
+graph TB
+    subgraph Inputs ["Inputs: Multi-Modal Data"]
+        I1[fMRI/sMRI<br/>(4D Volume)]
+        I2[EEG<br/>(Time-Series)]
+        I3[Genomics<br/>(PRS/SNP)]
+    end
+
+    subgraph Encoders ["Modality-Specific Foundation Models (Total 300B)"]
+        E1["SwiFT-XL (100B)<br/>4D Swin Transformer"]
+        E2["DIVER-XL (100B)<br/>Channel-Equivariant"]
+        E3["Genomic-FM (100B)<br/>PRS Transformer"]
+    end
+
+    subgraph Fusion ["Fusion Layer"]
+        F1["Q-Former (100M)<br/>Cross-Modal Attention"]
+        F2["LLM Bridge<br/>Semantic Alignment"]
+    end
+
+    subgraph Trajectory ["Trajectory Modeling (SCENT/GINR)"]
+        T1["Continuous Normalizing Flow (CNF)"]
+        T2["Latent Trajectory Inference"]
+        T3["Imputation of Missing Timepoints"]
+    end
+
+    subgraph Outputs ["Downstream Tasks"]
+        O1["Developmental Trajectory<br/>(Cortical Thickness)"]
+        O2["Aging Trajectory<br/>(Cognitive Decline)"]
+        O3["Early Diagnosis<br/>(ASD, AD, PD)"]
+    end
+
+    I1 --> E1
+    I2 --> E2
+    I3 --> E3
+
+    E1 --> F1
+    E2 --> F1
+    E3 --> F1
+
+    F1 --> F2
+    F2 --> T1
+    T1 --> T2
+    T2 --> T3
+
+    T3 --> O1
+    T3 --> O2
+    T3 --> O3
+
+    style Encoders fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style Trajectory fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+
+

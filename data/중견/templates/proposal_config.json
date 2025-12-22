@@ -1,0 +1,67 @@
+{
+  "title": "생애주기 뇌영상-뇌파-유전체 AI: 발달 패턴 기반 노화 예측 멀티모달 파운데이션 모델 및 추론 시스템",
+  "title_en": "LifeSpan Brain-EEG-Genome AI: Developmental Pattern-Based Aging Prediction Multimodal Foundation Model and Inference System",
+  "pi_name": "[연구책임자명]",
+  "organization": "[소속기관]",
+  "duration": "5년 (2026.03 - 2031.02)",
+  "budget_total": "7.5억원",
+  "budget_yearly": "1.5억원/년",
+  "track": "핵심연구 유형C (5년)",
+  "keywords": [
+    "뇌영상 파운데이션 모델",
+    "뇌파 파운데이션 모델",
+    "생애주기 발달",
+    "노화 예측",
+    "멀티모달 인공지능",
+    "시공간 트랜스포머",
+    "채널등변 뇌파 인코더",
+    "임상 추론 시스템"
+  ],
+  "aims": [
+    {
+      "name": "목표 1: 생애주기 뇌 파운데이션 모델 개발",
+      "description": "시공간 트랜스포머 기반 생애주기 뇌영상 자기지도학습 모델",
+      "year": "1-2차년도",
+      "budget": "3.0억"
+    },
+    {
+      "name": "목표 2: 멀티모달 융합 및 바이오마커 발견",
+      "description": "뇌영상-뇌파-유전체 교차모달 학습 (채널등변 뇌파 인코더 통합) 및 발달-노화 연속체 패턴 도출",
+      "year": "2-3차년도",
+      "budget": "1.5억"
+    },
+    {
+      "name": "목표 3: 임상 검증 및 한국인 적응",
+      "description": "뇌 연령 격차 예측 모델 및 한국인유전체역학조사사업 코호트 검증",
+      "year": "3-4차년도",
+      "budget": "1.5억"
+    },
+    {
+      "name": "목표 4: 추론 시스템 및 임상 배포",
+      "description": "실시간 뇌 연령 추론 서비스, 임상 의사결정 지원 시스템 개발",
+      "year": "4-5차년도",
+      "budget": "1.5억"
+    }
+  ],
+  "datasets": [
+    {"name": "UK Biobank", "n": "50,000+", "type": "구조/기능 자기공명영상, 유전체"},
+    {"name": "ABCD Study", "n": "12,000", "type": "구조/기능 자기공명영상, 뇌파, 유전체 (발달기 종단)"},
+    {"name": "HCP (발달+노화)", "n": "2,500", "type": "구조/기능 자기공명영상, 뇌자도"},
+    {"name": "Temple 뇌파 코퍼스", "n": "30,000시간", "type": "뇌파 파운데이션 사전학습"},
+    {"name": "뇌파 벤치마크", "n": "2,000+", "type": "뇌파 감정/인지 검증"},
+    {"name": "한국인유전체역학조사", "n": "10,000+", "type": "한국인 검증"},
+    {"name": "임상 파일럿", "n": "1,000", "type": "실시간 멀티모달 추론 검증"}
+  ],
+  "evaluation_weights": {
+    "creativity_challenge": 40,
+    "methodology": 30,
+    "pi_excellence": 20,
+    "expected_impact": 10
+  },
+  "inference_system": {
+    "deployment": "클라우드 서비스 + 병원 내 설치",
+    "latency_target": "<30초/영상",
+    "throughput": "100+ 영상/일",
+    "integration": "의료영상저장전송시스템/전자의무기록 연동"
+  }
+}
