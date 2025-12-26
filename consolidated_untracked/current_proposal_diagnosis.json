@@ -1,0 +1,246 @@
+{
+  "summary": {
+    "total_claims": 67,
+    "evidence_coverage_percent": 0.0,
+    "validation_breakdown": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 0,
+      "unsupported": 67
+    },
+    "scientific_rigor_score": 0.0
+  },
+  "claim_analysis": {
+    "by_type": {
+      "general": 57,
+      "innovation": 4,
+      "statistical": 4,
+      "technical": 2
+    },
+    "by_section": {
+      "unknown": {
+        "total_claims": 9,
+        "strong": 0,
+        "moderate": 0,
+        "weak": 0,
+        "unsupported": 9
+      },
+      "예산": {
+        "total_claims": 58,
+        "strong": 0,
+        "moderate": 0,
+        "weak": 0,
+        "unsupported": 58
+      }
+    }
+  },
+  "priority_issues": [
+    {
+      "claim": "소아 발달장애 멀티모달 데이터 기반 파운데이션 모델 개발",
+      "section": "unknown",
+      "line": 13,
+      "status": "unsupported",
+      "evidence_strength": -7.265,
+      "suggested_revision": "Claim '소아 발달장애 멀티모달 데이터 기반 파운데이션 모델 개발' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "ARTICLE",
+          "relevance": -7.0,
+          "text": "By de ﬁning the regions of interest in each\nhemisphere based on each hemisphere ’s own particular features,\nsuch as its sulcal and gyral geometry, we could then obtain thecorresponding relationships b..."
+        },
+        {
+          "paper": "2024-5-7",
+          "relevance": -7.383,
+          "text": "There is mild left basilar atelectasis No focal \nconsolidation is seen There is no pleural effusion or \npneumothorax The cardiac and mediastinal silhouettes are \nunremarkable Degenerative changes are ..."
+        }
+      ]
+    },
+    {
+      "claim": "국내에 등록된 발달장애인은 약 26만명으로 매년 지속적으로 7~8천명씩 증가하는 추세이나, 진단을 받는 시기는 치료가 필요한 시기에 비해 늦음",
+      "section": "unknown",
+      "line": 16,
+      "status": "unsupported",
+      "evidence_strength": -6.134,
+      "suggested_revision": "Claim '국내에 등록된 발달장애인은 약 26만명으로 매년 지속적으로 7~8천명씩 증가하는 추세이나, 진단을 받는 시기는 치료가 필요한 시기에 비해 늦음' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -5.902,
+          "text": "FDOSM applies the idea of ideal solution and opinion matrix \nunder a fuzzy environment with fewer mathematical equations FDOSM \nprovides logical decisions because it depends on the opinion of the de-\n..."
+        },
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -6.14,
+          "text": "No clear identification of the contribution of AI, \nintelligent decision-making and machine learning is provided to eval-\nuate and prioritise autism patients according to their health severity However..."
+        }
+      ]
+    },
+    {
+      "claim": "현재까지 소아기 발달장애 연구는 대부분 단일 데이터(특정 기능점수, 뇌 MRI, 또는 유전체 중 하나)에 기반하여 이루어졌을 뿐 아니라, 단일시점의 snapshot 데이터 분석에 머물러 있음",
+      "section": "unknown",
+      "line": 16,
+      "status": "unsupported",
+      "evidence_strength": -5.068,
+      "suggested_revision": "Claim '현재까지 소아기 발달장애 연구는 대부분 단일 데이터(특정 기능점수, 뇌 MRI, 또는 유전체 중 하나)에 기반하여 이루어졌을 뿐 아니라, 단일시점의 snapshot 데이터 분석에 머물러 있음' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Towards Generalist Biomedical AI",
+          "relevance": -4.814,
+          "text": "Perhaps the work closest in spirit is BenchMD [49] The\nbenchmark spans 19 publicly available datasets and 7 medical modalities, including 1D sensor data, 2D images,\nand 3D volumetric scans However, th..."
+        },
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -5.06,
+          "text": "FDOSM applies the idea of ideal solution and opinion matrix \nunder a fuzzy environment with fewer mathematical equations FDOSM \nprovides logical decisions because it depends on the opinion of the de-\n..."
+        }
+      ]
+    },
+    {
+      "claim": "세계 최초",
+      "section": "unknown",
+      "line": 19,
+      "status": "unsupported",
+      "evidence_strength": -9.302,
+      "suggested_revision": "Claim '세계 최초' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "2024-5-7",
+          "relevance": -8.801,
+          "text": "There is mild left basilar atelectasis No focal \nconsolidation is seen There is no pleural effusion or \npneumothorax The cardiac and mediastinal silhouettes are \nunremarkable Degenerative changes are ..."
+        },
+        {
+          "paper": "2024-5-7",
+          "relevance": -9.379,
+          "text": "visualized paranasal sinuses are clear visualized \nmastoid air cells are clear visualized osseous labyrinth structures appear normal visualized orbits are normal visualized soft \ntissues of the scalp ..."
+        }
+      ]
+    },
+    {
+      "claim": "000명 규모",
+      "section": "unknown",
+      "line": 19,
+      "status": "unsupported",
+      "evidence_strength": -10.587,
+      "suggested_revision": "Claim '000명 규모' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "2024-5-7",
+          "relevance": -10.432,
+          "text": "There is mild left basilar atelectasis No focal \nconsolidation is seen There is no pleural effusion or \npneumothorax The cardiac and mediastinal silhouettes are \nunremarkable Degenerative changes are ..."
+        },
+        {
+          "paper": "2024-5-7",
+          "relevance": -10.566,
+          "text": "visualized paranasal sinuses are clear visualized \nmastoid air cells are clear visualized osseous labyrinth structures appear normal visualized orbits are normal visualized soft \ntissues of the scalp ..."
+        }
+      ]
+    },
+    {
+      "claim": "본 사업은 **세계 최초의 발달장애 특화 멀티모달 파운데이션 모델 'NeuroX-Fusion 10B'**를 구축하여, 기존의 파편화된 관찰 중심 진단을 **데이터 기반의 초정밀 예측 진단**으로 전환하는 것을 핵심 목표로 합니다",
+      "section": "unknown",
+      "line": 19,
+      "status": "unsupported",
+      "evidence_strength": -5.107,
+      "suggested_revision": "Claim '본 사업은 **세계 최초의 발달장애 특화 멀티모달 파운데이션 모델 'NeuroX-Fusion 10B'**를 구축하여, 기존의 파편화된 관찰 중심 진단을 **데이터 기반의 초정밀 예측 진단**으로 전환하는 것을 핵심 목표로 합니다' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "ARTICLE",
+          "relevance": -4.58,
+          "text": "By de ﬁning the regions of interest in each\nhemisphere based on each hemisphere ’s own particular features,\nsuch as its sulcal and gyral geometry, we could then obtain thecorresponding relationships b..."
+        },
+        {
+          "paper": "Genome modeling and design",
+          "relevance": -5.404,
+          "text": "The evaluation methodology employs a modification of the “categorical Jacobian” analysis, as originally\n21 CC-BY-ND 4.0 International license perpetuity It is made available under apreprint (which was..."
+        }
+      ]
+    },
+    {
+      "claim": "이를 위해 서울대병원 등 5개 주요 병원과 협력하여 전 세계 유례가 없는 **3,000명 규모의 20년 종단 멀티모달 데이터(fMRI, dMRI, EEG, 유전체, 행동행동) 위**를 확보하고, 이를 학습한 **Longitudinal Transformer** 기반의 AI 모델을 개발합니다",
+      "section": "unknown",
+      "line": 19,
+      "status": "unsupported",
+      "evidence_strength": -4.449,
+      "suggested_revision": "Claim '이를 위해 서울대병원 등 5개 주요 병원과 협력하여 전 세계 유례가 없는 **3,000명 규모의 20년 종단 멀티모달 데이터(fMRI, dMRI, EEG, 유전체, 행동행동) 위**를 확보하고, 이를 학습한 **Longitudinal Transformer** 기반의 AI 모델을 개발합니다' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -3.992,
+          "text": "Computers in Biology and Medicine 146 (2022) 105553\n8telehealth visits; first appointment for visiting with a psychometrist and \nsecond one for visiting with a licensed psychologist In the study of [3..."
+        },
+        {
+          "paper": "ARTICLE",
+          "relevance": -4.332,
+          "text": "By de ﬁning the regions of interest in each\nhemisphere based on each hemisphere ’s own particular features,\nsuch as its sulcal and gyral geometry, we could then obtain thecorresponding relationships b..."
+        }
+      ]
+    },
+    {
+      "claim": "이 모델은 인간 전문가가 인지하기 어려운 미세한 발달 궤적의 일탈을 3세 이전에 포착하여 조기 개입의 골든타임을 확보하며, AI가 탐지한 위험 유전자를 **제브라피쉬 검증 루프**를 통해 생물학적으로 검증함으로써 임상적 타당성과 설명 가능성을 동시에 확보한 바이오마커를 발굴합니다",
+      "section": "unknown",
+      "line": 19,
+      "status": "unsupported",
+      "evidence_strength": -5.332,
+      "suggested_revision": "Claim '이 모델은 인간 전문가가 인지하기 어려운 미세한 발달 궤적의 일탈을 3세 이전에 포착하여 조기 개입의 골든타임을 확보하며, AI가 탐지한 위험 유전자를 **제브라피쉬 검증 루프**를 통해 생물학적으로 검증함으로써 임상적 타당성과 설명 가능성을 동시에 확보한 바이오마커를 발굴합니다' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Kundu et al., Sci. Adv. 10, eadl5307 (2024) 12 June 2024",
+          "relevance": -5.133,
+          "text": "In contrast to methods using \ndeformation fields [i.e., deformation- based morphometry (58), voxel- \nbased morphometry ( 59), and tensor- based morphometry (60)], \ntransport maps capture variations in..."
+        },
+        {
+          "paper": "Gene-LLMs: a comprehensive",
+          "relevance": -5.42,
+          "text": "To clarify the\nsequence of DNA fragments, mul tiple barcoded samples are\nessential for multiplex sequencing This method not onlyprotects the data from being tampered with but also enables theparallel ..."
+        }
+      ]
+    },
+    {
+      "claim": "최종적으로는 이 모든 기술을 **연합학습 기반 다기관 협력 플랫폼**으로 통합하여, 개인정보 유출 없이 전 세계 의료기관이 활용 가능한 표준화된 발달장애 진단/예후 예측 솔루션을 제공하고자 합니다",
+      "section": "unknown",
+      "line": 19,
+      "status": "unsupported",
+      "evidence_strength": -5.027,
+      "suggested_revision": "Claim '최종적으로는 이 모든 기술을 **연합학습 기반 다기관 협력 플랫폼**으로 통합하여, 개인정보 유출 없이 전 세계 의료기관이 활용 가능한 표준화된 발달장애 진단/예후 예측 솔루션을 제공하고자 합니다' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -4.77,
+          "text": "FDOSM applies the idea of ideal solution and opinion matrix \nunder a fuzzy environment with fewer mathematical equations FDOSM \nprovides logical decisions because it depends on the opinion of the de-\n..."
+        },
+        {
+          "paper": "ARTICLE",
+          "relevance": -4.796,
+          "text": "By de ﬁning the regions of interest in each\nhemisphere based on each hemisphere ’s own particular features,\nsuch as its sulcal and gyral geometry, we could then obtain thecorresponding relationships b..."
+        }
+      ]
+    },
+    {
+      "claim": "100% (전체 예산이 AI 모델 개발 및 관련 인프라)",
+      "section": "예산",
+      "line": 31,
+      "status": "unsupported",
+      "evidence_strength": -7.362,
+      "suggested_revision": "Claim '100% (전체 예산이 AI 모델 개발 및 관련 인프라)' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -6.694,
+          "text": "FDOSM applies the idea of ideal solution and opinion matrix \nunder a fuzzy environment with fewer mathematical equations FDOSM \nprovides logical decisions because it depends on the opinion of the de-\n..."
+        },
+        {
+          "paper": "Nature Machine Intelligence | Volume 6 | August 2024 | 911–923",
+          "relevance": -7.104,
+          "text": "For example, the human genome contains about 12% primate-specific \nAlu retrotransposons The coding genome is relatively conserved over \nspecies; the non-coding genome is more unique It is these langua..."
+        }
+      ]
+    }
+  ],
+  "strong_claims": [],
+  "recommendations": [
+    "🔴 Critical: Evidence coverage below 70%. Add citations and supporting data.",
+    "⚠️ Remove or support 67 unsupported claims",
+    "📚 Consider citing papers from DD-RAPTOR database for stronger evidence",
+    "🔄 Use real-time validation during writing for better quality"
+  ]
+}

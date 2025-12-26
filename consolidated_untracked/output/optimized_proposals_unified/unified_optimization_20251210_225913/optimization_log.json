@@ -1,0 +1,54 @@
+{
+  "session_id": "unified_optimization_20251210_225913",
+  "input_file": "data/발달장애/_grant.md",
+  "mode": "full",
+  "initial_score": 0.0,
+  "unified_rag_config": {
+    "cross_domain_enabled": true,
+    "preferred_strategies": null,
+    "target_domains": [
+      "neuroscience",
+      "protein_research",
+      "general"
+    ]
+  },
+  "steps_completed": [
+    {
+      "step": 1,
+      "name": "Unified Evidence Mapping & Cross-Domain Analysis",
+      "error": "Step execution failed: Command failed with code 2: usage: map_proposal_to_unified_evidence.py [-h] --proposal PROPOSAL\n                                           [--output OUTPUT] [--unified-rag]\n                                           [--enable-cross-domain]\n                                           [--domains DOMAINS]\n                                           [--quality-assessment]\n                                           [--strategies STRATEGIES]\nmap_proposal_to_unified_evidence.py: error: the following arguments are required: --proposal/-p\n",
+      "failed_at": "2025-12-10T22:59:14.729858"
+    },
+    {
+      "step": 2,
+      "name": "Real-time Multi-Strategy Claim Validation",
+      "error": "Step execution failed: Command failed with code 2: /home/juke/.cache/pypoetry/virtualenvs/ai-coscientist-SIN8jNU1-py3.12/bin/python: can't open file '/home/juke/git/AI-CoScientist/scripts/validate_claims_unified_rag.py': [Errno 2] No such file or directory\n",
+      "failed_at": "2025-12-10T22:59:14.967775"
+    },
+    {
+      "step": 3,
+      "name": "Advanced RAG Query & Multi-Modal Literature Review",
+      "error": "Step execution failed: Command failed with code 2: /home/juke/.cache/pypoetry/virtualenvs/ai-coscientist-SIN8jNU1-py3.12/bin/python: can't open file '/home/juke/git/AI-CoScientist/scripts/advanced_unified_query.py': [Errno 2] No such file or directory\n",
+      "failed_at": "2025-12-10T22:59:15.188930"
+    },
+    {
+      "step": 4,
+      "name": "Multi-Agent Enhancement with Unified RAG",
+      "error": "Step execution failed: Command failed with code 2: 2025-12-10 22:59:15,558 - WARNING - ⚠️ Optional import: cannot import name 'Config' from 'src.core.config' (/home/juke/git/AI-CoScientist/scripts/../src/core/config.py)\nusage: multi_agent_unified_pipeline.py [-h]\n                                       [--mode {full_pipeline,agent_specific,cross_domain}]\n                                       --input INPUT [--output OUTPUT]\n                                       [--enable-cross-domain]\n                                       [--domains DOMAINS]\n                                       [--strategies STRATEGIES]\n                                       [--agent AGENT]\nmulti_agent_unified_pipeline.py: error: unrecognized arguments: --unified-rag --enable-agent-rag\n",
+      "failed_at": "2025-12-10T22:59:15.581530"
+    },
+    {
+      "step": 5,
+      "name": "Intelligent Citation & Unified Quality Finalization",
+      "error": "Step execution failed: Command failed with code 2: /home/juke/.cache/pypoetry/virtualenvs/ai-coscientist-SIN8jNU1-py3.12/bin/python: can't open file '/home/juke/git/AI-CoScientist/scripts/unified_citation_generator.py': [Errno 2] No such file or directory\n",
+      "failed_at": "2025-12-10T22:59:15.828936"
+    }
+  ],
+  "strategy_performance": {},
+  "started_at": "2025-12-10T22:59:14.380897",
+  "completed_at": "2025-12-10T22:59:16.749215",
+  "total_time": 0,
+  "final_score": 0.0,
+  "improvement": 0.0,
+  "final_output_file": "data/발달장애/_grant.md"
+}

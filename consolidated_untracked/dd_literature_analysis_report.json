@@ -1,0 +1,1597 @@
+{
+  "metadata": {
+    "total_papers": 26,
+    "database_path": "chromadb_data_dd",
+    "embedding_model": "allenai/scibert_scivocab_uncased",
+    "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  },
+  "themes": {
+    "biomarkers_diagnostics": {
+      "theme": "biomarkers_diagnostics",
+      "queries": {
+        "early biomarkers autism spectrum disorder prediction": [
+          {
+            "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+            "section": "3.comprehensive science mapping analysis",
+            "score": 5.192910194396973,
+            "content": "They accomplished gene \nprioritisation by using five propagation algorithms: “simple random \nwalk, heat kernel diffusion, PageRank with priors, HITS with priors, and \nK-step Markov ” 4.2.2 Biomarkers and toxic chemical observations \nThe aim of autism research on genetic and chemical aetiology is: to \nfind out the validated biomarkers, for facilitating the early autism \ndiagnosis, prediction of healing response, pursuing progression, evalu -\nating risk, and medical development This subsection con",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+            "section": "discussion",
+            "score": 3.8769872188568115,
+            "content": "≡Recommendations to implement the proposed models : Some \nstudies constructed predictive models for autistic diagnosis and \nothers ranked their results, such as prioritised finding risky genes and \nrecommended to replicate their finding for future work Researchers \nmentioned their constructed predictive models for promoting the \ndiagnosis of ASD and may use the “cell type-specific ASD-associated \ngenes and gene sets” as prospective biomarkers of ASD [12] Other \nstudy recommended replicating thei",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "AUTISM 2017 © The Authors,",
+            "section": "introduction",
+            "score": 3.150928497314453,
+            "content": "INTRODUCTION\nAutism spectrum disorder (ASD) is a neurodevelopmental disorder\ncharacterized by deficits in social behavior and the presence of restric-tive and repetitive behaviors ( 1) It is estimated that 1 in 68 children\nare affected by the disorder ( 2), and despite tremendous research efforts,\nASD still confers substantial burden to affected individuals, their families,and the community ( 3,4) Intervention is critically important, and there\nis a general consensus that early dete ction paired",
+            "statistics": {
+              "sample_sizes": [
+                68
+              ],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+            "section": "methods",
+            "score": 1.1167670488357544,
+            "content": "22 Packer, A Neocortical neurogenesis and the etiology of autism spectrum disorder Neurosci Biobehav Rev 64, 185–195 (2016) 23 Fang, W Q et al Overproduction of upper-layer neurons in the neocortex leads to autism-like features in mice Cell Reports 9, 1635–1643 (2014) © 2017 Macmillan Publishers Limited, part of Springer Nature All rights reserved letter reSeArCHMethODS\nData reporting  No statistical methods were used to predetermine sample size The experiments were not randomized Sample  This s",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "AUTISM 2017 © The Authors,",
+            "section": "discussion",
+            "score": 1.0694314241409302,
+            "content": "DISCUSSION\nThe public health importance of ASD has been increasingly recognizedo v e rt h el a s t1 5t o2 0y e a r s( 2,3) Treatment studies have shown modest\neffects in improving the core characteristics of ASD ( 34,35) Research\non infants at high familial risk for ASD has revealed a seemingly narrow\nwindow of opportunity, before the age of 24 months, when interventionmay have the potential to ameliorate the unfolding of the core features\nof this disorder ( 5,6) Intervention studies with infant",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          }
+        ],
+        "machine learning diagnostic accuracy ASD ADHD": [
+          {
+            "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+            "section": "introduction",
+            "score": 4.216259002685547,
+            "content": "Existing similar solutions have already been studied \nby researchers to use AI for reducing time and obtaining a concise ASD \ndiagnosis By using such AI tools, clinicians can diagnose patients more \nprecisely and prescribe the most suitable healthcare Amongst others, \nmachine learning has been widely used to determine the accuracy \nmetrics utilised in diagnosis According to the literature, several ML \nmethods, such as support vector machines (SVM), random forest (RF), \nand others had been used i",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "AUTISM 2017 © The Authors,",
+            "section": "introduction",
+            "score": 3.749281406402588,
+            "content": "By\ntraining machine learning algorithms to identify underlying patternsthat separate individuals into these different groups, researchers can\npredict which group a new individual will likely be in ( 33) Here, we postulated that brain functional connectivity at 6 months\nof age would capture the complexity of ASD and provide a robust\nmethod for predicting later diagnosis Our results revealed that ma-\nchine learning, applied to fcMRI data at 6 months of age in infants athigh familial risk for ASD, ",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+            "section": "discussion",
+            "score": 3.425189256668091,
+            "content": "[30], different ML algorithms, including SVM, RF and logistic \nregression (LR), were tested The developmental brain gene expression \nprofiles and RNA transcript sequence compositions were used as features \nfor model construction to predict and prioritise ASD-associated candi -\ndate lncRNA In Study [15], the authors proposed a bioinformatics \nframework by using PANDA and the prioritisation of autism genes with \nthe comparison of PANDA ’s measure precision with SVM, RF and LGP \nbeing presented Ano",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+            "section": "abstract",
+            "score": 1.9488885402679443,
+            "content": "ABSTRACT \nThe exact nature, harmful effects and aetiology of autism spectrum disorder (ASD) have caused widespread \nconfusion Artificial intelligence (AI) science helps solve challenging diagnostic problems in the medical field \nthrough extensive experiments Disease severity is closely related to triage decisions and prioritisation contexts in \nmedicine because both have been widely used to diagnose various diseases via AI, machine learning and auto-\nmated decision-making techniques Recently, ta",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+            "section": "discussion",
+            "score": 0.4824858605861664,
+            "content": "No clear identification of the contribution of AI, \nintelligent decision-making and machine learning is provided to eval-\nuate and prioritise autism patients according to their health severity However, most studies have only focused on prioritising risk genes, and \nno clear method has been applied to assign proper weights to gene types \nor even to identify influential genes in the context of intelligent decision- \nmaking methods The integration of medical tests and demographic \ncriteria can play",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          }
+        ],
+        "digital biomarkers behavioral analysis": [
+          {
+            "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+            "section": "case–control studies",
+            "score": -1.9895308017730713,
+            "content": "TRANSLATION OF MODELS FOR DIGITAL THERAPEUTICS\nThere is tremendous promisefor digital solutions that use ML to improve thedelivery and qual-ity of treatments for autism and other aspects of behavioral health Because AI-powered digital\ntherapyisablossomingfieldofstudy,thereareuncertaintiesaboutthereactionsofpatientpopu-\nlations to digital therapies’ trustworthiness,usability,and understandability,among several otherdimensions WedescribetwoAI-enabledtherapiesforpediatricautismthathavefollowedapath",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Gene-LLMs: a comprehensive",
+            "section": "2 background study",
+            "score": -4.215697765350342,
+            "content": "Functional sites in the genome can be predicted in a\nvery accurate manner using learned representations Forecastingdisease single-nucleotide polymorphisms (SNPs) is an essential task\nfor LLMs, whereby these latter are capable of determining the SNP\nmarkers of genetic diseases SNPs are the differences found at single-\nnucleotide positions in the genome and are used as diseasesusceptibility biomarkers Furthermore, LLMs can support diseasediagnosis and risk assessment by evaluating the extent to wh",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+            "section": "introduction",
+            "score": -4.398567199707031,
+            "content": "We first describe multimedia data modalities that are commonly used in digital phenotyping\nprojects related to social human behavior, including common schemes for acquiring naturalistic\ndata We then discuss case–control studies for identifying statistically significant differences be-\ntween cohorts with and without autism We next review efforts to automatically classify autism\nusingML.Finally,wehighlightongoingchallengesforthefield,correspondingareasofopportu-\nnityforinnovatorstomakeasignificant",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+            "section": "3.comprehensive science mapping analysis",
+            "score": -4.5998358726501465,
+            "content": "They accomplished gene \nprioritisation by using five propagation algorithms: “simple random \nwalk, heat kernel diffusion, PageRank with priors, HITS with priors, and \nK-step Markov ” 4.2.2 Biomarkers and toxic chemical observations \nThe aim of autism research on genetic and chemical aetiology is: to \nfind out the validated biomarkers, for facilitating the early autism \ndiagnosis, prediction of healing response, pursuing progression, evalu -\nating risk, and medical development This subsection con",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Published as a conference paper at ICLR 2024",
+            "section": "abstract",
+            "score": -4.616164207458496,
+            "content": "This highlights the ben-\neﬁts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By ﬁne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identiﬁes intrinsic func-\ntion",
+            "statistics": {
+              "sample_sizes": [
+                3662
+              ],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          }
+        ]
+      },
+      "convergent_findings": [],
+      "divergent_findings": [],
+      "methodological_innovations": [
+        {
+          "keyword": "machine learning",
+          "context": "ants (like \nmercury, toluene, lead, PCBs, and arsenic) In Ref [2], they used signal \nprocessing and machine learning methods that integrated to analyse \n“microarray gene expression data from homogeneous groups of children \ndiagnosed with classic autism, excluding the autism with regression and \nhigh",
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "score": 5.192910194396973
+        },
+        {
+          "keyword": "novel",
+          "context": "n Toddlers) by other researchers for \nvarious populations of children and families with autism [27] Novel \ngenetic approaches involved in neurodevelopment disorders is \nhighly recommended to help and support autism research [34] The \nwhole genome ranking had been proposed as a useful resource for \nA",
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "score": 3.8769872188568115
+        },
+        {
+          "keyword": "prospective",
+          "context": "g the \ndiagnosis of ASD and may use the “cell type-specific ASD-associated \ngenes and gene sets” as prospective biomarkers of ASD [12] Other \nstudy recommended replicating their findings (the Rapid Interactive \nScreening Test for Autism in Toddlers) by other researchers for \nvarious populations of c",
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "score": 3.8769872188568115
+        },
+        {
+          "keyword": "machine learning",
+          "context": "s can diagnose patients more \nprecisely and prescribe the most suitable healthcare Amongst others, \nmachine learning has been widely used to determine the accuracy \nmetrics utilised in diagnosis According to the literature, several ML \nmethods, such as support vector machines (SVM), random forest (R",
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "score": 4.216259002685547
+        },
+        {
+          "keyword": "machine learning",
+          "context": "By\ntraining machine learning algorithms to identify underlying patternsthat separate individuals into these different groups, researchers can\npredict which group a new individual will likely be in ( 33) Here, we",
+          "paper": "AUTISM 2017 © The Authors,",
+          "score": 3.749281406402588
+        },
+        {
+          "keyword": "integration",
+          "context": "or even to identify influential genes in the context of intelligent decision- \nmaking methods The integration of medical tests and demographic \ncriteria can play a vital role in the detection of triage severity levels, and \nminimal attention has been paid to the prioritisation solution for the \nau",
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "score": 0.4824858605861664
+        },
+        {
+          "keyword": "novel",
+          "context": "stem was formally tested in a randomized controlled clinical trial (37) This process\nis crucial for novel therapeutic paradigms in digital health given the uncertainty and novelty of\nAI-powered solutions Another therapy, EndeavorRx by Akili, is the first game-based digital therapy and one of the\nfir",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "score": -1.9895308017730713
+        },
+        {
+          "keyword": "real-time",
+          "context": "ingSuperpower\nGlass,the parent interacts with the child wearing the Glass system.The Glass provides real-time\nemotion cues to the child via a computer vision facial emotion detection system SuperpowerGlasswasdevelopedandrefinedthroughaniterativedesignprocess.Inearlyprototypingsessions,\npossible user",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "score": -1.9895308017730713
+        },
+        {
+          "keyword": "digital phenotyping",
+          "context": "We first describe multimedia data modalities that are commonly used in digital phenotyping\nprojects related to social human behavior, including common schemes for acquiring naturalistic\ndata We then discuss case–control studies for identifying statistically significant d",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "score": -4.398567199707031
+        },
+        {
+          "keyword": "machine learning",
+          "context": "ants (like \nmercury, toluene, lead, PCBs, and arsenic) In Ref [2], they used signal \nprocessing and machine learning methods that integrated to analyse \n“microarray gene expression data from homogeneous groups of children \ndiagnosed with classic autism, excluding the autism with regression and \nhigh",
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "score": -4.5998358726501465
+        },
+        {
+          "keyword": "multi-modal",
+          "context": "ract organizational principles fundamental\nto the brain There remain exciting areas for future work Multi-modal training could integrate fMRI with ad-\nditional recording modalities, such as EEG and MEG, or different brain-wise information such\nas structural, functional, and genomic data Probing a wi",
+          "paper": "Published as a conference paper at ICLR 2024",
+          "score": -4.616164207458496
+        }
+      ],
+      "research_gaps": [
+        {
+          "gap": "≡Recommendations to implement the proposed models : Some \nstudies constructed predictive models for autistic diagnosis and \nothers ranked their results, such as prioritised finding risky genes and \nrecommended to replicate their finding for future work Researchers \nmentioned their constructed predictive models for promoting the \ndiagnosis of ASD and may use the “cell type-specific ASD-associated \ngenes and gene sets” as prospective biomarkers of ASD [12] Other \nstudy recommended replicating their findings (the Rapid Interactive \nScreening Test for Autism in Toddlers) by other researchers for \nvarious populations of children and families with autism [27] Novel \ngenetic approaches involved in neurodevelopment disorders is \nhighly recommended to help and support autism research [34] The \nwhole genome ranking had been proposed as a useful resource for \nASD gene discovery effort [3] The study constructed a novelty of \nidentifying ASD risk genes and toxic chemicals that can lead to better \nhealthcare decisions [4] Another study proposed as a starting point \nto produce new suggestions to investigate presently appreciated in \nthe molecular aetiology of autism [29] Hybrid deep lightweight \nfeatures extracted from EEG signals are used and intended to be S",
+          "indicator": "future work",
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "section": "discussion"
+        },
+        {
+          "gap": "INTRODUCTION\nAutism spectrum disorder (ASD) is a neurodevelopmental disorder\ncharacterized by deficits in social behavior and the presence of restric-tive and repetitive behaviors ( 1) It is estimated that 1 in 68 children\nare affected by the disorder ( 2), and despite tremendous research efforts,\nASD still confers substantial burden to affected individuals, their families,and the community ( 3,4) Intervention is critically important, and there\nis a general consensus that early dete ction paired with early intervention\nwould have a significant impact on improving outcomes ( 5–7) One barrier to early (that is, before 24 months) detection is that the\ndefining behavioral characteristic so fA S Dg e n e r a l l yu n f o l dd u r i n gt h e\nsecond year of life, typically showing consolidation of the full behavioralsyndrome by about 24 months of age or later ( 8,9) Behavioral differ-\nences in ASD have been observed as early as 6 months of age in char-\nacteristics such as gross motor ability, visual reception, and patterns ofeye tracking ( 10–14); however, these associate d characteristics have not\nbeen able to predict which children will later receive a diagnosis Given\nthe known plasticity of the brain and behavior during the first year oflife, together with the absence of the defining features of the disorder,intervention during this presymptomatic phase, before consolidation of\nthe full syndrome of ASD, is likely to show considerably stronger\nbenefits compared with later treatments ( 5) Research on neurodegenerative dis orders has shown that changes in\nthe brain are often seen preceding clinical manifestations For example,\nin Parkinson ’s disease, about 50% of the neurons in the substantia nigra\na r el o s tb e f o r ec l i n i c a lf e a t u r e sb e c o m ea p p a r e n t( 15) This suggests that\nbrain-related changes appear earl ier than behavioral changes and may\nbe useful in predicting future behavioral diagnosis",
+          "indicator": "absence of",
+          "paper": "AUTISM 2017 © The Authors,",
+          "section": "introduction"
+        },
+        {
+          "gap": "INTRODUCTION\nAutism spectrum disorder (ASD) is a neurodevelopmental disorder\ncharacterized by deficits in social behavior and the presence of restric-tive and repetitive behaviors ( 1) It is estimated that 1 in 68 children\nare affected by the disorder ( 2), and despite tremendous research efforts,\nASD still confers substantial burden to affected individuals, their families,and the community ( 3,4) Intervention is critically important, and there\nis a general consensus that early dete ction paired with early intervention\nwould have a significant impact on improving outcomes ( 5–7) One barrier to early (that is, before 24 months) detection is that the\ndefining behavioral characteristic so fA S Dg e n e r a l l yu n f o l dd u r i n gt h e\nsecond year of life, typically showing consolidation of the full behavioralsyndrome by about 24 months of age or later ( 8,9) Behavioral differ-\nences in ASD have been observed as early as 6 months of age in char-\nacteristics such as gross motor ability, visual reception, and patterns ofeye tracking ( 10–14); however, these associate d characteristics have not\nbeen able to predict which children will later receive a diagnosis Given\nthe known plasticity of the brain and behavior during the first year oflife, together with the absence of the defining features of the disorder,intervention during this presymptomatic phase, before consolidation of\nthe full syndrome of ASD, is likely to show considerably stronger\nbenefits compared with later treatments ( 5) Research on neurodegenerative dis orders has shown that changes in\nthe brain are often seen preceding clinical manifestations For example,\nin Parkinson ’s disease, about 50% of the neurons in the substantia nigra\na r el o s tb e f o r ec l i n i c a lf e a t u r e sb e c o m ea p p a r e n t( 15) This suggests that\nbrain-related changes appear earl ier than behavioral changes and may\nbe useful in predicting future behavioral diagnosis",
+          "indicator": "barrier",
+          "paper": "AUTISM 2017 © The Authors,",
+          "section": "introduction"
+        },
+        {
+          "gap": "’ \nTo determine the current state of academic knowledge about pri-\noritising ASD, the aim of previous studies and limitations should be \ndiscussed In Ref [17], the authors summarised 13 studies where AI is \nused to assess and examine whether other behavioural data can poten -\ntially be used to recognize ASD characteristics Although the machine \nlearning algorithms depend on the training dataset, no extensive \nresearch assesses how the quality of input data can affect the accuracy \nyet While the ethical issue around data privacy is also another problem \nunder debate, reports on AI technology integrated with autism disorder \nissues are not efficient The survey of [18] discussed how individuals \nwith ASD were handled by technology-based intervention methodolo -\ngies, including modern computer-aided systems, computer \nvision-assisted technologies and virtual reality",
+          "indicator": "limitation",
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "section": "introduction"
+        },
+        {
+          "gap": "Challenge categories for prioritisation and triage S",
+          "indicator": "challenge",
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "section": "discussion"
+        },
+        {
+          "gap": "Moreover, genomic LLMs can also be used to predict the geneexpression, which is essential for understanding the behavior of cells\nunder different biological states Thus, in addition to having the\nability to foresee gene activity or inactivity in different cell types, theLLMs can, through the combination of the RNA pro ﬁles with DNA\nsequence information, accurately determine the speci ﬁc level at\nwhich the genes are functioning This feature is very importantin areas where an accurate model of gene expression dynamics isrequired, such as in drug discovery, regenerative medicine, andcancer genomics The development of self-supervised learning\ntechniques, tokenization, and model interpretability is crucial to\nimproving genomic LLMs ’ability to analyze complex genomic data\nas the ﬁeld continues to expand These models could be harnessed to\ntransform the way precision medicine and genomics research arebeing carried out as they establish the link between unprocessedgenomic sequences and meaningful biological insights 3 Whole-genome sequencing\nlaboratory andbioinformatics work ﬂow\nThe WGS work ﬂow is used sequentially to decode and interpret\na person ’s complete genetic code It involves laboratory-based\nexperimental methods, high-speed sequencing technologies,computational data processing, and the interpretation of clinical\nresults",
+          "indicator": "require",
+          "paper": "Gene-LLMs: a comprehensive",
+          "section": "2 background study"
+        },
+        {
+          "gap": "Finally,wehighlightongoingchallengesforthefield,correspondingareasofopportu-\nnityforinnovatorstomakeasignificantimpact,andlow-hangingfruitbasedonsuccessfulstudies\nand methods applied to other behaviors and neuropsychiatric presentations",
+          "indicator": "challenge",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "section": "introduction"
+        },
+        {
+          "gap": "This highlights the ben-\neﬁts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By ﬁne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identiﬁes intrinsic func-\ntional connectivity maps directly from pretraining, clustering parcels into known systems This\ndemonstrates how self-supervised objectives can extract organizational principles fundamental\nto the brain There remain exciting areas for future work Multi-modal training could integrate fMRI with ad-\nditional recording modalities, such as EEG and MEG, or different brain-wise information such\nas structural, functional, and genomic data Probing a wider range of cognitive states and com-\nbined regularization may yield more generalizable representations In future work, we could\nassess zero-shot classiﬁcation on expanded functional atlases beyond the 7 networks used here Overall, BrainLM provides a springboard for accelerated research at the intersection of neuro-\nscience and AI We hope that this work spurs further development of foundation models that can\nhelp elucidate the intricate workings of the human brain 9\n\nPublished as a conference paper at ICLR 2024\n6A CKNOWLEDGMENT\nWe thank the Yale Wu Tsai Institute for supporting JOC with a Postdoctoral Fellowship, the\nCAPES-Yale Graduate Scholars Program for support AHOF and are grateful to Insu Han and Amin\nKarbasi for their crucial insights and coding assistance in model training Their contributions\nhave signiﬁcantly enhanced our research REFERENCES\nChadi G Abdallah Brain networks associated with covid-19 risk: Data from 3662 participants Chronic Stress , 5:24705470211066770, 2021 Roman Beliy, Guy Gaziv, Assaf Hoogi, Francesca Strappini, Tal Golan, and Michal Irani",
+          "indicator": "future work",
+          "paper": "Published as a conference paper at ICLR 2024",
+          "section": "abstract"
+        }
+      ],
+      "evidence_strength": "moderate",
+      "key_papers": [
+        "Published as a conference paper at ICLR 2024",
+        "Computers in Biology and Medicine 146 (2022) 105553",
+        "AUTISM 2017 © The Authors,",
+        "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+        "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+        "Gene-LLMs: a comprehensive"
+      ]
+    },
+    "neuroimaging_methods": {
+      "theme": "neuroimaging_methods",
+      "queries": {
+        "multimodal neuroimaging developmental disorders": [
+          {
+            "paper": "ARTICLE",
+            "section": "discussion",
+            "score": -2.3473939895629883,
+            "content": "Multi-regional reduction of cortical thickness asymmetry in\nASD ﬁts with the concept that laterality is an important orga-\nnizing feature of the healthy human brain for multiple aspects ofcomplex cognition, and is susceptible to disruption in disorders\n(e.g.,\n16,48) Left –right asymmetry facilitates the development of\nlocalized and specialized modules in the brain, which can then\nhave dominant control of behavior49,50 Notably, some of the\ncortical regions highlighted here are involved in diverse",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "AUTISM 2017 © The Authors,",
+            "section": "discussion",
+            "score": -3.794877052307129,
+            "content": "Our results show that functional neuroimaging with 6-month-old\ninfants at high familial risk for ASD can accurately predict which in-\ndividuals receive a clinical diagnosis of ASD at 24 months of age Ulti-\nmately, this study represents an init ial first step toward developing the\nearliest diagnostic methods availab le and may yield the clues necessary\nto build efficacious early interventions based on individual risk profiles MATERIALS AND METHODS\nStudy design\nParticipants were part of the Infant",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+            "section": "abstract",
+            "score": -3.839472532272339,
+            "content": "Abstract\nAutism spectrum disorder (autism) is a neurodevelopmental delay that af-fects at least 1 in 44 children.Like many neurological disorder phenotypes,\nthe diagnostic features are observable, can be tracked over time, and can\nbe managed or even eliminated through proper therapy and treatments However, there are major bottlenecks in the diagnostic, therapeutic, and\nlongitudinal tracking pipelines for autism and related neurodevelopmentaldelays,creating an opportunity for novel data science s",
+            "statistics": {
+              "sample_sizes": [
+                44
+              ],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "RESEARCH ARTICLE SUMMARY◥",
+            "section": "introduction",
+            "score": -4.146186828613281,
+            "content": "INTRODUCTION: Historically, psychiatric disor-\nders have been distinguished from neurolog-\nical disorders by the ab sence of the associated\nhistological pathology observed in neurological\nc o n d i t i o n s .B u t ,o v e rt h ep a s t1 5y e a r s ,e p i g e -netic and transcriptional profiling of postmor-\ntem brain samples from multiple psychiatric\nconditions, including autism spectrum dis-\norder (ASD), have revealed robust underlying\nmolecular differences I nA S D ,t h i sr e f l e c t su p -\n",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "AUTISM 2017 © The Authors,",
+            "section": "introduction",
+            "score": -4.4503912925720215,
+            "content": "INTRODUCTION\nAutism spectrum disorder (ASD) is a neurodevelopmental disorder\ncharacterized by deficits in social behavior and the presence of restric-tive and repetitive behaviors ( 1) It is estimated that 1 in 68 children\nare affected by the disorder ( 2), and despite tremendous research efforts,\nASD still confers substantial burden to affected individuals, their families,and the community ( 3,4) Intervention is critically important, and there\nis a general consensus that early dete ction paired",
+            "statistics": {
+              "sample_sizes": [
+                68
+              ],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          }
+        ],
+        "longitudinal brain development trajectories": [
+          {
+            "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+            "section": "references",
+            "score": 0.6102191209793091,
+            "content": "The reliability of the models was assessed and endorsed by \ncross-validation and bootstrap resampling procedures (Supplementary \nInformation 3) We leveraged these normative trajectories to bench -\nmark individual scans by centile scores, which were then investigated as \nage-normed and sex-stratifed measures of diagnostic and longitudinal \natypicalities of brain structure across the lifespan The GAMLSS approach allowed not only modelling of age-related \nchanges in brain phenotypes but also age re",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+            "section": "references",
+            "score": 0.055717047303915024,
+            "content": "3 ) Note that age of diagnosis \nis significantly later than age of symptom onset for many disorders73 Developmental milestones were also compared to published work \nfor brain resting metabolic rate61, from its minimum in infancy to its \nmaximum in early childhood; anthropometric variables (height and \nweight), which reach a first peak in velocity during infancy and a sec-\nond peak in velocity in adolescence52; typical acquisition of the six \ngross motor capabilities62; and pubertal age ranges as",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+            "section": "results",
+            "score": -0.7384666204452515,
+            "content": "4d, Supplementary Information 13) In \nsummary, centile normalization of brain metrics reproducibly detected \ncase–control differences and genetic effects on brain structure, as well as \nlong-term sequelae of adverse birth outcomes even in the adult brain10 Longitudinal centile changes\nOwing to the relative paucity of longitudinal imaging data (about \n10% of the reference dataset), normative models were estimated \nfrom cross-sectional data collected at a single time point However, \nthe generaliza",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+            "section": "discussion",
+            "score": -2.1498823165893555,
+            "content": "Discussion\nWe have aggregated the largest neuroimaging dataset to date to mod -\nernize the concept of growth charts for mapping typical and atypical \nhuman brain development and ageing The approximately 100-year \nage range enabled the delineation of milestones and critical periods in \nmaturation of the human brain, revealing an early growth epoch across \nits constituent tissue classes—beginning before 17 post-conception \nweeks, when the brain is at approximately 10% of its maximum size, \nand end",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+            "section": "references",
+            "score": -2.190991163253784,
+            "content": "Franz70 & W S Kremen70\n\nMethods\nEthics\nThe research was reviewed by the Cambridge Psychology Research \nEthics Committee (PRE.2020.104) and The Children’s Hospital of Phila -\ndelphia’s Institutional Review Board (IRB 20-017874) and deemed not \nto require PRE or IRB oversight as it consists of secondary analysis of \nde-identified primary datasets Informed consent of participants (or \ntheir guardians) in primary studies is referenced in Supplementary \nInformation 19 and Supplementary Table 1 Model ",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          }
+        ],
+        "structural functional connectivity autism": [
+          {
+            "paper": "Kundu et al., Sci. Adv. 10, eadl5307 (2024) 12 June 2024",
+            "section": "resul ts",
+            "score": -3.7166764736175537,
+            "content": "In direction 2, \nin controls, the areas related to speech perception, language compre-\nhension, familiar face recognition, emotional and social behavior, se-\nmantic processing, and socioemotional processing expand, while in \ndeletions/duplications, areas related to decision- making, somatosen-\nsory association, interpreting tactile sensory data, phonological pro-\ncessing, language, semantic memory, visual processing, and sensory \nintegration contract Direction 2 subcortical areas exhibit less la",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Published as a conference paper at ICLR 2024",
+            "section": "abstract",
+            "score": -3.844569444656372,
+            "content": "This highlights the ben-\neﬁts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By ﬁne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identiﬁes intrinsic func-\ntion",
+            "statistics": {
+              "sample_sizes": [
+                3662
+              ],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "AUTISM 2017 © The Authors,",
+            "section": "introduction",
+            "score": -4.691036224365234,
+            "content": "By\ntraining machine learning algorithms to identify underlying patternsthat separate individuals into these different groups, researchers can\npredict which group a new individual will likely be in ( 33) Here, we postulated that brain functional connectivity at 6 months\nof age would capture the complexity of ASD and provide a robust\nmethod for predicting later diagnosis Our results revealed that ma-\nchine learning, applied to fcMRI data at 6 months of age in infants athigh familial risk for ASD, ",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "RESEARCH ARTICLE SUMMARY◥",
+            "section": "conclusion",
+            "score": -5.353296279907227,
+            "content": "We perfor med deep single-nucleus RNA sequencing (snRNA-seq)\nto examine cell composition and transcriptomi cs, identifying dysregulation of cell type –specific gene\nregulatory networks (GRNs) in autism spectrum disord er (ASD), which we corrobora ted using sing le-nucleus\nassay for transposase-accessible chromatin with sequ encing (snATAC-seq) and spatial transcriptomics Transcriptomic changes were primarily cell type specific, involving multiple cell types, most prominently\ninterhemispheric and",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Kundu et al., Sci. Adv. 10, eadl5307 (2024) 12 June 2024",
+            "section": "resul ts",
+            "score": -5.700894832611084,
+            "content": "CNV- specific brain endophenotypes also explained \na small fraction of IQ variability The results confirm that 16p11.2 \nCNV , commonly occurring de novo in patients presenting with autism \nand other neurodevelopmental disorders (34), affect higher- order cog-\nnitive processing functions As other CNVs also demonstrate the mir -\nror brain phenotype, such as 22q112.2 and 15q11.2, in the future, this \napproach could be used to study many of the > 200 CNVs linked to \nautism ( 7) CNVs are a major sour",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          }
+        ]
+      },
+      "convergent_findings": [],
+      "divergent_findings": [],
+      "methodological_innovations": [
+        {
+          "keyword": "longitudinal",
+          "context": "ND METHODS\nStudy design\nParticipants were part of the Infant Brain Imaging Study (IBIS), an\nongoing longitudinal study of infants at low and high familial risk\nfor ASD Infants were recruited, screened, and assessed at one of fourclinical sites: University of North C arolina, University of Washington",
+          "paper": "AUTISM 2017 © The Authors,",
+          "score": -3.794877052307129
+        },
+        {
+          "keyword": "novel",
+          "context": "inal tracking pipelines for autism and related neurodevelopmentaldelays,creating an opportunity for novel data science solutions to augment\nand transform existing workflows and provide increased access to services\nfor affected families.Several efforts previously conducted by a multitude ofresearchla",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "score": -3.839472532272339
+        },
+        {
+          "keyword": "machine learning",
+          "context": "stems for digital phenotyping We then discuss digi-\ntal diagnostics and therapeutics that integrate machine learning models ofautism-related behaviors, including the factors that must be addressed for\n211\n\nDownloaded from www.annualreviews.org Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "score": -3.839472532272339
+        },
+        {
+          "keyword": "longitudinal",
+          "context": "per therapy and treatments However, there are major bottlenecks in the diagnostic, therapeutic, and\nlongitudinal tracking pipelines for autism and related neurodevelopmentaldelays,creating an opportunity for novel data science solutions to augment\nand transform existing workflows and provide increas",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "score": -3.839472532272339
+        },
+        {
+          "keyword": "digital phenotyping",
+          "context": "l therapies using data science We describe both case–control studies\nand classification systems for digital phenotyping We then discuss digi-\ntal diagnostics and therapeutics that integrate machine learning models ofautism-related behaviors, including the factors that must be addressed for\n211\n\nDown",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "score": -3.839472532272339
+        },
+        {
+          "keyword": "longitudinal",
+          "context": "le scores, which were then investigated as \nage-normed and sex-stratifed measures of diagnostic and longitudinal \natypicalities of brain structure across the lifespan The GAMLSS approach allowed not only modelling of age-related \nchanges in brain phenotypes but also age related-changes in the vari -",
+          "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+          "score": 0.6102191209793091
+        },
+        {
+          "keyword": "novel",
+          "context": "traditional \nanthropometric growth charts (Supplementary Information 1) These \ncentiles represent a novel set of population- and age-standardized \nclinical phenotypes, providing the capacity for cross-phenotype, \ncross-study and cross-disorder comparison A single multivariate met -\nric (CMD, Supplem",
+          "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+          "score": 0.055717047303915024
+        },
+        {
+          "keyword": "integration",
+          "context": "sensory data, phonological pro-\ncessing, language, semantic memory, visual processing, and sensory \nintegration contract Direction 2 subcortical areas exhibit less lateral-\nization than direction 1, with a mix of visuospatial (right) and episodic \nverbal memory (left) These results are consistent wi",
+          "paper": "Kundu et al., Sci. Adv. 10, eadl5307 (2024) 12 June 2024",
+          "score": -3.7166764736175537
+        },
+        {
+          "keyword": "multi-modal",
+          "context": "ract organizational principles fundamental\nto the brain There remain exciting areas for future work Multi-modal training could integrate fMRI with ad-\nditional recording modalities, such as EEG and MEG, or different brain-wise information such\nas structural, functional, and genomic data Probing a wi",
+          "paper": "Published as a conference paper at ICLR 2024",
+          "score": -3.844569444656372
+        },
+        {
+          "keyword": "machine learning",
+          "context": "By\ntraining machine learning algorithms to identify underlying patternsthat separate individuals into these different groups, researchers can\npredict which group a new individual will likely be in ( 33) Here, we",
+          "paper": "AUTISM 2017 © The Authors,",
+          "score": -4.691036224365234
+        }
+      ],
+      "research_gaps": [
+        {
+          "gap": ",\n16,48) Left –right asymmetry facilitates the development of\nlocalized and specialized modules in the brain, which can then\nhave dominant control of behavior49,50 Notably, some of the\ncortical regions highlighted here are involved in diverse social\ncognitive processes, including perceptual processing (fusiform\ngyri), cognitive and emotional control (anterior cingulate), and\nreward evaluation (orbitofrontal cortex, ventral striatum)51 However, the roles of these brain structures are by no means\nrestricted to social behavior As we found altered asymmetry of\nvarious additional regions, our ﬁndings suggest broader disrup-\ntion of lateralized neurodevelopment as part of the ASD pheno-\ntype We note that many of the regions that showed signi ﬁcant\ncase–control differences in asymmetry, including medial frontal,\nanterior cingulate, and inferior temporal regions, overlap with the\ndefault mode network (DMN) The DMN comprises various\ncortical regions located in temporal (medial and lateral), parietal\n(medial and lateral) and prefrontal (medial) cortices52 DMN\nnetwork organization has shown evidence for differences in\nASD11,53–55, including alterations in functional laterality56 Our\nﬁndings may therefore further support a role of altered later-\nalization of the DMN in ASD, warranting further investigations\nin this direction The medial orbitofrontal cortex was the only region that\nshowed signi ﬁcantly altered asymmetry of both thickness and\nsurface area in ASD, suggesting that disrupted laterality of this\nregion might be particularly important in ASD The orbitofrontal\ncortex may be involved in repetitive and stereotyped behaviors in\nASD, owing to its roles in executive functions57",
+          "indicator": "further investigation",
+          "paper": "ARTICLE",
+          "section": "discussion"
+        },
+        {
+          "gap": ",\n16,48) Left –right asymmetry facilitates the development of\nlocalized and specialized modules in the brain, which can then\nhave dominant control of behavior49,50 Notably, some of the\ncortical regions highlighted here are involved in diverse social\ncognitive processes, including perceptual processing (fusiform\ngyri), cognitive and emotional control (anterior cingulate), and\nreward evaluation (orbitofrontal cortex, ventral striatum)51 However, the roles of these brain structures are by no means\nrestricted to social behavior As we found altered asymmetry of\nvarious additional regions, our ﬁndings suggest broader disrup-\ntion of lateralized neurodevelopment as part of the ASD pheno-\ntype We note that many of the regions that showed signi ﬁcant\ncase–control differences in asymmetry, including medial frontal,\nanterior cingulate, and inferior temporal regions, overlap with the\ndefault mode network (DMN) The DMN comprises various\ncortical regions located in temporal (medial and lateral), parietal\n(medial and lateral) and prefrontal (medial) cortices52 DMN\nnetwork organization has shown evidence for differences in\nASD11,53–55, including alterations in functional laterality56 Our\nﬁndings may therefore further support a role of altered later-\nalization of the DMN in ASD, warranting further investigations\nin this direction The medial orbitofrontal cortex was the only region that\nshowed signi ﬁcantly altered asymmetry of both thickness and\nsurface area in ASD, suggesting that disrupted laterality of this\nregion might be particularly important in ASD The orbitofrontal\ncortex may be involved in repetitive and stereotyped behaviors in\nASD, owing to its roles in executive functions57",
+          "indicator": "warrant",
+          "paper": "ARTICLE",
+          "section": "discussion"
+        },
+        {
+          "gap": "Finally,wedescribeongoingchallengesandpotentialopportunitiesforthefield\nof autism data science Given the heterogeneous nature of autism and the complexities of the\nrelevantbehaviors,thisreviewcontainsinsightsthatarerelevanttoneurologicalbehavioranalysis\nand digital psychiatry more broadly",
+          "indicator": "challenge",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "section": "abstract"
+        },
+        {
+          "gap": "B u t ,o v e rt h ep a s t1 5y e a r s ,e p i g e -netic and transcriptional profiling of postmor-\ntem brain samples from multiple psychiatric\nconditions, including autism spectrum dis-\norder (ASD), have revealed robust underlying\nmolecular differences I nA S D ,t h i sr e f l e c t su p -\nregulation of immune signaling genes, down-\nregulation of neuronal markers and synaptic\ngenes, and a blunting of gene expression sig-natures of cortical regional identity How a\ngenetically complex condition such as ASD\nconverges on shared transcriptional altera-\ntions remains a mystery This gap is further\namplified by the lack of biological insightsinto the differences in laminar and cell type –\nspecific pathways affected in ASD and the\nunderlying gene regulatory mechanisms",
+          "indicator": "lack of",
+          "paper": "RESEARCH ARTICLE SUMMARY◥",
+          "section": "introduction"
+        },
+        {
+          "gap": "INTRODUCTION\nAutism spectrum disorder (ASD) is a neurodevelopmental disorder\ncharacterized by deficits in social behavior and the presence of restric-tive and repetitive behaviors ( 1) It is estimated that 1 in 68 children\nare affected by the disorder ( 2), and despite tremendous research efforts,\nASD still confers substantial burden to affected individuals, their families,and the community ( 3,4) Intervention is critically important, and there\nis a general consensus that early dete ction paired with early intervention\nwould have a significant impact on improving outcomes ( 5–7) One barrier to early (that is, before 24 months) detection is that the\ndefining behavioral characteristic so fA S Dg e n e r a l l yu n f o l dd u r i n gt h e\nsecond year of life, typically showing consolidation of the full behavioralsyndrome by about 24 months of age or later ( 8,9) Behavioral differ-\nences in ASD have been observed as early as 6 months of age in char-\nacteristics such as gross motor ability, visual reception, and patterns ofeye tracking ( 10–14); however, these associate d characteristics have not\nbeen able to predict which children will later receive a diagnosis Given\nthe known plasticity of the brain and behavior during the first year oflife, together with the absence of the defining features of the disorder,intervention during this presymptomatic phase, before consolidation of\nthe full syndrome of ASD, is likely to show considerably stronger\nbenefits compared with later treatments ( 5) Research on neurodegenerative dis orders has shown that changes in\nthe brain are often seen preceding clinical manifestations For example,\nin Parkinson ’s disease, about 50% of the neurons in the substantia nigra\na r el o s tb e f o r ec l i n i c a lf e a t u r e sb e c o m ea p p a r e n t( 15) This suggests that\nbrain-related changes appear earl ier than behavioral changes and may\nbe useful in predicting future behavioral diagnosis",
+          "indicator": "absence of",
+          "paper": "AUTISM 2017 © The Authors,",
+          "section": "introduction"
+        },
+        {
+          "gap": "The reliability of the models was assessed and endorsed by \ncross-validation and bootstrap resampling procedures (Supplementary \nInformation 3) We leveraged these normative trajectories to bench -\nmark individual scans by centile scores, which were then investigated as \nage-normed and sex-stratifed measures of diagnostic and longitudinal \natypicalities of brain structure across the lifespan The GAMLSS approach allowed not only modelling of age-related \nchanges in brain phenotypes but also age related-changes in the vari -\nability of phenotypes, and in the form of both linear and nonlinear \nchanges over time, thereby overcoming potential limitations of \nconventional additive models that only allow additive means to be \nmodelled2 In addition, study-specific offsets (mean and variance) \nfor each brain phenotype were also modelled as random effects These modelling criteria are particularly important in the context of \nestablishing growth reference charts as recommended by the World \nHealth Organization24, as it is reasonable to assume the distribution \nof higher order moments (for example, variance) changes with age, \nsex, site/study and pre-processing pipeline, and it is impossible to \ncircumvent some of these issues by collecting standardized data \nlongitudinally for individuals spanning the approximately 100-year \nage range Furthermore, recent studies suggest that changes in \nbetween-subject variability might intersect with vulnerability for \ndeveloping a mental health condition74 The use of data spanning \nthe entire age range is also critical, as data from partial age-windows \ncan bias estimation of growth charts when extrapolated to the whole \nlifespan In short, using a sex-stratified approach24, age, preprocess -\ning pipeline and study were each included in the GAMLSS model \nestimation of first order (μ ) and second order (σ ) distribution param -\neters of a generalized gamma distribution using fractional polynomi -\nals to model nonlinear trends",
+          "indicator": "limitation",
+          "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+          "section": "references"
+        },
+        {
+          "gap": "4d, Supplementary Information 13) In \nsummary, centile normalization of brain metrics reproducibly detected \ncase–control differences and genetic effects on brain structure, as well as \nlong-term sequelae of adverse birth outcomes even in the adult brain10 Longitudinal centile changes\nOwing to the relative paucity of longitudinal imaging data (about \n10% of the reference dataset), normative models were estimated \nfrom cross-sectional data collected at a single time point However, \nthe generalizability of cross-sectional models to longitudinal assess -\nment is important for future research Within-subject variability of \ncentile scores derived from longitudinally repeated scans, measured \nwith the interquartile range (IQR) (Methods, ‘Longitudinal stability’ , \nSupplementary Information 1",
+          "indicator": "future research",
+          "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+          "section": "results"
+        },
+        {
+          "gap": "05 centile points), indicating that centile \nscoring of brain structure was generally stable over time, although \nthere was also some evidence of between-study and cross-disorder dif -\nferences in within-subject variability (Supplementary Information 14) Notably, individuals who changed diagnostic categories—for example, \nthose who progressed from mild cognitive impairment to Alzheimer’s \ndisease over the course of repeated scanning—showed small but sig -\nnificant increases in within-subject variability of centile scores (Sup -\nplementary Information 14, Supplementary Tables 5, 6) Within-subject \nvariability was also slightly higher in samples from younger individuals \n(Supplementary Information 14), which could reflect increased noise \ndue to the technical or data quality challenges associated with scan -\nning younger individuals, but is also consistent with the evidence of \nincreased variability in earlier development observed across other \nanthropometric traits64 Centile scoring of new MRI data\nA key challenge for brain charts is the accurate centile scoring of \nout-of-sample MRI data, not represented in the reference dataset used \nto estimate normative trajectories",
+          "indicator": "challenge",
+          "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+          "section": "results"
+        },
+        {
+          "gap": "2, 12) Furthermore, imaging–genetics \nstudies65 may benefit from the increased heritability of centile scores \ncompared with raw volumetric data (Supplementary Information 13) Perhaps most importantly, GAMLSS modelling enabled harmonization \nacross technically diverse studies (Supplementary Information 5), and \nthus unlocked the potential value of combining primary MRI studies \nat scale to generate normative, sex-stratified brain growth charts, and \nindividual centile scores of typicality and atypicality The analogy to paediatric growth charts is not meant to imply that \nbrain charts are immediately suitable for benchmarking or quantita -\ntive diagnosis of individual patients in clinical practice Even for tradi -\ntional anthropometric growth charts (height, weight and BMI), there \nare still important caveats and nuances concerning their diagnostic \ninterpretation in individual children66; similarly, it is expected that \nconsiderable further research will be required to validate the clinical \ndiagnostic utility of brain charts However, the current results bode \nwell for future progress towards digital diagnosis of atypical brain \nstructure and development67",
+          "indicator": "require",
+          "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+          "section": "discussion"
+        },
+        {
+          "gap": "104) and The Children’s Hospital of Phila -\ndelphia’s Institutional Review Board (IRB 20-017874) and deemed not \nto require PRE or IRB oversight as it consists of secondary analysis of \nde-identified primary datasets Informed consent of participants (or \ntheir guardians) in primary studies is referenced in Supplementary \nInformation 19 and Supplementary Table 1 Model generation and specification\nTo accurately and comprehensively establish standardized brain \nreference charts across the lifespan, it is crucial to leverage multi -\nple independent and diverse datasets, especially those spanning \nprenatal and early postnatal life Here we sought to chart norma -\ntive brain development and ageing across the largest age-span and \nlargest aggregated neuroimaging dataset to date using a robust \nand scalable methodological framework2,24 We used GAMLSS2 to \nestimate cross-sectional normative age-related trends from 100 \nstudies, comprising a reference dataset of more than 100,000 scans \n(see Supplementary Tables 1",
+          "indicator": "require",
+          "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+          "section": "references"
+        },
+        {
+          "gap": "This highlights the ben-\neﬁts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By ﬁne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identiﬁes intrinsic func-\ntional connectivity maps directly from pretraining, clustering parcels into known systems This\ndemonstrates how self-supervised objectives can extract organizational principles fundamental\nto the brain There remain exciting areas for future work Multi-modal training could integrate fMRI with ad-\nditional recording modalities, such as EEG and MEG, or different brain-wise information such\nas structural, functional, and genomic data Probing a wider range of cognitive states and com-\nbined regularization may yield more generalizable representations In future work, we could\nassess zero-shot classiﬁcation on expanded functional atlases beyond the 7 networks used here Overall, BrainLM provides a springboard for accelerated research at the intersection of neuro-\nscience and AI We hope that this work spurs further development of foundation models that can\nhelp elucidate the intricate workings of the human brain 9\n\nPublished as a conference paper at ICLR 2024\n6A CKNOWLEDGMENT\nWe thank the Yale Wu Tsai Institute for supporting JOC with a Postdoctoral Fellowship, the\nCAPES-Yale Graduate Scholars Program for support AHOF and are grateful to Insu Han and Amin\nKarbasi for their crucial insights and coding assistance in model training Their contributions\nhave signiﬁcantly enhanced our research REFERENCES\nChadi G Abdallah Brain networks associated with covid-19 risk: Data from 3662 participants Chronic Stress , 5:24705470211066770, 2021 Roman Beliy, Guy Gaziv, Assaf Hoogi, Francesca Strappini, Tal Golan, and Michal Irani",
+          "indicator": "future work",
+          "paper": "Published as a conference paper at ICLR 2024",
+          "section": "abstract"
+        }
+      ],
+      "evidence_strength": "weak",
+      "key_papers": [
+        "Published as a conference paper at ICLR 2024",
+        "ARTICLE",
+        "AUTISM 2017 © The Authors,",
+        "Nature | Vol 604 | 21 April 2022 | 525",
+        "RESEARCH ARTICLE SUMMARY◥",
+        "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+        "Kundu et al., Sci. Adv. 10, eadl5307 (2024) 12 June 2024"
+      ]
+    },
+    "interventions_precision": {
+      "theme": "interventions_precision",
+      "queries": {
+        "precision medicine developmental disorders": [
+          {
+            "paper": "Gene-LLMs: a comprehensive",
+            "section": "2 background study",
+            "score": -1.6968050003051758,
+            "content": "8.1.5 Ethical, legal, and social implications\nGenomic data are sensitive; hence, the issues of privacy, consent,\nand data sharing around the handling of genomic data aremajor concerns Gene-LLMs can revolutionize genomics and precision medicine\nas a whole; however, this transformation will require the community\ntoﬁrst address a series of challenges, including data bias,\ninterpretability of models, reduction of computational resources,clinical validation of models, and, ﬁnally, ethical issues The\n",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Gene-LLMs: a comprehensive",
+            "section": "2 background study",
+            "score": -2.821132183074951,
+            "content": "Furthermore, the humangenome is a treasure trove of information about patients who are\nlikely to respond to a certain medication, and it may, therefore, be\nused as a basis for personalized therapy; WGS data may serve as asource of otherwise unidenti ﬁed pharmacogenomic information,\nproviding insights into which drug to choose and how best tooptimize the dosage Other types of genomic analyses can becarried out during treatment to monitor disease progression,adjust therapeutic approaches, and eval",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+            "section": "case–control studies",
+            "score": -2.923553943634033,
+            "content": "Vabalas et al (89) combined\nbotheyeandmotiondatatopredictadiagnosisfrom22childrenwithautismand22neurotypical\ncontrols, reaching 78% accuracy with both modalities, 73% for only motion features, and 70%\nfor only eye features.Javed & Park (90) used both facial expressions and upper body movements\nrecorded during child–robot interactions to predict autism among five children with autism andseven typically developing children,with accuracy,precision,and recall in the high eighties Automated diagnosti",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+            "section": "discussion",
+            "score": -3.5725722312927246,
+            "content": "The study of \n[29] added 1000 genes that are not listed in the SAFRI gene database as \nnegative examples In Ref [34], the dataset contained 13 developmental \nstages, from 8 weeks to 8 years, collected from 26 brain structures that \nwere reported in BrainSpan atlas, the data consisted 732 samples that \nwere risk genes of ASD 366 and non-ASD genes 366 on different \ntime points of 26 brain structures and developmental stages In \nconclusion, 10 out of 12 studies have been focused on gene datasets ",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Gene-LLMs: a comprehensive",
+            "section": "2 background study",
+            "score": -4.235437393188477,
+            "content": "Functional sites in the genome can be predicted in a\nvery accurate manner using learned representations Forecastingdisease single-nucleotide polymorphisms (SNPs) is an essential task\nfor LLMs, whereby these latter are capable of determining the SNP\nmarkers of genetic diseases SNPs are the differences found at single-\nnucleotide positions in the genome and are used as diseasesusceptibility biomarkers Furthermore, LLMs can support diseasediagnosis and risk assessment by evaluating the extent to wh",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          }
+        ],
+        "personalized interventions autism treatment": [
+          {
+            "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+            "section": "introduction",
+            "score": -1.4063386917114258,
+            "content": "While the ethical issue around data privacy is also another problem \nunder debate, reports on AI technology integrated with autism disorder \nissues are not efficient The survey of [18] discussed how individuals \nwith ASD were handled by technology-based intervention methodolo -\ngies, including modern computer-aided systems, computer \nvision-assisted technologies and virtual reality They concluded that a \ngap exists between neuroscience, including autism disorders, psychol -\nogy and the research ",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Kundu et al., Sci. Adv. 10, eadl5307 (2024) 12 June 2024",
+            "section": "resul ts",
+            "score": -2.124370574951172,
+            "content": "First, as patients \npresent with initial symptoms, routine brain imaging is often per -\nformed TBM could help automatically screen these images to detect \npotential CNVs early and refer patients for genetic testing Second, as \nwe had found that brain endophenotypes exist on a spectrum quanti-\nfiable by TBM, the prognostic value of TBM scores can be investigated \nin the future As new therapies emerge, new therapeutic biomarkers \nare needed to confirm treatment effect In this regard, this research",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Computational Methods to Measure Patterns of Gaze",
+            "section": "references",
+            "score": -2.3047378063201904,
+            "content": "references 3Infants’\nearly attention to other people promotes learning about thesocial world through interaction with others 4Autism spec-\ntrum disorder (ASD) is a neurodevelopmental conditioncharacterized by decreased spontaneous visual attention tosocial stimuli, evident by 6 months of age 5Diminished\nsocial visual engagement with others influences the earlydevelopment of social brain circuitry and has been hypoth-esized to contribute to later deficits in social and communi-cative abilities as",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+            "section": "case–control studies",
+            "score": -2.546473503112793,
+            "content": "TRANSLATION OF MODELS FOR DIGITAL THERAPEUTICS\nThere is tremendous promisefor digital solutions that use ML to improve thedelivery and qual-ity of treatments for autism and other aspects of behavioral health Because AI-powered digital\ntherapyisablossomingfieldofstudy,thereareuncertaintiesaboutthereactionsofpatientpopu-\nlations to digital therapies’ trustworthiness,usability,and understandability,among several otherdimensions WedescribetwoAI-enabledtherapiesforpediatricautismthathavefollowedapath",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+            "section": "introduction",
+            "score": -3.097409725189209,
+            "content": "INTRODUCTION\nAutism spectrum disorder (autism) is a complex neuropsychiatric condition that manifests in a\nvarietyofphenotypicpresentations.Theseincludelimitedrangesofinterest,socialdeficits,delays\nincommunication,aninabilitytoexpressandorrecognizerangesofemotion,anavoidanceofeye\ncontact,and idiosyncratic motions of the hands,head,and body ( Figure 1 ) It is estimated that 1 in 44 children in the United States has autism (1), with the prevalence\ncontinuing to rise.Despite the high incidence rate",
+            "statistics": {
+              "sample_sizes": [
+                44
+              ],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          }
+        ],
+        "therapeutic outcomes developmental disabilities": [
+          {
+            "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+            "section": "introduction",
+            "score": -4.81818962097168,
+            "content": "INTRODUCTION\nAutism spectrum disorder (autism) is a complex neuropsychiatric condition that manifests in a\nvarietyofphenotypicpresentations.Theseincludelimitedrangesofinterest,socialdeficits,delays\nincommunication,aninabilitytoexpressandorrecognizerangesofemotion,anavoidanceofeye\ncontact,and idiosyncratic motions of the hands,head,and body ( Figure 1 ) It is estimated that 1 in 44 children in the United States has autism (1), with the prevalence\ncontinuing to rise.Despite the high incidence rate",
+            "statistics": {
+              "sample_sizes": [
+                44
+              ],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "AUTISM 2017 © The Authors,",
+            "section": "introduction",
+            "score": -5.575017929077148,
+            "content": "INTRODUCTION\nAutism spectrum disorder (ASD) is a neurodevelopmental disorder\ncharacterized by deficits in social behavior and the presence of restric-tive and repetitive behaviors ( 1) It is estimated that 1 in 68 children\nare affected by the disorder ( 2), and despite tremendous research efforts,\nASD still confers substantial burden to affected individuals, their families,and the community ( 3,4) Intervention is critically important, and there\nis a general consensus that early dete ction paired",
+            "statistics": {
+              "sample_sizes": [
+                68
+              ],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+            "section": "abstract",
+            "score": -5.592706680297852,
+            "content": "Abstract\nAutism spectrum disorder (autism) is a neurodevelopmental delay that af-fects at least 1 in 44 children.Like many neurological disorder phenotypes,\nthe diagnostic features are observable, can be tracked over time, and can\nbe managed or even eliminated through proper therapy and treatments However, there are major bottlenecks in the diagnostic, therapeutic, and\nlongitudinal tracking pipelines for autism and related neurodevelopmentaldelays,creating an opportunity for novel data science s",
+            "statistics": {
+              "sample_sizes": [
+                44
+              ],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Swin fMRI Transformer Predicts",
+            "section": "abstract",
+            "score": -5.878678321838379,
+            "content": "Abstract Brain development in the first few months of human life is\na critical phase characterized by rapid structural growth and functional\norganization Accurately predicting developmental outcomes during this\ntime is crucial for identifying delays and enabling timely interventions This study introduces the SwiFT (Swin 4D fMRI Transformer) model,\ndesigned to predict Bayley-III composite scores using neonatal fMRI\nfrom the Developing Human Connectome Project (dHCP) To enhance\npredictive accuracy",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+            "section": "discussion",
+            "score": -6.902442932128906,
+            "content": "Determining “the brain \ntemporospatial regions where the risk genes are expressed in ASD \npatients ” could improve the therapeutic strategies for better \nhealthcare and treatment for ASD risky patients [34] Besides, \nreleasing the association of genes for ASD patients through priority \ntools helps in designing therapeutic strategies and better diagnostic \nsituations [15] ≡Triage and prioritisation focusing on autism case evaluations, which \nare important to identify the appropriate treatment for",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          }
+        ]
+      },
+      "convergent_findings": [],
+      "divergent_findings": [],
+      "methodological_innovations": [
+        {
+          "keyword": "transformer",
+          "context": "g deep learnin g and molecular biology, making it\npossible to understand the language of life Using transformer-based\nstructures and self-supervised pretraining mechanisms —such as\nmasked nucleotide modeling and sequence containment —Gene-\nLLMs generate informative rep resentations from raw genetic",
+          "paper": "Gene-LLMs: a comprehensive",
+          "score": -1.6968050003051758
+        },
+        {
+          "keyword": "multimodal",
+          "context": "nd targeted therapy The mostadvanced encoder –decoder architectures, position-aware embeddings,\nand multimodal fusion strategies are being encompassed in studies ofgenomic representation learning to e nable the incorporation of multiple\ndata types in one model",
+          "paper": "Gene-LLMs: a comprehensive",
+          "score": -1.6968050003051758
+        },
+        {
+          "keyword": "integration",
+          "context": "progression,adjust therapeutic approaches, and evaluate emerging resistancemechanisms in cancer The integration of WGS into clinical\npractice paves the way for advancements in medical diagnosticsand individualized care The genetic diagnosis will be more precisethrough WGS, and the techniques of prec",
+          "paper": "Gene-LLMs: a comprehensive",
+          "score": -2.821132183074951
+        },
+        {
+          "keyword": "machine learning",
+          "context": "type and father ’s blood group, \nneed to be considered [42,43] 6.2 Application of used traditional machine learnings and deep learning \nAI science is implemented with multidisciplinary studies that aid to \nbuild more precise results Thus, several articles in autism utilised ma-\nchine learning metho",
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "score": -3.5725722312927246
+        },
+        {
+          "keyword": "deep learning",
+          "context": "ood group, \nneed to be considered [42,43] 6.2 Application of used traditional machine learnings and deep learning \nAI science is implemented with multidisciplinary studies that aid to \nbuild more precise results Thus, several articles in autism utilised ma-\nchine learning methods (Table 3) Study [3]",
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "score": -3.5725722312927246
+        },
+        {
+          "keyword": "prospective",
+          "context": "ld facilitate \nautism screening and personalize treatment in the future Larger co-\nhort studies and prospective trials are needed to explore these possi-\nbilities However, these efforts must proceed in tandem with the \ncuration of genetically stratified datasets in autism research Fig 5 Reciprocal c",
+          "paper": "Kundu et al., Sci. Adv. 10, eadl5307 (2024) 12 June 2024",
+          "score": -2.124370574951172
+        },
+        {
+          "keyword": "novel",
+          "context": "alequipment,orcon-trolledenvironmentwasneeded.WedemonstratedthatthistoolreliablymeasuresbothknownandnovelsocialattentiongazebiomarkersthatdistinguishtoddlerswithASDvstypicaldevelopment",
+          "paper": "Computational Methods to Measure Patterns of Gaze",
+          "score": -2.3047378063201904
+        },
+        {
+          "keyword": "novel",
+          "context": "stem was formally tested in a randomized controlled clinical trial (37) This process\nis crucial for novel therapeutic paradigms in digital health given the uncertainty and novelty of\nAI-powered solutions Another therapy, EndeavorRx by Akili, is the first game-based digital therapy and one of the\nfir",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "score": -2.546473503112793
+        },
+        {
+          "keyword": "real-time",
+          "context": "ingSuperpower\nGlass,the parent interacts with the child wearing the Glass system.The Glass provides real-time\nemotion cues to the child via a computer vision facial emotion detection system SuperpowerGlasswasdevelopedandrefinedthroughaniterativedesignprocess.Inearlyprototypingsessions,\npossible user",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "score": -2.546473503112793
+        },
+        {
+          "keyword": "machine learning",
+          "context": ",often resulting in poorer psychiatric outcomes (3,4) Artificial intelligence (AI),and particularly machine learning (ML),has the potential to serve\nas the great equalizer for many behavioral healthcare concerns like autism According to the\nPew Research Center, 97% of adults in the United States own",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "score": -3.097409725189209
+        },
+        {
+          "keyword": "machine learning",
+          "context": ",often resulting in poorer psychiatric outcomes (3,4) Artificial intelligence (AI),and particularly machine learning (ML),has the potential to serve\nas the great equalizer for many behavioral healthcare concerns like autism According to the\nPew Research Center, 97% of adults in the United States own",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "score": -4.81818962097168
+        },
+        {
+          "keyword": "novel",
+          "context": "inal tracking pipelines for autism and related neurodevelopmentaldelays,creating an opportunity for novel data science solutions to augment\nand transform existing workflows and provide increased access to services\nfor affected families.Several efforts previously conducted by a multitude ofresearchla",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "score": -5.592706680297852
+        },
+        {
+          "keyword": "longitudinal",
+          "context": "per therapy and treatments However, there are major bottlenecks in the diagnostic, therapeutic, and\nlongitudinal tracking pipelines for autism and related neurodevelopmentaldelays,creating an opportunity for novel data science solutions to augment\nand transform existing workflows and provide increas",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "score": -5.592706680297852
+        },
+        {
+          "keyword": "digital phenotyping",
+          "context": "l therapies using data science We describe both case–control studies\nand classification systems for digital phenotyping We then discuss digi-\ntal diagnostics and therapeutics that integrate machine learning models ofautism-related behaviors, including the factors that must be addressed for\n211\n\nDown",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "score": -5.592706680297852
+        },
+        {
+          "keyword": "transformer",
+          "context": "identifying delays and enabling timely interventions This study introduces the SwiFT (Swin 4D fMRI Transformer) model,\ndesigned to predict Bayley-III composite scores using neonatal fMRI\nfrom the Developing Human Connectome Project (dHCP) To enhance\npredictive accuracy, we apply dimensionality redu",
+          "paper": "Swin fMRI Transformer Predicts",
+          "score": -5.878678321838379
+        }
+      ],
+      "research_gaps": [
+        {
+          "gap": "5 Ethical, legal, and social implications\nGenomic data are sensitive; hence, the issues of privacy, consent,\nand data sharing around the handling of genomic data aremajor concerns Gene-LLMs can revolutionize genomics and precision medicine\nas a whole; however, this transformation will require the community\ntoﬁrst address a series of challenges, including data bias,\ninterpretability of models, reduction of computational resources,clinical validation of models, and, ﬁnally, ethical issues The\ncommunity, by following these paths, is thereby committing tothe development of Gene-LLMs as dependable, fair, and clinicallyimplementable tools 9 Conclusion\nThe era of Gene-LLMs has brought a revolution in computational\ngenomics by connecting deep learnin g and molecular biology, making it\npossible to understand the language of life Using transformer-based\nstructures and self-supervised pretraining mechanisms —such as\nmasked nucleotide modeling and sequence containment —Gene-\nLLMs generate informative rep resentations from raw genetic\nsequences, gene expression pro ﬁles, and corresponding multi-omic\nannotations This study is a complete Gene-LLMs life cycle fromdata ingestion and tokenization (k-mer and gene-level) toapplications of the data, like protein –RNA interaction prediction\nand synthetic genome generation The performance of the models isveriﬁed in several contexts: CAGI5, NT-Bench, GenBench, and\nBEACON for functional, structural , and evolutionary genomics The\nharmonizing relationship between Gene-LLMs and WGS results in\neasy-to-understand clinical variant interpretation, which is further\ntranslated to precision diagnostics and targeted therapy The mostadvanced encoder –decoder architectures, position-aware embeddings,\nand multimodal fusion strategies are being encompassed in studies ofgenomic representation learning to e nable the incorporation of multiple\ndata types in one model",
+          "indicator": "challenge",
+          "paper": "Gene-LLMs: a comprehensive",
+          "section": "2 background study"
+        },
+        {
+          "gap": "5 Ethical, legal, and social implications\nGenomic data are sensitive; hence, the issues of privacy, consent,\nand data sharing around the handling of genomic data aremajor concerns Gene-LLMs can revolutionize genomics and precision medicine\nas a whole; however, this transformation will require the community\ntoﬁrst address a series of challenges, including data bias,\ninterpretability of models, reduction of computational resources,clinical validation of models, and, ﬁnally, ethical issues The\ncommunity, by following these paths, is thereby committing tothe development of Gene-LLMs as dependable, fair, and clinicallyimplementable tools 9 Conclusion\nThe era of Gene-LLMs has brought a revolution in computational\ngenomics by connecting deep learnin g and molecular biology, making it\npossible to understand the language of life Using transformer-based\nstructures and self-supervised pretraining mechanisms —such as\nmasked nucleotide modeling and sequence containment —Gene-\nLLMs generate informative rep resentations from raw genetic\nsequences, gene expression pro ﬁles, and corresponding multi-omic\nannotations This study is a complete Gene-LLMs life cycle fromdata ingestion and tokenization (k-mer and gene-level) toapplications of the data, like protein –RNA interaction prediction\nand synthetic genome generation The performance of the models isveriﬁed in several contexts: CAGI5, NT-Bench, GenBench, and\nBEACON for functional, structural , and evolutionary genomics The\nharmonizing relationship between Gene-LLMs and WGS results in\neasy-to-understand clinical variant interpretation, which is further\ntranslated to precision diagnostics and targeted therapy The mostadvanced encoder –decoder architectures, position-aware embeddings,\nand multimodal fusion strategies are being encompassed in studies ofgenomic representation learning to e nable the incorporation of multiple\ndata types in one model",
+          "indicator": "require",
+          "paper": "Gene-LLMs: a comprehensive",
+          "section": "2 background study"
+        },
+        {
+          "gap": "Furthermore, the humangenome is a treasure trove of information about patients who are\nlikely to respond to a certain medication, and it may, therefore, be\nused as a basis for personalized therapy; WGS data may serve as asource of otherwise unidenti ﬁed pharmacogenomic information,\nproviding insights into which drug to choose and how best tooptimize the dosage Other types of genomic analyses can becarried out during treatment to monitor disease progression,adjust therapeutic approaches, and evaluate emerging resistancemechanisms in cancer The integration of WGS into clinical\npractice paves the way for advancements in medical diagnosticsand individualized care The genetic diagnosis will be more precisethrough WGS, and the techniques of precision medicine will beenabled by implementing a smooth transition from patientassessment to genomic analysis and the clinical decision-making\nprocess Nevertheless, some issues remain, including the need for\nrobust computational infrastructure, the establishment ofstandardized criteria for variant classi ﬁcation, and ethical\nconcerns related to data privacy and incidental ﬁndings The\nclinical utility of WGS will continue to improve along with theadvancements in genomic technologies, enabling more personalizedindividualized, data-driven healthcare solutions that cansigniﬁcantly improve patient outcomes 5 Encoder, decoder, and\nencoder –decoder architectures\nin genomics\nThrough the use of original NLP architectures, neural networks\nhave addressed challenges in genomics caused by earlier deep\nlearning models, enabling complex analyses of DNA and RNA\nsequences The so-called encoder, decoder, and encoder –decoder\ndesigns are the vital stages of the processes of generating andanalyzing genomic data These types of models have been furtherrestructured to address issues such as the complexity of regulatoryelement searches, the existence of long-range correlations, and thenon-random organization of DNA sequences",
+          "indicator": "need for",
+          "paper": "Gene-LLMs: a comprehensive",
+          "section": "2 background study"
+        },
+        {
+          "gap": "Furthermore, the humangenome is a treasure trove of information about patients who are\nlikely to respond to a certain medication, and it may, therefore, be\nused as a basis for personalized therapy; WGS data may serve as asource of otherwise unidenti ﬁed pharmacogenomic information,\nproviding insights into which drug to choose and how best tooptimize the dosage Other types of genomic analyses can becarried out during treatment to monitor disease progression,adjust therapeutic approaches, and evaluate emerging resistancemechanisms in cancer The integration of WGS into clinical\npractice paves the way for advancements in medical diagnosticsand individualized care The genetic diagnosis will be more precisethrough WGS, and the techniques of precision medicine will beenabled by implementing a smooth transition from patientassessment to genomic analysis and the clinical decision-making\nprocess Nevertheless, some issues remain, including the need for\nrobust computational infrastructure, the establishment ofstandardized criteria for variant classi ﬁcation, and ethical\nconcerns related to data privacy and incidental ﬁndings The\nclinical utility of WGS will continue to improve along with theadvancements in genomic technologies, enabling more personalizedindividualized, data-driven healthcare solutions that cansigniﬁcantly improve patient outcomes 5 Encoder, decoder, and\nencoder –decoder architectures\nin genomics\nThrough the use of original NLP architectures, neural networks\nhave addressed challenges in genomics caused by earlier deep\nlearning models, enabling complex analyses of DNA and RNA\nsequences The so-called encoder, decoder, and encoder –decoder\ndesigns are the vital stages of the processes of generating andanalyzing genomic data These types of models have been furtherrestructured to address issues such as the complexity of regulatoryelement searches, the existence of long-range correlations, and thenon-random organization of DNA sequences",
+          "indicator": "challenge",
+          "paper": "Gene-LLMs: a comprehensive",
+          "section": "2 background study"
+        },
+        {
+          "gap": "Javed & Park (90) used both facial expressions and upper body movements\nrecorded during child–robot interactions to predict autism among five children with autism andseven typically developing children,with accuracy,precision,and recall in the high eighties Automated diagnostics for autism are sure to improve as ML methods continue to rapidly\nadvance and as data collection systems become more ubiquitous The classifiers will likely needcontinuousrecalibration,asthesymptompresentationvaries andas thedefinition ofautism con-\ntinuestoevolvewithsubsequentiterationsoftheDSM( DiagnosticandStatisticalManualofMental\nDisorders) We anticipate a future in which AI-enabled tools enable global reach and inclusion\nwhile maintaining the highest levels of clinical rigor and reliability, not just for diagnostics but\nalsoforpreciseanddynamictrackingofpersonalizedtreatmentsthatareguidedbythequantified\npredictions such tools make TRANSLATION OF DIAGNOSTIC MODELS\nThe vibrant research using AI for automatic evaluation and measurement of observable pheno-typesofautism(andotherneurodevelopmentalphenotypes)haspromisetotranslateintopractical\nclinical and educational solutions that facilitate autism’s diagnosis, tracking, and treatment This\nrequires careful considerations of design,feasibility testing,and tests for clinical effectiveness us-\ning useful endpoints In this section, we focus on only the diagnostic and therapeutic tools that\nhave passed through regulatory review and have received market clearance by the US Food andDrug Administration (FDA)",
+          "indicator": "require",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "section": "case–control studies"
+        },
+        {
+          "gap": "While the ethical issue around data privacy is also another problem \nunder debate, reports on AI technology integrated with autism disorder \nissues are not efficient The survey of [18] discussed how individuals \nwith ASD were handled by technology-based intervention methodolo -\ngies, including modern computer-aided systems, computer \nvision-assisted technologies and virtual reality They concluded that a \ngap exists between neuroscience, including autism disorders, psychol -\nogy and the research community of computer science to develop an AI \ntechnology for ASD individuals The 31 collected studies conclude that \nclinicians were not convinced in general with technology-based in-\nterventions because of the non-empirical nature of results that had been \npublished The major reason is a greater number of studies on distinct \nintervention methodologies does not obey any specific standard or AI \nresearch design In Ref [19], the study aimed to identify and describe \nsupervised ML directions in ASD articles and guide researchers in \nexpanding their research computationally and statistically towards this \ndisease The limitations they found related to unlabeled data were \nconsuming time, cost and effort besides the complicity of some ML \nmodels Thus, the researchers must consider if the understanding of \nmodels is going to be more important than the result when selecting the \nML model In conclusion to the above reviews, the authors neglected the \ndiagnosis towards the importance of triage and prioritisation in autism \npatients’ life At this point, to fill up the comparative analyses between \nthe presented work and published reviews, Table 1 shows the compar -\native points and differences As shown in Table 1, most previous works did not cover the main \naspects that the present study aims to provide Some reviews covered \nsome important aspects but neglected other concepts",
+          "indicator": "limitation",
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "section": "introduction"
+        },
+        {
+          "gap": "2 as a case study The function of this genetic locus is largely \nunknown (9 ) We found that 16p11",
+          "indicator": "unknown",
+          "paper": "Kundu et al., Sci. Adv. 10, eadl5307 (2024) 12 June 2024",
+          "section": "resul ts"
+        },
+        {
+          "gap": "references 3Infants’\nearly attention to other people promotes learning about thesocial world through interaction with others 4Autism spec-\ntrum disorder (ASD) is a neurodevelopmental conditioncharacterized by decreased spontaneous visual attention tosocial stimuli, evident by 6 months of age 5Diminished\nsocial visual engagement with others influences the earlydevelopment of social brain circuitry and has been hypoth-esized to contribute to later deficits in social and communi-cative abilities associated with autism 6Early intervention\nthat promotes social engagement can potentially mitigatethe cascading effects of reduced social attention on brainand behavioral development, leading to improved out-comes 7,8Thus, there is a need for reliable, feasible methods\nfor measuring gaze to facilitate early ASD detection Current methods for measuring gaze require specialized\nexpensiveequipment,calibration,andtrainedpersonnel,lim-itingtheiruseforuniversalASDscreening,especiallyinlow-resource settings 9,10Caregiver-report ASD screening ques-\ntionnairesincludequestionsaboutsocialattention,buttheyrequireliteracyandhavelowerperformancewithcaregiversfrom minority racial/ethnic backgrounds and lowereducation 11,12This disparity is notable, given documented\ndelaysinASDscreeninganddiagnosisofBlackchildren",
+          "indicator": "need for",
+          "paper": "Computational Methods to Measure Patterns of Gaze",
+          "section": "references"
+        },
+        {
+          "gap": "references 3Infants’\nearly attention to other people promotes learning about thesocial world through interaction with others 4Autism spec-\ntrum disorder (ASD) is a neurodevelopmental conditioncharacterized by decreased spontaneous visual attention tosocial stimuli, evident by 6 months of age 5Diminished\nsocial visual engagement with others influences the earlydevelopment of social brain circuitry and has been hypoth-esized to contribute to later deficits in social and communi-cative abilities associated with autism 6Early intervention\nthat promotes social engagement can potentially mitigatethe cascading effects of reduced social attention on brainand behavioral development, leading to improved out-comes 7,8Thus, there is a need for reliable, feasible methods\nfor measuring gaze to facilitate early ASD detection Current methods for measuring gaze require specialized\nexpensiveequipment,calibration,andtrainedpersonnel,lim-itingtheiruseforuniversalASDscreening,especiallyinlow-resource settings 9,10Caregiver-report ASD screening ques-\ntionnairesincludequestionsaboutsocialattention,buttheyrequireliteracyandhavelowerperformancewithcaregiversfrom minority racial/ethnic backgrounds and lowereducation 11,12This disparity is notable, given documented\ndelaysinASDscreeninganddiagnosisofBlackchildren",
+          "indicator": "require",
+          "paper": "Computational Methods to Measure Patterns of Gaze",
+          "section": "references"
+        },
+        {
+          "gap": "INTRODUCTION\nAutism spectrum disorder (ASD) is a neurodevelopmental disorder\ncharacterized by deficits in social behavior and the presence of restric-tive and repetitive behaviors ( 1) It is estimated that 1 in 68 children\nare affected by the disorder ( 2), and despite tremendous research efforts,\nASD still confers substantial burden to affected individuals, their families,and the community ( 3,4) Intervention is critically important, and there\nis a general consensus that early dete ction paired with early intervention\nwould have a significant impact on improving outcomes ( 5–7) One barrier to early (that is, before 24 months) detection is that the\ndefining behavioral characteristic so fA S Dg e n e r a l l yu n f o l dd u r i n gt h e\nsecond year of life, typically showing consolidation of the full behavioralsyndrome by about 24 months of age or later ( 8,9) Behavioral differ-\nences in ASD have been observed as early as 6 months of age in char-\nacteristics such as gross motor ability, visual reception, and patterns ofeye tracking ( 10–14); however, these associate d characteristics have not\nbeen able to predict which children will later receive a diagnosis Given\nthe known plasticity of the brain and behavior during the first year oflife, together with the absence of the defining features of the disorder,intervention during this presymptomatic phase, before consolidation of\nthe full syndrome of ASD, is likely to show considerably stronger\nbenefits compared with later treatments ( 5) Research on neurodegenerative dis orders has shown that changes in\nthe brain are often seen preceding clinical manifestations For example,\nin Parkinson ’s disease, about 50% of the neurons in the substantia nigra\na r el o s tb e f o r ec l i n i c a lf e a t u r e sb e c o m ea p p a r e n t( 15) This suggests that\nbrain-related changes appear earl ier than behavioral changes and may\nbe useful in predicting future behavioral diagnosis",
+          "indicator": "absence of",
+          "paper": "AUTISM 2017 © The Authors,",
+          "section": "introduction"
+        },
+        {
+          "gap": "INTRODUCTION\nAutism spectrum disorder (ASD) is a neurodevelopmental disorder\ncharacterized by deficits in social behavior and the presence of restric-tive and repetitive behaviors ( 1) It is estimated that 1 in 68 children\nare affected by the disorder ( 2), and despite tremendous research efforts,\nASD still confers substantial burden to affected individuals, their families,and the community ( 3,4) Intervention is critically important, and there\nis a general consensus that early dete ction paired with early intervention\nwould have a significant impact on improving outcomes ( 5–7) One barrier to early (that is, before 24 months) detection is that the\ndefining behavioral characteristic so fA S Dg e n e r a l l yu n f o l dd u r i n gt h e\nsecond year of life, typically showing consolidation of the full behavioralsyndrome by about 24 months of age or later ( 8,9) Behavioral differ-\nences in ASD have been observed as early as 6 months of age in char-\nacteristics such as gross motor ability, visual reception, and patterns ofeye tracking ( 10–14); however, these associate d characteristics have not\nbeen able to predict which children will later receive a diagnosis Given\nthe known plasticity of the brain and behavior during the first year oflife, together with the absence of the defining features of the disorder,intervention during this presymptomatic phase, before consolidation of\nthe full syndrome of ASD, is likely to show considerably stronger\nbenefits compared with later treatments ( 5) Research on neurodegenerative dis orders has shown that changes in\nthe brain are often seen preceding clinical manifestations For example,\nin Parkinson ’s disease, about 50% of the neurons in the substantia nigra\na r el o s tb e f o r ec l i n i c a lf e a t u r e sb e c o m ea p p a r e n t( 15) This suggests that\nbrain-related changes appear earl ier than behavioral changes and may\nbe useful in predicting future behavioral diagnosis",
+          "indicator": "barrier",
+          "paper": "AUTISM 2017 © The Authors,",
+          "section": "introduction"
+        },
+        {
+          "gap": "Finally,wedescribeongoingchallengesandpotentialopportunitiesforthefield\nof autism data science Given the heterogeneous nature of autism and the complexities of the\nrelevantbehaviors,thisreviewcontainsinsightsthatarerelevanttoneurologicalbehavioranalysis\nand digital psychiatry more broadly",
+          "indicator": "challenge",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "section": "abstract"
+        },
+        {
+          "gap": "Abstract Brain development in the first few months of human life is\na critical phase characterized by rapid structural growth and functional\norganization Accurately predicting developmental outcomes during this\ntime is crucial for identifying delays and enabling timely interventions This study introduces the SwiFT (Swin 4D fMRI Transformer) model,\ndesigned to predict Bayley-III composite scores using neonatal fMRI\nfrom the Developing Human Connectome Project (dHCP) To enhance\npredictive accuracy, we apply dimensionality reduction via group inde-\npendent component analysis (ICA) and pretrain SwiFT on large adult\nfMRI datasets to address the challenges of limited neonatal data Our\nanalysis shows that SwiFT significantly outperforms baseline models\nin predicting cognitive, motor, and language outcomes, leveraging both\nsingle-label and multi-label prediction strategies The model’s attention-\nbased architecture processes spatiotemporal data end-to-end, delivering\nsuperior predictive performance Additionally, we use Integrated Gradi-\nents with Smoothgrad sQuare (IG-SQ) to interpret predictions, identify-\ning neural spatial representations linked to early cognitive and behavioral\ndevelopment These findings underscore the potential of Transformer\nmodels to advance neurodevelopmental research and clinical practice Keywords: fMRI Transformer, Developing Human Connectome Project,\nBayley Scales of Infant Development, Personalized Therapy, XAI",
+          "indicator": "challenge",
+          "paper": "Swin fMRI Transformer Predicts",
+          "section": "abstract"
+        },
+        {
+          "gap": "2 Challenges for ASD triage and prioritisation \nSeveral concerns detailed in studies related to diagnosis, prioritising \nand triage patients are shown in (Fig 6) The identification of all risky \ngenes that contribute to ASD risk are still concerning, and no standard \nset of risky genes has been identified [15,29,32] Although many studies \nattempted to determine them, they overlook potentially instrumental \nmutations with small to medium effect sizes [3] No laboratory of neu-\nroimaging tests or even any biochemical markers can currently be uti-\nlised as a diagnostic standard for ASD [4] “The causal variants and the \nspecific cell types in which the diseases-risk variants may be active are \nunclear ” [12] A strong clue of clinical and genetic overlap was observed \nbetween ASD and other types of neurodevelopmental disorders and \nrepresented by a spectrum of disorders, such as overlapping with epi-\nlepsy or high-functioning autism [2,31] The age of patients that is \ncovered has a gap due to the limited available data for ages including \n31–48 months of age [35] However, the evidence level of using EEG \nmonitoring has not yet reached the recommended level for diagnostic or \neven screening of all ASD [5]",
+          "indicator": "challenge",
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "section": "discussion"
+        }
+      ],
+      "evidence_strength": "weak",
+      "key_papers": [
+        "Computers in Biology and Medicine 146 (2022) 105553",
+        "Swin fMRI Transformer Predicts",
+        "AUTISM 2017 © The Authors,",
+        "Computational Methods to Measure Patterns of Gaze",
+        "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+        "Gene-LLMs: a comprehensive",
+        "Kundu et al., Sci. Adv. 10, eadl5307 (2024) 12 June 2024"
+      ]
+    },
+    "methodologies": {
+      "theme": "methodologies",
+      "queries": {
+        "deep learning neural networks autism classification": [
+          {
+            "paper": "SwiFT: Swin 4D fMRI Transformer",
+            "section": "introduction",
+            "score": -2.8617665767669678,
+            "content": "1 Introduction\nThe human brain is a dynamic system characterized as an extensive (feedback) network generating\ncomplex spatiotemporal dynamics of its activity Analyzing such dynamics and linking them to\nnormative adaptive cognition and behaviors, as well as their maladaptive forms in a disease condition\nis of paramount importance in neuroscience and medicine However, the fields have been hampered\nby a lack of predictive power owing to the gap between the complexity of the brain network and the\nc",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Nature Methods",
+            "section": "methods",
+            "score": -2.9317667484283447,
+            "content": "Commonly based on transformer architec-\ntures, they are pretrained on vast, unlabeled data via self-supervision, \nlearning powerful representations by identifying patterns without \nhuman-annotated labels These learned representations then serve as \na strong base for downstream tasks, while fine-tuning on labeled data \nfurther enhances performance on specific applications The field of single-cell biology has taken up deep learning-based \nrepresentation learning for some time, leveraging autoencod",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Published as a conference paper at ICLR 2024",
+            "section": "abstract",
+            "score": -4.190519332885742,
+            "content": "This highlights the ben-\neﬁts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By ﬁne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identiﬁes intrinsic func-\ntion",
+            "statistics": {
+              "sample_sizes": [
+                3662
+              ],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+            "section": "introduction",
+            "score": -5.638586044311523,
+            "content": "We first describe multimedia data modalities that are commonly used in digital phenotyping\nprojects related to social human behavior, including common schemes for acquiring naturalistic\ndata We then discuss case–control studies for identifying statistically significant differences be-\ntween cohorts with and without autism We next review efforts to automatically classify autism\nusingML.Finally,wehighlightongoingchallengesforthefield,correspondingareasofopportu-\nnityforinnovatorstomakeasignificant",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+            "section": "3.comprehensive science mapping analysis",
+            "score": -6.9320220947265625,
+            "content": "They accomplished gene \nprioritisation by using five propagation algorithms: “simple random \nwalk, heat kernel diffusion, PageRank with priors, HITS with priors, and \nK-step Markov ” 4.2.2 Biomarkers and toxic chemical observations \nThe aim of autism research on genetic and chemical aetiology is: to \nfind out the validated biomarkers, for facilitating the early autism \ndiagnosis, prediction of healing response, pursuing progression, evalu -\nating risk, and medical development This subsection con",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          }
+        ],
+        "sample size statistical power developmental disorders": [
+          {
+            "paper": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+            "section": "methods",
+            "score": -4.193986892700195,
+            "content": "22 Packer, A Neocortical neurogenesis and the etiology of autism spectrum disorder Neurosci Biobehav Rev 64, 185–195 (2016) 23 Fang, W Q et al Overproduction of upper-layer neurons in the neocortex leads to autism-like features in mice Cell Reports 9, 1635–1643 (2014) © 2017 Macmillan Publishers Limited, part of Springer Nature All rights reserved letter reSeArCHMethODS\nData reporting  No statistical methods were used to predetermine sample size The experiments were not randomized Sample  This s",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Computational Methods to Measure Patterns of Gaze",
+            "section": "discussion",
+            "score": -4.21386194229126,
+            "content": "Our goal is to assess multiple types ofbehavioral features, including gaze, and use all featuresFigure 2 Gaze Patterns During Salient Social Moments\nTime spent looking at right side\nof the screen, %IntervalA\n0 20 40 60 80 100\nTime spent looking at right side\nof the screen, %Entire movieB\n0 20 40 60 80 100Typical development\n(n = 360)ASD(n= 28) Typical development(n = 366) ASD(n = 33)Movie timeline\nDensity\nDensity\nChildren’s gaze behavior was measured during a salient segment of the movie, during",
+            "statistics": {
+              "sample_sizes": [
+                360,
+                28,
+                366,
+                33
+              ],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Eye-Tracking–Based Measurement of Social Visual Engagement",
+            "section": "references",
+            "score": -5.547475814819336,
+            "content": "In this sample, 414 (87.5%)children received the toddler module fThere were 252 children with nonautism diagnoses (2 children missing data because they were not yet walking,\nno ADOS-2 conducted because administration would be considered invalid) gThe Mullen Scales of Early Learning is a standardized developmental assessment, administered by a trained\nclinical specialist, to measure a child’s language, motor, perceptual, and cognitive abilities Mullen verbal abilityage equivalent score, in months",
+            "statistics": {
+              "sample_sizes": [
+                252,
+                2
+              ],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "AUTISM 2017 © The Authors,",
+            "section": "discussion",
+            "score": -5.565521717071533,
+            "content": "Scores on these subscales were used to determine brain-behavior features used in the analysis The MSEL ( 44) is a standardized, normed, developmental assess-\nment that provides an overall index of cognitive ability and delay Chil-\ndren were assessed at 24 months of ag e, and their scores on the receptive\nlanguage, expressive language, visual reception, fine motor, and gross\nmotor subscales were used to determine brain-behavior features usedin the analysis The Communication and Symbolic Behavior ",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+            "section": "results",
+            "score": -5.589977741241455,
+            "content": "Results from \nthe 6 month brain volume findings have previously been reported for a subset of \nthis sample34 Subjects were enrolled as HR if they had an older sibling with a clinical diagno -\nsis of ASD confirmed with the Autism Diagnostic Interview-Revised35 (ADI-R) Subjects were enrolled in the LR group if they had an older sibling without evi -\ndence of ASD and no family history of a first or second-degree relative with ASD Exclusion criteria for both groups included the following: (1) diagno",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          }
+        ],
+        "replication reproducibility neuroimaging studies": [
+          {
+            "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+            "section": "discussion",
+            "score": -4.623360633850098,
+            "content": "≡Recommendations to implement the proposed models : Some \nstudies constructed predictive models for autistic diagnosis and \nothers ranked their results, such as prioritised finding risky genes and \nrecommended to replicate their finding for future work Researchers \nmentioned their constructed predictive models for promoting the \ndiagnosis of ASD and may use the “cell type-specific ASD-associated \ngenes and gene sets” as prospective biomarkers of ASD [12] Other \nstudy recommended replicating thei",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "RESEARCH ARTICLE SUMMARY◥",
+            "section": "conclusion",
+            "score": -5.199727535247803,
+            "content": "We perfor med deep single-nucleus RNA sequencing (snRNA-seq)\nto examine cell composition and transcriptomi cs, identifying dysregulation of cell type –specific gene\nregulatory networks (GRNs) in autism spectrum disord er (ASD), which we corrobora ted using sing le-nucleus\nassay for transposase-accessible chromatin with sequ encing (snATAC-seq) and spatial transcriptomics Transcriptomic changes were primarily cell type specific, involving multiple cell types, most prominently\ninterhemispheric and",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "RESEARCH ARTICLE SUMMARY◥",
+            "section": "results",
+            "score": -5.51422643661499,
+            "content": "These regulon networks asso-\nciated with ASD risk reflect down-regulation\nof synaptic vesicle regul ation, neurotransmis-\nsion, and components related to synaptic de-\nvelopment and organization pathways, which\nhave been observed in other studies ( 8,13,14) A number of these TFs have important roles\nin the development and maintenance of cell\nidentity (e.g., CUX1 ,SOX6 ,a n d FOXP2 ), provid-\ning a link between fetal development, involv-ing ASD risk-locus enrichment in specific TFs,\nand its postna",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+            "section": "references",
+            "score": -5.757323741912842,
+            "content": "Reliably estimating higher \norder moments requires increasing amounts of data, hence none of \nour models specified any age-related fixed-effects or random effects \nin the ν term However, αν was found to be important in terms of model \nfit and hence we have used a generalized gamma distribution (Sup -\nplementary Information 1) Defining developmental milestones\nGAMLSS modelling also allowed us to leverage the aggregated \nlife-spanning neuroimaging dataset to derive developmental mile -\nstones (tha",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          },
+          {
+            "paper": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+            "section": "methods",
+            "score": -6.5227861404418945,
+            "content": "22 Packer, A Neocortical neurogenesis and the etiology of autism spectrum disorder Neurosci Biobehav Rev 64, 185–195 (2016) 23 Fang, W Q et al Overproduction of upper-layer neurons in the neocortex leads to autism-like features in mice Cell Reports 9, 1635–1643 (2014) © 2017 Macmillan Publishers Limited, part of Springer Nature All rights reserved letter reSeArCHMethODS\nData reporting  No statistical methods were used to predetermine sample size The experiments were not randomized Sample  This s",
+            "statistics": {
+              "sample_sizes": [],
+              "effect_sizes": [],
+              "accuracy_metrics": [],
+              "p_values": [],
+              "confidence_intervals": []
+            }
+          }
+        ]
+      },
+      "convergent_findings": [],
+      "divergent_findings": [],
+      "methodological_innovations": [
+        {
+          "keyword": "deep learning",
+          "context": "further enhances performance on specific applications The field of single-cell biology has taken up deep learning-based \nrepresentation learning for some time, leveraging autoencoders16,17 \nfor analysis tasks like data integration18, atlas mapping19 and perturba -\ntion prediction20 Recently, foundat",
+          "paper": "Nature Methods",
+          "score": -2.9317667484283447
+        },
+        {
+          "keyword": "transformer",
+          "context": "Commonly based on transformer architec-\ntures, they are pretrained on vast, unlabeled data via self-supervision, \nlearning powerful representations by identifying patterns without \nhuman-annotated labels These learned",
+          "paper": "Nature Methods",
+          "score": -2.9317667484283447
+        },
+        {
+          "keyword": "integration",
+          "context": "representation learning for some time, leveraging autoencoders16,17 \nfor analysis tasks like data integration18, atlas mapping19 and perturba -\ntion prediction20 Recently, foundation models explicitly designed for \nsingle-cell genomics have emerged21– 25 These models differ in tokeniza -\ntion and",
+          "paper": "Nature Methods",
+          "score": -2.9317667484283447
+        },
+        {
+          "keyword": "multi-modal",
+          "context": "ract organizational principles fundamental\nto the brain There remain exciting areas for future work Multi-modal training could integrate fMRI with ad-\nditional recording modalities, such as EEG and MEG, or different brain-wise information such\nas structural, functional, and genomic data Probing a wi",
+          "paper": "Published as a conference paper at ICLR 2024",
+          "score": -4.190519332885742
+        },
+        {
+          "keyword": "digital phenotyping",
+          "context": "We first describe multimedia data modalities that are commonly used in digital phenotyping\nprojects related to social human behavior, including common schemes for acquiring naturalistic\ndata We then discuss case–control studies for identifying statistically significant d",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "score": -5.638586044311523
+        },
+        {
+          "keyword": "longitudinal",
+          "context": "small to reliably evaluate theeffectsofsex,race/ethnicity,andcaregivereducation.Larger\nsamples and longitudinal information about child diag-nosis are needed to evaluate the positive predictive valueFigure 3",
+          "paper": "Computational Methods to Measure Patterns of Gaze",
+          "score": -4.21386194229126
+        },
+        {
+          "keyword": "longitudinal",
+          "context": "bipolar disorder in a first-degree relative The sample for this analysis included all children with longitudinal imaging data \nprocessed until 31 August 2015 The final sample included 318 HR and 117 LR \nchildren, each with 2–3 MRI scans (Extended Data Table 1) Assessment protocols Behavioural assess",
+          "paper": "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+          "score": -5.589977741241455
+        },
+        {
+          "keyword": "novel",
+          "context": "n Toddlers) by other researchers for \nvarious populations of children and families with autism [27] Novel \ngenetic approaches involved in neurodevelopment disorders is \nhighly recommended to help and support autism research [34] The \nwhole genome ranking had been proposed as a useful resource for \nA",
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "score": -4.623360633850098
+        },
+        {
+          "keyword": "prospective",
+          "context": "g the \ndiagnosis of ASD and may use the “cell type-specific ASD-associated \ngenes and gene sets” as prospective biomarkers of ASD [12] Other \nstudy recommended replicating their findings (the Rapid Interactive \nScreening Test for Autism in Toddlers) by other researchers for \nvarious populations of c",
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "score": -4.623360633850098
+        }
+      ],
+      "research_gaps": [
+        {
+          "gap": "1 Introduction\nThe human brain is a dynamic system characterized as an extensive (feedback) network generating\ncomplex spatiotemporal dynamics of its activity Analyzing such dynamics and linking them to\nnormative adaptive cognition and behaviors, as well as their maladaptive forms in a disease condition\nis of paramount importance in neuroscience and medicine However, the fields have been hampered\nby a lack of predictive power owing to the gap between the complexity of the brain network and the\ncontrasting simplicity of brain imaging analytics [ 1] Hence, developing an accurate predictive model\nusing high-dimensional brain imaging data and learning rich representations of brain function will\nhelp close this gap and advance toward precision neuroscience ∗Equal Contribution\n†Co-corresponding author\n37th Conference on Neural Information Processing Systems (NeurIPS 2023) Among many brain imaging modalities, functional Magnetic Resonance Imaging (fMRI) provides a\nunique opportunity to model the spatiotemporal patterns of brain electrochemical activity Functional\nMRI captures a temporal sequence of 3D images (a stack of 2D slices) of Blood Oxygenation Level\nDependent (BOLD) signals with time resolution ranging from 0",
+          "indicator": "lack of",
+          "paper": "SwiFT: Swin 4D fMRI Transformer",
+          "section": "introduction"
+        },
+        {
+          "gap": "This highlights the ben-\neﬁts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By ﬁne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identiﬁes intrinsic func-\ntional connectivity maps directly from pretraining, clustering parcels into known systems This\ndemonstrates how self-supervised objectives can extract organizational principles fundamental\nto the brain There remain exciting areas for future work Multi-modal training could integrate fMRI with ad-\nditional recording modalities, such as EEG and MEG, or different brain-wise information such\nas structural, functional, and genomic data Probing a wider range of cognitive states and com-\nbined regularization may yield more generalizable representations In future work, we could\nassess zero-shot classiﬁcation on expanded functional atlases beyond the 7 networks used here Overall, BrainLM provides a springboard for accelerated research at the intersection of neuro-\nscience and AI We hope that this work spurs further development of foundation models that can\nhelp elucidate the intricate workings of the human brain 9\n\nPublished as a conference paper at ICLR 2024\n6A CKNOWLEDGMENT\nWe thank the Yale Wu Tsai Institute for supporting JOC with a Postdoctoral Fellowship, the\nCAPES-Yale Graduate Scholars Program for support AHOF and are grateful to Insu Han and Amin\nKarbasi for their crucial insights and coding assistance in model training Their contributions\nhave signiﬁcantly enhanced our research REFERENCES\nChadi G Abdallah Brain networks associated with covid-19 risk: Data from 3662 participants Chronic Stress , 5:24705470211066770, 2021 Roman Beliy, Guy Gaziv, Assaf Hoogi, Francesca Strappini, Tal Golan, and Michal Irani",
+          "indicator": "future work",
+          "paper": "Published as a conference paper at ICLR 2024",
+          "section": "abstract"
+        },
+        {
+          "gap": "Finally,wehighlightongoingchallengesforthefield,correspondingareasofopportu-\nnityforinnovatorstomakeasignificantimpact,andlow-hangingfruitbasedonsuccessfulstudies\nand methods applied to other behaviors and neuropsychiatric presentations",
+          "indicator": "challenge",
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "section": "introduction"
+        },
+        {
+          "gap": "com by College of Medicine of Seoul National Univ user on 11/24/2025\n\nin combination to evaluate the sensitivity and specificity\nof the app as a screening tool A limitation of this study isthat the sample size was too small to reliably evaluate theeffectsofsex,race/ethnicity,andcaregivereducation",
+          "indicator": "limitation",
+          "paper": "Computational Methods to Measure Patterns of Gaze",
+          "section": "discussion"
+        },
+        {
+          "gap": "5%)children received the toddler module fThere were 252 children with nonautism diagnoses (2 children missing data because they were not yet walking,\nno ADOS-2 conducted because administration would be considered invalid) gThe Mullen Scales of Early Learning is a standardized developmental assessment, administered by a trained\nclinical specialist, to measure a child’s language, motor, perceptual, and cognitive abilities Mullen verbal abilityage equivalent score, in months, calculated as the average of the Mullen expressive language age equivalentscore and the Mullen receptive language age equivalent score Scores range from 1 to 70 months, with higherscores indicating more-advanced receptive and expressive language abilities Mullen nonverbal ability ageequivalent score, in months, calculated as Mullen visual reception age equivalent score Scores range from 1 to69 months, with higher scores indicating more-advanced nonverbal problem-solving abilities Mullen ageequivalents indicate the age bracket in the Mullen norming sample that had the same median score as a testedchild’s raw score Age equivalents are helpful in showing differences between performance areas or inemphasizing that a child’s score was similar to or different from abilities expected at a given chronological age hExpert clinician diagnosis of 1 or more co-occurring developmental disabilities, including language, cognitive, or\nmotor delays, vs no clinical diagnosis of any kind Speech-language and global developmental delays were themost common other diagnoses given",
+          "indicator": "not yet",
+          "paper": "Eye-Tracking–Based Measurement of Social Visual Engagement",
+          "section": "references"
+        },
+        {
+          "gap": "≡Recommendations to implement the proposed models : Some \nstudies constructed predictive models for autistic diagnosis and \nothers ranked their results, such as prioritised finding risky genes and \nrecommended to replicate their finding for future work Researchers \nmentioned their constructed predictive models for promoting the \ndiagnosis of ASD and may use the “cell type-specific ASD-associated \ngenes and gene sets” as prospective biomarkers of ASD [12] Other \nstudy recommended replicating their findings (the Rapid Interactive \nScreening Test for Autism in Toddlers) by other researchers for \nvarious populations of children and families with autism [27] Novel \ngenetic approaches involved in neurodevelopment disorders is \nhighly recommended to help and support autism research [34] The \nwhole genome ranking had been proposed as a useful resource for \nASD gene discovery effort [3] The study constructed a novelty of \nidentifying ASD risk genes and toxic chemicals that can lead to better \nhealthcare decisions [4] Another study proposed as a starting point \nto produce new suggestions to investigate presently appreciated in \nthe molecular aetiology of autism [29] Hybrid deep lightweight \nfeatures extracted from EEG signals are used and intended to be S",
+          "indicator": "future work",
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "section": "discussion"
+        },
+        {
+          "gap": "Reliably estimating higher \norder moments requires increasing amounts of data, hence none of \nour models specified any age-related fixed-effects or random effects \nin the ν term However, αν was found to be important in terms of model \nfit and hence we have used a generalized gamma distribution (Sup -\nplementary Information 1) Defining developmental milestones\nGAMLSS modelling also allowed us to leverage the aggregated \nlife-spanning neuroimaging dataset to derive developmental mile -\nstones (that is, peaks of trajectories) and compare them to existing \nliterature The cerebrum tissue classes from 100 studies (Fig 1, Sup -\nplementary Tables 1",
+          "indicator": "require",
+          "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+          "section": "references"
+        }
+      ],
+      "evidence_strength": "weak",
+      "key_papers": [
+        "Nature Methods",
+        "Published as a conference paper at ICLR 2024",
+        "AUTISM 2017 © The Authors,",
+        "Computational Methods to Measure Patterns of Gaze",
+        "RESEARCH ARTICLE SUMMARY◥",
+        "Eye-Tracking–Based Measurement of Social Visual Engagement",
+        "Nature | Vol 604 | 21 April 2022 | 525",
+        "SwiFT: Swin 4D fMRI Transformer",
+        "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+        "348 | NATURE | VOL 542 | 16 F EbRUAR y 2017LETTER",
+        "Computers in Biology and Medicine 146 (2022) 105553"
+      ]
+    }
+  },
+  "overall_findings": {
+    "state_of_the_art": [
+      {
+        "keyword": "machine learning",
+        "context": "ants (like \nmercury, toluene, lead, PCBs, and arsenic) In Ref [2], they used signal \nprocessing and machine learning methods that integrated to analyse \n“microarray gene expression data from homogeneous groups of children \ndiagnosed with classic autism, excluding the autism with regression and \nhigh",
+        "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+        "score": 5.192910194396973
+      },
+      {
+        "keyword": "novel",
+        "context": "n Toddlers) by other researchers for \nvarious populations of children and families with autism [27] Novel \ngenetic approaches involved in neurodevelopment disorders is \nhighly recommended to help and support autism research [34] The \nwhole genome ranking had been proposed as a useful resource for \nA",
+        "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+        "score": 3.8769872188568115
+      },
+      {
+        "keyword": "prospective",
+        "context": "g the \ndiagnosis of ASD and may use the “cell type-specific ASD-associated \ngenes and gene sets” as prospective biomarkers of ASD [12] Other \nstudy recommended replicating their findings (the Rapid Interactive \nScreening Test for Autism in Toddlers) by other researchers for \nvarious populations of c",
+        "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+        "score": 3.8769872188568115
+      },
+      {
+        "keyword": "longitudinal",
+        "context": "le scores, which were then investigated as \nage-normed and sex-stratifed measures of diagnostic and longitudinal \natypicalities of brain structure across the lifespan The GAMLSS approach allowed not only modelling of age-related \nchanges in brain phenotypes but also age related-changes in the vari -",
+        "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+        "score": 0.6102191209793091
+      },
+      {
+        "keyword": "integration",
+        "context": "or even to identify influential genes in the context of intelligent decision- \nmaking methods The integration of medical tests and demographic \ncriteria can play a vital role in the detection of triage severity levels, and \nminimal attention has been paid to the prioritisation solution for the \nau",
+        "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+        "score": 0.4824858605861664
+      },
+      {
+        "keyword": "transformer",
+        "context": "g deep learnin g and molecular biology, making it\npossible to understand the language of life Using transformer-based\nstructures and self-supervised pretraining mechanisms —such as\nmasked nucleotide modeling and sequence containment —Gene-\nLLMs generate informative rep resentations from raw genetic",
+        "paper": "Gene-LLMs: a comprehensive",
+        "score": -1.6968050003051758
+      },
+      {
+        "keyword": "multimodal",
+        "context": "nd targeted therapy The mostadvanced encoder –decoder architectures, position-aware embeddings,\nand multimodal fusion strategies are being encompassed in studies ofgenomic representation learning to e nable the incorporation of multiple\ndata types in one model",
+        "paper": "Gene-LLMs: a comprehensive",
+        "score": -1.6968050003051758
+      },
+      {
+        "keyword": "real-time",
+        "context": "ingSuperpower\nGlass,the parent interacts with the child wearing the Glass system.The Glass provides real-time\nemotion cues to the child via a computer vision facial emotion detection system SuperpowerGlasswasdevelopedandrefinedthroughaniterativedesignprocess.Inearlyprototypingsessions,\npossible user",
+        "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+        "score": -1.9895308017730713
+      },
+      {
+        "keyword": "deep learning",
+        "context": "further enhances performance on specific applications The field of single-cell biology has taken up deep learning-based \nrepresentation learning for some time, leveraging autoencoders16,17 \nfor analysis tasks like data integration18, atlas mapping19 and perturba -\ntion prediction20 Recently, foundat",
+        "paper": "Nature Methods",
+        "score": -2.9317667484283447
+      },
+      {
+        "keyword": "digital phenotyping",
+        "context": "l therapies using data science We describe both case–control studies\nand classification systems for digital phenotyping We then discuss digi-\ntal diagnostics and therapeutics that integrate machine learning models ofautism-related behaviors, including the factors that must be addressed for\n211\n\nDown",
+        "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+        "score": -3.839472532272339
+      }
+    ],
+    "critical_gaps": [
+      {
+        "gap": "≡Recommendations to implement the proposed models : Some \nstudies constructed predictive models for autistic diagnosis and \nothers ranked their results, such as prioritised finding risky genes and \nrecommended to replicate their finding for future work Researchers \nmentioned their constructed predictive models for promoting the \ndiagnosis of ASD and may use the “cell type-specific ASD-associated \ngenes and gene sets” as prospective biomarkers of ASD [12] Other \nstudy recommended replicating their findings (the Rapid Interactive \nScreening Test for Autism in Toddlers) by other researchers for \nvarious populations of children and families with autism [27] Novel \ngenetic approaches involved in neurodevelopment disorders is \nhighly recommended to help and support autism research [34] The \nwhole genome ranking had been proposed as a useful resource for \nASD gene discovery effort [3] The study constructed a novelty of \nidentifying ASD risk genes and toxic chemicals that can lead to better \nhealthcare decisions [4] Another study proposed as a starting point \nto produce new suggestions to investigate presently appreciated in \nthe molecular aetiology of autism [29] Hybrid deep lightweight \nfeatures extracted from EEG signals are used and intended to be S",
+        "indicator": "future work",
+        "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+        "section": "discussion"
+      },
+      {
+        "gap": "INTRODUCTION\nAutism spectrum disorder (ASD) is a neurodevelopmental disorder\ncharacterized by deficits in social behavior and the presence of restric-tive and repetitive behaviors ( 1) It is estimated that 1 in 68 children\nare affected by the disorder ( 2), and despite tremendous research efforts,\nASD still confers substantial burden to affected individuals, their families,and the community ( 3,4) Intervention is critically important, and there\nis a general consensus that early dete ction paired with early intervention\nwould have a significant impact on improving outcomes ( 5–7) One barrier to early (that is, before 24 months) detection is that the\ndefining behavioral characteristic so fA S Dg e n e r a l l yu n f o l dd u r i n gt h e\nsecond year of life, typically showing consolidation of the full behavioralsyndrome by about 24 months of age or later ( 8,9) Behavioral differ-\nences in ASD have been observed as early as 6 months of age in char-\nacteristics such as gross motor ability, visual reception, and patterns ofeye tracking ( 10–14); however, these associate d characteristics have not\nbeen able to predict which children will later receive a diagnosis Given\nthe known plasticity of the brain and behavior during the first year oflife, together with the absence of the defining features of the disorder,intervention during this presymptomatic phase, before consolidation of\nthe full syndrome of ASD, is likely to show considerably stronger\nbenefits compared with later treatments ( 5) Research on neurodegenerative dis orders has shown that changes in\nthe brain are often seen preceding clinical manifestations For example,\nin Parkinson ’s disease, about 50% of the neurons in the substantia nigra\na r el o s tb e f o r ec l i n i c a lf e a t u r e sb e c o m ea p p a r e n t( 15) This suggests that\nbrain-related changes appear earl ier than behavioral changes and may\nbe useful in predicting future behavioral diagnosis",
+        "indicator": "absence of",
+        "paper": "AUTISM 2017 © The Authors,",
+        "section": "introduction"
+      },
+      {
+        "gap": "’ \nTo determine the current state of academic knowledge about pri-\noritising ASD, the aim of previous studies and limitations should be \ndiscussed In Ref [17], the authors summarised 13 studies where AI is \nused to assess and examine whether other behavioural data can poten -\ntially be used to recognize ASD characteristics Although the machine \nlearning algorithms depend on the training dataset, no extensive \nresearch assesses how the quality of input data can affect the accuracy \nyet While the ethical issue around data privacy is also another problem \nunder debate, reports on AI technology integrated with autism disorder \nissues are not efficient The survey of [18] discussed how individuals \nwith ASD were handled by technology-based intervention methodolo -\ngies, including modern computer-aided systems, computer \nvision-assisted technologies and virtual reality",
+        "indicator": "limitation",
+        "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+        "section": "introduction"
+      },
+      {
+        "gap": "Challenge categories for prioritisation and triage S",
+        "indicator": "challenge",
+        "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+        "section": "discussion"
+      },
+      {
+        "gap": "Moreover, genomic LLMs can also be used to predict the geneexpression, which is essential for understanding the behavior of cells\nunder different biological states Thus, in addition to having the\nability to foresee gene activity or inactivity in different cell types, theLLMs can, through the combination of the RNA pro ﬁles with DNA\nsequence information, accurately determine the speci ﬁc level at\nwhich the genes are functioning This feature is very importantin areas where an accurate model of gene expression dynamics isrequired, such as in drug discovery, regenerative medicine, andcancer genomics The development of self-supervised learning\ntechniques, tokenization, and model interpretability is crucial to\nimproving genomic LLMs ’ability to analyze complex genomic data\nas the ﬁeld continues to expand These models could be harnessed to\ntransform the way precision medicine and genomics research arebeing carried out as they establish the link between unprocessedgenomic sequences and meaningful biological insights 3 Whole-genome sequencing\nlaboratory andbioinformatics work ﬂow\nThe WGS work ﬂow is used sequentially to decode and interpret\na person ’s complete genetic code It involves laboratory-based\nexperimental methods, high-speed sequencing technologies,computational data processing, and the interpretation of clinical\nresults",
+        "indicator": "require",
+        "paper": "Gene-LLMs: a comprehensive",
+        "section": "2 background study"
+      },
+      {
+        "gap": "Finally,wehighlightongoingchallengesforthefield,correspondingareasofopportu-\nnityforinnovatorstomakeasignificantimpact,andlow-hangingfruitbasedonsuccessfulstudies\nand methods applied to other behaviors and neuropsychiatric presentations",
+        "indicator": "challenge",
+        "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+        "section": "introduction"
+      },
+      {
+        "gap": "This highlights the ben-\neﬁts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By ﬁne-tuning, brain dy-\nnamics can be decoded to predict clinical variables and psychiatric disorders better than base-\nline models This could enable non-invasive assessment of cognitive health using resting-state\nfMRI alone Finally, without any network-based supervision, BrainLM identiﬁes intrinsic func-\ntional connectivity maps directly from pretraining, clustering parcels into known systems This\ndemonstrates how self-supervised objectives can extract organizational principles fundamental\nto the brain There remain exciting areas for future work Multi-modal training could integrate fMRI with ad-\nditional recording modalities, such as EEG and MEG, or different brain-wise information such\nas structural, functional, and genomic data Probing a wider range of cognitive states and com-\nbined regularization may yield more generalizable representations In future work, we could\nassess zero-shot classiﬁcation on expanded functional atlases beyond the 7 networks used here Overall, BrainLM provides a springboard for accelerated research at the intersection of neuro-\nscience and AI We hope that this work spurs further development of foundation models that can\nhelp elucidate the intricate workings of the human brain 9\n\nPublished as a conference paper at ICLR 2024\n6A CKNOWLEDGMENT\nWe thank the Yale Wu Tsai Institute for supporting JOC with a Postdoctoral Fellowship, the\nCAPES-Yale Graduate Scholars Program for support AHOF and are grateful to Insu Han and Amin\nKarbasi for their crucial insights and coding assistance in model training Their contributions\nhave signiﬁcantly enhanced our research REFERENCES\nChadi G Abdallah Brain networks associated with covid-19 risk: Data from 3662 participants Chronic Stress , 5:24705470211066770, 2021 Roman Beliy, Guy Gaziv, Assaf Hoogi, Francesca Strappini, Tal Golan, and Michal Irani",
+        "indicator": "future work",
+        "paper": "Published as a conference paper at ICLR 2024",
+        "section": "abstract"
+      },
+      {
+        "gap": ",\n16,48) Left –right asymmetry facilitates the development of\nlocalized and specialized modules in the brain, which can then\nhave dominant control of behavior49,50 Notably, some of the\ncortical regions highlighted here are involved in diverse social\ncognitive processes, including perceptual processing (fusiform\ngyri), cognitive and emotional control (anterior cingulate), and\nreward evaluation (orbitofrontal cortex, ventral striatum)51 However, the roles of these brain structures are by no means\nrestricted to social behavior As we found altered asymmetry of\nvarious additional regions, our ﬁndings suggest broader disrup-\ntion of lateralized neurodevelopment as part of the ASD pheno-\ntype We note that many of the regions that showed signi ﬁcant\ncase–control differences in asymmetry, including medial frontal,\nanterior cingulate, and inferior temporal regions, overlap with the\ndefault mode network (DMN) The DMN comprises various\ncortical regions located in temporal (medial and lateral), parietal\n(medial and lateral) and prefrontal (medial) cortices52 DMN\nnetwork organization has shown evidence for differences in\nASD11,53–55, including alterations in functional laterality56 Our\nﬁndings may therefore further support a role of altered later-\nalization of the DMN in ASD, warranting further investigations\nin this direction The medial orbitofrontal cortex was the only region that\nshowed signi ﬁcantly altered asymmetry of both thickness and\nsurface area in ASD, suggesting that disrupted laterality of this\nregion might be particularly important in ASD The orbitofrontal\ncortex may be involved in repetitive and stereotyped behaviors in\nASD, owing to its roles in executive functions57",
+        "indicator": "further investigation",
+        "paper": "ARTICLE",
+        "section": "discussion"
+      },
+      {
+        "gap": "Finally,wedescribeongoingchallengesandpotentialopportunitiesforthefield\nof autism data science Given the heterogeneous nature of autism and the complexities of the\nrelevantbehaviors,thisreviewcontainsinsightsthatarerelevanttoneurologicalbehavioranalysis\nand digital psychiatry more broadly",
+        "indicator": "challenge",
+        "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+        "section": "abstract"
+      },
+      {
+        "gap": "B u t ,o v e rt h ep a s t1 5y e a r s ,e p i g e -netic and transcriptional profiling of postmor-\ntem brain samples from multiple psychiatric\nconditions, including autism spectrum dis-\norder (ASD), have revealed robust underlying\nmolecular differences I nA S D ,t h i sr e f l e c t su p -\nregulation of immune signaling genes, down-\nregulation of neuronal markers and synaptic\ngenes, and a blunting of gene expression sig-natures of cortical regional identity How a\ngenetically complex condition such as ASD\nconverges on shared transcriptional altera-\ntions remains a mystery This gap is further\namplified by the lack of biological insightsinto the differences in laminar and cell type –\nspecific pathways affected in ASD and the\nunderlying gene regulatory mechanisms",
+        "indicator": "lack of",
+        "paper": "RESEARCH ARTICLE SUMMARY◥",
+        "section": "introduction"
+      },
+      {
+        "gap": "The reliability of the models was assessed and endorsed by \ncross-validation and bootstrap resampling procedures (Supplementary \nInformation 3) We leveraged these normative trajectories to bench -\nmark individual scans by centile scores, which were then investigated as \nage-normed and sex-stratifed measures of diagnostic and longitudinal \natypicalities of brain structure across the lifespan The GAMLSS approach allowed not only modelling of age-related \nchanges in brain phenotypes but also age related-changes in the vari -\nability of phenotypes, and in the form of both linear and nonlinear \nchanges over time, thereby overcoming potential limitations of \nconventional additive models that only allow additive means to be \nmodelled2 In addition, study-specific offsets (mean and variance) \nfor each brain phenotype were also modelled as random effects These modelling criteria are particularly important in the context of \nestablishing growth reference charts as recommended by the World \nHealth Organization24, as it is reasonable to assume the distribution \nof higher order moments (for example, variance) changes with age, \nsex, site/study and pre-processing pipeline, and it is impossible to \ncircumvent some of these issues by collecting standardized data \nlongitudinally for individuals spanning the approximately 100-year \nage range Furthermore, recent studies suggest that changes in \nbetween-subject variability might intersect with vulnerability for \ndeveloping a mental health condition74 The use of data spanning \nthe entire age range is also critical, as data from partial age-windows \ncan bias estimation of growth charts when extrapolated to the whole \nlifespan In short, using a sex-stratified approach24, age, preprocess -\ning pipeline and study were each included in the GAMLSS model \nestimation of first order (μ ) and second order (σ ) distribution param -\neters of a generalized gamma distribution using fractional polynomi -\nals to model nonlinear trends",
+        "indicator": "limitation",
+        "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+        "section": "references"
+      },
+      {
+        "gap": "4d, Supplementary Information 13) In \nsummary, centile normalization of brain metrics reproducibly detected \ncase–control differences and genetic effects on brain structure, as well as \nlong-term sequelae of adverse birth outcomes even in the adult brain10 Longitudinal centile changes\nOwing to the relative paucity of longitudinal imaging data (about \n10% of the reference dataset), normative models were estimated \nfrom cross-sectional data collected at a single time point However, \nthe generalizability of cross-sectional models to longitudinal assess -\nment is important for future research Within-subject variability of \ncentile scores derived from longitudinally repeated scans, measured \nwith the interquartile range (IQR) (Methods, ‘Longitudinal stability’ , \nSupplementary Information 1",
+        "indicator": "future research",
+        "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+        "section": "results"
+      },
+      {
+        "gap": "05 centile points), indicating that centile \nscoring of brain structure was generally stable over time, although \nthere was also some evidence of between-study and cross-disorder dif -\nferences in within-subject variability (Supplementary Information 14) Notably, individuals who changed diagnostic categories—for example, \nthose who progressed from mild cognitive impairment to Alzheimer’s \ndisease over the course of repeated scanning—showed small but sig -\nnificant increases in within-subject variability of centile scores (Sup -\nplementary Information 14, Supplementary Tables 5, 6) Within-subject \nvariability was also slightly higher in samples from younger individuals \n(Supplementary Information 14), which could reflect increased noise \ndue to the technical or data quality challenges associated with scan -\nning younger individuals, but is also consistent with the evidence of \nincreased variability in earlier development observed across other \nanthropometric traits64 Centile scoring of new MRI data\nA key challenge for brain charts is the accurate centile scoring of \nout-of-sample MRI data, not represented in the reference dataset used \nto estimate normative trajectories",
+        "indicator": "challenge",
+        "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+        "section": "results"
+      },
+      {
+        "gap": "2, 12) Furthermore, imaging–genetics \nstudies65 may benefit from the increased heritability of centile scores \ncompared with raw volumetric data (Supplementary Information 13) Perhaps most importantly, GAMLSS modelling enabled harmonization \nacross technically diverse studies (Supplementary Information 5), and \nthus unlocked the potential value of combining primary MRI studies \nat scale to generate normative, sex-stratified brain growth charts, and \nindividual centile scores of typicality and atypicality The analogy to paediatric growth charts is not meant to imply that \nbrain charts are immediately suitable for benchmarking or quantita -\ntive diagnosis of individual patients in clinical practice Even for tradi -\ntional anthropometric growth charts (height, weight and BMI), there \nare still important caveats and nuances concerning their diagnostic \ninterpretation in individual children66; similarly, it is expected that \nconsiderable further research will be required to validate the clinical \ndiagnostic utility of brain charts However, the current results bode \nwell for future progress towards digital diagnosis of atypical brain \nstructure and development67",
+        "indicator": "require",
+        "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+        "section": "discussion"
+      },
+      {
+        "gap": "104) and The Children’s Hospital of Phila -\ndelphia’s Institutional Review Board (IRB 20-017874) and deemed not \nto require PRE or IRB oversight as it consists of secondary analysis of \nde-identified primary datasets Informed consent of participants (or \ntheir guardians) in primary studies is referenced in Supplementary \nInformation 19 and Supplementary Table 1 Model generation and specification\nTo accurately and comprehensively establish standardized brain \nreference charts across the lifespan, it is crucial to leverage multi -\nple independent and diverse datasets, especially those spanning \nprenatal and early postnatal life Here we sought to chart norma -\ntive brain development and ageing across the largest age-span and \nlargest aggregated neuroimaging dataset to date using a robust \nand scalable methodological framework2,24 We used GAMLSS2 to \nestimate cross-sectional normative age-related trends from 100 \nstudies, comprising a reference dataset of more than 100,000 scans \n(see Supplementary Tables 1",
+        "indicator": "require",
+        "paper": "Nature | Vol 604 | 21 April 2022 | 525",
+        "section": "references"
+      }
+    ],
+    "methodological_limitations": [],
+    "future_directions": []
+  }
+}

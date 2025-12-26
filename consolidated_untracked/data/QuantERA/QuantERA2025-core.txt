@@ -1,0 +1,2259 @@
+QuantERA Call 2025 Proposal Initial Draft
+1. Excellence (max. 6 pages)
+1.1 Targeted breakthrough, baseline of knowledge and skills
+Describe the targeted breakthroughs of the project.
+Describe how the science and technology contribute to the establishment of a solid baseline
+of knowledge and skills for the specific theme addressed.
+Describe the specific objectives of the project, which should be clear, measurable, realistic
+and achievable within the duration of the project.​
+
+Targeted Breakthroughs
+The central ambition of this project is to overcome the three fundamental barriers currently
+preventing Quantum Machine Learning (QML) from surpassing classical capabilities:
+Scalability (limited qubit connectivity and count), Trainability (the optimization trilemma of
+barren plateaus, measurement overhead, and classical simulability), Temporal
+Expressibility (inability to model long-range correlations), and Reliability (inherent NISQ
+fragility and lack of robustness).
+Current QML research is often limited to small-scale "toy" problems on single processors,
+heavily reliant on heuristic ansatzes that become untrainable or unreliable at scale. Our
+targeted breakthrough is to shift the paradigm from "heuristic QML" to "Physics-Aware &
+Reliable QML," establishing a rigorous theoretical and algorithmic foundation that exploits
+quantum resources efficiently and robustly.
+We target three specific foundational breakthroughs:
+1.​ Foundational Scalability via Multi-Chip Ensembles: We aim to break the
+monolithic chip limit by developing Multi-Chip Ensembles using distributed quantum
+computing and classical ensemble learning techniques. Rather than waiting for
+large-scale hardware, we will utilize distributed QML architectures to demonstrate
+that entanglement resources can be effectively distributed across separated quantum
+processing units (QPUs).​
+Beyond standard parallelization, we target Multi-Modal Data Fusion: using separate
+quantum processors to encode heterogeneous data types (e.g., Chip A for sMRI,
+Chip B fMRI). We will demonstrate that entangled ensemble strategies can fuse
+these distinct quantum feature spaces to achieve a "Collective Quantum Advantage"
+unavailable to single-chip models.
+2.​ Solving the Trainability-Efficiency-Advantage Trade-off via Physics-Informed
+Optimization: We target the fundamental trade-offs limiting QML optimization:
+Barren Plateaus (untrainability in deep circuits), Measurement Overhead
+(prohibitive sampling costs for both gradient and gradient-free methods), and the
+Simulability Trap (where trainable models lose quantum advantage). We will
+implement a hybrid Quantum Forward-Forward (QFF) algorithm driven by Hybrid
+Quantum Genetic Algorithm (HQGA).
+○​ Addressing Trainability & Advantage: QFF utilizes local goodness
+measurements to bypass Barren Plateaus without restricting the circuit to
+classically simulable log-depth structures, thereby preserving Quantum
+Advantage.
+
+○​ Addressing Efficiency: By decoupling layers, QFF avoids the costly
+backpropagation of global error. The use of superposition and
+entanglement in the HQGA significantly speed-up the convergence of
+conventional classical evolutionary algorithms, balancing the
+exploration-exploitation trade-off to minimize measurement overhead.
+3.​ Next-Generation Temporal & Structural Learning: We target the limitations of
+current QML in processing time-series and graph data. We will develop Quantum
+State Space Models (Q-SSM) that can effectively learn complex, high-dimensional
+long-range dependencies in sequential data by leveraging quantum mechanics'
+inherent properties. The quantum circuits exploit entanglement to create non-local
+correlations across feature dimensions in a single operation—capturing
+dependencies that classical models require deep stacking or attention mechanisms
+to achieve—while the LSTM-style gating propagates this information across
+arbitrarily long sequences. Unlike classical transformers that require quadratic
+2
+
+computational complexity 𝑂(𝐿 ) where 𝐿 is sequence length, our Q-SSM model has
+𝑛
+
+linear complexity 𝑂(𝐿) and access to a 2 -dimensional Hilbert space representation.
+Additionally, the quantum circuits achieve this expressivity with only 𝑂(𝑛 × 𝑙)
+2
+
+parameters versus 𝑂(𝑁 ) for equivalent classical layers (𝑛: number of qubits; 𝑙:
+number of quantum circuit layers; 𝑁: hidden dimension size), making the models
+particularly suitable for data-limited domains like biomedical signal processing
+where capturing subtle long-range temporal patterns (e.g., brain state dynamics
+across seconds of EEG) is critical but overfitting is a major concern.
+4.​ Robustness & Reliability via Fuzzy Logic and Benchmarking Protocols: We aim
+a paradigm shift from suppressing quantum noise to exploiting it as a physical
+generative resource. By utilizing Fuzzy Quantum Logic to bridge the mathematical
+gap between discrete qubits and continuous neural networks, we develop
+Physics-Informed Fuzzy Quantum Diffusion Model that achieves the first
+"Hardware-Native" AI architecture that learns the exact, drifting physical fingerprint of
+a specific quantum device. This enables NISQ computers to perform high-fidelity
+generative tasks and bespoke error mitigation without waiting for fully fault-tolerant
+hardware, effectively turning the intrinsic instability of quantum systems into a unique
+computational feature rather than a liability. To curb uncertainty from noisy models
+even further, we will design benchmarking and certification protocols, leveraging
+the QUARK (QUantum computing Application benchmaRK) framework, to ensure
+they meet industrial-grade robustness standards against adversarial perturbations
+and NISQ noise. QUARK enables this by providing a standardized, vendor-neutral
+platform to rigorously quantify critical performance metrics—such as noise
+resilience, trainability, and expressibility—under realistic hardware conditions.
+This systematic validation allows us to definitively prove that our Fuzzy Quantum
+Diffusion architecture successfully delivers a genuine quantum advantage over
+classical baselines.
+
+Baseline of Knowledge and Skills
+This project advances the state-of-the-art by establishing a new baseline for reliable,
+scalable, and trainable QML.
+●​ From Monolithic to Distributed Scalability: Currently, QML is restricted to small,
+unimodal tasks. We establish a baseline for Distributed Multi-Modal Quantum
+Ensembles, providing the protocols to fuse heterogeneous data (e.g., sMRI+fMRI)
+across networked QPUs via classical aggregation strategies.
+●​ From Gradient-Dependent to Gradient-Free/Hybrid Learning: The community
+currently struggles with the convergence of Variational Quantum Algorithms (VQAs).
+By establishing the efficacy of QFF combined with Hybrid Quantum Genetic
+
+Algorithms, we provide a new baseline for training deep quantum networks, proving
+that learnability can be maintained where classical gradients fail.
+●​ From Static Snapshots to Long-Sequence Spatio-Temporal Learning: Current
+QML approaches struggle to process dynamic, sequential data efficiently. By
+establishing Q-SSM as standard tools, we provide a new baseline for learning
+spatio-temporal data of long sequences, enabling the analysis of high-dimensional
+biological signals with linear computational complexity.
+●​ From Fragile to Certified Robustness: By combining Fuzzy Logic strategies with
+the benchmarking and certification protocols, we establish a methodology for
+Reliable QML. This contributes to the baseline skill set needed to certify quantum
+algorithms for safety-critical applications.
+The consortium brings together a unique, synergistic baseline of skills:
+●​ QML Architectures & Scalability (SNU - Cha): Deep expertise in Multi-Chip
+Ensembles, Spatio-temporal QML algorithms, Quantum State Space Models
+(Q-SSM), and computational neuroscience.
+●​ Optimization & Logic (Univ. Naples - Acampora): World-class expertise in
+Computational Intelligence, Evolutionary Algorithms, and Fuzzy Logic.
+●​ Reliability & Certification (Fraunhofer IKS - Lorenz): Industrial-grade,
+application-oriented QML expertise focused on safety, reliability and data efficiency
+aspects.
+●​ Domain Validation (Yonsei Univ - Yoo): Experimental High Energy Physics (HEP)
+expertise, providing the massive, high-dimensional datasets required to rigorously
+stress-test the quantum advantage.
+
+Specific Objectives
+The project is structured around four clear, measurable, realistic, and achievable objectives:
+●​ Objective 1: Demonstrate Scalable Distributed QML (The Scalability Objective)
+○​ Goal: Develop Multi-Chip Ensembles using input partition and ensemble
+learning protocols.
+○​ Measure: Successfully train a QML model (e.g., Quantum Transformer)
+fusing sMRI and fMRI features distributed across at least 2 simulated QPUs
+(and physical hardware if available).
+○​ Target: Demonstrate Scalability by processing a multi-modal dataset that
+exceeds the qubit capacity of a single available chip (simulating a 2x
+capacity increase via distributed processing) while achieving >90%
+classification accuracy on neuroimaging benchmarks.
+○​ Timeline: Protocols defined by Month 12; Full validation by Month 30.
+●​ Objective 2: Solve the Trainability-Efficiency-Advantage Trade-off (The
+Trainability Objective)
+○​ Goal: Develop the Quantum Forward-Forward (QFF) algorithm hybridized
+with Hybrid Quantum Genetic Algorithms.
+○​ Measure: Compare convergence rates, measurement overhead, and
+classical simulability against standard Backpropagation and pure Evolutionary
+Algorithms.
+○​ Target: Achieve convergence in deep circuits (>10 layers) where
+Backpropagation fails (Barren Plateaus), with a 20% reduction in
+measurement overhead compared to parameter-shift rules, while maintaining
+non-classicality.
+○​ Timeline: Algorithm design by Month 12; Benchmarking by Month 24.
+●​ Objective 3: Advance Next-Gen Temporal & Structural Learning (The Temporal
+Expressibility Objective)
+
+○​ Goal: Develop Q-SSM for high dimensional spatio-temporal data.
+○​ Measure: Compare Q-SSM prediction accuracy on long sequence EEG/fMRI
+data against classical transformers/SSMs and standard Quantum RNNs.
+○​ Target: Demonstrate superior long-range dependency capture (measured
+by memory capacity metrics) and linear scaling with sequence length.
+○​ Timeline: Theoretical framework by Month 18; Implementation by Month 30.
+●​ Objective 4: Tackling Uncertainty and Unreliability of Noisy Quantum Devices
+(The Reliability Objective)
+○​ Goal: Create a Fuzzy Quantum Diffusion Model enhanced by Fuzzy Logic
+controllers and reduce the model’s uncertainty by certifying its robustness
+with QUARK framework.
+○​ Measure: Generate high-fidelity synthetic data (measured by Fréchet
+Inception Distance - FID) under simulated NISQ noise and assess robustness
+using reliability metrics (e.g., Lipschitz continuity).
+○​ Target: Achieve superior generative performance and certified robustness
+compared to classical transformers/diffusion models and standard quantum
+generative models (e.g., Quantum GAN) under noise levels characteristic of
+current hardware.
+○​ Timeline: Theoretical framework by Month 18; Implementation by Month 36.
+●​ Objective 5: Validate Foundational Advantage via Domain Science (The
+Validation Objective)
+○​ Goal: Use high-complexity domain data to certify the foundational
+breakthroughs (O1-O4).
+○​ Measure:
+■​ High Energy Physics (HEP): Apply Multi-Chip Ensembles to CMS
+calorimeter-image classification (Quantum Vision Transformer),
+feature-based background estimation (Q-ABCDisCo), and waveform
+denoising (Temporal Convolutional Network-VQC) to assess
+scalability and quantum advantage across multiple HEP modalities.
+■​ Neuroscience: Apply Quantum Transformers and Q-SSM to
+EEG/fMRI data, and QFF-Evolutionary VQE/QAOA for brain
+connectivity analysis.
+■​ Cybersecurity: Apply Robust Fuzzy-Quantum Diffusion Models to
+intrusion detection logs and certify robustness against cyber- and
+privacy attacks via comprehensive benchmarking protocols.
+○​ Target: Demonstrate quantum advantage in either accuracy, expressibility, or
+training efficiency compared to classical SOTA on these specific datasets.
+○​ Timeline: Data preparation by Month 6; Final Domain Validation by Month 36.​
+
+1.2 Novelty, level of ambition and foundational character
+Describe the advance your proposal would provide beyond the state-of-the-art, and to what
+extent the proposed work is ambitious, novel and of a foundational nature. Your answer
+could refer to the ground-breaking nature of the objectives, concepts involved, issues and
+problems to be addressed, and approaches and methods to be used.
+
+Advance Beyond the State-of-the-Art
+Current Quantum Machine Learning (QML) is hitting four "hard walls": the Hardware Wall
+(single chips are too small), the Optimization Wall (Barren Plateaus make deep circuits
+untrainable), Temporal Expressibility Wall (long range temporal modeling is inefficient),
+and the Reliability Wall (models collapse under noise and lack industrial certification). This
+
+project proposes a foundational shift to dismantle these walls, moving beyond the current
+state-of-the-art (SOTA) as follows:
+1.​ From Monolithic to Distributed Multi-Modal QML Scalability:
+○​ State-of-the-Art: Current QML is constrained to single QPUs and simple datasets
+of single modality. Scaling requires larger fault-tolerant devices, which are years
+away. "Distributed" approaches often rely on expensive circuit cutting that incurs
+heavy sampling overhead.
+○​ Our Novelty (Multi-Chip Ensembles): We introduce a Distributed Multi-Modal
+Ensemble framework, which aggregates independent quantum models trained on
+heterogeneous data types (e.g., sMRI on Chip A, fMRI on Chip B). Instead of
+cutting circuits, our Multi-Chip Ensembles framework utilizes input partition and
+classical ensemble learning techniques to knit together multiple smaller QPUs. We
+specifically optimize the "inter-chip entanglement cost" to train high-expressibility
+models (such as Quantum Transformers) across fragmented hardware without
+requiring a single large fault-tolerant device.
+○​ Foundational Advance: We move beyond simple parallelization to Multi-Modal
+Data Fusion in Hilbert space. We establish the resource theory for "Collective
+Quantum Advantage," demonstrating that entangled ensemble strategies can
+fuse distinct quantum feature spaces to solve problems larger than any single
+available chip.
+2.​ From Global Backpropagation to Local and Evolutionary Learning:
+○​ State-of-the-Art: Optimization in QML faces a trilemma. Gradient-based methods
+suffer from barren plateaus and high measurement costs. Gradient-free
+methods suffer from slow convergence. Strategies that "fix" trainability (like
+restricting circuit depth) often render the model classically simulable, destroying
+quantum advantage.
+○​ Our Novelty (Quantum Forward-Forward & Hybrid Quantum Genetic
+Algorithms): We introduces a novel symbiotic framework that integrates the
+architectural decoupling of the Quantum Forward-Forward algorithm with the
+quantum-native evolutionary mechanics of the Hybrid Quantum Genetic
+Algorithm (HQGA). Unlike state-of-the-art methods that are forced to choose
+between the prohibitive measurement overhead of global backpropagation or the
+"dequantization" required to avoid barren plateaus, our approach foundationally
+redefines QML training by decomposing deep circuits into locally optimized layers
+solved via entangled crossover and quantum elitism. This represents a
+paradigm shift that allows for the training of deep, highly entangled quantum
+models on NISQ hardware—architectures that are currently deemed
+untrainable—by mathematically circumventing the vanishing gradient problem while
+preserving the non-classical computational advantage that gradient-free methods
+typically sacrifice.
+○​ Foundational Advance: We demonstrate that this hybrid approach navigates the
+"Classical Simulability Trap." By using HQGA’s global search, we can train deep,
+expressive circuits that remain mathematically non-simulable by classical
+computers, preserving the core quantum resource.
+3.​ From Static Snapshots to Next Generation Spatio-Temporal Learning:
+○​ State-of-the-Art: Current QML algorithms are largely static. Existing Quantum
+RNNs struggle with high dimensional spatio-temporal data with long sequences.
+While classical transformers can effectively learn complex, long range
+2
+
+dependencies, they incur a high computational cost that scales quadratically 𝑂(𝐿 )
+with sequence length 𝐿.
+○​ Our Novelty (Q-SSM): We develop Quantum State Space Models (Q-SSM)
+architecture that integrates variational quantum circuits with recurrent gating
+mechanisms for sequential data, addressing a critical gap in existing QML—prior
+quantum sequence models either lacked temporal memory (collapsing sequences
+
+via pooling) or attempted fully quantum recurrence that breaks gradient flow. Our
+hybrid design uniquely combines three-branch quantum superposition for
+expressive feature extraction with classical LSTM-style gating for selective memory,
+enabling end-to-end differentiable training while preserving quantum
+expressivity.
+○​ Foundational Advance: We set a new paradigm for spatio-temporal QML
+algorithms that exploits quantum entanglement for capturing correlations across
+high-dimensional feature spaces that are provably hard for classical models to
+represent efficiently. By demonstrating that quantum circuits can serve as drop-in
+replacements for classical feature extractors within proven recurrent architectures,
+we provide a practical template for quantum-classical hybrid design that bridges
+near-term quantum hardware capabilities with real-world sequence modeling tasks.
+4.​ From Noise-induced Uncertainty to Robustness:
+○​ State-of-the-Art: In current NISQ devices, noise is treated as a binary error to be
+corrected via resource-heavy error correction codes. Generative QML models (e.g.,
+Quantum GANs) typically fail on NISQ devices because hardware noise distorts
+probability distributions. Benchmarking and certifying QML methods is becoming
+increasingly important for deployment for real-world applications. First steps
+towards benchmarking have already been undertaken with the QUARK
+benchmarking framework. However, the industrial standards for certifying
+robustness against cyberattacks for QML are currently lacking.
+○​ Our Novelty (Fuzzy-Quantum Diffusion & Robustness Certification): We
+introduce Fuzzy Quantum Logic to handle hardware noise not as an "error" to be
+corrected, but as a "degree of uncertainty" within the learning process. Crucially, we
+move beyond simple performance metrics by developing benchmarking and
+robustness protocols to rigorously certify the reliability and robustness of these
+models against adversarial perturbations and noise, defining a new industrial
+standard for Trustworthy QML.
+○​ Foundational Advance: We establish the first "QML Reliability Standard." By
+defining formal metrics (e.g., Lipschitz continuity, noise stability) based on the
+QUARK framework, we transform QML from an experimental art into a certified
+engineering discipline capable of safety-critical deployment.
+
+Level of Ambition and Foundational Character
+This proposal is highly ambitious as it does not merely apply existing algorithms to new data;
+it rewrites the foundational protocols of how quantum models are built, trained, and
+verified.
+●​ Foundational Scalability:​
+We address the foundational question: "How much entanglement is required to link
+distinct quantum processors?" By developing Multi-Chip Ensemble protocols, we are
+establishing a resource theory for distributed quantum learning. This is ground-breaking
+because it decouples QML progress from the slow roadmap of monolithic hardware
+scaling, enabling "Virtual Large-Scale QML" on today's fragmented NISQ machines.
+●​ Ambition in Complexity (The "Big Science" Validation):​
+We are not testing on toy datasets (e.g., MNIST). We are ambitiously targeting High
+Energy Physics (LHC data) and Neuroscience (EEG/fMRI).
+○​ HEP: CMS detector data—including calorimeter images, high-level physics
+features, and waveform signals—contain complex, high-dimensional structures that
+classical algorithms often fail to disentangle. We aim to prove that our Multi-Chip
+Ensembles can capture non-local correlations in particle jets that classical deep
+learning misses.
+○​ Neuroscience: Brain signals are non-stationary and exhibit complex graph
+
+structures. We aim to demonstrate that Quantum State Space Models (Q-SSM)
+can decode long-range temporal patterns with higher fidelity than classical SOTA.
+Furthermore, we will apply QFF-HQGA VQE/QAOA to solve combinatorial brain
+connectivity problems, identifying functional graph structures that classical
+heuristics fail to optimize.
+●​ Foundational Trust (The "QUARK Reliability" Standard):​
+We move beyond "accuracy" to "certified robustness." We are establishing a
+foundational methodology for benchmarking the safety and reliability of QML algorithms
+against adversarial attacks in Cybersecurity contexts. This establishes the first
+rigorous "Quality Assurance" framework for foundational QML resources, a critical step
+for the QPR topic and beyond.
+
+Issues and Problems Addressed
+Critical Issue
+
+Proposed Foundational Solution
+
+Connectivity & Scale Limits: Single chips
+lack the qubit count and connectivity for
+high-dimensional data.
+
+Multi-Modal Multi-Chip Ensembles:
+Distributed protocols that aggregate parallel
+quantum agents to process heterogeneous
+data (sMRI/fMRI) without requiring a
+monolithic fault-tolerant device.
+
+The Trainability Trilemma: Gradient-based
+methods suffer from Barren Plateaus and
+high measurement costs; gradient-free
+methods suffer from slow convergence.
+
+Hybrid Physics-Informed Optimization: A
+synergy of Quantum Forward-Forward
+(QFF) (local updates to bypass Barren
+Plateaus) and Hybrid Quantum Genetic
+Algorithms (eliminates measurement
+overhead and classical simulability),
+balancing efficiency with trainability.
+
+Inefficient Temporal Modeling: Classical
+transformers are computationally expensive,
+scaling quadratically to sequence length.
+Quantum RNNs struggle to learn high
+dimensional, long dependencies.
+
+Quantum State Space Models (Q-SSM):
+Three-branch quantum superposition for
+rich feature extraction and LSTM-style
+gating for selective memory management,
+which enables efficiently and effectively
+learning long sequence data.
+
+Lack of Trust & Robustness: NISQ
+models are fragile to noise and lack
+industrial safety certification.
+
+QUARK-Certified Fuzzy Robustness:
+Integrating Fuzzy Logic to model noise as
+uncertainty, rigorously benchmarked against
+the QUARK reliability standards to certify
+robustness against adversarial attacks.
+
+In summary, this project is foundational because it creates the "Operating System" for
+Reliable and Scalable QML: a suite of protocols (Distributed Ensembles, Evolutionary
+Optimization, QUARK Reliability) that allows quantum software to run effectively on
+
+imperfect hardware, validated by the most complex scientific data available.
+
+1.3 Concept and methodology
+Describe and explain the overall concept and research approach underpinning the project.
+Describe the main ideas, models or assumptions involved. Identify any interdisciplinary
+considerations and, where relevant, use of stakeholder knowledge.
+Describe any national or international research and innovation activities which will be linked
+with the project, especially where the outputs from these will feed into the project.
+Describe the methodology and explain its relevance to the objectives.
+Describe the appropriateness of the methodology to narrow down multiple options and to
+address high scientific and technological risks.
+
+Overall Concept: The "Physics-Aware" QML Stack
+The overarching concept of this project is to transition Quantum Machine Learning (QML)
+from its current heuristic, hardware-agnostic state to a "Physics-Aware" QML Stack. We
+operate on the core assumption that Near-Term Intermediate Scale Quantum (NISQ)
+devices will remain fragmented (limited connectivity) and noisy for the foreseeable future.
+Therefore, instead of waiting for fault tolerant hardware, we fundamentally redesign the
+software and algorithmic layer to exploit quantum resources under these constraints.
+Our research approach is built on a Feedback Loop between Foundational Theory and
+Domain Science, addressing five specific objectives:
+1.​ Scalability: The Multi-modal Multi-Chip Ensembles framework addresses the
+scalability constraints of NISQ hardware by partitioning high-dimensional multi-modal
+data across independent quantum processors, fundamentally operating on the
+premise that restricting global entanglement mitigates barren plateaus and enhances
+noise resilience through the classical aggregation of independent error profiles. This
+approach assigns distinct data modalities (e.g., sMRI, fMRI) to specific chips
+equipped with orthogonal circuit architectures to maximize feature distinctiveness
+without requiring lossy dimension reduction. By employing a "Selective
+Entanglement" mechanism, the model strategically introduces quantum connections
+only between chips processing globally dependent features, effectively optimizing the
+trade-off between necessary model expressibility and the robust trainability provided
+by isolated quantum subsystems.
+2.​ Optimization: We introduce a novel Hybrid Quantum Forward-Forward framework
+that fundamentally restructures QML training by replacing global backpropagation
+with a layer-wise, gradient-free optimization strategy. The core concept leverages the
+Quantum Forward-Forward (QFF) method to decompose deep quantum circuits
+into isolated, shallow layers, each optimizing a local "goodness" objective derived
+from separate positive (real) and negative (noise) data passes. Within each
+decoupled layer, we bypass classical optimizers by implementing the Hybrid
+Quantum Genetic Algorithm (HQGA), which encodes circuit parameters into
+quantum chromosomes—superpositions representing multiple solution states
+simultaneously. By utilizing entangled crossover to stochastically correlate
+successful traits across the population and quantum elitism to reinforcement-learn
+optimal rotation angles, this approach allows for the training of complex, highly
+entangled models that are mathematically immune to the global barren plateau
+
+problem while minimizing measurement overhead through local, efficient
+convergence.
+3.​ Temporal Expressibility: Our Quantum State Space Model (Q-SSM) framework is
+built on a central hypothesis: quantum circuits can extract richer features from
+sequential data than classical networks by exploiting entanglement and
+superposition, while classical gating mechanisms remain optimal for temporal
+memory management. Our approach decomposes sequence modeling into two
+distinct functions: (1) feature extraction, where variational quantum circuits process
+𝑛
+
+input chunks, producing measurements that capture correlations across a 2
+-dimensional Hilbert space, and (2) temporal integration, where classical LSTM-style
+gates (forget, input, output) selectively accumulate information across chunks to
+model long-range dependencies. Three quantum branches are combined via
+trainable complex coefficients to enable interference-like effects, with an additional
+layer for bidirectionality through forward, backward, and global processing paths.
+This hybrid design assumes that the expressivity advantage of quantum circuits
+lies in feature representation rather than recurrence, and that near-term quantum
+hardware (or classical simulation) can practically execute shallow circuits while
+classical components handle the sequential state propagation that would otherwise
+require fault-tolerant quantum memory.
+4.​ Reliability: We replace the synthetic Gaussian noise of classical diffusion models
+with the authentic, physical noise of quantum hardware. The core research approach
+assumes that hardware imperfections—such as decoherence and
+crosstalk—constitute a unique, learnable noise distribution that can be
+deterministically reversed. To bridge the incompatibility between discrete qubit
+outputs and continuous neural networks, the model utilizes Fuzzy Quantum Logic
+(specifically POVMs) to treat measurements as continuous "degrees of truth" rather
+than binary outcomes. By encoding data into quantum states, degrading them via
+natural hardware relaxation, and training a classical Hardware-Attention U-Net to
+invert this process, the system achieves a "hardware-native" architecture that
+exploits specific physical noise profiles for high-fidelity data generation and error
+mitigation. We certify their robustness using the QUARK framework.
+5.​ Validation: We use High-Complexity Domain Science (HEP, Neuroscience,
+Cybersecurity) not just as applications, but as rigorous testbeds to certify the
+foundational advantages developed in Objectives 1-4.​
+[High Energy Physics]​
+We validate the foundational advantages of Multi-Chip Ensemble QML, specifically
+targeting the computational and precision bottlenecks inherent in processing massive
+particle collider data. The approach integrates hybrid quantum-classical
+models—including Temporal Convolutional Network-VQC, Quantum Neural
+Networks (Q-ABCDisCo), and Quantum Vision Transformers —with Multi-Chip
+Ensembles to demonstrate that quantum feature maps can capture complex particle
+correlations and solve ill-posed inverse problems with superior expressivity and
+parameter efficiency compared to classical deep learning. By successfully applying
+these algorithms to tasks like Higgs signal separation, background estimation, and
+waveform denoising , the project proves that Multi-Chip Ensemble QML offers a
+scalable solution for "Big Data" science, validating its ability to achieve high-precision
+results with significantly reduced computational resources and training data
+requirements.​
+[Neuroscience]​
+To decode the complex dynamics of the brain, our research utilizes Quantum
+Transformers and Quantum State Space Models for spatio-temporal analysis,
+employing Quantum Singular Value Transformation (QSVT) to reduce the
+computational cost of modeling long-range neural dependencies from quadratic to
+logarithmic scale. Complementing this, we frame brain connectivity as a quantum
+
+optimization problem: QAOA structurally defines functional network boundaries by
+solving for optimal parcellation, while VQE dynamically simulates the brain's active
+inference process by minimizing a Hamiltonian representing Variational Free Energy
+to find Bayes-optimal posterior beliefs. Together, these methods exploit the high
+expressivity of quantum circuits to achieve robust generalization on small,
+high-dimensional neuroimaging datasets with minimal parameters.​
+[Cybersecurity]​
+We integrate the Physics-Informed Fuzzy Quantum Diffusion Model as a
+high-sensitivity anomaly detector with the QUARK framework for rigorous security
+benchmarking. We utilize the diffusion model to learn the unique physical noise
+fingerprint of a quantum processor, effectively establishing a hardware baseline that
+allows us to detect stealthy security breaches—such as hardware Trojans or induced
+crosstalk—by monitoring for specific deviations in the model's attention weights.
+Complementing this, we employ the QUARK framework to orchestrate attack
+simulations and validate system integrity, ensuring that our defenses are empirically
+verified against realistic, hardware-specific vulnerabilities.
+
+Interdisciplinary Considerations & Stakeholder Knowledge
+This proposal is inherently interdisciplinary, fusing three distinct scientific cultures to create a
+sum greater than its parts:
+●​ Quantum Computation & Domain Science (SNU, Yonsei): Provides the rigorous
+understanding of quantum algorithm development (Multi-chip Ensembles,
+Quantum State Space Models), ansatz design (Multi-Chip Ensembles), and the
+domain knowledge of Computational Neuroscience and High-Energy Physics.
+●​ Computational Intelligence (Univ. Naples): Injects mature classical
+methodologies—specifically Fuzzy Set Theory and Bio-inspired Evolutionary
+Computing—into the quantum domain to solve trainability issues that pure quantum
+theory has failed to address.
+●​ Application-focused QML & Robustness (Fraunhofer IKS): Bridges the gap to
+industry by defining quality benchmarks and establishing robustness certifications.
+This stakeholder knowledge ensures our algorithms are not just theoretically
+interesting but reliable enough for safety-critical applications like cybersecurity.
+
+Link to National and International Activities
+The project leverages significant national ecosystems:
+●​ Korea (SNU/Yonsei): Aligns with the national K-Quantum initiative. Prof. Yoo’s
+involvement connects the project directly to the CERN/LHC community, allowing us
+to utilize international "Big Science" infrastructure as a testbed.
+●​ Germany (Fraunhofer IKS): The work links to the Munich Quantum Valley
+ecosystem, focusing on industrial usage and certification standards for quantum
+software.
+●​ Italy (Univ. Naples): Connects to the vibrant European community on soft computing
+and computational intelligence, bringing these classical AI strengths into the
+European Quantum Flagship landscape.
+
+Methodology and Relevance to Objectives
+Our methodology is divided into four integrated workstreams, directly addressing the Specific
+Objectives:
+
+Methodology 1: Multi-Modal Multi-Chip Ensembles (Addressing Scalability) We employ
+Optimal Quantum Architecture to design orthogonal circuits for distinct data modalities
+(e.g., sMRI and fMRI) and Optimal Quantum/Classical Connection to strategically place
+entanglement only between globally dependent feature groups. This framework operates by
+partitioning high-dimensional multi-modal data across independent quantum
+chips—processing locally correlated inputs within isolated devices while using selective
+quantum connections to model necessary global dependencies—and integrating the outputs
+via classical ensemble learning.
+●​ Relevance: This directly tackles Objective 1. It allows us to process multi-modal,
+high-dimensional datasets that exceed the capacity of a single chip, effectively
+addressing the connectivity and size limits of monolithic processors. Moreover, it
+overcomes the "curse of dimensionality" without requiring lossy classical dimension
+reduction, mitigates barren plateaus by preventing unnecessary global entanglement,
+and achieves superior noise resilience by simultaneously reducing both quantum
+error bias and variance, thereby providing a scalable and trainable solution
+compatible with emerging modular quantum hardware.
+Methodology 2: Hybrid Physics-Informed Optimization (Addressing Trainability) Our
+approach replaces the prohibitive global backpropagation of deep circuits with a layer-wise
+training scheme (QFF), where each layer is optimized locally using a gradient-free
+Evolutionary Algorithm—Hybrid Quantum Genetic Algorithms (HQGA)—instead of
+gradient descent. This method works by restructuring the deep quantum circuit into locally
+trained layers using FF, where each layer's parameters are optimized not by gradient
+descent, but by the HQGA running directly on the quantum processor. In this workflow, the
+FF framework defines local "goodness" objectives (separating positive from negative data)
+for shallow sub-circuits, and the HQGA evolves a population of "quantum
+chromosomes"—superpositions of parameter configurations —using "entangled crossover"
+and "quantum elitism" to maximize these local objectives.
+●​ Relevance: This addresses Objective 2. It resolves the "Trainability Trilemma" by
+simultaneously eliminating the measurement overhead of the parameter-shift rule
+(by being gradient-free) and mitigates the Barren Plateau problem through two
+distinct mechanisms: QFF’s local objectives prevent exponential vanishing of
+gradients, while the HQGA’s global search based on quantum mechanics to navigate
+the optimization landscape more efficiently than classical solvers, effectively
+permitting the training of highly entangled, non-simulatable quantum circuits that
+would otherwise be untrainable.
+Methodology 3: Three-branch Superposition and LSTM-Gating for Q-SSM (Addressing
+Temporal Expressibility) We develop Quantum State Space Models (Q-SSM) by
+combining variational quantum circuits for feature extraction with classical LSTM-style gating
+for temporal memory management. The models process sequential data through chunked
+recurrence: each chunk is passed through three parallel quantum circuits whose
+measurement outputs are combined via trainable complex coefficients (α, β, γ ∈ ℂ) inspired
+by quantum superposition—this "measurement-based superposition" enables
+interference-like effects while maintaining gradient flow. The resulting quantum features are
+then processed by classical forget, input, and output gates that selectively retain or discard
+information across chunks, with a final layer for bidirectional processing (forward, backward,
+and global branches).
+●​ Relevance: This tackles Objective 3. This hybrid architecture is significant for three
+𝑛
+
+reasons: (1) Expressivity: the quantum circuits access a 2 -dimensional Hilbert
+space with only O(n) parameters, providing a more expressive feature representation
+than equivalently-parameterized classical networks; (2) Temporal modeling: the
+
+LSTM gating solves the critical limitation of prior quantum sequence models (which
+collapsed temporal information via pooling) by enabling selective memory; and (3)
+Scalability: the quantum circuit cost Q is constant with respect to sequence length L,
+so the overall O(L) complexity matches classical SSMs while potentially capturing
+non-classical correlations through entanglement that classical models cannot
+represent.
+Methodology 4: Fuzzy-Quantum Diffusion & QUARK Certification (Addressing
+Reliability) The proposed Quantum Diffusion Model fundamentally redefines generative AI
+by replacing the synthetic Gaussian noise of classical models with the authentic,
+physical noise inherent in quantum hardware. In this hybrid architecture, a quantum
+processor serves as the "forward process," degrading clean data via natural error
+channels—such as amplitude damping, decoherence, or crosstalk—effectively turning
+hardware imperfections into a unique, physics-based feature. A classical deep neural
+network (e.g., a U-Net) is then trained to reverse this specific physical process, resulting in a
+model that learns the intricate "fingerprint" of the device, which can be used for generative
+tasks or bespoke error mitigation.​
+Fuzzy Quantum Logic acts as the essential mathematical bridge that makes this hybrid
+training possible. By utilizing Positive Operator-Valued Measures—the operational tool of
+fuzzy logic—we replace sharp, binary measurements (0 or 1) with continuous, "unsharp"
+values. This prevents the massive information loss that usually occurs during state collapse,
+allowing the classical network to train on "soft" probabilistic data that accurately reflects the
+texture of the quantum noise. This integration transforms the system from a discrete, binary
+model into a continuous diffusion process, enabling the neural network to interpret and
+correct quantum errors as fuzzy degrees of truth rather than simple bit-flips.
+We will also implement the QUARK framework as a rigorous "Certification Layer" for our
+Fuzzy-Quantum Diffusion model. The implementation involves a three-step benchmarking
+protocol: (1) Adversarial Perturbation: We will subject the QML models (e.g., the Intrusion
+Detection System) to quantum-specific adversarial attacks. This involves applying unitary
+perturbations 𝑈(ε) to the input quantum state |ψ⟩ to simulate worst-case scenario shifts in
+the data manifold. (2) Lipschitz Continuity Analysis: Using QUARK's mathematical tools,
+we will compute the local Lipschitz constant of the quantum circuit. This metric provides a
+formal upper bound on how much the model's output can deviate given a bounded input
+perturbation. A lower Lipschitz constant mathematically certifies a higher degree of stability.
+(3) Noise Stability Profiling: We will inject calibrated NISQ noise models (depolarizing,
+dephasing) into the simulation and measure the degradation rate of the model's accuracy.
+●​ Relevance: This addresses Objective 4. Standard diffusion fails when hardware
+noise mimics the diffusion noise; the hybrid architecture of the Fuzzy-Quantum
+Diffusion replaces the synthetic Gaussian noise of traditional AI with authentic
+physical noise, allowing for the creation of hardware-aware error mitigation tools and
+generative models that are robust to the inherent instability of NISQ devices.
+Moreover, by quantifying the Lipschitz constant, we convert the abstract concept of
+"robustness" into a precise, measurable engineering metric. This allows us to
+mathematically prove that the Fuzzy-Quantum integration successfully dampens the
+impact of input uncertainty, providing the "Certified Robustness" required for
+industrial trust.
+Methodology 5: Domain-Specific Validation (Addressing Validation) We will rigorously
+preprocess the domain data: CMS calorimeter images, high-level physics features, and
+detector waveform signals (High Energy Physics), fMRI/EEG time-series (Neuroscience),
+and Network Traffic logs (Cybersecurity). (1) High Energy Physics: We integrate
+Multi-Chip Ensembles and QML algorithms to overcome the computational bottlenecks of
+high-energy physics data analysis. We use three hybrid quantum-classical models that
+
+integrate variational quantum circuits into established deep learning
+architectures—specifically replacing classical classifiers in the ABCDisCo background
+estimation model, output heads in Temporal Convolutional Networks (TCN-VQC) for
+denoising, and linear projection layers in Vision Transformers (ViT). We apply the Multi-Chip
+Ensemble framework by partitioning input data across independent quantum processors,
+thereby enabling complex feature extraction without the information loss typical of classical
+dimension reduction. Specifically, for Q-ABCDisCo, the ensemble distributes input kinematic
+variables across multiple chips to compute classifier scores, which are then optimized using
+Distance Correlation penalties to strictly enforce independence from background
+variables; for TCN-VQC, the framework splits time-series feature maps to reconstruct
+denoised waveforms via self-supervised "Noise2Noise" strategies that effectively train the
+model without requiring inaccessible clean labels ; and for ClassicalQuantumViT, the
+architecture partitions calorimeter image patch embeddings to facilitate parallelized,
+quantum-enhanced attention mechanisms essential for resolving fine-grained details in
+merged electron particle events. This distributed approach validates the utility of QML by
+demonstrating that complex, high-dimensional HEP algorithms can be successfully deployed
+on near-term hardware to achieve precise signal separation and noise rejection. (2)
+Neuroscience: To conduct spatio-temporal analysis of fMRI and EEG signals, we utilize
+Quantum Transformers and Quantum State Space Models (Q-SSM), which employ
+Quantum Singular Value Transformation to reduce the computational complexity of attention
+mechanisms from quadratic to logarithmic scale, enabling the efficient modeling of long-term
+dependencies in neural dynamics. For brain connectivity research, we apply QAOA to solve
+the combinatorial problem of optimal network parcellation and structural mapping, while
+utilizing VQE to simulate the brain's functional inference processes by minimizing a
+Hamiltonian that represents variational free energy. (3) Cybersecurity: Our research utilizes
+the Physics-Informed Fuzzy Quantum Diffusion Model as a diagnostic sentinel and the
+QUARK framework as a rigorous benchmarking environment to fortify QML against
+hardware-level and adversarial threats. By deploying the Quantum Diffusion model, we
+establish a precise baseline of quantum processor behavior, allowing us to detect subtle
+anomalies—such as those introduced by hardware Trojans or induced crosstalk—through
+deviations in attention weights that signal potential integrity breaches. Concurrently, we
+leverage the QUARK framework’s modular architecture to simulate specific attack scenarios
+(like noise injection) and standardize the evaluation of security metrics, ensuring that
+defenses are validated against realistic, hardware-aware noise profiles.
+●​ Relevance: This methodology tackles Objective 5. It proves that the foundational
+breakthroughs translate into tangible advantages in accuracy, efficiency, and
+robustness for real-world scientific problems. Specifically, it addresses the critical
+limitations of classical machine learning regarding calculation volume and precision
+in the face of massive LHC datasets, providing a scalable, noise-resilient pathway to
+discover new physical phenomena and enhance standard model verification in the
+era of NISQ computing; it leverages the high expressivity of quantum circuits to
+achieve superior generalization on small, scarce neuroimaging datasets with fewer
+parameters than classical models, thereby overcoming the critical bottlenecks of
+overfitting and memory inefficiency in precision psychiatry; it moves beyond
+theoretical models to address the unique physical vulnerabilities of NISQ devices,
+providing a reproducible and hardware-specific methodology for certifying the
+security and reliability of quantum processors in critical applications.
+
+Appropriateness of Methodology to Address Risks
+Our methodology is specifically designed to narrow down options and mitigate high scientific
+risks:
+1.​ Risk: Barren Plateaus make training impossible.
+
+○​ Mitigation: We do not rely solely on one optimizer. By introducing
+Evolutionary Algorithms, we bypass gradient-dependence entirely. If QFF
+proves unstable, the Memetic Algorithm serves as a robust fallback global
+search method.
+2.​ Risk: Hardware noise destroys the Distributed Model's accuracy.
+○​ Mitigation: Ensemble methods are inherently robust to noise. Since the
+Multi-Chip approach relies on aggregating independent models, the
+stochastic errors of individual chips tend to average out, acting as a form of
+algorithmic error mitigation without the cost of error correction codes.
+3.​ Risk: Hardware noise destroys generative fidelity.
+○​ Mitigation: Instead of expensive error correction, we use Fuzzy Logic to
+"soften" the decision boundaries, making the diffusion model tolerant to the
+inherent uncertainty of NISQ devices.
+4.​ Risk: "Quantum Advantage" is elusive in real data.
+○​ Mitigation: We diversify the validation across three distinct domains (HEP,
+Neuroscience, Cybersecurity). Each domain stresses a different quantum
+aspect (HEP=Dimensionality, Neuroscience=Temporal Correlation,
+Cybersecurity=Robustness). This portfolio approach maximizes the
+probability of demonstrating a clear foundational advantage in at least one
+key area certified by the QUARK framework.
+
+1.4 Interdisciplinary nature
+Describe the research disciplines involved and the range of added value from
+interdisciplinarity, including measures for exchange, cross-fertilisation and synergy.​
+
+Research Disciplines Involved
+This proposal is built upon a radical convergence of distinct scientific cultures. We move
+beyond standard multidisciplinary collaboration—where groups work in parallel—to true
+interdisciplinarity, where methods from one field are mathematically integrated into the
+core protocols of another.
+1.​ Quantum Information & QML Architectures: This discipline provides the
+fundamental "operating system" for the project—entanglement, superposition, and
+Hamiltonian dynamics—and the theoretical framework for the Multi-Chip
+Ensembles architecture.
+2.​ Computational Intelligence & Soft Computing: This discipline injects mature
+classical methodologies—specifically Fuzzy Logic and Evolutionary/Memetic
+Algorithms—into the quantum stack. This provides the mathematical tools to handle
+uncertainty and non-convex optimization, areas where pure quantum theory currently
+struggles.
+3.​ Quantum Software Engineering & Reliability: This discipline bridges the gap
+between theory and industry. It provides the QUARK Framework (Quantum
+Computing for Artificial Intelligence and Reliable Knowledge), which serves as the
+rigorous standard for benchmarking, certifying, and ensuring the robustness of the
+developed algorithms.
+4.​ Domain Sciences (Neuroscience, High Energy Physics, Cybersecurity): These
+disciplines provide the complex, high-dimensional "reality" against which the
+quantum algorithms are tested. They serve as rigorous validation environments for
+foundational claims regarding temporal correlation (Neuroscience), massive
+scalability (HEP), and adversarial robustness (Cybersecurity).
+
+Range of Added Value from Interdisciplinarity
+The primary added value is the creation of a "Hybrid Robustness" that cannot be achieved
+by physics or computer science alone. We leverage specific domain characteristics to solve
+foundational quantum challenges:
+●​ Neuroscience x Fuzzy Quantum Logic (The "Bio-Fuzzy" Synergy):​
+Biological signals (e.g., EEG/fMRI) are inherently non-stationary and noisy, often
+confounding standard quantum algorithms. By integrating Fuzzy Set Theory with
+Quantum Diffusion Models, we create a unique synergy: "Fuzziness" models the
+biological variability and noise, while "Quantum Diffusion" captures the complex,
+non-local temporal correlations in brain activity. This cross-fertilization creates a new
+class of generative models capable of synthesizing high-fidelity biological data, a feat
+unattainable by classical logic or pure quantum mechanics alone.
+●​ Cybersecurity x Evolutionary QML (The "Adversarial" Synergy):​
+In cybersecurity, network intrusion patterns change dynamically as attackers evolve.
+Gradient-based Quantum Machine Learning (QML) is often brittle against such
+adversarial shifts. By fusing Cybersecurity principles with Evolutionary and Memetic
+Algorithms, we develop QML models that do not merely "learn" a static dataset but
+"evolve" to find robust solutions in a dynamic threat landscape. We further enhance
+this by applying the QUARK Framework to certify the model's robustness against
+adversarial perturbations, transforming "Quantum Advantage" into "Certified
+Reliability".
+●​ High Energy Physics x Distributed Computing (The "Scale" Synergy):​
+The validation of distributed quantum computing requires data with intricate,
+non-local entanglement structures. High Energy Physics (LHC) data provides exactly
+this complexity. By applying Multi-Chip Ensemble protocols to particle tracking
+problems, we validate the "scalability resource theory" using real-world physical
+interactions. We prove that parallel quantum processors, working in concert via
+ensemble aggregation, can reconstruct the global correlations of subatomic particles
+without requiring a single monolithic fault-tolerant device.
+
+Measures for Exchange, Cross-fertilisation, and Synergy
+To ensure this interdisciplinary fusion occurs effectively, we have designed specific
+mechanisms for knowledge transfer:
+1.​ Cross-Disciplinary "Methodology Swaps":​
+We will organize bi-annual workshops where domain experts teach their core tools to
+the theory groups. For example, experts in Computational Intelligence will train the
+physicists on Fuzzy Logic Controller design, while QML researchers will train the
+domain scientists on the Multi-Chip Ensemble ansatz and Q-SSM. This ensures that
+"Fuzzy-Quantum" integration occurs at the code level, not just the conceptual level.
+2.​ Joint "Challenge" Sprints:​
+Research activities will be organized around "Challenge Datasets" provided by the
+domain experts.
+○​ The Neuro-Challenge: The theory group must apply Fuzzy-Diffusion to
+synthesize realistic EEG/fMRI data provided by the Neuroscience experts.
+○​ The Cyber-Challenge: The optimization group must use Evolutionary QML to
+detect anomalies in Network Traffic logs provided by the Cybersecurity
+experts, validated against QUARK robustness metrics.​
+These sprints force the theoretical algorithms to adapt to the rigorous
+constraints of real-world domain data.
+3.​ Unified "Physics-Aware" Software Repository:​
+All developed algorithms (e.g., Fuzzy-Diffusion, Multi-Chip Ensembles) will be
+integrated into a shared, modular software repository. This enforces technical
+
+cross-fertilization, as the "Physics" modules (e.g., Hamiltonians) must interface
+correctly with the "Logic" modules (e.g., Fuzzy Controllers) and the QUARK
+benchmarking tools, ensuring the final deliverable is a cohesive library rather than
+isolated scripts.
+
+1.5 Gender dimension and open science practices
+Describe how gender dimension in research content is addressed.
+Describe how open science practices including sharing and management of
+research outputs are implemented.
+
+Gender Dimension in Research Content
+While the foundational quantum physics and abstract optimization algorithms (Goal 1) are
+gender-neutral by nature, the Neuroscience application (Goal 2.1) involves the processing
+of human biological data, where the gender dimension is scientifically critical.
+●​ Algorithmic Bias Mitigation in Neuroscience: Research indicates that EEG/fMRI
+signals and brain-computer interface (BCI) performance can exhibit sex-specific
+variabilities due to anatomical and physiological differences. A QML model trained
+predominantly on male subjects may fail to generalize to female subjects, creating a
+biased algorithmic standard.
+●​ Implementation: In the Fuzzy-Quantum Diffusion workstream, we will implement a
+"Gender-Stratified Validation" protocol. We will ensure that the training datasets for
+EEG/fMRI synthesis are balanced (50/50 male/female). Furthermore, we will treat
+"biological sex" as a distinct fuzzy variable within the Fuzzy Logic Controller, allowing
+the model to explicitly learn and adapt to sex-specific signal features rather than
+treating them as noise. This ensures the developed Robust QML tools are
+universally applicable and free from biological bias.
+For the remaining research lines (HEP, Cybersecurity, and Foundational QML), the content is
+gender-neutral. However, we proactively address the gender dimension in the research
+process by ensuring gender-balanced project management and recruitment, aligning with
+the QuantERA Gender Equality Statement. The consortium includes female leadership
+(Prof. Jeanette Lorenz, Fraunhofer IKS) in a key Principal Investigator role, serving as a role
+model for early-career researchers.
+
+Open Science Practices
+We strictly adhere to the Horizon Europe Open Science policy, adopting a "As Open As
+Possible, As Closed As Necessary" approach to maximize the impact and reproducibility of
+our foundational breakthroughs.
+1. Open Access to Publications
+●​ Policy: We commit to 100% Open Access for all peer-reviewed scientific
+publications resulting from this project.
+●​ Implementation: We will adopt the "Green Road" by depositing the final
+peer-reviewed manuscripts or preprints in open repositories (e.g., arXiv, Zenodo)
+immediately upon acceptance, ensuring compliance with national funder mandates
+(e.g., NRF Korea, DFG). Where budget allows, we will opt for "Gold Open Access" in
+high-impact journals.
+
+2. Research Data Management (FAIR Principles)
+We will implement a Data Management Plan (DMP) within the first 3 months, adhering to the
+FAIR principles (Findable, Accessible, Interoperable, Reusable).
+●​ Findable & Accessible: All non-sensitive simulation data, trained QML model
+weights, and benchmark results (e.g., from the HEP and Optimization tasks) will be
+deposited in Zenodo with a unique Digital Object Identifier (DOI).
+●​ Interoperable: Data will be stored in standard, open formats (e.g., HDF5 for large
+datasets, JSON for model hyperparameters) rather than proprietary formats.
+●​ Reusable: All datasets will be released under Creative Commons licenses (CC
+BY) to encourage reuse by the global quantum community.
+3. Open Source Software
+The "Physics-Aware QML" algorithms (QFF, Fuzzy-Diffusion) are the core output of this
+project.
+●​ Repository: We will establish a public GitHub repository for the project.
+●​ Licensing: All code will be released under a permissive open-source license (e.g.,
+MIT or Apache 2.0) to foster industrial adoption and academic collaboration.
+●​ Documentation: We will provide Jupyter notebook tutorials demonstrating how to
+apply our distributed and evolutionary QML protocols to standard datasets, lowering
+the barrier to entry for other researchers.
+4. Management of Sensitive Data
+For Cybersecurity (Goal 2.3) and Neuroscience (Goal 2.1), data privacy is paramount.
+●​ Anonymization: Any human EEG/fMRI data will be strictly pseudonymized before
+processing.
+●​ Security: Cybersecurity datasets containing potentially sensitive network
+vulnerability patterns will be shared only within the consortium via secure, encrypted
+channels, following the "As Closed As Necessary" principle to prevent misuse.
+
+2. Impact (max. 3 pages; Weight: 25%)
+2.1 Expected impacts
+Be specific, and provide only information that applies to the proposal and its objectives.
+Wherever possible, use quantified indicators and targets.
+Describe how the project will contribute to the expected impacts (see ‘Research Targeted in
+the Call’ of the Call Announcement).
+Describe the importance of the technological outcome with regard to its transformational
+impact on technology and/or society.​
+
+Contribution to Expected Impacts
+This project directly addresses the "Quantum Phenomena and Resources" (QPR) call
+objective to "explore novel quantum phenomena, concepts, resources... and address major
+challenges that prevent broad applications." We contribute to this by establishing a
+Resource Theory for Scalable and Reliable QML, impacting the field as follows:
+
+1. Deepening the Understanding of Quantum Resources (Scalability via Ensembles)
+●​ Impact: We will establish "Parallel Quantum Processing" as a quantifiable
+resource. By validating the Multi-Chip Ensemble architecture, we will determine the
+precise scaling laws between ensemble size (number of parallel chips) and model
+expressibility. This moves the field away from the dependency on single,
+large-volume entanglement towards "Collective Quantum Advantage" derived from
+aggregating diverse, smaller quantum models.
+●​ Target: Demonstrate that a Multi-Chip Ensemble (using architectures like Quantum
+Transformers) can achieve >90% of the accuracy of a monolithic ideal circuit while
+reducing the qubit requirement per chip by 50%. This proves that quantum
+advantage is accessible on networked NISQ devices without requiring full inter-chip
+connectivity or complex teleportation protocols.
+2. Enhancing Robustness in the Presence of Decoherence
+●​ Impact: We will fundamentally transform how noise is handled in generative QML. By
+shifting from resource-heavy "Error Correction" to "Fuzzy Uncertainty
+Management," we enable quantum generative models to function on current noisy
+hardware. Crucially, we will use the QUARK framework to rigorously quantify this
+robustness.
+●​ Target: Achieve a 2x improvement in Fréchet Inception Distance (FID) scores for
+quantum-generated data (e.g., EEG/fMRI, particle jets) compared to standard
+Quantum GANs under realistic NISQ noise levels ($10^{-3}$ gate error rates).
+Furthermore, we aim to achieve certified robustness (measured by QUARK metrics
+like Lipschitz continuity) against input perturbations.
+3. Identifying New Opportunities and Applications (The Validation Feedback Loop)
+●​ Impact: We will provide the first rigorous proof-of-concept that Foundational QML
+can solve "Big Science" problems that are intractable for classical methods due to
+data complexity.
+●​ Target:
+○​ High Energy Physics: Demonstrate a >5% improvement in
+signal-to-background ratio for LHC particle tracking compared to classical
+Deep Learning, using Multi-Chip Ensembles to handle the high dimensionality
+of jet data.
+○​ Neuroscience: Demonstrate that Fuzzy-Quantum models can capture
+long-range temporal correlations in EEG/fMRI data that classical
+RNNs/Transformers miss, offering new biomarkers for neurological
+conditions.
+
+Transformational Impact on Technology and Society
+The technological outcome of this project—a "Physics-Aware" QML Stack—will have a
+transformational impact beyond the academic quantum community:
+1. Technological Sovereignty & Standardization (The "Trust" Impact)
+●​ Context: Currently, there is no standard for certifying that a quantum algorithm is
+"safe" or "robust."
+●​ Our Contribution: Led by Fraunhofer IKS, we will leverage the QUARK framework
+to define the first "Quantum Software Reliability Standard" for QML. This includes
+specific metrics for robustness against adversarial attacks (validated via the
+Cybersecurity use case).
+
+●​ Society: This is a prerequisite for deploying quantum AI in safety-critical
+infrastructure (energy grids, autonomous vehicles, banking). By establishing these
+certification protocols, we pave the way for the European and Global industry to
+adopt quantum solutions with confidence.
+2. Democratization of Quantum Access (The "Scale" Impact)
+●​ Context: "Quantum Advantage" is currently restricted to elite labs with the largest
+chips (100+ qubits).
+●​ Our Contribution: The Multi-Chip Ensemble protocol allows researchers to pool
+multiple smaller, cheaper quantum chips (e.g., 20-qubit devices) to solve larger
+problems via classical aggregation.
+●​ Society: This democratizes access to high-performance quantum computing.
+Universities and smaller companies with modest hardware can collaborate to run
+"Virtual Large-Scale" experiments, accelerating the global pace of quantum
+innovation.
+3. Advanced Data Privacy in Healthcare (The "Fuzzy-Quantum" Impact)
+●​ Context: Sharing medical data (like EEG/fMRI) is difficult due to privacy regulations
+(GDPR).
+●​ Our Contribution: Our Fuzzy-Quantum Diffusion model can generate high-fidelity
+synthetic medical data that preserves the statistical properties of the original patients
+without revealing their identities.
+●​ Society: This unlocks massive datasets for medical research, allowing hospitals to
+share "Quantum-Synthetic Data" for drug discovery or disease modeling without
+compromising patient privacy.
+
+2.2 Dissemination, exploitation of results, communication
+Provide a plan for disseminating and exploiting the project results beyond the project itself
+(scientifically and/or economically).
+Results include any data produced in the framework of the project. If applicable, describe
+how data curation and distribution can be ensured beyond the project duration.
+When applicable, describe how subsequent translation of research results into innovations
+and development of new products and/or services are facilitated
+Describe the proposed communication measures for promoting the project and its findings
+during the period of the project. Measures should be with clear objectives. They should be
+tailored to the needs of different target audiences, including groups beyond the project’s own
+community.
+Where relevant, include measures for public/societal engagement on issues related to the
+project.​
+
+Dissemination of Results (Scientific & Open Science)
+We adopt a "Physics-to-Product" dissemination strategy, ensuring that our foundational
+breakthroughs are rigorous enough for high-impact physics journals yet accessible enough
+for software engineering adoption.
+1. Scientific Publications (100% Open Access):`
+
+●​ Target: We plan for 12+ high-impact peer-reviewed publications in leading
+venues.
+○​ Nature Physics / Physical Review Letters: For the foundational Multi-Chip
+Ensembles and Quantum Time-Series Transformer results.
+○​ IEEE Transactions on Evolutionary Computation: For the Memetic QML and
+Quantum Forward-Forward algorithms.
+○​ Quantum Science and Technology: For the QUARK-certified reliability
+benchmarks and domain validations (HEP, Neuro).
+●​ Mechanism: All preprints will be uploaded to arXiv (quantum-ph) immediately. We
+will cover Gold Open Access fees where possible to ensure immediate accessibility.
+2. Open Source "Physics-Aware QML" Library:
+●​ Deliverable: The core algorithms—Multi-Chip Ensembles (Scalability), QFF-Evo
+(Optimization), and Fuzzy-Diffusion (Robustness)—will be released as a modular
+Python library. Crucially, this library will include a QUARK-connector module,
+allowing users to automatically benchmark their models against the robustness
+metrics defined by Fraunhofer IKS.
+●​ Curation: The code will be hosted on GitHub with a permissive license (Apache
+2.0).
+●​ Documentation: We will provide comprehensive Jupyter notebooks demonstrating
+how to replicate our results on the specific "Challenge Datasets" (LHC , EEG/fMRI,
+Cyber-logs), lowering the barrier for other researchers to verify our claims.
+3. Data Curation & Distribution:
+●​ Repositories: The Zenodo platform will be used to host the non-sensitive
+"Challenge Datasets" (e.g., the anonymized EEG/fMRI benchmarks and specific LHC
+subsets). Each dataset will be assigned a DOI.
+●​ Long-term Preservation: Metadata will follow the FAIR (Findable, Accessible,
+Interoperable, Reusable) principles. The data management plan (DMP) ensures
+these assets remain available for at least 10 years.
+
+Exploitation of Results (Innovation & Standardization)
+Our exploitation strategy focuses on transforming "Foundational Resources" into "Reliable
+Tools" for the quantum ecosystem.
+1. Standardization of Quantum Software Reliability (Led by Fraunhofer IKS):
+●​ Innovation: We will integrate the project's Fuzzy-Quantum robustness metrics into
+the industrial-grade QUARK Framework.
+●​ Facilitation: Fraunhofer IKS will leverage its position in the Munich Quantum Valley
+and industrial networks to propose the QUARK framework as a preliminary
+industrial standard for certifying safety-critical QML (e.g., for automotive or finance
+sectors). This facilitates the translation of our research into a marketable
+"Certification Service."
+2. Scalable "Virtual" Quantum Computing (Led by SNU/Yonsei):
+●​ Innovation: The Multi-Chip Ensemble protocol enables users with small,
+fragmented chips to solve larger problems by aggregating parallel quantum models
+(e.g., Quantum Transformers).
+●​ Exploitation: We will explore licensing this "Ensemble Strategy" to cloud quantum
+providers. It serves as an algorithmic optimization layer that can run on top of existing
+
+NISQ hardware, instantly upgrading the capability of current machines without
+hardware changes.
+3. Domain-Specific AI Tools (Led by Naples/SNU):
+●​ Innovation: The Neuro-Quantum Generative Model addresses the scarcity of
+medical data using Fuzzy-Diffusion.
+●​ Exploitation: This tool can be exploited by hospitals or MedTech startups to
+generate privacy-preserving synthetic patient data (EEG/fMRI), solving a major
+bottleneck in medical AI development while complying with GDPR.
+
+Communication Measures (Public & Community Engagement)
+We will promote the project to diverse audiences with tailored messages.
+1. Academic & Developer Community (The "Users"):
+●​ Measure: Organize a "Quantum Robustness Hackathon" (Year 3).
+●​ Objective: Invite students and developers to try and "break" our Robust QML models
+using QUARK's adversarial attack toolkits or use our Multi-Chip protocols to
+solve a distributed learning challenge.
+●​ Target: 50+ participants, fostering a community of early adopters for our software
+tools.
+2. General Public (The "Society"):
+●​ Measure: "Quantum for Big Science" Webinar Series.
+●​ Objective: Explain why we need quantum computers for things like the LHC
+(searching for new particles) or Brain Science, demystifying the "hype" and
+highlighting the physics of entanglement.
+●​ Target: Reach 500+ viewers via YouTube/University channels. We will specifically
+highlight the role of Fuzzy Logic as a bridge between human reasoning and
+quantum mechanics, making the concepts more relatable.
+3. Policymakers & Industry (The "Funders"):
+●​ Measure: Policy Brief on "Standardizing Quantum AI."
+●​ Objective: Produced by Fraunhofer IKS, this brief will explain the necessity of
+Robustness Certification (QUARK) before QML is deployed in critical
+infrastructure, advocating for continued funding in reliability research (QPR topic).​
+
+3. Implementation (Weight: 25%)​
+3.1 Work Plan (max. 2 pages)
+Provide a brief presentation of the overall structure of the work plan.
+Clearly define the intermediate targets.
+Provide a timing of the different work packages and their components (Gantt chart or
+similar).
+Provide a graphical representation of the work packages components showing how they
+inter-relate (Pert chart or similar).
+
+Overall Structure of the Work Plan
+
+The project is organized into six interconnected Work Packages (WPs) designed to create
+a feedback loop between theoretical development and empirical validation.
+●​ WP1: Management & Coordination (Lead: SNU) ensures scientific alignment, risk
+management, and administrative compliance across the consortium.
+●​ WP2: Scalable Distributed Quantum Architectures (Lead: SNU) focuses on Goal
+1.1. It develops the Multi-Chip Ensemble protocols to enable scalable QML on
+fragmented hardware by aggregating parallel quantum models.
+●​ WP3: Physics-Informed Optimization & Generative Models (Lead: Univ. Naples)
+focuses on Goals 1.2 & 1.3. It develops the Quantum Forward-Forward (QFF)
+algorithm, Memetic/Evolutionary strategies, and Fuzzy-Quantum Diffusion
+models to solve trainability and noise challenges.
+●​ WP4: High-Complexity Domain Validation (HEP & Neuroscience) (Lead: Yonsei)
+focuses on Goals 2.1 & 2.2. It prepares the "Big Science" datasets (LHC, EEG/fMRI)
+and benchmarks the algorithms from WP2/3 against classical SOTA to prove
+quantum advantage.
+●​ WP5: Reliability, Safety & Certification (Lead: Fraunhofer IKS) focuses on Goal
+2.3 and the Reliability Standard. It benchmarks the robustness of the developed
+models against adversarial attacks (Safety & Cybersecurity) and defines certification
+metrics using the QUARK framework.
+●​ WP6: Dissemination, Exploitation & Communication (Lead: Fraunhofer IKS)
+ensures Open Science compliance, code release, and industrial engagement.
+
+Intermediate Targets
+We have defined four critical Intermediate Targets (ITs) to monitor progress:
+●​ IT-1 (Month 12): Theoretical Foundations Established.
+○​ Mathematical formulation of the Multi-Chip Ensemble ansatz complete.
+○​ Fuzzy Logic Controllers for Quantum Diffusion defined.
+○​ Domain datasets (LHC, EEG, Network Logs) preprocessed and
+feature-mapped to Hilbert space.
+●​ IT-2 (Month 24): Algorithmic Validation (Simulation).
+○​ QFF-Evolutionary algorithm demonstrates convergence on >10 qubit
+simulations where Backpropagation fails (Barren Plateau proof).
+○​ Fuzzy-Diffusion generates synthetic EEG data with statistical fidelity
+comparable to classical GANs.
+●​ IT-3 (Month 30): Cross-Domain Integration.
+○​ Multi-Chip Ensemble protocol successfully reconstructs correlations in LHC
+particle jets by aggregating outputs from 2+ parallel chips.
+○​ Cybersecurity models pass the preliminary robustness certification against
+gradient-based attacks using QUARK metrics.
+●​ IT-4 (Month 36): Final "Physics-Aware" Library.
+○​ Release of the integrated open-source library.
+○​ Publication of final benchmarks demonstrating advantage in scalability (WP2)
+and robustness (WP5).
+
+Timing of Work Packages​
+
+Work Package
+
+M1-6
+
+M7-1
+2
+
+M13-1
+8
+
+M19-24
+
+M25-3
+0
+
+M31-3
+6
+
+WP1: Management
+
+====
+
+====
+
+====
+
+====
+
+====
+
+====
+
+WP2: Scalable Arch
+(Multi-Chip)
+
+Defin
+ition
+of
+Proto
+cols/
+Archi
+tectu
+res
+
+Algor
+ithm
+Devel
+opme
+nt
+
+Simul
+ationbased
+Proof
+of
+Conc
+ept
+
+Optimi
+zation
+&
+Refine
+ment
+
+Integr
+ation
+into
+Unifie
+d
+Librar
+y
+
+Repor
+ting
+(Deliv
+erable
+s/Peri
+odic
+Repor
+ts)
+
+WP3: Opt & Gen
+Models (Fuzzy)
+
+Defin
+ition
+of
+Proto
+cols/
+Archi
+tectu
+res
+
+Algor
+ithm
+Devel
+opme
+nt
+
+Simul
+ationbased
+Proof
+of
+Conc
+ept
+
+Optimi
+zation
+&
+Refine
+ment
+
+Integr
+ation
+into
+Unifie
+d
+Librar
+y
+
+Repor
+ting
+(Deliv
+erable
+s/Peri
+odic
+Repor
+ts)
+
+WP4:
+Domain
+Validation
+(HEP/Neuro)
+
+Data
+Colle
+ction
+&
+Prepr
+oces
+sing
+
+Quan
+tum
+Featu
+re
+Mapp
+ing
+
+Initial
+Testin
+g
+&
+Debu
+gging
+
+Bench
+markin
+g
+against
+Classic
+al
+SOTA
+
+Final
+Domai
+n
+Valida
+tion
+
+Repor
+ting
+(Deliv
+erable
+s/Peri
+odic
+Repor
+ts)
+
+WP5:
+Reliability
+(QUARK) & Cyber
+
+Requ
+ireme
+nts
+
+Metri
+c
+Defini
+tion
+(Rob
+ustne
+ss/Fu
+zzine
+ss)
+
+Initial
+Testin
+g
+&
+Debu
+gging
+
+Advers
+arial
+Attack
+Testing
+
+Reliab
+ility
+Certifi
+cation
+
+Repor
+ting
+(Deliv
+erable
+s/Peri
+odic
+Repor
+ts)
+
+WP6: Dissemination
+
+Disse
+minat
+ion
+Plann
+ing
+
+---
+
+Scient
+ific
+Public
+ation
+
+---
+
+Hacka
+thon
+Event
+
+Final
+Confe
+rence
+Prese
+ntatio
+n
+
+The workflow follows a clear dependency path where Foundational Theory (WP2/3) feeds
+into Domain Validation (WP4/5), with continuous feedback loops for refinement.
+1.​ Input: Domain Requirements (from WP4/WP5) → define the constraints for WP2
+(Scalability needs for LHC) and WP3 (Robustness needs for Neuro/Cyber).
+2.​ Development: WP2 (Multi-Chip Ensembles) and WP3 (Fuzzy/Evo) develop the core
+algorithms in parallel.
+3.​ Integration: The algorithms are integrated into a unified framework.
+4.​ Validation:
+○​ WP4 takes the WP2 Multi-Chip engine to process LHC data.
+○​ WP4 takes the WP3 Fuzzy-Diffusion model to synthesize EEG/fMRI data.
+○​ WP5 takes the WP3 Evolutionary models and subjects them to Adversarial
+Attacks (Cybersecurity) to certify reliability using the QUARK framework.
+5.​ Output: Validated results flow into WP6 for dissemination.
+
+3.2 Work Packages
+(max. 1 page per WP)
+For the description of each work package, please use the template provided. Use as many
+templates as needed.
+WP 1
+
+Project Management & Coordination
+
+Contribution of project partners
+Partner number1
+1
+2
+Total effort per
+partner (person*months)
+1
+
+3
+
+Bold the partner number of the work package leader
+
+4
+
+5
+
+6
+
+Start
+Month:
+1
+
+End
+month
+: 36
+
+7
+
+8
+
+Aim of the WP
+To ensure efficient administrative and scientific coordination, timely reporting to national
+funding agencies and the QuantERA secretariat, and effective risk/data management.
+Tasks
+T1.1 Consortium Coordination & Monitoring (M1–M36: SNU; All)2
+Day-to-day management of the project; organization of bi-annual consortium meetings
+(virtual/physical); monitoring of milestones and KPIs.
+T1.2 Risk & Innovation Management (M1–M36: SNU; Fraunhofer)
+Task title (start month – end month: responsible partner; involved partners)
+Continuous monitoring of scientific and technical risks; execution of mitigation plans;
+management of Intellectual Property Rights (IPR).
+T1.3 Data Management & Ethics (M1–M36: SNU; Fraunhofer)​
+Implementation of the Data Management Plan (DMP) ensuring FAIR principles;
+oversight of ethical compliance regarding EEG/fMRI data (Neuroscience) and sensitive
+network logs (Cybersecurity).
+Deliverabl
+e
+
+Month of
+delivery
+
+Title of deliverable
+
+D1.1
+D1.2
+D1.3
+
+M3
+M18
+M36
+
+Data Management Plan
+Mid-term Progress Report
+Final Project Report
+
+WP 2
+
+Scalable Distributed Quantum Architectures
+
+Start
+Month:
+1
+
+End
+Month
+: 36
+
+Contribution of project partners
+Partner number
+1
+2
+3
+4
+5
+6
+7
+8
+Total effort per
+partner (person*months)
+Aim of the WP
+To develop theoretical protocols for "Virtual Large-Scale" quantum computing by
+implementing Multi-Chip Ensembles, enabling scalable QML on fragmented NISQ hardware
+via parallel model aggregation.
+Tasks
+T2.1 Multi-Chip Protocol Definition (M1–M12: SNU; Naples, Fraunhofer)
+
+2
+
+For instance: T1.1 Development of something (M3-M6; responsible: 3; involved: 1, 4)
+
+Mathematical formulation of ensemble learning strategies for distributed QPUs;
+development of aggregation logic (voting/averaging) to combine outputs from
+independent quantum models.
+T2.2 Multi-chip Architecture Optimization (M7–M24: SNU; Naples, Fraunhofer)
+Design of scalable QML architectures (Quantum Transformers, HQTCN) optimized for
+ensemble deployment, targeting improved generalization and data-efficiency; with a
+focus on minimization of qubits-per-chip requirements.
+T2.3 Integration & Testing (M13–M36: SNU; Naples, Fraunhofer)
+Implementation of the Multi-Chip protocols into a unified software module; verification
+of scalability, trainability, performance and fidelity retention across simulated distributed
+environments.
+Deliverabl
+e
+
+Month of
+delivery
+
+Title of deliverable
+
+D2.1
+D2.2
+
+M12
+M24
+
+Report on Multi-Chip QUARK Protocols
+Software Module for Distributed Circuit Cutting
+
+WP 3
+
+Physics-Informed Optimization & Generative Models
+
+Contribution of project partners
+Partner number
+1
+2
+Total effort per
+partner (person*months)
+Aim of the WP
+
+3
+
+4
+
+5
+
+6
+
+Start
+month:
+1
+
+End
+month
+: 36
+
+7
+
+8
+
+To solve the "Trainability" and "Noise" bottlenecks by developing the Quantum
+Forward-Forward algorithm (QFF) driven by Memetic Evolution, and Fuzzy-controlled
+Quantum Diffusion models.
+Tasks
+T3.1 Evolutionary QFF Development (M1–M18: Naples; SNU)
+Development of Memetic Algorithms (MA) to drive Quantum Forward-Forward
+learning; benchmarking convergence against Backpropagation in Barren Plateau
+landscapes.
+T3.2 Fuzzy Logic Controller Design (M7–M24: Naples; SNU)
+Design of Fuzzy Logic Controllers (FLC) to model NISQ noise as uncertainty;
+integration of FLC into the reverse diffusion process of generative models.
+
+T3.3 Robust Model Implementation (M19–M36: Naples; SNU, Fraunhofer)
+Full implementation of the Fuzzy-Quantum Diffusion model with built-in noise
+resilience.
+Deliverabl
+e
+
+Month of
+delivery
+
+Title of deliverable
+
+D3.1
+D3.2
+
+M18
+M30
+
+Algorithm Definition: QFF-Evolutionary & Fuzzy-Diffusion
+Benchmarking Report: Trainability & Noise Resilience
+
+WP 4
+
+High-Complexity Domain Validation (HEP & Neuro)
+
+Start
+month
+
+End
+month
+
+Contribution of project partners
+Partner number
+1
+2
+3
+4
+5
+6
+7
+8
+Total effort per
+partner (person*months)
+Aim of the WP
+To validate the foundational breakthroughs (WP2/WP3) using massive, complex datasets
+from High Energy Physics (LHC) and Neuroscience (EEG, fMRI), proving quantum
+advantage in scalability and temporal modeling.
+Tasks
+T4.1 Domain Data Preprocessing (M1–M6: Yonsei; SNU, Fraunhofer)
+Preparation of LHC particle jet data (Yonsei) and EEG/fMRI time-series (SNU/Naples);
+implementation of quantum feature maps (Fraunhofer).
+T4.2 HEP Scalability Validation (M13–M30: Yonsei; Naples, Fraunhofer)
+Application of Multi-Chip Ensembles (from WP2) to LHC jet classification;
+benchmarking accuracy and generalization vs. single-chip and classical SOTA
+baselines.
+T4.3 Neuro-Generative Validation (M13–M30: SNU; Naples, Fraunhofer)
+Application of Fuzzy-Diffusion (from WP3) to synthesize EEG/fMRI data; evaluation of
+statistical fidelity (FID score) and privacy preservation.
+Deliverabl
+e
+
+Month of
+delivery
+
+Title of deliverable
+
+D4.1
+D4.2
+
+M6
+M36
+
+Curated "Challenge Datasets" (LHC & EEG/fMRI)
+Validation Report: Roadmap to Quantum Advantage in HEP &
+Neuro
+
+WP 5
+
+Reliability, Safety & Certification
+
+Start
+month:
+1
+
+End
+month
+: 36
+
+Contribution of project partners
+Partner number
+1
+2
+3
+4
+5
+6
+7
+8
+Total effort per
+partner (person*months)
+Aim of the WP
+To define the first "QML Reliability Standard" and benchmark and certify the robustness of the
+developed QML models against cybersecurity threads and privacy attacks.
+
+Tasks
+T5.1 Reliability Metrics and Safeguard techniques (M1–M12: Fraunhofer; All)
+Definition of formal metrics for QML robustness (e.g., Lipschitz continuity, noise
+stability, privacy budget, data leakage)
+T5.2 Cybersecurity Adversarial Testing (M13–M30: Fraunhofer; Naples)
+Application of Evolutionary QML to Network Intrusion Detection; stress-testing the
+models with gradient-based adversarial attacks to measure robustness.
+T5.3 Certification Framework (M25–M36: Fraunhofer)
+Synthesis of results into a formal QUARK Certification protocol for industrial QML
+applications.
+Deliverabl
+e
+
+Month of
+delivery
+
+Title of deliverable
+
+D5.1
+D5.2
+
+M18
+M36
+
+Robustness Report:
+QML Reliability Standard, e.g. certification protocols
+
+WP 6
+
+Dissemination, Exploitation & Communication
+
+Contribution of project partners
+Partner number
+1
+2
+Total effort per
+partner (person*months)
+Aim of the WP
+
+3
+
+4
+
+5
+
+6
+
+Start
+month:
+1
+
+End
+month
+: 36
+
+7
+
+8
+
+To maximize impact through Open Science publications, release of the "Physics-Aware QML"
+library, and engagement with the industrial and public sectors.
+Tasks
+T6.1 Scientific Dissemination & Open Science (M1–M36: All)
+​
+Publication of results in Open Access journals; management of the GitHub repository
+and Zenodo data archives.
+T6.2 Exploitation & Standardization (M13–M36: Fraunhofer; All)
+​
+Promotion of QUARK Reliability Standards to industrial bodies (e.g., Munich Quantum
+Valley); exploration of licensing models for the Multi-Chip middleware.
+T6.3 Communication & Events (M1–M36: Fraunhofer; SNU)
+Organization of the "Quantum Robustness Hackathon" (M30); public webinars on
+"Quantum for Big Science"; website maintenance.
+Deliverabl
+e
+
+Month of
+delivery
+
+Title of deliverable
+
+D6.1
+D6.2
+
+M36
+M36
+
+Open Source "Physics-Aware QML" Library Release
+Final Plan for Exploitation and Standardization
+
+Work package overview (total effort per WP and partner in person.months)
+Use as many lines and columns as needed.
+Partner
+1
+2
+3
+4
+5
+6
+Total
+
+WP1
+
+WP2
+
+WP3
+
+WP4
+
+WP5
+
+WP6
+
+Total
+
+3.3 Management structure, milestones, risk assessment
+(max. 2 pages)
+
+Describe the organisational structure and the decision-making including a list of milestones
+(template provided). A milestone is a major and visible achievement. It should be SMART:
+Specific, Measurable, Attainable, Relevant, Time-bound.
+Explain why the organisational structure and decision-making mechanisms are appropriate
+to the complexity and scale of the project.
+
+Organisational structure and decision-making
+The project management structure is designed to ensure efficient coordination between the
+Asian (Korea) and European (Germany, Italy) partners, facilitating the rigorous feedback
+loop between foundational theory and domain validation.
+●​ Project Coordinator (PC): Prof. Jiook Cha (SNU, Partner 1) is the single point of
+contact for the QuantERA Secretariat. The PC is responsible for overall progress
+monitoring, submission of deliverables, and conflict resolution.
+●​ General Assembly (GA): The ultimate decision-making body, composed of one
+representative from each partner (Cha, Yoo, Acampora, Lorenz). The GA meets
+bi-annually to review progress against Milestones. Decisions are made by
+consensus; if consensus fails, a majority vote (one vote per partner) applies.
+●​ Scientific Steering Committee (SSC): Composed of the Work Package Leaders.
+The SSC meets quarterly to ensure technical alignment (e.g., ensuring WP2’s
+Multi-Chip Ensemble protocols meet WP4’s HEP data requirements).
+●​ Innovation & Ethics Board: Led by Fraunhofer IKS (Partner 4), this board
+oversees IPR management, open science compliance via the QUARK framework
+standards, and ethical handling of Neuroscience/Cybersecurity data.
+This structure is appropriate because it is lean (minimizing administrative overhead for a
+4-partner consortium) yet robust (ensuring all scientific disciplines—Physics, CS,
+Engineering—have equal voting power in the GA).
+
+List of milestones
+Use as many lines as needed but try to limit the number of milestones.
+Mileston
+e
+
+Delivery
+month
+
+WP
+involved
+
+Title
+
+M1
+
+M12
+
+WP2,
+WP5
+
+Foundational Architectures Defined: Multi-Chip
+Ensemble protocol specs and QUARK Reliability
+Metrics defined.
+
+M2
+
+M18
+
+WP3
+
+Algorithmic Proof-of-Concept: QFF-Evolutionary
+algorithm demonstrates convergence in simulation
+(Barren Plateau avoidance).
+
+M3
+
+M30
+
+WP4,
+WP5
+
+Cross-Domain Validation: Successful application of
+Multi-Chip Ensembles to LHC data and Fuzzy-Diffusion
+to EEG data.
+
+M4
+
+M36
+
+WP6
+
+Final Release: "Physics-Aware QML" Open Source
+Library released with QUARK Certification Standard.
+
+Describe any critical risks, relating to project implementation, that the stated project’s
+objectives may not be achieved. Detail any risk mitigation measures. Please provide a table
+with critical risks identified and mitigating actions (template provided).
+
+Critical risks for implementation
+Use as many lines as needed.
+Description of risk (indicate level
+of likelihood: Low/Medium/high)
+
+WP(s)
+involved
+
+Proposed risk-mitigation measures
+
+Scientific: Barren Plateaus persist
+despite QFF/Evolutionary
+methods. (Medium)
+
+WP3,
+WP4
+
+Mitigation: If the Forward-Forward
+approach proves unstable, we will fall
+back to a "Hybrid Memetic" strategy
+using standard VQE but optimized via
+Prof. Acampora’s proven Evolutionary
+Algorithms, which do not rely on
+gradients.
+
+Technical: Ensemble Aggregation
+fails to achieve accuracy targets
+due to weak individual learners.
+(Medium)
+
+WP2,
+WP4
+
+Mitigation: We will implement advanced
+"Weighted Voting" mechanisms where
+the weight of each chip's output is
+determined by its QUARK reliability
+score. Additionally, we will use the
+Quantum Transformer ansatz, which is
+designed to maximize expressibility
+even on small chips.
+
+Technical: Fuzzy-Diffusion fails to
+capture temporal correlations in
+EEG. (Low)
+
+WP3,
+WP4
+
+Mitigation: We will pivot from pure
+Diffusion Models to Quantum GANs
+enriched with Fuzzy Logic Controllers.
+GANs are notoriously unstable, but the
+Fuzzy Controller is designed to stabilize
+learning dynamics, providing a viable
+alternative generative architecture.
+
+Operational: Delays in accessing
+sensitive data (LHC/Cyber logs).
+(Low)
+
+WP4,
+WP5
+
+Mitigation: All partners have direct
+access (Yoo is CMS member; Lorenz is
+Fraunhofer Head). However, if delays
+occur, we have identified open-source
+proxy datasets (e.g., CERN Open Data
+Portal, KDD Cup 99) to proceed with
+algorithmic benchmarking without delay.
+
+Management: IPR disputes
+regarding industrial exploitation.
+(Low)
+
+WP1,
+WP6
+
+Mitigation: A comprehensive
+Consortium Agreement (CA) based on
+the DESCA model will be signed before
+the project start, clearly defining
+
+background/foreground IP and licensing
+terms for the open-source library.
+​
+
+3.4 Consortium as a whole
+(max. 1 page)
+The individual members are described in section 3.5, there is no need to repeat that
+information there.
+Describe the consortium. How will it match the project’s objectives and bring together the
+necessary expertise? How do the members complement one another?
+In what way does each of them contribute to the project? Show that each has a valid role
+and adequate resources in the project to fulfil that role.
+If applicable, describe the industrial/commercial involvement in the project and explain why
+this is consistent with and will help to achieve the specific measures which are proposed for
+exploitation of the results of the project.
+
+Matching Objectives and Expertise
+The consortium is designed as a trans-continental feedback loop that bridges the
+gap between Foundational Quantum Theory (Goals 1.1–1.3) and Rigorous Domain
+Validation (Goals 2.1–2.3). No single partner possesses the full spectrum of skills
+required to deliver the "Physics-Aware QML Stack," necessitating this specific
+collaboration:
+●​ The "Architects" (SNU): To achieve Objective 1 (Scalability), we require
+deep expertise in ansatz design. SNU provides the Multi-Chip Ensemble
+protocols and Quantum Transformer architectures needed to distribute
+learning across fragmented hardware.
+●​ The "Optimizers" (Univ. Naples): To achieve Objective 2 (Trainability) and
+Objective 3 (Robustness), we need to solve the Barren Plateau and Noise
+problems. Univ. Naples injects Fuzzy Logic and Evolutionary/Memetic
+Algorithms—classical AI methodologies absent in standard physics labs—to
+stabilize the quantum models.
+●​ The "Validators" (Yonsei): To achieve Objective 4 (Domain Advantage),
+we need massive, high-dimensional data. Yonsei, through the CMS
+Collaboration, provides the LHC particle jet data that acts as the ultimate
+stress test for SNU’s scalability protocols.
+●​ The "Certifiers" (Fraunhofer IKS): To ensure these breakthroughs translate
+to reality, Fraunhofer IKS provides the QUARK Framework. They act as the
+consortium's "Quality Assurance" department, using QUARK to benchmark
+the reliability and robustness of all developed algorithms, ensuring they meet
+industrial standards.
+
+Complementarity and Contribution
+The partners complement each other through a "Scale-Logic-Trust" triangle:
+●​ SNU (Scale) provides the structure of the quantum models. Without SNU, the
+consortium would lack the scalable architectures (Multi-Chip) to run on NISQ
+devices.
+●​ Naples (Logic) provides the training engine. Without Naples, SNU's deep
+architectures would be untrainable (Barren Plateaus) or fragile to noise. Their
+Fuzzy Logic Controllers provide the "soft" resilience layer.
+●​ Fraunhofer IKS (Trust) provides the standard. Without Fraunhofer, the
+results would remain academic proofs-of-concept. The QUARK framework
+transforms the consortium’s outputs into certified, reliable software assets
+ready for safety-critical deployment.
+●​ Yonsei (Physical Reality) grounds the project. Their experimental HEP
+expertise prevents the project from becoming purely theoretical, forcing the
+algorithms to handle the noise and dimensionality of real subatomic physics.
+
+Industrial/Commercial Involvement
+While the core consortium focuses on foundational QPR research, Fraunhofer IKS
+serves as the bridge to industry. As a leading German RTO (Research and
+Technology Organisation), Fraunhofer’s involvement ensures the path to exploitation
+is built-in from day one.
+●​ Consistency with Exploitation Measures: The proposed "Quantum
+Software Reliability Standard" (WP5) is directly consistent with
+Fraunhofer’s mandate within the Munich Quantum Valley. By using the
+QUARK framework to certify the consortium's algorithms, Fraunhofer
+validates the commercial viability of "Trustworthy QML" services. This allows
+the consortium to offer not just algorithms, but "Certified Algorithms" to
+industrial stakeholders (e.g., automotive, finance) who demand reliability
+guarantees, maximizing the economic impact of the project.
+
+3.5 Description of the consortium
+(max. 1 page per partner)
+
+Describe expertise and role in the project for each partner (templates provided). The
+information provided here will be used to judge the operational capacity. Use the following
+templates for the coordinator, the other partners requesting funding, and partners not
+requesting funding if any. If the project relies on input to be provided by a third party, append
+a letter of commitment at the end of the proposal.
+Jiook Cha
+Project Coordinator
+
+Seoul National University / Department of Psychology,
+Department of Brain and Cognitive Sciences,
+Interdisciplinary Program in Artificial Intelligence
+
+Expertise:
+Seoul National University (SNU) is South Korea's premier research university. Prof. Jiook
+Cha’s lab specializes in Quantum Machine Learning (QML) architectures and their
+application to Computational Neuroscience. The group possesses unique expertise in:
+1.​ Multi-Chip Ensembles: Developing scalable approaches to train QML models
+across multiple chips, applied to image data, EEG/fMRI, and Reinforcement
+Learning.
+2.​ Quantum Time-Series Analysis: Pioneering quantum algorithms for temporal
+data, including Quantum Transformers for fMRI analysis.
+3.​ QML for Neuroscience: Bridging quantum computing with brain science through
+specialized neural network architectures.
+Principal Investigator: Prof. Jiook Cha (Male)
+Prof. Cha is a leading expert in applied QML architectures. His research focuses on
+creating scalable quantum algorithms for high-dimensional biological data.
+Relevant Achievements:
+●​ Developing multi-chip ensembles approaches and applying them to image data,
+EEG data, and reinforcement learning environments.
+●​ Developing quantum time-series transformers and applying them to fMRI
+analysis.
+●​ Developing hybrid quantum temporal convolutional neural network (HQTCN)
+algorithms and applying them to EEG analysis.
+Role in project: Coordinator & QML Architecture Lead.
+SNU leads WP1 (Management) and drives WP2 (Scalable Architectures) by implementing
+the Multi-Chip Ensemble protocols. Prof. Cha also leads the theoretical development of
+the Neuro-Generative validation in WP4, utilizing his expertise in Quantum Transformers
+and HQTCNs to process EEG/fMRI data.
+
+Use this template if this partner is requesting funding
+Hwidong Yoo
+
+Yonsei University / Department of Physics
+
+Expertise:​
+Yonsei University is a leading private research university in Korea with a strong legacy in
+High Energy Physics (HEP). Prof. Hwidong Yoo is a key member of the CMS
+Collaboration at CERN, providing the consortium with direct access to massive-scale
+"Big Science" data.
+1.​ High Energy Physics: Deep expertise in LHC particle jet analysis, tracking, and
+event classification.
+2.​ Big Data Analysis: Infrastructure for processing petabyte-scale datasets from
+particle collisions.
+3.​ Quantum for HEP: Experience in benchmarking quantum algorithms against
+classical Deep Learning (CNNs/RNNs) for particle physics tasks.
+Principal Investigator: Prof. Hwidong Yoo (Male)
+Prof. Yoo is an expert in experimental high-energy physics and the application of
+advanced computing to particle detection. He leads the validation efforts, bridging the gap
+between abstract quantum algorithms and physical reality.
+Relevant Achievements:
+●​ Leadership roles in the CMS Collaboration (CERN) for particle tracking analysis.
+●​ Development of classical Deep Learning benchmarks for LHC jet tagging.
+●​ Pioneering work in applying Quantum SVMs and QNNs to HEP event
+classification.
+Role in project: Domain Validation Lead (HEP).
+Yonsei leads WP4 (High-Complexity Domain Validation). They are responsible for
+curating the LHC datasets, implementing the quantum feature maps for high-dimensional
+particle data, and rigorously benchmarking the Scalable QML protocols (WP2) against
+classical SOTA methods.
+
+Jeanette Miriam Lorenz
+
+Fraunhofer Institute for Cognitive Systems IKS /
+Department of Quantum Computing
+
+Expertise:
+Fraunhofer IKS is Germany’s leading applied research institute for Safe and Reliable
+Software Engineering and Artificial Intelligence. PD Dr. habil. Jeanette Miriam Lorenz’s
+group specializes in Reliable Quantum Computing for Applications, focusing on a
+broad range of topics encapsulating QML, quantum optimization, quantum simulations and
+physics-inspired methods.
+1.​ Application-driven QML: Broad expertise in key QML performance aspects,
+including data-efficiency, impact of feature maps’ design, noise stability and
+generalization.
+
+2.​ Quantum Robustness and Safety: Extensive hands-on experience in QNN
+certification and verification against noise impacts and cyberattacks, which are
+critical for the project's cybersecurity validation and "Quality of Service" standards
+3.​ Benchmarking: Fraunhofer IKS is one of the European's leaders in
+application-driven benchmarking of QCs, coordinates the European QC
+Benchmarking Coordination Committee, and engages in co-developping the
+QUARK framework.
+Principal Investigator: PD Dr. habil. Jeanette Miriam Lorenz (Female)
+PD Dr. Lorenz heads the department 'Quantum Computing' at Fraunhofer IKS and is
+associate professor at LMU Munich. She also leads the consortium focussing on
+applications of quantum computing in the Munich Quantum Valley. The mission of her
+research is to enable the use of quantum computing in safety-critical areas such as
+aerospace, mobility, logistics and medtech.
+Relevant Achievements:
+●​ Establishes the guidelines to perform application-centric benchmarking of QC
+within Europe, e.g. via the EQCBC and the QUARK-framework
+●​ Extensive work on security and safety of QML, e.g. for the BSI (Federal Ministry of
+Information Security
+●​ Bridging theoretical work with practical aspects of 'getting quantum computing to
+work'
+Role in project: Reliability & Certification Lead
+Fraunhofer leads WP5 (Reliability, Cybersecurity & Certification) and WP6
+(Dissemination). They apply the QUARK framework to benchmark the consortium's
+algorithms, define the Quantum Reliability Standards, and conduct the rigorous
+Cybersecurity stress-tests (Adversarial Attacks) to certify the consortium's algorithms.
+
+Giovanni Acampora
+Expertise:
+
+University of Naples Federico II / Department of Physics
+“Ettore Pancini”
+
+The University of Naples Federico II is one of the oldest universities in the world. Prof.
+Giovanni Acampora’s group is globally recognized for Computational Intelligence and
+Fuzzy Logic. They bring the critical "classical intelligence" layer to the quantum stack.
+1.​ Fuzzy Logic Systems: World-class expertise in Type-2 Fuzzy Sets and Fuzzy
+Logic Controllers, essential for the project's noise-resilience goals.
+2.​ Evolutionary Computation: Deep experience in Memetic Algorithms and
+Bio-inspired optimization to solve non-convex problems.
+3.​ Quantum Computational Intelligence: Pioneering the fusion of Fuzzy Logic with
+Quantum Computing (Quantum Fuzzy Logic).
+Principal Investigator: Prof. Giovanni Acampora (Male)
+Prof. Acampora is a Senior Member of IEEE and a pioneer in Quantum Computational
+Intelligence. His work focuses on hybridizing soft computing with quantum mechanics to
+solve trainability issues.
+Relevant Achievements:
+●​ Definition of Quantum Fuzzy Logic frameworks for uncertainty management.
+●​ Development of Evolutionary strategies for optimizing Variational Quantum
+Circuits.
+●​ Application of Memetic Algorithms to prevent Barren Plateaus in QML.
+Role in project: Optimization & Intelligence Lead
+Naples
+leads WP3 (Physics-Informed Optimization). They provide the
+Evolutionary/Memetic algorithms to drive the QFF training and design the Fuzzy Logic
+Controllers for the Robust Quantum Diffusion models. They also support WP5 in
+adversarial evolutionary testing.
+
+3.6 Consortium agreement principles (partner’s rights and
+duties, IPR management, data management, open access,
+GDPR)
+(max. ½ page)
+
+Consortium Agreement & Decision Making
+The consortium will sign a Consortium Agreement (CA) based on the DESCA (Horizon
+Europe) model prior to the project start. The CA will define the rights and duties of partners,
+specifying that SNU (Coordinator) manages the administrative interface, while the General
+Assembly (one vote per partner) decides on major scientific pivots.
+
+Intellectual Property Rights (IPR) Management
+
+●​ Background IP: Partners retain ownership of their pre-existing know-how.
+Specifically, Fraunhofer IKS retains all rights to the core QUARK framework, and
+Univ. Naples retains rights to their pre-existing Fuzzy Logic libraries.
+●​ Foreground IP: The new "Physics-Aware QML" algorithms (e.g., Multi-Chip
+Ensemble protocols, Fuzzy-Diffusion architectures) developed jointly will be jointly
+owned. We adopt an "Open Source by Default" strategy for software outputs,
+releasing the unified library under an Apache 2.0 license to maximize adoption.
+●​ Commercial Exploitation: Fraunhofer IKS leads the exploitation strategy. If a
+patentable invention arises (e.g., a specific industrial control system based on Robust
+QML), the CA outlines fair access rights and royalty-sharing mechanisms for the
+inventors.
+
+Data Management & Open Access
+●​ FAIR Data: We adhere to the FAIR principles (Findable, Accessible, Interoperable,
+Reusable). All non-sensitive "Challenge Datasets" (LHC jets, synthetic EEG) will be
+deposited in Zenodo with DOIs.
+●​ Open Access: The consortium commits to 100% Open Access for peer-reviewed
+publications (Green or Gold), ensuring immediate availability on arXiv.
+
+GDPR & Ethical Compliance
+●​ Neuroscience Data: The processing of EEG/fMRI data (WP4) involves human
+subjects. SNU will ensure all data is pseudonymized at the source before sharing
+within the consortium, in strict compliance with GDPR and Korean Personal
+Information Protection Act (PIPA).
+●​ Cybersecurity Data: Network logs used in WP5 will be screened to ensure no
+personally identifiable information (PII) or critical infrastructure vulnerabilities are
+exposed.
+
+3.7 Significant facilities and large equipment available to
+the consortium to perform the project
+(max. ½ page)
+The consortium brings together world-class infrastructure that enables "Big Science"
+validation without the need for external hardware procurement.
+1. High-Performance Computing & Simulation (SNU & Naples)
+●​ SNU: Access to extensive GPU clusters required to simulate the Multi-Chip
+Ensemble protocols. Since we are simulating distributed quantum learning
+(validating >20 qubits across multiple virtual chips), high-memory classical simulation
+resources are critical.
+●​ Univ. Naples: Dedicated computational clusters optimized for Evolutionary
+Algorithms, which require massive parallel processing capabilities to evolve the
+populations for the Memetic QFF optimization tasks.
+2. "Big Science" Data Infrastructure (Yonsei)
+●​ Yonsei (CMS Collaboration): Through Prof. Yoo’s leadership in the CMS
+Collaboration, the consortium has authorized access to the CERN LHC computing
+
+grid and petabyte-scale storage systems. This provides the massive High Energy
+Physics datasets (particle jets) required for WP4, which are otherwise inaccessible
+to standard research groups.
+3. Reliability Benchmarking & Quantum Hardware Access (Fraunhofer IKS)
+●​ The QUARK Framework: Fraunhofer provides the proprietary QUARK
+benchmarking suite, a significant software facility that automates the assessment of
+reliability metrics (Lipschitz continuity, robustness). This pre-existing infrastructure
+accelerates WP5 significantly.
+●​ Munich Quantum Valley (MQV): As a key member of MQV, Fraunhofer IKS
+provides access to a diverse ecosystem of quantum hardware backends
+(Superconducting, Ion Trap) for validating the Multi-Chip protocols on physical NISQ
+devices where applicable.
+
+3.8 Link with ongoing projects
+(max. ½ page)
+For each partner indicate (if applicable) the ongoing projects linked to the proposal topic, and
+their funding sources.
+
+3.9 Financial plan
+(max. 1 page)
+The resources to be committed for each project partner have to be described in the
+Electronic Submission System by the coordinator. These resources include: Personnel,
+Consumables, Equipment, Travel, Subcontracting, Provisions, Licensing fees, other. Justify
+them here. Both the justification and the information in the system will be communicated to
+the Evaluation Panel.
+
+4. Ethical issues (max. ½ page)
+Describe any foreseeable ethical issue that may arise during the course of the research
+project. Describe all mitigation strategies employed to reduce ethical risk, and justify the
+research methodology with respect to ethical issues.
+
+5. References (max. 30 references)
+
+Provide references of articles and publicly available documents directly supporting the
+proposal.
+
+

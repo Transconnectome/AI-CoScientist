@@ -1,0 +1,116 @@
+{
+  "success": [
+    "2503.00580_brain_foundation_models_survey.pdf",
+    "2503.02104_biomedical_foundation_model_survey.pdf",
+    "2505.15809_mmada_multimodal_diffusion.pdf",
+    "2506.13306_brain_imaging_foundation_models.pdf",
+    "2510.16658_foundation_ai_neuroscience.pdf",
+    "2504.15271_Eagle2.5.pdf",
+    "2506.00880_ModuLM.pdf",
+    "2506.07731_E2LM.pdf",
+    "2506.17238_ScientificReasoningChemistry.pdf",
+    "2507.11810_LLMsScientificInnovation.pdf",
+    "2508.15716_CrossDomainEEG.pdf",
+    "2508.21148_ScientificLLMsSurvey.pdf",
+    "2510.16548_NeurIPT.pdf"
+  ],
+  "failed": [
+    "2509.15607_PRIMT.pdf"
+  ],
+  "total_chunks_l0": 1161,
+  "total_chunks_l1": 53,
+  "total_chunks_l2": 13,
+  "papers": [
+    {
+      "filename": "2503.00580_brain_foundation_models_survey.pdf",
+      "title": "Brain Foundation Models: A Survey on",
+      "chunks_l0": 42,
+      "chunks_l1": 2,
+      "total_words": 10308
+    },
+    {
+      "filename": "2503.02104_biomedical_foundation_model_survey.pdf",
+      "title": "FoundationModelinBiomedicine",
+      "chunks_l0": 69,
+      "chunks_l1": 5,
+      "total_words": 5641
+    },
+    {
+      "filename": "2505.15809_mmada_multimodal_diffusion.pdf",
+      "title": "MMaDA: Multimodal Large Diffusion Language Models",
+      "chunks_l0": 62,
+      "chunks_l1": 2,
+      "total_words": 15918
+    },
+    {
+      "filename": "2506.13306_brain_imaging_foundation_models.pdf",
+      "title": "arXiv:2506.13306v1 [cs.CV] 16 Jun 2025Brain Imaging Foundation Models, Are We There Yet? A Systematic Review of",
+      "chunks_l0": 74,
+      "chunks_l1": 3,
+      "total_words": 18913
+    },
+    {
+      "filename": "2510.16658_foundation_ai_neuroscience.pdf",
+      "title": "Foundation and Large-Scale AI Models in Neuroscience: A",
+      "chunks_l0": 106,
+      "chunks_l1": 3,
+      "total_words": 24853
+    },
+    {
+      "filename": "2504.15271_Eagle2.5.pdf",
+      "title": "Eagle 2.5: Boosting Long-Context Post-Training for",
+      "chunks_l0": 66,
+      "chunks_l1": 4,
+      "total_words": 16190
+    },
+    {
+      "filename": "2506.00880_ModuLM.pdf",
+      "title": "arXiv:2506.00880v1 [cs.LG] 1 Jun 2025ModuLM: Enabling Modular and Multimodal",
+      "chunks_l0": 47,
+      "chunks_l1": 4,
+      "total_words": 10699
+    },
+    {
+      "filename": "2506.07731_E2LM.pdf",
+      "title": "arXiv:2506.07731v1 [cs.AI] 9 Jun 2025NeurIPS 2025 E2LM Competition : Early Training",
+      "chunks_l0": 49,
+      "chunks_l1": 2,
+      "total_words": 10483
+    },
+    {
+      "filename": "2506.17238_ScientificReasoningChemistry.pdf",
+      "title": "Training a Scientific Reasoning Model for Chemistry",
+      "chunks_l0": 70,
+      "chunks_l1": 6,
+      "total_words": 18226
+    },
+    {
+      "filename": "2507.11810_LLMsScientificInnovation.pdf",
+      "title": "THEEVOLVING ROLE OF LARGE LANGUAGE MODELS IN",
+      "chunks_l0": 186,
+      "chunks_l1": 5,
+      "total_words": 36410
+    },
+    {
+      "filename": "2508.15716_CrossDomainEEG.pdf",
+      "title": "JOURNAL OF L ATEX CLASS FILES, VOL. 18, NO. 9, SEPTEMBER 2020 1",
+      "chunks_l0": 44,
+      "chunks_l1": 4,
+      "total_words": 11028
+    },
+    {
+      "filename": "2508.21148_ScientificLLMsSurvey.pdf",
+      "title": "A Survey of Scientific Large Language Models:",
+      "chunks_l0": 267,
+      "chunks_l1": 10,
+      "total_words": 96629
+    },
+    {
+      "filename": "2510.16548_NeurIPT.pdf",
+      "title": "NeurIPT: Foundation Model for Neural Interfaces",
+      "chunks_l0": 79,
+      "chunks_l1": 3,
+      "total_words": 17681
+    }
+  ]
+}

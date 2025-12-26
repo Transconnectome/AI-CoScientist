@@ -1,0 +1,247 @@
+{
+  "summary": {
+    "total_claims": 30,
+    "evidence_coverage_percent": 3.3,
+    "validation_breakdown": {
+      "strong": 1,
+      "moderate": 0,
+      "weak": 0,
+      "unsupported": 29
+    },
+    "scientific_rigor_score": 3.3
+  },
+  "claim_analysis": {
+    "by_type": {
+      "general": 21,
+      "statistical": 4,
+      "literature": 2,
+      "technical": 1,
+      "innovation": 2
+    },
+    "by_section": {
+      "unknown": {
+        "total_claims": 30,
+        "strong": 1,
+        "moderate": 0,
+        "weak": 0,
+        "unsupported": 29
+      }
+    }
+  },
+  "priority_issues": [
+    {
+      "claim": "- **근거**: SwiFT (Swin 4D fMRI Transformer) 연구에서 \"modeling spatiotemporal brain dynamics from high-dimensional data, such as functional Magnetic Resonance Imaging (fMRI)\"의 가능성 입증 [SwiFT: Swin 4D fMRI Transformer]",
+      "section": "unknown",
+      "line": 8,
+      "status": "unsupported",
+      "evidence_strength": -0.338,
+      "suggested_revision": "Claim '- **근거**: SwiFT (Swin 4D fMRI Transformer) 연구에서 \"modeling spatiotemporal brain dynamics from high-dimensional data, such as functional Magnetic Resonance Imaging (fMRI)\"의 가능성 입증 [SwiFT: Swin 4D fMRI Transformer]' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Swin fMRI Transformer Predicts",
+          "relevance": 3.451,
+          "text": "SwiFT processes 4D fMRI volumes by segmenting them\ninto patches, embedding them as tokens, and passing them through layers of\n4D Swin Transformer blocks These blocks utilize a shifted window multi-hea..."
+        },
+        {
+          "paper": "SwiFT: Swin 4D fMRI Transformer",
+          "relevance": 0.178,
+          "text": "[ 19]\nsuggested the Swin Transformer, a model that reduces the computational complexity to be linear\nin the number of tokens by running self-attention only within a local window instead of running\nit ..."
+        }
+      ]
+    },
+    {
+      "claim": "정확도 90%",
+      "section": "unknown",
+      "line": 10,
+      "status": "unsupported",
+      "evidence_strength": -11.003,
+      "suggested_revision": "Claim '정확도 90%' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Nature Machine Intelligence | Volume 6 | August 2024 | 911–923",
+          "relevance": -10.866,
+          "text": "For example, the human genome contains about 12% primate-specific \nAlu retrotransposons The coding genome is relatively conserved over \nspecies; the non-coding genome is more unique It is these langua..."
+        },
+        {
+          "paper": "Published as a conference paper at ICLR 2025",
+          "relevance": -11.017,
+          "text": "Shown are\nROC-AUC mean and standard error across subjects evaluated at 90 electrodes K F ROZEN ENSEMBLE SCALING\nFigure 17: Pretraining is critical to frozen PopT performance that scales with the numbe..."
+        }
+      ]
+    },
+    {
+      "claim": "- **적용**: 생후 6개월부터 24개월까지 ASD 예측 정확도 90%+ 목표 (AUTISM 2017 연구에서 \"9 of 11 infants\" 성공 사례 확장)",
+      "section": "unknown",
+      "line": 10,
+      "status": "unsupported",
+      "evidence_strength": -7.074,
+      "suggested_revision": "Claim '- **적용**: 생후 6개월부터 24개월까지 ASD 예측 정확도 90%+ 목표 (AUTISM 2017 연구에서 \"9 of 11 infants\" 성공 사례 확장)' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -6.894,
+          "text": "The age of patients that is \ncovered has a gap due to the limited available data for ages including \n31–48 months of age [35] However, the evidence level of using EEG \nmonitoring has not yet reached t..."
+        },
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -7.002,
+          "text": "Determining “the brain \ntemporospatial regions where the risk genes are expressed in ASD \npatients ” could improve the therapeutic strategies for better \nhealthcare and treatment for ASD risky patient..."
+        }
+      ]
+    },
+    {
+      "claim": "ICLR",
+      "section": "unknown",
+      "line": 13,
+      "status": "unsupported",
+      "evidence_strength": -7.183,
+      "suggested_revision": "Claim 'ICLR' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -6.428,
+          "text": "Specialist in Artificial Intelligence and E- \nLearning Currently, working as a lecturer at the University of \nInformation Technology and Communications (UOITC) Her \nresearch interest is AI Application..."
+        },
+        {
+          "paper": "Published as a conference paper at ICLR 2025",
+          "relevance": -6.924,
+          "text": "Electrode layouts are highly variable, so it is important that some\nnotion of positional encoding be given Future work could experiment with automatic functional\nidentification for each channel, such ..."
+        }
+      ]
+    },
+    {
+      "claim": "ICLR",
+      "section": "unknown",
+      "line": 13,
+      "status": "unsupported",
+      "evidence_strength": -7.183,
+      "suggested_revision": "Claim 'ICLR' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -6.428,
+          "text": "Specialist in Artificial Intelligence and E- \nLearning Currently, working as a lecturer at the University of \nInformation Technology and Communications (UOITC) Her \nresearch interest is AI Application..."
+        },
+        {
+          "paper": "Published as a conference paper at ICLR 2025",
+          "relevance": -6.924,
+          "text": "Electrode layouts are highly variable, so it is important that some\nnotion of positional encoding be given Future work could experiment with automatic functional\nidentification for each channel, such ..."
+        }
+      ]
+    },
+    {
+      "claim": "대신 Foundation Model",
+      "section": "unknown",
+      "line": 14,
+      "status": "unsupported",
+      "evidence_strength": -11.089,
+      "suggested_revision": "Claim '대신 Foundation Model' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -10.891,
+          "text": "≡Recommendation to investigate ASD risky genes: According to \nliterature, no specific risky gene set finding is attained yet, but \nseveral studies had classified some genes as risky and contributed in..."
+        },
+        {
+          "paper": "Nature Machine Intelligence | Volume 6 | August 2024 | 911–923",
+          "relevance": -11.22,
+          "text": "For example, the human genome contains about 12% primate-specific \nAlu retrotransposons The coding genome is relatively conserved over \nspecies; the non-coding genome is more unique It is these langua..."
+        }
+      ]
+    },
+    {
+      "claim": "- **혁신점**: 전통적 통계 분석 대신 Foundation Model 기반 바이오마커 자동 발굴",
+      "section": "unknown",
+      "line": 14,
+      "status": "unsupported",
+      "evidence_strength": -7.321,
+      "suggested_revision": "Claim '- **혁신점**: 전통적 통계 분석 대신 Foundation Model 기반 바이오마커 자동 발굴' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Published as a conference paper at ICLR 2024",
+          "relevance": -7.147,
+          "text": "This highlights the ben-\neﬁts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By ﬁne-tunin..."
+        },
+        {
+          "paper": "2024-5-7",
+          "relevance": -7.213,
+          "text": "There is mild left basilar atelectasis No focal \nconsolidation is seen There is no pleural effusion or \npneumothorax The cardiac and mediastinal silhouettes are \nunremarkable Degenerative changes are ..."
+        }
+      ]
+    },
+    {
+      "claim": "- **차별성**: 인간 전문가가 놓치는 미세한 발달 궤적 일탈을 AI가 포착",
+      "section": "unknown",
+      "line": 15,
+      "status": "unsupported",
+      "evidence_strength": -7.791,
+      "suggested_revision": "Claim '- **차별성**: 인간 전문가가 놓치는 미세한 발달 궤적 일탈을 AI가 포착' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Genome modeling and design",
+          "relevance": -7.546,
+          "text": "We modify yEnformerto have higher resolution by expanding its dimensionality\nto 6,144 by repeating each entry 128/32 =4times to produce a vector yBorzoi∈{0,1}6,144 We normalize the\nBorzoi predictions ..."
+        },
+        {
+          "paper": "ARTICLE",
+          "relevance": -7.81,
+          "text": "By de ﬁning the regions of interest in each\nhemisphere based on each hemisphere ’s own particular features,\nsuch as its sulcal and gyral geometry, we could then obtain thecorresponding relationships b..."
+        }
+      ]
+    },
+    {
+      "claim": "- **혁신점**: 유전체 변이 → ESM3 단백질 구조 예측 → 기능 변화 분석 → 발달장애 phenotype 예측의 완전 통합 파이프라인",
+      "section": "unknown",
+      "line": 19,
+      "status": "unsupported",
+      "evidence_strength": -7.004,
+      "suggested_revision": "Claim '- **혁신점**: 유전체 변이 → ESM3 단백질 구조 예측 → 기능 변화 분석 → 발달장애 phenotype 예측의 완전 통합 파이프라인' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -6.787,
+          "text": "Specialist in Artificial Intelligence and E- \nLearning Currently, working as a lecturer at the University of \nInformation Technology and Communications (UOITC) Her \nresearch interest is AI Application..."
+        },
+        {
+          "paper": "ARTICLE",
+          "relevance": -7.1,
+          "text": "By de ﬁning the regions of interest in each\nhemisphere based on each hemisphere ’s own particular features,\nsuch as its sulcal and gyral geometry, we could then obtain thecorresponding relationships b..."
+        }
+      ]
+    },
+    {
+      "claim": "세계 최초",
+      "section": "unknown",
+      "line": 20,
+      "status": "unsupported",
+      "evidence_strength": -9.302,
+      "suggested_revision": "Claim '세계 최초' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "2024-5-7",
+          "relevance": -8.801,
+          "text": "There is mild left basilar atelectasis No focal \nconsolidation is seen There is no pleural effusion or \npneumothorax The cardiac and mediastinal silhouettes are \nunremarkable Degenerative changes are ..."
+        },
+        {
+          "paper": "2024-5-7",
+          "relevance": -9.379,
+          "text": "visualized paranasal sinuses are clear visualized \nmastoid air cells are clear visualized osseous labyrinth structures appear normal visualized orbits are normal visualized soft \ntissues of the scalp ..."
+        }
+      ]
+    }
+  ],
+  "strong_claims": [
+    {
+      "claim": "- **근거**: ICLR 2024 BrainLM 연구 \"provides a powerful framework for biomarker discovery\" 및 \"large-scale pretraining for learning robust encodings of spatiotemporal neural patterns\" 기술 활용 [Published as a conference paper at ICLR 2024]",
+      "section": "unknown",
+      "evidence_strength": 1.375,
+      "top_evidence": "Published as a conference paper at ICLR 2024 (abstract)"
+    }
+  ],
+  "recommendations": [
+    "🔴 Critical: Evidence coverage below 70%. Add citations and supporting data.",
+    "⚠️ Remove or support 29 unsupported claims",
+    "📚 Consider citing papers from DD-RAPTOR database for stronger evidence",
+    "🔄 Use real-time validation during writing for better quality"
+  ]
+}

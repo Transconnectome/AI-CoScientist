@@ -1,0 +1,246 @@
+{
+  "summary": {
+    "total_claims": 100,
+    "evidence_coverage_percent": 0.0,
+    "validation_breakdown": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 0,
+      "unsupported": 100
+    },
+    "scientific_rigor_score": 0.0
+  },
+  "claim_analysis": {
+    "by_type": {
+      "general": 72,
+      "technical": 7,
+      "literature": 17,
+      "statistical": 4
+    },
+    "by_section": {
+      "unknown": {
+        "total_claims": 77,
+        "strong": 0,
+        "moderate": 0,
+        "weak": 0,
+        "unsupported": 77
+      },
+      "예산": {
+        "total_claims": 23,
+        "strong": 0,
+        "moderate": 0,
+        "weak": 0,
+        "unsupported": 23
+      }
+    }
+  },
+  "priority_issues": [
+    {
+      "claim": "**분석팀**: AI-CoScientist with DD-RAPTOR RAG System + RED/BLUE Team Analysis",
+      "section": "unknown",
+      "line": 5,
+      "status": "unsupported",
+      "evidence_strength": -10.213,
+      "suggested_revision": "Claim '**분석팀**: AI-CoScientist with DD-RAPTOR RAG System + RED/BLUE Team Analysis' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -9.848,
+          "text": "Specialist in Artificial Intelligence and E- \nLearning Currently, working as a lecturer at the University of \nInformation Technology and Communications (UOITC) Her \nresearch interest is AI Application..."
+        },
+        {
+          "paper": "Towards Generalist Biomedical AI",
+          "relevance": -10.208,
+          "text": "Perhaps the work closest in spirit is BenchMD [49] The\nbenchmark spans 19 publicly available datasets and 7 medical modalities, including 1D sensor data, 2D images,\nand 3D volumetric scans However, th..."
+        }
+      ]
+    },
+    {
+      "claim": "2025 Foundation Model",
+      "section": "unknown",
+      "line": 6,
+      "status": "unsupported",
+      "evidence_strength": -6.864,
+      "suggested_revision": "Claim '2025 Foundation Model' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Genome modeling and design",
+          "relevance": -1.687,
+          "text": "(E)ThenumberoftokensusedtotrainEvo240Band7B,\nsplit into the short phase pretraining and the long context midtraining (F) Schematic of the new multi-hybrid\nStripedHyena 2 architecture, showing the effi..."
+        },
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -10.172,
+          "text": "Computers in Biology and Medicine 146 (2022) 105553\n8telehealth visits; first appointment for visiting with a psychometrist and \nsecond one for visiting with a licensed psychologist In the study of [3..."
+        }
+      ]
+    },
+    {
+      "claim": "NeurIPS",
+      "section": "unknown",
+      "line": 6,
+      "status": "unsupported",
+      "evidence_strength": -9.435,
+      "suggested_revision": "Claim 'NeurIPS' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "RESEARCH ARTICLE SUMMARY◥",
+          "relevance": -8.218,
+          "text": "INTRODUCTION: Historically, psychiatric disor-\nders have been distinguished from neurolog-\nical disorders by the ab sence of the associated\nhistological pathology observed in neurological\nc o n d i t ..."
+        },
+        {
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "relevance": -9.99,
+          "text": "We first describe multimedia data modalities that are commonly used in digital phenotyping\nprojects related to social human behavior, including common schemes for acquiring naturalistic\ndata We then d..."
+        }
+      ]
+    },
+    {
+      "claim": "**참조**: NeurIPS 2025 Foundation Models for Brain and Body Workshop",
+      "section": "unknown",
+      "line": 6,
+      "status": "unsupported",
+      "evidence_strength": -7.744,
+      "suggested_revision": "Claim '**참조**: NeurIPS 2025 Foundation Models for Brain and Body Workshop' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Published as a conference paper at ICLR 2024",
+          "relevance": -4.949,
+          "text": "This highlights the ben-\neﬁts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By ﬁne-tunin..."
+        },
+        {
+          "paper": "Gene-LLMs: a comprehensive",
+          "relevance": -8.309,
+          "text": "10.3389/fgene.2025.1634882\n\nproteins interact with DNA, thereby enabling models to gain a better\nunderstanding of gene activity DeepSEA investigates DNAmodi ﬁcations and how they can affect gene funct..."
+        }
+      ]
+    },
+    {
+      "claim": "- **INCITE NeuroX-Fusion 130B 모델**: **검증불가/허구일 가능성** (Fatal Flaw #1)",
+      "section": "unknown",
+      "line": 14,
+      "status": "unsupported",
+      "evidence_strength": -8.9,
+      "suggested_revision": "Claim '- **INCITE NeuroX-Fusion 130B 모델**: **검증불가/허구일 가능성** (Fatal Flaw #1)' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "RESEARCH ARTICLE SUMMARY◥",
+          "relevance": -8.564,
+          "text": "INTRODUCTION: Historically, psychiatric disor-\nders have been distinguished from neurolog-\nical disorders by the ab sence of the associated\nhistological pathology observed in neurological\nc o n d i t ..."
+        },
+        {
+          "paper": "RESEARCH ARTICLE SUMMARY◥",
+          "relevance": -8.671,
+          "text": "We used Signac [( 76);https://stuartlab org/signac/ ], an R-based program to stringently\nfilter out low-quality ce lls through nucleosome\nb a n d i n gs c o r e<4a n dT S S<2 ,l e a v i n g4 1 , 6 8 3..."
+        }
+      ]
+    },
+    {
+      "claim": "AUC > 0.95",
+      "section": "unknown",
+      "line": 17,
+      "status": "unsupported",
+      "evidence_strength": -8.021,
+      "suggested_revision": "Claim 'AUC > 0.95' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Published as a conference paper at ICLR 2025",
+          "relevance": -6.297,
+          "text": "Shown are\nROC-AUC mean and standard error across subjects evaluated at 90 electrodes K F ROZEN ENSEMBLE SCALING\nFigure 17: Pretraining is critical to frozen PopT performance that scales with the numbe..."
+        },
+        {
+          "paper": "Computational Methods to Measure Patterns of Gaze",
+          "relevance": -8.438,
+          "text": "MAIN OUTCOMES AND MEASURES Computer vision analysis quantified eye-gaze\npatterns elicited by the app, which were compared between toddlers with ASDvs typical development RESULTS Mean age of the sample..."
+        }
+      ]
+    },
+    {
+      "claim": "ICLR",
+      "section": "unknown",
+      "line": 20,
+      "status": "unsupported",
+      "evidence_strength": -7.183,
+      "suggested_revision": "Claim 'ICLR' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -6.428,
+          "text": "Specialist in Artificial Intelligence and E- \nLearning Currently, working as a lecturer at the University of \nInformation Technology and Communications (UOITC) Her \nresearch interest is AI Application..."
+        },
+        {
+          "paper": "Published as a conference paper at ICLR 2025",
+          "relevance": -6.924,
+          "text": "Electrode layouts are highly variable, so it is important that some\nnotion of positional encoding be given Future work could experiment with automatic functional\nidentification for each channel, such ..."
+        }
+      ]
+    },
+    {
+      "claim": "NeurIPS",
+      "section": "unknown",
+      "line": 20,
+      "status": "unsupported",
+      "evidence_strength": -9.435,
+      "suggested_revision": "Claim 'NeurIPS' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "RESEARCH ARTICLE SUMMARY◥",
+          "relevance": -8.218,
+          "text": "INTRODUCTION: Historically, psychiatric disor-\nders have been distinguished from neurolog-\nical disorders by the ab sence of the associated\nhistological pathology observed in neurological\nc o n d i t ..."
+        },
+        {
+          "paper": "Downloaded from www.annualreviews.org. Guest (guest) IP: 147.46.23.186 On: Mon, 24 Nov 2025 11:37:35",
+          "relevance": -9.99,
+          "text": "We first describe multimedia data modalities that are commonly used in digital phenotyping\nprojects related to social human behavior, including common schemes for acquiring naturalistic\ndata We then d..."
+        }
+      ]
+    },
+    {
+      "claim": "- **검증된 모델 기반 접근**: BrainLM (8B, ICLR 2024) + SwiFT (NeurIPS 2023)",
+      "section": "unknown",
+      "line": 20,
+      "status": "unsupported",
+      "evidence_strength": -9.136,
+      "suggested_revision": "Claim '- **검증된 모델 기반 접근**: BrainLM (8B, ICLR 2024) + SwiFT (NeurIPS 2023)' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Published as a conference paper at ICLR 2025",
+          "relevance": -8.74,
+          "text": "Electrode layouts are highly variable, so it is important that some\nnotion of positional encoding be given Future work could experiment with automatic functional\nidentification for each channel, such ..."
+        },
+        {
+          "paper": "Gene-LLMs: a comprehensive",
+          "relevance": -9.308,
+          "text": "The most recent research has focused on the use of sequential\nand non-sequential data together to improve an individual ’s\npredictive ability To address this, one must align DNAsequences with expressi..."
+        }
+      ]
+    },
+    {
+      "claim": "- **단계적 scope 축소**: 10-site → foundation model → multimodal integration",
+      "section": "unknown",
+      "line": 21,
+      "status": "unsupported",
+      "evidence_strength": -10.476,
+      "suggested_revision": "Claim '- **단계적 scope 축소**: 10-site → foundation model → multimodal integration' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -9.468,
+          "text": "FDOSM applies the idea of ideal solution and opinion matrix \nunder a fuzzy environment with fewer mathematical equations FDOSM \nprovides logical decisions because it depends on the opinion of the de-\n..."
+        },
+        {
+          "paper": "Towards a Visual-Language Foundation Model for",
+          "relevance": -11.197,
+          "text": "In an example of breast IDC slide, we find that\nregions highlighted in the heatmap closely resemble the tumor regions as delineated by pathologist annotation\n(Figure 2e, left andmiddle ) Since the sli..."
+        }
+      ]
+    }
+  ],
+  "strong_claims": [],
+  "recommendations": [
+    "🔴 Critical: Evidence coverage below 70%. Add citations and supporting data.",
+    "⚠️ Remove or support 100 unsupported claims",
+    "📚 Consider citing papers from DD-RAPTOR database for stronger evidence",
+    "🔄 Use real-time validation during writing for better quality"
+  ]
+}

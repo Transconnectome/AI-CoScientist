@@ -1,0 +1,23 @@
+{
+  "query": "foundation models for developmental disorder diagnosis",
+  "query_classification": {
+    "type": "clinical",
+    "clinical_score": 1.0,
+    "technical_score": 0.0,
+    "confidence": 1.0,
+    "reasoning": "Strong clinical focus (100.00%). Prioritizing DD papers."
+  },
+  "results": [
+    {
+      "rank": 1,
+      "document": "The paper surveys the development and application of Brain Foundation Models (BFMs), which are deep learning-based models pretrained on large-scale neural data to decode or simulate brain activity. These models utilize advanced neural network technologies and integrate multimodal brain signal processing techniques, such as EEG, to capture complex neural patterns. The primary contribution is the potential of BFMs to advance neuroscience research and improve brain disease diagnosis and treatment. ...",
+      "metadata": {
+        "paper_title": "Brain Foundation Models: A Survey on",
+        "total_sections": 2,
+        "total_chunks": 42,
+        "paper_id": "2503.00580_brain_foundation_models_survey"
+      },
+      "scores": {
+        "dd_score": 0.0,
+        "fm_score": 0.0063,
+        "combined_score": 

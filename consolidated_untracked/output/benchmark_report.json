@@ -1,0 +1,362 @@
+{
+  "report_timestamp": "2025-12-10T22:02:42.961078",
+  "system_metrics": {
+    "total_requests": 30,
+    "requests_per_minute": 30,
+    "avg_latency_ms": 142.21998850504556,
+    "success_rate": 1.0,
+    "active_strategies": 7,
+    "cross_domain_rate": 0.8,
+    "quality_trend": "improving",
+    "peak_latency_ms": 284.9447727203369,
+    "error_rate": 0.0,
+    "uptime_hours": 0.010259679722222222
+  },
+  "strategy_breakdown": {
+    "hybrid": {
+      "total_requests": 3,
+      "success_rate": 1.0,
+      "avg_latency_ms": 169.14765040079752,
+      "p95_latency_ms": 0.0,
+      "avg_quality_score": 0.2354792634646098,
+      "cross_domain_rate": 1.0,
+      "sources_per_request": 5.0
+    },
+    "enhanced_dd_raptor": {
+      "total_requests": 1,
+      "success_rate": 1.0,
+      "avg_latency_ms": 181.18906021118164,
+      "p95_latency_ms": 0.0,
+      "avg_quality_score": 0.0,
+      "cross_domain_rate": 1.0,
+      "sources_per_request": 5.0
+    },
+    "graph_rag": {
+      "total_requests": 9,
+      "success_rate": 1.0,
+      "avg_latency_ms": 140.89613490634494,
+      "p95_latency_ms": 168.9889430999756,
+      "avg_quality_score": 0.3091313540273243,
+      "cross_domain_rate": 0.7777777777777778,
+      "sources_per_request": 5.0
+    },
+    "golden_reference": {
+      "total_requests": 6,
+      "success_rate": 1.0,
+      "avg_latency_ms": 35.18199920654297,
+      "p95_latency_ms": 51.709890365600586,
+      "avg_quality_score": 0.32241598665714266,
+      "cross_domain_rate": 0.6666666666666666,
+      "sources_per_request": 5.0
+    },
+    "simple_rag": {
+      "total_requests": 1,
+      "success_rate": 1.0,
+      "avg_latency_ms": 150.30169486999512,
+      "p95_latency_ms": 0.0,
+      "avg_quality_score": 0.0,
+      "cross_domain_rate": 1.0,
+      "sources_per_request": 5.0
+    },
+    "multimodal_rag": {
+      "total_requests": 9,
+      "success_rate": 1.0,
+      "avg_latency_ms": 203.36514049106174,
+      "p95_latency_ms": 284.9447727203369,
+      "avg_quality_score": 0.3653467959827847,
+      "cross_domain_rate": 0.7777777777777778,
+      "sources_per_request": 5.0
+    },
+    "psychology_rag": {
+      "total_requests": 1,
+      "success_rate": 1.0,
+      "avg_latency_ms": 118.22247505187988,
+      "p95_latency_ms": 0.0,
+      "avg_quality_score": 0.0,
+      "cross_domain_rate": 1.0,
+      "sources_per_request": 5.0
+    }
+  },
+  "alerts": [
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy graph_rag quality 0.182 below threshold",
+      "timestamp": "2025-12-10T22:02:40.002322",
+      "metric_value": 0.18242247104644777,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy hybrid quality 0.243 below threshold",
+      "timestamp": "2025-12-10T22:02:40.002333",
+      "metric_value": 0.24301795959472655,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy multimodal_rag quality 0.183 below threshold",
+      "timestamp": "2025-12-10T22:02:40.653556",
+      "metric_value": 0.18276370763778688,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy graph_rag quality 0.181 below threshold",
+      "timestamp": "2025-12-10T22:02:40.653591",
+      "metric_value": 0.18114422559738158,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy hybrid quality 0.183 below threshold",
+      "timestamp": "2025-12-10T22:02:40.653610",
+      "metric_value": 0.18276370763778688,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy multimodal_rag quality 0.320 below threshold",
+      "timestamp": "2025-12-10T22:02:41.091221",
+      "metric_value": 0.32004216909408567,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy graph_rag quality 0.315 below threshold",
+      "timestamp": "2025-12-10T22:02:41.091242",
+      "metric_value": 0.31477669477462766,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy golden_reference quality 0.320 below threshold",
+      "timestamp": "2025-12-10T22:02:41.091251",
+      "metric_value": 0.32004216909408567,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy multimodal_rag quality 0.471 below threshold",
+      "timestamp": "2025-12-10T22:02:41.519424",
+      "metric_value": 0.4710922658443451,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy graph_rag quality 0.518 below threshold",
+      "timestamp": "2025-12-10T22:02:41.519444",
+      "metric_value": 0.5182014924287797,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy golden_reference quality 0.471 below threshold",
+      "timestamp": "2025-12-10T22:02:41.519454",
+      "metric_value": 0.4710922658443451,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy multimodal_rag quality 0.180 below threshold",
+      "timestamp": "2025-12-10T22:02:41.984697",
+      "metric_value": 0.1798575520515442,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy graph_rag quality 0.156 below threshold",
+      "timestamp": "2025-12-10T22:02:41.984720",
+      "metric_value": 0.1563284158706665,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy golden_reference quality 0.180 below threshold",
+      "timestamp": "2025-12-10T22:02:41.984731",
+      "metric_value": 0.1798575520515442,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy golden_reference quality 0.352 below threshold",
+      "timestamp": "2025-12-10T22:02:42.424409",
+      "metric_value": 0.3516526103019714,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy multimodal_rag quality 0.352 below threshold",
+      "timestamp": "2025-12-10T22:02:42.424434",
+      "metric_value": 0.3516526103019714,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy graph_rag quality 0.352 below threshold",
+      "timestamp": "2025-12-10T22:02:42.424451",
+      "metric_value": 0.3516526103019714,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy multimodal_rag quality 0.331 below threshold",
+      "timestamp": "2025-12-10T22:02:42.860723",
+      "metric_value": 0.33119519948959353,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy graph_rag quality 0.204 below threshold",
+      "timestamp": "2025-12-10T22:02:42.860747",
+      "metric_value": 0.20408327579498292,
+      "threshold": 0.6
+    },
+    {
+      "alert_type": "low_quality",
+      "severity": "warning",
+      "message": "Strategy golden_reference quality 0.331 below threshold",
+      "timestamp": "2025-12-10T22:02:42.860759",
+      "metric_value": 0.33119519948959353,
+      "threshold": 0.6
+    }
+  ],
+  "recommendations": [
+    "\u2705 System performing well within thresholds."
+  ],
+  "benchmark_results": {
+    "total_queries": 10,
+    "successful_queries": 10,
+    "avg_latency_ms": 426.7634391784668,
+    "queries": [
+      {
+        "query": "ESM3 protein structure prediction",
+        "success": true,
+        "latency_ms": 630.59401512146,
+        "strategies": [
+          "enhanced_dd_raptor",
+          "graph_rag",
+          "multimodal_rag"
+        ],
+        "sources": 10
+      },
+      {
+        "query": "brain development neural connectivity",
+        "success": true,
+        "latency_ms": 338.0618095397949,
+        "strategies": [
+          "hybrid",
+          "golden_reference",
+          "psychology_rag"
+        ],
+        "sources": 10
+      },
+      {
+        "query": "quantum machine learning optimization",
+        "success": true,
+        "latency_ms": 482.96666145324707,
+        "strategies": [
+          "graph_rag",
+          "simple_rag",
+          "multimodal_rag"
+        ],
+        "sources": 15
+      },
+      {
+        "query": "Samsung grant proposal research",
+        "success": true,
+        "latency_ms": 559.8657131195068,
+        "strategies": [
+          "multimodal_rag",
+          "graph_rag",
+          "hybrid"
+        ],
+        "sources": 9
+      },
+      {
+        "query": "autism spectrum disorder diagnosis",
+        "success": true,
+        "latency_ms": 550.9636402130127,
+        "strategies": [
+          "multimodal_rag",
+          "graph_rag",
+          "hybrid"
+        ],
+        "sources": 7
+      },
+      {
+        "query": "neural network architecture design",
+        "success": true,
+        "latency_ms": 337.33582496643066,
+        "strategies": [
+          "multimodal_rag",
+          "graph_rag",
+          "golden_reference"
+        ],
+        "sources": 7
+      },
+      {
+        "query": "protein folding evolution",
+        "success": true,
+        "latency_ms": 327.8031349182129,
+        "strategies": [
+          "multimodal_rag",
+          "graph_rag",
+          "golden_reference"
+        ],
+        "sources": 5
+      },
+      {
+        "query": "developmental delay early intervention",
+        "success": true,
+        "latency_ms": 364.8943901062012,
+        "strategies": [
+          "multimodal_rag",
+          "graph_rag",
+          "golden_reference"
+        ],
+        "sources": 8
+      },
+      {
+        "query": "machine learning healthcare applications",
+        "success": true,
+        "latency_ms": 339.43629264831543,
+        "strategies": [
+          "golden_reference",
+          "multimodal_rag",
+          "graph_rag"
+        ],
+        "sources": 5
+      },
+      {
+        "query": "brain imaging fMRI analysis",
+        "success": true,
+        "latency_ms": 335.7129096984863,
+        "strategies": [
+          "multimodal_rag",
+          "graph_rag",
+          "golden_reference"
+        ],
+        "sources": 10
+      }
+    ]
+  }
+}

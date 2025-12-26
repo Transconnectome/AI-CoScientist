@@ -1,0 +1,239 @@
+{
+  "summary": {
+    "total_claims": 11,
+    "evidence_coverage_percent": 0.0,
+    "validation_breakdown": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 0,
+      "unsupported": 11
+    },
+    "scientific_rigor_score": 0.0
+  },
+  "claim_analysis": {
+    "by_type": {
+      "literature": 1,
+      "general": 8,
+      "innovation": 1,
+      "technical": 1
+    },
+    "by_section": {
+      "혁신성": {
+        "total_claims": 11,
+        "strong": 0,
+        "moderate": 0,
+        "weak": 0,
+        "unsupported": 11
+      }
+    }
+  },
+  "priority_issues": [
+    {
+      "claim": "ICLR",
+      "section": "혁신성",
+      "line": 9,
+      "status": "unsupported",
+      "evidence_strength": -7.183,
+      "suggested_revision": "Claim 'ICLR' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -6.428,
+          "text": "Specialist in Artificial Intelligence and E- \nLearning Currently, working as a lecturer at the University of \nInformation Technology and Communications (UOITC) Her \nresearch interest is AI Application..."
+        },
+        {
+          "paper": "Published as a conference paper at ICLR 2025",
+          "relevance": -6.924,
+          "text": "Electrode layouts are highly variable, so it is important that some\nnotion of positional encoding be given Future work could experiment with automatic functional\nidentification for each channel, such ..."
+        }
+      ]
+    },
+    {
+      "claim": "- **BrainLM 바이오마커 엔진**: ICLR 2024 검증된 바이오마커 발굴 프레임워크 적용",
+      "section": "혁신성",
+      "line": 9,
+      "status": "unsupported",
+      "evidence_strength": -5.239,
+      "suggested_revision": "Claim '- **BrainLM 바이오마커 엔진**: ICLR 2024 검증된 바이오마커 발굴 프레임워크 적용' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Published as a conference paper at ICLR 2024",
+          "relevance": -2.162,
+          "text": "This highlights the ben-\neﬁts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By ﬁne-tunin..."
+        },
+        {
+          "paper": "Gene-LLMs: a comprehensive",
+          "relevance": -6.918,
+          "text": "As each nucleotide is\nadded, a high-resolution confocal ﬂuorescence laser detects the\nemitted signals, which correspond to the speci ﬁc base\nincorporated This ﬂuorescence-based detection allows for\nac..."
+        }
+      ]
+    },
+    {
+      "claim": "- **Gene-LLMs 유전체 해석**: 개인맞춤 치료를 위한 variant effect prediction",
+      "section": "혁신성",
+      "line": 10,
+      "status": "unsupported",
+      "evidence_strength": -6.514,
+      "suggested_revision": "Claim '- **Gene-LLMs 유전체 해석**: 개인맞춤 치료를 위한 variant effect prediction' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Gene-LLMs: a comprehensive",
+          "relevance": -4.688,
+          "text": "The most recent research has focused on the use of sequential\nand non-sequential data together to improve an individual ’s\npredictive ability To address this, one must align DNAsequences with expressi..."
+        },
+        {
+          "paper": "Gene-LLMs: a comprehensive",
+          "relevance": -7.745,
+          "text": "As each nucleotide is\nadded, a high-resolution confocal ﬂuorescence laser detects the\nemitted signals, which correspond to the speci ﬁc base\nincorporated This ﬂuorescence-based detection allows for\nac..."
+        }
+      ]
+    },
+    {
+      "claim": "- **Med-PaLM M 아키텍처**: 6개 모달리티 (fMRI, dMRI, EEG, 유전체, 임상, 행동) 동시 학습",
+      "section": "혁신성",
+      "line": 11,
+      "status": "unsupported",
+      "evidence_strength": -8.784,
+      "suggested_revision": "Claim '- **Med-PaLM M 아키텍처**: 6개 모달리티 (fMRI, dMRI, EEG, 유전체, 임상, 행동) 동시 학습' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -8.61,
+          "text": "Computers in Biology and Medicine 146 (2022) 105553\n8telehealth visits; first appointment for visiting with a psychometrist and \nsecond one for visiting with a licensed psychologist In the study of [3..."
+        },
+        {
+          "paper": "2024-5-7",
+          "relevance": -8.731,
+          "text": "Table 9 defines the labels\nfor comparing the AI and original radiologist reports for the same study This rubric along with\ntraining materials and examples were provided to radiologist labelers as trai..."
+        }
+      ]
+    },
+    {
+      "claim": "유전체 변이 발견 → ESM3 단백질 구조 예측 → 기능 변화 분석",
+      "section": "혁신성",
+      "line": 15,
+      "status": "unsupported",
+      "evidence_strength": -7.141,
+      "suggested_revision": "Claim '유전체 변이 발견 → ESM3 단백질 구조 예측 → 기능 변화 분석' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Gene-LLMs: a comprehensive",
+          "relevance": -6.887,
+          "text": "As each nucleotide is\nadded, a high-resolution confocal ﬂuorescence laser detects the\nemitted signals, which correspond to the speci ﬁc base\nincorporated This ﬂuorescence-based detection allows for\nac..."
+        },
+        {
+          "paper": "2024-5-7",
+          "relevance": -7.23,
+          "text": "There is mild left basilar atelectasis No focal \nconsolidation is seen There is no pleural effusion or \npneumothorax The cardiac and mediastinal silhouettes are \nunremarkable Degenerative changes are ..."
+        }
+      ]
+    },
+    {
+      "claim": "→ BrainLM 뇌 발달 예측 → SwiFT 시공간 패턴 분석 → 임상 결과 예측",
+      "section": "혁신성",
+      "line": 16,
+      "status": "unsupported",
+      "evidence_strength": -5.267,
+      "suggested_revision": "Claim '→ BrainLM 뇌 발달 예측 → SwiFT 시공간 패턴 분석 → 임상 결과 예측' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Published as a conference paper at ICLR 2024",
+          "relevance": -4.39,
+          "text": "This highlights the ben-\neﬁts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By ﬁne-tunin..."
+        },
+        {
+          "paper": "Published as a conference paper at ICLR 2024",
+          "relevance": -4.973,
+          "text": "The blood-oxygen-level dependent (BOLD) signals represent an indirect mea-\nsure of brain function and can be difﬁcult to interpret Furthermore, fMRI data exhibits complex\nspatiotemporal dynamics, with..."
+        }
+      ]
+    },
+    {
+      "claim": "세계 최초",
+      "section": "혁신성",
+      "line": 45,
+      "status": "unsupported",
+      "evidence_strength": -9.302,
+      "suggested_revision": "Claim '세계 최초' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "2024-5-7",
+          "relevance": -8.801,
+          "text": "There is mild left basilar atelectasis No focal \nconsolidation is seen There is no pleural effusion or \npneumothorax The cardiac and mediastinal silhouettes are \nunremarkable Degenerative changes are ..."
+        },
+        {
+          "paper": "2024-5-7",
+          "relevance": -9.379,
+          "text": "visualized paranasal sinuses are clear visualized \nmastoid air cells are clear visualized osseous labyrinth structures appear normal visualized orbits are normal visualized soft \ntissues of the scalp ..."
+        }
+      ]
+    },
+    {
+      "claim": "특화 Foundation Model",
+      "section": "혁신성",
+      "line": 45,
+      "status": "unsupported",
+      "evidence_strength": -11.088,
+      "suggested_revision": "Claim '특화 Foundation Model' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -10.856,
+          "text": "≡Recommendation to investigate ASD risky genes: According to \nliterature, no specific risky gene set finding is attained yet, but \nseveral studies had classified some genes as risky and contributed in..."
+        },
+        {
+          "paper": "Nature Machine Intelligence | Volume 6 | August 2024 | 911–923",
+          "relevance": -11.232,
+          "text": "For example, the human genome contains about 12% primate-specific \nAlu retrotransposons The coding genome is relatively conserved over \nspecies; the non-coding genome is more unique It is these langua..."
+        }
+      ]
+    },
+    {
+      "claim": "**세계 최초**: 발달장애 특화 Foundation Model",
+      "section": "혁신성",
+      "line": 45,
+      "status": "unsupported",
+      "evidence_strength": -7.892,
+      "suggested_revision": "Claim '**세계 최초**: 발달장애 특화 Foundation Model' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Computers in Biology and Medicine 146 (2022) 105553",
+          "relevance": -7.428,
+          "text": "FDOSM applies the idea of ideal solution and opinion matrix \nunder a fuzzy environment with fewer mathematical equations FDOSM \nprovides logical decisions because it depends on the opinion of the de-\n..."
+        },
+        {
+          "paper": "Published as a conference paper at ICLR 2024",
+          "relevance": -7.447,
+          "text": "This highlights the ben-\neﬁts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By ﬁne-tunin..."
+        }
+      ]
+    },
+    {
+      "claim": "**기술 스택**: ESM3 + BrainLM + SwiFT 통합",
+      "section": "혁신성",
+      "line": 46,
+      "status": "unsupported",
+      "evidence_strength": -7.81,
+      "suggested_revision": "Claim '**기술 스택**: ESM3 + BrainLM + SwiFT 통합' lacks supporting evidence. Consider removing or finding alternative support.",
+      "supporting_evidence": [
+        {
+          "paper": "Published as a conference paper at ICLR 2024",
+          "relevance": -6.646,
+          "text": "This highlights the ben-\neﬁts of large-scale pretraining for learning robust encodings of spatiotemporal neural patterns BrainLM also provides a powerful framework for biomarker discovery By ﬁne-tunin..."
+        },
+        {
+          "paper": "Swin fMRI Transformer Predicts",
+          "relevance": -6.972,
+          "text": "SwiFT processes 4D fMRI volumes by segmenting them\ninto patches, embedding them as tokens, and passing them through layers of\n4D Swin Transformer blocks These blocks utilize a shifted window multi-hea..."
+        }
+      ]
+    }
+  ],
+  "strong_claims": [],
+  "recommendations": [
+    "🔴 Critical: Evidence coverage below 70%. Add citations and supporting data.",
+    "⚠️ Remove or support 11 unsupported claims",
+    "📚 Consider citing papers from DD-RAPTOR database for stronger evidence",
+    "🔄 Use real-time validation during writing for better quality"
+  ]
+}

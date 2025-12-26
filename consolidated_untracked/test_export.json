@@ -1,0 +1,88 @@
+{
+  "query": "autism diagnosis",
+  "query_classification": {
+    "type": "clinical",
+    "clinical_score": 1.0,
+    "technical_score": 0.0,
+    "confidence": 1.0,
+    "reasoning": "Strong clinical focus (100.00%). Prioritizing DD papers."
+  },
+  "results": [
+    {
+      "rank": 1,
+      "document": "The study found that measuring social visual engagement in children aged 16 to 30 months who were referred to specialty clinics could predict autism diagnoses by clinical experts. Further evaluation of this method's role in early autism diagnosis and assessment in routine specialty clinic practice is recommended.",
+      "metadata": {
+        "paper_title": "Eye-Tracking–Based Measurement of Social Visual Engagement",
+        "paper_id": "Eye-tracking–based measurement of social visual engagement compared with expert clinical diagnosis of autism",
+        "section_order": 4,
+        "section": "conclusion"
+      },
+      "scores": {
+        "dd_score": 0.0133,
+        "fm_score": 0.0,
+        "combined_score": 2.1674
+      },
+      "source": "DD",
+      "level": "L1",
+      "reasoning": "Ranked #1 | Source: DD papers (clinical) | Layer: L1 | Strong clinical relevance (DD score: 0.013)"
+    },
+    {
+      "rank": 2,
+      "document": "This diagnostic study developed deep learning models to identify autism spectrum disorder (ASD) and differentiate levels of symptom severity, suggesting potential for large-scale data collection on behavioral biomarkers through standardized video data. The findings indicate that this method could assist clinicians in making informed referrals and diagnoses related to ASD.",
+      "metadata": {
+        "section": "conclusion",
+        "paper_title": "Original Investigation | Psychiatry",
+        "section_order": 5,
+        "paper_id": "Development and validation of a joint attention–based deep learning system for detection and symptom severity assessment of autism spectrum disorder"
+      },
+      "scores": {
+        "dd_score": 0.014,
+        "fm_score": 0.0,
+        "combined_score": 2.0777
+      },
+      "source": "DD",
+      "level": "L1",
+      "reasoning": "Ranked #2 | Source: DD papers (clinical) | Layer: L1 | Strong clinical relevance (DD score: 0.014)"
+    },
+    {
+      "rank": 3,
+      "document": "≡Recommendations to implement the proposed models : Some \nstudies constructed predictive models for autistic diagnosis and \nothers ranked their results, such as prioritised finding risky genes and \nrecommended to replicate their finding for future work Researchers \nmentioned their constructed predictive models for promoting the \ndiagnosis of ASD and may use the “cell type-specific ASD-associated \ngenes and gene sets” as prospective biomarkers of ASD [12] Other \nstudy recommended replicating thei...",
+      "metadata": {
+        "section": "discussion",
+        "paper_title": "Computers in Biology and Medicine 146 (2022) 105553",
+        "section_order": 4,
+        "paper_id": "Triage and priority-based healthcare diagnosis using artificial intelligence for autism spectrum disorder and gene contribution- A systematic review "
+      },
+      "scores": {
+        "dd_score": 0.0103,
+        "fm_score": 0.0,
+        "combined_score": 0.8475
+      },
+      "source": "DD",
+      "level": "L0",
+      "reasoning": "Ranked #3 | Source: DD papers (clinical) | Layer: L0 | Strong clinical relevance (DD score: 0.010)"
+    }
+  ],
+  "statistics": {
+    "dd_count": 3,
+    "fm_count": 0,
+    "total_results": 3,
+    "timing": {
+      "total_ms": 1533.72,
+      "dd_search_ms": 495.18,
+      "fm_search_ms": 116.9,
+      "merge_rerank_ms": 919.93
+    }
+  },
+  "performance_stats": {
+    "total_queries": 1,
+    "query_distribution": {
+      "clinical": 1,
+      "technical": 0,
+      "mixed": 0
+    },
+    "average_latency_ms": 1533.72,
+    "average_dd_ratio": 1.0,
+    "average_fm_ratio": 0.0
+  }
+}

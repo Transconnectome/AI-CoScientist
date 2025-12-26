@@ -1,0 +1,37 @@
+{
+  "session_name": "optimization_20251210_203840",
+  "mode": "quick",
+  "input_file": "data/발달장애/_grant.md",
+  "start_time": "2025-12-10T20:38:40.001172",
+  "steps": [
+    {
+      "step": 1,
+      "name": "Evidence Mapping & Diagnosis",
+      "status": "success",
+      "duration": 16.56,
+      "output_file": "/home/juke/git/AI-CoScientist/optimization_output/optimization_20251210_203840/original__grant.md",
+      "metadata": {
+        "initial_score": 0.0
+      }
+    },
+    {
+      "step": 2,
+      "name": "Real-time Claim Validation",
+      "status": "success",
+      "duration": 10.08,
+      "output_file": "/home/juke/git/AI-CoScientist/optimization_output/optimization_20251210_203840/original__grant.md",
+      "metadata": {}
+    },
+    {
+      "step": 5,
+      "name": "Automated Citation & Finalization",
+      "status": "success",
+      "duration": 7.8,
+      "output_file": "/home/juke/git/AI-CoScientist/optimization_output/optimization_20251210_203840/step_5_automated_citation_&_finalization/cited_original__grant.md",
+      "metadata": {}
+    }
+  ],
+  "final_score": 0.0,
+  "improvement": null,
+  "end_time": "2025-12-10T20:39:31.169059"
+}

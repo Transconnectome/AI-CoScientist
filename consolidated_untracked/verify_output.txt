@@ -1,0 +1,16 @@
+Starting Model Verification for 2025 Premium Models...
+
+--- Testing OpenAI Adapter (gpt-5) ---
+❌ SKIPPED: openai_api_key not found in settings.
+
+--- Testing Gemini (Configured) Adapter (gemini-2.5-pro) ---
+Sending request to gemini-2.5-pro...
+❌ FAILED: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 2.
+
+--- Testing Gemini (Requested) Adapter (gemini-3-pro) ---
+Sending request to gemini-3-pro...
+❌ FAILED: 404 models/gemini-3-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+
+--- Testing Anthropic Adapter (claude-sonnet-4-20250514) ---
+Sending request to claude-sonnet-4-20250514...
+❌ FAILED: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'This organization has been disabled.'}, 'request_id': 'req_011CVooPHiebAKZjMRvLHh1P'}

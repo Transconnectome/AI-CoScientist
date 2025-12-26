@@ -1,0 +1,13 @@
+{
+  "metadata": {
+    "dataset_name": "Auto-Generated RAG Benchmark",
+    "version": "1.0",
+    "created_date": "2025-12-05",
+    "total_pairs": 0,
+    "domain_distribution": {},
+    "difficulty_distribution": {},
+    "generation_method": "automated_from_templates",
+    "quality_validated": true
+  },
+  "qa_pairs": []
+}
