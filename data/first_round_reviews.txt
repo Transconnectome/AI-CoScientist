@@ -1,0 +1,88 @@
+Remarks to Author:
+
+Reviewer #1 (Comments to the Author):
+
+This manuscript addresses the clinically important challenge of predicting SSRI treatment response in obsessive-compulsive disorder, where approximately 50% of patients fail to achieve adequate response despite appropriate pharmacotherapy. The authors hypothesize that baseline sensorimotor circuit functional connectivity can predict sertraline response in drug-naïve OCD patients, employing rigorous rs-fMRI methodology with careful motion control and mechanistically grounded circuit selection. The reported prediction accuracy is exceptionally high (AUC 0.82-0.86, R² up to 0.48), and the findings converge with independent evidence from Wang et al. (2025, J Affect Disord) using a different analytic approach (zfALFF), which strengthens biological plausibility. The study has notable strengths: the 100% drug-naïve sample eliminates medication confounds that plague this literature, the preprocessing pipeline exceeds contemporary standards, and the sensorimotor circuit focus is mechanistically justified by dense serotonergic innervation and association with core OCD features. However, the manuscript has limitations that prevent acceptance in its current form. Most importantly, the exceptionally high prediction metrics are reported without any form of validation (internal or external) on a small sample (N=54), raising serious overfitting concerns. Marek & Laumann (2025, Neuropsychopharmacology 50:52-57) demonstrate that samples below N=100 without validation typically show effect size inflation of 2-3×. Additionally, no comparison to clinical predictors is provided, leaving the incremental value of neuroimaging unestablished. The single-site design (Shanghai), single scanner, and single medication (sertraline) further limit generalizability. I recommend Major Revisions because the essential deficiencies—adding cross-validation, comparing to clinical predictors, and appropriately reframing claims as exploratory—are all addressable with existing data. The core science is sound, the clinical question is important, and with appropriate revisions this work will make a valuable contribution to the OCD treatment prediction literature. The revisions below are organized as Essential (must address) and Recommended (should address).
+
+## PART A: ESSENTIAL REVISIONS
+
+A1. Cross-Validation Required
+
+The reported AUC values (0.82-0.86) without any validation are likely inflated. The authors must conduct leave-one-out cross-validation for all prediction models and report cross-validated performance metrics (AUC with 95% CI, sensitivity, specificity, PPV, NPV, balanced accuracy). Both in-sample and out-of-sample results must be reported. Add permutation testing (≥1,000 iterations) to establish null distributions. Marek & Laumann (2025, *Neuropsychopharmacology* 50:52-57) show that N<100 samples without validation inflate effect sizes 2-3×. Update Abstract, add Results subsection "Cross-Validation Analysis," and revise Figure 3 to show both original and cross-validated ROC curves.
+
+A2. Comparison to Clinical Predictors Essential
+
+No evidence is provided that neuroimaging adds value beyond clinical information. The authors must build three logistic regression models: (A) clinical-only (baseline Y-BOCS, illness duration, age, sex, education, BDI), (B) FC-only (current analysis), and (C) combined. Report AUC with 95% CI for each model. Use DeLong tests to compare models and calculate Net Reclassification Improvement and Integrated Discrimination Improvement. Add Results subsection "Comparison to Clinical Predictors" with a comparison table and figure showing all three ROC curves. Without this comparison, clinical utility remains unestablished.
+
+A3. Claims Must Be Reframed as Exploratory
+
+With N=54 from a single site and no external validation, this represents exploratory discovery, not biomarker validation. In Abstract: change "biomarker" to "candidate biomarker," add "in an exploratory single-site study," and add "pending validation in independent samples." In Introduction: reframe as "exploratory discovery." Change Results heading to "Exploratory prediction of treatment response." Add new Discussion paragraph immediately after opening: "The exploratory nature of this study must be emphasized. The sample size falls below contemporary recommendations (N≥100; Marek & Laumann, 2025), and external validation is lacking. These findings are hypothesis-generating and require replication before clinical implementation." Throughout Discussion, replace "demonstrates" with "suggests," "establishes" with "provides preliminary evidence for," and "predicts" with "shows potential to predict."
+
+A4. Mechanistic Claims Must Be Removed or Hedged
+
+Cross-sectional design (baseline scans only) cannot support mechanistic claims. In Abstract line 24: change "SSRIs may exert therapeutic effects through recalibration" to "Baseline sensorimotor connectivity differences may reflect preserved neural capacity that enables treatment response." Throughout Discussion: remove statements like "SSRIs modulate..." and replace with "We hypothesize that baseline connectivity differences may reflect different illness subtypes or neural reserve capacity." Add new Limitations paragraph: "The cross-sectional design precludes causal or mechanistic inference. Baseline FC differences could reflect: (1) different OCD subtypes, (2) variations in neural reserve, (3) pre-existing severity differences not captured by Y-BOCS, or (4) unmeasured confounds. Longitudinal imaging with pre- and post-treatment scans is required to test whether FC changes mediate therapeutic effects and to distinguish prognostic from mechanistic biomarkers."
+
+A5. Limitations Section Must Be Substantially Expanded
+
+Add four new paragraphs: (1) Generalizability: Single site (Shanghai), single scanner (Siemens 3T), Chinese ethnicity only—multi-site replication across diverse populations essential. (2) Single Medication: Only sertraline tested—findings may not extend to other SSRIs or serotonergic agents; revise title to specify sertraline. (3) Sample Size: N=54 falls below recommended N≥100 (Marek & Laumann, 2025); unbalanced groups (33 vs 21) reduce power; interpret as exploratory requiring replication. (4) Overfitting Risk: Originally reported AUC (0.82-0.86) exceptionally high; cross-validation revealed [INSERT VALUES]; difference indicates overfitting; external validation essential for true prediction accuracy.
+
+## PART B: RECOMMENDED REVISIONS
+
+B1. Sensitivity Analysis Across Response Thresholds
+
+Test three response definitions: liberal (≥25% Y-BOCS reduction), conventional (≥35%, current), stringent (≥50%). Report for each: number of responders/non-responders, AUC, optimal FC threshold. Add Results subsection "Sensitivity to Response Threshold" and supplementary table. If findings hold across thresholds, confidence increases; if threshold-dependent, clinical applicability may be narrower than claimed.
+
+B2. Decision Curve Analysis Should Be Added
+
+Conduct DCA for Clinical-only, FC-only, and Combined models. Calculate net benefit at threshold probabilities 0-100%. Create decision curve plot showing all models plus "Treat all" and "Treat none" reference lines. Add Results subsection "Clinical Utility Analysis." DCA quantifies clinical utility by showing net benefit at realistic decision points, directly informing whether FC assessment would improve clinical decision-making.
+
+B3. Power Calculations for Future Validation Studies
+
+Based on cross-validated AUC, calculate required sample size for 80% and 90% power (α=0.05) under conservative (10% smaller effect) and optimistic (observed effect) scenarios. Add to Discussion after Limitations: "Based on cross-validated AUC of X.XX, future validation requires N=XXX (80% power). Given potential inflation, conservative N=XXX recommended." This guides resource allocation for validation work.
+
+B4. Medication Adherence and Dosing Details Should Be Reported
+
+Report distribution of final sertraline doses (histogram/table showing mean, median, range, percentage at each dose level). If available, report adherence assessment method, percentage of prescribed doses taken, number with poor adherence (<80%). Test whether dose or adherence moderates FC-response relationship. Add Methods details on dose titration and adherence monitoring. Inadequate medication exposure is a common cause of non-response.
+
+B5. Comorbidity as Moderator Should Be Analyzed
+
+Report comorbidity rates (GAD, social anxiety, panic disorder, BDI score distribution). Test whether comorbidity moderates FC-response relationship using dichotomous (any comorbid anxiety vs pure OCD) or continuous (BDI score) measures. Add interaction terms (FC × comorbidity). Add Results subsection "Comorbidity as Moderator." OCD is heterogeneous; comorbidity-specific biomarkers may have greater clinical utility.
+
+B6. Univariate Statistical Approach Should Be Justified
+
+Add Methods paragraph: "Univariate logistic regression was employed rather than multivariate machine learning for three reasons: (1) with N=54, complex models would face severe overfitting despite regularization; (2) univariate models offer greater interpretability with clear effect sizes and clinical thresholds; (3) the goal was hypothesis-testing rather than optimal prediction. Future studies with larger samples may benefit from comparing approaches." This prevents reviewer concerns about methodological choices.
+
+
+Reviewer #2 (Comments to the Author):
+
+The authors study the potential relationship between functional connectivity (FC) within the sensorimotor circuits (and from there to other regions, such as the cerebellum) and response to SSRI treatment in adult patients with OCD and use a healthy control group as reference. There is no independent control sample (for the prediction analyses) and no post-treatment re-assessment of FC, to see whether FC in responders changes. I think that there are some relevant new findings, but I would like to suggest some issues that might be solved in a revision.
+
+1) major concern is the lack of a replication sample and the current sample is too small to make a discovery and replication sample. I therefore think that the group comparisons between OCDr vs OCDn vs co is the core piece of the paper, and I do not see an added value of the results shown in Figure 3 (since these are not independent from the group comparisons). I would thus like to advice deleting the paragraph 'predicting treatment response to SSRI's' (including fig 3), and prevent using the worrd 'prediction'.
+
+2) what is important for the discussion: based on this study it is not clear whether the FC characteristics are 'markers' of SSRI response, or more general markers of response.
+
+3) the authors make a black-white split between responders and non-responders based on the >35% reduction on the YBOCS criterium. Although I understand this considering the small samples; in the consensus manuscript (by Mataix-Cols etal), a 25-35% reduction shold be considered as a partial response.
+
+4) related to Table 4: a) how can disease duration (1 in nOCD and 8 in rOCD) not be significantly different?, b) I think that the YBOCS-scores (before and after treatment) are not given with right numbers, c) the statistics concern the 3-group comparison, whereas also the contrasts between the 2 patients groups are relevant to know (also to know whether you have to control the OCDn vs OCDr analyses for these confounders).
+
+5) in the discussion on the meaning of this higher FC in the OCDr-group (the authors suggest 'a preserved neural substrate'), I would refer to the literature in unaffacted siblings of OCD patients, showing increased pre-SMA activation in siblings (even more than in OCD patients), suggestive of a compensatory mechanism (see e.g. de Wit et al 2012 Am J Psych).
+
+Minor comments for revision:
+> from the abstract (before reading the introduction), it is not directly clear why the authors focus on the sensorimotor circuit in relationship to SSRI response.
+
+> in the intro the authors suggest that the rsfMRI ENIGMA-OCD paper (showing mainly hypoconnectivity in the sensorimotor regions) 'challenges the previous emphasis on other dysfunctional brain circuits' > I do not share this opinion: there is more than rsfMRI to study the function of the brain circuits and many many studies on emotional and cognitive processes (mostly using task-based fMRI) show clear altered functioning of the other parallel CSTC (+ fronto-parietal + fronto-limbic) circuits.
+
+> from the methods it is not clear whether the participants had eyes open or eyes closed during rsfMRI.
+
+> instead of increased/decreased FC, I think that it would be better to use higher/lower FC (since increased/decreased implicitly suggests change over time, whereas these are cross-sectional analyses)
+
+
+Reviewer #3 (Comments to the Author):
+
+The present manuscript describes a study examining resting state functional connectivity differences between SSRI responders and non-responders in a cohort of 54 drug naïve OCD patients using seeds located in a sensorimotor circuit. Patients who show response to sertraline (defined as a reduction in Y-BOCS scores greater than or equal to a 35%, “rOCD”) are compared to those who do not show this response (“nOCD”), and both are compared with a group of 39 healthy controls. Strengths of the study include a cohort of drug-naïve patients and the focus on sensorimotor circuit. Whole-brain correction is appropriately rigorous (p<0.001, with p<0.05 cluster level family wise error correction) and the introduction and discussion are well written. While the goals of examining the sensorimotor circuit and its relationship to SSRI response are worthy, several problems with the methods and results reporting reduce enthusiasm:
+1. Although there is correction for whole-brain (multiple voxel) analysis and for the 3 pairwise comparisons, there is no correction for the 28 seeds used.
+2. It is not clear why both a group comparison between nOCD and rOCD and a logistic regression predicting treatment response within the full OCD cohort are necessary. The analyses are two different ways of doing largely the same thing. Indeed, the results section presents the logistic regression findings as if they were new, which is misleading because it logically follows that brain connectivity patterns that differ between nOCD and rOCD groups should also predict whether someone is in the nOCD or rOCD group.
+3. There seems to be a digit missing in the values in Table 1. The p-value provided for the Y-BOCS score difference between the nOCD and rOCD groups after medication is misleading as this is how the groups were formed.
+4. Figure 1 is small and the brain areas are hard to see. It would be helpful if the 3-way ANOVA results were presented in a table.
+5. The Harvard Oxford atlas labels are inscrutable. Brain regions should be described with names that are understandable to someone who knows brain anatomy but not that atlas. The linking of the Harvard Oxford labels to brain regions should be done in the main text and not the supplement.
+6. The comorbidities present in the OCD sample should be described and potentially analyzed as moderators of treatment response.

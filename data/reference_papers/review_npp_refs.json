@@ -1,0 +1,60 @@
+{
+  "papers": [
+    {
+      "title": "Harmonizing the Neurobiology and Treatment of Obsessive-Compulsive Disorder.",
+      "original_ref": "1 Goodman WK, Storch EA, Sheth SA. Harmonizing the Neurobiology and Treatment of Obsessive -Compulsive Disorder. The American journal of psychiatry. 2021;178(1):17 -29.",
+      "url": "https://doi.org/10.1176/appi.ajp.2020.20111601",
+      "paperId": "658674173fbc00752701ce26548b547d77c0a682",
+      "venue": "American Journal of Psychiatry",
+      "year": 2021
+    },
+    {
+      "title": "The epidemiology of obsessive-compulsive disorder in the National Comorbidity Survey Replication",
+      "original_ref": "2 Ruscio AM, Stein DJ, Chiu WT, Kessler RC. The epidemiology of obsessive - compulsive disorder in the National Comorbidity Survey Replication. Molecular psychiatry. 2010;15(1):53 -63.",
+      "url": "https://doi.org/10.1038/mp.2008.94",
+      "paperId": "7af583ad46cc8f26e3a12fbf304ee367cf6d1bef",
+      "venue": "Molecular Psychiatry",
+      "year": 2010
+    },
+    {
+      "title": "Functional connectivity of the raphe nucleus as a predictor of the response to selective serotonin reuptake inhibitors in obsessive-compulsive disorder",
+      "original_ref": "24 Kim M, Kwak S, Yoon YB, Kwa k YB, Kim T, Cho KIK, et al. Functional connectivity of the raphe nucleus as a predictor of the response to selective serotonin reuptake inhibitors in obsessive -compulsive disorder. Neuropsychopharmacology. 2019;44(12):2073 -81.",
+      "url": "https://doi.org/10.1038/s41386-019-0436-2",
+      "paperId": "af1acb4471327e265ed08b376e299a80ca2f7d9a",
+      "venue": "Neuropsychopharmacology",
+      "year": 2019
+    },
+    {
+      "title": "Cerebellar functional connectivity and its associated genes: A longitudinal study in drug-naive patients with obsessive-compulsive disorder.",
+      "original_ref": "25 Yan H, Shan X, Li H, Liu F, Xie G, Li P, et al. Cerebellar functional connectivity and its associated genes: A longitudinal study in drug -naive patients with obsessive - compulsive disorder. Journal of psychiatric research. 2024;177:378 -91.",
+      "url": "https://doi.org/10.1016/j.jpsychires.2024.07.040",
+      "paperId": "5125701c22f3a05b9612a56d32ed214642ffa6a1",
+      "venue": "Journal of Psychiatric Research",
+      "year": 2024
+    },
+    {
+      "title": "Applicability of the Chinese Beck Depression Inventory.",
+      "original_ref": "32 Zheng YP, Wei LA, Goa LG, Zhang GC, Wong CG. Applicability of the Chinese Beck Depression Inventory. Comprehensive psychiatry. 1988;29(5):484 -9.",
+      "url": "https://doi.org/10.1016/0010-440X(88)90063-6",
+      "paperId": "30ced0ced8a4d0bcdc6ccf58f64f16a1d5c75913",
+      "venue": "Comprehensive Psychiatry",
+      "year": 1988
+    },
+    {
+      "title": "Treatment response, symptom remission, and wellness in obsessive-compulsive disorder.",
+      "original_ref": "34 Farris SG, McLean CP, Van Meter PE, Simpson HB, Foa EB. Treatment response, symptom remission, and wellness in obsessive -compulsive disorder. J Clin Psychiatry. 2013; 74(7):685 -90.",
+      "url": "https://doi.org/10.4088/JCP.12m07789",
+      "paperId": "fe31e4d2edee0d4beea44af1b0408801f2f83c4b",
+      "venue": "Journal of Clinical Psychiatry",
+      "year": 2013
+    },
+    {
+      "title": "Anatomical distance affects functional connectivity at rest in medicine-free obsessive\u2013compulsive disorder",
+      "original_ref": "43 Lv D, Ou Y , Chen Y , Ding Z, Ma J, Zhan C, et al. Anatomical distance affects functional connectivity at rest in medicine -free obsessive -compulsive disorder. BMC psychiatry. 2022;22(1):462.",
+      "url": "https://doi.org/10.1186/s12888-022-04103-x",
+      "paperId": "8c7a5ff974106011b7f45cd08f81b8b8a149b063",
+      "venue": "BMC Psychiatry",
+      "year": 2022
+    }
+  ]
+}
