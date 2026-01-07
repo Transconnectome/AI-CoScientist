@@ -24,6 +24,7 @@ from dataclasses import dataclass, asdict
 from enum import Enum
 import json
 import time
+import numpy as np
 
 # Unified RAG Orchestrator imports (replacing DD-RAPTOR)
 from ..services.rag.unified_rag_orchestrator import (
@@ -35,6 +36,10 @@ from ..services.rag.unified_rag_orchestrator import (
     RAGStrategy
 )
 from ..services.hybrid_rag_service import HybridRAGService
+from ..core.config import get_settings
+from ..services.llm.adapters.gemini import GeminiAdapter
+from ..services.llm.adapters.openai import OpenAIAdapter
+from ..services.llm.types import LLMRequest, TaskType, LLMConfig, ModelProvider
 
 logger = logging.getLogger(__name__)
 
@@ -46,6 +51,7 @@ class SectionType(str, Enum):
     BUDGET_JUSTIFICATION = "budget_justification"
     LITERATURE_REVIEW = "literature_review"
     EXPECTED_OUTCOMES = "expected_outcomes"
+    TIMELINE = "timeline"
 
 class PersonaType(str, Enum):
     """제안서 작성 페르소나"""
@@ -54,6 +60,88 @@ class PersonaType(str, Enum):
     SAMSUNG_GRANT_STRATEGIST = "samsung_grant_strategist"
     INNOVATION_EVALUATOR = "innovation_evaluator"
     BUDGET_SPECIALIST = "budget_specialist"
+
+# 페르소나별 상세 시스템 프롬프트
+PERSONA_SYSTEM_PROMPTS = {
+    PersonaType.NOBEL_NEUROSCIENTIST: (
+        "You are a Nobel Prize-winning Neuroscientist with deep expertise in developmental disorders and AI. "
+        "Your writing is authoritative, scientifically rigorous, and visionary. "
+        "Prioritize novel hypotheses, mechanistic explanations (molecular/neural circuit level), and high-impact clinical translation. "
+        "Avoid generic statements; provide specific, evidence-backed scientific arguments. "
+        "Use professional academic terminology suitable for a top-tier grant proposal."
+    ),
+    PersonaType.CHIEF_RESEARCH_ARCHITECT: (
+        "You are a Chief Research Architect for a major scientific consortium. "
+        "Your focus is on the structural integrity, technical feasibility, and strategic coherence of the proposal. "
+        "Ensure that the methodology is robust, the timeline is realistic, and the resources are strictly justified. "
+        "Write with precision, clarity, and a strong focus on execution and deliverability."
+    ),
+    PersonaType.SAMSUNG_GRANT_STRATEGIST: (
+        "You are a Samsung Future Tech Grant Strategist. "
+        "Your goal is to align the proposal with Samsung's 'High Risk, High Return' philosophy. "
+        "Emphasize the disruptive nature of the technology, its potential to create a new scientific paradigm, and its massive downstream impact. "
+        "Use persuasive, forward-looking language that highlights the 'World First' and 'Best in Class' aspects."
+    ),
+    PersonaType.INNOVATION_EVALUATOR: (
+        "You are an Innovation Evaluator for breakthrough technologies. "
+        "Critically assess the novelty and differentiation of the proposed research. "
+        "Highlight why this approach is not just an incremental improvement but a fundamental leap forward. "
+        "Focus on the 'Zero to One' innovation aspect."
+    ),
+    PersonaType.BUDGET_SPECIALIST: (
+        "You are a specialist in scientific research resource allocation and budgeting. "
+        "Justify every expense with a focus on maximizing research ROI. "
+        "Ensure that the budget aligns perfectly with the proposed methodology and timeline. "
+        "Explain the necessity of high-performance computing and specialized equipment."
+    ),
+}
+
+# 섹션별 작성 지침 템플릿
+SECTION_INSTRUCTION_TEMPLATES = {
+    SectionType.RESEARCH_OBJECTIVES: (
+        "1. Define the 'High Risk, High Return' research goal clearly.\n"
+        "2. Explain the core hypothesis connecting AI, ESM3, and developmental disorders.\n"
+        "3. Detail the 'World First' aspects of the proposed Foundation Model (NeuroX-Fusion).\n"
+        "4. Outline 3 specific research objectives that are measurable and ambitious."
+    ),
+    SectionType.METHODOLOGY: (
+        "1. Describe the multi-modal data integration framework (MRI, fMRI, Genetics, Clinical).\n"
+        "2. Explain the AI architecture (e.g., Transformer-based, Graph Neural Networks) in technical detail.\n"
+        "3. Detail the validation strategy using zebrafish models and clinical cohorts.\n"
+        "4. Address data privacy and federated learning approaches."
+    ),
+    SectionType.INNOVATION_SIGNIFICANCE: (
+        "1. Contrast this approach with existing 'State of the Art' (SOTA).\n"
+        "2. Explain the potential for a paradigm shift in diagnosing Autism Spectrum Disorder (ASD).\n"
+        "3. Highlight the ripple effects on broader neuroscience and AI fields.\n"
+        "4. Emphasize the long-term societal and economic value."
+    ),
+    SectionType.TIMELINE: (
+        "1. Provide a year-by-year breakdown of key milestones for 5 years.\n"
+        "2. Define clear deliverables for each phase (e.g., 'Model V1', 'Clinical Pilot').\n"
+        "3. Identify critical path dependencies and risk mitigation strategies."
+    ),
+    SectionType.BUDGET_JUSTIFICATION: (
+        "1. Justify the need for large-scale GPU resources (H100/A100 clusters).\n"
+        "2. Explain personnel costs for a top-tier interdisciplinary team.\n"
+        "3. Detail costs for clinical data acquisition and zebrafish experiments."
+    ),
+    SectionType.LITERATURE_REVIEW: (
+        "1. Synthesize recent breakthroughs in Generative AI and Computational Neuroscience.\n"
+        "2. Identify clear gaps in current foundation models regarding longitudinal developmental data.\n"
+        "3. Integrate insights from retrieved papers to support the proposed methodology."
+    ),
+    SectionType.EXPECTED_OUTCOMES: (
+        "1. Quantify the expected performance improvements in early diagnosis.\n"
+        "2. Describe the specific software/model artifacts to be released.\n"
+        "3. Outline the clinical translation pathway and potential IP generation."
+    ),
+    SectionType.TIMELINE: ( # Timeline duplicate key in source, but overriding here for completeness
+        "1. Provide a year-by-year breakdown of key milestones for 5 years.\n"
+        "2. Define clear deliverables for each phase (e.g., 'Model V1', 'Clinical Pilot').\n"
+        "3. Identify critical path dependencies and risk mitigation strategies."
+    )
+}
 
 @dataclass
 class SectionSpec:
@@ -98,6 +186,43 @@ class UnifiedProposalGenerationAgent:
         self.config = config or self._get_default_config()
         self.unified_rag_orchestrator: Optional[UnifiedRAGOrchestrator] = None
         self.hybrid_rag: Optional[HybridRAGService] = None
+        
+        # Initialize LLM Adapters based on available keys
+        self.settings = get_settings()
+        self.adapters: Dict[str, Any] = {}
+        
+        # Gemini (Google)
+        if self.settings.google_api_key:
+            try:
+                self.adapters["gemini"] = GeminiAdapter(api_key=self.settings.google_api_key)
+                logger.info("✅ Gemini Adapter initialized")
+            except Exception as e:
+                logger.warning(f"Failed to initialize Gemini Adapter: {e}")
+                
+        # OpenAI
+        if self.settings.openai_api_key:
+            try:
+                self.adapters["openai"] = OpenAIAdapter(api_key=self.settings.openai_api_key)
+                logger.info("✅ OpenAI Adapter initialized")
+            except Exception as e:
+                logger.warning(f"Failed to initialize OpenAI Adapter: {e}")
+
+        # Determine active adapter based on primary provider
+        primary = self.settings.llm_primary_provider.lower()
+        if primary in ["google", "gemini"]:
+            self.llm_adapter = self.adapters.get("gemini")
+        elif primary == "openai":
+            self.llm_adapter = self.adapters.get("openai")
+        else:
+            self.llm_adapter = None
+            logger.warning(f"⚠️ Unknown primary provider: {primary}")
+
+        if not self.llm_adapter and self.adapters:
+            # Pick any available if primary failed
+            self.llm_adapter = next(iter(self.adapters.values()))
+            logger.info(f"Using alternative adapter: {type(self.llm_adapter).__name__}")
+        elif not self.llm_adapter:
+            logger.warning("⚠️ No LLM adapters available. LLM generation will be disabled.")
 
         # Performance tracking
         self.generation_stats = {
@@ -147,6 +272,7 @@ class UnifiedProposalGenerationAgent:
 
         # Unified RAG Orchestrator 초기화 (DD-RAPTOR 교체)
         self.unified_rag_orchestrator = create_unified_orchestrator()
+        await self.unified_rag_orchestrator.initialize_real_strategies()
         await self.unified_rag_orchestrator.warmup()
 
         logger.info("✅ Unified RAG Orchestrator initialized with 6 strategies")
@@ -499,10 +625,80 @@ class UnifiedProposalGenerationAgent:
         # Create comprehensive prompt with unified knowledge
         prompt = self._create_unified_generation_prompt(section_spec, knowledge_context, generation_strategy)
 
-        # Use primary strategy for content generation
-        # (In a real implementation, you might use the HybridRAGService here)
-        # For now, we'll simulate content generation
+        # Use actual LLM if available
+        if self.llm_adapter:
+            try:
+                # Get specialized system prompt
+                system_prompt = PERSONA_SYSTEM_PROMPTS.get(
+                    section_spec.persona,
+                    f"You are a world-class {section_spec.persona.value.replace('_', ' ')}."
+                )
+                
+                system_message = (
+                    f"{system_prompt}\n"
+                    f"Task: Write the {section_spec.type.value} section for a Samsung Future Tech Grant proposal.\n"
+                    f"Style: {generation_strategy['style']}."
+                )
 
+                # Multi-provider fallback logic
+                primary_provider = self.settings.llm_primary_provider.lower()
+                fallback_provider = self.settings.llm_fallback_provider.lower()
+                
+                providers_to_try = [primary_provider]
+                if fallback_provider and fallback_provider != "none":
+                    providers_to_try.append(fallback_provider)
+
+                last_exception = None
+                for provider_name in providers_to_try:
+                    adapter = self.adapters.get(provider_name if provider_name != "google" else "gemini")
+                    if not adapter:
+                        continue
+                        
+                    try:
+                        if provider_name in ["google", "gemini"]:
+                            req_provider = ModelProvider.GOOGLE
+                            req_model = self.settings.gemini_model or "gemini-3-flash-preview"
+                            req_max_tokens = self.settings.gemini_max_tokens or 8192
+                        else:
+                            req_provider = ModelProvider.OPENAI
+                            req_model = self.settings.openai_model or "gpt-5-pro"
+                            req_max_tokens = self.settings.openai_max_tokens or 4096
+
+                        request = LLMRequest(
+                            prompt=prompt,
+                            task_type=TaskType.PAPER_WRITING,
+                            system_message=system_message,
+                            config=LLMConfig(
+                                provider=req_provider,
+                                model=req_model,
+                                temperature=0.7,
+                                max_tokens=req_max_tokens
+                            )
+                        )
+
+                        logger.info(f"Generating content with {provider_name} (Prompt length: {len(prompt)})")
+                        response = await adapter.complete(request)
+                        return response.content
+                    except Exception as e:
+                        logger.warning(f"{provider_name} generation failed: {e}")
+                        last_exception = e
+                        continue
+
+                if last_exception:
+                    raise last_exception
+                
+                return "[Error: No provider succeeded]"
+
+            except Exception as e:
+                logger.error(f"LLM generation failed: {e}. Falling back to template.")
+                
+                if get_settings().strict_mode:
+                    logger.error("🛑 STRICT MODE: LLM Generation Failed. Halting.")
+                    raise RuntimeError(f"Strict Mode Failure: LLM generation failed: {e}") from e
+                
+                # Fallback to template if LLM fails
+
+        # Fallback template
         content_template = f"""
 Based on comprehensive Unified RAG analysis using {knowledge_context.primary_strategy} strategy:
 
@@ -519,6 +715,8 @@ This section leverages the following knowledge domains:
 [Detailed content would be generated here based on the specific prompt and knowledge context]
 
 The approach combines {knowledge_context.primary_strategy} strategy findings with multi-modal evidence from recent research, ensuring both scientific rigor and innovation potential.
+
+(Note: LLM generation was unavailable, so this placeholder was used.)
 """
 
         return content_template
@@ -531,9 +729,25 @@ The approach combines {knowledge_context.primary_strategy} strategy findings wit
         prompt_parts = [
             f"Generate a {section_spec.type.value} section for a research proposal.",
             f"Use the {section_spec.persona.value} persona with {generation_strategy['style']} writing style.",
-            f"Primary RAG strategy: {knowledge_context.primary_strategy}",
-            f"Knowledge sources: {len(knowledge_context.knowledge_sources)}",
+            f"Primary RAG strategy: {knowledge_context.primary_strategy}\n",
         ]
+
+        # Inject Specific Section Instructions
+        instructions = SECTION_INSTRUCTION_TEMPLATES.get(section_spec.type, "")
+        if instructions:
+            prompt_parts.append(f"### WRITING INSTRUCTIONS:\n{instructions}\n")
+        
+        # Inject Knowledge Sources (Context)
+        if knowledge_context.knowledge_sources:
+            prompt_parts.append("\n### BACKGROUND KNOWLEDGE (RAG CONTEXT):")
+            for i, source in enumerate(knowledge_context.knowledge_sources[:10]): # Limit to top 10
+                content = str(source)
+                if isinstance(source, dict):
+                     content = f"Title: {source.get('title', 'Unknown')}\nContent: {source.get('content', '')}"
+                prompt_parts.append(f"Source {i+1}:\n{content[:2000]}") # Truncate per source to avoid limit
+            prompt_parts.append("### END OF CONTEXT\n")
+
+        prompt_parts.append(f"Knowledge sources count: {len(knowledge_context.knowledge_sources)}")
 
         if knowledge_context.cross_domain_insights:
             prompt_parts.append("Cross-domain insights:")
@@ -547,6 +761,8 @@ The approach combines {knowledge_context.primary_strategy} strategy findings wit
             f"Citation requirement: {'Yes' if section_spec.citation_requirement else 'No'}",
             f"Innovation focus: {'High' if section_spec.innovation_focus else 'Balanced'}"
         ])
+        
+        prompt_parts.append("\nInstructions: Write the section based on the provided Background Knowledge. Cite sources where appropriate.")
 
         return "\n".join(prompt_parts)
 

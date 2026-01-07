@@ -30,6 +30,7 @@ from datetime import datetime
 # Configuration and utilities
 from src.core.config import settings
 from src.monitoring.rag_metrics import get_metrics_manager, rag_metrics_decorator, RAGMetrics
+from src.services.rag.enhanced_dd_raptor import create_enhanced_dd_raptor, EnhancedDDRaptorSystem
 
 # Setup logging
 logger = logging.getLogger(__name__)
@@ -117,8 +118,8 @@ class RAGStrategyConfig:
             RAGStrategy.ENHANCED_DD_RAPTOR: {
                 "enabled": True,
                 "priority": 2,
-                "domains": [QueryDomain.DEVELOPMENTAL_DISORDERS, QueryDomain.NEUROSCIENCE],
-                "complexity_range": [QueryComplexity.MEDIUM, QueryComplexity.COMPLEX],
+                "domains": [QueryDomain.DEVELOPMENTAL_DISORDERS, QueryDomain.NEUROSCIENCE, QueryDomain.GENERAL],
+                "complexity_range": [QueryComplexity.SIMPLE, QueryComplexity.MEDIUM, QueryComplexity.COMPLEX],
                 "max_concurrent": 3
             },
             RAGStrategy.GRAPH_RAG: {
@@ -245,6 +246,49 @@ class MockRAGStrategy(RAGStrategyInterface):
 
         return base_score * complexity_modifier
 
+
+class EnhancedDDRaptorAdapter(RAGStrategyInterface):
+    """Adapter for EnhancedDDRaptorSystem to match RAGStrategyInterface"""
+    
+    def __init__(self, system: EnhancedDDRaptorSystem):
+        self.system = system
+        self.strategy = RAGStrategy.ENHANCED_DD_RAPTOR
+
+    def is_available(self) -> bool:
+        return True # Assuming availability if initialized
+
+    def get_strategy_name(self) -> RAGStrategy:
+        return self.strategy
+
+    def estimate_performance(self, query_context: QueryContext) -> float:
+        # High confidence for Developmental Disorders domain
+        if query_context.domain == QueryDomain.DEVELOPMENTAL_DISORDERS:
+            return 0.95
+        elif query_context.domain == QueryDomain.NEUROSCIENCE:
+            return 0.85
+        return 0.6
+
+    async def search(self, query_context: QueryContext) -> RAGResponse:
+        # Delegate to real system
+        result = await self.system.search(query_context.query)
+        
+        # Convert SearchResult to RAGResponse
+        sources = []
+        for i, doc in enumerate(result.documents):
+            sources.append({
+                "title": result.metadatas[i].get("title", f"Source {i}"),
+                "content": doc,
+                "relevance": result.relevancy_score # Simplified
+            })
+            
+        return RAGResponse(
+            answer="[Content retrieved via Enhanced DD-RAPTOR]", # RAG only retrieves, answer generation is upstream
+            sources=sources,
+            confidence=result.confidence,
+            strategy_used=self.strategy,
+            metadata={"latency_ms": result.latency_ms}
+        )
+
 class UnifiedRAGOrchestrator:
     """
     Unified orchestrator for all RAG strategies with intelligent routing,
@@ -283,6 +327,58 @@ class UnifiedRAGOrchestrator:
                 logger.error(f"Failed to initialize strategy {strategy.value}: {e}")
 
         logger.info(f"Initialized {len(self.strategies)} RAG strategies")
+
+    async def initialize_real_strategies(self):
+        """Initialize real RAG strategy implementations (Async)"""
+        logger.info("Initializing REAL RAG strategy implementations...")
+
+        # 1. Enhanced DD-RAPTOR
+        if self.config.get_config(RAGStrategy.ENHANCED_DD_RAPTOR).get("enabled", False):
+            try:
+                # Initialize real DD-RAPTOR system
+                dd_raptor_system = await create_enhanced_dd_raptor()
+                # Wrap in adapter
+                self.strategies[RAGStrategy.ENHANCED_DD_RAPTOR] = EnhancedDDRaptorAdapter(dd_raptor_system)
+                logger.info("✅ ENABLED: Real Enhanced DD-RAPTOR Strategy initialized")
+            except Exception as e:
+                if settings.strict_mode:
+                    logger.error("🛑 STRICT MODE: Failed to initialize Real RAG Strategy. Halting.")
+                    raise RuntimeError(f"Strict Mode Failure: Could not initialize Enhanced DD-RAPTOR: {e}") from e
+                
+                logger.error(f"❌ FAILED: Could not initialize Enhanced DD-RAPTOR: {e}")
+                import traceback
+                logger.error(traceback.format_exc())
+                # Fallback to mock is already in place
+        
+        # 2. Add other real strategies from multi_strategy_search
+        try:
+            from src.services.rag.multi_strategy_search import create_real_strategies, ChromaDBConfig
+            
+            # Map paths to config
+            cfg = ChromaDBConfig(
+                golden_references_path="chromadb_data",
+                dd_raptor_path="chromadb_data_dd",
+                grants_path="chromadb_grants_fixed_20251210_200233",
+                esm3_papers_path="chromadb_new_papers_20251210_204818"
+            )
+            
+            real_strategies = await create_real_strategies(cfg)
+            for strategy_type, strategy_impl in real_strategies.items():
+                if strategy_type == RAGStrategy.ENHANCED_DD_RAPTOR:
+                    continue # Already handled or can be overwritten
+                
+                if self.config.get_config(strategy_type).get("enabled", False):
+                    self.strategies[strategy_type] = strategy_impl
+                    logger.info(f"✅ ENABLED: Real {strategy_type.value} Strategy initialized")
+                    
+        except ImportError as e:
+            logger.warning(f"Could not import multi_strategy_search: {e}")
+        except Exception as e:
+            logger.error(f"Error initializing real strategies from multi_strategy_search: {e}")
+        
+        logger.info("Real RAG strategy initialization complete")
+
+
 
     async def search(
         self,

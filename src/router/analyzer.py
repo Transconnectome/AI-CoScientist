@@ -41,15 +41,17 @@ class TaskAnalyzer:
         """
 
         if self.llm:
-            # Create proper LLMRequest
+            # Use configured OpenAI model
+            from src.core.config import get_settings
+            settings = get_settings()
             llm_request = LLMRequest(
                 prompt=prompt,
-                task_type=LLMTaskType.HYPOTHESIS_GENERATION,  # Use closest match
+                task_type=LLMTaskType.HYPOTHESIS_GENERATION,
                 config=LLMConfig(
                     provider=ModelProvider.OPENAI,
-                    model="gpt-5",
+                    model=settings.openai_model or "gpt-5-pro",
                     temperature=0.3,
-                    max_tokens=1000
+                    max_tokens=settings.openai_max_tokens or 1000
                 )
             )
             response = await self.llm.complete(llm_request)

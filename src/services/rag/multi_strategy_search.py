@@ -44,7 +44,7 @@ except ImportError:
     CHROMADB_AVAILABLE = False
 
 try:
-    from sentence_transformers import SentenceTransformer
+    from sentence_transformers import SentenceTransformer, CrossEncoder
     SENTENCE_TRANSFORMERS_AVAILABLE = True
 except ImportError:
     SENTENCE_TRANSFORMERS_AVAILABLE = False
@@ -73,9 +73,11 @@ class ChromaDBConfig:
     grants_path: str = "chromadb_grants_fixed_20251210_200233"
     esm3_papers_path: str = "chromadb_new_papers_20251210_204818"
     neurips_path: str = "chromadb_data_neurips2025"
+    golden_references_path: str = "chromadb_data"
     # Different embedding models for different databases
     embedding_model_384: str = "all-MiniLM-L6-v2"  # 384 dimensions
     embedding_model_768: str = "allenai/scibert_scivocab_uncased"  # 768 dimensions
+    cross_encoder_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
     default_top_k: int = 10
 
 @dataclass
@@ -508,24 +510,95 @@ class GraphRAGStrategy(RealRAGStrategy):
 
 
 class GoldenReferenceStrategy(RealRAGStrategy):
-    """Golden Reference strategy - high-quality reference papers"""
+    """Golden Reference strategy - hierarchical RAPTOR search with reranking"""
 
     def __init__(self, config: ChromaDBConfig):
         super().__init__(RAGStrategy.GOLDEN_REFERENCE, config)
+        self._cross_encoder = None
+        if SENTENCE_TRANSFORMERS_AVAILABLE:
+            try:
+                self._cross_encoder = CrossEncoder(self.config.cross_encoder_model)
+                logger.info(f"Loaded Cross-Encoder: {self.config.cross_encoder_model}")
+            except Exception as e:
+                logger.warning(f"Could not load Cross-Encoder: {e}")
 
     def _get_relevant_databases(self) -> Dict[str, str]:
         return {
-            "grants": self.config.grants_path,
-            "esm3": self.config.esm3_papers_path
+            "golden": self.config.golden_references_path
         }
+
+    async def search(self, query_context: QueryContext) -> RAGResponse:
+        """Hierarchical RAPTOR search: L2 -> L1 -> L0 with reranking"""
+        start_time = time.time()
+        
+        if not self._available:
+            return self._create_fallback_response(query_context)
+
+        try:
+            # 1. Hierarchical Search
+            all_results = []
+            
+            # Layers and weights
+            layers = [("L2", 0.2), ("L1", 0.3), ("L0", 0.5)]
+            
+            for layer_suffix, weight in layers:
+                coll_name = f"golden_references_advanced_{layer_suffix}"
+                coll_key = f"golden_{coll_name}"
+                
+                if coll_key in self._collections:
+                    collection = self._collections[coll_key]
+                    dimension = self._collection_dimensions.get(coll_key, 768)
+                    query_embedding = self._get_embedding(query_context.query, dimension)
+                    
+                    results = collection.query(
+                        query_embeddings=[query_embedding],
+                        n_results=10,
+                        include=["documents", "metadatas", "distances"]
+                    )
+                    
+                    processed = self._process_collection_results(results, coll_key)
+                    # Apply layer weight
+                    for r in processed:
+                        r.relevance_score *= weight
+                    all_results.extend(processed)
+
+            # 2. Reranking
+            if self._cross_encoder and all_results:
+                # Deduplicate first
+                all_results = self._deduplicate_and_rank(all_results)[:20]
+                
+                # Rerank top 20
+                contents = [r.content for r in all_results]
+                pairs = [[query_context.query, content] for content in contents]
+                scores = self._cross_encoder.predict(pairs)
+                
+                # Apply rerank scores
+                for r, score in zip(all_results, scores):
+                    # Combine original relevance with cross-encoder score
+                    # Normalize cross-encoder score (often 0-1 or logits)
+                    r.relevance_score = (r.relevance_score * 0.3) + (float(score) * 0.7)
+
+            # 3. Final sort and create response
+            all_results.sort(key=lambda x: x.relevance_score, reverse=True)
+            execution_time = time.time() - start_time
+            response = self._create_response(query_context, all_results, execution_time)
+            
+            self._record_search_metrics(response, execution_time)
+            return response
+
+        except Exception as e:
+            logger.error(f"Hierarchical search error: {e}")
+            import traceback
+            logger.error(traceback.format_exc())
+            return await super().search(query_context)
 
     def _get_domain_bonus(self, domain: QueryDomain) -> float:
         return {
-            QueryDomain.GENERAL: 1.2,
-            QueryDomain.NEUROSCIENCE: 1.1,
-            QueryDomain.QUANTUM_ML: 1.1,
-            QueryDomain.DEVELOPMENTAL_DISORDERS: 1.0,
-            QueryDomain.PSYCHOLOGY: 1.0
+            QueryDomain.GENERAL: 1.4,
+            QueryDomain.NEUROSCIENCE: 1.3,
+            QueryDomain.QUANTUM_ML: 1.2,
+            QueryDomain.DEVELOPMENTAL_DISORDERS: 1.1,
+            QueryDomain.PSYCHOLOGY: 1.1
         }.get(domain, 1.0)
 
 

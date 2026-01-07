@@ -25,11 +25,14 @@ class OpenAIAdapter(LLMServiceInterface):
         self.encoder = tiktoken.encoding_for_model("gpt-4")
 
         # Model pricing (per 1K tokens) - Updated 2025
+        # Model pricing (per 1K tokens) - Updated 2025
         self.pricing = {
-            "gpt-5": {"input": 0.003, "output": 0.015},  # GPT-5 (Aug 2025)
-            "gpt-5-mini": {"input": 0.0005, "output": 0.002},  # GPT-5 Mini
-            "gpt-5-nano": {"input": 0.0001, "output": 0.0005},  # GPT-5 Nano
-            "gpt-4o": {"input": 0.005, "output": 0.015},  # GPT-4 Omni
+            "gpt-5-pro": {"input": 0.015, "output": 0.120},  # GPT-5 Pro
+            "gpt-5-codex": {"input": 0.015, "output": 0.120},
+            "gpt-5": {"input": 0.003, "output": 0.015},
+            "gpt-5-mini": {"input": 0.0005, "output": 0.002},
+            "gpt-5-nano": {"input": 0.0001, "output": 0.0005},
+            "gpt-4o": {"input": 0.005, "output": 0.015},
             "gpt-4o-mini": {"input": 0.00015, "output": 0.0006},
             "gpt-4-turbo": {"input": 0.01, "output": 0.03},
             "gpt-4-turbo-preview": {"input": 0.01, "output": 0.03},
@@ -40,39 +43,74 @@ class OpenAIAdapter(LLMServiceInterface):
     async def complete(self, request: LLMRequest) -> LLMResponse:
         """Generate completion using OpenAI."""
         config = request.config or self._get_default_config(request.task_type)
-
         messages = self._build_messages(request)
-
         start_time = time.time()
 
-        response = await self.client.chat.completions.create(
-            model=config.model,
-            messages=messages,
-            # temperature=config.temperature, # O-series models often have fixed temperature or restrictions
-            max_completion_tokens=config.max_tokens, # Renamed for newer models
-            # top_p=config.top_p,
-            # frequency_penalty=config.frequency_penalty,
-            # presence_penalty=config.presence_penalty,
-            # stop=config.stop_sequences,
-            timeout=config.timeout
-        )
+        # Check for models requiring 'responses' API
+        use_responses_api = config.model in ["gpt-5-pro", "gpt-5-codex", "gpt-5-pro-2025-10-06"]
+
+        if use_responses_api:
+            # Extract the actual user prompt (last user message) for straightforward 'input' usage
+            # Or use 'conversation' param if supported/needed (omitted for simplicity based on inspection)
+            # We'll use the last user message content as the primary 'input'.
+            prompt_content = next((m["content"] for m in reversed(messages) if m["role"] == "user"), request.prompt)
+            
+            try:
+                response = await self.client.responses.create(
+                    model=config.model,
+                    input=prompt_content,
+                    max_output_tokens=config.max_tokens if config.max_tokens >= 16 else 16
+                )
+                # Map response content
+                content_text = ""
+                if hasattr(response, 'output_text'):
+                    content_text = response.output_text
+                elif hasattr(response, 'output'):
+                    content_text = response.output
+                else: 
+                     # Fallback inspection
+                     content_text = str(response)
+
+                finish_reason = "stop" # Default for responses API usually
+                usage_prompt = 0
+                usage_completion = 0
+                # Try to extract usage if available
+                if hasattr(response, 'usage'):
+                    usage_prompt = getattr(response.usage, 'input_tokens', 0)
+                    usage_completion = getattr(response.usage, 'output_tokens', 0)
+
+            except Exception as e:
+                # Fallback or error re-raise
+                raise e
+        else:
+             # Standard Chat Completions API
+            response = await self.client.chat.completions.create(
+                model=config.model,
+                messages=messages,
+                # temperature=config.temperature,
+                max_completion_tokens=config.max_tokens, 
+                timeout=config.timeout
+            )
+            content_text = response.choices[0].message.content or ""
+            finish_reason = response.choices[0].finish_reason
+            usage_prompt = response.usage.prompt_tokens
+            usage_completion = response.usage.completion_tokens
 
         latency_ms = (time.time() - start_time) * 1000
-
-        tokens_used = response.usage.total_tokens
+        tokens_used = usage_prompt + usage_completion
         cost = self.get_cost(tokens_used, config.model)
 
         return LLMResponse(
-            content=response.choices[0].message.content or "",
+            content=content_text,
             model=config.model,
             provider=ModelProvider.OPENAI,
             tokens_used=tokens_used,
             cost=cost,
             latency_ms=latency_ms,
-            finish_reason=response.choices[0].finish_reason,
+            finish_reason=finish_reason,
             metadata={
-                "input_tokens": response.usage.prompt_tokens,
-                "output_tokens": response.usage.completion_tokens
+                "input_tokens": usage_prompt,
+                "output_tokens": usage_completion
             }
         )
 
@@ -153,47 +191,54 @@ class OpenAIAdapter(LLMServiceInterface):
 
     def _get_default_config(self, task_type: TaskType) -> LLMConfig:
         """Get default config for task type."""
+        from src.core.config import get_settings
+        settings = get_settings()
+        
+        # Use gpt-5-pro or gpt-5 based on task importance if not explicitly overridden by OPENAI_MODEL
+        # Actually, if the user set OPENAI_MODEL, we should probably prefer it.
+        default_model = settings.openai_model
+        
         configs = {
             TaskType.HYPOTHESIS_GENERATION: LLMConfig(
                 provider=ModelProvider.OPENAI,
-                model="gpt-5",  # GPT-5 for creative tasks
-                temperature=0.8,
-                max_tokens=1000
+                model=default_model,
+                temperature=settings.openai_temperature,
+                max_tokens=settings.openai_max_tokens
             ),
             TaskType.LITERATURE_ANALYSIS: LLMConfig(
                 provider=ModelProvider.OPENAI,
-                model="gpt-5",  # GPT-5 for analytical tasks
+                model=default_model,
                 temperature=0.3,
-                max_tokens=2000
+                max_tokens=settings.openai_max_tokens
             ),
             TaskType.EXPERIMENT_DESIGN: LLMConfig(
                 provider=ModelProvider.OPENAI,
-                model="gpt-5",  # GPT-5 for structured design
+                model=default_model,
                 temperature=0.5,
-                max_tokens=1500
+                max_tokens=settings.openai_max_tokens
             ),
             TaskType.DATA_ANALYSIS: LLMConfig(
                 provider=ModelProvider.OPENAI,
-                model="gpt-5",  # GPT-5 for precision
+                model=default_model,
                 temperature=0.2,
-                max_tokens=2000
+                max_tokens=settings.openai_max_tokens
             ),
             TaskType.PAPER_WRITING: LLMConfig(
                 provider=ModelProvider.OPENAI,
-                model="gpt-5",  # GPT-5 for long-form writing
+                model=default_model,
                 temperature=0.6,
-                max_tokens=3000
+                max_tokens=settings.openai_max_tokens
             ),
             TaskType.PEER_REVIEW: LLMConfig(
                 provider=ModelProvider.OPENAI,
-                model="gpt-5",  # GPT-5 for critical review
+                model=default_model,
                 temperature=0.4,
-                max_tokens=2000
+                max_tokens=settings.openai_max_tokens
             )
         }
         return configs.get(task_type, LLMConfig(
             provider=ModelProvider.OPENAI,
-            model="gpt-5",  # Default to GPT-5
-            temperature=0.7,
-            max_tokens=2000
+            model=default_model,
+            temperature=settings.openai_temperature,
+            max_tokens=settings.openai_max_tokens
         ))

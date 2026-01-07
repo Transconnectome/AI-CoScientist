@@ -78,7 +78,7 @@ class HybridDDSearch:
     def __init__(
         self,
         dd_path: str = "chromadb_data_dd",
-        fm_path: str = "chromadb_data_neurips2025",
+        fm_path: str = "chromadb_data",
         config: Optional[Dict] = None
     ):
         self.dd_path = Path(dd_path)
@@ -152,12 +152,12 @@ class HybridDDSearch:
             'L2': self.dd_client.get_collection("dd_papers_L2")
         }
 
-        # NeurIPS 2025 FM papers database
+        # Golden Reference FM papers database
         self.fm_client = chromadb.PersistentClient(path=str(self.fm_path))
         self.fm_collections = {
-            'L0': self.fm_client.get_collection("neurips_2025_L0"),
-            'L1': self.fm_client.get_collection("neurips_2025_L1"),
-            'L2': self.fm_client.get_collection("neurips_2025_L2")
+            'L0': self.fm_client.get_collection("golden_references_advanced_L0"),
+            'L1': self.fm_client.get_collection("golden_references_advanced_L1"),
+            'L2': self.fm_client.get_collection("golden_references_advanced_L2")
         }
 
         # Log collection statistics

@@ -56,7 +56,37 @@ class GeminiAdapter(LLMServiceInterface):
         )
 
         # Generate response
-        response = await model.generate_content_async(messages)
+        # Generate response (with Fallback)
+        try:
+            response = await model.generate_content_async(messages)
+        except Exception as e:
+            from src.core.config import settings
+            fallback_model = getattr(settings, "gemini_fallback_model", None)
+            
+            if fallback_model and fallback_model != config.model:
+                print(f"⚠️ Primary model {config.model} failed: {e}. Retrying with fallback: {fallback_model}")
+                
+                # Re-initialize model with fallback
+                fallback_gen_model = genai.GenerativeModel(
+                    model_name=fallback_model,
+                    generation_config=genai.GenerationConfig(
+                        temperature=config.temperature,
+                        max_output_tokens=config.max_tokens,
+                        top_p=config.top_p,
+                    ),
+                    safety_settings={
+                        "HARM_CATEGORY_HARASSMENT": "BLOCK_NONE",
+                        "HARM_CATEGORY_HATE_SPEECH": "BLOCK_NONE",
+                        "HARM_CATEGORY_SEXUALLY_EXPLICIT": "BLOCK_NONE",
+                        "HARM_CATEGORY_DANGEROUS_CONTENT": "BLOCK_NONE",
+                    }
+                )
+                response = await fallback_gen_model.generate_content_async(messages)
+                
+                # Update config model to reflect successful fallback usage
+                config.model = fallback_model
+            else:
+                raise e
 
         latency_ms = (time.time() - start_time) * 1000
 
@@ -196,9 +226,10 @@ class GeminiAdapter(LLMServiceInterface):
                 max_tokens=2000
             )
         }
+        from src.core.config import settings
         return configs.get(task_type, LLMConfig(
             provider=ModelProvider.GOOGLE,
-            model="gemini-2.5-pro",  # Default to Gemini 2.5 Pro
+            model=settings.gemini_model,  # Dynamic from settings
             temperature=0.7,
             max_tokens=2000
         ))

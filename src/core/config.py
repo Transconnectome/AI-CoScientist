@@ -21,6 +21,7 @@ class Settings(BaseSettings):
     environment: str = "development"
     debug: bool = False
     log_level: str = "INFO"
+    strict_mode: bool = False
 
     # API
     api_host: str = "0.0.0.0"
@@ -35,18 +36,18 @@ class Settings(BaseSettings):
     refresh_token_expire_days: int = 7
 
     # Database
-    database_url: str
+    database_url: str = "postgresql+asyncpg://postgres:local_dev_password@localhost:5434/ai_coscientist"
     database_echo: bool = False
     database_pool_size: int = 5
     database_max_overflow: int = 10
 
     # Redis
-    redis_url: str
+    redis_url: str = "redis://localhost:6380/0"
     redis_cache_ttl: int = 3600
     redis_max_connections: int = 10
 
     # RabbitMQ
-    rabbitmq_url: str
+    rabbitmq_url: str = "amqp://guest:guest@localhost:5672/"
     rabbitmq_exchange: str = "ai_coscientist"
     rabbitmq_queue: str = "tasks"
 
@@ -68,21 +69,25 @@ class Settings(BaseSettings):
 
     # OpenAI
     openai_api_key: str = ""
+    openai_model: str = "gpt-4-turbo"
+    openai_max_tokens: int = 4096
+    openai_temperature: float = 0.7
 
     # Anthropic
-    anthropic_api_key: str
+    anthropic_api_key: str = ""
     anthropic_model: str = "claude-sonnet-4-5"  # Claude Sonnet 4.5 (Released Sep 2025)
     anthropic_max_tokens: int = 8000  # Claude 4.5 supports up to 8K output
 
     # Google Gemini
     google_api_key: str = ""
-    gemini_model: str = "gemini-2.5-pro"  # Gemini 2.5 Pro (Released Mar 2025)
+    gemini_model: str = "gemini-3-flash-preview"
+    gemini_fallback_model: str = "gemini-2.0-flash-exp"
     gemini_max_tokens: int = 8192
     gemini_temperature: float = 0.7
 
     # LLM Configuration
-    llm_primary_provider: str = "openai"
-    llm_fallback_provider: str = "anthropic"
+    llm_primary_provider: str = "gemini"
+    llm_fallback_provider: str = "match_primary_fallback"
     llm_cache_enabled: bool = True
     llm_cache_ttl: int = 3600
     llm_max_retries: int = 3
@@ -100,8 +105,8 @@ class Settings(BaseSettings):
     crossref_email: str = ""
 
     # Celery
-    celery_broker_url: str
-    celery_result_backend: str
+    celery_broker_url: str = "redis://localhost:6380/1"
+    celery_result_backend: str = "redis://localhost:6380/2"
     celery_task_always_eager: bool = False
 
     # Monitoring

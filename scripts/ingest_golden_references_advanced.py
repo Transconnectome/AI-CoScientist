@@ -57,10 +57,10 @@ class LLMProvider(str, Enum):
 
 # Latest best models from each provider (Nov 2025)
 PROVIDER_MODELS = {
-    LLMProvider.OPENAI: "gpt-4o",  # Latest GPT-4 variant with vision
-    LLMProvider.ANTHROPIC: "claude-3-5-sonnet-20241022",  # Latest Claude Sonnet (Oct 2024)
-    LLMProvider.GEMINI: "gemini-2.5-pro",  # Latest Gemini with 1M context
-    LLMProvider.DEEPSEEK: "deepseek-chat"  # Standard DeepSeek chat model
+    LLMProvider.OPENAI: "gpt-3.5-turbo",  # Safest bet for accessibility
+    LLMProvider.ANTHROPIC: "claude-3-5-sonnet-20241022",
+    LLMProvider.GEMINI: "gemini-3-flash-preview",  # User has verified access
+    LLMProvider.DEEPSEEK: "deepseek-chat"
 }
 
 # Provider priority order (fallback chain)
@@ -367,8 +367,8 @@ class MultiProviderLLM:
                 continue
 
             # Retry logic
-            max_retries = 1  # Reduced to avoid long waits
-            base_delay = 1
+            max_retries = 3  # Increased for better reliability
+            base_delay = 2
             
             for attempt in range(max_retries):
                 try:
@@ -851,25 +851,25 @@ class AdvancedGoldenReferenceIngestor:
 
         # Store L0
         if all_chunks:
-            self.collection_l0.add(
+            self.collection_l0.upsert(
                 ids=[chunk.chunk_id for chunk in all_chunks],
                 embeddings=[chunk.embedding.tolist() for chunk in all_chunks],
                 documents=[chunk.content for chunk in all_chunks],
                 metadatas=[chunk.metadata for chunk in all_chunks]
             )
-
+        
         # Store L1
         if level1_summaries:
-            self.collection_l1.add(
+            self.collection_l1.upsert(
                 ids=[node.node_id for node in level1_summaries],
                 embeddings=[node.embedding.tolist() for node in level1_summaries],
                 documents=[node.content for node in level1_summaries],
                 metadatas=[node.metadata for node in level1_summaries]
             )
-
+        
         # Store L2
         if level2_summary:
-            self.collection_l2.add(
+            self.collection_l2.upsert(
                 ids=[level2_summary.node_id],
                 embeddings=[level2_summary.embedding.tolist()],
                 documents=[level2_summary.content],
