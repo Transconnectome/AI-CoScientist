@@ -77,13 +77,13 @@ class SimpleDownloader:
         
         if use_saved_auth and auth_file.exists():
             logger.info(f"Using saved authentication from {auth_file}")
-            self.browser = await playwright.chromium.launch(headless=False)
+            self.browser = await playwright.chromium.launch(headless=True)
             self.context = await self.browser.new_context(
                 storage_state=str(auth_file)
             )
         else:
             logger.info("Starting fresh browser session")
-            self.browser = await playwright.chromium.launch(headless=False)
+            self.browser = await playwright.chromium.launch(headless=True)
             self.context = await self.browser.new_context()
         
         logger.info("Browser initialized")
