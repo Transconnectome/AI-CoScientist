@@ -1,0 +1,962 @@
+Image Classification from Randomized and Deterministic EEG Trials
+Anonymous CVPR submission
+Abstract
+In this paper, we propose a new deep model, TS- 001
+SpectrumNet, to achieve improved image classification from 002
+both randomized and deterministic EEG trials, which is ex- 003
+tremely challenging and the best classification rate reported 004
+so far is only 7.0% for randomized trials and 48.1% for de- 005
+terministic trials. To confront the challenge brought in by 006
+randomized EEG trials and semantics ambiguity inside nat- 007
+ural stimuli images, we propose two new modules: TSDL 008
+(Temporal-Spatial Dynamics Learning) and SpecRL (Spec- 009
+trum Representational Learning) to achieve the best pos- 010
+sible exploitation of the classifiable information embedded 011
+inside EEG trials. While the first module is introduced to 012
+simultaneously learn temporal-spatial dynamics with multi- 013
+ple convolutional kernels to accommodate a broader range 014
+of varying characteristics of both the randomized and de- 015
+terministic EEG trials, the second module is introduced to 016
+achieve representational learning in spectrum domain to 017
+characterize those hierarchical global correlations beyond 018
+the constraint of localities. In this way, our proposed TS- 019
+SpectrumNet is able to achieve not only the comprehen- 020
+sive capture of complex dynamics inside EEG sequences 021
+but also the full exploitation of spectrum features across all 022
+temporal-spatial EEG channels. To minimize the impact of 023
+noises, we further introduce a channel-wise normalization 024
+scheme to optimize the quality of EEG input for our pro- 025
+posed TS-SpectrumNet. Extensive experiments are carried 026
+out and the results validate that: (i) over randomized EEG 027
+trials, our proposed delivers a classification rate of 15.1%, 028
+more than doubling the best rate reported so far; and (ii) 029
+over deterministic EEG trials, our proposed delivers the 030
+best classification rate of 50.3% at the cost of 0.1 million 031
+parameters, whist the existing best performing EEGChan- 032
+nelNet achieves the classification rate at 48.1% at the cost 033
+of 5 million parameters.034
+1. Introduction035
+At present, EEGs have been widely adopted for analyzing 036
+brain states in psychology, and their research is primarily 037
+dominated by stimulations of spiky patterns or object im- 038
+Cup Parachute  Coffee machine Radio telescopeFigure 1. Illustration of stimuli image samples used for EEG-
+ImageNet [1, 25].
+ages [2, 8, 11, 13, 29]. In 2017, Spampinato et al. [25]039
+selected 40 classes of natural images from ImageNet [21]040
+to stimulate human brains and then classify brain responded041
+EEG trials to recognize image categories, leading to the cre-042
+ation of EEG-ImageNet, the world’s first EEG dataset gen-043
+erated in an environment close to realistic mind-reading sce-044
+narios. As this data set is created by stimulations of natural045
+images in a deterministic order, we name it ’EEG-ImageNet046
+with deterministic trials’ to distinguish from the latter work047
+on randomized EEG trials [1]. With such deterministic048
+EEG-ImageNet, an encouraging classification rate of 82.9%049
+is reported [25], which ignited significant interests across050
+relevant research communities [3, 5, 9, 12, 19, 20, 32, 33].051
+When EEG-ImageNet is recreated by Ahmed et al. [1] with:052
+(i) each of the 40 classes is represented by 10 times more053
+images, totaling 40,000 natural images; and (ii) the stimula-054
+tion of all natural images is arranged in randomized orders,055
+however, the classification rate is significantly dropped and056
+the maximum rate achieved is reported to be 7.0% [1, 17].057
+To the best of our knowledge, no work has been reported so058
+far to move any further beyond this rate.059
+Compared with stimuli of spiky patterns or object im-060
+ages, stimuli with natural images are often content-rich061
+with multiple semantics, making it more difficult for human062
+brains to achieve desirable responses due to the ambiguities063
+created by such multi-semantics and their mixed presence.064
+Figure 1 illustrates four samples together with their class la-065
+bels, selected from the stimuli images for EEG-ImageNet.066
+While the first sample is labeled as the class ‘Parachute’,067
+for example, it is difficult for human eyes to see the con-068
+nection with ’Parachute’ and recognize this class from the069
+1REDACTED
+REDACTED
+
+---PAGE BREAK---
+
+sample image only, let alone that the brain response is col- 070
+lected within its stimulation period (2 seconds for EEG- 071
+ImageNet). Other sample images present similar problems 072
+as seen from Figure 1.073
+To advance this direction of research, i.e classification of 074
+those natural stimuli images directly from both randomized 075
+and deterministic EEG trials, we propose a dedicated deep 076
+framework, TS-SpectrumNet, to address all the challenges 077
+described above. In comparison with the existing state of 078
+the arts, our proposed TS-SpectrumNet features in a com- 079
+prehensive learning and tracking of EEG trials in terms of 080
+temporal-spatial dynamics, spectrum representations, and 081
+depth revelations. We highlight our contributions as fol- 082
+lows:083
+• To combat the additional noises introduced by both the 084
+randomized EEG trials and the class labeling ambiguities 085
+embedded inside the stimuli with natural images, we pro- 086
+pose a new scheme of channel-wise normalization to im- 087
+prove the quality of raw EEGs, and thus making it more 088
+presentable to our proposed TS-SpectrumNet;089
+• To increase the representational capacity and comprehen- 090
+siveness of our proposed TS-SpectrumNet, we propose to 091
+add a temporal-spatial dynamics learning module and a 092
+spectrum representational learning module to maximize 093
+the exposure of classifiable information for both the ran- 094
+domized and deterministic EEG trials;095
+• While the temporal-spatial dynamics learning module is 096
+tailored to maximize the temporal/spatial exposure of the 097
+classifiable information through multi-scale and multi- 098
+kernel convolutions and thus optimizing their capture of 099
+complex dynamics embedded inside the EEG sequences, 100
+the proposed spectrum representational learning features 101
+in multi-level Wavelet decomposition of the input to en- 102
+able the proposed deep model to: (i) extract hierarchi- 103
+cal spectrum features to sustain global characteristics and 104
+overcome local constraints; (ii) optimize its comprehen- 105
+siveness in exposing and capturing the classifiable infor- 106
+mation out of EEG sequences, and hence significantly in- 107
+crease the deep model’s capability in classifying natural 108
+stimuli images from EEG trials;109
+• Extensive experiments and ablation studies are carried 110
+out, the results of which not only validate the effective- 111
+ness of our proposed TS-SpectrumNet, but also illustrate 112
+that TS-SpectrumNet outperforms all the existing repre- 113
+sentative baselines, and for classification of randomized 114
+EEG trials, TS-SpectrumNet pushes the existing maxi- 115
+mum rate, 7%, to a new level of 15.1%, creating an en- 116
+couraging potential for further advances along this line 117
+of research. For classifying brain perception of natu- 118
+ral images from deterministic EEG trials, our proposed 119
+achieves the best rate of 50.3% at the cost of 0.1 million 120
+parameters, whist the best performing EEGChannelNet 121
+delivers 48.1% with 5 million parameters.1222. Related works123
+Introduced by Li and Ahmed et al. [1, 17], classifica-124
+tion of randomized EEG trials upon their extended EEG-125
+ImageNet is tested by a range of classifiers, including not126
+only those representative deep models, such as EEGNet127
+[15], EEGChannelNet [20], LSTM [7], 1DCNN, and Sync-128
+Net [18] etc., but also those traditionally well-known clas-129
+sifiers, such as SVM [10], MLP [27], and KNN [30] etc.130
+While the best rate of 7.0% is achieved by EEGNet and the131
+second best rate of 5.1% is achieved by CNN, traditional132
+classifier SVM surprisingly produced a classification rate133
+of 5%, the third best, outperforming all other deep models,134
+such as LSTM, SynNet, and EEGChannelNet.135
+EEGNet [15] is a portable and simple network with sep-136
+arable convolution stages to learn temporal summary of in-137
+dividual feature maps, followed by pointwise convolution,138
+which learns how to optimally mix the feature maps to-139
+gether. Trained by a cross-entropy loss function, EEGNet140
+relies on a softmax-based classifier to deliver the final clas-141
+sification results. EEGChannelNet, on the other hand, uti-142
+lizes 1D convolution and incorporates residual blocks to en-143
+hance its classification performances. On classifying de-144
+terministic EEG trials, EEGChannelNet achieved the best145
+classification rate of 48.1% [20]. When applied to classify-146
+ing randomized EEG trials, however, its classification rate147
+is dropped to 2.5% [1].148
+Given the fact that Transformers are notably strong for149
+capturing long-term dependencies, recent research can also150
+be characterized as integrating Transformers to tackle both151
+temporal and spatial feature extraction via representational152
+learning [16, 23, 26]. EEGConformer [23] remains to be153
+one of such representative examples, which combines the154
+strengths of CNNs and Transformers by integrating convo-155
+lutional layers for local feature extraction with Transformer156
+layers for capturing global dependencies, leading to im-157
+proved performances over EEG classification tasks. Sid-158
+dhad et al. [22], however, pointed out that the positional en-159
+coding in Transformers is not tailored for EEG data, which160
+could lead to performance degradation in certain cases.161
+Another direction for classifying brain perception of im-162
+ages from EEGs is represented by the work pioneered by163
+C. Du et al. [4] and Song Y . et al.[23, 24], which is based164
+on the EEG data set collected by Gifford et al [6]. Specif-165
+ically, this data set is collected from 10 subjects, to whom166
+both the training images and test images are presented in167
+a pseudo-randomized order. In total, the training set con-168
+tains 1654 concepts, each of which includes 10 object im-169
+ages, totaling 16540 images, and the test set contains 200170
+concepts, each of which is represented by 1 object image.171
+All images are presented to the subject for 100ms, followed172
+by 100ms blanking, and EEGs are collected with 63 chan-173
+nels at a 1000Hz sampling rate. While the collection of174
+EEGs are replicated 4 times over the training set, collection175
+2REDACTED
+
+---PAGE BREAK---
+
+SpecRLInput
+H
+LIWT
+H
+LOutput
+H
+LHigh pass
+Low pass
+ConvolutionIWTWT
+WT＋
+Raw EEG inputTSDL
+Grouping······
+······
+······
+······ ··· ···
+Classification1×63
+1×127
+1×255
+Channel-wise normalization1
+2
+3
+4
+5···
+92
+93
+94
+95
+96
+···
+96×512S
+M
+LS1
+S2
+S8
+M1
+M2
+M8
+L1
+L2
+L8
+······
+···
+·········
+Feature Integration 
+Module (FIM)Figure 2. Structural overview of our proposed TS-SpectrumNet.(L: large convolution kernel; M: medium convolution kernel; S: small
+convolution kernel )
+of EEGs over the test set is replicated 8 times to provide a 176
+richer EEG dataset for research purposes [6]. As this data 177
+set is essentially established for modeling human visual ob- 178
+ject recognition, it is impossible to classify the 1654 con- 179
+cepts directly from the collected EEGs, due to the fact that: 180
+(i) lack of training EEGs since each concept only contains 181
+10 images to stimulate brains; (ii) there are too many con- 182
+cepts, 1654 in total, making it difficult to distinguish even 183
+directly from those stimulating images, let alone from those 184
+brain responded EEGs. To this end, Song et. al. intro- 185
+duced the concept of ’brain decoding’ to describe the cog- 186
+nitive process of classifying brain perceptions [24], where 187
+a self-supervised framework, containing an EEG encoder, a 188
+stimulating image encoder, and a contrast learning module, 189
+is proposed. While image encoder and EEG encoder extract 190
+features from stimulating images and EEGs respectively, 191
+the contrast learning aligns these features to optimize their 192
+pairings. At the testing stage, object images that have not 193
+appeared in EEG collections (zero-shot) are averaged to for- 194
+mulate a single concept template, which are then processed 195
+together with test EEGs by the framework to calculate their 196
+match and produce a top-5 classification rate, if the correct 197
+match appears within any of the top 5 results, and top-1 198
+classification rate, where the correct match only appears 199
+at the top. Comparative experiments are reported in [24] 200
+that, in terms of top-1 classification rates, their proposed 201
+decoding framework achieved 15.60% on average across all 202
+subjects, whilst the existing baseline by Du et al. [4] only 203
+achieved 5.8% on average across all subjects, providing an 204
+additional indication that classification of randomized EEG 205
+trials is indeed extremely challenging even under the con- 206
+texts that corresponding stimulating images are exploited to 207
+provide essential match and pairing.2083. Our proposed TS-SpectrumNet209
+Figure 2 illustrates a structural overview of our proposed210
+TS-SpectrumNet, which can be seen to include four op-211
+erational stages, including: (i) channel-wise normaliza-212
+tion stage to enhance the quality of the input raw EEG213
+sequences; (ii) temporal-spatial dynamics learning mod-214
+ule to provide more comprehensive coverage and tracking215
+for the complex time-dependent dynamics across EEG se-216
+quences; (iii) spectrum representational learning module to217
+sustain Wavelets-based multi-resolution and multi-level de-218
+composition of the information flow across channels and219
+thus optimize the exploitation of global correlations beyond220
+local constraints and the coordination/interaction among221
+all channels; and (iv) a feature integration module (FIM)222
+that adaptively fuses the outputs from all TSDL/SpecRL223
+branches—learning cross-band and cross-scale interactions224
+via lightweight channel-wise fusion, in order to formulate a225
+unified, discriminative representation for the final softmax-226
+based classification.227
+3.1. Channel-wise normalization228
+Prompted by the fact that EEG-based brain responses are of-229
+ten exposed to many possible external interferences, such as230
+the subject’s physiological activity, muscle movement (e.g.231
+chewing, etc.), cardiac pulsations, or poor electrode con-232
+tact etc, we observed and analyzed a large proportion of the233
+randomized EEG-ImageNet [1], which indicates that there234
+exist a noticeable proportion of artifacts, suspicious of ab-235
+normality for our proposed classification. Compared with236
+the majority of EEGs, which demonstrates a relative con-237
+sistency in their waveforms with statistics of signal intensi-238
+ties primarily concentrated in the mid-range of their max-239
+3REDACTED
+
+---PAGE BREAK---
+
+(a) Typical EEG segment (b) Artifact-corrupted samples (µV)Count
+Statistics Distribution (Majority)
+0Statistics Distribution (Artifacts)
+100200300400500-505
+010000100001000030000
+-10-7.5-5.0-2.50 2.55.07.5050010001500Amplitude (µV)
+0 100200300400500Amplitude (µV) Count
+-60000-2000020000 60000 (µV)0Figure 3. Comparative illustration of the observed EEGs
+imum and minimum variations, these artifacts often illus- 240
+trate prominent low and abrupt high magnitudes, exhibit- 241
+ing irregular fluctuations and deviating significantly from a 242
+normal distribution. Figure 3 illustrates a clear comparison 243
+between a typical EEG segment and an artifact-corrupted 244
+one. As shown in Figure 3(a), most EEGs in the dataset 245
+exhibit stable oscillatory waveforms with amplitudes gen- 246
+erally within ±6 µV , and their statistics distribution can be 247
+characterized by a normal pattern. This reflects the regular 248
+rhythmic nature of neural activities. In contrast, Figure 3(b) 249
+demonstrates an artifact-contaminated EEG segment char- 250
+acterized by extreme amplitude excursions reaching tens of 251
+thousands of µV in a irregular manner with heavy-tailed 252
+value distribution.253
+To minimize such potentially negative impact upon our 254
+proposed TS-SpectrumNet, we introduce a channel-wise 255
+normalization to: (i) minimize the effect of possible arti- 256
+facts as a result of that normalized EEGs fall closer to each 257
+other within similar numerical ranges across different chan- 258
+nels; (ii) leverage the impact of individual differences and 259
+variations in signal strength; (iii) improve the coordination 260
+of individual feature learning across all channels.261
+Given the EEG sequence denoted as 262
+{x1c, x2c, ..., x ic, ...}i∈[1,512]andc∈[1,96][1] 263
+or[1,128][25], collected from channelcon the cap, our 264
+introduced channel-wise normalization, i.e. the normalized 265
+EEG sequencex′
+ic, can be calculated via the following:266
+x′
+ic=xic−µc
+σc(1) 267
+whereµ candσ care the mean and the standard deviation of 268
+all EEGs for channelc, respectively.269
+3.2. TSDL: Temporal-Spatial Dynamics Learning 270
+The temporal-spatial dynamics learning (TSDL) module 271
+is the first core processing stage of our network, applied 272
+directly after the channel-wise normalization of the raw 273
+96×512EEG input for randomized EEG-ImageNet and 274
+the raw128×512input for deterministic EEG-ImageNet. 275
+The primary objective of this module is to capture the rich 276spatio-temporal dynamics inherent in EEG signals across277
+multiple time scales simultaneously. As illustrated in Fig-278
+ure 2, the TSDL module employs a parallel, multi-branch279
+architecture inspired by the ”Inception” concept, allowing280
+the network to learn from different temporal receptive fields281
+concurrently [16].282
+The normalized input,X norm∈RC×T, is fed into three283
+independent 1D convolutional branches, each with a differ-284
+ent kernel size to sustain effective learning across the vary-285
+ing aspects of the distinct spatio-temporal dynamics, which286
+can be highlighted as follows.287
+•Small Kernel (S) Branch:This branch utilizes 1D con-288
+volutions with a small kernel size (k S= 63), in order289
+to enable the learning module to capture high-frequency,290
+local, and fine-grained spatio-temporal dynamics.291
+•Medium Kernel (M) Branch:This branch uses 1D con-292
+volutions with a medium kernel size (k M= 127). This293
+is aimed at enabling the dynamics learning to focus on294
+those temporal dependencies and spatial correlations over295
+medium sized time windows.296
+•Large Kernel (L) Branch:This branch is constructed297
+by a number of 1D convolution units with a large kernel298
+size (k L= 255) to empower the dynamics learning with299
+wider receptive fields, which is crucial for capturing low-300
+frequency, long-range temporal dependencies and global301
+spatio-temporal relationships across the EEG sequences.302
+As shown in Figure 2 (e.g., M1, M2, ..., M8), each303
+branch consists of multiple parallel convolutional filters.304
+The 1D convolution operation in each filter is ”spatio-305
+temporal” as it spans allCinput channels while convolv-306
+ing along the temporal dimensionT, thus learning patterns307
+that involve correlationsbetweenchannelsovera specific308
+duration. The outputs of the parallel filters within a sin-309
+gle branch are then aggregated via element-wise summation310
+(indicated by the symbolL) to produce a single but robust311
+feature map for that specific scale.312
+Specifically, for an inputX norm and a given branchb∈313
+{S, M, L}withN bparallel filters (N b= 8), the aggregated314
+output feature mapF bis computed as:315
+Fb=σ NbX
+i=1Conv1D(i)
+kb(Xnorm)!
+(2)316
+where Conv1D(i)
+kbis thei-th 1D convolutional filter with ker-317
+nel sizek b, andσrepresents the non-linear activation func-318
+tion (e.g., ReLU). The TSDL module finally outputs three319
+distinct feature maps,F S, FM, FL, which are then passed320
+in parallel to three identical SpecRL modules for dedi-321
+cated representational learning across different frequency322
+domains.323
+3.3. SpecRL: Spectrum Representational Learning324
+It is known that CNNs have a limited receptive field, mak-325
+ing it difficult to effectively capture global contextual in-326
+4REDACTED
+
+---PAGE BREAK---
+
+formation. This limitation is particularly problematic for 327
+classification of randomized EEG trials, where both local 328
+and global correlations need to be learned and exploited si- 329
+multaneously, in order to ensure that every possible contri- 330
+bution is taken into full consideration. Correspondingly, we 331
+propose a new spectrum representational learning (SpecRL) 332
+layer, enabling efficient and effective capture of both lo- 333
+cal and global features to overcome the locality constraints 334
+across both the time and spatial domains of EEG trials.335
+As shown in Figure 2, the SpecRL layer firstly decom- 336
+poses the input into different spectral components via two- 337
+level wavelet transforms, after which an inverse wavelet 338
+transform is applied to reconstruct the output and sus- 339
+tain a compatibility for information flow across all stages 340
+of the proposed framework. This mechanism is essen- 341
+tially designed to extend the receptive field during multi- 342
+resolution and multi-level decompositions, enhancing the 343
+model’s ability to learn spatial dynamics from EEG se- 344
+quences while maintaining a low computational complexity. 345
+To decompose the input feature map into individual compo- 346
+nents across their spectrum, we adopt the Symlets wavelet 347
+kernel function to process the signal for better denoising and 348
+smoothing.349
+Specifically, given the input feature map, itsj-th ele- 350
+mentsX(i)
+L[j]andX(i)
+H[j]can be decomposed via the fol- 351
+lowing equations:352
+X(i)
+L[j] =L−1X
+k=0hk·X(i−1)
+L[2j+k](3) 353
+354
+X(i)
+H[j] =L−1X
+k=0gk·X(i−1)
+H[2j+k](4) 355
+where,X(i)
+L[j]andX(i)
+H[j]represent thej-th reconstructed 356
+elements of the low-frequency and high-frequency com- 357
+ponents at thei-th level (i∈[1,2]), respectively, and 358
+hkandg kare the coefficients of the low-pass and high- 359
+pass filters.Lrepresents the filter length andL Symlets =4. 360
+X(i−1)[2j+k]denotes the four consecutive samples start- 361
+ing from the2j-th position in the input.362
+Upon each decomposed spectrum component, the intro- 363
+duced SpecRL layer performs small convolution operations, 364
+by which it is meant that smaller convolution kernels are 365
+compared with those traditionally large kernels, in order to 366
+help reducing the number of parameters and computational 367
+complexity. Essentially, this is designed not only to apply 368
+convolution to individual spectrum component, but also to 369
+allow small kernels to operate over a larger area of the orig- 370
+inal input, thereby maximizing the receptive field.371
+At each decomposition leveli, convolution operations 372
+are applied to the decomposed low-frequency and high- 373
+frequency components individually, in order to maximize 374
+the role of the learned spectrum representation.375After completing the convolution operations, SpecRL376
+uses the inverse wavelet transform (IWT) to combine the377
+low and high-frequency components back to the original378
+spatial resolution. This process preserves the integrity of379
+both local and global information, fusing all contributions380
+across the spectrum to form the final output.381
+Correspondingly, then-th element of the reconstructed382
+signal is obtained using the inverse wavelet transform,383
+which is described below:384
+Y(i)[n] =L−1X
+k=0h′
+k·
+C(i)
+L[n−k] +Y(i+1)[n−k]
+385
++L−1X
+k=0g′
+k·C(i)
+H[n−k](5)386
+where,Y(i)[n]is the reconstructed signal at leveli.C(i)
+Land387
+C(i)
+Hare the upsampled low-frequency and high-frequency388
+components after convolution at leveli.Y(i+1)is the ag-389
+gregated output from the previous leveli+ 1.390
+Finally, to coordinate the proposed learning modules and391
+thus provide the best possible preparation for the classifica-392
+tion layer, we further introduce a feature integration mod-393
+ule (FIM) to optimally exploit the exposure of classifiable394
+information and hence maximize the final classification ef-395
+fectiveness. As illustrated in Figure 2, the FIM takes the396
+feature maps from all spectral branches as input. It then397
+performs a comprehensive integration, where each output398
+feature map is generated based on a learned combination of399
+all input feature maps. This mechanism, often implemented400
+as a channel-wise attention or a fully-connected layer across401
+the feature dimension, allows the model to weigh the impor-402
+tance of different spectral components and hence capture403
+their synergistic interactions.404
+4. Experiments and analysis405
+4.1. Experimental setup406
+To evaluate the proposed TS-SpectrumNet, we set up the407
+experimental platform to follow two principles, i.e. the408
+compatibility and fairness in comparisons; sufficiency and409
+comprehensiveness in coverage. Details of such set up can410
+be highlighted as: (i) for datasets, we primarily adopt the411
+EEG-ImageNet with randomized EEG trials extended by412
+Purdue researchers [1], and the EEG-ImageNet with deter-413
+ministic EEG trials originated by Florida researchers [25];414
+(ii) for benchmarking, we not only include all the classifiers415
+adopted for comparative experiments over randomized EEG416
+trials [1], but also those representing the latest development417
+in relevant areas, such as the transformer-based EEGCon-418
+former [23] and NICE-EEG, developed for brain decoding419
+out of stimuli-EEG pairings [24].420
+5REDACTED
+
+---PAGE BREAK---
+
+ModelRandomized EEG Trials Deterministic EEG trials
+Top-1 Top-5 Params Top-1 Top-5 Params
+SVM[17] 5.0% 21.3 ± 0.9 (%) 1.9M 5.8 ± 0.3 (%) 18.2 ± 0.5 (%) 2.3M
+KNN[17] 2.1% 12.1 ± 0.3 (%) – 7.5 ± 0.3 (%) 26.9 ± 0.7 (%) –
+LSTM[7] 2.2% 12.4 ± 0.4 (%) 0.1M 21.8 ± 0.5 (%) 70.4 ± 2.1 (%) 0.1M
+MLP[17] 2.5% 12.6 ± 0.4 (%) 6.3M 6.6 ± 0.2 (%) 25.6 ± 0.4 (%) 7.2M
+CNN[17] 5.1% 21.4 ± 0.8 (%) 0.004M 32.1 ± 1.2 (%) 77.9 ± 1.8 (%) 0.006M
+EEGNet[15] 7.0% 24.6 ± 1.1 (%) 0.01M 31.8 ± 1.0 (%) 90.5 ± 2.3 (%) 0.01M
+[20] 2.5% 10.5 ± 0.3 (%) 4.5M 48.1 ± 1.4 (%) 82.9 ± 1.8 (%) 5M
+SyncNet[18] 2.5% 13.8 ± 0.5 (%) 0.04M 33.8 ± 1.3 (%) 85.2 ± 2.0 (%) 0.06M
+EEGConformer[23] 4.2 ± 0.2 (%) 17.5 ± 0.7 (%) 0.6M 45.3 ± 1.5 (%) 87.8 ± 1.8 (%) 0.6M
+NICE-EEG[24] 5.1 ± 0.2 (%) 18.9 ± 1.0 (%) 0.3M 34.1 ± 1.0 (%) 78.1 ± 1.7 (%) 0.3M
+EEG-TSSnet 15.1 ± 0.3 (%) 39.7 ± 1.3 (%)0.05M50.3 ± 1.6 (%) 91.9 ± 2.1 (%)0.1M
+Table 1. Comparative listing of experimental results.
+Specific implementation of the proposed is completed in 421
+PyTorch and its execution is on an NVIDIA A100 GPU with 422
+five fold cross validation for both training and testing. The 423
+initial learning rate is set to 0.001, and the training epoch 424
+is 100. Other items include utilization of the Adam [14] 425
+optimizer and a cross entropy loss function.426
+4.2. Experimental results427
+Following extensive experiments carried out, we list all the 428
+classification results in Table 1, including Top-1 and Top- 429
+5 accuracy rates and the number of parameters required. 430
+While Top-1 and Top-5 results are adopted to measure the 431
+effectiveness of all the tested classifiers, the number of pa- 432
+rameters are listed to measure their efficiency.433
+As seen, over the EEG-ImageNet with randomized trials 434
+[1], our proposed TS-SpectrumNet achieves a new state- 435
+of-the-art Top-1 accuracy at 15.1%, more than doubling 436
+the 7.0% from the previous best, EEGNet [1]. Our Top- 437
+5 accuracy of 39.7% also significantly leads the second- 438
+best EEGNet (24.6%), as well as other baselines, including 439
+transformer-based models, such as EEGConformer at 4.2%. 440
+To maximize our coverage of comparative evaluations, 441
+we have also run all the experiments over the EEG- 442
+ImageNet with deterministic trials [25], the results of which 443
+are listed under the third column of Table 1. As seen, 444
+our proposed TS-SpectrumNet also achieves the best rate 445
+at 50.3%, outperforming the existing best EEGChannelNet 446
+[25] at 48.1%. In contrast, the best performing EEGNet on 447
+randomized EEG trials, however, achieved a classification 448
+rate of 31.8%, behind EEGConformer, NICE-EEG, Sync- 449
+Net, and CNN.450
+To evaluate the efficiency of our proposed TS- 451
+SpectrumNet, we also list the results of parameter count 452
+for all tested models in Table 1, from which it can be seen 453
+that our proposed has delivered the best cost-effectiveness 454
+among all the tested models. We argue our case via the fol- 455
+lowing observations: (i) For classification of deterministic 456
+EEG trials, proposed model delivers the best classification 457
+rate at 50.3% using only 0.1 million parameters. In contrast, 458the second-best model, EEGChannelNet, achieves a rate of459
+48.1% with 5.0 million parameters. With less than 2% of460
+the parameters, our proposed model achieves a 2.2% higher461
+classification rate.(ii) For classification of randomized EEG462
+trials, our proposed achieves the best rate at 15.1% upon463
+0.05 million parameters, yet EEGChannelNet only achieved464
+2.5% upon 4.5 million parameters, 90 times more than that465
+of our proposed. (iii) Compared with EEGNet, the exist-466
+ing best performing model for classification of randomized467
+EEG trials [1], the number of parameters required is 0.01468
+million, only 20% of our proposed. Considering the fact469
+that our classification rate is more than doubling the rate by470
+EEGNet, i.e. 15.1% against 7.0%, we argue that the price471
+paid is justifiable. (iv) While NICE-EEG is well performed472
+in the task of classifying images from image-EEG pairings473
+[24] over the Gifford dataset [6], it is under performing for474
+the task of classifying randomized EEG trials with a rate at475
+5.1%. For the task of classifying deterministic EEG trials,476
+its achieved classification rate is 34.1%, under performing477
+EEGChannelNet, TS-SpectrumNet, and EEGConformer.478
+In summary, from all the above evaluations over both the479
+data sets with randomized and deterministic trials, it can be480
+seen that our proposed TS-SpectrumNet delivers the best ef-481
+fectiveness and efficiency among all the compared baselines482
+in terms of the overall considerations, including the magni-483
+tude of differences between the best rate and the second best484
+rate, and combinational measurement of classification rate485
+v.s. parameter count etc.486
+4.3. Ablation experiments487
+4.3.1. Module-wise ablation488
+To quantify the contribution of each architectural compo-489
+nent, we conduct controlled ablation studies by removing490
+one module at a time from TS-SpectrumNet while keep-491
+ing all training protocols unchanged, and report Top-1/Top-492
+5 accuracy rates on classifying both the randomized and493
+deterministic EEG trials, details of which are summarized494
+in Table 2. The four modules under the ablation studies495
+are: (a) channel-wise normalization (Norm), (b) tempo-496
+6REDACTED
+
+---PAGE BREAK---
+
+VariantRandomized
+EEG TrialsDeterministic
+EEG trials
+Top-1 Top-5 Top-1 Top-5
+w/o Channel-wise Norm. 14.7% 38.8% 49.1% 91.0%
+w/o TSDL 12.8% 33.1% 45.4% 88.1%
+w/o SpecRL 14.6% 38.5% 48.9% 90.8%
+w/o FIM 14.8% 39.0% 49.6% 91.4%
+TS-SpectrumNet (full) 15.1% 39.7% 50.3% 91.9%
+Table 2. Module-wise ablation on EEG-ImageNet.
+ral–spatial dynamics learning (TSDL), (c) spectrum repre- 497
+sentational learning (SpecRL), and (d) feature integration 498
+module (FIM).499
+From the results listed in Table 2, the following four ob- 500
+servations can be made: (i) removal of channel-wise nor- 501
+malization incurs degradation across all classification rates, 502
+indicating that introduction of this scheme not only im- 503
+proves the stability of performances for our proposed deep 504
+framework, but also maintains a better inter-channel bal- 505
+ance and scale alignment towards the quality improvement 506
+of input EEG trials; (ii) removal of TSDL incurs the largest 507
+degradation (15.1%→12.8% Top-1 on randomized trials, 508
+and 50.3%→45.4% Top-5 on deterministic trials), validat- 509
+ing that TSDL is playing a pivotal role in classification 510
+of EEG trials, and temporal-spatial dynamics represents 511
+the largest proportion in characterizing EEG trials; (iii) 512
+removal of SpecRL consistently reduces all classification 513
+rates across both randomized and deterministic trials, con- 514
+firming its effectiveness in representational learning across 515
+Wavelets decomposition of multi-resolution spectrum be- 516
+yond local constraints; (iv) although removal of FIM incurs 517
+the smallest degradation in classification rates, its role in 518
+coordinating all different modules inside our proposed deep 519
+framework is still positive and important, validating that 520
+learning from cross-branch interactions helps sustaining the 521
+discriminative features and hence finalizing the overall clas- 522
+sification performances.523
+4.3.2. Effect of Channel-wise Normalization524
+To validate our channel-wise normalization (Section 3.1), 525
+we illustrate the experimental results in Top-1 rates 526
+achieved by all compared models in Figure 4, where Raw 527
+represents unnormalized. As seen, the majority of com- 528
+pared models (8 out of 11) achieved better rates with nor- 529
+malization. Notably, EEGNet improved from 7.0% to 7.4%, 530
+while our proposed TS-SpectrumNet saw the largest gain, 531
+jumping from 14.7% to 15.1%. These results confirm that 532
+channel-wise normalization is a crucial and beneficial pre- 533
+processing step, effectively aiding classifiers in focusing on 534
+relevant EEG patterns by reducing noise interference.535
+4.3.3. Effect of convolution kernel size536
+To assess the effect of multi-scale convolutions for the 537
+temporal-spatial dynamics learning module, we carried out 538Scheme Kernel 1 Kernel 2 Kernel 3 Accuracy
+Scheme 15×5 3×3 1×112.1%
+Scheme 264×64 32×32 16×1612.9%
+Scheme 31×64 1×32 1×1614.5%
+Scheme 41×255 1×127 1×6315.1%
+Table 3. Test results on effect of kernel sizes.
+51015 Raw
+Normalized
+Figure 4. Results of removing the effects of artifacts on classifica-
+tion.
+ablation experiments with varying combination of kernel539
+sizes and list their results in Table 3. From these results,540
+the following observations can be made: (i) Combination541
+of smaller kernel sizes underperforms as their receptive field542
+is limited to capturing short-term dependencies, leading to543
+insufficient capture of long-term temporal dynamics across544
+EEG sequences along the time dimension. (ii) Larger ker-545
+nels, such as64×64,32×32,16×16, tend to cover a546
+broader area and hence are capable of capturing more tem-547
+poral information. However, due to the fact that we need548
+to simultaneously learn both spatial and temporal dynamics549
+and their interaction remains crucial, a lack of strong focus550
+on temporal dynamics could create a negative impact upon551
+their performances. (iii) The combination of1×64,1×32,552
+1×16delivered significant performance improvement, val-553
+idating that their structural emphasis upon the temporal di-554
+mension played positive roles. (iv) Further increasing the555
+kernel sizes along the temporal dimension, as shown by the556
+final row in Table 3, rendered additional improvement, de-557
+livering the best performance. Other combinations beyond558
+this optimal point, however, started to produce negative im-559
+pacts upon their performances.560
+4.3.4. Effect of wavelets561
+To assess the effect of multi-resolution decomposition562
+for the proposed spectrum representational learning mod-563
+ule, we carried out ablation experiments over a range of564
+widely adopted wavelets, including Reverse Biorthogonal,565
+Biorthogonal, Coiflet, Haar and Symlet. The results, shown566
+in Figure 5, reveal significant differences in classification567
+accuracy among these wavelet kernels. Simpler wavelet568
+kernels, such as Reverse Biorthogonal and Biorthogonal,569
+perform poorly in handling complex signals, while the Haar570
+wavelet, despite its computational efficiency, is limited in571
+7REDACTED
+
+---PAGE BREAK---
+
+Teverse BiorthogonalBiorthogonalCoifletHaar Accuracy(%)
+13.6 13.8 14 14.2 14.4 14.6 14.8 15 15.2SymletReverse BiorthogonalBiorthogonalCoifletHaarAccuracy(%)Figure 5. Test results on the effect of Wavelets.
+processing smooth signals due to its step-like structure, 572
+making it challenging to capture subtle variations in the sig- 573
+nal.574
+In contrast, as shown in Figure 5, the Symlet wavelet ker- 575
+nel performed the best, achieving a classification accuracy 576
+of 15.1%, which is notably higher than the other wavelets. 577
+The advantage of symet lies in its symmetry, which not 578
+only enhances robustness against artifacts but also improves 579
+noise filtering, allowing it to capture key representation 580
+more precisely in complex signal environments. Addition- 581
+ally, the time-frequency localization property of Symlet en- 582
+ables it to effectively capture both high and low-frequency 583
+components, providing better resolution for non-stationary 584
+signals. Overall, the smoothness and spectral characteris- 585
+tics of Symlet make it particularly effective in EEG signal 586
+processing, underscoring the importance of selecting an ap- 587
+propriate wavelet kernel to enhance classification accuracy. 588
+4.3.5. Effect of label cardinality589
+To assess the scalability of our proposed model with respect 590
+to the task granularity, we systematically vary the number 591
+of target classesKand examine how the Top-1 classifica- 592
+tion rates evolve changes as space of labels expands, and 593
+the results are summarized in Table 4. AsKincreases 594
+from1to40, both the compared models, EEGNet and TS- 595
+SpectrumNet, exhibit a smooth drop in Top-1 accuracy, in- 596
+dicating a well-behaved evaluation protocol that reflects the 597
+expected rise in difficulty. Across allK, TS-SpectrumNet 598
+consistently outperforms EEGNet, and the margin widens 599
+with largerK. For example, atK=2, the accuracies are 600
+75.5%vs.50.0%, atK=10they are33.5%vs.17.3%, and 601
+atK=40they are15.1%vs.7.0%. Measured against the 602
+chance rate 1/K=40, i.e. 2.5%, our method reaches about 603
+6 times the chance rate, whereas EEGNet reaches about 604
+2.8 times the chance rate, suggesting that the proposed TS- 605
+SpectrumNet preserves stronger inter-class separability and 606
+generalizes more stably as the number of classes grows.607
+5. Conclusion608
+In this paper, we have reported our latest research on clas- 609
+sifying brain perception of natural images from both the 610
+randomized and deterministic EEG trials with a new deep 611#ClassesMethod#ClassesMethod
+EEGNet Ours EEGNet Ours
+1 - - 21 12.0+0.8 21.1+0.8
+2 50.0+1.3 75.5+3.4 22 11.7+0.1 20.4+0.0
+3 35.1+0.5 62.3+0.0 23 11.2+0.2 19.7+0.1
+4 30.2+1.0 51.8+0.9 24 10.9+0.3 19.2+0.4
+5 24.8+1.0 45.2-1.2 25 10.7+0.5 18.7+0.0
+6 21.8+1.0 41.8+0.2 26 10.5+0.4 18.3+0.2
+7 19.5+0.3 37.6+0.6 27 10.1+1.0 17.9+0.4
+8 17.4+0.3 35.3+0.7 28 9.9+0.7 17.3+1.2
+9 18.2+0.1 34.4-0.1 29 9.7+0.5 17.0+0.7
+10 17.3-0.2 33.5+0.0 30 9.9+0.8 16.6+0.5
+11 17.3+0.3 34.2-0.1 31 9.3+0.6 16.2+0.4
+12 16.6+0.7 31.2+0.7 32 9.1+0.5 15.9+0.1
+13 15.6+0.6 30.4+0.3 33 8.8+0.5 15.8+1.2
+14 15.2+1.0 29.7+0.3 34 8.6+0.4 15.9+0.5
+15 15.7-0.4 28.8-0.2 35 8.6+0.8 15.6+0.9
+16 15.4+0.4 27.3-0.2 36 8.6+0.5 15.6+0.4
+17 14.4-0.4 26.0+0.5 37 8.0+0.8 15.5+0.4
+18 13.9+0.5 24.7-0.6 38 7.6+0.4 15.3+0.4
+19 13.4+1.0 23.0+0.5 39 7.4+0.4 15.1+0.5
+20 12.7+0.3 21.6-0.1 40 7.0+0.6 15.1+0.7
+Table 4. Test results on the effect of artifact removal across the
+number of classes.
+framework, TS-SpectrumNet. From our comparative in-612
+vestigations and experimental analysis, it can be concluded613
+that: (i) all the tested models suffer from significant drops614
+in classification rates from deterministic EEG trials to ran-615
+domized EEG trials, and the maximum classification rate616
+is now pushed forward by our proposed TS-SpectrumNet617
+from the existing maximum rate at 7.0% to the reported rate618
+at 15.1%, indicating that classification of brain responses619
+from randomized EEG trials is indeed challenging. (ii)620
+TS-SpectrumNet achieves state-of-the-art performances on621
+both randomized and deterministic EEG trials, delivering622
+the best Top-1 and Top-5 classification rates in comparison623
+with all the representative existing baselines. (iii) the het-624
+erogeneous behavior across baselines suggests that a single625
+inductive bias may not serve both settings equally well. For626
+example, EEGChannelNet attains only 2.5% on randomized627
+trials but remains the best among all existing models on de-628
+terministic trials (48.1%). These observations highlight the629
+importance of explicitly modeling temporal–spectral struc-630
+ture and interactions, which our proposed leverages to gen-631
+eralize robustly across evaluation protocols.632
+Further research can be identified in three directions, in-633
+cluding: (i) promoting the quality or increasing the level of634
+classifiable information quantity for randomized EEG trials635
+is proved to be important by our investigations in this paper;636
+(ii) multi-modal learning, such as audio/visual stimuli or637
+combination of speech/image etc., may provide additional638
+new solutions; and (iii) knowledge transfer [31] or zero-shot639
+learning [28] across EEG domain and stimuli domain may640
+prove worthwhile for further investigation, as both domains641
+share certain level and type of correlations.642
+8REDACTED
+
+---PAGE BREAK---
+
+References643
+[1] Hamad Ahmed, Ronnie B Wilbur, Hari M Bharadwaj, and 644
+Jeffrey Mark Siskind. Object classification from random- 645
+ized eeg trials. InProceedings of the IEEE/CVF Conference 646
+on Computer Vision and Pattern Recognition, pages 3845– 647
+3854, 2021. 1, 2, 3, 4, 5, 6648
+[2] Yohann Benchetrit, Hubert Banville, and Jean-R ´emi King. 649
+Brain decoding: toward real-time reconstruction of visual 650
+perception.arXiv preprint arXiv:2310.19812, 2023. 1651
+[3] Changde Du, Changying Du, and Huiguang He. Doubly 652
+semi-supervised multimodal adversarial learning for classifi- 653
+cation, generation and retrieval. InInternational Conference 654
+on Multimedia and Expo, pages 13–18, 2019. 1655
+[4] Changde Du, Kaicheng Fu, Jinpeng Li, and Huiguang He. 656
+Decoding visual neural representations by multimodal learn- 657
+ing of brain-visual-linguistic features.IEEE Transactions on 658
+Pattern Analysis and Machine Intelligence, 2023. 2, 3659
+[5] Ahmed Fares, Shenghua Zhong, and Jianmin Jiang. Region 660
+level bi-directional deep learning framework for EEG-based 661
+image classification. InInternational Conference on Bioin- 662
+formatics and Biomedicine, pages 368–373, 2018. 1663
+[6] Alessandro T Gifford, Kshitij Dwivedi, Gemma Roig, and 664
+Radoslaw M Cichy. A large and rich eeg dataset for modeling 665
+human visual object recognition.NeuroImage, 264:119754, 666
+2022. 2, 3, 6667
+[7] Sepp Hochreiter and J ¨urgen Schmidhuber. Long short-term 668
+memory.Neural Computation, 9(8):1735–1780, 1997. 2, 6 669
+[8] Yu-Mei Huang, Hui-Nien Hung, and Vincent S. Tseng. 670
+Privacy-preserving attention-weighted multi-source domain 671
+adaptation for EEG motor imagery. InICASSP, pages 7470– 672
+7474. IEEE, 2024. 1673
+[9] Sunhee Hwang, Kibeom Hong, Guiyoung Son, and Hyeran 674
+Byun. EZSL-GAN: EEG-based zero-shot learning approach 675
+using a generative adversarial network. InInternational Win- 676
+ter Conference on Brain-Computer Interface, 2019. 1677
+[10] Vikramaditya Jakkula. Tutorial on support vector machine 678
+(svm).School of EECS, Washington State University, 37 679
+(2.5):3, 2006. 2680
+[11] Aimin Jiang, Shanshan Hou, Yibin Tang, and Yanping Zhu. 681
+Joint spatio-temporal filtering of motion imagery EEG sig- 682
+nals for data alignment in transfer learning. InICASSP, 683
+pages 2235–2239. IEEE, 2024. 1684
+[12] Jianmin Jiang, Ahmed Fares, and Sheng-Hua Zhong. A 685
+brain-media deep framework towards seeing imaginations 686
+inside brains.IEEE Transactions on Multimedia, 23:1454– 687
+1465, 2020. 1688
+[13] Blair Kaneshiro, Marcos Perreau Guimaraes, Hyung-Suk 689
+Kim, Anthony M Norcia, and Patrick Suppes. A represen- 690
+tational similarity analysis of the dynamics of object pro- 691
+cessing using single-trial eeg classification.Plos one, 10(8): 692
+e0135697, 2015. 1693
+[14] Diederik P. Kingma and Jimmy Ba. Adam: A method for 694
+stochastic optimization. In3rd International Conference on 695
+Learning Representations, ICLR 2015, San Diego, CA, USA, 696
+May 7-9, 2015, Conference Track Proceedings, 2015. 6697
+[15] Vernon J Lawhern, Amelia J Solon, Nicholas R Waytowich, 698
+Stephen M Gordon, Chou P Hung, and Brent J Lance. Eeg- 699net: a compact convolutional neural network for eeg-based700
+brain–computer interfaces.Journal of neural engineering,701
+15(5):056013, 2018. 2, 6702
+[16] Donghyun Lee, Yuhang Li, Youngeun Kim, Shiting Xiao,703
+and Priyadarshini Panda. Spiking transformer with spatial-704
+temporal attention. InProceedings of the IEEE/CVF Confer-705
+ence on Computer Vision and Pattern Recognition (CVPR),706
+2025. 2, 4707
+[17] Ren Li, Jared S Johansen, Hamad Ahmed, Thomas V708
+Ilyevsky, Ronnie B Wilbur, Hari M Bharadwaj, and Jef-709
+frey Mark Siskind. The perils and pitfalls of block design710
+for eeg classification experiments.IEEE Transactions on711
+Pattern Analysis and Machine Intelligence, 43(1):316–333,712
+2021. 1, 2, 6713
+[18] Yitong Li, Kafui Dzirasa, Lawrence Carin, David E Carlson,714
+et al. Targeting eeg/lfp synchrony with neural nets.Advances715
+in Neural Information Processing Systems, 30, 2017. 2, 6716
+[19] Pranay Mukherjee, Abhirup Das, Ayan Kumar Bhunia, and717
+Partha Pratim Roy. Cogni-Net: Cognitive feature learning718
+through deep visual perception. InInternational Conference719
+on Image Processing, pages 4539–4543, 2019. 1720
+[20] Simone Palazzo, Concetto Spampinato, Isaak Kavasidis,721
+Daniela Giordano, Joseph Schmidt, and Mubarak Shah. De-722
+coding brain representations by multimodal learning of neu-723
+ral activity and visual features.IEEE Transactions on Pat-724
+tern Analysis and Machine Intelligence, 43(11):3833–3849,725
+2020. 1, 2, 6726
+[21] Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, San-727
+jeev Satheesh, Sean Ma, Zhiheng Huang, Andrej Karpathy,728
+Aditya Khosla, Michael Bernstein, et al. Imagenet large729
+scale visual recognition challenge.International journal of730
+computer vision, 115:211–252, 2015. 1731
+[22] G Siddhad, A Gupta, D P Dogra, et al. Efficacy of trans-732
+former networks for classification of eeg data.Biomedical733
+Signal Processing and Control, 87:105488, 2024. 2734
+[23] Yonghao Song, Qingqing Zheng, Bingchuan Liu, and Xi-735
+aorong Gao. Eeg conformer: Convolutional transformer for736
+eeg decoding and visualization.IEEE Transactions on Neu-737
+ral Systems and Rehabilitation Engineering, 31:710–719,738
+2022. 2, 5, 6739
+[24] Yonghao Song, Bingchuan Liu, Xiang Li, Nanlin Shi, Yijun740
+Wang, and Xiaorong Gao. Decoding natural images from741
+eeg for object recognition.arXiv preprint arXiv:2308.13234,742
+2024. 2, 3, 5, 6743
+[25] Concetto Spampinato, Simone Palazzo, Isaak Kavasidis,744
+Daniela Giordano, Nasim Souly, and Mubarak Shah. Deep745
+learning human mind for automated visual classification. In746
+Proceedings of the IEEE conference on computer vision and747
+pattern recognition, pages 6809–6817, 2017. 1, 4, 5, 6748
+[26] Chen Tang, Xinzhu Ma, Encheng Su, Xiufeng Song, Xi-749
+aohong Liu, Wei-Hong Li, Lei Bai, Wanli Ouyang, and750
+Xiangyu Yue. UniSTD: Towards unified spatio-temporal751
+learning across diverse disciplines. InProceedings of the752
+IEEE/CVF Conference on Computer Vision and Pattern753
+Recognition (CVPR), 2025. 2754
+[27] Hind Taud and Jean-Franccois Mas. Multilayer perceptron755
+(mlp).Geomatic approaches for modeling land change sce-756
+narios, pages 451–455, 2018. 2757
+9REDACTED
+
+---PAGE BREAK---
+
+[28] Jinghua Wang and Jianmin Jiang. Learning across tasks for 758
+zero-shot domain adaptation from a single source domain. 759
+IEEE Transactions on Pattern Analysis and Machine Intelli- 760
+gence, 44(10):6264–6279, 2021. 8761
+[29] Mojtaba Yavandhasani and Foad Ghaderi. Visual ob- 762
+ject recognition from single-trial eeg signals using machine 763
+learning wrapper techniques.IEEE Transactions on Biomed- 764
+ical Engineering, 69(7):2176–2183, 2021. 1765
+[30] Shichao Zhang. Challenges in knn classification.IEEE 766
+Transactions on Knowledge and Data Engineering, 34(10): 767
+4663–4675, 2021. 2768
+[31] Yunqing Zhao, Chao Du, Milad Abdollahzadeh, Tianyu 769
+Pang, Min Lin, Shuicheng Yan, and Ngai-Man Cheung. Ex- 770
+ploring incompatible knowledge transfer in few-shot image 771
+generation. InProceedings of the IEEE/CVF Conference 772
+on Computer Vision and Pattern Recognition, pages 7380– 773
+7391, 2023. 8774
+[32] Xiao Zheng, Wanzhong Chen, Yang You, Yun Jiang, 775
+Mingyang Li, and Tao Zhang. Ensemble deep learning for 776
+automated visual classification using eeg signals.Pattern 777
+Recognition, 102:107147, 2020. 1778
+[33] Saisai Zhong, Yadong Liu, Zongtan Zhou, and Dewen 779
+Hu. ELSTM-based visual decoding from singal-trial EEG 780
+recording. InInternational Conference on Software Engi- 781
+neering and Service Science, pages 1139–1142, 2018. 1782
+10REDACTED
+
+---PAGE BREAK---
+
+

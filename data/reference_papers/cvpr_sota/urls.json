@@ -1,0 +1,10 @@
+{
+  "papers": [
+    {"title": "EEG-ImageNet: An Electroencephalogram Dataset and Benchmarks", "url": "https://arxiv.org/pdf/2409.16239.pdf"},
+    {"title": "Object classification from randomized EEG trials", "url": "https://arxiv.org/pdf/2205.11674.pdf"},
+    {"title": "Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model", "url": "https://arxiv.org/pdf/2401.09417.pdf"},
+    {"title": "Hierarchical Spatio-Temporal State-Space Modeling for fMRI Analysis", "url": "https://arxiv.org/pdf/2408.13456.pdf"},
+    {"title": "NeuroBOLT: Neuro-to-BOLD Transformer for EEG-to-fMRI Synthesis", "url": "https://arxiv.org/pdf/2406.01242.pdf"},
+    {"title": "NT-ViT: Neural Transcoding Vision Transformer for EEG-to-fMRI", "url": "https://arxiv.org/pdf/2409.04356.pdf"}
+  ]
+}

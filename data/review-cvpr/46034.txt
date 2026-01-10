@@ -1,0 +1,808 @@
+Modeling Spatiotemporal Neural Frames for High Resolution Brain Dynamics
+Anonymous CVPR submission
+Vision 
+Stimuli
+Video
+Recon .
+EEG
+Collect
+timefMRI Translation
+fMRI InterRecontime
+Figure 1. This paper reconstructs dynamic fMRI frames with high spatial detail and temporal coherence from EEG. We further introduce
+intermediate frame reconstruction (InterRecon), and use visual decoding as a downstream task to evaluate high-level semantic preservation.
+Abstract
+Capturing dynamic spatiotemporal neural activity is essen- 001
+tial for understanding large-scale brain mechanisms. Func- 002
+tional magnetic resonance imaging (fMRI) provides high- 003
+resolution cortical representations that form a strong ba- 004
+sis for characterizing fine-grained brain activity patterns. 005
+The high acquisition cost of fMRI limits large-scale ap- 006
+plications, therefore making high-quality fMRI reconstruc- 007
+tion a crucial task. Electroencephalography (EEG) of- 008
+fers millisecond-level temporal cues that complement fMRI. 009
+Leveraging this complementarity, we present an EEG- 010
+conditioned framework for reconstructing dynamic fMRI as 011
+continuous neural sequences with high spatial fidelity and 012
+strong temporal coherence at the cortical-vertex level. To 013
+address sampling irregularities common in real fMRI acqui- 014
+sitions, we incorporate a null-space intermediate-frame re- 015
+construction, enabling measurement-consistent completion 016
+of arbitrary intermediate frames and improving sequence 017
+continuity and practical applicability. Experiments on the 018
+CineBrain dataset demonstrate superior voxel-wise recon- 019
+struction quality and robust temporal consistency across 020
+whole-brain and functionally specific regions. The recon- 021
+structed fMRI also preserves essential functional informa- 022
+tion, supporting downstream visual decoding tasks. This 023
+work provides a new pathway for estimating high-resolution 024
+fMRI dynamics from EEG and advances multimodal neu- 025
+roimaging toward more dynamic brain activity modeling. 0261. Introduction027
+Understanding brain dynamics requires capturing both high028
+spatial detail and temporal continuity [1]. Functional mag-029
+netic resonance imaging (fMRI) measures neural activ-030
+ity through blood-oxygen-level–dependent (BOLD) signals031
+and provides fine-grained spatial resolution for studying032
+cognition and brain function [2, 3]. Each fMRI frame re-033
+flects an ongoing state of brain activity, and together these034
+frames form a continuous temporal sequence. The high ac-035
+quisition cost of fMRI limits large-scale applications, there-036
+fore making high-quality fMRI reconstruction a crucial037
+task. However, conventional analyses and many reconstruc-038
+tion methods treat frames independently [4–6], overlook-039
+ing the rich temporal dependencies that govern how neural040
+patterns emerge, evolve, and interact. Modeling these dy-041
+namics is inherently challenging, as it requires reconstruct-042
+ing high-dimensional spatiotemporal sequences that remain043
+both temporally coherent and spatially detailed.044
+This raises a central question:how can we reconstruct045
+fMRI frames that are both temporally coherent and spa-046
+tially detailed, capturing the brain’s continuous dynamics047
+rather than isolated snapshots?To address this challenge,048
+we turn to electroencephalography (EEG), which captures049
+neural activity with millisecond temporal resolution [7],050
+complementing the spatial precision of fMRI. By leverag-051
+ing EEG as a conditioning signal, we can guide the recon-052
+struction of dynamic fMRI frames that preserve temporal053
+continuity across frames. Beyond reconstruction fidelity,054
+1REDACTED
+REDACTED
+
+---PAGE BREAK---
+
+a second critical question arises:how to evaluate the re- 055
+constructed fMRI, and more importantly, whether it can 056
+support meaningful downstream applications.057
+Existing approaches only partially address these chal- 058
+lenges. Methods focusing on temporal resolution, such as 059
+ROI-based models [8] capture dynamic trajectories but op- 060
+erate at coarse spatial granularity, limiting interpretability 061
+for cortical mapping. Methods focusing on spatial res- 062
+olution, including voxel-level renconstruction [5, 9, 10] 063
+and vertex-based fMRI translation models [6] preserve spa- 064
+tial detail but lack temporal coherence, leading to frame- 065
+wise artifacts and biologically implausible inconsistencies. 066
+Moreover, conventional evaluation paradigms rely on voxel 067
+or vertex level metrics such as MSE, SSIM [11], and 068
+PSNR [12], which cannot assess whether the reconstructed 069
+fMRI encodes meaningful neural representations usable for 070
+higher-level tasks.071
+To overcome these limitations, we propose a diffusion- 072
+transformer-based framework for EEG-conditioned fMRI 073
+reconstruction that addresses both temporal coherence and 074
+spatial resolution, as shown in Figure 1. Our key insight 075
+is to model brain activity as evolving spatiotemporal neural 076
+frames rather than independent snapshots, jointly capturing 077
+vertex-level spatial detail and temporal continuity within a 078
+diffusion-based generative process. Critically, we introduce 079
+a null-space constrained sampling mechanism that enables 080
+intermediate frame reconstruction (InterRecon) without re- 081
+training. InterRecon serves two important purposes. First, it 082
+provides an intrinsic evaluation of temporal consistency, al- 083
+lowing us to assess whether the model can generate physio- 084
+logically plausible transitions between known fMRI frames; 085
+Second, it addresses practical needs in real fMRI data pro- 086
+cessing, where missing or corrupted frames often occur dur- 087
+ing acquisition and interpolation is routinely required dur- 088
+ing preprocessing [13]. Beyond reconstruction metrics, we 089
+validate functional plausibility through downstream visual 090
+decoding task, ensuring the reconstructed fMRI preserves 091
+task-relevant neural representations.092
+We demonstrate that this framework achieves both goals: 093
+reconstructing temporally coherent fMRI frames with high 094
+spatial fidelity while preserving functional information val- 095
+idated through downstream decoding tasks. Our contribu- 096
+tions are threefold:097
+• We formulate EEG-to-fMRI reconstruction as a spa- 098
+tiotemporal pattern recognition and generation task, 099
+where the goal is to identify task-relevant neural dy- 100
+namics from EEG and reconstruct corresponding fMRI 101
+frames. We introduce a diffusion transformer framework 102
+that reconstructs full fMRI sequences at vertex-level cor- 103
+tical resolution while explicitly modeling temporal de- 104
+pendencies and cortical spatial geometry to produce co- 105
+herent and physiologically consistent representations.106
+• We develop a null-space constrained sampling mecha- 107nism to reconstruct intermediate frames at arbitrary tem-108
+poral positions without retraining, offering practical util-109
+ity in real fMRI processing scenarios.110
+• We conduct a comprehensive evaluation of the recon-111
+structed fMRI, assessing quantitative metrics such as112
+voxel-level fidelity, temporal coherence, and structural113
+correspondence, as well as functional validity through a114
+downstream visual decoding task.115
+2. Related Work116
+2.1. EEG-to-fMRI Translation117
+EEG-to-fMRI translation methods can be divided into ROI-118
+level sequence modeling and voxel or surface-level recon-119
+struction. ROI-based methods such as NeuroBOLT [8] re-120
+construct fMRI sequences at the parcel level. These meth-121
+ods naturally capture temporal continuity across frames but122
+lose spatial precision because parcellation removes fine cor-123
+tical detail. V oxel-level or cortical-level approaches, such124
+as CNN TC [9], CNN TAG [5], adversarial models includ-125
+ing E2fGAN and E2fNet [10], and CATD [6] operate in126
+volumetric or cortical space. They achieve higher spatial127
+fidelity but typically reconstruct each fMRI frame indepen-128
+dently. As a result, these methods lack explicit modeling of129
+temporal coherence across the sequence.130
+Evaluation protocols follow the same pattern. ROI-level131
+methods mainly report correlation-based metrics between132
+predicted and ground-truth time series. V oxel-level meth-133
+ods commonly rely on image reconstruction metrics such as134
+MSE, correlation, SSIM, and PSNR. These metrics reflect135
+reconstruction fidelity but do not reveal whether the recon-136
+structed fMRI contains functional information that can sup-137
+port downstream applications such as intermediate-frame138
+completion or neural decoding.139
+Our work addresses these gaps. We introduce an EEG-140
+conditioned diffusion framework that models spatial detail141
+and temporal consistency jointly at vertex-level resolution.142
+We further incorporate a null space-based strategy that en-143
+ables measurement-consistent reconstruction of intermedi-144
+ate frames without retraining. More importantly, we evalu-145
+ate whether the reconstructed fMRI preserves task-relevant146
+neural representations that support downstream functional147
+applications.148
+2.2. Diffusion Models149
+Denoising Diffusion Probabilistic Models (DDPMs) [14,150
+15] have demonstrated strong capabilities in modeling com-151
+plex data distributions, achieving remarkable success in im-152
+age generation [16]. Over time, diffusion models have153
+evolved into a flexible probabilistic modeling framework154
+whose iterative denoising process naturally captures multi-155
+scale spatial structure and complex data manifolds while of-156
+fering stable training dynamics. Subsequent works, such157
+2REDACTED
+
+---PAGE BREAK---
+
+as Diffusion Transformers (DiT), have further scaled up 158
+diffusion architectures, enabling a new wave of powerful 159
+generative vision models [17, 18]. This expansion has re- 160
+vealed diffusion’s strong capacity for high-dimensional se- 161
+quence modeling, controllable generation, and modality- 162
+conditioned synthesis. Beyond visual synthesis, diffusion 163
+models have also been extended to cross-modal distribu- 164
+tion modeling, including brain-to-vision generation from 165
+fMRI signals [19–21], reflecting their suitability for learn- 166
+ing structured relationships across heterogeneous data do- 167
+mains.168
+3. Method169
+3.1. Task Formulation170
+In this study, we aim to construct a generative framework 171
+that learns to reconstruct fMRI frames from EEG measure- 172
+ments.173
+LetX={x 1,x2, . . . ,x K}denote the target fMRI se- 174
+quence represented on the cortical surface (fsLR), with 175
+X∈RK×N v, whereKis the number of fMRI frames and 176
+each framex k∈RNvcaptures cortical activation across 177
+Nvvertices. LetS∈RC×T sdenote the temporally aligned 178
+EEG recording, whereCis the number of electrodes and 179
+Tsis the total number of EEG samples. Temporal align- 180
+ment accounts for hemodynamic response delays following 181
+standard preprocessing protocols.182
+Sequence-Level fMRI Organization.We denote a contin- 183
+uous fMRI window of lengthK was184
+Xk0:k0+Kw−1∈RKw×Nv,185
+where eachx kis a vertex-level cortical map. Unlike prior 186
+frame-by-frame approaches, we jointly model the entire 187
+Kw-frame sequence to capture temporal continuity.188
+Sequence-Level EEG Conditioning.We condition the 189
+generator on a sequence of EEG windows190
+Sk0:k0+Kw−1={s k0, . . . ,s k0+Kw−1},191
+where each fMRI framex kis temporally aligned with a cor- 192
+responding EEG windows k∈RC×W, andWis the win- 193
+dow length in EEG samples.194
+Our goal is to learn a conditional generative priorp θ(X| 195
+S),that supports two tasks under a unified formulation:196
+1.EEG-to-fMRI translation.Given an aligned EEG seg- 197
+ment{s k0, . . . ,s k0+Kw−1}, reconstruct the correspond- 198
+ing vertex-level fMRI sub-sequence:199
+ˆXk0:k0+Kw−1∼pθ 
+Xk0:k0+Kw−1|sk0:k0+Kw−1
+. 200
+2.EEG-guided intermediate fMRI frame reconstruc- 201
+tion (InterRecon).For temporal consistency evalua- 202
+tion, we use sparse anchor framesy={x k−∆,xk+∆} 203(∆≥1) along with their corresponding EEG win-204
+dows{s k−∆, . . . ,s k+∆}to constrain the reconstruction205
+of intermediate frames at arbitrary query indicesK∗=206
+{k(1), . . . , k(M)} ⊂(k−∆, k+ ∆):207
+ˆXK∗∼pθ 
+XK∗{sk−∆, . . . ,s k+∆},y
+208
+3.2. Denoising Null-Space Diffusion Transformer209
+We formulate EEG-to-fMRI reconstruction as a conditional210
+denoising diffusion transformer process that jointly mod-211
+els spatiotemporal fMRI sequences. Our framework builds212
+upon the diffusion transformer architecture (Figure 2-a)),213
+adapted to handle vertex-level cortical representations with214
+sequence-level EEG conditioning, as shown in Figure 2.215
+Spatiotemporal Tokenization and EEG Conditioning.216
+To jointly model theK w-frame fMRI sequence, we tok-217
+enize the spatiotemporal volume into(K w×N v)vertex-218
+level tokens, where each vertex at each time frame consti-219
+tutes an individual token with temporal positional encoding220
+to distinguish frames. EEG features are extracted for the221
+entireK w-frame window using a temporal encoderf ϕ:222
+hEEG=fϕ(Sk0:k0+Kw−1),223
+producing a sequence-level representation. During reverse224
+diffusion, each vertex token is conditioned onh EEGthrough225
+cross-attention mechanisms at every transformer layer, en-226
+abling the model to capture temporal dependencies guided227
+by the EEG signal.228
+Diffusion Forward Process.The forward diffusion process229
+gradually perturbs fMRI framesx(0)overNtimesteps by230
+injecting Gaussian noise according to a variance schedule231
+{βn}N
+n=1:232
+q(x(n)|x(n−1)) =N(x(n);p
+1−β nx(n−1), βnI),(1)233
+which equivalently samplesx(n)=√1−β nx(n−1)+234√βnϵwithϵ∼ N(0,I). By the reparameterization prop-235
+erty, we can directly sample noisy states from the clean data236
+at any diffusion stepn:237
+q(x(n)|x(0)) =N(x(n);√¯αnx(0),(1−¯α n)I),(2)238
+whereα n= 1−β nand¯α n=Qn
+i=1αi.239
+Conditional Diffusion Sampling and Training for Trans-240
+lation.The reverse process learns to denoise by training241
+a neural networkϵ θ(x(n), n,h EEG)to predict the injected242
+noise, conditioned on EEG features. The model is opti-243
+mized via the denoising score matching objective:244
+Ldiff=En,x,ϵh
+∥ϵ−ϵ θ(x(n), n,h EEG)∥2i
+,(3)245
+wherex(n)=√¯αnx(0)+√1−¯α nϵwithϵ∼ N(0,I).246
+During inference, the reverse process recoversx(n−1)from247
+3REDACTED
+
+---PAGE BREAK---
+
+EEG Encoder
+<latexit sha1_base64="agum7iPxQTxv7XgHXxGkT4aNrpc=">AAAB8XicbVDLSgMxFL1TX7W+qi7dBIvgqsyIVJdFNy4r2Ae2Q8mkmTY0yQxJRhiG/oUbF4q49W/c+Tdm2llo64HA4Zx7ybkniDnTxnW/ndLa+sbmVnm7srO7t39QPTzq6ChRhLZJxCPVC7CmnEnaNsxw2osVxSLgtBtMb3O/+0SVZpF8MGlMfYHHkoWMYGOlx4HAZhKEKK0MqzW37s6BVolXkBoUaA2rX4NRRBJBpSEca9333Nj4GVaGEU5nlUGiaYzJFI9p31KJBdV+Nk88Q2dWGaEwUvZJg+bq740MC61TEdjJPKFe9nLxP6+fmPDaz5iME0MlWXwUJhyZCOXnoxFTlBieWoKJYjYrIhOsMDG2pLwEb/nkVdK5qHuNeuP+sta8Keoowwmcwjl4cAVNuIMWtIGAhGd4hTdHOy/Ou/OxGC05xc4x/IHz+QPJU5Ba</latexit>y
+Multi -Head
+Cross -Attention
+Layer NormMulti -Head
+Self-AttentionLayer NormPointwise
+Feedforward
+Layer NormNxBlocksLayer NormLinear &Reshape
+Input Tokens<latexit sha1_base64="N8vwyasPcsKt+8PkoIZbwtsSi84=">AAAC1HicjVHLTsJAFD3UFz6punTTSE1ckZYFuiS6cYmJPBJA0pYBGvpKOzUSdGXc+gNu9ZuMf6B/4Z2xJCoxOk3bM+eec2fuvXbkuQk3jNecsrC4tLySX11b39jcKqjbO40kTGOH1Z3QC+OWbSXMcwNW5y73WCuKmeXbHmva41MRb16xOHHD4IJPItb1rWHgDlzH4kT11IKud3yLj+yBdn3Jdb2nFo2SIZc2D8wMFJGtWqi+oIM+QjhI4YMhACfswUJCTxsmDETEdTElLibkyjjDLdbIm5KKkcIidkzfIe3aGRvQXuRMpNuhUzx6Y3JqOCBPSLqYsDhNk/FUZhbsb7mnMqe424T+dpbLJ5ZjROxfvpnyvz5RC8cAx7IGl2qKJCOqc7IsqeyKuLn2pSpOGSLiBO5TPCbsSOesz5r0JLJ20VtLxt+kUrBi72TaFO/iljRg8+c450GjXDIrpcp5uVg9yUadxx72cUjzPEIVZ6ihLmf+iCc8Kw3lRrlT7j+lSi7z7OLbUh4+AHIBlJM=</latexit>
+xt
+<latexit sha1_base64="ea8HsKwH6L2kfzd8fP22aZF6nnM=">AAAB8HicbVDLSgMxFL1TX7W+qi7dBIvgqsyIVJdFNy4r2Ie0Q8mkmTY0yQxJRhiGfoUbF4q49XPc+Tdm2llo64HA4Zx7ybkniDnTxnW/ndLa+sbmVnm7srO7t39QPTzq6ChRhLZJxCPVC7CmnEnaNsxw2osVxSLgtBtMb3O/+0SVZpF8MGlMfYHHkoWMYGOlx4HAZhKEKB1Wa27dnQOtEq8gNSjQGla/BqOIJIJKQzjWuu+5sfEzrAwjnM4qg0TTGJMpHtO+pRILqv1sHniGzqwyQmGk7JMGzdXfGxkWWqcisJN5QL3s5eJ/Xj8x4bWfMRknhkqy+ChMODIRyq9HI6YoMTy1BBPFbFZEJlhhYmxHFVuCt3zyKulc1L1GvXF/WWveFHWU4QRO4Rw8uIIm3EEL2kBAwDO8wpujnBfn3flYjJacYucY/sD5/AGR0JBG</latexit>y<latexit sha1_base64="BoKETIALim+D5dA2+TdP7JxnIP0=">AAAC2HicjVHLTsJAFD3UF+ILZemmEUzcSFoW6JLoxiUm8oiApC0DNPSVdmokhMSdcesPuNUvMv6B/oV3xpKoxOg0bc+ce8+ZufeagWNHXNNeU8rC4tLySno1s7a+sbmV3d6pR34cWqxm+Y4fNk0jYo7tsRq3ucOaQcgM13RYwxydinjjmoWR7XsXfBywjmsMPLtvWwYnqpvNFQpt1+BDs6/eXE34oT4tFLrZvFbU5FLngZ6APJJV9bMvaKMHHxZiuGDwwAk7MBDR04IODQFxHUyICwnZMs4wRYa0MWUxyjCIHdF3QLtWwnq0F56RVFt0ikNvSEoV+6TxKS8kLE5TZTyWzoL9zXsiPcXdxvQ3Ey+XWI4hsX/pZpn/1YlaOPo4ljXYVFMgGVGdlbjEsivi5uqXqjg5BMQJ3KN4SNiSylmfVamJZO2it4aMv8lMwYq9leTGeBe3pAHrP8c5D+qlol4uls9L+cpJMuo0drGHA5rnESo4QxU18h7jEU94Vi6VW+VOuf9MVVKJJodvS3n4AE0klhE=</latexit>
+xt 1replace
+EEG
+a)Diffusion Transformer with Cross -Attention b)Null-space SamplingTranslation InterRecon<latexit sha1_base64="r8hSxCroPXhhCTLWOsJv74vw9/g=">AAAB8HicbVDLSgNBEOyNrxhfUY9eBoPgKeyKRI9BLx4jmIckS5idzCZD5rHMzAphyVd48aCIVz/Hm3/jJNmDJhY0FFXddHdFCWfG+v63V1hb39jcKm6Xdnb39g/Kh0cto1JNaJMornQnwoZyJmnTMstpJ9EUi4jTdjS+nfntJ6oNU/LBThIaCjyULGYEWyc99iI2VAlPTb9c8av+HGiVBDmpQI5Gv/zVGyiSCiot4diYbuAnNsywtoxwOi31UkMTTMZ4SLuOSiyoCbP5wVN05pQBipV2JS2aq78nMiyMmYjIdQpsR2bZm4n/ed3UxtdhxmSSWirJYlGccmQVmn2PBkxTYvnEEUw0c7ciMsIaE+syKrkQguWXV0nrohrUqrX7y0r9Jo+jCCdwCucQwBXU4Q4a0AQCAp7hFd487b14797HorXg5TPH8Afe5w8akJCg</latexit>/circleplusdisplay
+<latexit sha1_base64="r8hSxCroPXhhCTLWOsJv74vw9/g=">AAAB8HicbVDLSgNBEOyNrxhfUY9eBoPgKeyKRI9BLx4jmIckS5idzCZD5rHMzAphyVd48aCIVz/Hm3/jJNmDJhY0FFXddHdFCWfG+v63V1hb39jcKm6Xdnb39g/Kh0cto1JNaJMornQnwoZyJmnTMstpJ9EUi4jTdjS+nfntJ6oNU/LBThIaCjyULGYEWyc99iI2VAlPTb9c8av+HGiVBDmpQI5Gv/zVGyiSCiot4diYbuAnNsywtoxwOi31UkMTTMZ4SLuOSiyoCbP5wVN05pQBipV2JS2aq78nMiyMmYjIdQpsR2bZm4n/ed3UxtdhxmSSWirJYlGccmQVmn2PBkxTYvnEEUw0c7ciMsIaE+syKrkQguWXV0nrohrUqrX7y0r9Jo+jCCdwCucQwBXU4Q4a0AQCAp7hFd487b14797HorXg5TPH8Afe5w8akJCg</latexit>/circleplusdisplay
+<latexit sha1_base64="r8hSxCroPXhhCTLWOsJv74vw9/g=">AAAB8HicbVDLSgNBEOyNrxhfUY9eBoPgKeyKRI9BLx4jmIckS5idzCZD5rHMzAphyVd48aCIVz/Hm3/jJNmDJhY0FFXddHdFCWfG+v63V1hb39jcKm6Xdnb39g/Kh0cto1JNaJMornQnwoZyJmnTMstpJ9EUi4jTdjS+nfntJ6oNU/LBThIaCjyULGYEWyc99iI2VAlPTb9c8av+HGiVBDmpQI5Gv/zVGyiSCiot4diYbuAnNsywtoxwOi31UkMTTMZ4SLuOSiyoCbP5wVN05pQBipV2JS2aq78nMiyMmYjIdQpsR2bZm4n/ed3UxtdhxmSSWirJYlGccmQVmn2PBkxTYvnEEUw0c7ciMsIaE+syKrkQguWXV0nrohrUqrX7y0r9Jo+jCCdwCucQwBXU4Q4a0AQCAp7hFd487b14797HorXg5TPH8Afe5w8akJCg</latexit>/circleplusdisplayDecompose
+Diffusion
+SamplingNull-space
+Sampling
+Linear
+<latexit sha1_base64="PlDn7dhylpBJjGZoGW9vQrSjTSc=">AAAC2XicjVHLTsJAFD3UF+ILHzs3jWCCG1JYoEuiG1cGE3kkgKQtAzT0lXZqRMLCnXHrD7jVHzL+gf6Fd8aSqMToNG3PnHvPmbn3Gr5thVzTXhPK3PzC4lJyObWyura+kd7cqoVeFJisanq2FzQMPWS25bIqt7jNGn7AdMewWd0Ynoh4/YoFoeW5F3zks7aj912rZ5k6J6qT3slmW47OB0ZvfD25HOfODibZbCed0fKaXOosKMQgg3hVvPQLWujCg4kIDhhccMI2dIT0NFGABp+4NsbEBYQsGWeYIEXaiLIYZejEDunbp10zZl3aC89Qqk06xaY3IKWKfdJ4lBcQFqepMh5JZ8H+5j2WnuJuI/obsZdDLMeA2L9008z/6kQtHD0cyRosqsmXjKjOjF0i2RVxc/VLVZwcfOIE7lI8IGxK5bTPqtSEsnbRW13G32SmYMXejHMjvItb0oALP8c5C2rFfKGUL50XM+XjeNRJ7GIPOZrnIco4RQVV8r7BI57wrDSVW+VOuf9MVRKxZhvflvLwAQU5lsA=</latexit>
+x(N)<latexit sha1_base64="GHsOVHIgb+3eeTWPKgml/2uif50=">AAAC2XicjVHLTsJAFD3UF+ILHzs3jWCCG9KyQJdENy4xkUcCSNoyQENfaadGJCzcGbf+gFv9IeMf6F94Z6yJSoxO0/bMufecmXuvGTh2xDXtJaXMzS8sLqWXMyura+sb2c2teuTHocVqlu/4YdM0IubYHqtxmzusGYTMcE2HNczRiYg3LlkY2b53zscB67jGwLP7tmVworrZnXy+7Rp8aPYnV9OLScE7mObz3WxOK2pyqbNAT0AOyar62We00YMPCzFcMHjghB0YiOhpQYeGgLgOJsSFhGwZZ5giQ9qYshhlGMSO6DugXSthPdoLz0iqLTrFoTckpYp90viUFxIWp6kyHktnwf7mPZGe4m5j+puJl0ssx5DYv3Sfmf/ViVo4+jiSNdhUUyAZUZ2VuMSyK+Lm6peqODkExAnco3hI2JLKzz6rUhPJ2kVvDRl/lZmCFXsryY3xJm5JA9Z/jnMW1EtFvVwsn5VyleNk1GnsYg8FmuchKjhFFTXyvsYDHvGktJQb5Va5+0hVUolmG9+Wcv8OUbmW4A==</latexit>
+x(n)<latexit sha1_base64="3V9veCLuCBCjkWUMFayBkIDno58=">AAAC23icjVHLSsNAFD3GV31XBTdugo1QF5akC3VZdONSwapQa5nEaQ3mRTIRJXblTtz6A271f8Q/0L/wzjiCD0QnJDlz7j1n5t7rJoGfCdt+HjAGh4ZHRktj4xOTU9Mz5dm5/SzOU483vTiI00OXZTzwI94Uvgj4YZJyFroBP3DPtmT84JynmR9He+Iy4e2Q9SK/63tMENUpL1jWUcjEqdstLvrHRTVadVb6ltUpV+yarZb5EzgaVKDXTlx+whFOEMNDjhAcEQThAAwZPS04sJEQ10ZBXErIV3GOPsZJm1MWpwxG7Bl9e7RraTaivfTMlNqjUwJ6U1KaWCZNTHkpYXmaqeK5cpbsb96F8pR3u6S/q71CYgVOif1L95H5X52sRaCLDVWDTzUlipHVedolV12RNzc/VSXIISFO4hOKp4Q9pfzos6k0mapd9pap+IvKlKzcezo3x6u8JQ3Y+T7On2C/XnPWamu79UpjU4+6hEUsoUrzXEcD29hBk7yvcI8HPBpt49q4MW7fU40BrZnHl2XcvQGKo5dS</latexit>
+x(n→1)<latexit sha1_base64="neOC1lLlHyCX9xooPUymTtZxvR8=">AAAC2XicjVHLTsJAFD3UF+ILHzs3jWCCG9KyQJdENy4xkUcCSNoyQENfaadGJCzcGbf+gFv9IeMf6F94Z6yJSoxO0/bMufecmXuvGTh2xDXtJaXMzS8sLqWXMyura+sb2c2teuTHocVqlu/4YdM0IubYHqtxmzusGYTMcE2HNczRiYg3LlkY2b53zscB67jGwLP7tmVworrZnXy+7Rp8aPYnV9OLSUE7mObz3WxOK2pyqbNAT0AOyar62We00YMPCzFcMHjghB0YiOhpQYeGgLgOJsSFhGwZZ5giQ9qYshhlGMSO6DugXSthPdoLz0iqLTrFoTckpYp90viUFxIWp6kyHktnwf7mPZGe4m5j+puJl0ssx5DYv3Sfmf/ViVo4+jiSNdhUUyAZUZ2VuMSyK+Lm6peqODkExAnco3hI2JLKzz6rUhPJ2kVvDRl/lZmCFXsryY3xJm5JA9Z/jnMW1EtFvVwsn5VyleNk1GnsYg8FmuchKjhFFTXyvsYDHvGktJQb5Va5+0hVUolmG9+Wcv8OvXKWog==</latexit>
+x(0)
+<latexit sha1_base64="GHsOVHIgb+3eeTWPKgml/2uif50=">AAAC2XicjVHLTsJAFD3UF+ILHzs3jWCCG9KyQJdENy4xkUcCSNoyQENfaadGJCzcGbf+gFv9IeMf6F94Z6yJSoxO0/bMufecmXuvGTh2xDXtJaXMzS8sLqWXMyura+sb2c2teuTHocVqlu/4YdM0IubYHqtxmzusGYTMcE2HNczRiYg3LlkY2b53zscB67jGwLP7tmVworrZnXy+7Rp8aPYnV9OLScE7mObz3WxOK2pyqbNAT0AOyar62We00YMPCzFcMHjghB0YiOhpQYeGgLgOJsSFhGwZZ5giQ9qYshhlGMSO6DugXSthPdoLz0iqLTrFoTckpYp90viUFxIWp6kyHktnwf7mPZGe4m5j+puJl0ssx5DYv3Sfmf/ViVo4+jiSNdhUUyAZUZ2VuMSyK+Lm6peqODkExAnco3hI2JLKzz6rUhPJ2kVvDRl/lZmCFXsryY3xJm5JA9Z/jnMW1EtFvVwsn5VyleNk1GnsYg8FmuchKjhFFTXyvsYDHvGktJQb5Va5+0hVUolmG9+Wcv8OUbmW4A==</latexit>
+x(n)<latexit sha1_base64="3V9veCLuCBCjkWUMFayBkIDno58=">AAAC23icjVHLSsNAFD3GV31XBTdugo1QF5akC3VZdONSwapQa5nEaQ3mRTIRJXblTtz6A271f8Q/0L/wzjiCD0QnJDlz7j1n5t7rJoGfCdt+HjAGh4ZHRktj4xOTU9Mz5dm5/SzOU483vTiI00OXZTzwI94Uvgj4YZJyFroBP3DPtmT84JynmR9He+Iy4e2Q9SK/63tMENUpL1jWUcjEqdstLvrHRTVadVb6ltUpV+yarZb5EzgaVKDXTlx+whFOEMNDjhAcEQThAAwZPS04sJEQ10ZBXErIV3GOPsZJm1MWpwxG7Bl9e7RraTaivfTMlNqjUwJ6U1KaWCZNTHkpYXmaqeK5cpbsb96F8pR3u6S/q71CYgVOif1L95H5X52sRaCLDVWDTzUlipHVedolV12RNzc/VSXIISFO4hOKp4Q9pfzos6k0mapd9pap+IvKlKzcezo3x6u8JQ3Y+T7On2C/XnPWamu79UpjU4+6hEUsoUrzXEcD29hBk7yvcI8HPBpt49q4MW7fU40BrZnHl2XcvQGKo5dS</latexit>
+x(n→1)<latexit sha1_base64="D4waD5hnBxCWGqRGDvAAnQNyDhY=">AAAC23icjVHLTsJAFD3UF+ILNXHjphFMXJHCAl0S3bjERB4JENKWASb0lXZqJMjKnXHrD7jV/zH+gf6Fd8aSqMToNG3PnHvPmbn3WoHDI2EYryltYXFpeSW9mllb39jcym7v1CM/Dm1Ws33HD5uWGTGHe6wmuHBYMwiZ6VoOa1ijMxlvXLEw4r53KcYB67jmwON9bpuCqG52L992TTG0+pPraXditF3e071pvpvNGQVDLX0eFBOQQ7KqfvYFbfTgw0YMFwweBGEHJiJ6WijCQEBcBxPiQkJcxRmmyJA2pixGGSaxI/oOaNdKWI/20jNSaptOcegNSanjkDQ+5YWE5Wm6isfKWbK/eU+Up7zbmP5W4uUSKzAk9i/dLPO/OlmLQB8nqgZONQWKkdXZiUusuiJvrn+pSpBDQJzEPYqHhG2lnPVZV5pI1S57a6r4m8qUrNzbSW6Md3lLGnDx5zjnQb1UKJYL5YtSrnKajDqNfRzgiOZ5jArOUUWNvG/wiCc8ax3tVrvT7j9TtVSi2cW3pT18AMwQmEI=</latexit>x0|n<latexit sha1_base64="G0Nv+yPsyJpn1P4PASMen39Ks08=">AAAC4XicjVG7TsNAEBzMK7wDlFBYBCSqyKYASgQNZZBIgoRRdL5cyAm/ZJ8RyEpDR4do+QFa+BnEH8BfsHcYiYcQnGV7bnZn7nbXTwKZKcd5HrKGR0bHxisTk1PTM7Nz1fmFVhbnKRdNHgdxeuSzTAQyEk0lVSCOklSw0A9E2z/b0/H2uUgzGUeH6jIRJyE7jWRPcqaI6lSXV70+U4UXMtX3e8XFYNApHC+UXTsarHaqNafumGX/BG4JaihXI64+wUMXMThyhBCIoAgHYMjoOYYLBwlxJyiISwlJExcYYJK0OWUJymDEntH3lHbHJRvRXntmRs3plIDelJQ21kgTU15KWJ9mm3hunDX7m3dhPPXdLunvl14hsQp9Yv/SfWT+V6drUehh29QgqabEMLo6Xrrkpiv65vanqhQ5JMRp3KV4Spgb5UefbaPJTO26t8zEX0ymZvWel7k5XvUtacDu93H+BK2NurtZ3zzYqO3slqOuYAkrWKd5bmEH+2igSd5XuMcDHi1uXVs31u17qjVUahbxZVl3bwVHmw8=</latexit>ˆx0|n
+<latexit sha1_base64="yY2tkY3LIILD2MVNgRE4D6zzAfY=">AAACGHicbZDLSgMxFIYz9VbrbdSlm2ARXNUZkeqy6sZlBXuBTi2ZTKYNTTJDkhHL0Mdw46u4caGI2+58GzPtINr6Q+DjP+eQc34/ZlRpx/myCkvLK6trxfXSxubW9o69u9dUUSIxaeCIRbLtI0UYFaShqWakHUuCuM9Iyx9eZ/XWA5GKRuJOj2LS5agvaEgx0sbq2SceR3rgh/Dy3gtQv08k/HFySB/HvdTxOA2gGPfsslNxpoKL4OZQBrnqPXviBRFOOBEaM6RUx3Vi3U2R1BQzMi55iSIxwkPUJx2DAnGiuun0sDE8Mk4Aw0iaJzScur8nUsSVGnHfdGa7qvlaZv5X6yQ6vOimVMSJJgLPPgoTBnUEs5RgQCXBmo0MICyp2RXiAZIIa5NlyYTgzp+8CM3TilutVG/PyrWrPI4iOACH4Bi44BzUwA2ogwbA4Am8gDfwbj1br9aH9TlrLVj5zD74I2vyDX9yoBc=</latexit>
+A†Ax0|n
+<latexit sha1_base64="G9/GdpNCHvcTz3X7k8hQ9NE/j6Y=">AAACJnicbZDLSsNAFIYnXmu9VV26GSxCXVgSkepGqLrRXQV7gSaWyWTSDp1MwsxELKFP48ZXceOiIuLOR3HSRtTWHwY+/nMOc87vRoxKZZofxtz8wuLScm4lv7q2vrFZ2NpuyDAWmNRxyELRcpEkjHJSV1Qx0ooEQYHLSNPtX6b15j0Rkob8Vg0i4gSoy6lPMVLa6hTOSnaAVM/14TU8hN98fmd7qNsl4sc5yCh5GHYS0w6oB/mwUyiaZXMsOAtWBkWQqdYpjGwvxHFAuMIMSdm2zEg5CRKKYkaGeTuWJEK4j7qkrZGjgEgnGZ85hPva8aAfCv24gmP390SCAikHgas7013ldC01/6u1Y+WfOgnlUawIx5OP/JhBFcI0M+hRQbBiAw0IC6p3hbiHBMJKJ5vXIVjTJ89C46hsVcqVm+Ni9SKLIwd2wR4oAQucgCq4AjVQBxg8gmcwAq/Gk/FivBnvk9Y5I5vZAX9kfH4BaFSkmA==</latexit>
+(I→A†A)x0|n<latexit sha1_base64="J7NAW/NthjB40fX96U30npuo9l0=">AAACBHicbVDLSsNAFJ34rPUVddnNYBFclUSkuqy6cVnBPqCJZTKZpEMnkzAzEULowo2/4saFIm79CHf+jZM2grYeuHA4517uvcdLGJXKsr6MpeWV1bX1ykZ1c2t7Z9fc2+/KOBWYdHDMYtH3kCSMctJRVDHSTwRBkcdIzxtfFX7vnghJY36rsoS4EQo5DShGSktDs+ZESI28AF7cOT4KQyLgj5INzbrVsKaAi8QuSR2UaA/NT8ePcRoRrjBDUg5sK1FujoSimJFJ1UklSRAeo5AMNOUoItLNp09M4JFWfBjEQhdXcKr+nshRJGUWebqzOFDOe4X4nzdIVXDu5pQnqSIczxYFKYMqhkUi0KeCYMUyTRAWVN8K8QgJhJXOrapDsOdfXiTdk4bdbDRvTuutyzKOCqiBQ3AMbHAGWuAatEEHYPAAnsALeDUejWfjzXiftS4Z5cwB+APj4xve6Zee</latexit>
+A†y
+<latexit sha1_base64="xdbeGr3yaMTdkFVz4E4ZQEBRSPY=">AAAB8HicbVDLSgMxFL1TX7W+qi7dBIvgqsyItC6rblxWsA9ph5JJM21okhmSjFCGfoUbF4q49XPc+Tdm2llo64HA4Zx7ybkniDnTxnW/ncLa+sbmVnG7tLO7t39QPjxq6yhRhLZIxCPVDbCmnEnaMsxw2o0VxSLgtBNMbjO/80SVZpF8MNOY+gKPJAsZwcZKj32BzTgI0fWgXHGr7hxolXg5qUCO5qD81R9GJBFUGsKx1j3PjY2fYmUY4XRW6ieaxphM8Ij2LJVYUO2n88AzdGaVIQojZZ80aK7+3kix0HoqAjuZBdTLXib+5/USE175KZNxYqgki4/ChCMToex6NGSKEsOnlmCimM2KyBgrTIztqGRL8JZPXiXti6pXq9buLyuNm7yOIpzAKZyDB3VowB00oQUEBDzDK7w5ynlx3p2PxWjByXeO4Q+czx888JAO</latexit>AFigure 2. Architecture and inference workflow of our framework. Top: End-to-end inference pipeline, where EEG features condition a
+diffusion-transformer-based reconstruction process to produce spatiotemporal fMRI sequences. Bottom: (a) Transformer-based denoising
+network that jointly models vertex-level tokens with sequence-level EEG cross-attention to reconstruct coherent fMRI trajectories. (b)
+Null-space sampling module (InterRecon) that enforces measurement consistency during reverse diffusion, enabling intermediate frame
+reconstruction without retraining.
+x(n)using the predicted noise to estimate the posterior 248
+mean.249
+Null-Space Sampling for InterRecon.To enable interme- 250
+diate fMRI frame reconstruction from sparse anchor frames 251
+without additional training, we employ null-space con- 252
+strained sampling, as shown in Figure 2-b). We model the 253
+sparse observation as a linear measurementy=AX 1:Kw, 254
+whereA= diag(m 1, . . . , m Kw)withm k= 1for observed 255
+anchor frames andm k= 0for missing frames. The solu- 256
+tion is decomposed into range space (enforcing measure- 257
+ment consistency) and null-space (capturing residual varia- 258
+tions):259
+x≡A†Ax|{z}
+range-space+ (I−A†A)x|{z}
+null-space.260
+At each reverse diffusion stepn, we first obtain the clean- 261
+data estimate using the noise predictor:262
+x0|n=1√¯αn
+x(n)−√
+1−¯α nϵθ(x(n), n,h EEG)
+,263
+then apply range-null projection to enforce anchor consis- 264
+tency:265
+ˆx0|n=A†y+ (I−A†A)x 0|n,266which guaranteesA ˆx0|n≡y. Finally, we update the diffu-267
+sion state using the corrected estimate:268
+x(n−1)=√¯αn−1βn
+1−¯α nˆx0|n+√αn(1−¯α n−1)
+1−¯α nx(n)+σnϵ′,269
+whereϵ′∼ N(0,I). Through this EEG-guided null-270
+space refinement, intermediate frames are reconstructed to271
+be temporally consistent with anchor frames while preserv-272
+ing functional information encoded in the EEG signal. Im-273
+portantly, this projection is applied only during sampling,274
+requiring no retraining or architectural modification.275
+3.3. Model Architecture276
+EEG Encoder.We employ a temporal convolutional en-277
+coder to extract discriminative features from EEG windows.278
+Given an input EEG windows k∈RC×W, the encoder279
+processes it throughLstacked 1D convolutional blocks280
+with stride-2 downsampling, progressively increasing fea-281
+ture channels while reducing temporal resolution. Each282
+block applies convolution, batch normalization, and GELU283
+activation. After global average pooling over the temporal284
+dimension, a two-layer MLP projects to ad e-dimensional285
+embedding, yieldingf ϕ(sk)∈Rdethat encodes the tempo-286
+ral patterns within the EEG window.287
+4REDACTED
+
+---PAGE BREAK---
+
+Linear fMRI autoencoder.To enable efficient diffusion 288
+modeling while preserving the range-null decomposition 289
+property required by null-space sampling, we employ alin- 290
+earMLP-based autoencoder as an implementation trick. 291
+The encoder maps each fMRI framex k∈RNvto a lower- 292
+dimensional representationz k∈Rd(d≪N v) via a lin- 293
+ear projection, and the decoder symmetrically reconstructs 294
+the fMRI frame via the inverse linear mapping. Criti- 295
+cally, the linearity ensures that the null-space projection 296
+(I−A†A)remains well-defined and the range-null de- 297
+composition holds exactly in the compressed space. Both 298
+encoder and decoder are trained end-to-end with the dif- 299
+fusion transformer model to minimize reconstruction error, 300
+allowing the model to operate in a compact representation 301
+without sacrificing the mathematical structure required for 302
+null-space sampling.303
+3.4. Training & Inference304
+Training.We train the model end-to-end on paired EEG- 305
+fMRI sequences using the denoising score matching objec- 306
+tive (Eq. 3). The linear fMRI autoencoder is jointly op- 307
+timized to minimize reconstruction error while preserving 308
+the range-null decomposition structure. Training details, in- 309
+cluding hyperparameters, are provided in the supplementary 310
+material.311
+Inference for Reconstruction.Given a test EEG seg- 312
+ment{s k0, . . . ,s k0+Kw−1}, we initializex(N)∼ N(0,I) 313
+and iteratively denoise using the learned reverse process 314
+with EEG conditioning to obtain the reconstructed fMRI se- 315
+quence ˆXk0:k0+Kw−1.316
+Inference for InterRecon.Given anchor framesy= 317
+{xk−∆,xk+∆}and corresponding EEG windows, we per- 318
+form constrained sampling with null-space projection at 319
+each denoising step (as described above) to reconstruct in- 320
+termediate frames at arbitrary query indicesK∗⊂(k− 321
+∆, k+ ∆), enabling EEG-guided frame reconstruction at 322
+any temporal position without retraining.323
+The complete inference procedure is summarized in Al- 324
+gorithm 1, which unifies both reconstruction tasks through 325
+conditional null-space projection.326
+4. Experiments327
+4.1. Setting328
+Dataset.We evaluate our method on the CineBrain [22] 329
+dataset, which contains time-synchronized EEG-fMRI 330
+recordings from six subjects during naturalistic movie 331
+watching. For each subject, the data are split into non- 332
+overlapping training and testing sets with an 80%/20% split. 333
+Importantly, for each subject, the testing set contains unseen 334
+video clips that are not present in the training set, ensuring 335
+within-subject evaluation. The training data for each sub- 336
+ject has a duration of approximately 288 minutes, and the 337Algorithm 1Unified EEG-Conditioned fMRI Reconstruc-
+tion
+Require:EEG sequenceS, diffusion stepsN, [optional]
+anchor framesy, measurement operatorA
+Ensure:Reconstructed fMRI sequence ˆX
+1:Encode EEG sequence:h EEG←fϕ(S)
+2:Initialize noise:x(N)∼ N(0,I)
+3:forn=Nto1do
+4:Estimate clean data:
+x0|n←1√¯αn(x(n)−√1−¯α nϵθ(x(n), n,h EEG))
+5:ifInterRecon modethen
+6: ˆx0|n←A†y+ (I−A†A)x 0|n
+7:else
+8: ˆx0|n←x 0|n%Translation mode
+9:end if
+10:x(n−1)←√¯αn−1βn
+1−¯α nˆx0|n+√αn(1−¯α n−1)
+1−¯α nx(n)+σnϵ′,
+whereϵ′∼ N(0,I)
+11:end for
+12:return ˆX←x(0)
+testing data covers about 72 minutes.338
+Data Preprocessing.EEG signals are recorded from 64339
+channels at 1000 Hz. Following standard practice, EEG sig-340
+nals are normalized channel-wise to the range (-1, 1). Due341
+to the hemodynamic response delay relative to the underly-342
+ing neural activity, we apply a temporal shift of 4s between343
+each EEG window and its corresponding fMRI frame, con-344
+sistent with the delay established in CineBrain [22]. The345
+fMRI data have a temporal resolution of 0.8s (TR = 0.8s).346
+Preprocessing follows the official CineBrain protocol, im-347
+plemented using the standard fMRIPrep pipeline. The steps348
+include motion correction, susceptibility distortion correc-349
+tion, slice-timing correction, co-registration to the structural350
+T1-weighted image, and normalization to the HCP fsLR-351
+32k grayordinate space. After preprocessing, each fMRI352
+frame is represented by 91282 grayordinates, consisting of353
+32492 cortical vertices per hemisphere and 26298 subcorti-354
+cal vertices covering the thalamus, striatum, hippocampus,355
+and other deep gray-matter structures.356
+Metrics.Beyond measuring reconstruction fidelity with357
+Mean Squared Error (MSE), we further employ neural-358
+level quantitative metrics, including Pearson correlation co-359
+efficient (r) and Cosine Similarity. These metrics capture360
+spatial correspondence between predicted and ground-truth361
+fMRI responses, providing biologically meaningful insight362
+into neural representation quality.363
+Baselines.For dynamic fMRI frame reconstruction, we364
+compare our method with the following representative365
+volumetric baselines: (1)CNN-TC[9], a convolutional366
+transcoder. (2)CNN-TAG[5], a graph-attention network.367
+(3)E2fNet[10], a U-Net based encoder-decoder frame-368
+work. (4)E2fGAN[10], an adversarial variant of E2fNet369
+5REDACTED
+
+---PAGE BREAK---
+
+Table 1.Comparison of fMRI Reconstruction Performance.We compare our method against baseline approaches across different frame
+lengths and spatial regions (whole brain, visual cortex, and visual–audio cortex). Results are averaged over six subjects.
+Frame Method Whole Brain Visual Visual+Audio
+MSE↓r↑cos↑ MSE↓r↑cos↑ MSE↓r↑cos↑
+3CNN-TC [9] 0.302 0.808 0.832 0.212 0.823 0.873 0.217 0.836 0.875
+CNN-TAG [5] 0.297 0.812 0.835 0.207 0.828 0.879 0.212 0.840 0.878
+E2FNet [10] 0.288 0.818 0.833 0.204 0.831 0.880 0.205 0.844 0.882
+E2FGAN [10] 0.2800.819 0.840 0.1960.832 0.882 0.203 0.846 0.884
+Ours 0.2820.822 0.847 0.196 0.834 0.886 0.200 0.848 0.887
+10CNN-TC [9] 0.315 0.804 0.824 0.230 0.822 0.861 0.204 0.830 0.867
+CNN-TAG [5] 0.309 0.810 0.829 0.225 0.826 0.865 0.199 0.835 0.871
+E2FNet [10] 0.297 0.819 0.836 0.215 0.833 0.872 0.192 0.842 0.878
+E2FGAN [10] 0.290 0.822 0.839 0.210 0.836 0.875 0.1880.845 0.881
+Ours 0.277 0.824 0.849 0.193 0.834 0.887 0.1970.848 0.889
+30CNN-TC [9] 0.322 0.800 0.820 0.232 0.818 0.858 0.208 0.828 0.867
+CNN-TAG [5] 0.319 0.803 0.823 0.228 0.820 0.860 0.204 0.831 0.869
+E2FNet [10] 0.316 0.806 0.826 0.225 0.823 0.863 0.201 0.833 0.872
+E2FGAN [10] 0.314 0.808 0.828 0.222 0.825 0.865 0.199 0.835 0.874
+Ours 0.281 0.819 0.845 0.195 0.829 0.884 0.200 0.844 0.885
+with a discriminator. For the intermediate fMRI frame re- 370
+construction (InterRecon) setting, where the middle frames 371
+are reconstructed, we evaluate our method with classical 372
+widely-usedlinear interpolation.373
+Implementation Details.The EEG input is first embedded 374
+into a 512-dimensional latent space, while each fMRI frame 375
+is projected to a 1024-dimensional representation. The dif- 376
+fusion backbone is implemented as a Transformer consist- 377
+ing of 6 layers with 8 attention heads and a hidden dimen- 378
+sion of 1024. During training, we adopt 1000 timesteps 379
+with a linear noise schedule following standard diffusion 380
+settings. For inference, we employ DDIM [23] for efficient 381
+sampling with 50 denoising steps. The model is trained 382
+for 200 epochs using the AdamW optimizer (β 1= 0.9, 383
+β2= 0.999), with a learning rate of1×10−4and a batch 384
+size of 32. For visual decoding, the reconstructed fMRI 385
+representations are further processed by CineSync-f [22] to 386
+generate corresponding videos. All experiments are con- 387
+ducted on a single NVIDIA A100 GPU.388
+4.2. Result and Analysis389
+In this section, we quantitatively examine the model’s spa- 390
+tiotemporal pattern recognition capability, evaluate its per- 391
+formance under various reconstruction scenarios.392
+Dynamic fMRI Frames Reconstruction.For spatial mod- 393
+eling, we conduct evaluations at three spatial regions of the 394
+fMRI representation. Whole brain: 91282 vertices; primary 395
+visual cortex (V1): 8405 vertices; combined visual auditory 396
+cortex (V1 + A1): 18946 vertices. For temporal model- 397
+ing, we evaluate reconstruction under 3, 10, and 30 frame 398
+lengths to assess the model’s ability to recognize and recon- 399Table 2. Comparison of interpolation and null-space strategies.
+We comparelinear interpolation,our model without null-space
+sampling, and ourfull modelthat incorporates null-space sampling
+for enhanced temporal and structural consistency.
+Method MSE↓r↑Cos↑
+Linear 0.280 0.830 0.851
+Ours w/o null space 0.272 0.839 0.852
+Ours w/ null space0.250 0.852 0.865
+2 3 4 5 6 7 8
+Frame Length0.8350.8400.8450.8500.8550.860Cosine Similarity
+ linear
+w/o null space
+w null space
+2 3 4 5 6 7 8
+Frame Length0.8200.8250.8300.8350.8400.845R
+linear
+w/o null space
+w null space
+2 3 4 5 6 7 8
+Frame Length0.260.270.280.290.300.31MSE
+linear
+w/o null space
+w null space
+Figure 3. Comparison of intermediate fMRI frame reconstruc-
+tion (InterRecon) performance across different frame lengths and
+methods.
+struct temporal patterns.400
+As shown in Table 1, across all spatial resolutions and401
+frame lengths, our method consistently outperforms prior402
+other methods, demonstrating strong spatiotemporal mod-403
+eling capabilities.(1) Temporal robustness. When in-404
+creasing the length from 3 to 10 and 30 frames, compet-405
+ing methods such as CNN-TC, CNN-TAG, and E2F-based406
+models show clear degradation in all metrics, whereas our407
+model maintains highly stable performance across whole408
+6REDACTED
+
+---PAGE BREAK---
+
+00.42
+GTRecon .
+ErrorFigure 4. Vertex-level cortical surface visualization of recon-
+structed fMRI alongside ground truth. The top row shows our
+reconstructed fMRI (Recon.); the middle row shows the ground-
+truth fMRI (GT); and the bottom row displays the reconstruction
+error map; the color scale indicates BOLD signal intensity.
+brain, V1, and V1+A1 regions. For example, in the whole 409
+brain region, our method preserves both low MSE (0.282 410
+→0.277→0.281) and high correlation (r: 0.822→0.824 411
+→0.819), indicating that temporal dependencies are effec- 412
+tively modeled even as temporal horizons increase. This 413
+stability highlights the model’s ability to recognize and 414
+propagate temporal patterns over short, mid, and long-range 415
+frame segments.(2) Spatial robustness and whole-brain 416
+generalization.Across the 91282 vertex whole-brain rep- 417
+resentation, our approach achieves the best cosine similarity 418
+for all frame lengths (0.847 / 0.849 / 0.845), demonstrating 419
+strong spatial consistency and global neural representation 420
+modeling. The ability to handle high-dimensional cortical 421
+mesh while maintaining superior performance indicates that 422
+the model captures stable and distributed cortical dynam- 423
+ics, rather than relying on localized patterns alone.(3) En- 424
+hanced performance in task-relevant visual and audio- 425
+visual cortices.The performance in the visual (V1) and au- 426
+diovisual (V1+A1) cortices is markedly higher than that at 427
+the whole-brain level. Notably, all metrics are consistently 428
+higher than the whole-brain results. Such specific region 429
+improvements are expected, as visual and audiovisual cor- 430
+tices are strongly driven by the movie-watching task. The 431
+superior performance in these biologically relevant areas in- 432
+dicates the model captures sensory-driven neural dynamics 433
+in a manner that aligns well with established neuroscience 434
+principles.435
+Overall, the results demonstrate that our framework de- 436
+livers both temporal stability and spatial fidelity, scaling 437
+from short to long temporal windows while preserving ac- 438
+curacy across whole brain and task-relevant cortical areas. 439
+This provides strong evidence that our model not only re- 440
+constructs spatially plausible fMRI patterns but also effec- 441
+tively models the temporal evolution of neural activity.442Intermediate fMRI Frames Reconstruction.Table 2443
+shows the performance on subject 1 for generating the miss-444
+ing intermediate frame given its preceding and following445
+fMRI frames. We compare three settings: a simple linear446
+baseline, our model without null space sampling, and our447
+full model with null space sampling. As shown, incorporat-448
+ing the null space constraint yields consistent improvements449
+across all metrics. Figure 3 further examines the InterRecon450
+setting across different frame lengths of subject 1. The lin-451
+ear interpolation baseline degrades noticeably as the tem-452
+poral gap increases, whereas our null-space variant main-453
+tains much more stable performance and remains superior454
+across all sequence lengths. Both the ”w/o null space” and455
+”w/ null space” results are produced without any additional456
+training, using exactly the same checkpoint learned from457
+the 10-frame dynamic reconstruction task. The comparison458
+therefore, reflects solely the effect of enabling null-space459
+sampling at inference. This demonstrates the flexibility460
+of our diffusion-based framework, where the same model461
+can be adapted to different reconstruction scenarios through462
+sampling strategies alone. The superior performance of null463
+space sampling indicates that explicitly constraining the so-464
+lution space to respect boundary conditions leads to more465
+biologically plausible intermediate frames that capture the466
+smooth temporal evolution of neural activity.467
+Visualization.To assess the spatial accuracy of the recon-468
+structed fMRI frames and evaluate their biological plausi-469
+bility, we visualize the reconstructed cortical surface along-470
+side the ground truth. The visualizations present lateral471
+views of both hemispheres as well as a superior view, allow-472
+ing inspection of large-scale spatial patterns across the cor-473
+tex. As shown in Figure 4, the reconstructed fMRI closely474
+matches the ground truth in both intensity distribution and475
+spatial topology, demonstrating high spatial fidelity with476
+minimal reconstruction error across the entire cortical sur-477
+face. These results indicate that our model captures coher-478
+ent and anatomically consistent activation patterns, further479
+supporting the biological plausibility of the generated fMRI480
+signals.481
+Downstream Visual Decoding Task.Beyond vertex-level482
+reconstruction metrics, we validate the functional plausi-483
+bility of reconstructed fMRI by evaluating whether it pre-484
+serves task-relevant neural information for downstream vi-485
+sual decoding task. We employ CineSync-f [22], a pre-486
+trained fMRI-to-video decoder, to reconstruct videos from487
+our reconstructed fMRI frames. This provides a direct test488
+of whether the reconstructed fMRI encodes biologically489
+meaningful representations that support high-level cogni-490
+tive tasks.491
+Qualitative results (Figure 5) show that videos decoded492
+from our reconstructed fMRI recover the coarse semantic493
+structure of the original scenes. In the first case, the model494
+correctly decodes a living-room setting with two characters495
+7REDACTED
+
+---PAGE BREAK---
+
+GT
+Pred.
+GT
+Pred.
+Figure 5. Functional validation through visual decoding. Comparison between video frames decoded from our reconstructed fMRI (Pred.)
+and the corresponding ground-truth video frames (GT) using the CineSync-f decoder.
+engaged in conversation and captures salient elements such 496
+as the purple clothing. In the second case, the ground-truth 497
+frames (GT) depict a scene in which two male characters are 498
+seated on a couch and talking. The frames decoded from 499
+our reconstructed fMRI (Pred.) recover the overall scene 500
+layout, capturing the presence of the two male characters, 501
+their approximate poses, and the general conversational set- 502
+ting. Although finer details such as precise facial iden- 503
+tity or exact clothing appearance are not perfectly repro- 504
+duced, the reconstructions successfully preserve the over- 505
+all scene context and high-level visual semantics. More- 506
+over, the decoded frames form a temporally coherent se- 507
+quence, reflecting the continuous nature of the underlying 508
+neural dynamics. These observations indicate that our re- 509
+constructed fMRI retains functionally meaningful informa- 510
+tion that supports downstream visual decoding, going be- 511
+yond mere vertex-level similarity.512
+5. Conclusion and Discussion513
+Conclusion.In this work, we formulate EEG-to-fMRI 514
+reconstruction simultaneously as a spatiotemporal pattern 515
+recognition problem, where the model extracts neurally 516
+meaningful dynamic features from EEG, and as a gener- 517
+ative modeling task, where it reconstructs dynamic fMRI 518
+frames in high spatial resolution. Within a subject-specific 519
+setting, our diffusion-transformer-based framework recon- 520
+structs fMRI trajectories that are spatially detailed, tem- 521porally coherent, and consistent with known physiological522
+dynamics. Our model achieves substantially better perfor-523
+mance than previous representative baseline. To support524
+intermediate frame reconstruction, we incorporate a null-525
+space constrained sampling strategy that enforces consis-526
+tency with observed frames during the generative process.527
+This enables the model to infer missing temporal frames528
+without retraining and provides a principled way to assess529
+temporal consistency. Functional validation through task-530
+driven visual decoding shows that the reconstructed fMRI531
+frames preserve discriminative neural representations rather532
+than only matching low-level similarity metrics. Overall,533
+this study demonstrates a feasible path to unify the temporal534
+precision of EEG with the high spatial resolution of fMRI535
+for dynamic brain activity modeling, cross-modal neural re-536
+construction, and future applications in neural decoding.537
+Discussion.While this framework achieves strong perfor-538
+mance, two challenges remain. (1) fMRI responses during539
+complex naturalistic tasks exhibit substantial cross-subject540
+variability, making cross-subject modeling highly challeng-541
+ing. Our model is therefore trained within each subject,542
+and extending it to subject-independent settings will require543
+stronger anatomical or functional alignment. (2) We adopt a544
+fixed EEG–fMRI delay following standard practice, yet the545
+true hemodynamic latency is region-dependent and time-546
+varying. Although our dynamic sequence modeling par-547
+tially alleviates this mismatch, future work is needed to in-548
+tegrate adaptive or learnable alignment.549
+8REDACTED
+
+---PAGE BREAK---
+
+References550
+[1] Russell A Poldrack. The future of fmri in cognitive neuro- 551
+science.Neuroimage, 62(2):1216–1220, 2012. 1552
+[2] Nikos K Logothetis, Jon Pauls, Mark Augath, Torsten Tri- 553
+nath, and Axel Oeltermann. Neurophysiological investiga- 554
+tion of the basis of the fmri signal.Nature, 412(6843):150– 555
+157, 2001. 1556
+[3] Gary H Glover. Overview of functional magnetic resonance 557
+imaging.Neurosurgery Clinics, 22(2):133–139, 2011. 1558
+[4] Martin A Lindquist. The statistical analysis of fmri data. 559
+Statistical science, 23(4):439–464, 2008. 1560
+[5] David Calhas and Rui Henriques. Eeg to fmri synthesis ben- 561
+efits from attentional graphs of electrode relationships.arXiv 562
+preprint arXiv:2203.03481, 2022. 2, 5, 6563
+[6] Weiheng Yao, Zhihan Lyu, Mufti Mahmud, Ning Zhong, 564
+Baiying Lei, and Shuqiang Wang. Catd: Unified representa- 565
+tion learning for eeg-to-fmri cross-modal generation.IEEE 566
+Transactions on Medical Imaging, 44(7):2757–2767, 2025. 567
+1, 2568
+[7] Christoph M Michel, Micah M Murray, Goran Lantz, Sara 569
+Gonzalez, Laurent Spinelli, and Rolando Grave de Peralta. 570
+Towards the utilization of eeg as a brain imaging tool.Neu- 571
+roimage, 61(2):371–385, 2012. 1572
+[8] Yamin Li, Ange Lou, Ziyuan Xu, Shengchao Zhang, Shiyu 573
+Wang, Dario Englot, Soheil Kolouri, Daniel Moyer, Roza 574
+Bayrak, and Catie Chang. Neurobolt: Resting-state eeg-to- 575
+fmri synthesis with multi-dimensional feature mapping.Ad- 576
+vances in neural information processing systems, 37:23378– 577
+23405, 2024. 2578
+[9] Xueqing Liu and Paul Sajda. A convolutional neural network 579
+for transcoding simultaneously acquired eeg-fmri data. In 580
+2019 9th International IEEE/EMBS Conference on Neural 581
+Engineering (NER), pages 477–482. IEEE, 2019. 2, 5, 6582
+[10] Kristofer Grover Roos, Atsushi Fukuda, and Quan Huu Cap. 583
+From brainwaves to brain scans: A robust neural network 584
+for eeg-to-fmri synthesis.arXiv preprint arXiv:2502.08025, 585
+2025. 2, 5, 6586
+[11] Zhou Wang, Alan C Bovik, Hamid R Sheikh, and Eero P Si- 587
+moncelli. Image quality assessment: from error visibility to 588
+structural similarity.IEEE Transactions on Image Process- 589
+ing, 13(4):600–612, 2004. 2590
+[12] Alain Hore and Djemel Ziou. Image quality metrics: Psnr 591
+vs. ssim. pages 2366–2369, 2010. 2592
+[13] Emily J Allen, Ghislain St-Yves, Yihan Wu, Jesse L 593
+Breedlove, Jacob S Prince, Logan T Dowdle, Matthias Nau, 594
+Brad Caron, Franco Pestilli, Ian Charest, et al. A massive 595
+7t fmri dataset to bridge cognitive neuroscience and artificial 596
+intelligence.Nature neuroscience, 25(1):116–126, 2022. 2 597
+[14] Jonathan Ho, Ajay Jain, and Pieter Abbeel. Denoising dif- 598
+fusion probabilistic models.Advances in neural information 599
+processing systems, 33:6840–6851, 2020. 2600
+[15] Jascha Sohl-Dickstein, Eric Weiss, Niru Maheswaranathan, 601
+and Surya Ganguli. Deep unsupervised learning using 602
+nonequilibrium thermodynamics.International conference 603
+on machine learning, pages 2256–2265, 2015. 2604
+[16] Dustin Podell, Zion English, Kyle Lacey, Andreas 605
+Blattmann, Tim Dockhorn, Jonas M ¨uller, Joe Penna, and 606Robin Rombach. Sdxl: Improving latent diffusion mod-607
+els for high-resolution image synthesis.arXiv preprint608
+arXiv:2307.01952, 2023. 2609
+[17] Wenyi Hong, Ming Ding, Wendi Zheng, Xinghan Liu,610
+and Jie Tang. Cogvideo: Large-scale pretraining for611
+text-to-video generation via transformers.arXiv preprint612
+arXiv:2205.15868, 2022. 3613
+[18] Team Wan. Wan: Open and advanced large-scale video gen-614
+erative models.arXiv preprint arXiv:2503.20314, 2025. 3615
+[19] Zijiao Chen, Jiaxin Qing, Tiange Xiang, Wan Lin Yue, and616
+Juan Helen Zhou. Seeing beyond the brain: Masked model-617
+ing conditioned diffusion model for human vision decoding.618
+InarXiv, 2022. 3619
+[20] Zijiao Chen, Jiaxin Qing, and Juan Helen Zhou. Cinematic620
+mindscapes: High-quality video reconstruction from brain621
+activity.Advances in Neural Information Processing Sys-622
+tems, 36:24841–24858, 2023.623
+[21] Jianxiong Gao, Yuqian Fu, Yun Wang, Xuelin Qian, Jianfeng624
+Feng, and Yanwei Fu. Mind-3d: Reconstruct high-quality 3d625
+objects in human brain. InEuropean Conference on Com-626
+puter Vision, pages 312–329. Springer, 2024. 3627
+[22] Jianxiong Gao, Yichang Liu, Baofeng Yang, Jianfeng Feng,628
+and Yanwei Fu. Cinebrain: A large-scale multi-modal brain629
+dataset during naturalistic audiovisual narrative processing.630
+arXiv preprint arXiv:2503.06940, 2025. 5, 6, 7631
+[23] Jiaming Song, Chenlin Meng, and Stefano Ermon. Denois-632
+ing diffusion implicit models. InInternational Conference633
+on Learning Representations, 2021. 6634
+9REDACTED
+
+---PAGE BREAK---
+
+

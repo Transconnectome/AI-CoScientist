@@ -43,8 +43,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 try:
     from src.agents.pool import AgentPool
-    from src.services.rag.hybrid_rag_service import HybridRAGService
-    from src.core.config import Config
+    from src.services.hybrid_rag_service import HybridRAGService
+    from src.core.config import Settings
     from src.services.llm.interface import LLMService
     from src.services.knowledge_base.context_manager import ContextManager
 except ImportError as e:
@@ -91,7 +91,7 @@ class MultiAgentProposalPipeline:
         print("🤖 Initializing Multi-Agent Proposal Pipeline...")
 
         # Initialize config and services
-        self.config = Config()
+        self.config = Settings()
 
         print("   Loading LLM service...")
         self.llm_service = LLMService(self.config)

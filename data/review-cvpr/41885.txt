@@ -1,0 +1,886 @@
+GeoMAMBA-AD: Early Detection of Alzheimer’s Disease Using Non-Invasive
+Resting-State fMRI and John Ellipsoid-Driven MAMBA Network
+Anonymous CVPR submission
+Abstract
+Early detection of Alzheimer’s disease (AD) is crucial for 001
+timely clinical treatment. Resting-state functional magnetic 002
+resonance imaging (rs-fMRI) can reveal early functional 003
+connectivity alterations that precede structural changes, 004
+but its use is constrained by limited data availability and 005
+scanner-induced domain shift. To address these challenges, 006
+we propose GeoMAMBA-AD, a framework that integrates 007
+John ellipsoid-based (JE) blind source separation (BSS) 008
+with a Mamba-based temporal learner to achieve robust 009
+cross-scanner generalization under small-data conditions. 010
+Exploiting a convex geometry formulation, JE can prov- 011
+ably extract the perfect sources under rather mild data pu- 012
+rity conditions, while avoiding the NP-hard computing and 013
+unreliable source independence assumptions used in ICA. 014
+Moreover, JE-BSS is performed at the individual-subject 015
+level, enabling source separation without enforcing shared 016
+component structures across subjects (e.g., group ICA). 017
+The resulting geometric embeddings are subsequently pro- 018
+cessed by a Mamba network, enabling stable and accurate 019
+AD classification across heterogeneous rs-fMRI datasets. 020
+GeoMAMBA-AD achieves 92% accuracy in cross-scanner 021
+scenarios under small-data learning settings, underscor- 022
+ing its robustness across different fMRI scanners and ac- 023
+quisition protocols. Furthermore, gradient-based inter- 024
+pretability analysis reveals that the geometry sources cap- 025
+ture known executive control and subcortical control sys- 026
+tems, both highly correlated to AD biomarkers, supporting 027
+the neurobiological plausibility of the JE sources. This is 028
+the first work that integrates geometry BSS into a Mamba 029
+backbone for early AD detection.030
+1. Introduction031
+Alzheimer’s disease (AD) is a progressive neurodegenera- 032
+tive disease and the most common cause of dementia. Ac- 033
+cording to the World Health Organization (WHO), more 034
+than 55 million people currently live with dementia, and this 035number is expected to nearly triple by 2050 due to global036
+population aging [1]. AD is characterized by the gradual037
+decline of cognitive functions, including memory, reason-038
+ing, and language, ultimately leading to severe functional039
+impairment and loss of independence. Given the absence040
+of curative treatments, early and accurate detection of AD041
+is crucial. Detecting AD in its prodromal stages enables042
+timely clinical interventions that can slow disease progres-043
+sion and improve patients’ quality of life, thereby reducing044
+the socioeconomic burden on caregivers and healthcare sys-045
+tems. Recent therapeutic advances, such as the monoclonal046
+antibody donanemab approved by the United States Food047
+and Drug Administration in 2024 for early symptomatic048
+AD, which targets amyloid pathology to slow clinical pro-049
+gression, further underscore the critical need for early di-050
+agnosis to maximize treatment efficacy [2]. Advanced AD051
+research has associated the disease with several brain ab-052
+normalities, including amyloid-β(Aβ) plaques, hyperphos-053
+phorylatedτ(p-tau) tangles, and myelin breakdown [3].054
+These changes often lead to the shrinkage of brain regions,055
+notably the hippocampus, and altered neuronal communi-056
+cation within cortical networks.057
+Resting-state functional magnetic resonance imaging058
+(rs-fMRI) is a prevalent neuroimaging technique used to de-059
+tect these changes. It measures spontaneous blood-oxygen-060
+level-dependent (BOLD) signal fluctuations throughout061
+the brain without requiring task performance [4]. Stud-062
+ies have demonstrated positive correlations between AD-063
+related cognitive decline and changes in BOLD signals064
+measured by rs-fMRI [5–8]. Specifically, brain regions065
+affected by neurodegeneration exhibit distinct BOLD sig-066
+nal patterns in AD patients compared to healthy individu-067
+als. This pathology-related difference makes rs-fMRI suit-068
+able for early AD detection. However, unlike structural069
+MRI (sMRI), which has been extensively investigated for070
+Alzheimer’s disease diagnosis [9–13], rs-fMRI introduces071
+substantially greater algorithmic and methodological chal-072
+lenges due to its dynamic, temporally fluctuating neural sig-073
+nals. Specifically, its BOLD signals are indirect reflections074
+of neural activity and are easily confounded by head motion,075
+1REDACTED
+REDACTED
+
+---PAGE BREAK---
+
+physiological noise, and scanner drift, all of which intro- 076
+duce high variability across sessions and sites [14]. These 077
+factors make rs-fMRI datasets more difficult to harmonize 078
+and significantly less abundant than sMRI data, thereby lim- 079
+iting the scalability of deep learning approaches [15, 16]. 080
+Despite these challenges, the potential of rs-fMRI for early 081
+AD detection motivates us to develop algorithms that can 082
+overcome its limitations and fully leverage its functional 083
+information. Recent advances in AI modeling have intro- 084
+duced efficient sequence architectures such as Mamba [17– 085
+19], which have demonstrated strong performance in sMRI 086
+applications (e.g., Vision Mamba and AD-Diff [20, 21]); 087
+however, the potential of Mamba for fMRI remains largely 088
+unexplored, which motivates us to adopt Mamba as the 089
+backbone of our framework.090
+Real-world clinical datasets often consist of heteroge- 091
+neous rs-fMRI scans acquired from different MRI scan- 092
+ners, making it difficult for deep neural networks to cap- 093
+ture disease-specific features consistently [22, 23]. As 094
+a result, scanner-dependent biases and latent domain dis- 095
+crepancies frequently lead to cross-scanner overfitting, un- 096
+dermining model generalization. To address this chal- 097
+lenge, we introduce a John ellipsoid–based blind source 098
+separation [24]. In convex geometry, the John ellip- 099
+soid defines an affine-invariant mapping that normalizes 100
+each domain’s feature distribution. Such normalization, 101
+when combined with individual-subject BSS, mitigates 102
+scanner-dependent variability and improves cross-scanner 103
+consistency in rs-fMRI analysis. This mapping minimizes 104
+domain-specific anisotropy and aligns heterogeneous scan- 105
+ners’ feature spaces, yielding a unified representation well- 106
+suited for downstream modeling. Meanwhile, the blind 107
+source separation step produces corresponding temporal 108
+dynamic curves (TDCs) that are subsequently processed 109
+through fully connected layers to encode the temporal infor- 110
+mation of rs-fMRI signals, while the spatial sources are fed 111
+into the Mamba network for feature extraction. This dual- 112
+path design enables the framework to capture spatial and 113
+temporal dynamics independently, obtaining the comple- 114
+mentary information more effectively under multi-scanner 115
+and small-data conditions. In the next section, we introduce 116
+several seminal methods that have been developed for pro- 117
+cessing rs-fMRI data.118
+2. Related Work119
+2.1. Resting-State fMRI Analysis for AD120
+Traditional approaches typically rely on independent com- 121
+ponent analysis (ICA) [25] or related correlation-based 122
+measures to characterize brain connectivity alterations [26]. 123
+More recently, deep learning–based models such as 3D 124
+convolutional neural networks (3D-CNNs), recurrent neu- 125
+ral networks (RNNs), and long short-term memory network 126have been explored for automated AD classification using127
+rs-fMRI data [9, 10, 27]. In particular, the brain connec-128
+tivity graph convolutional network adopts a graph convolu-129
+tional network (GCN) to encode inter-regional brain con-130
+nectivity based on rs-fMRI signals [28]. Specifically, the131
+method employs the anatomical automatic labeling (AAL)132
+atlas to define 90 regions of interest (ROIs) and constructs133
+subject-specific adjacency matrices by computing pairwise134
+functional connectivity (i.e., Pearson correlation) between135
+ROI time series. This design allows the GCN to exploit136
+both node-level features and topological priors encoded in137
+the graph structure, providing a relational inductive bias that138
+can enhance generalization in limited-data settings. Spa-139
+tiotemporal graph transformer extends this design by simul-140
+taneously incorporating both node-level activation features141
+and inter-regional connectivity [29]. Specifically, it utilizes142
+the anatomical automatic labeling (AAL) template to ex-143
+tract 116 regions of interest (ROIs) and constructs subject-144
+wise relation matrices based on ROI correlations. These145
+relation matrices are subsequently used to initialize the at-146
+tention weights within a spatiotemporal transformer block,147
+allowing the model to encode prior structural dependen-148
+cies directly into the attention mechanism and jointly learn149
+spatial–temporal representations from rs-fMRI data. An-150
+other representative approach, gICA 3D-VGG [30], com-151
+bines group-wise ICA (gICA) with a 3D-CNN to extract152
+shared functional components across subjects and perform153
+volumetric classification. However, these models could re-154
+quire large-scale datasets and tend to exhibit limited gener-155
+alization across scanners due to signal variability, scanner156
+drift, and demographic heterogeneity.157
+2.1.1. Blind Source Separation and Convex Geometry in158
+Neuroimaging159
+Blind source separation (BSS) has its roots in hyperspec-160
+tral imaging and remote sensing, where geometry-based161
+formulations have been developed to decompose mixed162
+spectral signals into constituent material signatures with-163
+out prior distributional assumptions [24, 31–34]. Unlike164
+ICA, geometry-based BSS methods emphasize the con-165
+vex and spatial separability of sources and therefore do166
+not rely on statistical independence assumptions. When167
+applied to rs-fMRI, this property allows geometry-based168
+BSS to separate spatially overlapping but functionally re-169
+lated brain sources that would otherwise be confounded170
+by ICA. Recent convex-geometry formulations further en-171
+hance BSS by introducing the John ellipsoid (JE), defined172
+as the maximum-volume ellipsoid inscribed within a data173
+convex hull, serving as an affine-invariant preconditioning174
+scheme. In this work, JE-BSS is performed at the individual175
+subject level, enabling source extraction without requiring176
+cross-subject alignment or group-level factorization, which177
+is particularly important when dealing with heterogeneous178
+clinical cohorts.179
+2REDACTED
+
+---PAGE BREAK---
+
+2.2. Mamba and Selective State-Space Model180
+Learning the spatial representations of functional brain 181
+sources is essential for identifying disease-related alter- 182
+ations in rs-fMRI data. While transformer-based architec- 183
+tures have shown strong representational power for captur- 184
+ing spatial dependencies, their quadratic complexity limits 185
+scalability for small and high-dimensional fMRI datasets 186
+[29]. The recently proposed Mamba architecture, based 187
+on a selective state-space model (SSM), enables efficient 188
+long-range dependency learning with linear computational 189
+complexity [17]. Building upon these insights, we extend 190
+Mamba to functional imaging by coupling it with a JE-BSS 191
+framework, described in detail in Section 3.192
+3. Method193
+3.1. Method Overview194
+Conventional deep learning models trained on rs-fMRI of- 195
+ten overfit to scanner-specific acquisition statistics under 196
+limited sample sizes, leading to shortcut learning that ex- 197
+ploits scanner-dependent cues rather than disease-relevant 198
+neural patterns. To mitigate this limitation, we propose 199
+GeoMAMBA-AD, a hybrid framework that integrates a 200
+non-trainable John ellipsoid–based blind source separation 201
+(JE-BSS) stage with a Mamba-based spatiotemporal learn- 202
+ing network. The JE-BSS module serves as a geometry- 203
+driven convex preconditioning stage, enforcing scanner- 204
+independent source separation through John ellipsoid pre- 205
+conditioning and simplex-constrained optimization. The 206
+spatial sources are then fed into the Mamba branch for fea- 207
+ture learning, while their associated TDCs, estimated via 208
+convex optimization (CVX), are processed by fully con- 209
+nected layers to encode temporal dependencies.210
+An overview of the proposed GeoMAMBA-AD pipeline 211
+is shown in Fig. 1. We describe each step in detail as fol- 212
+lows, covering both the non-trainable BSS stage and the 213
+trainable Mamba stage.214
+3.2. John Ellipsoid-Based Blind Source Separation 215
+LetY 1, . . . ,Y L∈Rndenote the rs-fMRI data matrix from 216
+one subject, withn≈1E6is the number of voxels and 217
+Lis the number of time points. The BSS factorization is 218
+formulated as219
+Y≈MX∈Rn×L,(1) 220
+whereY≜[y 1,···,y L]is the data matrix (y l: vectoriza- 221
+tion ofY ℓ),M≜[m 1,···,m p]∈Rn×pis the source ma- 222
+trix (m p: vectorization ofM p), andX≜[x 1, . . . ,x p]T∈ 223
+Rp×Lis the mixing matrix withx p∈RLcontains their 224
+temporal activation profiles (cf. the upper part of Fig. 1). 225
+Motivated by recent findings that rs-fMRI temporal vari- 226
+ability can be largely explained by a small number of recur- 227
+rent states [35, 36], we accordingly setp= 4to obtain the 228
+basis representation.229Since the rs-fMRI data are extremely high-dimensional,230
+we directly perform dimension reduction (DR) to an231
+(L−1)-dimensional subspace using an orthonormal tempo-232
+ral basis constructed via Gram–Schmidt, after column-wise233
+centering each data point and projecting it onto this basis234
+(detailed in the supplementary material). After DR, we235
+construct a(p−1)-dimensional affine transformation [37]236
+and project all voxel trajectories into this reduced sub-237
+space, forming the vertex representation of a convex poly-238
+tope (detailed in the supplementary material). Owing to the239
+geometry-preserving property of DR and the ability of the240
+John ellipsoid formulation to handle ill-conditioned data,241
+this reduced representation remains suitable for the geome-242
+try blind source separation. Following John ellipsoid theory,243
+we estimate the maximum-volume inscribed ellipsoid [24,244
+Sec. III-A], yielding a preconditioned representation245
+Ypre=F⋆(Y−c⋆1T
+L),(2)246
+whereF⋆andc⋆denote the optimal parameters of the ellip-247
+soidE(F,c), and1 L∈RL×1is a column vector of ones.248
+The sources in this preconditioned space are then estimated249
+by solving250
+min
+Mpre∈Rn×p,X∈Rp×LYpre−M preX2
+F251
+s.t.X≥0,1T
+pX=1T
+L.(3)252
+where the simplex constraint enforces normalized nonnega-253
+tive temporal profiles. Initialization uses the successive pro-254
+jections algorithm, andXis solved using CVX. To regular-255
+izeM pretoward a canonical simplex geometry, we further256
+apply an orthogonal Procrustes update (1-step closed form257
+via SVD). After estimation in the preconditioned space, the258
+recovered sources are mapped back to the original scanner259
+domain through the inverse affine transform defined by the260
+John ellipsoid mapping [24, Sec. III-B]:261
+cM= (F⋆)−1Mpre+c⋆1T.(4)262
+In this way, each column of cMis treated as a spatial latent263
+source signature, and each row ofXis a temporal dynamic264
+curve (TDC). These serve as inputs to the spatial and tem-265
+poral branches of our Mamba architecture, respectively.266
+3.3. Mamba-Based Spatiotemporal Learning267
+Letpdenote the number of latent sources estimated from268
+the JE-BSS stage,Lthe number of time samples, and269
+(H, W, D)the spatial resolution of each source map. The270
+JE-BSS stage provides two outputs per subject: A set of271
+spatial source maps cM={ cM1,cM2, . . . ,cMp}withcMi∈272
+RH×W×D, and their TDCsX={x i}p
+i=1, wherex i∈RL.273
+These JE-BSS outputs provide voxel-level latent sources274
+and their time-varying activation profiles, which are used275
+as inputs to the Mamba-based spatiotemporal learning net-276
+work for AD classification.277
+3REDACTED
+
+---PAGE BREAK---
+
+Figure 1. Overall architecture of the proposed GeoMAMBA-AD framework for AD early detection using rs-fMRI. The pipeline consists of
+a non-trainable JE-BSS stage and a trainable Mamba-based spatiotemporal learning stage. The JE-BSS stage performs source separation,
+producing spatial sources cMand their corresponding TDCsX. In the trainable stage, spatial source maps are first compressed by a
+shared 3D CNN and lifted into temporal channels by a 4D lifting module, then flattened and projected before being processed by stacked
+Mamba blocks for temporal feature learning. A learnable adaptive pooling branch is fused with Mamba embeddings via element-wise
+multiplicative gating, where source-conditioned TDC features modulate the temporal representation. The fused representation is passed
+through fully connected layers to obtain a final AD probability.
+Shared 3D CNN and Channel-to-Time Lifting.Each 278
+cMiis processed by a shared 3D convolutional compressor 279
+g(·)to extract latent spatial features, which can be written 280
+as281
+Zi=g(cMi)∈RH′×W′×D′.(5) 282
+Thepfeature maps are then concatenated along the chan- 283
+nel axis and transformed by a 4D lifting moduleϕ(·)that 284
+maps source channels into temporal channels, which can be 285
+described as286
+eZ=ϕ 
+[Z1,Z2, . . . ,Z p]
+∈RL×H′×W′×D′.(6) 287
+This aligns spatial features into a time-indexed representa- 288
+tion.289
+Spatial Flattening and Temporal Sequence Construc- 290
+tion.The lifted tensor eZis reshaped into a time-sequence 291matrix292
+Zseq=
+z1,z2, . . . ,z L⊤∈RL×P, P=H′W′D′,(7)293
+and projected into an embedding space of dimensiond, i.e.,294
+H0=Z seqWin∈RL×d,(8)295
+whereW inis a learnable linear projection matrix that maps296
+each flattened spatial vector into ad-dimensional latent em-297
+bedding space; each row ofH 0therefore represents the la-298
+tent spatial configuration at a single fMRI time frame.299
+Temporal Compression via Mamba.To capture long-300
+range temporal dependencies, we apply a selective state-301
+space model (SSM) implemented by Mamba [17]. We aug-302
+mentH 0withLlearnable sink tokensE∈RL×dto form303
+a vertically concatenated sequence304
+Hext=H0
+E
+∈R(2L)×d.(9)305
+4REDACTED
+
+---PAGE BREAK---
+
+LetH(0)=H ext. We then applyL blkstacked Mamba 306
+blocks, whereMamba(·)denotes a single Mamba block 307
+(state-space transition with input-dependent gating)308
+H(ℓ+1)=H(ℓ)+Mamba 
+LN(H(ℓ))
+, ℓ= 0, . . . , L blk−1.
+(10) 309
+After the Mamba blocks, the last token positions are ex- 310
+tracted as compressed temporal embeddingsH tok∈RL×d. 311
+In parallel, an adaptive average pooling module generates 312
+Hbase∈RL×d. The two representations are then fused 313
+through a learnable gateα, producing the final embedding 314
+Hfuse=H base+ tanh(α)H tok,(11) 315
+wheretanh(α)adaptively balances the contributions of the 316
+baseline and token embeddings. This results in compact 317
+temporal embeddings that summarize dynamic transitions 318
+in vascular-mediated BOLD coupling.319
+Projection to Source-Interaction Space.The fused tem- 320
+poral embedding is projected into aK-dimensional seman- 321
+tic space, i.e.,322
+Ym=H fuseWout+B out,Y m∈RL×K,(12) 323
+whereW out∈Rd×KandB out∈RKare trainable param- 324
+eters, andK= 16defines a compact latent space used to 325
+represent temporal features at each fMRI frame. Although 326
+16is numerically equal to4pin our setting, this space does 327
+not enforce a one-to-one grouping of four dimensions per 328
+source; rather, it serves as a learned semantic basis that cap- 329
+tures mixed-source interactions and AD-relevant temporal 330
+feature structure in a more expressive latent manifold.331
+Temporal Conditioning Using TDCs.We construct a 332
+time-indexed TDC matrix as333
+X=
+x(1),x(2), . . . ,x(L)
+∈Rp×L.(13) 334
+Eacha(t)represents the source-activation vector at timet, 335
+which is passed through an MLPf tdc(·)to generate multi- 336
+plicative temporal conditioning, i.e.,337
+Yx(ℓ) =f tdc 
+x(ℓ)
+∈RK, ℓ= 1, . . . , L.(14) 338
+Collecting all time frames yieldsY a∈RL×K, which serves 339
+as data-driven gating to modulate the Mamba-derived tem- 340
+poral embeddings.341
+Fusion and Classification.Element-wise fusion inte- 342
+grates both components, written as343
+A=Y m⊙Y a∈RL×K.(15) 344
+The Hadamard product imposes multiplicative gating, en- 345
+ablingY ato selectively amplify or suppress entries of 346Ym, thereby controlling interaction features and shaping347
+gradient flow during training. Such multiplicative fusion348
+is aligned with input-conditioned gating mechanisms that349
+have been observed to influence representation learning and350
+gradient routing during training [38].351
+A shallow classifier comprising several fully connected352
+layers then produces the final prediction353
+ˆy= Softmax 
+f2(σ(f 1(vec(A))))
+.(16)354
+This integrates the temporally evolving gated interaction355
+features into a final AD decision.356
+4. Experimental Results357
+We present quantitative results for GeoMAMBA-AD in358
+Sec. 4.3, followed by ablation studies on the BSS stage and359
+track-level contributions (Sec. 4.4 and Sec. 4.5). Finally,360
+we perform integrated gradients-based interpretability anal-361
+ysis to identify AD-related functional networks from the ge-362
+ometry sources in Sec. 4.6.363
+4.1. ADNI364
+Data used in the present study was obtained from365
+the Alzheimer’s Disease Neuroimaging Initiative (ADNI)366
+database (adni.loni.usc.edu). The ADNI was367
+launched in 2003 as a public-private partnership, led by368
+Principal Investigator Michael W. Weiner, MD. The pri-369
+mary goal of ADNI has been to test whether serial magnetic370
+resonance imaging (MRI), positron emission tomography371
+(PET), other biological markers, and clinical and neuropsy-372
+chological assessment can be combined to measure the pro-373
+gression of MCI and early AD.374
+4.2. Datasets and Experimental Setup375
+We used resting-state fMRI (rs-fMRI) and T1-weighted376
+anatomical images from the Alzheimer’s Disease Neu-377
+roimaging Initiative (ADNI) database. Two subsets were378
+included: scans acquired on 3.0-Tesla Philips scanners and379
+on 3.0-Tesla Siemens MAGNETOM Prisma-fit scanners.380
+For the Philips subset, rs-fMRI data were collected with381
+echo-planar imaging (EPI) and a voxel resolution of3×3×3382
+mm³ over 140 time points. The Siemens subset used383
+gradient-echo EPI with a voxel resolution of3.4×3.4×3.4384
+mm³ and 197 volumes per session. T1-weighted anatom-385
+ical images (3D gradient-echo for Philips, MPRAGE for386
+Siemens) were included for standard preprocessing (seg-387
+mentation, normalization, and coregistration). In total, 100388
+subjects were used, including both Alzheimer’s disease389
+(AD) and normal control (NC) participants. We first held390
+out 25 subjects as the test set. The remaining 75 subjects391
+were split into training and validation sets using a random392
+80/20 split.393
+The model was trained with a batch size of 4 and opti-394
+mized using the AdamW optimizer with a learning rate of395
+5REDACTED
+
+---PAGE BREAK---
+
+3×10−4and weight decay of10−4. Early stopping was ap- 396
+plied based on the validationκ. Training was terminated if 397
+κdid not improve for 10 consecutive epochs, and the check- 398
+point with the highest validationκwas used for final testing. 399
+We compare with transformer-based, graph convolutional 400
+(GCN), and 3D CNN baselines. Implementation details are 401
+provided in the supplementary material.402
+4.3. Quantitative Results403
+We evaluate GeoMAMBA-AD under a realistic clinical de- 404
+ployment scenario characterized by scanner-induced do- 405
+main shift. The definitions of all evaluation metrics are 406
+provided in the supplementary material. This experiment 407
+examines whether the model can learn disease-relevant tem- 408
+poral representations rather than relying on scanner-specific 409
+statistics, thereby providing a more faithful measure of clin- 410
+ical generalizability. This setup reflects a common chal- 411
+lenge in neuroimaging research, where increasing sample 412
+size across clinical centers inevitably introduces domain 413
+shifts due to scanner-specific hardware and acquisition dis- 414
+crepancies. To simulate this, we allocate 75 subjects for 415
+training validation and designate 25 subjects (all randomly 416
+sampled from each scanner) as a cross-scanner dataset. In 417
+practice, this mixed-domain training often leads to the op- 418
+posite effect: instead of learning stable disease signatures, 419
+the network rapidly locks onto scanner-specific low-level 420
+statistics as the most discriminative cues during optimiza- 421
+tion. Since scanner-induced intensity distributions are often 422
+more dominant and easier to separate than subtle patholog- 423
+ical patterns, the model prioritizes domain separation over 424
+disease separation, resulting in a latent space that is well- 425
+clustered by scanner, but not really aligned with clinical 426
+labels. With John ellipsoid–based source separation, the 427
+geometry-stabilized latent sources become less sensitive to 428
+cross-scanner domain shift, enabling GeoMAMBA-AD to 429
+achieve SOTA performance across scanners.430
+Compared to this, several peer methods reveal varying 431
+degrees of sensitivity to domain shifts. BCGCN, which em- 432
+ploys graph convolutional networks to model brain data us- 433
+ing only ROI-based features, underperforms in this setting. 434
+Its lack of temporal information matrices limits its abil- 435
+ity to capture individualized dynamic changes of network 436
+structures, thereby reducing generalizability across hetero- 437
+geneous domains. STGTN incorporates a spatiotemporal 438
+transformer architecture with adjacency initialization (via 439
+AAL’s 116-ROI template), graph modeling, and adversarial 440
+training. Among all peer methods, it demonstrates the most 441
+stable performance under cross-scanner conditions. This 442
+suggests that while its architectural components help mit- 443
+igate scanner-induced variability, substantial domain shifts 444
+still pose challenges even for robust models. Finally, we 445
+replicate the gICA 3D-VGG model, which contains over 446
+86 million parameters, to evaluate the generalizability of 447group ICA-based approaches. While group ICA is theo-448
+retically designed to extract common functional networks449
+across subjects by jointly decomposing the entire dataset, its450
+effectiveness can be compromised under cross-scanner sce-451
+narios. Scanner heterogeneity in signal characteristics may452
+distort the group-level decomposition, resulting in compo-453
+nents that fail to capture scanner-independent neural pat-454
+terns. In our experiments, the gICA 3D-VGG model per-455
+forms suboptimally on the cross-scanner dataset, suggesting456
+that the representations learned through ICA do not gener-457
+alize well across imaging domains—despite their intended458
+inter-subject consistency. In contrast, our method (based on459
+JE-based BSS and a dual-track structure) achieves higher460
+accuracy with only 1976,260 parameters, nearly 4 times461
+fewer than the reproduced VGG model. These results un-462
+derscore the benefit of combining a source separation ap-463
+proach that relaxes the independence assumption with dual-464
+track feature learning, enabling robust performance under465
+scanner-induced heterogeneity.466
+4.4. Ablation of Non-trainable Stage467
+In this experiment, we evaluate the robustness of differ-468
+ent blind source decomposition strategies used in the non-469
+trainable stage of the framework. Specifically, we com-470
+pare the widely-used group-wise Independent Component471
+Analysis (gICA) with our proposed geometric ellipsoid-472
+based blind source separation (JE-BSS). To ensure fair473
+comparison, the entire downstream trainable pipeline of474
+GeoMAMBA-AD is kept identical across both settings;475
+only the non-trainable decomposition module is switched.476
+As shown in Table 2, replacing JE-BSS with gICA leads477
+to a substantial performance drop (OA: 92.00% down to478
+76.00%,κ: 83.87 down to 48.28), confirming that conven-479
+tional ICA-based latent source extraction is less stable in480
+heterogeneous rs-fMRI scenarios. When comparing against481
+peer methods that also rely on gICA-based preprocessing482
+(cf. Table 1), we observe that even with the same latent483
+source initialization, using a lightweight Mamba backbone484
+together with our temporal interaction modeling (cf. Sec-485
+tion 4.5 for temporal branch analysis) still yields perfor-486
+mance gains (higher precision). This suggests that Mamba487
+is naturally suitable for scenarios with limited training sam-488
+ples. Although most prior Mamba studies have been con-489
+ducted outside the neuroimaging domain, recent work has490
+already shown that Mamba-based models can outperform491
+CNN architectures under data-scarce medical settings [39].492
+Motivated by this, we investigate whether such small-data493
+advantages of Mamba can also transfer to rs-fMRI based494
+Alzheimer’s disease classification. Our results show that495
+this advantage carries over to rs-fMRI, even when the up-496
+stream latent decomposition relies on gICA.497
+6REDACTED
+
+---PAGE BREAK---
+
+Figure 2. IG-based ROI attribution visualization of the first geometry source for 8 selected subjects across Philips and Siemens scanners
+under both AD and NC conditions. Plots (a–d) correspond to Philips subjects (AD: a–b; NC: c–d), and plots (e–h) correspond to Siemens
+subjects (AD: e–f; NC: g–h). Peak IG values highlight three control-related subsystems: the cortical Frontoparietal Control Network (FPN)
+core (MFG, SFG/SFGmed, IPL), the Fronto–Cingulo–Striatal (FCS) circuit (ACC, CAU, SFG), and the canonical Fronto–Striatal–Thalamo
+(FST) recurrent loop (ACC, CAU, THA).
+4.5. Ablation of Spatiotemporal Stage498
+To further examine the contribution of each trainable com- 499
+ponent, we conduct ablation experiments on the trainable 500
+stage of GeoMAMBA-AD. In this ablation study, we iso- 501
+late the Mamba-based branch and the temporal condition- 502
+ing branch, evaluating each individually while keeping the 503
+non-trainable JE-BSS stage fixed (cf. Table 3).504
+This ablation is necessary to confirm that the great per- 505
+formance does not originate from a single dominant com- 506ponent, but rather from the synergy of both trainable mod-507
+ules. As shown in Table 3, neither branch alone is suffi-508
+cient to achieve satisfactory performance under limited rs-509
+fMRI training data. Using the Mamba branch alone yields510
+68.00% OA, while relying solely on the temporal inter-511
+action branch further degrades performance. In contrast,512
+when both mechanisms are jointly enabled, GeoMAMBA-513
+AD reaches 92.00% OA and 83.87κ, demonstrating that514
+the two branches are complementary rather than redundant.515
+7REDACTED
+
+---PAGE BREAK---
+
+Table 1. Comparison of different deep learning methods. Bold-
+faced entries denote the highest performance scores.
+Method OA (%)κ(×100)Precision Recall F1 score
+BCGCN [28] 68.00 28.57 0.67 0.40 0.50
+gICA 3D-VGG [30] 72.00 40.67 0.67 0.60 0.63
+STGTN [29] 72.00 46.15 0.60 0.90 0.72
+GeoMAMBA-AD92.00 83.87 0.83 1.00 0.91
+Table 2. Ablation of the non-trainable stage. Bold-faced entries
+denote the highest performance scores.
+Method OA (%)κ(×100)Precision Recall F1 score
+gICA 76.00 48.28 0.75 0.60 0.67
+JE-BSS92.00 83.87 0.83 1.00 0.91
+Table 3. Ablation of the trainable stage. Bold-faced entries denote
+the highest performance scores.
+Method OA (%)κ(×100)Precision Recall F1 score
+Mamba branch only 68.00 31.03 0.62 0.50 0.56
+Temporal branch only 64.00 21.05 0.57 0.40 0.47
+GeoMAMBA-AD92.00 83.87 0.83 1.00 0.91
+This indicates that both selective state-space feature learn- 516
+ing and dynamic temporal information are necessary for 517
+stabilizing downstream learning after JE-BSS decomposi- 518
+tion, and their synergy is critical for extracting reliable AD- 519
+discriminative representations from rs-fMRI. Importantly, 520
+this also aligns with clinical experience, where temporal 521
+dynamics carry meaningful physiological information [40]; 522
+yet peer gICA-based pipelines tend to discard the corre- 523
+sponding matrices entirely [30], which could partially ex- 524
+plain their inferior performance under this setting.525
+4.6. Gradient-Based Identification of Neural Con- 526
+trol Subsystems527
+Unlike group-wise statistical decomposition methods that 528
+directly project shared group-level spatial patterns, our 529
+individual geometry BSS extracts subject-specific latent 530
+sources. Therefore, it is necessary to examine whether 531
+these individualized sources still reflect known neurobio- 532
+logical networks. In this study, we specifically used peak 533
+integrated gradients (IG) attribution values [41] to quan- 534
+tify which anatomical ROIs contribute most strongly, en- 535
+suring that only the most discriminative nodes were consid- 536
+ered (detailed implementation is provided in supplementary 537
+material). To this end, we applied IG attribution analysis 538
+to identify which anatomical ROIs the AI model relied on 539
+when making the AD/NC decision based on the geometry- 540
+derived source representations. This enables direct inspec- 541
+tion of where the model assigns biological evidence during 542
+inference, as demonstrated in Fig. 2, where only the first 543
+source of each subject is visualized.544
+IG attribution maps from the first source of each subject 545
+consistently revealed three functional control subsystems, 546each exerting distinct influence on the model’s AD classifi-547
+cation decision:548
+•Frontoparietal Control Network (FPN) Core:High IG549
+contributions were observed in the middle frontal gyrus550
+(MFG), superior frontal gyrus (SFG/SFGmed), and infe-551
+rior parietal lobule (IPL), as Fig. 2 shown. These cortical552
+regions form the canonical FPN core supporting executive553
+control. Their strong contributions suggest that disruption554
+of top-down control processes provides salient discrimi-555
+native cues for AD [42, 43].556
+•Fronto–Cingulo–Striatal (FCS) Control Circuit:A557
+second subsystem involved the anterior cingulate cor-558
+tex (ACC), caudate nucleus (CAU), and superior frontal559
+gyrus (SFG), as illustrated in Fig. 2e. This FCS circuit560
+corresponds to a cortico–cingulo–striatal executive con-561
+trol pathway, which has been linked to frontal–striatal562
+contributions to cognitive control and behavioral regula-563
+tion [44, 45].564
+•Fronto-Striatal-Thalamo (FST) Recurrent Circuit:A565
+third cluster included the ACC, CAU, and thalamus566
+(THA). This FST circuit corresponds to the canonical567
+cortico-basal-ganglia-thalamic recurrent loop (cf. Fig. 2).568
+The contribution of this recurrent control loop suggests569
+that disruption of closed-loop executive regulation further570
+supports AD vs. NC differentiation [46, 47].571
+Overall, these results demonstrate that the proposed572
+geometry-based source extraction does not produce arbi-573
+trary spatial mixtures, but identifies three well-characterized574
+executive control subsystems (FPN core, FCS, and FST)575
+known to be impacted during early-stage Alzheimer’s dis-576
+ease. In addition, IG-based interpretability further shows577
+that the model relies on these disease-relevant networks578
+when making AD decisions, providing alignment with clin-579
+ically recognized neurocognitive mechanisms and enhanc-580
+ing the trustworthiness of the proposed framework from a581
+clinical interpretation perspective.582
+5. Conclusion583
+In this work, we presented GeoMAMBA-AD, a John584
+ellipsoid-based blind source separation and Mamba-based585
+spatiotemporal learning framework for Alzheimer’s dis-586
+ease detection from small-sample rs-fMRI. By introduc-587
+ing individual-level JE-BSS, selective state-space feature588
+learning, and temporal conditioning, the proposed method589
+achieves high disease separability (92% OA) and main-590
+tains robust discriminative performance under heteroge-591
+neous small-data and mixed-scanner conditions. Moreover,592
+IG-based analysis identifies functional networks and con-593
+trol circuits (e.g., FPN, FCS, and FST) previously linked594
+to AD, supporting the neurobiological relevance of the ge-595
+ometry sources. Overall, integrating geometric priors with596
+Mamba offers a promising direction toward clinically reli-597
+able rs-fMRI early AD detection.598
+8REDACTED
+
+---PAGE BREAK---
+
+References599
+[1] L. Hebert, J. Weuve, P. Scherr, and D. Evans, “Alzheimer 600
+disease in the United States (2010–2050) estimated using the 601
+2010 Census,”Neurology, vol. 80, 02 2013. 1602
+[2] G. Rabinovici, D. Selkoe, S. Schindler, P. Aisen, L. Apos- 603
+tolova, A. Atri, S. Greenberg, S. Hendrix, R. Petersen, 604
+M. Weiner, S. Salloway, and J. Cummings, “Donanemab: 605
+Appropriate use recommendations,”The Journal of Preven- 606
+tion of Alzheimer’s Disease, vol. 12, no. 5, p. 100150, 2025. 607
+1608
+[3] M. Fernandez-Alvarez, M. Atienza, and J. L. Cantero, “Cor- 609
+tical amyloid-beta burden is associated with changes in in- 610
+tracortical myelin in cognitively normal older adults,”Trans- 611
+lational Psychiatry, vol. 13, no. 1, p. 115, 2023. 1612
+[4] L. Raimondo, J. Heij, N. Priovoulos, P. Kundu, R. F. 613
+Leoni, W. van der Zwaag,et al., “Advances in resting state 614
+fmri acquisitions for functional connectomics,”Neuroimage, 615
+vol. 243, p. 118503, 2021. 1616
+[5] C. Wang, L. Zhou, F. Zhou, and T. Fu, “The application value 617
+of rs-fmri-based machine learning models for differentiating 618
+mild cognitive impairment from alzheimer’s disease: A sys- 619
+tematic review and meta-analysis,”Neurological Sciences, 620
+vol. 46, no. 1, pp. 45–62, 2025. 1621
+[6] F. Ramzan, M. U. G. Khan, A. Rehmat, S. Iqbal, T. Saba, 622
+A. Rehman, and Z. Mehmood, “A deep learning approach 623
+for automated diagnosis and multi-class classification of 624
+alzheimer’s disease stages using resting-state fmri and resid- 625
+ual neural networks,”Journal of medical systems, vol. 44, 626
+no. 2, p. 37, 2020.627
+[7] S. Sarraf and G. Tofighi, “Deep learning-based pipeline to 628
+recognize alzheimer’s disease using fmri data,” in2016 fu- 629
+ture technologies conference (FTC), pp. 816–820, IEEE, 630
+2016.631
+[8] H.-I. Suk, S.-W. Lee, D. Shen, A. D. N. Initiative,et al., “Hi- 632
+erarchical feature representation and multimodal fusion with 633
+deep learning for ad/mci diagnosis,”NeuroImage, vol. 101, 634
+pp. 569–582, 2014. 1635
+[9] G. Yang, K. Du, Z. Yang, Y . Du, Y . Zheng, and S. Wang, 636
+“CMViM: Contrastive masked vim autoencoder for 3D 637
+multi-modal representation learning for ad classification,” 638
+arXiv preprint arXiv:2403.16520, 2024. 1, 2639
+[10] J. Jang and D. Hwang, “M3T: Three-dimensional med- 640
+ical image classifier using multi-plane and multi-slice 641
+transformer,” inProceedings of the IEEE/CVF Confer- 642
+ence on Computer Vision and Pattern Recognition (CVPR), 643
+pp. 20718–20729, June 2022. 2644
+[11] M. V , S. Padhye, S. S. Madarkar, S. Agrawal, and K. R. Mop- 645
+uri, “Rel-SA: Alzheimer’s disease detection using relevance- 646
+augmented self attention by inducing domain priors in vi- 647
+sion transformers,” in2025 IEEE/CVF Conference on Com- 648
+puter Vision and Pattern Recognition Workshops (CVPRW), 649
+pp. 2792–2801, 2025.650
+[12] J. Islam and Y . Zhang, “Early diagnosis of Alzheimer’s dis- 651
+ease: A neuroimaging study with deep learning architec- 652
+tures,” inProceedings of the IEEE Conference on Computer 653
+Vision and Pattern Recognition (CVPR) Workshops, June 654
+2018.655[13] C. Wang, L. Guo, Y . Wang, H. Cheng, Y . Yu, and B. Wen,656
+“Progressive divide-and-conquer via subsampling decompo-657
+sition for accelerated MRI,” inProceedings of the IEEE/CVF658
+Conference on Computer Vision and Pattern Recognition659
+(CVPR), pp. 25128–25137, June 2024. 1660
+[14] K. Murphy, R. M. Birn, and P. A. Bandettini, “Resting-661
+state fMRI confounds and cleanup,”NeuroImage, vol. 80,662
+pp. 349–359, 2013. Mapping the Connectome. 2663
+[15] A. A. Chen, D. Srinivasan, R. Pomponio, Y . Fan, I. M.664
+Nasrallah, S. M. Resnick, L. L. Beason-Held, C. Da-665
+vatzikos, T. D. Satterthwaite, D. S. Bassett, R. T. Shino-666
+hara, and H. Shou, “Harmonizing functional connectivity re-667
+duces scanner effects in community detection,”NeuroImage,668
+vol. 256, p. 119198, 2022. 2669
+[16] A. Yamashita, N. Yahata, T. Itahashi, G. Lisi, T. Yamada,670
+N. Ichikawa, M. Takamura, Y . Yoshihara, A. Kunimatsu,671
+N. Okada,et al., “Harmonization of resting-state functional672
+MRI data across multiple imaging sites via the separation of673
+site differences into sampling bias and measurement bias,”674
+PLoS biology, vol. 17, no. 4, p. e3000042, 2019. 2675
+[17] A. Gu and T. Dao, “Mamba: Linear-time sequence modeling676
+with selective state spaces,” 2024. 2, 3, 4677
+[18] B. Li, H. Zhao, W. Wang, P. Hu, Y . Gou, and X. Peng,678
+“MaIR: A locality- and continuity-preserving Mamba for im-679
+age restoration,” inProceedings of the IEEE/CVF Confer-680
+ence on Computer Vision and Pattern Recognition (CVPR),681
+pp. 7491–7501, June 2025.682
+[19] L. Liu, M. Zhang, J. Yin, T. Liu, W. Ji, Y . Piao, and H. Lu,683
+“DefMamba: Deformable visual state space model,” inPro-684
+ceedings of the IEEE/CVF Conference on Computer Vision685
+and Pattern Recognition (CVPR), pp. 8838–8847, June 2025.686
+2687
+[20] M. K. A, A. Gurung, and P. Ranjan, “Vision Mamba:688
+Cutting-edge classification of Alzheimer’s disease with 3D689
+MRI scans,” 2024. 2690
+[21] L. Han, “AD-Diff: Enhancing Alzheimer’s disease predic-691
+tion accuracy through multimodal fusion,”Frontiers in Com-692
+putational Neuroscience, vol. V olume 19 - 2025, 2025. 2693
+[22] H. Xu, Y . Hao, Y . Zhang, D. Zhou, T. K ¨arkk¨ainen, L. Nick-694
+erson, H. Li, and F. Cong, “Harmonization of multi-site695
+functional MRI data with dual-projection based ICA model,”696
+Frontiers in Neuroscience, vol. 17, 07 2023. 2697
+[23] S. Marek, B. Tervo-Clemmens, F. Calabro, D. Montez,698
+B. Kay, A. Hatoum, M. Donohue, W. Foran, R. Miller,699
+T. Hendrickson, S. Malone, S. Kandala, E. Feczko, O. Mi-700
+randa Dominguez, A. Graham, E. Earl, A. Perrone, M. Cor-701
+dova, O. Doyle, and N. Dosenbach, “Reproducible brain-702
+wide association studies require thousands of individuals,”703
+Nature, vol. 603, pp. 1–7, 03 2022. 2704
+[24] C.-H. Lin and J. M. Bioucas-Dias, “Nonnegative blind705
+source separation for ill-conditioned mixtures via John Ellip-706
+soid,”IEEE Transactions on Neural Networks and Learning707
+Systems, vol. 32, no. 5, pp. 2209–2223, 2021. 2, 3708
+[25] M. Vasilescu and D. Terzopoulos, “Multilinear indepen-709
+dent components analysis,” in2005 IEEE Computer Soci-710
+ety Conference on Computer Vision and Pattern Recognition711
+(CVPR’05), vol. 1, pp. 547–553 vol. 1, 2005. 2712
+9REDACTED
+
+---PAGE BREAK---
+
+[26] A. Sadiq, N. Yahya, and T. B. Tang, “Diagnosis of 713
+Alzheimer’s disease using Pearson’s correlation and Reli- 714
+efF feature selection approach,” in2021 International Con- 715
+ference on Decision Aid Sciences and Application (DASA), 716
+pp. 578–582, 2021. 2717
+[27] D. S. Hl, S. M. Thomas, and S. K. S, “A multimodal ap- 718
+proach integrating convolutional and recurrent neural net- 719
+works for Alzheimer’s disease temporal progression predic- 720
+tion,” inProceedings of the IEEE/CVF Conference on Com- 721
+puter Vision and Pattern Recognition (CVPR) Workshops, 722
+pp. 5207–5215, June 2024. 2723
+[28] A. Alorf and M. U. G. Khan, “Multi-label classification of 724
+Alzheimer’s disease stages from resting-state fMRI-based 725
+correlation connectivity data and deep learning,”Computers 726
+in Biology and Medicine, vol. 151, p. 106240, 2022. 2, 8727
+[29] P. He, Z. Shi, Y . Cui, R. Wang, D. Wu, A. D. N. Initia- 728
+tive,et al., “A spatiotemporal graph transformer approach 729
+for Alzheimer’s disease diagnosis with rs-fMRI,”Computers 730
+in Biology and Medicine, vol. 178, p. 108762, 2024. 2, 3, 8 731
+[30] N. T. Duc, S. Ryu, M. N. I. Qureshi, M. Choi, K. H. Lee, 732
+and B. Lee, “3D-deep learning based automatic diagnosis 733
+of Alzheimer’s disease with joint MMSE prediction using 734
+resting-state fMRI,”Neuroinformatics, vol. 18, pp. 71–86, 735
+2020. 2, 8736
+[31] C.-H. Lin, C.-Y . Chi, Y .-H. Wang, and T.-H. Chan, “A fast 737
+hyperplane-based minimum-volume enclosing simplex algo- 738
+rithm for blind hyperspectral unmixing,”IEEE Transactions 739
+on Signal Processing, vol. 64, no. 8, pp. 1946–1961, 2015. 2 740
+[32] C.-H. Lin, C.-Y . Chi, L. Chen, D. J. Miller, and Y . Wang, 741
+“Detection of sources in non-negative blind source separa- 742
+tion by minimum description length criterion,”IEEE Trans- 743
+actions on Nneural Networks and Learning Systems, vol. 29, 744
+no. 9, pp. 4022–4037, 2017.745
+[33] C.-H. Lin and J.-T. Lin, “PRIME: Blind multispectral un- 746
+mixing using virtual quantum prism and convex geome- 747
+try,”IEEE Transactions on Geoscience and Remote Sensing, 748
+vol. 63, pp. 1–15, Feb. 2025.749
+[34] L. Miao and H. Qi, “A blind source separation perspective on 750
+image restoration,” in2007 IEEE Conference on Computer 751
+Vision and Pattern Recognition, pp. 1–7, 2007. 2752
+[35] I. Cifre, M. Flores, L. Penalba-S ´anchez, J. Ochab, and 753
+D. Chialvo, “Revisiting nonlinear functional brain co- 754
+activations: Directed, dynamic, and delayed,”Frontiers in 755
+Neuroscience, vol. 15, p. 700171, 10 2021. 3756
+[36] M. Wang, Y . Wang, and Y . Yang, “Dynamic and low- 757
+dimensional modeling of brain functional connectivity on 758
+Riemannian manifolds,”NeuroImage, vol. 314, p. 121243, 759
+2025. 3760
+[37] C.-Y . Chi, W.-C. Li, and C.-H. Lin,Convex Optimization 761
+for Signal Processing and Communications: From Funda- 762
+mentals to Applications. Boca Raton, FL, USA: CRC Press, 763
+2017. 3764
+[38] Y . Chen, X. Dai, M. Liu, D. Chen, L. Yuan, and Z. Liu, 765
+“Dynamic relu,” inEuropean conference on computer vision, 766
+pp. 351–367, Springer, 2020. 5767
+[39] B. Guo, W. Huang, and X. Wang, “ABE-Mamba: Few-shot 768
+medical image segmentation via adversarial bidirectional en- 769hanced Mamba,”Expert Systems with Applications, vol. 298,770
+p. 129897, 2026. 6771
+[40] M. G. Preti, T. A. Bolton, and D. Van De Ville, “The dy-772
+namic functional connectome: State-of-the-art and perspec-773
+tives,”NeuroImage, vol. 160, pp. 41–54, 2017. Functional774
+Architecture of the Brain. 8775
+[41] M. Sundararajan, A. Taly, and Q. Yan, “Axiomatic attribution776
+for deep networks,” 2017. 8777
+[42] T. P. Zanto and A. Gazzaley, “Fronto-parietal network: Flex-778
+ible hub of cognitive control,”Trends in Cognitive Sciences,779
+vol. 17, no. 12, pp. 602–603, 2013. Special Issue: The Con-780
+nectome. 8781
+[43] J. Kam, J. Lin, A. Solbakk, T. Endestad, P. Larsson, and782
+R. Knight, “Default network and frontoparietal control net-783
+work theta connectivity supports internal attention,”Nature784
+Human Behaviour, vol. 3, pp. 1–8, 12 2019. 8785
+[44] D. E. Nee, “Integrative frontal-parietal dynamics supporting786
+cognitive control,”eLife, vol. 10, p. e57244, mar 2021. 8787
+[45] M. Ainsworth and M. J. Buckley, “Disentangling frontal-788
+striatal contributions to exploration,”Neuron, vol. 113,789
+no. 16, pp. 2554–2555, 2025. 8790
+[46] E. Hari, C. Ulasoglu-Yildiz, E. Kurt, A. Bayram, H. Gurvit,791
+and T. Demiralp, “V olumetric and functional connectiv-792
+ity changes of the thalamic nuclei in different stages of793
+Alzheimer’s disease,”Clinical Neurophysiology, vol. 165,794
+pp. 127–137, 2024. 8795
+[47] Z. Chen, Q. Bo, L. Zhao, Y . shen Ding, Y . Wang, Q. Jiang,796
+F. Li, Y . Zhou, and C. Wang, “White matter abnormalities of797
+the frontal–striatal–thalamic circuit in individuals with atten-798
+uated positive symptom syndromes: A probabilistic tractog-799
+raphy study,”Schizophrenia, vol. 11, 2025. 8800
+10REDACTED
+
+---PAGE BREAK---
+
+
