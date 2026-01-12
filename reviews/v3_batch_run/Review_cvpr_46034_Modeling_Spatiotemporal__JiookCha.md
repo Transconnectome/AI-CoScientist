@@ -8,38 +8,38 @@
 ### 1. Summary
 The paper proposes a Diffusion Transformer (DiT) framework for EEG-conditioned fMRI reconstruction. The authors introduce a "Null-space constrained sampling" mechanism (InterRecon) to reconstruct intermediate fMRI frames using EEG guidance while maintaining consistency with sparse "anchor" fMRI frames. The method is validated on the CineBrain dataset using standard reconstruction metrics (MSE, SSIM) and a downstream functional task (visual decoding).
 
-### 2. Strengths
-*   **Methodological Integration**: The adaptation of Null-space sampling (typically used in inverse imaging problems like super-resolution) to the domain of multimodal neuroimaging is a logical and elegant step. It addresses the practical issue of differing temporal resolutions between EEG and fMRI.
-*   **Functional Validation**: The inclusion of a downstream visual decoding task (Figure 5) is a significant strength. In Neuro-AI, pixel-level metrics (MSE) are often insufficient; demonstrating that the reconstructed signal retains semantic content (scene layout, posture) is critical.
-*   **Honest Reporting (Data)**: As noted in the visual analysis, Table 1 correctly bolds the baseline (E2FGAN) where it outperforms the proposed method. This transparency regarding raw data is appreciated, even if the text fails to reflect it.
-
-### 3. Weaknesses
-*   **Scientific Contradiction (Fatal)**: There is a direct conflict between the claims in the text and the empirical evidence. Line 401 states the method "consistently outperforms prior other methods." **Table 1 proves this false.** The baseline (E2FGAN) achieves lower MSE in multiple categories (e.g., Frame 3 Whole Brain, Frame 10 Visual+Audio). You cannot claim SOTA dominance when your own data shows mixed results.
-*   **The "Linearity" Crutch**: Section 3.3 describes a "Linear fMRI autoencoder" used to enable the null-space projection. While this makes the math for $A^\dagger$ convenient, it is **biologically reductive**. Neural manifolds and BOLD signal dynamics are inherently non-linear. Forcing a linear compression likely discards the very "high-resolution brain dynamics" the title promises.
-*   **Presentation Quality**: Figure 3 is illegible. In a top-tier computer vision conference, presenting data with microscopic axis labels is grounds for immediate dismissal.
-
-### 4. Figures and Tables
-This section details specific issues found in the figures and tables presented in the paper.
-*   **Figure 3 (Performance Plots)**: **Unacceptable.** The font size on axes and legends is microscopic. The linewidths are too thin to distinguish between methods. This figure is effectively useless in its current state.
-*   **Figure 2 (Architecture)**: The internal text within the blocks (e.g., "Linear," "Layer Norm") is illegible at standard zoom.
-*   **Table 1 vs. Text**: As noted in the Weaknesses, the text claims must be rewritten to align with the table. If performance drops on MSE but improves on SSIM/Correlation, it should be argued that the method preserves *structure* better than *magnitude*. SOTA dominance should not be claimed broadly when the data shows mixed results.
-
-### 5. Relation to SOTA & Novelty
+### 2. AI Architectural Innovation & SOTA Context
 The work builds upon standard Diffusion Transformers (DiT) and EEG-fMRI translation (E2FGAN, NeuroBOLT).
 *   **Novelty**: The application of Null-space sampling (InterRecon) to this specific modality pair is the primary novelty.
 *   **SOTA Context**: The paper fails to convincingly dethrone E2FGAN. While DiTs are powerful, they are computationally expensive compared to GANs. If the DiT does not yield superior MSE, the argument must hinge entirely on the "InterRecon" capability or functional decoding. The paper currently muddies this distinction by making false claims about reconstruction fidelity.
 
-### 6. Neuro-AI Considerations
+### 3. Neuro-AI Considerations
 The **Linear Autoencoder** (Section 3.3) represents a significant theoretical flaw in the context of neuroimaging.
 *   **Biological Plausibility**: The brain is a non-linear dynamical system. Compressing voxel-wise fMRI data ($N_v$) to a latent space ($d$) via a simple matrix multiplication ($W x$) assumes that brain states lie on a linear hyperplane. This is false.
 *   **Recommendation**: The authors should have employed **Diffusion Posterior Sampling (DPS)** or similar guidance techniques that allow for non-linear measurement operators, rather than limiting the autoencoder to fit a linear null-space projection.
+*   **Temporal Alignment**: Clarification is needed regarding the temporal alignment in Section 3.1. It should be specified if a canonical HRF convolution was used or if the model learns the hemodynamic lag implicitly.
+
+### 4. Strengths
+*   **Methodological Integration**: The adaptation of Null-space sampling (typically used in inverse imaging problems like super-resolution) to the domain of multimodal neuroimaging is a logical and elegant step.
+*   **Functional Validation**: The inclusion of a downstream visual decoding task (Figure 5) is a significant strength. Demonstrating that the reconstructed signal retains semantic content (scene layout, posture) is critical.
+*   **Honest Reporting (Data)**: Table 1 correctly bolds the baseline (E2FGAN) where it outperforms the proposed method. This transparency regarding raw data is appreciated.
+
+### 5. Weaknesses
+*   **Scientific Contradiction (Fatal)**: There is a direct conflict between the claims in the text and the empirical evidence. Line 401 states the method "consistently outperforms prior other methods." **Table 1 proves this false.** The baseline (E2FGAN) achieves lower MSE in multiple categories. One cannot claim SOTA dominance when the data shows mixed results.
+*   **The "Linearity" Crutch**: As detailed in the Neuro-AI section, the reliance on a linear autoencoder ($W x$) for complex BOLD signal dynamics is a theoretical weakness that limits the model's ceiling.
+*   **Presentation Quality**: Visual clarity is lacking. Figure 3 is illegible due to microscopic axis labels, which is unacceptable for a top-tier computer vision conference.
+
+### 6. Figures and Tables
+*   **Figure 3 (Performance Plots)**: **Unacceptable.** The font size on axes and legends is microscopic. The linewidths are too thin to distinguish between methods.
+*   **Figure 2 (Architecture)**: The internal text within the blocks (e.g., "Linear," "Layer Norm") is illegible at standard zoom.
+*   **Table 1 vs. Text**: As noted in the Weaknesses, the text claims must be rewritten to align with the empirical results. If performance drops on MSE but improves on SSIM/Correlation, the argument should hinge on structural preservation.
 
 ### 7. Actionable Items
 1.  **Visualization Quality:** Increase font sizes in Figure 3 and clarify the units for the error map in Figure 4 (e.g., percent signal change).
 2.  **Theoretical Justification:** Explicitly discuss the limitations and potential information loss associated with the Linear Autoencoder assumption.
-3.  **Temporal Alignment:** Clarify whether a canonical HRF convolution was used or if the model learns the hemodynamic lag implicitly.
+3.  **Temporal Alignment:** Provide specific details on the HRF modeling or lag-learning mechanism used in the InterRecon framework.
 
 ### 8. Final Recommendation
 **REJECT**
 
-While the "InterRecon" concept is promising, the submission suffers from a fatal lack of rigor. The contradiction between the text claims and Table 1 is a breach of scientific precision. Furthermore, the reliance on a linear autoencoder for biological data is a theoretical weakness that limits the model's ceiling. Combined with illegible plots (Figure 3), this paper is not ready for publication. A resubmission that honestly discusses the trade-offs (MSE vs. Semantics) and implements a non-linear guidance method is encouraged.
+While the "InterRecon" concept is promising, the submission suffers from a fatal lack of rigor. The contradiction between the text claims and Table 1 is a breach of scientific precision. Furthermore, the reliance on a linear autoencoder for biological data is a theoretical weakness that limits the model's ceiling. Combined with illegible plots (Figure 3), this paper is not ready for publication.

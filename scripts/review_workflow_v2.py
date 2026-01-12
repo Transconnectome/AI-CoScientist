@@ -140,12 +140,12 @@ class ReviewOrchestrator:
         - STRUCTURE:
             0. **ECMARS Dashboard** (See below)
             1. Summary
-            2. Strengths (Be specific)
-            3. Weaknesses (Crucial part)
-            4. **Visual Critique** (Synthesize the Visual Report here)
-            5. **Relation to SOTA & Novelty** (Use SOTA Context)
-            6. **Neuro-AI Perspective** (If applicable, critique biological plausibility)
-            7. Detailed Feedback
+            2. **AI Architectural Innovation & SOTA Context** (Use SOTA Context)
+            3. **Neuro-AI Considerations** (If applicable, critique biological plausibility)
+            4. Strengths (Be specific)
+            5. Weaknesses (Crucial part)
+            6. **Figures and Tables** (Synthesize the Visual Report here)
+            7. Actionable Items
             8. Final Recommendation (Strong Accept...Strong Reject)
         """
         
