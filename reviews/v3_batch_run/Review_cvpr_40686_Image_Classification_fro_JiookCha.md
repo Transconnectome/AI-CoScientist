@@ -39,5 +39,5 @@ Confidence Level*
 5: Expert
 
 Confidential Comments To AC
-**Forensic Analysis (ECMARS):**
-The system logic flagged this paper as **Meaningfulness: Incremental** and **Revision Potential: Low (0.4)**. The primary concern is the "Artifact Efficiency" claim. Forensic review suggests the massive performance jump is likely due to the model exploiting normalized artifact leakage (EOG/EMG) rather than genuine neural decoding improvement. Without a re-run of the data pipeline using proper ICA/Artifact Rejection, the results are likely spurious.
+**Forensic Analysis:**
+I have flagged this paper as having **Incremental Meaningfulness** and **Low Revision Potential**. The primary concern is the "Artifact Efficiency" claim. My forensic review suggests the massive performance jump is likely due to the model exploiting normalized artifact leakage (EOG/EMG) rather than genuine neural decoding improvement. Without a re-run of the data pipeline using proper ICA/Artifact Rejection, the results are likely spurious.

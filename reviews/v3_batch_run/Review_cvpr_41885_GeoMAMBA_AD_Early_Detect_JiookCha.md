@@ -36,5 +36,5 @@ Confidence Level*
 5: Expert
 
 Confidential Comments To AC
-**Forensic Analysis (ECMARS):**
-ECMARS flagged this paper as **Meaningfulness: Pseudoscience/Flawed**. The perfect Recall ($1.0$) on a noisy medical dataset is a "Smoking Gun" for data leakage. It is highly likely the authors performed the BSS Unmixing on the full dataset *before* splitting, allowing the test set to leak into the projection matrix. This effectively invalidates the entire study.
+**Forensic Analysis:**
+I classify this paper as **Pseudoscience/Flawed**. The perfect Recall ($1.0$) on a noisy medical dataset is a "Smoking Gun" for data leakage. It is highly likely the authors performed the BSS Unmixing on the full dataset *before* splitting, allowing the test set to leak into the projection matrix. This effectively invalidates the entire study.

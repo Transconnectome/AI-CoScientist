@@ -36,5 +36,5 @@ Confidence Level*
 5: Expert
 
 Confidential Comments To AC
-**Forensic Analysis (ECMARS):**
-ECMARS flagged this paper as **Revision Potential: High (0.8)**. Unlike the other submissions, the core methodology here is sound (DiT + Null-space sampling). The "Reject" is driven by the **Self-Contradiction** (Text says "We win", Table says "We lose") and **Presentation Quality**. This paper *could* be salvageable in a future cycle if the authors moderate their claims and fix the visualizations, but it cannot be accepted in its current contradictory state.
+**Forensic Analysis:**
+I consider this paper to have **High Revision Potential**. Unlike the other submissions, the core methodology here is sound (DiT + Null-space sampling). The "Reject" is driven by the **Self-Contradiction** (Text says "We win", Table says "We lose") and **Presentation Quality**. This paper *could* be salvageable in a future cycle if the authors moderate their claims and fix the visualizations, but it cannot be accepted in its current contradictory state.
