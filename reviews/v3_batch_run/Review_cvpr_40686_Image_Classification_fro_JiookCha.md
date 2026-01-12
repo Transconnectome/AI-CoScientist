@@ -17,7 +17,7 @@ The paper proposes "TS-SpectrumNet" (referred to inconsistently as "EEG-TSSnet")
 *   **Nomenclature Inconsistency:** The paper inconsistently refers to the model as **"TS-SpectrumNet"** (title/abstract) and **"EEG-TSSnet"** (Table 1). While minor, this lack of polish creates unnecessary confusion.
 *   **Questionable "Artifact" Handling:** The "Channel-wise normalization" (Section 3.1) is presented as a novel contribution to handle artifacts. However, simple Z-score normalization does not *remove* artifacts (like EOG/EMG); it merely scales them. If the model performance jumps from 7% to 15% based on this, there is a high probability the model is learning to classify the *scaled artifacts* (e.g., subject blinking or clenching in response to specific stimuli) rather than neural correlates.
 *   **Misleading Efficiency Claims:** The authors claim superior efficiency. While smaller than EEGChannelNet, Table 1 shows the proposed model (0.05M) is **5x larger** than the direct competitor EEGNet (0.01M). The text glosses over this, framing the comparison primarily against the largest models.
-*   **Visual Redundancy:** Figure 1 is scientifically vacuous. It wastes valuable page real estate showing generic ImageNet photos rather than explaining the complex EEG trial structure.
+*   **Space Utilization:** Figure 1 displays generic ImageNet photos, which offers limited scientific insight. This space could be more effectively used to illustrate the distinction between Randomized and Deterministic trial structures.
 
 ### 4. Visual Critique
 The visual presentation falls below the standard required for CVPR/NeurIPS.
