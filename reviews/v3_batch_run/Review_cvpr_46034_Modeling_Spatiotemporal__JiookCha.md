@@ -16,9 +16,10 @@ The paper proposes a Diffusion Transformer (DiT) framework for EEG-conditioned f
 ### 3. Weaknesses
 *   **Scientific Contradiction (Fatal)**: There is a direct conflict between the claims in the text and the empirical evidence. Line 401 states the method "consistently outperforms prior other methods." **Table 1 proves this false.** The baseline (E2FGAN) achieves lower MSE in multiple categories (e.g., Frame 3 Whole Brain, Frame 10 Visual+Audio). You cannot claim SOTA dominance when your own data shows mixed results.
 *   **The "Linearity" Crutch**: Section 3.3 describes a "Linear fMRI autoencoder" used to enable the null-space projection. While this makes the math for $A^\dagger$ convenient, it is **biologically reductive**. Neural manifolds and BOLD signal dynamics are inherently non-linear. Forcing a linear compression likely discards the very "high-resolution brain dynamics" the title promises.
-*   **Visual Incompetence**: Figure 3 is illegible. In a top-tier computer vision conference, presenting data with microscopic axis labels is grounds for immediate dismissal.
+*   **Presentation Quality**: Figure 3 is illegible. In a top-tier computer vision conference, presenting data with microscopic axis labels is grounds for immediate dismissal.
 
-### 4. Visual Critique
+### 4. Figures and Tables
+This section details specific issues found in the figures and tables presented in the paper.
 *   **Figure 3 (Performance Plots)**: **Unacceptable.** The font size on axes and legends is microscopic. The linewidths are too thin to distinguish between methods. This figure is effectively useless in its current state.
 *   **Figure 2 (Architecture)**: The internal text within the blocks (e.g., "Linear," "Layer Norm") is illegible at standard zoom.
 *   **Table 1 vs. Text**: As noted in the Weaknesses, the text claims must be rewritten to align with the table. If you lose on MSE but win on SSIM/Correlation, argue that your method preserves *structure* better than *magnitude*. Do not claim you "outperform" broadly when you do not.

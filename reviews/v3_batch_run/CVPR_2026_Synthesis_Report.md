@@ -28,7 +28,7 @@ The system rejected this paper not due to low performance (15.1% is high), but d
     *   *Premise A*: Randomized EEG trials evoke surprise/startle responses (artifacts) that correlate with specific image classes.
     *   *Premise B*: Normalization scales these artifacts but keeps their morphology.
     *   *Conclusion*: The model is likely classifying the "startle" artifact, not the neural image representation.
-5.  **Visual Evidence**: Figure 3 (EEG signals) was flagged as "microscopic" and "illegible," preventing verification of clean data.
+5.  **Evidence from Figures and Tables**: Figure 3 (EEG signals) was flagged as "microscopic" and "illegible," preventing verification of clean data.
 
 **Outcome**: The paper was classified as **Incremental** (at best) due to the likely artifact confounding, effectively nullifying the "SOTA" claim.
 

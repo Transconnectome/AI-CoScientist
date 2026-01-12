@@ -19,8 +19,8 @@ The paper proposes "TS-SpectrumNet" (referred to inconsistently as "EEG-TSSnet")
 *   **Misleading Efficiency Claims:** The authors claim superior efficiency. While smaller than EEGChannelNet, Table 1 shows the proposed model (0.05M) is **5x larger** than the direct competitor EEGNet (0.01M). The text glosses over this, framing the comparison primarily against the largest models.
 *   **Space Utilization:** Figure 1 displays generic ImageNet photos, which offers limited scientific insight. This space could be more effectively used to illustrate the distinction between Randomized and Deterministic trial structures.
 
-### 4. Visual Critique
-The visual presentation falls below the standard required for CVPR/NeurIPS.
+### 4. Figures and Tables
+The clarity and presentation of figures and tables fall below the standards required for CVPR.
 *   **Figure 1 (Stimuli):** **Remove.** We know what a "parachute" looks like. Replace this with a diagram illustrating the difference between Randomized vs. Deterministic trial structures, which is central to your problem statement.
 *   **Figure 2 (Architecture):** Cluttered. The SpecRL module flow is tangled. The connection between the Wavelet Transform (WT) and the Inverse (IWT) needs to be linearized for readability.
 *   **Figure 3 (EEG Signals):** **Unacceptable.** The axes labels are microscopic. Subplot (a) is compressed to a solid block of color; no oscillation is visible. You cannot claim to show "stable oscillatory waveforms" if the plot resolution renders them invisible.
