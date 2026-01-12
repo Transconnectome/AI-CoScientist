@@ -1,5 +1,5 @@
 Title*
-Image Classification from EEG Signals: A Multi-Scale Temporal-Spectral Approach
+Review: Major Concerns regarding Artifact Handling and Incremental Novelty
 
 Paper Summary*
 This paper presents "TS-SpectrumNet" (also termed "EEG-TSSnet"), a multi-scale 1D CNN and Wavelet-based framework for Image-from-EEG classification. The authors target the problem of decoding visual stimuli from brain signals, testing on both randomized (Ahmed et al.) and deterministic (Spampinato et al.) datasets. The proposed architecture combines a multi-branch 1D Convolutional module (TSDL) for temporal dynamics and a Wavelet-based module (SpecRL) for spectral representation. The authors report a doubling of state-of-the-art (SOTA) accuracy (7.0% to 15.1%) on the randomized task and 50.3% on the deterministic task.

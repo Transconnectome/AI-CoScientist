@@ -1,5 +1,5 @@
 Title*
-GeoMAMBA-AD: BSS-SSM Hybrid for Alzheimer's Detection
+Review: Statistically Improbable Results and Methodological Flaws in Small-Data Regime
 
 Paper Summary*
 The paper proposes GeoMAMBA-AD, a hybrid framework for early Alzheimer's Disease (AD) detection using resting-state fMRI (rs-fMRI). The method combines a non-trainable "John Ellipsoid-based Blind Source Separation" (JE-BSS) for preprocessing - borrowed from convex geometry - with a trainable Mamba (State Space Model) backbone. The authors claim this dual-pathway approach solves the "cross-scanner domain shift" problem, reporting 92% accuracy and 100% recall on a small, heterogeneous ADNI subset (N=100 total), significantly outperforming Graph Convolutional Networks (GCNs) and standard CNNs.

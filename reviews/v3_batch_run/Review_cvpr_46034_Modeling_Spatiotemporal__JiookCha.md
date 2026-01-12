@@ -1,5 +1,5 @@
 Title*
-Spatiotemporal fMRI Reconstruction from EEG via InterRecon
+Review: Promising Methodology Undermined by Contradictory Experimental Claims
 
 Paper Summary*
 The paper proposes a Diffusion Transformer (DiT) framework for EEG-conditioned fMRI reconstruction. The authors introduce a "Null-space constrained sampling" mechanism (InterRecon) to reconstruct intermediate fMRI frames using EEG guidance while maintaining consistency with sparse "anchor" fMRI frames. The method is validated on the CineBrain dataset using standard reconstruction metrics (MSE, SSIM) and a downstream functional task (visual decoding).
