@@ -25,7 +25,7 @@ The clarity and presentation of figures and tables fall below the standards requ
 *   **Figure 2 (Architecture):** Cluttered. The SpecRL module flow is tangled. The connection between the Wavelet Transform (WT) and the Inverse (IWT) needs to be linearized for readability.
 *   **Figure 3 (EEG Signals):** **Unacceptable.** The axes labels are microscopic. Subplot (a) is compressed to a solid block of color; no oscillation is visible. You cannot claim to show "stable oscillatory waveforms" if the plot resolution renders them invisible.
 *   **Table 1 (The "Branding" Error):** As noted, you call your model **EEG-TSSnet** here, but **TS-SpectrumNet** everywhere else. This creates confusion—are these different ablation variants?
-*   **Table 4:** This is a "wall of numbers" listing accuracy for every integer class increment. This **must** be a line plot (X=Classes, Y=Accuracy). Furthermore, the caption claims it shows the effect of **"artifact removal,"** but the content shows **"label cardinality."** This mismatch is confusing and sloppy.
+*   **Table 4:** While providing raw accuracy numbers for every class increment is valuable for precision, the trend would be much clearer if accompanied by a line plot (X=Classes, Y=Accuracy). Furthermore, the caption claims it shows the effect of **"artifact removal,"** but the content appears to show **"label cardinality."** This inconsistency should be resolved to ensure clarity.
 
 ### 5. Relation to SOTA & Novelty
 *   **Context:** The paper correctly identifies the difficulty gap between Randomized (SOTA ~7%) and Deterministic (SOTA ~48%) trials.
