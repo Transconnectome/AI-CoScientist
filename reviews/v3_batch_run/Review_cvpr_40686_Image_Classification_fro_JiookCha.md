@@ -27,9 +27,11 @@ The clarity and presentation of figures and tables fall below the standards requ
 *   **Table 1 (The "Branding" Error):** As noted, the authors refer to the model as **EEG-TSSnet** here, but **TS-SpectrumNet** everywhere else. This creates confusion—are these different ablation variants?
 *   **Table 4:** While providing raw accuracy numbers for every class increment is valuable for precision, the trend would be much clearer if accompanied by a line plot (X=Classes, Y=Accuracy). Furthermore, the caption claims it shows the effect of **"artifact removal,"** but the content appears to show **"label cardinality."** This inconsistency should be resolved to ensure clarity.
 
-### 5. Relation to SOTA & Novelty
-*   **Context:** The paper correctly identifies the difficulty gap between Randomized (SOTA ~7%) and Deterministic (SOTA ~48%) trials.
-*   **Novelty:** The architecture is essentially an Inception-style CNN combined with a Wavelet transform. This is **Incremental**. Multi-scale 1D CNNs are standard in EEG processing (e.g., EEGNet, InceptionEEG). The addition of Wavelets is a known technique. The claim of "Paradigm-Shifting" performance relies entirely on the 15.1% accuracy figure, which, as noted in the Neuro-AI section below, is suspect.
+### 5. AI Architectural Innovation & SOTA Context
+*   **Methodological Novelty:** The proposed architecture combines a multi-branch 1D CNN (TSDL) with a Wavelet-based module (SpecRL). While the integration is cohesive, the individual components lack fundamental novelty:
+    *   **TSDL:** Multi-scale 1D CNNs are the standard inductive bias for EEG processing (pioneered by EEGNet and Inception-style EEG architectures). The paper does not clearly demonstrate a benefit over these established, simpler baselines.
+    *   **SpecRL:** The use of Wavelet transforms for spectral feature extraction is a well-known technique in signal processing. The paper frames this as a "module," but it essentially functions as a fixed feature extractor without a clear learnable mechanism that differentiates it from traditional preprocessing.
+*   **Performance vs. Innovation:** The claim of "Paradigm-Shifting" performance (15.1% vs 7%) is ambitious. From an AI perspective, such a large jump usually requires a significant architectural breakthrough (e.g., self-attention or diffusion). In this paper, the gains appear to stem more from the "Channel-wise Normalization" (critiqued in Section 6) rather than the TSDL/SpecRL architecture itself. This suggests the results may be more an artifact of the data pipeline than an AI-driven breakthrough.
 
 ### 6. Neuro-AI Considerations
 The biological validity of the "Artifact" section (3.1) warrants scrutiny.
