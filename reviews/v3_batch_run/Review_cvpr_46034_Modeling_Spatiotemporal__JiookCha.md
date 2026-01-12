@@ -7,7 +7,7 @@ The paper proposes a Diffusion Transformer (DiT) framework for EEG-conditioned f
 Paper Strengths*
 *   **Methodological Integration:** The adaptation of Null-space sampling (typically used in super-resolution) to multimodal neuroimaging is a logical and elegant approach to the temporal resolution mismatch problem.
 *   **Functional Validation:** The paper goes beyond pixel metrics to include a downstream visual decoding task (Figure 5), which is critical for demonstrating that the reconstructed signal retains semantic content.
-*   **Honest Reporting:** The authors correctly bold the baseline (**E2FGAN**) in Table 1 where it outperforms their method, indicating a degree of scientific integrity regarding raw numbers.
+*   **Generative Backbone:** The transition from GAN-based baselines (E2FGAN) to a Diffusion Transformer (DiT) architecture represents a timely and technically motivated update, properly leveraging the superior density estimation capabilities of modern diffusion models for signal reconstruction.
 
 Major Weaknesses*
 *   **Scientific Contradiction (Fatal):** There is a direct conflict between the text claims ("consistently outperforms prior methods") and the empirical evidence in Table 1, where the baseline (E2FGAN) achieves lower MSE in multiple categories. Claiming SOTA dominance when the data shows mixed results is a breach of scientific precision.
