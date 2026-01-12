@@ -23,7 +23,7 @@ The system rejected this paper not due to low performance (15.1% is high), but d
 
 1.  **Assertion Check**: The paper claims a massive jump in accuracy (7% -> 15.1%).
 2.  **Forensic Analysis**: The system flagged the "Channel-wise Normalization" technique described in Section 3.1.
-3.  **Domain Knowledge Application**: The Dr. Cha Persona (Neuro-AI Expert) identified that simple Z-score normalization preserves the *shape* of artifacts (simulated blink/muscle spikes).
+3.  **Domain Knowledge Application**: Forensic analysis identified that simple Z-score normalization preserves the *shape* of artifacts (simulated blink/muscle spikes).
 4.  **Logical Deduction**:
     *   *Premise A*: Randomized EEG trials evoke surprise/startle responses (artifacts) that correlate with specific image classes.
     *   *Premise B*: Normalization scales these artifacts but keeps their morphology.

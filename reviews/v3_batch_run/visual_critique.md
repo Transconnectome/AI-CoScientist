@@ -1,6 +1,6 @@
 ## Visual Analysis & Evidence Check
 
-As a reviewer, I have assessed the visual presentation of the submission. While the figures are generally professional, there are specific legibility issues and a notable tension between the textual claims and the tabular data that requires clarification.
+This report assesses the visual presentation of the submission. While the figures are generally professional, there are specific legibility issues and a notable tension between the textual claims and the tabular data that requires clarification.
 
 ### 1. Figures: Quality and Architecture
 *   **Figure 1 (Teaser):** The conceptual flow is generally clear, distinguishing between the "Translation" and "InterRecon" pathways. However, the visual hierarchy is somewhat flat; the "Vision Stimuli" and "Video Recon" elements are peripheral but vital for understanding the validation. The central brain visualization is standard but slightly cluttered by the overlapping dotted lines.
@@ -13,7 +13,7 @@ As a reviewer, I have assessed the visual presentation of the submission. While 
 
 ### 2. Tables and Results
 *   **Table 1 (Main Results):**
-    *   **Honesty in Bolding:** I commend the authors for correctly bolding the baseline (**E2FGAN**) where it outperforms the proposed method (e.g., Frame 3 Whole Brain MSE: **0.280** vs 0.282; Frame 10 Visual+Audio MSE: **0.188** vs 0.197). This indicates scientific integrity.
+    *   **Honesty in Bolding:** The authors correctly bold the baseline (**E2FGAN**) where it outperforms the proposed method (e.g., Frame 3 Whole Brain MSE: **0.280** vs 0.282; Frame 10 Visual+Audio MSE: **0.188** vs 0.197). This indicates scientific integrity.
     *   **Inconsistency with Text:** However, this honesty creates a contradiction with the text. Line 401 states: *"our method consistently outperforms prior other methods."* This is **factually incorrect** based on Table 1. While your method often wins on correlation ($r$) and Cosine Similarity, it loses on MSE in several key comparisons to E2FGAN. The text must be nuanced to reflect this (e.g., "outperforms on structural similarity metrics despite comparable MSE").
 *   **Table 2 (Ablation):** The bolding is consistent, showing the "w/ null space" variant performing best. This supports the method's core contribution.
 

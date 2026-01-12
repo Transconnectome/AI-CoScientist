@@ -10,7 +10,7 @@ The paper proposes a Diffusion Transformer (DiT) framework for EEG-conditioned f
 
 ### 2. Strengths
 *   **Methodological Integration**: The adaptation of Null-space sampling (typically used in inverse imaging problems like super-resolution) to the domain of multimodal neuroimaging is a logical and elegant step. It addresses the practical issue of differing temporal resolutions between EEG and fMRI.
-*   **Functional Validation**: I commend the inclusion of a downstream visual decoding task (Figure 5). In Neuro-AI, pixel-level metrics (MSE) are often insufficient; demonstrating that the reconstructed signal retains semantic content (scene layout, posture) is critical.
+*   **Functional Validation**: The inclusion of a downstream visual decoding task (Figure 5) is a significant strength. In Neuro-AI, pixel-level metrics (MSE) are often insufficient; demonstrating that the reconstructed signal retains semantic content (scene layout, posture) is critical.
 *   **Honest Reporting (Data)**: As noted in the visual analysis, Table 1 correctly bolds the baseline (E2FGAN) where it outperforms the proposed method. This transparency regarding raw data is appreciated, even if the text fails to reflect it.
 
 ### 3. Weaknesses
@@ -30,7 +30,7 @@ The work builds upon standard Diffusion Transformers (DiT) and EEG-fMRI translat
 *   **SOTA Context**: The paper fails to convincingly dethrone E2FGAN. While DiTs are powerful, they are computationally expensive compared to GANs. If the DiT does not yield superior MSE, the argument must hinge entirely on the "InterRecon" capability or functional decoding. The paper currently muddies this distinction by making false claims about reconstruction fidelity.
 
 ### 6. Neuro-AI Considerations
-As a neuroscientist, I find the **Linear Autoencoder** (Section 3.3) to be a significant theoretical flaw.
+The **Linear Autoencoder** (Section 3.3) represents a significant theoretical flaw in the context of neuroimaging.
 *   **Biological Plausibility**: The brain is a non-linear dynamical system. Compressing voxel-wise fMRI data ($N_v$) to a latent space ($d$) via a simple matrix multiplication ($W x$) assumes that brain states lie on a linear hyperplane. This is false.
 *   **Recommendation**: You should have employed **Diffusion Posterior Sampling (DPS)** or similar guidance techniques that allow for non-linear measurement operators, rather than crippling your autoencoder to fit a linear null-space projection.
 
@@ -44,4 +44,4 @@ As a neuroscientist, I find the **Linear Autoencoder** (Section 3.3) to be a sig
 ### 8. Final Recommendation
 **REJECT**
 
-While the "InterRecon" concept is promising, the submission suffers from a fatal lack of rigor. The contradiction between the text claims and Table 1 is a breach of scientific precision. Furthermore, the reliance on a linear autoencoder for biological data is a theoretical weakness that limits the model's ceiling. Combined with illegible plots (Figure 3), this paper is not ready for publication. I encourage a resubmission that honestly discusses the trade-offs (MSE vs. Semantics) and implements a non-linear guidance method.
+While the "InterRecon" concept is promising, the submission suffers from a fatal lack of rigor. The contradiction between the text claims and Table 1 is a breach of scientific precision. Furthermore, the reliance on a linear autoencoder for biological data is a theoretical weakness that limits the model's ceiling. Combined with illegible plots (Figure 3), this paper is not ready for publication. A resubmission that honestly discusses the trade-offs (MSE vs. Semantics) and implements a non-linear guidance method is encouraged.
