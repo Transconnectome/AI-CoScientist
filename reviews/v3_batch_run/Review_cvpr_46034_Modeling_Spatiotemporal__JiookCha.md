@@ -37,4 +37,4 @@ Confidence Level*
 
 Confidential Comments To AC
 **Forensic Analysis:**
-I consider this paper to have **High Revision Potential**. Unlike the other submissions, the core methodology here is sound (DiT + Null-space sampling). The "Reject" is driven by the **Self-Contradiction** (Text says "We win", Table says "We lose") and **Presentation Quality**. This paper *could* be salvageable in a future cycle if the authors moderate their claims and fix the visualizations, but it cannot be accepted in its current contradictory state.
+This work has potential. Unlike the other submissions, the core methodology here (DiT + Null-space sampling) is technically sound. My "Reject" recommendation is driven strictly by the **Self-Contradiction** (Text says "We win", Table says "We lose") and the poor **Presentation Quality**. If the authors moderate their claims and fix the visualizations, this could be a strong paper in the next cycle. It is a "Good Idea, Bad Execution" case.

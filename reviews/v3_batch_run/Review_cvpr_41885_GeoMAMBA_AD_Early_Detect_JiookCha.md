@@ -37,4 +37,4 @@ Confidence Level*
 
 Confidential Comments To AC
 **Forensic Analysis:**
-I classify this paper as **Pseudoscience/Flawed**. The perfect Recall ($1.0$) on a noisy medical dataset is a "Smoking Gun" for data leakage. It is highly likely the authors performed the BSS Unmixing on the full dataset *before* splitting, allowing the test set to leak into the projection matrix. This effectively invalidates the entire study.
+High Alert. The perfect Recall ($1.0$) on such a noisy medical dataset is a "Smoking Gun" for data leakage. It is highly likely the authors performed the BSS Unmixing on the full dataset *before* splitting, allowing the test set to leak into the projection matrix. This effectively invalidates the entire study. I strongly recommend rejection as the results are statistically impossible for this experimental design.

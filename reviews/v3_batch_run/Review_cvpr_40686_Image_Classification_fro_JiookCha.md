@@ -40,4 +40,4 @@ Confidence Level*
 
 Confidential Comments To AC
 **Forensic Analysis:**
-I have flagged this paper as having **Incremental Meaningfulness** and **Low Revision Potential**. The primary concern is the "Artifact Efficiency" claim. My forensic review suggests the massive performance jump is likely due to the model exploiting normalized artifact leakage (EOG/EMG) rather than genuine neural decoding improvement. Without a re-run of the data pipeline using proper ICA/Artifact Rejection, the results are likely spurious.
+The contribution of this work is marginal at best. The primary concern is the "Artifact Efficiency" claim. My forensic review leads me to believe the massive performance jump is likely due to the model exploiting normalized artifact leakage (EOG/EMG) rather than genuine neural decoding improvement. Without a re-run of the data pipeline using proper ICA/Artifact Rejection, the results are almost certainly spurious. I see little value in a revision unless the data pipeline is completely overhauled.

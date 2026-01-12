@@ -146,7 +146,7 @@ class ReviewOrchestrator:
             6. **Preliminary Recommendation** (1: Reject, 2: Weak Reject, 3: Borderline Reject, 4: Borderline Accept, 5: Weak Accept, 6: Accept)
             7. **Justification For Recommendation And Suggestions For Rebuttal** (Balance strengths/weaknesses, clarification requests)
             8. **Confidence Level** (1: Not Confident ... 5: Expert)
-            9. **Confidential Comments To AC** (Use your forensic insights here. Start with "Forensic Analysis:" and speak in the first person, e.g., "I have flagged..." or "I consider...". Do NOT say "The system logic flagged..." or mention ECMARS.)
+            9. **Confidential Comments To AC** (Use your forensic insights here. Write naturally as a senior expert giving a private tip to the AC. Do NOT use terms like "Meaningfulness" or "Revision Potential". Just say "This work is marginal" or "The flaw is fatal".)
         """
         
         # Inject ECMARS Logic
