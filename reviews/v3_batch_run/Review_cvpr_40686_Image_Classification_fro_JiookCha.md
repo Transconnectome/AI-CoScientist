@@ -14,7 +14,7 @@ The paper proposes "TS-SpectrumNet" (referred to inconsistently as "EEG-TSSnet")
 *   **Computational Efficiency:** The model is relatively lightweight (0.05M - 0.1M parameters) compared to heavy Transformer baselines like EEGChannelNet (5M parameters).
 
 ### 3. Weaknesses
-*   **Severe Lack of Rigor (Nomenclature):** The paper suffers from an identity crisis. The title, abstract, and diagrams refer to **"TS-SpectrumNet,"** while the main results table (Table 1) refers to **"EEG-TSSnet."** This is a fatal presentation flaw for a top-tier venue; it suggests the authors merged different drafts or failed to proofread.
+*   **Nomenclature Inconsistency:** The paper inconsistently refers to the model as **"TS-SpectrumNet"** (title/abstract) and **"EEG-TSSnet"** (Table 1). While minor, this lack of polish creates unnecessary confusion.
 *   **Questionable "Artifact" Handling:** The "Channel-wise normalization" (Section 3.1) is presented as a novel contribution to handle artifacts. However, simple Z-score normalization does not *remove* artifacts (like EOG/EMG); it merely scales them. If the model performance jumps from 7% to 15% based on this, there is a high probability the model is learning to classify the *scaled artifacts* (e.g., subject blinking or clenching in response to specific stimuli) rather than neural correlates.
 *   **Misleading Efficiency Claims:** The authors claim superior efficiency. While smaller than EEGChannelNet, Table 1 shows the proposed model (0.05M) is **5x larger** than the direct competitor EEGNet (0.01M). The text glosses over this, framing the comparison primarily against the largest models.
 *   **Visual Redundancy:** Figure 1 is scientifically vacuous. It wastes valuable page real estate showing generic ImageNet photos rather than explaining the complex EEG trial structure.
@@ -38,7 +38,7 @@ As a neuroscientist, I must scrutinize the biological validity of the "Artifact"
 *   **Kernel Sizes:** You use kernels of size 63, 127, and 255. At standard EEG sampling rates (e.g., 1000Hz), a 255 kernel covers 250ms. This is biologically plausible for capturing ERP components (P300, N400), but it is computationally expensive for the first layer.
 
 ### 7. Detailed Feedback
-1.  **Fix the Name:** Choose **TS-SpectrumNet** or **EEG-TSSnet** and strictly adhere to it.
+1.  **Uniform Nomenclature:** Choose **TS-SpectrumNet** or **EEG-TSSnet** and strictly adhere to it. The current inconsistency appears sloppy and undermines the professional quality of the manuscript.
 2.  **Rewrite Section 3.1:** You must prove that your normalization isn't preserving artifact-class correlations. Run an experiment where you *zero out* high-amplitude segments instead of normalizing them. If accuracy drops back to 7%, your model relies on artifacts.
 3.  **Convert Table 4 to a Plot:** Show the scalability trend visually. Fix the caption error immediately.
 4.  **Figure 3:** Re-plot with readable fonts (10pt+). Zoom in on the x-axis for Subplot (a) so we can see the waves.
