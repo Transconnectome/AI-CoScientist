@@ -6,7 +6,7 @@
 ---
 
 ### 1. Summary
-The paper proposes "TS-SpectrumNet" (referred to inconsistently as "EEG-TSSnet"), a deep learning framework designed to classify natural images from EEG signals. The authors target two specific datasets: the randomized EEG-ImageNet (Ahmed et al.) and the deterministic EEG-ImageNet (Spampinato et al.). The architecture combines a multi-branch 1D Convolutional module (TSDL) for temporal dynamics and a Wavelet-based module (SpecRL) for spectral representation. The authors claim a state-of-the-art (SOTA) accuracy of 15.1% on the randomized task (doubling the previous 7.0%) and 50.3% on the deterministic task.
+This paper presents "TS-SpectrumNet" (also termed "EEG-TSSnet"), a multi-scale 1D CNN and Wavelet-based framework for Image-from-EEG classification. While the authors report a significant doubling of SOTA accuracy (7.0% to 15.1%) on randomized trials, the submission is characterized by a critical lack of technical rigor and scientifically questionable data handling. The proposed architecture (TSDL and SpecRL) is categorized as incremental, lacking the fundamental AI innovation necessary to justify such a performance leap. Furthermore, the reliance on simple Z-score normalization as an "artifact handling" strategy likely results in the model classifying ocular and muscular noise rather than neural correlates. Combined with persistent nomenclatural inconsistencies and substandard visual presentation, the work fails to meet the threshold for publication.
 
 ### 2. AI Architectural Innovation & SOTA Context
 *   **Methodological Novelty:** The proposed architecture combines a multi-branch 1D CNN (TSDL) with a Wavelet-based module (SpecRL). While the integration is cohesive, the individual components lack fundamental novelty:
