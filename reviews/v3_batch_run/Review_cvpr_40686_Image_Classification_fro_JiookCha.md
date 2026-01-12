@@ -38,7 +38,7 @@ The clarity and presentation of figures and tables fall below the standards requ
 *   **Table 1 (The "Branding" Error):** As noted, the authors refer to the model as **EEG-TSSnet** here, but **TS-SpectrumNet** everywhere else.
 *   **Table 4:** While providing raw accuracy numbers for every class increment is valuable for precision, the trend would be much clearer if accompanied by a line plot (X=Classes, Y=Accuracy). Furthermore, the caption claims it shows the effect of **"artifact removal,"** but the content appears to show **"label cardinality."**
 
-### 8. Final Recommendation
+### 7. Final Recommendation
 The paper reports a significant performance jump, but the lack of rigor in presentation (naming inconsistencies, caption errors) and the scientifically suspect method of handling artifacts (normalization vs. removal) undermine confidence in the results. The technical architecture itself lacks the novelty expected for a CVPR-level breakthrough.
 
 **Decision: REJECT**
