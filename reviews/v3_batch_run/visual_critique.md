@@ -14,13 +14,13 @@ This report assesses the visual presentation of the submission. While the figure
 ### 2. Tables and Results
 *   **Table 1 (Main Results):**
     *   **Honesty in Bolding:** The authors correctly bold the baseline (**E2FGAN**) where it outperforms the proposed method (e.g., Frame 3 Whole Brain MSE: **0.280** vs 0.282; Frame 10 Visual+Audio MSE: **0.188** vs 0.197). This indicates scientific integrity.
-    *   **Inconsistency with Text:** However, this honesty creates a contradiction with the text. Line 401 states: *"our method consistently outperforms prior other methods."* This is **factually incorrect** based on Table 1. While your method often wins on correlation ($r$) and Cosine Similarity, it loses on MSE in several key comparisons to E2FGAN. The text must be nuanced to reflect this (e.g., "outperforms on structural similarity metrics despite comparable MSE").
+    *   **Inconsistency with Text:** However, this honesty creates a contradiction with the text. Line 401 states: *"our method consistently outperforms prior other methods."* This is **factually incorrect** based on Table 1. While the authors' method often wins on correlation ($r$) and Cosine Similarity, it loses on MSE in several key comparisons to E2FGAN. The text must be nuanced to reflect this (e.g., "outperforms on structural similarity metrics despite comparable MSE").
 *   **Table 2 (Ablation):** The bolding is consistent, showing the "w/ null space" variant performing best. This supports the method's core contribution.
 
 ### 3. Visual Reconstruction (Figure 5)
 *   The "Video Recon" figure is small but functionally effective. It demonstrates that while fine details (faces) are lost, the semantic layout (posture, scene composition) is preserved. This aligns well with the "functional validity" claim.
 
 ### Summary of Visual Critiques
-1.  **Text/Table Contradiction:** You cannot claim to "consistently outperform" baselines when Table 1 shows the baseline winning on MSE in multiple columns. Please revise the text to be precise (e.g., "outperforms on orientation/pattern matching metrics").
+1.  **Text/Table Contradiction:** One cannot claim to "consistently outperform" baselines when Table 1 shows the baseline winning on MSE in multiple columns. Please revise the text to be precise (e.g., "outperforms on orientation/pattern matching metrics").
 2.  **Figure 3 Readability:** The fonts are illegibly small.
 3.  **Figure 2 Text Size:** Internal block text needs to be larger.

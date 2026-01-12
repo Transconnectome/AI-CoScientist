@@ -21,10 +21,10 @@ The paper proposes "TS-SpectrumNet" (referred to inconsistently as "EEG-TSSnet")
 
 ### 4. Figures and Tables
 The clarity and presentation of figures and tables fall below the standards required for CVPR.
-*   **Figure 1 (Stimuli):** **Remove.** We know what a "parachute" looks like. Replace this with a diagram illustrating the difference between Randomized vs. Deterministic trial structures, which is central to your problem statement.
+*   **Figure 1 (Stimuli):** **Remove.** The generic nature of these images offers limited insight. This should be replaced with a diagram illustrating the difference between Randomized vs. Deterministic trial structures, which is central to the problem statement.
 *   **Figure 2 (Architecture):** Cluttered. The SpecRL module flow is tangled. The connection between the Wavelet Transform (WT) and the Inverse (IWT) needs to be linearized for readability.
-*   **Figure 3 (EEG Signals):** **Unacceptable.** The axes labels are microscopic. Subplot (a) is compressed to a solid block of color; no oscillation is visible. You cannot claim to show "stable oscillatory waveforms" if the plot resolution renders them invisible.
-*   **Table 1 (The "Branding" Error):** As noted, you call your model **EEG-TSSnet** here, but **TS-SpectrumNet** everywhere else. This creates confusion—are these different ablation variants?
+*   **Figure 3 (EEG Signals):** **Unacceptable.** The axes labels are microscopic. Subplot (a) is compressed to a solid block of color; no oscillation is visible. It is not possible to claim "stable oscillatory waveforms" if the plot resolution renders them invisible.
+*   **Table 1 (The "Branding" Error):** As noted, the authors refer to the model as **EEG-TSSnet** here, but **TS-SpectrumNet** everywhere else. This creates confusion—are these different ablation variants?
 *   **Table 4:** While providing raw accuracy numbers for every class increment is valuable for precision, the trend would be much clearer if accompanied by a line plot (X=Classes, Y=Accuracy). Furthermore, the caption claims it shows the effect of **"artifact removal,"** but the content appears to show **"label cardinality."** This inconsistency should be resolved to ensure clarity.
 
 ### 5. Relation to SOTA & Novelty
@@ -34,15 +34,13 @@ The clarity and presentation of figures and tables fall below the standards requ
 ### 6. Neuro-AI Considerations
 The biological validity of the "Artifact" section (3.1) warrants scrutiny.
 *   **The Artifact Fallacy:** Figure 3(b) shows high-amplitude spikes, likely ocular (EOG) or muscular (EMG) artifacts. The paper proposes Z-score normalization to "minimize the impact."
-*   **Critique:** Normalization ($x - \mu / \sigma$) brings these spikes into the same numerical range as brain signals, but it preserves the *temporal morphology* of the artifact. If a specific class of images causes a "surprise" reaction (blink/saccade), and you normalize that blink, the CNN will simply learn the shape of the normalized blink. You are likely classifying muscle movements, not visual processing. A rigorous approach requires Independent Component Analysis (ICA) or regression-based artifact *removal*, not just normalization.
-*   **Kernel Sizes:** You use kernels of size 63, 127, and 255. At standard EEG sampling rates (e.g., 1000Hz), a 255 kernel covers 250ms. This is biologically plausible for capturing ERP components (P300, N400), but it is computationally expensive for the first layer.
+*   **Critique:** Normalization ($x - \mu / \sigma$) brings these spikes into the same numerical range as brain signals, but it preserves the *temporal morphology* of the artifact. If a specific class of images causes a "surprise" reaction (blink/saccade), and that blink is normalized, the CNN will simply learn the shape of the normalized blink. The model is likely classifying muscle movements, not visual processing. A rigorous approach requires Independent Component Analysis (ICA) or regression-based artifact *removal*, not just normalization.
+*   **Kernel Sizes:** The authors use kernels of size 63, 127, and 255. At standard EEG sampling rates (e.g., 1000Hz), a 255 kernel covers 250ms. This is biologically plausible for capturing ERP components (P300, N400), but it is computationally expensive for the first layer.
 
-### 7. Detailed Feedback
-1.  **Uniform Nomenclature:** Choose **TS-SpectrumNet** or **EEG-TSSnet** and strictly adhere to it. The current inconsistency appears sloppy and undermines the professional quality of the manuscript.
-2.  **Rewrite Section 3.1:** You must prove that your normalization isn't preserving artifact-class correlations. Run an experiment where you *zero out* high-amplitude segments instead of normalizing them. If accuracy drops back to 7%, your model relies on artifacts.
-3.  **Convert Table 4 to a Plot:** Show the scalability trend visually. Fix the caption error immediately.
-4.  **Figure 3:** Re-plot with readable fonts (10pt+). Zoom in on the x-axis for Subplot (a) so we can see the waves.
-5.  **Comparison Fairness:** In Table 1, explicitly acknowledge that EEGNet is 5x smaller than your model. Do not hide this.
+### 7. Actionable Items
+1.  **Uniform Nomenclature:** Ensure the model name is consistent across the entire manuscript (e.g., choose either **TS-SpectrumNet** or **EEG-TSSnet**).
+2.  **Artifact Control:** The authors should perform a control experiment (e.g., zeroing out suspected artifact segments) to demonstrate that the model is learning neural rather than muscle/ocular features.
+3.  **Visualization:** Standardize axis font sizes and zoom levels in EEG signals (Figure 3) to improve legibility.
 
 ### 8. Final Recommendation
 The paper reports a significant performance jump, but the lack of rigor in presentation (naming inconsistencies, caption errors) and the scientifically suspect method of handling artifacts (normalization vs. removal) undermine confidence in the results. The visual presentation is currently not publication-ready.

@@ -35,12 +35,10 @@ The paper proposes **GeoMAMBA-AD**, a hybrid framework for early Alzheimer’s D
 *   **Biological Plausibility of JE-BSS:** The John Ellipsoid method assumes data lies in a convex hull defined by pure sources. In the brain, functional networks overlap spatially and temporally in non-linear ways. The "mild data purity conditions" mentioned in the abstract likely do not hold for fMRI data, which is heavily corrupted by physiological noise (respiration, cardiac).
 *   **Hemodynamic Response:** The model treats time points as raw sequences. There is no consideration of the Hemodynamic Response Function (HRF) delay. Mamba might learn temporal correlations, but without accounting for HRF, it is likely learning scanner-specific noise autocorrelations rather than neural dynamics.
 
-## 7. Detailed Feedback
-1.  **Data Leakage Audit:** You must rigorously check for leakage. Did you perform feature selection (e.g., JE-BSS calculation) on the *entire* dataset before splitting? If JE-BSS was run on all 100 subjects to find the projection matrix, that is leakage. The projection must be learned *only* on the training set and applied to the test set.
-2.  **External Validation Required:** Results on N=25 are statistically insignificant. You must validate this model on an external dataset (e.g., OASIS-3 or NACC) without retraining. If the accuracy drops from 92% to ~65%, the current results are overfitting.
-3.  **Ablation of Mamba:** You must replace the Mamba block with a simple LSTM or GRU. Given the short sequence length (T=140), I suspect a GRU would perform identically. If Mamba is not significantly better than a GRU, the architectural complexity is unjustified.
-4.  **Statistical Significance:** Provide p-values for the performance difference between GeoMAMBA and baselines. Use permutation testing (shuffling labels) to establish a chance-level baseline.
-5.  **Clarify "4D Lifting":** Section 3.3 mentions mapping "source channels into temporal channels." This sounds like a dimension permutation. Please provide the exact mathematical operation.
+### 7. Actionable Items
+1.  **Model Complexity:** Replace the Mamba block with a simpler baseline (e.g., GRU or LSTM) to justify the architectural complexity given the short sequence length and small dataset.
+2.  **Significance Testing:** Provide formal p-values and permutation testing results to establish the statistical significance of the performance gap over baselines.
+3.  **Algorithmic Detail:** Clarify the "4D Lifting" operation in Section 3.3 with precise mathematical notation.
 
 ## 8. Final Recommendation
 **Strong Reject.**

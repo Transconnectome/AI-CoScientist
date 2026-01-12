@@ -22,7 +22,7 @@ The paper proposes a Diffusion Transformer (DiT) framework for EEG-conditioned f
 This section details specific issues found in the figures and tables presented in the paper.
 *   **Figure 3 (Performance Plots)**: **Unacceptable.** The font size on axes and legends is microscopic. The linewidths are too thin to distinguish between methods. This figure is effectively useless in its current state.
 *   **Figure 2 (Architecture)**: The internal text within the blocks (e.g., "Linear," "Layer Norm") is illegible at standard zoom.
-*   **Table 1 vs. Text**: As noted in the Weaknesses, the text claims must be rewritten to align with the table. If you lose on MSE but win on SSIM/Correlation, argue that your method preserves *structure* better than *magnitude*. Do not claim you "outperform" broadly when you do not.
+*   **Table 1 vs. Text**: As noted in the Weaknesses, the text claims must be rewritten to align with the table. If performance drops on MSE but improves on SSIM/Correlation, it should be argued that the method preserves *structure* better than *magnitude*. SOTA dominance should not be claimed broadly when the data shows mixed results.
 
 ### 5. Relation to SOTA & Novelty
 The work builds upon standard Diffusion Transformers (DiT) and EEG-fMRI translation (E2FGAN, NeuroBOLT).
@@ -32,14 +32,12 @@ The work builds upon standard Diffusion Transformers (DiT) and EEG-fMRI translat
 ### 6. Neuro-AI Considerations
 The **Linear Autoencoder** (Section 3.3) represents a significant theoretical flaw in the context of neuroimaging.
 *   **Biological Plausibility**: The brain is a non-linear dynamical system. Compressing voxel-wise fMRI data ($N_v$) to a latent space ($d$) via a simple matrix multiplication ($W x$) assumes that brain states lie on a linear hyperplane. This is false.
-*   **Recommendation**: You should have employed **Diffusion Posterior Sampling (DPS)** or similar guidance techniques that allow for non-linear measurement operators, rather than crippling your autoencoder to fit a linear null-space projection.
+*   **Recommendation**: The authors should have employed **Diffusion Posterior Sampling (DPS)** or similar guidance techniques that allow for non-linear measurement operators, rather than limiting the autoencoder to fit a linear null-space projection.
 
-### 7. Detailed Feedback
-1.  **Rectify Claims**: Rewrite the Abstract and Introduction. Do not claim to "consistently outperform" if you lose on MSE. Frame the contribution around "flexible temporal interpolation" and "semantic preservation" rather than raw voxel fidelity.
-2.  **Fix Figure 3**: Increase font sizes by at least 300%. Thicken lines. Use distinct markers.
-3.  **Justify Linearity**: You must add a section discussing the limitations of the Linear Autoencoder. Acknowledge that this linearizes the neural manifold and discuss the potential loss of information.
-4.  **Error Map Context**: In Figure 4, the error map scale is 0 to 0.42. What are the units? Percent signal change? Normalized intensity? Without units, this visualization is scientifically meaningless.
-5.  **Hemodynamic Response**: You mention "temporal alignment" in Section 3.1. Be specific. Did you use a canonical HRF convolution on the EEG features? Or is the model learning the lag? This is crucial for the "InterRecon" claim—if the lag isn't modeled correctly, the intermediate frames are temporally misplaced.
+### 7. Actionable Items
+1.  **Visualization Quality:** Increase font sizes in Figure 3 and clarify the units for the error map in Figure 4 (e.g., percent signal change).
+2.  **Theoretical Justification:** Explicitly discuss the limitations and potential information loss associated with the Linear Autoencoder assumption.
+3.  **Temporal Alignment:** Clarify whether a canonical HRF convolution was used or if the model learns the hemodynamic lag implicitly.
 
 ### 8. Final Recommendation
 **REJECT**
