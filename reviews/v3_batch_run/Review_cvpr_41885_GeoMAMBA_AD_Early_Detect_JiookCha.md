@@ -16,16 +16,15 @@ Major Weaknesses*
 *   **Biological Plausibility:** JE-BSS relies on a geometric 'Pure Source' assumption—that clean neural sources exist at the vertices of the data's convex hull (simplex), similar to "100% soil" pixels in hyperspectral imaging. However, this is biologically flawed for fMRI. Brain networks (e.g., DMN, Salience) exhibit significant spatial overlap and non-linear interactions; there are rarely "pure" voxels that solely represent a single latent source. Furthermore, fMRI data is heavily corrupted by physiological noise (respiration, cardiac), which pushes data points outside any theoretical simplex. Thus, treating geometric vertices as robust neural biomarkers is a weak assumption.
 
 Minor Weaknesses*
-*   **Visual Clarity:** Figure 2 (Attribution Maps) shows tiny "yellow spots" that do not map to standard AD biomarkers (DMN/Salience networks), failing to support the "interpretable" claim.
 *   **Undisclosed Math:** The "4D Lifting Module" mentioned in Section 3.3 is mathematically opaque. It is unclear how spatial channels are mapped to temporal channels.
-*   **Baseline Discrepancy:** The **24% gap** between the proposed method ($92\%$) and baselines ($\approx 68\%$) suggests the baselines were improperly tuned or tested on different splits.
+*   **Baseline Discrepancy:** The **24% gap** between the proposed method ($92\%$) and baselines ($\approx 68\%$) is notably wide. To ensure a fair comparison, it would be beneficial to provide additional details on how the hyperparameters for the baseline models were optimized, confirming that they were tuned with equal rigor to the proposed method.
 
 Preliminary Recommendation*
 1: Reject
 
 Justification For Recommendation And Suggestions For Rebuttal*
 **Justification:**
-The recommendation is **Strong Reject**. The reported results (**100% Recall on N=25**) are statistically incredible for this domain and strongly suggest data leakage (where the test set was seen during BSS feature selection) or memorization of site-specific artifacts. The application of Mamba to short functional sequences is technically unjustified, and the sample size is insufficient for the proposed architecture.
+The recommendation is **Reject**. The reported results (**100% Recall on N=25**) are statistically incredible for this domain and strongly suggest data leakage (where the test set was seen during BSS feature selection) or memorization of site-specific artifacts. The application of Mamba to short functional sequences is technically unjustified, and the sample size is insufficient for the proposed architecture.
 
 **Suggestions for Rebuttal:**
 1.  **Leakage Audit:** Clarify strictly whether the JE-BSS projection matrix was learned on the *entire* dataset or only the training fold.
