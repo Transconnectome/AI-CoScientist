@@ -38,11 +38,6 @@ The clarity and presentation of figures and tables fall below the standards requ
 *   **Table 1 (The "Branding" Error):** As noted, the authors refer to the model as **EEG-TSSnet** here, but **TS-SpectrumNet** everywhere else.
 *   **Table 4:** While providing raw accuracy numbers for every class increment is valuable for precision, the trend would be much clearer if accompanied by a line plot (X=Classes, Y=Accuracy). Furthermore, the caption claims it shows the effect of **"artifact removal,"** but the content appears to show **"label cardinality."**
 
-### 7. Actionable Items
-1.  **Uniform Nomenclature:** Ensure the model name is consistent across the entire manuscript (e.g., choose either **TS-SpectrumNet** or **EEG-TSSnet**).
-2.  **Artifact Control:** The authors should perform a control experiment (e.g., zeroing out suspected artifact segments) to demonstrate that the model is learning neural rather than muscle/ocular features.
-3.  **Visualization:** Standardize axis font sizes and zoom levels in EEG signals (Figure 3) to improve legibility.
-
 ### 8. Final Recommendation
 The paper reports a significant performance jump, but the lack of rigor in presentation (naming inconsistencies, caption errors) and the scientifically suspect method of handling artifacts (normalization vs. removal) undermine confidence in the results. The technical architecture itself lacks the novelty expected for a CVPR-level breakthrough.
 
