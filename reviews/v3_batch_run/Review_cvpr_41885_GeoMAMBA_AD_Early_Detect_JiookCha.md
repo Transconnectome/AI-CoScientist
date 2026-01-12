@@ -31,7 +31,7 @@ The paper proposes **GeoMAMBA-AD**, a hybrid framework for early Alzheimer’s D
 *   **Novelty:** The use of JE-BSS is novel in this domain. However, the premise that fMRI data fits a "convex geometry" model (like spectral endmembers) is theoretically weak. BOLD signals are the result of non-linear hemodynamic coupling, not simple linear mixing of pure sources.
 *   **Comparison:** The performance jump is too high compared to SOTA. If this were real, it would be a paradigm shift. Given the small N, it is likely a statistical artifact.
 
-## 6. Neuro-AI Perspective
+## 6. Neuro-AI Considerations
 *   **Biological Plausibility of JE-BSS:** The John Ellipsoid method assumes data lies in a convex hull defined by pure sources. In the brain, functional networks overlap spatially and temporally in non-linear ways. The "mild data purity conditions" mentioned in the abstract likely do not hold for fMRI data, which is heavily corrupted by physiological noise (respiration, cardiac).
 *   **Hemodynamic Response:** The model treats time points as raw sequences. There is no consideration of the Hemodynamic Response Function (HRF) delay. Mamba might learn temporal correlations, but without accounting for HRF, it is likely learning scanner-specific noise autocorrelations rather than neural dynamics.
 

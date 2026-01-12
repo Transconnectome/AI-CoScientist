@@ -29,7 +29,7 @@ The work builds upon standard Diffusion Transformers (DiT) and EEG-fMRI translat
 *   **Novelty**: The application of Null-space sampling (InterRecon) to this specific modality pair is the primary novelty.
 *   **SOTA Context**: The paper fails to convincingly dethrone E2FGAN. While DiTs are powerful, they are computationally expensive compared to GANs. If the DiT does not yield superior MSE, the argument must hinge entirely on the "InterRecon" capability or functional decoding. The paper currently muddies this distinction by making false claims about reconstruction fidelity.
 
-### 6. Neuro-AI Perspective
+### 6. Neuro-AI Considerations
 As a neuroscientist, I find the **Linear Autoencoder** (Section 3.3) to be a significant theoretical flaw.
 *   **Biological Plausibility**: The brain is a non-linear dynamical system. Compressing voxel-wise fMRI data ($N_v$) to a latent space ($d$) via a simple matrix multiplication ($W x$) assumes that brain states lie on a linear hyperplane. This is false.
 *   **Recommendation**: You should have employed **Diffusion Posterior Sampling (DPS)** or similar guidance techniques that allow for non-linear measurement operators, rather than crippling your autoencoder to fit a linear null-space projection.

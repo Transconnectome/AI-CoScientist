@@ -31,7 +31,7 @@ The clarity and presentation of figures and tables fall below the standards requ
 *   **Context:** The paper correctly identifies the difficulty gap between Randomized (SOTA ~7%) and Deterministic (SOTA ~48%) trials.
 *   **Novelty:** The architecture is essentially an Inception-style CNN combined with a Wavelet transform. This is **Incremental**. Multi-scale 1D CNNs are standard in EEG processing (e.g., EEGNet, InceptionEEG). The addition of Wavelets is a known technique. The claim of "Paradigm-Shifting" performance relies entirely on the 15.1% accuracy figure, which, as noted in the Neuro-AI section below, is suspect.
 
-### 6. Neuro-AI Perspective & Biological Plausibility
+### 6. Neuro-AI Considerations
 As a neuroscientist, I must scrutinize the biological validity of the "Artifact" section (3.1).
 *   **The Artifact Fallacy:** Figure 3(b) shows high-amplitude spikes, likely ocular (EOG) or muscular (EMG) artifacts. The paper proposes Z-score normalization to "minimize the impact."
 *   **Critique:** Normalization ($x - \mu / \sigma$) brings these spikes into the same numerical range as brain signals, but it preserves the *temporal morphology* of the artifact. If a specific class of images causes a "surprise" reaction (blink/saccade), and you normalize that blink, the CNN will simply learn the shape of the normalized blink. You are likely classifying muscle movements, not visual processing. A rigorous approach requires Independent Component Analysis (ICA) or regression-based artifact *removal*, not just normalization.
