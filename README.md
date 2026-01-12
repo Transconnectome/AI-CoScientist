@@ -107,6 +107,14 @@ poetry run python src/monitoring/unified_performance_dashboard.py \
     --report --output report.json
 ```
 
+#### 5. Automated Paper Review (Reviewer V3)
+자세한 내용은 [`review_workflow_v3_prd.md`](./review_workflow_v3_prd.md) 참조.
+
+```bash
+# PDF 논문 리뷰 생성 (Gemini 3 Pro + ECMARS)
+poetry run python scripts/review_workflow_v2.py --paper "your_paper.pdf"
+```
+
 ---
 
 ## 📊 최적화 모드

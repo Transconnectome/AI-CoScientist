@@ -59,7 +59,7 @@ class LLMProvider(str, Enum):
 PROVIDER_MODELS = {
     LLMProvider.OPENAI: "gpt-3.5-turbo",  # Safest bet for accessibility
     LLMProvider.ANTHROPIC: "claude-3-5-sonnet-20241022",
-    LLMProvider.GEMINI: "gemini-3-flash-preview",  # User has verified access
+    LLMProvider.GEMINI: "gemini-3-pro-preview",  # User requested upgrade from Flash
     LLMProvider.DEEPSEEK: "deepseek-chat"
 }
 

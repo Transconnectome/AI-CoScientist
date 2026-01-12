@@ -32,6 +32,9 @@ poetry run python scripts/multi_agent_unified_pipeline.py \
 
 # 📊 성능 벤치마크
 poetry run python src/monitoring/unified_performance_dashboard.py --benchmark
+
+# 🕵️‍♀️ Reviewer V3 (ECMARS Enhanced)
+poetry run python scripts/review_workflow_v2.py --paper "submission.pdf"
 ```
 
 ## Project Overview
