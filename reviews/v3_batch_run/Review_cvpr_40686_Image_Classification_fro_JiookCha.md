@@ -1,44 +1,45 @@
-# ECMARS Dashboard
-- **Meaningfulness**: **Incremental**
-- **Revision Potential**: **0.4** (Low/Medium - The visual and nomenclatural sloppiness indicates a lack of rigor, and the "artifact normalization" strategy raises concerns about the validity of the performance gains that may require a fundamental re-evaluation of the data pipeline.)
-- **Decision**: **REJECT**
+# New Official Review
 
----
+## Title*
+**Image Classification from EEG Signals: A Multi-Scale Temporal-Spectral Approach** (Inferred from content)
 
-### 1. Summary
-This paper presents "TS-SpectrumNet" (also termed "EEG-TSSnet"), a multi-scale 1D CNN and Wavelet-based framework for Image-from-EEG classification. While the authors report a significant doubling of SOTA accuracy (7.0% to 15.1%) on randomized trials, the submission is characterized by a critical lack of technical rigor and scientifically questionable data handling. The proposed architecture (TSDL and SpecRL) is categorized as incremental, lacking the fundamental AI innovation necessary to justify such a performance leap. Furthermore, the reliance on simple Z-score normalization as an "artifact handling" strategy likely results in the model classifying ocular and muscular noise rather than neural correlates. Combined with persistent nomenclatural inconsistencies and substandard visual presentation, the work fails to meet the threshold for publication.
+## Paper Summary*
+This paper presents "TS-SpectrumNet" (also termed "EEG-TSSnet"), a multi-scale 1D CNN and Wavelet-based framework for Image-from-EEG classification. The authors target the problem of decoding visual stimuli from brain signals, testing on both randomized (Ahmed et al.) and deterministic (Spampinato et al.) datasets. The proposed architecture combines a multi-branch 1D Convolutional module (TSDL) for temporal dynamics and a Wavelet-based module (SpecRL) for spectral representation. The authors report a doubling of state-of-the-art (SOTA) accuracy (7.0% to 15.1%) on the randomized task and 50.3% on the deterministic task.
 
-### 2. AI Architectural Innovation & SOTA Context
-*   **Methodological Novelty:** The proposed architecture combines a multi-branch 1D CNN (TSDL) with a Wavelet-based module (SpecRL). While the integration is cohesive, the individual components lack fundamental novelty:
-    *   **TSDL:** Multi-scale 1D CNNs are the standard inductive bias for EEG processing (pioneered by EEGNet and Inception-style EEG architectures). The paper does not clearly demonstrate a benefit over these established, simpler baselines.
-    *   **SpecRL:** The use of Wavelet transforms for spectral feature extraction is a well-known technique in signal processing. The paper frames this as a "module," but it essentially functions as a fixed feature extractor without a clear learnable mechanism that differentiates it from traditional preprocessing.
-*   **Performance vs. Innovation:** The claim of "Paradigm-Shifting" performance (15.1% vs 7%) is ambitious. From an AI perspective, such a large jump usually requires a significant architectural breakthrough (e.g., self-attention or diffusion). In this paper, the gains appear to stem more from the "Channel-wise Normalization" (critiqued in Section 3) rather than the TSDL/SpecRL architecture itself. This suggests the results may be more an artifact of the data pipeline than an AI-driven breakthrough.
+## Paper Strengths*
+*   **Performance Claims:** If valid, achieving 15.1% on the difficult randomized EEG-ImageNet dataset would represent a statistically significant improvement over the stagnant baseline of ~7%.
+*   **Ablation Scope:** The paper attempts to break down contributions via ablation studies to analyze the impact of different kernel sizes and the spec-temporal combination.
+*   **Computational Efficiency:** The model is relatively lightweight (0.05M - 0.1M parameters) compared to heavy Transformer baselines like EEGChannelNet (5M parameters), which is of interest for collecting lightweight EEG decoding models.
 
-### 3. Neuro-AI Considerations
-The biological validity of the "Artifact" section (3.1) warrants scrutiny.
-*   **The Artifact Fallacy:** Figure 3(b) shows high-amplitude spikes, likely ocular (EOG) or muscular (EMG) artifacts. The paper proposes Z-score normalization to "minimize the impact."
-*   **Critique:** Normalization ($x - \mu / \sigma$) brings these spikes into the same numerical range as brain signals, but it preserves the *temporal morphology* of the artifact. If a specific class of images causes a "surprise" reaction (blink/saccade), and that blink is normalized, the CNN will simply learn the shape of the normalized blink. The model is likely classifying muscle movements, not visual processing. A rigorous approach requires Independent Component Analysis (ICA) or regression-based artifact *removal*, not just normalization.
-*   **Kernel Sizes:** The authors use kernels of size 63, 127, and 255. At standard EEG sampling rates (e.g., 1000Hz), a 255 kernel covers 250ms. This is biologically plausible for capturing ERP components (P300, N400), but it is computationally expensive for the first layer.
+## Major Weaknesses*
+*   **Scientifically Questionable "Artifact" Handling (Neuro-AI Flaw):** The paper proposes "Channel-wise Z-score normalization" in Section 3.1 to handle artifacts. This is methodologically flawed. Normalization ($x - \mu / \sigma$) scales artifacts (EOG/EMG spikes) but preserves their temporal morphology. If a specific class of images evokes a "surprise" reaction (blink/saccade), the model will learn to classify the normalized blink rather than the neural signal. Given the massive performance jump (7% -> 15%), it is highly probable the model is exploiting these artifact-class correlations rather than learning visual semantics.
+*   **Incremental AI Innovation:** The architecture (TSDL + SpecRL) lacks fundamental novelty. Multi-scale 1D CNNs are the standard inductive bias for EEG (e.g., EEGNet), and Wavelet transforms are a traditional signal processing technique. The combination does not represent the "Paradigm-Shifting" AI breakthrough that would be expected to yield a 100% relative performance improvement on its own.
+*   **Misleading Efficiency comparisons:** While smaller than huge Transformers, the model (0.05M params) is **5x larger** than the direct CNN competitor, EEGNet (0.01M). The paper glosses over this to claim superior efficiency, which is deceptive.
 
-### 4. Strengths
-*   **Performance Claims:** If valid, achieving 15.1% on the randomized EEG-ImageNet dataset is a statistically significant improvement over the stagnant baseline of ~7%.
-*   **Ablation Scope:** The paper attempts to break down contributions via ablation studies (though the presentation of these results in Table 4 is suboptimal).
-*   **Computational Efficiency:** The model is relatively lightweight (0.05M - 0.1M parameters) compared to heavy Transformer baselines like EEGChannelNet (5M parameters).
+## Minor Weaknesses*
+*   **Nomenclature Inconsistency:** The paper refers to the model as **"TS-SpectrumNet"** in the Abstract/Title but **"EEG-TSSnet"** in Table 1.
+*   **Visualization Issues:** 
+    *   Figure 1 uses generic ImageNet photos instead of explaining the trial structure.
+    *   Figure 3 (EEG Signals) has microscopic axis labels and the signal is compressed to a solid block, making it impossible to verify "stable oscillatory waveforms."
+    *   Figure 2 (Architecture) is cluttered and follows a tangled flow.
+*   **Table 4 Caption:** The caption claims to show "artifact removal" effects, but the columns appear to show label cardinality/scalability.
 
-### 5. Weaknesses
-*   **Nomenclature Inconsistency:** The paper inconsistently refers to the model as **"TS-SpectrumNet"** (title/abstract) and **"EEG-TSSnet"** (Table 1). While minor, this lack of polish creates unnecessary confusion.
-*   **Questionable "Artifact" Handling:** As detailed in the Neuro-AI section, simple Z-score normalization does not *remove* artifacts; it merely scales them, leading to potentially inflated performance results based on muscle/ocular movement rather than neural activity.
-*   **Misleading Efficiency Claims:** While smaller than EEGChannelNet, Table 1 shows the proposed model (0.05M) is **5x larger** than the direct competitor EEGNet (0.01M). The text glosses over this, framing the comparison primarily against the largest models.
+## Preliminary Recommendation*
+**1: Reject**
 
-### 6. Figures and Tables
-The clarity and presentation of figures and tables fall below the standards required for CVPR.
-*   **Figure 1 (Stimuli):** **Remove.** The generic nature of these images offers limited insight. This should be replaced with a diagram illustrating the difference between Randomized vs. Deterministic trial structures, which is central to the problem statement.
-*   **Figure 2 (Architecture):** Cluttered. The SpecRL module flow is tangled. The connection between the Wavelet Transform (WT) and the Inverse (IWT) needs to be linearized for readability.
-*   **Figure 3 (EEG Signals):** **Unacceptable.** The axes labels are microscopic. Subplot (a) is compressed to a solid block of color; no oscillation is visible. It is not possible to claim "stable oscillatory waveforms" if the plot resolution renders them invisible.
-*   **Table 1 (The "Branding" Error):** As noted, the authors refer to the model as **EEG-TSSnet** here, but **TS-SpectrumNet** everywhere else.
-*   **Table 4:** While providing raw accuracy numbers for every class increment is valuable for precision, the trend would be much clearer if accompanied by a line plot (X=Classes, Y=Accuracy). Furthermore, the caption claims it shows the effect of **"artifact removal,"** but the content appears to show **"label cardinality."**
+## Justification For Recommendation And Suggestions For Rebuttal*
+**Justification:**
+The recommendation is **Reject** due to a fatal methodological flaw in data handling. The reliance on Z-score normalization for artifact management likely introduces a confound where the model classifies muscle/ocular movements rather than neural signals. This undermines the validity of the reported 15.1% accuracy. Furthermore, the architectural contribution is incremental, and the presentation suffers from nomenclature inconsistencies and poor visualization.
 
-### 7. Final Recommendation
-The paper reports a significant performance jump, but the lack of rigor in presentation (naming inconsistencies, caption errors) and the scientifically suspect method of handling artifacts (normalization vs. removal) undermine confidence in the results. The technical architecture itself lacks the novelty expected for a CVPR-level breakthrough.
+**Suggestions for Rebuttal:**
+To change this opinion, the authors must address the artifact issue rigorously:
+1.  **Control Experiment:** Perform an analysis where high-amplitude segments (presumed artifacts) are *zeroed out* or removed via ICA, rather than normalized. If the accuracy drops back to baseline (~7%), the gains are artifact-driven.
+2.  **Clarify Nomenclature:** Choose one name (TS-SpectrumNet or EEG-TSSnet) and stick to it.
+3.  **Fix Visualization:** Re-plot Figure 3 with readable axes and proper zooming to show the signal morphology.
 
-**Decision: REJECT**
+## Confidence Level*
+**5: Expert**
+
+## Confidential Comments To AC
+**Forensic Analysis (ECMARS):**
+The system logic flagged this paper as **Meaningfulness: Incremental** and **Revision Potential: Low (0.4)**. The primary concern is the "Artifact Efficiency" claim. Forensic review suggests the massive performance jump is likely due to the model exploiting normalized artifact leakage (EOG/EMG) rather than genuine neural decoding improvement. Without a re-run of the data pipeline using proper ICA/Artifact Rejection, the results are likely spurious.

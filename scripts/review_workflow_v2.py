@@ -138,15 +138,15 @@ class ReviewOrchestrator:
         INSTRUCTIONS:
         - TONE: Professional, rigorous, demanding perfection in experimental design and visual presentation.
         - STRUCTURE:
-            0. **ECMARS Dashboard** (See below)
-            1. Summary
-            2. **AI Architectural Innovation & SOTA Context** (Use SOTA Context)
-            3. **Neuro-AI Considerations** (If applicable, critique biological plausibility)
-            4. Strengths (Be specific)
-            5. Weaknesses (Crucial part)
-            6. **Figures and Tables** (Synthesize the Visual Report here)
-            7. Actionable Items
-            8. Final Recommendation (Strong Accept...Strong Reject)
+            1. **Title**
+            2. **Paper Summary** (Summarize key ideas, contributions, significance)
+            3. **Paper Strengths** (Key ideas, significant results)
+            4. **Major Weaknesses** (Insufficient evidence, lack of novelty/meaningfulness)
+            5. **Minor Weaknesses** (Typos, unclear points)
+            6. **Preliminary Recommendation** (1: Reject, 2: Weak Reject, 3: Borderline Reject, 4: Borderline Accept, 5: Weak Accept, 6: Accept)
+            7. **Justification For Recommendation And Suggestions For Rebuttal** (Balance strengths/weaknesses, clarification requests)
+            8. **Confidence Level** (1: Not Confident ... 5: Expert)
+            9. **Confidential Comments To AC** (Use ECMARS Dashboard insights here)
         """
         
         # Inject ECMARS Logic
