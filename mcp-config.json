@@ -1,9 +1,21 @@
 {
   "mcpServers": {
+    "academic-search": {
+      "command": "python3",
+      "args": [
+        "-m",
+        "src.mcp.academic_search"
+      ],
+      "cwd": "/home/juke/git/AI-CoScientist",
+      "env": {}
+    },
     "ai-coscientist": {
-      "command": "python",
-      "args": ["-m", "src.mcp.server"],
-      "cwd": "/Users/jiookcha/Documents/git/AI-CoScientist",
+      "command": "python3",
+      "args": [
+        "-m",
+        "src.mcp.server"
+      ],
+      "cwd": "/home/juke/git/AI-CoScientist",
       "env": {
         "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}"
       }

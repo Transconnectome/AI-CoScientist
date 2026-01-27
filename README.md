@@ -107,15 +107,31 @@ poetry run python src/monitoring/unified_performance_dashboard.py \
     --report --output report.json
 ```
 
-#### 5. Automated Paper Review (Reviewer V3)
-자세한 내용은 [`review_workflow_v3_prd.md`](./review_workflow_v3_prd.md) 참조.
+#### 5. Automated Paper Review (Reviewer System)
+> **상세 가이드 (한글): [`docs/WORKFLOW_GUIDE_KR.md`](./docs/WORKFLOW_GUIDE_KR.md)**
+
+Reviewer V2 시스템은 Gemini 3.0 Pro와 Visual Analysis를 사용하여 논문을 정밀 분석합니다.
 
 ```bash
-# PDF 논문 리뷰 생성 (Gemini 3 Pro + ECMARS)
+# PDF 논문 리뷰 생성 (Gemini 3 Pro + Visual Analysis)
 poetry run python scripts/review_workflow_v2.py --paper "your_paper.pdf"
 ```
 
+#### 6. MCP Server Integration (Claude/Cursor)
+> **상세 설정 가이드: [`docs/MCP_SETUP.md`](./docs/MCP_SETUP.md)**
+
+이 시스템은 Claude Desktop이나 Cursor와 같은 에이전트 환경에서 직접 호출할 수 있는 **MCP 서버**를 제공합니다.
+- `ai-coscientist`: 논문 분석, 개선, 리뷰 도구
+- `academic-search`: ArXiv, Semantic Scholar 실시간 검색
+
 ---
+
+## 🤝 K-BFM (NeuroX) 연동
+
+이 시스템은 K-BFM(Brain Foundation Model) 프로젝트의 **"연구 설계자(Architect)"** 역할을 수행합니다.
+
+> **필수 가이드**: **[`docs/RAG_BFM_INTEGRATION_KR.md`](./docs/RAG_BFM_INTEGRATION_KR.md)**
+> K-BFM 프로젝트를 수행하는 모든 연구자는 코드 작성 전 본 시스템의 RAG를 통해 설계를 검증해야 합니다.
 
 ## 📊 최적화 모드
 
@@ -176,10 +192,11 @@ asyncio.run(search_example())
 
 | 데이터베이스 | 문서 수 | 도메인 | 임베딩 차원 |
 |------------|--------|-------|-----------|
-| DD-RAPTOR | 1,525 | 발달장애, 뇌과학 | 768 (SciBERT) |
+| **Golden References** | **~56** | Nature 2025, Top-Tier | 768 (SciBERT) |
+| DD-RAPTOR (Legacy) | 1,525 | 발달장애, 뇌과학 | 768 (SciBERT) |
 | ESM3 Papers | 84 | 단백질 연구 | 384 (MiniLM) |
 | Grant Proposals | 152 | 연구 제안서 | 384 (MiniLM) |
-| **Total** | **1,761+** | Multi-domain | Mixed |
+| **Total** | **1,817+** | Multi-domain | Mixed |
 
 ---
 
